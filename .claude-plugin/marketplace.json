@@ -1,0 +1,14 @@
+{
+  "name": "technical-writing-skills",
+  "owner": {
+    "name": "Timonwa"
+  },
+  "description": "Technical writing skills for developer documentation, docs sites, READMEs, help centres and API references.",
+  "plugins": [
+    {
+      "name": "tw",
+      "source": "./",
+      "description": "Technical writing standards — developer docs and the Diátaxis quadrants, docs-site pages, READMEs, help-centre guides, OpenAPI references, prose editing, and a documentation audit."
+    }
+  ]
+}

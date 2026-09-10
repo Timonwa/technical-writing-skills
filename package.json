@@ -1,0 +1,16 @@
+{
+  "name": "technical-writing-skills",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Claude Code skills for technical writing — developer docs, docs sites, READMEs, help centres and API references.",
+  "license": "MIT",
+  "repository": "github:Timonwa/technical-writing-skills",
+  "scripts": {
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "validate": "claude plugin validate . --strict"
+  },
+  "devDependencies": {
+    "prettier": "3.9.6"
+  }
+}

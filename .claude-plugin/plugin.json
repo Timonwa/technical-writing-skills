@@ -1,0 +1,11 @@
+{
+  "name": "tw",
+  "description": "Technical writing standards — developer docs and the Diátaxis quadrants, docs-site pages, READMEs, help-centre guides, OpenAPI references, prose editing, and a documentation audit.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Timonwa"
+  },
+  "homepage": "https://github.com/Timonwa/technical-writing-skills",
+  "repository": "https://github.com/Timonwa/technical-writing-skills",
+  "license": "MIT"
+}
