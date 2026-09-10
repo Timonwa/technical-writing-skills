@@ -1,6 +1,6 @@
 # technical-writing-skills
 
-Claude Code skills for technical writing: 6 skills and one audit command covering developer documentation, docs-site pages, READMEs, help-centre guides, API references, and prose editing.
+Claude Code skills for technical writing: 7 skills and one audit command covering developer documentation, docs-site pages, READMEs, help-centre guides, API references, and prose editing.
 
 Stack-agnostic by design. Nothing here assumes a framework, a language, or a docs platform, so it travels into any codebase — including a client's, where the engineering conventions are theirs and not yours.
 
@@ -25,6 +25,7 @@ Choose a scope when installing: **local** for just this repo (the usual choice i
 | `help-center-standards` | Help-centre guides for non-technical readers — answer first, jargon earned, five page types               |
 | `api-docs`              | An OpenAPI reference generated from a route registry, plus the group-by-group drift audit                 |
 | `prose-editing`         | Focused editing passes over copy that already exists, plus an AI-tell sweep                               |
+| `svg-generation`        | Diagrams, flowcharts and icons as clean, accessible, theme-able SVG                                       |
 
 ## Audit command
 
