@@ -1,0 +1,63 @@
+{
+  "skill_name": "sme-interviews",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I've got 30 minutes booked with the engineer who built our new webhooks feature. What should I ask?",
+      "expected_output": "Should first establish what preparation has already happened — whether the pull request, design doc, tests and existing docs have been read, and whether the feature has been used hands-on — because arriving unprepared turns the expert into a search engine. Should recommend arriving with a draft or outline rather than a blank page. Should produce specific questions rather than 'tell me about the feature', covering what problem it solves and for whom, the shortest path to it working, what people get wrong, what happens when it fails and what the reader sees, the real limits, and whether anything is irreversible. Should advise recording with permission, keeping to one topic, and asking them to demonstrate rather than describe.",
+      "files": [],
+      "expectations": [
+        "Asks what preparation has already been done before supplying questions",
+        "Recommends arriving with a draft or outline rather than a blank page",
+        "Produces specific questions rather than generic open-ended ones",
+        "Includes questions on failure modes and what the reader sees",
+        "Includes questions on real limits and anything irreversible",
+        "Includes asking what people repeatedly get wrong",
+        "Advises asking the expert to demonstrate rather than describe"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "The engineer told me retries are 'handled automatically'. Write that section of the docs for me.",
+      "expected_output": "Should refuse to write a retry mechanism from that phrase and identify it as too vague to document. Should list the specific follow-up questions: how many attempts, what the delay between them is, which failures trigger a retry and which do not, whether the operation is idempotent or an idempotency key is supported, and what the caller sees when retries are exhausted. Should note that 'automatically' is exactly the kind of claim a reader will plan around. If any draft is produced at all, the unknown parts must be visibly marked rather than filled with a plausible mechanism such as exponential backoff.",
+      "files": [],
+      "expectations": [
+        "Identifies 'handled automatically' as too vague to document",
+        "Does not invent a retry count, a backoff strategy or a delay",
+        "Asks how many attempts and what the delay between them is",
+        "Asks which failures trigger a retry and which do not",
+        "Asks what the caller sees when retries are exhausted",
+        "Marks any unknown visibly rather than filling it in",
+        "Batches the questions rather than asking one at a time"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "I sent my draft to the engineer for review a week ago and heard nothing back. What do I do?",
+      "expected_output": "Should diagnose the likely causes rather than only suggesting a chase. Should recommend asking for technical accuracy only and saying so explicitly, because reviewers who think they are being asked about wording return style notes and skip the incorrect default. Should recommend replacing 'any thoughts?' with specific questions pinned to specific sentences, shrinking the ask to the few paragraphs that actually need expert eyes, and giving a deadline with a stated consequence such as the publish date. Should recommend separating reviewers by job and closing the loop afterwards so the next review is worth their time.",
+      "files": [],
+      "expectations": [
+        "Recommends asking for technical accuracy only, stated explicitly",
+        "Recommends specific inline questions instead of an open 'any thoughts?'",
+        "Recommends shrinking the ask rather than resending the whole draft",
+        "Recommends a deadline with a stated consequence",
+        "Recommends separating reviewers by job (accuracy, clarity, style)",
+        "Recommends telling the reviewer what changed afterwards"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "The engineer reviewed my page and rewrote my opening paragraph in internal jargon. He says his version is more accurate. Do I just take it?",
+      "expected_output": "Should separate the two things being claimed. Factual corrections are the expert's call and are taken. Wording for the reader is the writer's call, and a rewrite into internal vocabulary is a finding to push back on rather than an instruction to follow. Should recommend extracting whatever factual correction is embedded in the rewrite, keeping it, and restating it in the reader's language. Should suggest asking what specifically was inaccurate in the original, which usually surfaces one concrete fact rather than a whole paragraph.",
+      "files": [],
+      "expectations": [
+        "Separates factual accuracy from wording for the reader",
+        "States that factual corrections from the expert are taken",
+        "States that internal vocabulary is a finding to push back on, not an instruction",
+        "Recommends extracting the factual correction and restating it in the reader's language",
+        "Recommends asking what specifically was inaccurate",
+        "Does not simply defer to the expert on the whole paragraph"
+      ]
+    }
+  ]
+}

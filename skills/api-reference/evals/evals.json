@@ -1,0 +1,60 @@
+{
+  "skill_name": "api-reference",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Document our POST /v1/invoices endpoint for the API reference.",
+      "expected_output": "Should refuse to draft the entry from the endpoint name alone and ask for the specifics first. Should establish where the descriptions live (a spec or hand-written pages), whether any spec is generated from code or hand-maintained, and whether a sandbox or test credential exists so the endpoint can actually be called. Should ask what it does, which credential and scope it needs, the request body fields with types and defaults, the success status, the response shape, and any endpoint-specific errors. Must not produce a parameter table, status codes, field names or an error table invented from what an invoices endpoint would plausibly have.",
+      "files": [],
+      "expectations": [
+        "Asks for the specifics before drafting any entry",
+        "Asks whether a spec exists and whether it is generated from code or hand-maintained",
+        "Asks whether the endpoint can be called against a sandbox or test account",
+        "Asks for auth, parameters, success status, response shape and errors",
+        "Does not invent parameter names, types, defaults, status codes or error codes",
+        "Does not present a plausible-looking entry as a draft to be corrected later"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Here's the description currently on one of our endpoints. Tidy it up: 'Cursor-paginated public items list used by the discover-page rails. Server-enforced filters — discoverable AND status live. See PublicItemsQuerySchema. Rate-limited.'",
+      "expected_output": "Should rewrite it for the developer consuming the API rather than the team that built it. Should cut the internal frontend reference to discover-page rails, the internal schema name the reader cannot see, and 'rate-limited' because the entry encodes that elsewhere. Should keep what the caller needs: that it returns a paginated list restricted to live, publicly visible items. Should lead with an action verb. Should note that a summary and a description are separate fields and what belongs in each.",
+      "files": [],
+      "expectations": [
+        "Removes the internal frontend reference (discover-page rails)",
+        "Removes the internal schema name the reader cannot see",
+        "Removes 'rate-limited' as something the entry already encodes",
+        "Keeps the caller-relevant filter behaviour (live and publicly visible)",
+        "Rewrites it starting with an action verb",
+        "Distinguishes the summary field from the description field"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Add this query parameter to our reference: limit. It's optional.",
+      "expected_output": "Should treat 'optional' alone as insufficient and ask for what the entry actually needs. Should require the explicit default, including when the default is null or absent, because 'optional' leaves the reader guessing what happens when it is omitted. Should require the type, the allowed range or enum values with what each means, and the unit where one applies. Should describe what the parameter does rather than restating its name, and should put required-or-optional in a table column rather than in prose.",
+      "files": [],
+      "expectations": [
+        "Asks for the explicit default rather than accepting 'optional' alone",
+        "Asks for the allowed range or accepted values",
+        "Asks for the type and any unit or format",
+        "States that the description must say what the parameter does, not restate its name",
+        "Puts required-or-optional in a table column rather than in prose",
+        "Does not invent a default value or a maximum"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "The description on our GET /users endpoint reads wrong in the docs portal. Can you fix the text? The OpenAPI spec is generated from annotations in the handler code.",
+      "expected_output": "Should recognise that the spec is generated and that editing the generated output is erased on the next build. Should locate the annotation in the handler source as the place the edit belongs, or ask where the annotations live. Should also flag the ownership question — if engineering owns the generated spec, the change goes through the same review as code — and agree the route before editing. Should not edit a generated spec file directly.",
+      "files": [],
+      "expectations": [
+        "Recognises that edits to generated output are erased on the next build",
+        "Directs the edit to the source annotations rather than the generated spec",
+        "Asks where the annotations live if it cannot locate them",
+        "Raises who owns the spec and how the change gets reviewed",
+        "Does not edit the generated spec file directly"
+      ]
+    }
+  ]
+}

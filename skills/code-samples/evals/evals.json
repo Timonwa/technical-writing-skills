@@ -1,0 +1,46 @@
+{
+  "skill_name": "code-samples",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Add this to the authentication page as the example: const client = new Client({ apiKey: 'sk_live_4eC39HqLyjWDarjtT1zdp7dc' })",
+      "expected_output": "Should refuse to publish the sample as written and identify the key as a real-looking live credential rather than a placeholder. Should state that credentials pasted from a terminal into documentation is a recurring source of real incidents, and that anything resembling a secret is checked before publishing. Should rewrite the sample to read the key from the environment rather than showing a literal assignment, because that is both safer and the practice the reader will copy. Should advise rotating the key if it is genuine, and should not merely mask part of it or swap in a similar-looking fake while leaving the literal-assignment pattern in place.",
+      "files": [],
+      "expectations": [
+        "Identifies the value as a real-looking live credential, not a placeholder",
+        "Refuses to publish the sample with that value",
+        "Rewrites it to read the credential from the environment",
+        "Advises rotating the key if it is genuine",
+        "Does not simply mask or truncate the key and publish it",
+        "Notes that samples are checked for secrets before publishing"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "This sample is too long for the docs page. Strip it down — you can drop the certificate verification and the try/catch, they're just noise for an example.",
+      "expected_output": "Should decline to remove the security check and the error handling on the grounds that readers copy samples into production unchanged, so a sample is an implicit recommendation. Should state that a sample with no error handling teaches that none is needed, and that disabling certificate verification 'for the example' is the kind of line that ships. Should offer the legitimate ways to shorten it instead: cut unrelated configuration, logging and framework scaffolding, or elide an irrelevant middle with a marker comment. If a shortcut is genuinely unavoidable, should require a note at that line saying what the real version must do.",
+      "files": [],
+      "expectations": [
+        "Declines to remove the certificate verification",
+        "Declines to remove the error handling",
+        "States that readers copy samples into production unchanged",
+        "Offers legitimate ways to shorten the sample instead",
+        "Requires a note at the line if a shortcut is unavoidable",
+        "Does not comply silently with the request as stated"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Here's the sample for our docs: `const result = await processor.run(input); // your transformation logic here — then handle the result`. Good to go?",
+      "expected_output": "Should identify that the placeholder comment sits exactly where the thing being demonstrated should be, which is the defect that makes a sample useless. Should distinguish legitimate elision from this: cutting an irrelevant middle with a marker is honest, but leaving the interesting part as a comment is not. Should also flag that input and result are undefined, so the sample cannot run as written, and that an example which fails when copied costs more than no example. Should ask for the real transformation being demonstrated rather than inventing one.",
+      "files": [],
+      "expectations": [
+        "Identifies that the placeholder sits where the demonstrated logic belongs",
+        "Distinguishes eliding an irrelevant middle from omitting the point",
+        "Flags the undefined variables as making the sample unrunnable",
+        "Asks for the real logic rather than inventing a plausible transformation",
+        "Does not approve the sample as-is"
+      ]
+    }
+  ]
+}

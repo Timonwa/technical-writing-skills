@@ -1,0 +1,66 @@
+{
+  "skill_name": "editing-standards",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Can you edit this docs paragraph? 'In order to utilize the export functionality, it is worth noting that the configuration file should first be edited by the user. Basically, once this has been done, reports can then be exported in a variety of formats, and the export will typically complete fairly quickly.'",
+      "expected_output": "Should work down the levels of edit rather than rewriting in one pass. Substantive: note that 'a variety of formats' and 'fairly quickly' are unverifiable and need real values from the author. Technical accuracy: flag that the config file is unnamed, the formats are unlisted, and the timing is unquantified — these are questions for the author, not gaps to fill in. Line: cut 'in order to' → 'to', 'it is worth noting that' → delete, 'basically' → delete, 'utilize' → 'use'; convert 'should be edited by the user' to the imperative 'edit'. Should produce a shorter rewrite in active voice and present tense, with the unverified specifics visibly marked as questions rather than invented.",
+      "files": [],
+      "expectations": [
+        "Works through the levels of edit in order rather than one undifferentiated rewrite",
+        "Replaces 'utilize' with 'use' and 'in order to' with 'to'",
+        "Deletes the hedges 'it is worth noting that' and 'basically'",
+        "Converts the passive 'should be edited by the user' to an imperative instruction",
+        "Flags 'a variety of formats' and 'fairly quickly' as unverified rather than inventing values",
+        "Asks the author for the config file name, the format list, and a real timing",
+        "Does not fabricate a file name, format list, or duration"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Quick proofread of this step list, nothing major: '1. First, you will need to navigate to the settings page. 2. Delete the workspace. 3. Click Save Changes. 4. The deletion is permanent and cannot be undone.'",
+      "expected_output": "Should apply the quick-pass checks and, despite the 'nothing major' framing, escalate the orphaned warning. Should identify that step 4 is not a step — it is a warning about step 2, sitting two steps away from the action it applies to — and move it to step 2 as a bold inline warning before the action. Should cut 'First, you will need to' → 'Go to'. Should flag the UI label inconsistency (whether the button is literally 'Save Changes') as needing verification against the product, and note that button labels should be bold. Should stay concise given the request was a quick proofread.",
+      "files": [],
+      "expectations": [
+        "Identifies that step 4 is a warning, not a step",
+        "Moves the irreversibility warning to the destructive step itself",
+        "Cuts 'First, you will need to' to a direct imperative",
+        "Flags the UI label as needing verification against the product",
+        "Notes that button labels should be bold",
+        "Raises the warning placement despite being asked for only a light proofread",
+        "Keeps the response short"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Does this sound AI-written? 'In today's fast-paced development landscape, robust observability has become pivotal. At its core, our comprehensive tracing solution seamlessly integrates with your existing stack — empowering teams to delve into performance bottlenecks — and transforms how you debug. Furthermore, it is worth noting that setup is straightforward. In conclusion, observability matters.'",
+      "expected_output": "Should run the AI-tell pass and name the specific tells rather than giving a general impression. Should flag the opening phrase 'In today's fast-paced...', 'At its core', 'Furthermore', 'It is worth noting that', and 'In conclusion' as blacklisted phrases; the vocabulary robust, pivotal, comprehensive, seamlessly, empowering, delve, transforms; and the two em-dash asides in a single short paragraph as the primary frequency tell. Should also note the structural tell of a concluding sentence that restates the opening and adds nothing. Should point at the references file for the full catalog and offer a rewrite in plain language, noting that the claims (straightforward setup, integration) need concrete support.",
+      "files": [],
+      "expectations": [
+        "Confirms it reads as AI-written and names specific tells rather than generalizing",
+        "Flags the blacklisted opening phrase 'In today's fast-paced'",
+        "Flags 'At its core', 'Furthermore', 'It is worth noting that', and 'In conclusion'",
+        "Flags the blacklisted vocabulary including delve, robust, pivotal, seamless, comprehensive",
+        "Flags em-dash frequency as the primary tell, not the character itself",
+        "Notes the empty concluding sentence as a structural tell",
+        "Offers a plain-language rewrite",
+        "References the AI writing detection reference file"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Here's a draft an engineer wrote for our docs. Clean it up: 'The retry mechanism works by leveraging exponential backoff. It retries a few times. If it still fails, an error is thrown by the client. Note that the jitter is configurable via the options object.'",
+      "expected_output": "Should preserve the engineer's technical content while correcting the shape, and should separate fixes it can make from facts only the author can settle. Should flag 'a few times' as needing the real number, 'exponential backoff' as needing a first-use explanation for readers who don't know it, the unclear pronoun 'it' in 'if it still fails', the passive 'an error is thrown by the client', and the vague 'options object' as needing the actual parameter name and default. Should produce a batched list of questions for the engineer rather than guessing any of the values. Should note it is asking for technical accuracy only.",
+      "files": [],
+      "expectations": [
+        "Preserves the technical content and does not rewrite the mechanism",
+        "Flags 'a few times' as requiring the real retry count",
+        "Flags the unclear pronoun 'it'",
+        "Converts the passive 'an error is thrown by the client' to active voice",
+        "Asks for the real option name and its default rather than inventing one",
+        "Batches the questions for the author instead of asking one at a time",
+        "Does not fabricate a retry count, option name, or default value"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "skill_name": "internal-docs",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Write the database failover runbook. Steps are: connect to the primary, promote the replica, update the connection string. The prod DB password is hunter2-prod-db if anyone needs it.",
+      "expected_output": "Should write the runbook but must not record the password in it. Should state that credentials never go in documentation and that a runbook containing a password is a security problem waiting for an audit. Should instead reference where the credential is stored and who grants access. Should also build the runbook in the required shape rather than as three prose steps: when to use it, the access and permissions needed before starting (each checkable, since discovering mid-incident that you lack access is the common failure), numbered steps each with what you should see after it, how to verify, how to roll back or a statement that you cannot, and who to escalate to as a role rather than a named person.",
+      "files": [],
+      "expectations": [
+        "Does not write the password into the runbook",
+        "States that credentials never belong in documentation",
+        "References where the credential is stored and who grants access instead",
+        "Includes a prerequisites section covering required access",
+        "Gives each step an observable result to check before continuing",
+        "Includes rollback and escalation, with escalation as a role not a person"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Can you update our old architecture decision record? We picked Postgres back then but we've moved to a different database now, so the record is wrong.",
+      "expected_output": "Should decline to edit the original record and explain why: a decision record captures the context and constraints at the time, and editing it destroys the reason it existed. Should instead write a new record documenting the current decision, with its own context, alternatives considered and consequences, and mark the old one as superseded with a link between them. Should note that the old record is not wrong — it is a correct account of a decision that has since been replaced.",
+      "files": [],
+      "expectations": [
+        "Declines to edit the original decision record",
+        "Explains that editing destroys the record's purpose",
+        "Writes a new record that supersedes the old one",
+        "Links the two records together",
+        "Marks the original as superseded rather than deleting it",
+        "Does not treat the original as an error to be corrected"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Here's our deploy process doc. It's been on the wiki for a while. Anything to improve? [a page of prose describing how deploys work, no author, no dates]",
+      "expected_output": "Should flag the missing metadata as the finding that matters most, not as a formatting nit: no owner means nobody is accountable for it being right, and no last-reviewed date means no reader can tell whether to trust it. Should distinguish last-reviewed from last-edited. Should require a review cadence chosen from how fast the underlying process changes. Should also convert the prose into an executable shape — what triggers it, who does what and where approval is needed, ordered steps, timings, exceptions, and who to ask — since prose is a defect in a procedure someone has to follow.",
+      "files": [],
+      "expectations": [
+        "Flags the missing owner as an accountability problem",
+        "Requires a last-reviewed date and distinguishes it from last-edited",
+        "Requires a review cadence",
+        "Converts the prose into ordered steps with roles",
+        "Identifies what triggers the process and who starts it",
+        "Treats the missing metadata as a substantive finding, not a formatting nit"
+      ]
+    }
+  ]
+}

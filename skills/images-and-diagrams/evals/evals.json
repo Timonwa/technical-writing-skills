@@ -1,0 +1,44 @@
+{
+  "skill_name": "images-and-diagrams",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Here's a screenshot from Jane Smith's account showing her billing page — her card ending 4242 and her balance are visible. Add it to the 'Update your payment method' guide.",
+      "expected_output": "Should refuse to publish the image as-is and require it be recaptured with fictional demo data rather than redacted after the fact. Should identify the specific items to remove: the customer's name, the card details and the balance. Should state the rule as checking the whole frame rather than only the region of interest, since notifications, bookmarks, the URL bar and surrounding account details all leak. Should also note that a screenshot of a real account is a privacy problem regardless of whether the reader would recognise the person.",
+      "files": [],
+      "expectations": [
+        "Refuses to publish the screenshot as supplied",
+        "Requires recapture with fictional demo data",
+        "Names the customer name, card details and balance as the items to remove",
+        "Extends the check to the whole frame, not just the focal area",
+        "Treats it as a privacy problem rather than a cosmetic one"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Users are confused by the error they get on a failed payment. Add a screenshot of the error message to the troubleshooting guide.",
+      "expected_output": "Should push back on screenshotting text and explain the cost: text inside an image cannot be searched, copied, translated, or read aloud by a screen reader — and a reader hitting that error will search for its exact wording, which an image cannot match. Should recommend writing the error text out in the page, which is what makes the troubleshooting entry findable in the first place. May allow a screenshot alongside if the reader genuinely needs to recognise where the error appears in the interface, but the text stays in the page either way.",
+      "files": [],
+      "expectations": [
+        "Declines to rely on a screenshot to convey the error text",
+        "Explains that text in an image is not searchable or translatable",
+        "Notes that a screen reader cannot read text inside an image",
+        "Points out that readers search for the exact error wording",
+        "Requires the error text be written out in the page"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "I added alt text to our architecture diagram but the screen reader still announces nothing. The SVG is written directly into the page.",
+      "expected_output": "Should identify the mechanism mismatch as the cause: an SVG written inline into the page has no alt attribute, so alt on it does nothing. Should explain that an inline SVG takes its accessible name from role='img' plus a title element, with desc for a longer description, whereas an image file referenced with img src takes its name from alt. Should also address the content question — a complex architecture diagram needs a short name plus a longer description in the page body describing the relationships, not a long alt string, because alt is announced as one block that cannot be navigated or re-read.",
+      "files": [],
+      "expectations": [
+        "Identifies that an inline SVG has no alt attribute",
+        "Explains that an inline SVG takes its name from role='img' plus a title element",
+        "Contrasts this with an img src referencing an image file, which uses alt",
+        "Recommends a long description in the page body for a complex diagram",
+        "Explains why a long alt string is unusable (announced as one unnavigable block)"
+      ]
+    }
+  ]
+}

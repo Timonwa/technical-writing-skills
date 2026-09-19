@@ -1,0 +1,46 @@
+{
+  "skill_name": "release-notes",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Here's the merged PR list for v2.1, write the release notes: 'Add CSV export', 'Bump lodash to 4.17.21', 'Refactor invoice service', 'Add bulk delete (behind feature flag, not enabled)', 'Revert: add bulk delete', 'Fix crash on large uploads', 'Update tests'.",
+      "expected_output": "Should filter rather than transcribe. Should cut the dependency bump with no visible effect, the refactor, and the test changes, because a reader would neither notice nor act on them. Should notice that bulk delete was both added and reverted and must not announce it. Should treat the flag-gated feature as not shipped since nobody can reach it. Should publish only CSV export and the upload fix, rewriting the fix by the symptom the user saw rather than the internal cause. Anything it cannot confirm shipped goes in an unconfirmed list rather than into the draft.",
+      "files": [],
+      "expectations": [
+        "Cuts the dependency bump, the refactor and the test changes",
+        "Detects the revert and does not announce bulk delete",
+        "Excludes the flag-gated feature as not reachable by users",
+        "Includes only the user-visible changes",
+        "Rewrites the fix as the symptom rather than the internal cause",
+        "Puts anything unconfirmed in a separate list rather than the draft"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Add this to the notes: 'Fixed null pointer dereference in UploadHandler.processChunk when chunkSize exceeded MAX_BUFFER.'",
+      "expected_output": "Should rewrite it from the reader's side, because the internal cause tells a reader nothing about whether the problem they hit was this one. Should produce something naming the symptom and the condition under which it occurred, so a reader recognises their own problem. Should ask for the condition in user-facing terms if it cannot derive it — what size, what the user saw happen — rather than guessing a threshold. Should not simply reword the internal description into slightly plainer internal language.",
+      "files": [],
+      "expectations": [
+        "Rewrites the entry as the symptom the user experienced",
+        "Names the condition under which it occurred",
+        "Asks for the user-facing threshold rather than inventing one",
+        "Removes the internal class and method names",
+        "Does not merely paraphrase the internal cause"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "We're removing the v1 API endpoints in the next release. Add a line to the notes.",
+      "expected_output": "Should treat this as a breaking change requiring far more than a line, and place it in its own section at the top regardless of how short the list is, because a reader who misses it has an outage. Should require what exactly stops working, what the caller sees when it does (the error or status, since people search for the symptom rather than the release), migration steps with before and after, the effective date, and who is affected so readers can rule themselves out. Should ask whether the removal was preceded by a deprecation notice, and should not publish the entry without a migration path.",
+      "files": [],
+      "expectations": [
+        "Places it in a breaking-changes section at the top",
+        "Requires what the caller sees when it breaks",
+        "Requires migration steps with before and after",
+        "Requires the effective date",
+        "Asks whether a deprecation notice preceded the removal",
+        "Declines to publish it as a single line with no migration path"
+      ]
+    }
+  ]
+}

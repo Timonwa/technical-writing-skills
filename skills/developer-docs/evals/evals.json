@@ -1,0 +1,59 @@
+{
+  "skill_name": "developer-docs",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Write the docs page for our new createClient() function.",
+      "expected_output": "Should not draft a page from the function name. Should ask to read the source, or ask for the exact signature, the options object with every field, their types and defaults, what it returns, and what it throws. Should state that symbol names, signatures and defaults are verified against source rather than written from memory, and that a page with a wrong signature is worse than no page. If no code access is available, should say the rule changes shape rather than relaxing — write only what you are told, ask for exact names and values, and mark anything unverified.",
+      "files": [],
+      "expectations": [
+        "Asks to read the source or asks for the exact signature and options",
+        "Asks for defaults and return value rather than assuming them",
+        "Does not invent option names, defaults or a return shape",
+        "States that symbols are verified against source rather than memory",
+        "Offers the no-access path (write only what you are told, mark the unverified)",
+        "Does not produce a plausible page for the user to correct"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Review this page for me: it's a how-to called 'Rotate an API key'. It has the numbered steps, then three paragraphs on why key rotation matters and how the signing algorithm works, then a table of every flag the CLI accepts.",
+      "expected_output": "Should identify that the page is three document types at once and that this is the most common docs defect. The theory paragraphs are explanation, the full flag table is reference, and the steps are the how-to. Should fix by moving rather than deleting: the rationale moves to an explanation page and is linked, the flag table moves to the reference and is linked, and the how-to keeps the steps plus a one-sentence pointer. Should note that a how-to assumes competence and skips the teaching.",
+      "files": [],
+      "expectations": [
+        "Identifies that the page mixes document types",
+        "Names the theory paragraphs as explanation and the flag table as reference",
+        "Fixes by moving content to the right page and linking, not by deleting it",
+        "Keeps the how-to as steps for a competent reader",
+        "Does not propose leaving the mixed page as-is with better headings"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "I'm renaming the page at /docs/setup to /docs/getting-started. Anything I need to do besides rename the file?",
+      "expected_output": "Should treat the rename as a structural change with several required steps, not a file operation. Should require searching the whole content directory for inbound links to the old path and updating every one that would break, before the rename. Should require a permanent redirect from the old public path to the new one. Should require updating the navigation config in the same change, or the moved page leaves a ghost entry at its old position. Should warn against blanket-redirecting to the home page. Should check the page is still linked from at least one other page.",
+      "files": [],
+      "expectations": [
+        "Requires grepping for inbound links before renaming",
+        "Requires a permanent redirect from the old path to the new one",
+        "Requires updating the navigation config in the same change",
+        "Warns against blanket-redirecting a missing page to the home page",
+        "Checks the page remains linked from at least one existing page"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Here's the top of a docs page. Good to publish? 'This page explains how to configure caching. In this section we will cover the various options available.' Then straight into a code block: `cache.set(key, val, opts)`.",
+      "expected_output": "Should flag the filler opening and rewrite it so the first sentence carries information — what the page covers and why the reader needs it, so they know within two sentences whether they are on the right page. Should flag that the code block has no introducing sentence saying what it does and when to use it. Should flag that key, val and opts are undefined placeholders rather than concrete runnable values, and that an example which cannot run as written will be copied and will fail. Should note the fence needs a language label and the page needs next-steps links so it is not a dead end.",
+      "files": [],
+      "expectations": [
+        "Flags 'This page explains' and 'In this section we will' as filler",
+        "Rewrites the opening so the first sentence carries information",
+        "Requires a sentence introducing the code block",
+        "Flags the undefined placeholder values as not runnable",
+        "Notes the code fence needs a language label",
+        "Notes the page needs next-steps links"
+      ]
+    }
+  ]
+}

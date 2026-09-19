@@ -1,0 +1,60 @@
+{
+  "skill_name": "user-guides",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Write a help centre article on how to withdraw money from our app.",
+      "expected_output": "Should not invent the flow. Should ask for the product facts it cannot know: the real screen names, button labels and menu path, the minimum and maximum amounts, the fees, how long it takes, what the user sees if it fails, and the support channel. Should ask whether the app or a staging login is available to verify against, and should state that without access it writes only what it is told and marks anything unverified. Should ask once, in one batch, rather than in a series of separate questions. Should also ask whether a style guide or glossary exists and how the core concepts are framed.",
+      "files": [],
+      "expectations": [
+        "Asks for the real labels, menu path, limits, fees and timings",
+        "Asks whether the app or a staging login is available to verify against",
+        "Batches the questions into one ask rather than several",
+        "Asks whether a style guide or glossary exists",
+        "Does not invent button labels, screen names, limits, fees or error messages",
+        "Does not produce a plausible withdrawal flow for the user to correct"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Tidy up this guide: '## How to close your account\\n1. Go to Settings.\\n2. Tap Close account.\\n3. Confirm.\\nClosing your account is permanent and your transaction history cannot be recovered.'",
+      "expected_output": "Should identify that the warning about permanence sits after the steps rather than at the step where the risk occurs, and move it to step 2 or 3 as a bold inline warning immediately before the irreversible action. Should note that an irreversible step gets its warning at that step, not in a paragraph elsewhere. Should put the button labels in bold. Should add an opening line stating the outcome before the steps, and a closing line saying what happens next. Should not soften or remove the warning.",
+      "files": [],
+      "expectations": [
+        "Identifies the warning as being in the wrong place",
+        "Moves the warning to the irreversible step itself",
+        "Formats the warning in bold at that step",
+        "Puts button and menu labels in bold",
+        "Adds an answer-first opening line before the steps",
+        "Does not soften or remove the warning"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Is this FAQ answer OK? Title: 'Are there fees?' Body: 'At CloudPay we are committed to transparency. Our revolutionary pricing model was designed with you in mind. We use a sophisticated ledger-reconciliation layer to compute charges. Yes, there is a 2% fee on withdrawals.'",
+      "expected_output": "Should identify that the actual answer is in the last sentence and move it to the first line, because a yes/no title gets a yes or no in the opening line. Should cut the marketing language ('committed to transparency', 'revolutionary', 'designed with you in mind') on the grounds that nothing in a help centre sells. Should apply the teach-or-cut test to 'ledger-reconciliation layer' and cut it, since a first-time user does not need that term to understand the answer. Should add a plain worked example of the fee on a real amount.",
+      "files": [],
+      "expectations": [
+        "Moves the yes/no answer to the first line",
+        "Cuts the marketing language",
+        "Cuts 'ledger-reconciliation layer' under the teach-or-cut test",
+        "Adds a plain worked example of the fee on a concrete amount",
+        "Keeps the answer short and stops once it is answered"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "One of our guides calls it a 'wallet', another calls it a 'balance', and a third says 'account funds'. Which should I use?",
+      "expected_output": "Should treat this as a terminology decision that needs settling once and applied everywhere, not a per-guide judgement. Should ask what the product interface itself calls it, since the word the user sees in the app usually wins for the reader's sake. Should note that a second word for the same concept reads to a reader as a second concept. Should recommend recording the decision so the next guide reuses it, and correcting the guides that disagree rather than leaving a second convention running alongside. Should not simply pick one on aesthetic grounds without asking what the product uses.",
+      "files": [],
+      "expectations": [
+        "Asks what the product interface itself calls it",
+        "States that a synonym reads as a second concept to the reader",
+        "Recommends settling it once and applying it across every guide",
+        "Recommends recording the decision so it is reused",
+        "Recommends correcting the guides that disagree",
+        "Does not pick a term on preference without checking the product"
+      ]
+    }
+  ]
+}

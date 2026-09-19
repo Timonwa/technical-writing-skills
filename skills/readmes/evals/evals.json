@@ -1,0 +1,44 @@
+{
+  "skill_name": "readmes",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Write the quickstart for our README. I'm pretty sure it's npm install and then npm start.",
+      "expected_output": "Should verify the commands against the repository rather than accepting them, by reading the scripts actually defined and the package manager the project uses. Should flag a mismatch if the project has no start script or uses a different package manager. Should state that the quickstart is tested verbatim before shipping, since it is the section every new reader hits. Where a command cannot be run because it needs credentials or a paid service, should say so in the README and flag it, rather than presenting an untested command as working.",
+      "files": [],
+      "expectations": [
+        "Checks the actual scripts and package manager in the repository",
+        "Flags any mismatch with the commands the user supplied",
+        "States that the quickstart must be run before shipping",
+        "Says explicitly when a command could not be tested",
+        "Does not present untested commands as verified working"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Our README is boring. Make it sound more impressive — we're a blazing fast, enterprise-grade sync engine.",
+      "expected_output": "Should decline to add the marketing adjectives and explain the substitution: state a concrete capability or a measurement instead, and note that where nothing concrete sits behind the adjective, nothing sat behind it in the first place. Should ask for the real numbers that would make the claim land — throughput, latency, scale actually tested — rather than inventing them. Should redirect the improvement to what actually earns a reader's attention: a first sentence saying plainly what the thing does, and a quickstart that works. Should not invent features or capabilities the repository does not have.",
+      "files": [],
+      "expectations": [
+        "Declines to add 'blazing fast' and 'enterprise-grade'",
+        "Asks for real numbers to replace the adjectives",
+        "Does not invent performance figures or capabilities",
+        "Redirects to a clear one-line description of what it does",
+        "Explains why the adjectives fail rather than just removing them"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Document all our environment variables in the README. There are about 40 of them.",
+      "expected_output": "Should decline to table all forty and explain the reasoning: a forty-row table buries the quickstart and becomes a second copy that drifts on the next commit. Should table only the variables required to get running and point at the example env file as the source of truth for the rest. Should check whether an example env file exists and flag that the project needs one if it does not. Should not reproduce the env file wholesale into the README, since that commits the project to keeping two files in sync.",
+      "files": [],
+      "expectations": [
+        "Declines to table all forty variables",
+        "Tables only the variables required to get running",
+        "Points at the example env file as the source of truth for the rest",
+        "Checks whether an example env file exists and flags its absence",
+        "Explains the drift problem rather than just shortening the list"
+      ]
+    }
+  ]
+}
