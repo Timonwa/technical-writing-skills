@@ -1,6 +1,6 @@
 # Site mechanics — placement, navigation, and moving pages
 
-The mechanics that keep a content site coherent as a set. They apply to any body of linked pages — a developer docs site or a help centre (`help-center-standards` links here rather than restating them).
+The mechanics that keep a content site coherent as a set. They apply to any body of linked pages — a developer docs site or a help centre (`user-guides` links here rather than restating them).
 
 ## Page scope and placement
 

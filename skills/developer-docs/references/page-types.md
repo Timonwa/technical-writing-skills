@@ -34,7 +34,7 @@ The reader is mid-task and needs a fact. Structure mirrors the code, not a narra
 - Tables for the matrix material: parameters, options, defaults, types, error codes — every entry, not the interesting ones
 - A minimal runnable example per entry point
 - No advice, no "you should usually…" — link the relevant how-to or explanation instead
-- Generated API references (OpenAPI/Swagger) → `api-docs`, not hand-written pages
+- Generated API references (OpenAPI/Swagger) → `api-reference`, not hand-written pages
 
 ## 4. Explanation — understanding, no task
 

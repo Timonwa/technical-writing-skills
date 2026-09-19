@@ -1,8 +1,8 @@
 {
   "name": "technical-writing-skills",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": true,
-  "description": "Claude Code skills for technical writing — developer docs, docs sites, READMEs, help centres and API references.",
+  "description": "Claude Code skills for technical writers — developer docs, user guides, internal docs, READMEs, API references, release notes, and the planning, editing and asset craft around them.",
   "license": "MIT",
   "repository": "github:Timonwa/technical-writing-skills",
   "scripts": {

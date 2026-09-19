@@ -3,12 +3,12 @@
   "owner": {
     "name": "Timonwa"
   },
-  "description": "Technical writing skills for developer documentation, docs sites, READMEs, help centres and API references.",
+  "description": "Skills for technical writers — developer documentation, user guides, internal docs, API references, release notes, and the planning, editing and asset craft around them.",
   "plugins": [
     {
       "name": "tw",
       "source": "./",
-      "description": "Technical writing standards — developer docs and the Diátaxis quadrants, docs-site pages, READMEs, help-centre guides, OpenAPI references, prose editing, and a documentation audit."
+      "description": "Skills for technical writers — planning a docs set, interviewing experts, style guides and terminology, developer docs, user guides, internal docs, READMEs, API references, release notes, editing, code samples, screenshots, diagrams and localization, plus commands for auditing a docs set, checking consistency, reviewing a draft and drafting release notes."
     }
   ]
 }

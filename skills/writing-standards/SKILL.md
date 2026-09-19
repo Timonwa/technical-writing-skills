@@ -71,9 +71,30 @@ Note what it doesn't do: no history of why API keys exist (explanation), no full
 
 ## Boundaries
 
-- Docs-site page mechanics — MDX components and imports, navigation registration, link integrity when moving pages, page splitting, next-steps footers → `docs-standards`.
-- Help-centre guides for non-technical end users → `help-center-standards`.
-- Project READMEs → `readme-standards`.
-- Standalone tutorials and blog articles are a different shape from a docs page — narrative, published off-repo, and not this skill's job.
-- Tightening and polishing existing prose, including de-AI-ifying it → `prose-editing`.
+This skill is the shared discipline every other one builds on. Each of them adds the rules specific to its own shape and links back here rather than restating the common ground.
+
+**Before writing**
+
+- Deciding which documents a set needs, how they're grouped, and in what order → `docs-planning`.
+- Getting the facts out of an engineer, an expert, or a spec → `sme-interviews`.
+- The project's own terminology, capitalization and naming decisions → `style-guide`.
+
+**Writing a document**
+
+- Docs-site page mechanics — components and imports, navigation registration, link integrity when moving pages, page splitting, next-steps footers → `developer-docs`.
+- Help-centre guides and user guides for non-technical end users → `user-guides`.
+- Runbooks, process docs, onboarding and other internal documentation → `internal-docs`.
+- Project READMEs → `readmes`. API references and the pages around them → `api-reference`. Release notes and changelogs → `release-notes`.
+
+**The parts of a document that aren't prose**
+
+- Code examples — completeness, testing, placeholder conventions, safety → `code-samples`.
+- Screenshots, diagrams, flowcharts and alt text → `images-and-diagrams`.
+
+**After writing**
+
+- Tightening and polishing existing prose, including de-AI-ifying it → `editing-standards`.
+- Writing so it survives translation, and running a multi-language set → `localization`.
 - Auditing an existing docs site → `docs-audit`.
+
+**Out of scope** — standalone tutorials and blog articles are a different shape from a docs page (narrative, published off-repo), and marketing or conversion copy is a different craft with a different goal.

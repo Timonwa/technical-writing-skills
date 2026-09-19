@@ -9,3 +9,6 @@ Thumbs.db
 
 # Dependencies
 node_modules/
+
+# Audit output and local working files
+_reports/

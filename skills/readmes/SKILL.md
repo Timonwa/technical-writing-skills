@@ -1,5 +1,5 @@
 ---
-name: readme-standards
+name: readmes
 description: >-
   Creating or updating a README for a project, package or app — detects the repo type (library, app, monorepo root, package, CLI, demo) and applies its fixed skeleton plus the universal one: a what-it-does one-liner, a tested quickstart, a config and env table, scripts, and a license. Leads with what it does, documents the 20% people need, no marketing adjectives. Use on "write a readme", "update the readme", "document this repo".
 ---
@@ -41,5 +41,6 @@ Every shape draws from the same skeleton, in this order. Drop a section that doe
 
 - **The house voice rules** — sentences, claims, prose-before-code, concrete-over-vague, no marketing adjectives, never hard-wrap → [`writing-standards`'s house-voice.md](../writing-standards/references/house-voice.md). This skill adds only what is specific to its own shape.
 - The general writing discipline (audience, plain language, prose-before-code) → `writing-standards`.
-- Docs-site pages the README links out to → `docs-standards`.
-- Tightening the prose after drafting → `prose-editing`.
+- Docs-site pages the README links out to → `developer-docs`; the endpoint reference it links to → `api-reference`.
+- The quickstart's code blocks — choosing them, testing them, keeping them compiling → `code-samples`.
+- Tightening the prose after drafting → `editing-standards`. Announcing a version → `release-notes`.

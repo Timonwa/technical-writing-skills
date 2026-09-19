@@ -1,10 +1,10 @@
 ---
-name: docs-standards
+name: developer-docs
 description: >-
-  Writing and restructuring documentation-site pages in any framework (Fumadocs, Docusaurus, Starlight, Mintlify, VitePress) — verify against source when the code is available, one clear focus per page, link integrity when moving pages, prose before every code block, runnable examples, canonical-page linking instead of duplication, one term per concept, MDX import hygiene, and next-steps footers. Use on "docs page", "write the docs for", "restructure the docs", "MDX page".
+  Writing and restructuring developer-facing documentation-site pages in any framework or platform — verify against source when the code is available, one clear focus per page, link integrity when moving pages, prose before every code block, runnable examples, canonical-page linking instead of duplication, one term per concept, MDX and component import hygiene, and next-steps footers. Use on "docs page", "write the docs for", "restructure the docs", "MDX page", "developer guide".
 ---
 
-# Docs-site standards
+# Developer docs
 
 How to write a docs-site page, independent of the framework rendering it. Two principles govern everything: document what IS (verified against source, not memory), and give every page one job.
 
@@ -68,7 +68,12 @@ const res = await fetch("https://api.example.com/v1/items", { headers: { Authori
 
 - **The house voice rules** — sentences, claims, prose-before-code, concrete-over-vague, no marketing adjectives, never hard-wrap → [`writing-standards`'s house-voice.md](../writing-standards/references/house-voice.md). This skill adds only what is specific to its own shape.
 - Which document type a page should be, audience, scope, and prose discipline → `writing-standards`.
+- Deciding which pages the set needs at all, and in what order → `docs-planning`. This skill writes a page once the set has a shape.
+- Getting the facts the page depends on out of an engineer or a spec → `sme-interviews`.
+- The project's own terminology, capitalization and word choices → `style-guide`.
 - Auditing an existing docs site for drift, broken links, and stale pages → `docs-audit`.
-- Generated API-reference registries (OpenAPI/Swagger) → `api-docs`.
-- **Help centres for non-technical end users** → `help-center-standards` — same set-consistency aim, different audience and page types; it links this skill's `site-mechanics.md` for the shared mechanics.
-- Project READMEs → `readme-standards`; page metadata/structured data for marketing pages → `seo`.
+- **Endpoint-level API reference** — parameter tables, status codes, auth sections, request and response examples → `api-reference`.
+- **Help centres and user guides for non-technical end users** → `user-guides` — same set-consistency aim, different audience and page types; it links this skill's `site-mechanics.md` for the shared mechanics.
+- **Internal documentation** — runbooks, onboarding, process docs → `internal-docs`.
+- Project READMEs → `readmes`.
+- The code blocks themselves — choosing, testing and maintaining them → `code-samples`. Screenshots, architecture and flow diagrams → `images-and-diagrams`.

@@ -1,12 +1,12 @@
 ---
-name: help-center-standards
+name: user-guides
 description: >-
-  Writing and reviewing help-centre guides for a product's end users — FAQ answers, how-tos, concept explainers, policy pages and troubleshooting — with answer-first openings, write-for-the-least-experienced, the teach-or-cut vocabulary test, one canonical framing per concept, reassure-on-money, warn-at-the-moment-of-risk, and the five page types. Use on "help center article", "support guide", "FAQ answer", "user guide", "explain this to users".
+  Writing and reviewing help-centre and user-guide content for a product's end users — FAQ answers, how-tos, concept explainers, policy pages and troubleshooting — with answer-first openings, write-for-the-least-experienced, the teach-or-cut vocabulary test, one canonical framing per concept, reassure-on-money, warn-at-the-moment-of-risk, and the five page types. Use on "help center article", "support guide", "FAQ answer", "user guide", "explain this to users".
 ---
 
-# Help-centre standards
+# User guides and help centres
 
-Write help-centre guides so a first-time user gets their answer fast and every guide reads like the same person wrote it. Same rules every run, wherever the guides live — a docs folder, a content repo, a help-desk tool, or nothing but a chat window.
+Write guides for a product's end users so a first-time reader gets their answer fast and every guide reads like the same person wrote it. Same rules every run, wherever the guides live — a docs folder, a content repo, a help-desk or knowledge-base tool, a PDF manual, or nothing but a chat window.
 
 **Voice in one line:** plain, calm, friendly, direct. Explain, never sell. Short sentences. Answer first, details after.
 
@@ -56,7 +56,7 @@ Write the guide itself; whatever renders it usually adds the breadcrumbs and fee
 - **Worked example** for concepts — one concrete number example using the canonical framing. One, not three.
 - **`## Related articles`** closing section — 2–5 links to guides a reader would naturally go to next, using real titles of guides that exist. Never link a guide that doesn't exist yet.
 
-The five page types (concept explainer / how-to / policy / troubleshooting / FAQ), their skeletons, and a weak-vs-strong example for each are in [references/page-types.md](references/page-types.md) — pick the type first, then follow its skeleton. Formatting, the vocabulary tiers, and the tone checks are in [references/plain-language.md](references/plain-language.md). Site mechanics — placement, navigation registration, inbound-link greps and redirects when a guide moves — are shared with docs sites: follow [`docs-standards`'s site-mechanics.md](../docs-standards/references/site-mechanics.md).
+The five page types (concept explainer / how-to / policy / troubleshooting / FAQ), their skeletons, and a weak-vs-strong example for each are in [references/page-types.md](references/page-types.md) — pick the type first, then follow its skeleton. Formatting, the vocabulary tiers, and the tone checks are in [references/plain-language.md](references/plain-language.md). Site mechanics — placement, navigation registration, inbound-link greps and redirects when a guide moves — are shared with docs sites: follow [`developer-docs`'s site-mechanics.md](../developer-docs/references/site-mechanics.md).
 
 ## Pre-publish checklist
 
@@ -73,7 +73,9 @@ The five page types (concept explainer / how-to / policy / troubleshooting / FAQ
 
 ## Boundaries
 
-- **Developer-facing docs sites** (API references, MDX pages, technical guides) → `docs-standards` — same consistency aim, different audience and page types.
+- **Developer-facing docs sites** (technical guides, MDX pages, SDK docs) → `developer-docs` — same consistency aim, different audience and page types.
+- **Documentation for staff rather than customers** — runbooks, SOPs, onboarding, internal knowledge bases → `internal-docs`. The plain-language discipline is the same; the reader is on the inside and the confidentiality rules differ.
 - **The shared writing discipline** (audience-first, concrete over vague, prose before code) → `writing-standards`; the voice checklist both share is `writing-standards/references/house-voice.md` — this skill adds the non-technical layer on top, it doesn't replace it.
-- **Tightening an existing draft** → `prose-editing`.
+- **The agreed vocabulary itself** — which term wins, how each concept is framed, the trusted analogy — is captured and maintained by `style-guide`. This skill consumes those decisions; it doesn't invent them.
+- **Tightening an existing draft** → `editing-standards`. **Screenshots** → `images-and-diagrams`. **Announcing what changed** → `release-notes`.
 - **Product facts** — product name, domain vocabulary, the concept framings, the trusted analogy, support channel — are asked for, never assumed and never invented. They don't live in this skill.

@@ -1,18 +1,6 @@
----
-name: svg-generation
-description: >-
-  Use when creating SVGs by hand — icons, technical diagrams, flowcharts, pipeline and architecture visualizations, illustrations, or any vector graphic for a doc or article. Produces clean, optimized, accessible, theme-able SVG that takes its palette and type from the surrounding project.
----
+# SVG authoring
 
-# SVG generation
-
-Well-structured, production-ready SVG: clean source, correct accessibility, and theme-able colors. Plan the visual before writing code; use the project's own palette and type, not arbitrary values.
-
-## Plan first
-
-- **Purpose** — technical diagram, decorative illustration, icon, or data viz? **Audience** — devs in a post, users in a UI, print?
-- **Style & layout** — clean/minimal vs playful; flow direction (L→R, top-down, radial, grid).
-- **Scale** — icon (small) vs full-width diagram? Drives stroke weight, font size, and detail.
+The technical layer for hand-authored vector graphics: clean source, correct accessibility, and theme-able colour. Whether a diagram is worth drawing at all, and the layout and labelling conventions, are in the skill that links here — this file covers writing the SVG itself.
 
 ## Structure
 
@@ -47,11 +35,11 @@ Well-structured, production-ready SVG: clean source, correct accessibility, and 
 - **`markerUnits` defaults to `strokeWidth`** — marker size is multiplied by the line's stroke width, so `markerWidth="10"` on a `stroke-width="2"` line renders 20 user units. Set `markerUnits="userSpaceOnUse"` for absolute sizing, or size the marker for the multiplied result.
 - Match marker `fill` to the line `stroke` (separate markers per color). Pull line endpoints back 2–3 units from target shapes so the head doesn't overlap.
 
-## Diagrams & flowcharts
+## Text inside shapes
 
-- Consistent node sizes per type; align to a grid with even spacing. Prefer straight lines with right-angle bends over diagonal spaghetti; label connections when the relationship isn't obvious.
-- **Visual hierarchy:** larger/bolder = primary, smaller/lighter = secondary. Group with subtle background fills/rounded rects. Consistent flow direction (L→R or top-down).
-- Differentiate types by treatment (solid vs dashed border, category fills); add a **legend** when > 3 colors/symbols. Center text inside shapes.
+- **Center text with `text-anchor="middle"` plus `dominant-baseline="central"`**, positioned at the shape's centre rather than nudged by trial and error.
+- **SVG text does not wrap.** Split long labels across `<tspan dy>` lines yourself, or size the node to the label — a label that overflows its box is the most common defect in a hand-authored diagram.
+- **Leave room for growth.** A label that just fits will overflow once it's translated; size nodes for roughly a third more text than the source needs.
 
 ## Optimization
 
@@ -107,5 +95,3 @@ UI icon (theme-able, decorative next to a label — inline in JSX/HTML, hence no
 - [ ] A11y: informative → `role="img"` + `<title>`/`aria-labelledby`; decorative → `aria-hidden="true"`.
 - [ ] Optimized — no unused defs/empty groups/redundant attrs; run through SVGO.
 - [ ] File named in kebab-case, descriptive.
-
-> **Related:** a logo, brand icon or favicon set is a different job — the type has to be outlined and the assets have to survive export. A diagram for a blog post follows that publication's article craft, not this skill's defaults.
