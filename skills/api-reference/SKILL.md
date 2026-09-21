@@ -104,6 +104,6 @@ The things that cost a developer a night are rarely in the parameter table. Say 
 - The house voice rules — sentences, claims, prose before code, concrete over vague → [`writing-standards`'s house-voice.md](../writing-standards/references/house-voice.md).
 - Which quadrant a surrounding page belongs to, and the general writing discipline → `writing-standards`. Reference is one quadrant; the quickstart and integration guides around it are others.
 - Docs-site page mechanics — navigation, placement, link integrity, next-steps footers → `developer-docs`.
-- Getting unverifiable behaviour out of the engineer who wrote it → `sme-interviews`.
+- Locating a schema, handler or default in the source → `codebase-research`. Getting unverifiable behaviour out of the engineer who wrote it → `sme-interviews`.
 - Announcing an API change to the people who integrate against it → `release-notes`.
 - Sweeping an existing reference for drift against the code → `docs-audit`.

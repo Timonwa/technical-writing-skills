@@ -69,7 +69,7 @@ const res = await fetch("https://api.example.com/v1/items", { headers: { Authori
 - **The house voice rules** — sentences, claims, prose-before-code, concrete-over-vague, no marketing adjectives, never hard-wrap → [`writing-standards`'s house-voice.md](../writing-standards/references/house-voice.md). This skill adds only what is specific to its own shape.
 - Which document type a page should be, audience, scope, and prose discipline → `writing-standards`.
 - Deciding which pages the set needs at all, and in what order → `docs-planning`. This skill writes a page once the set has a shape.
-- Getting the facts the page depends on out of an engineer or a spec → `sme-interviews`.
+- Getting the facts the page depends on out of an engineer or a spec → `sme-interviews`; locating them in the source yourself → `codebase-research`.
 - The project's own terminology, capitalization and word choices → `style-guide`.
 - Auditing an existing docs site for drift, broken links, and stale pages → `docs-audit`.
 - **Endpoint-level API reference** — parameter tables, status codes, auth sections, request and response examples → `api-reference`.

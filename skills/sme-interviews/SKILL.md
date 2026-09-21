@@ -100,5 +100,5 @@ The curse of knowledge is the default condition of a useful expert, not a failin
 - **What to do with the information** — which document type it becomes, how it's structured → `writing-standards` and the skill for that document type.
 - **Deciding which topics need an expert's time at all**, and in what order → `docs-planning`.
 - **Editing the resulting draft** → `editing-standards`.
-- **Verifying against code and specs directly**, where no interview is needed → the verification rules in `developer-docs` and `api-reference`.
+- **Finding facts in the codebase yourself**, where no interview is needed → `codebase-research`. Check there first: an expert's time is for what code can't tell you.
 - **The expert's answers are the source of truth for behaviour, not for wording.** How it's phrased for the reader is the writer's call, and a reviewer's rewrite into internal vocabulary is a finding to push back on, not an instruction.

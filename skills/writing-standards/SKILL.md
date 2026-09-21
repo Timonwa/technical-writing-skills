@@ -76,7 +76,7 @@ This skill is the shared discipline every other one builds on. Each of them adds
 **Before writing**
 
 - Deciding which documents a set needs, how they're grouped, and in what order → `docs-planning`.
-- Getting the facts out of an engineer, an expert, or a spec → `sme-interviews`.
+- Getting the facts out of an engineer, an expert, or a spec → `sme-interviews`; finding them in the codebase yourself → `codebase-research`.
 - The project's own terminology, capitalization and naming decisions → `style-guide`.
 
 **Writing a document**

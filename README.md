@@ -1,6 +1,6 @@
 # technical-writing-skills
 
-Claude Code skills for technical writers, covering the whole job — planning a docs set, getting facts out of engineers, writing developer docs, user guides, internal docs, READMEs, API references and release notes, the craft layers underneath them, and the audits that keep a set honest. Nineteen skills: fourteen Claude reaches for on its own, five you run yourself.
+Claude Code skills for technical writers, covering the whole job — planning a docs set, getting facts out of engineers, writing developer docs, user guides, internal docs, READMEs, API references and release notes, the craft layers underneath them, and the audits that keep a set honest. Twenty skills: fifteen Claude reaches for on its own, five you run yourself.
 
 Built for both kinds of technical writing team: the one at a software company shipping developer documentation and an API reference, and the one at a company that just needs clear user guides and internal documentation that isn't wrong.
 
@@ -28,11 +28,12 @@ Choose a scope when installing: **local** for just this repo (the usual choice i
 
 ### Before you write
 
-| Skill            | What it covers                                                                                                                              |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| `docs-planning`  | What the set should contain — audience and task inventory, content audit, gap analysis, information architecture, what a release ships with |
-| `sme-interviews` | Getting accurate information out of engineers and experts, and turning it into a verified draft                                             |
-| `style-guide`    | Owning a style guide, terminology list and glossary — and making them enforceable rather than ignored                                       |
+| Skill               | What it covers                                                                                                                              |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| `docs-planning`     | What the set should contain — audience and task inventory, content audit, gap analysis, information architecture, what a release ships with |
+| `sme-interviews`    | Getting accurate information out of engineers and experts, and turning it into a verified draft                                             |
+| `codebase-research` | Finding documentation facts in a codebase you didn't write — and the traps that produce confidently wrong docs                              |
+| `style-guide`       | Owning a style guide, terminology list and glossary — and making them enforceable rather than ignored                                       |
 
 ### What you write
 
