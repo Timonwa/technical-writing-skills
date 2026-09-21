@@ -1,6 +1,10 @@
-# The five page types and their skeletons
+# The page types and their skeletons
 
 Pick the type that matches what the reader needs, then follow its skeleton. A page that mixes types (a how-to that drifts into a concept lecture) gets split.
+
+**Four of these are the standard documentation types**, as defined by DITA ([OASIS DITA information typing](https://docs.oasis-open.org/dita/dita/v1.3/os/part2-tech-content/archSpec/technicalContent/dita-technicalContent-InformationTypes.html)): concept, task (here: how-to), reference, and troubleshooting. **Policy and FAQ are this skill's additions**, because help-centre readers arrive with questions about rules and entitlements that don't fit any of the four.
+
+This is why the set differs from the four Diátaxis quadrants `writing-standards` uses for developer docs. Diátaxis has no troubleshooting type — it folds problem-solving into how-to guides — and a help centre needs it as its own shape, since a reader with a broken thing is in a different state from a reader learning a task.
 
 ## 1. Concept explainer
 
@@ -24,15 +28,16 @@ Walks through a task ("How to return an item", "How to sign up").
 - A closing line telling them what happens next: "We email you a label within an hour."
 - Multiple methods (card vs bank, web vs app) each get a short subsection
 
-## 3. Policy / rules
+## 3. Reference
 
-Explains how something is decided or governed ("How disputes are resolved", "Account limits").
+Lists facts the reader looks up rather than reads ("Supported file types", "Sending limits", "Where we're available").
 
-- Title
-- Opening line stating the rule in plain terms
-- A short overview of the process, start to finish
-- Timeframes, conditions, and edge cases stated explicitly
-- Cover the whole process — never leave a rule half-explained where the reader has something at stake (money, data, access, anything irreversible)
+- Title naming the thing being listed
+- One line saying what the list covers and who it applies to
+- A table for anything with more than two dimensions — plan against limit, country against availability
+- Every entry, not the interesting ones; a reference with gaps sends the reader back to support
+- Units, currencies and dates stated explicitly
+- No advice and no steps — link the how-to instead
 
 ## 4. Troubleshooting
 
@@ -44,9 +49,21 @@ Fixes a specific problem ("Why can't I log in?", "Why can't other people hear me
 - Numbered fix steps, with device or browser noted if it matters
 - Focused on getting them unstuck — no background theory
 
-## 5. FAQ answer
+## 5. Policy / rules
+
+Explains how something is decided or governed ("How disputes are resolved", "Account limits").
+
+- Title
+- Opening line stating the rule in plain terms
+- A short overview of the process, start to finish
+- Timeframes, conditions, and edge cases stated explicitly
+- Cover the whole process — never leave a rule half-explained where the reader has something at stake (money, data, access, anything irreversible)
+
+## 6. FAQ answer
 
 Answers one common question ("Can I cancel an order?", "Can I delete my data?").
+
+A recurring FAQ is often a symptom: the question keeps being asked because the concept, task or policy page that should answer it doesn't exist or can't be found. Write the FAQ, then ask whether one of the other five is missing.
 
 - Title as the literal question
 - Opening line gives the full answer in one sentence (yes/no + reason)
@@ -100,24 +117,27 @@ Why it's weak: vague, no steps, no buttons named, no confirmation of what happen
 >
 > We email you a label within an hour. Your refund arrives 3–5 days after we receive the item.
 
-### 3. Policy / rules — _a community platform_
+### 3. Reference — _an email tool_
 
 **Before**
 
-> Content moderation
-> Reported content is reviewed in accordance with the applicable community standards and appropriate action is taken where warranted, subject to review.
+> Sending limits
+> Sending limits vary depending on your plan and account standing, and may be subject to change. Contact support if you need more information about your specific limit.
 
-Why it's weak: too vague to act on; the reader still doesn't know who decides, how long it takes, or what happens to them.
+Why it's weak: names no actual number, so the reader still has to ask — which is the thing a reference page exists to prevent.
 
 **After**
 
-> What happens when content is reported
-> When someone reports a post, a moderator reviews it against our community rules and either leaves it up or removes it.
+> Sending limits
+> How many emails you can send per day, by plan. Limits reset at 00:00 UTC.
 >
-> **How it works**
-> A report goes to a moderator, not to the person who posted. Most reports are reviewed within 24 hours; reports involving safety are looked at first.
-> If a post is removed, we tell the author which rule it broke. They can appeal once, within 30 days, and a different moderator reviews the appeal.
-> Reporting is anonymous. The author is never told who reported them.
+> | Plan     | Emails per day | Recipients per email |
+> | -------- | -------------- | -------------------- |
+> | Free     | 100            | 50                   |
+> | Standard | 5,000          | 500                  |
+> | Business | 50,000         | 2,000                |
+>
+> Hitting the limit pauses sending until the reset; queued emails are not lost. To raise a limit, see [Request a higher limit].
 
 ### 4. Troubleshooting — _a video-calling app_
 
@@ -142,7 +162,26 @@ Why it's weak: names no specific cause, gives no actual fix.
 > **Still stuck?**
 > Leave and rejoin the call. If that doesn't work, try a different browser — on Safari, calls need microphone permission granted per site.
 
-### 5. FAQ answer — _any product holding personal data_
+### 5. Policy / rules — _a community platform_
+
+**Before**
+
+> Content moderation
+> Reported content is reviewed in accordance with the applicable community standards and appropriate action is taken where warranted, subject to review.
+
+Why it's weak: too vague to act on; the reader still doesn't know who decides, how long it takes, or what happens to them.
+
+**After**
+
+> What happens when content is reported
+> When someone reports a post, a moderator reviews it against our community rules and either leaves it up or removes it.
+>
+> **How it works**
+> A report goes to a moderator, not to the person who posted. Most reports are reviewed within 24 hours; reports involving safety are looked at first.
+> If a post is removed, we tell the author which rule it broke. They can appeal once, within 30 days, and a different moderator reviews the appeal.
+> Reporting is anonymous. The author is never told who reported them.
+
+### 6. FAQ answer — _any product holding personal data_
 
 **Before**
 

@@ -1,7 +1,7 @@
 ---
 name: user-guides
 description: >-
-  Writing and reviewing help-centre and user-guide content for a product's end users — FAQ answers, how-tos, concept explainers, policy pages and troubleshooting — with answer-first openings, write-for-the-least-experienced, the teach-or-cut vocabulary test, one canonical framing per concept, reassure-on-money, warn-at-the-moment-of-risk, and the five page types. Use on "help center article", "support guide", "FAQ answer", "user guide", "explain this to users".
+  Writing and reviewing help-centre and user-guide content for a product's end users — FAQ answers, how-tos, concept explainers, reference lists, policy pages and troubleshooting — with answer-first openings, write-for-the-least-experienced, the teach-or-cut vocabulary test, one canonical framing per concept, reassure-on-money, warn-at-the-moment-of-risk, and the five page types. Use on "help center article", "support guide", "FAQ answer", "user guide", "explain this to users".
 ---
 
 # User guides and help centres
@@ -56,7 +56,7 @@ Write the guide itself; whatever renders it usually adds the breadcrumbs and fee
 - **Worked example** for concepts — one concrete number example using the canonical framing. One, not three.
 - **`## Related articles`** closing section — 2–5 links to guides a reader would naturally go to next, using real titles of guides that exist. Never link a guide that doesn't exist yet.
 
-The five page types (concept explainer / how-to / policy / troubleshooting / FAQ), their skeletons, and a weak-vs-strong example for each are in [references/page-types.md](references/page-types.md) — pick the type first, then follow its skeleton. Formatting, the vocabulary tiers, and the tone checks are in [references/plain-language.md](references/plain-language.md). Site mechanics — placement, navigation registration, inbound-link greps and redirects when a guide moves — are shared with docs sites: follow [`developer-docs`'s site-mechanics.md](../developer-docs/references/site-mechanics.md).
+The six page types (concept explainer / how-to / reference / troubleshooting / policy / FAQ), their skeletons, and a weak-vs-strong example for each are in [references/page-types.md](references/page-types.md) — four of them are the standard DITA documentation types, and that file says which two are this skill's own additions. Pick the type first, then follow its skeleton.
 
 ## Pre-publish checklist
 
