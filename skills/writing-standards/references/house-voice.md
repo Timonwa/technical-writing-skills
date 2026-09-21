@@ -4,6 +4,8 @@ The rules every piece of developer-facing content obeys, whatever its shape: a d
 
 **This is the one copy.** The writing skills link here rather than restating it, so a change lands once instead of drifting across five files. Anything specific to one shape — a README's skeleton, a docs page's placement, a guide's five types — lives in that skill, not here.
 
+**A project's own style guide wins.** Where a team has already decided something — heading case, the serial comma, how the product is named, whether it says "you" or "we" — follow their decision on that point and apply these rules to everything their guide doesn't cover. These are defaults for the gaps, not a replacement for a standard someone already agreed. Where no guide exists, these apply in full.
+
 Word-level swaps (long phrase → short, and the AI-tell vocabulary) are in `editing-standards`'s references, which own that layer.
 
 ## Sentences

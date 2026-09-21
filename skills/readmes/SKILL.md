@@ -21,8 +21,8 @@ Every shape draws from the same skeleton, in this order. Drop a section that doe
 1. **Title + one-liner** — what it does, in one sentence a stranger understands.
 2. **Badges** — only if they carry information someone acts on (CI status, published version, license). No decorative badge walls; 4 badges max.
 3. **Quickstart** — the shortest real path from clone/install to seeing it work.
-4. **Config / env** — the variables needed to get running, with name, required-or-not, and what it's for. **Up to ~10, table them; past that, list only the required ones and point at `.env.example` for the rest.** A 40-row table buries the quickstart and becomes a second copy that drifts on the next commit — `.env.example` is the source of truth, and a README that reproduces it wholesale is signing up to keep two files in sync. If the project uses env vars but has no `.env.example`, flag that it needs one.
-5. **Scripts table** — the `package.json` scripts a contributor actually runs (`dev`, `build`, `test`, anything non-obvious); skip internal plumbing scripts.
+4. **Config / env** — the variables needed to get running, with name, required-or-not, and what it's for. **Up to ~10, table them; past that, list only the required ones and point at the project's example env file for the rest.** A 40-row table buries the quickstart and becomes a second copy that drifts on the next commit — the example env file is the source of truth, and a README that reproduces it wholesale is signing up to keep two files in sync. If the project uses environment variables but ships no example file, flag that it needs one.
+5. **Scripts table** — the commands a contributor actually runs (build, test, run locally, anything non-obvious), taken from wherever the project defines them: a package manifest, a Makefile, a task runner, or the documented commands themselves. Skip internal plumbing.
 6. **Contributing pointer** — one line linking `CONTRIBUTING.md` or stating the workflow (issues, PRs, branch naming). Not a policy essay.
 7. **License** — always present; link the `LICENSE` file.
 
@@ -39,7 +39,7 @@ Every shape draws from the same skeleton, in this order. Drop a section that doe
 
 ## Boundaries
 
-- **The house voice rules** — sentences, claims, prose-before-code, concrete-over-vague, no marketing adjectives, never hard-wrap → [`writing-standards`'s house-voice.md](../writing-standards/references/house-voice.md). This skill adds only what is specific to its own shape.
+- **The voice rules every document obeys** — sentences, claims, prose before code, concrete over vague, formatting, never hard-wrap → [`writing-standards`'s house-voice.md](../writing-standards/references/house-voice.md). This skill adds only what a README needs on top.
 - The general writing discipline (audience, plain language, prose-before-code) → `writing-standards`.
 - Docs-site pages the README links out to → `developer-docs`; the endpoint reference it links to → `api-reference`.
 - The quickstart's code blocks — choosing them, testing them, keeping them compiling → `code-samples`.

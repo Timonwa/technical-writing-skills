@@ -39,11 +39,13 @@ This is the standard for every docs page, in any project. Same rules, every run.
 - **One term per concept, site-wide** — define it once, then use exactly that word everywhere. A synonym for a technical concept reads as a second concept; if a page nearby uses a different term for the same thing, say so rather than adding a third.
 - **End every page with next-steps links** to 2–4 related pages — a Cards grid, a "Next steps" list, whatever the framework offers — so no page is a dead end.
 
-## Component and import hygiene (MDX)
+## Components, includes and imports
 
-- **Every component used on the page is imported** — a missing import is a silent render failure in most MDX pipelines, not a build error. Check each `<Callout>`, `<Tabs>`, `<Card>` against the imports before finishing.
-- **Import only what the page uses** — unused component imports rot as pages get edited.
-- **`import type` only for types** — anything used as a value (constructors, functions, enums in examples) must be a value import; `import type { Client }` followed by `new Client()` breaks at runtime.
+Most docs systems let a page pull in something defined elsewhere — a component, a partial, a snippet, an include. However your system spells it, the same rules hold:
+
+- **Everything the page uses is actually available to it.** Where the system requires an explicit import, a missing one is usually a silent render failure rather than a build error — the component simply doesn't appear, and nobody notices until a reader does. Check each one before finishing. Where the system uses file includes instead, check every path still resolves.
+- **Pull in only what the page uses.** Unused imports and stale includes accumulate as pages are edited, and they break quietly later.
+- **In JSX-based systems, keep `import type` for types only** — anything used as a value (a constructor, a function, an enum in an example) needs a value import. `import type { Client }` followed by `new Client()` compiles and then breaks at runtime.
 
 ## Example
 
@@ -66,7 +68,7 @@ const res = await fetch("https://api.example.com/v1/items", { headers: { Authori
 
 ## Boundaries
 
-- **The house voice rules** — sentences, claims, prose-before-code, concrete-over-vague, no marketing adjectives, never hard-wrap → [`writing-standards`'s house-voice.md](../writing-standards/references/house-voice.md). This skill adds only what is specific to its own shape.
+- **The voice rules every document obeys** — sentences, claims, prose before code, concrete over vague, formatting, never hard-wrap → [`writing-standards`'s house-voice.md](../writing-standards/references/house-voice.md). This skill adds only what a docs-site page needs on top.
 - Which document type a page should be, audience, scope, and prose discipline → `writing-standards`.
 - Deciding which pages the set needs at all, and in what order → `docs-planning`. This skill writes a page once the set has a shape.
 - Getting the facts the page depends on out of an engineer or a spec → `sme-interviews`; locating them in the source yourself → `codebase-research`.

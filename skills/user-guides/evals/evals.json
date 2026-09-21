@@ -3,16 +3,16 @@
   "evals": [
     {
       "id": 1,
-      "prompt": "Write a help centre article on how to withdraw money from our app.",
-      "expected_output": "Should not invent the flow. Should ask for the product facts it cannot know: the real screen names, button labels and menu path, the minimum and maximum amounts, the fees, how long it takes, what the user sees if it fails, and the support channel. Should ask whether the app or a staging login is available to verify against, and should state that without access it writes only what it is told and marks anything unverified. Should ask once, in one batch, rather than in a series of separate questions. Should also ask whether a style guide or glossary exists and how the core concepts are framed.",
+      "prompt": "Write a help centre article on how to connect a calendar to our scheduling app.",
+      "expected_output": "Should not invent the flow. Should ask for the product facts it cannot know: the real screen names, button labels and menu path, which calendar providers are supported, what permissions the user is asked to grant, how long syncing takes, what the user sees when a connection fails, and the support channel. Should ask whether the app or a staging login is available to verify against, and state that without access it writes only what it is told and marks anything unverified. Should ask once, in one batch. Should also ask whether a style guide or glossary exists and how the core concepts are framed.",
       "files": [],
       "expectations": [
-        "Asks for the real labels, menu path, limits, fees and timings",
+        "Asks for the real labels, menu path, supported providers and permissions",
         "Asks whether the app or a staging login is available to verify against",
         "Batches the questions into one ask rather than several",
         "Asks whether a style guide or glossary exists",
-        "Does not invent button labels, screen names, limits, fees or error messages",
-        "Does not produce a plausible withdrawal flow for the user to correct"
+        "Does not invent button labels, screen names, provider lists or error messages",
+        "Does not produce a plausible connection flow for the user to correct"
       ]
     },
     {
@@ -44,8 +44,8 @@
     },
     {
       "id": 4,
-      "prompt": "One of our guides calls it a 'wallet', another calls it a 'balance', and a third says 'account funds'. Which should I use?",
-      "expected_output": "Should treat this as a terminology decision that needs settling once and applied everywhere, not a per-guide judgement. Should ask what the product interface itself calls it, since the word the user sees in the app usually wins for the reader's sake. Should note that a second word for the same concept reads to a reader as a second concept. Should recommend recording the decision so the next guide reuses it, and correcting the guides that disagree rather than leaving a second convention running alongside. Should not simply pick one on aesthetic grounds without asking what the product uses.",
+      "prompt": "One of our guides calls it a 'workspace', another calls it a 'team', and a third says 'organisation'. Which should I use?",
+      "expected_output": "Should treat this as a terminology decision to settle once and apply everywhere, not a per-guide judgement. Should ask what the product interface itself calls it, since the word the user sees on screen usually wins for the reader's sake. Should note that a second word for the same concept reads to a reader as a second concept. Should recommend recording the decision so the next guide reuses it, and correcting the guides that disagree rather than leaving a second convention running alongside. Should not pick one on aesthetic grounds without asking what the product uses.",
       "files": [],
       "expectations": [
         "Asks what the product interface itself calls it",

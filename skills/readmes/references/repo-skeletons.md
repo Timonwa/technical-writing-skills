@@ -27,7 +27,7 @@ Signal: `bin` in `package.json`, or an installable binary.
 
 ## Monorepo root
 
-Signal: `pnpm-workspace.yaml` / `workspaces`.
+Signal: a workspace or multi-package manifest at the root (`pnpm-workspace.yaml`, a `workspaces` field, a Cargo or Go workspace, or the equivalent for the language).
 
 - The README is a **map + shared setup**: what the monorepo is, a table of workspaces (name, one-liner, link to its README), and the setup that applies to everything — install, shared env, how to run any workspace
 - Nothing package-specific — that belongs in the package's own README
