@@ -49,7 +49,11 @@ Rules that hold across all of them:
 
 ## Categories
 
-Use a fixed set in a fixed order, every release. Readers learn where to look and stop reading the rest:
+Use a fixed set in a fixed order, every release. Readers learn where to look and stop reading the rest.
+
+**Six of these are the [Keep a Changelog](https://keepachangelog.com/) categories** — Added, Changed, Deprecated, Removed, Fixed, Security. That spec is the de facto standard for release history, and following it means readers arrive already knowing the shape. **Breaking changes is this skill's addition**: Keep a Changelog has no separate breaking-change category, leaving them inside Changed and Removed, and a reader who misses one has an outage.
+
+Two other deliberate differences. Keep a Changelog maintains an `Unreleased` section at the top of a changelog file during development; published notes document what shipped, so that section doesn't appear here. And where a security entry has a CVE identifier, lead with it.
 
 | Category         | What belongs in it                                                                |
 | ---------------- | --------------------------------------------------------------------------------- |
@@ -96,7 +100,7 @@ Announce a deprecation as early as you can, repeat it in every release until rem
 
 ## Publishing
 
-- **State the version and the date** on every set of notes, and stick to one versioning scheme with a link explaining it. Don't invent a scheme in the notes.
+- **State the version and the date** on every set of notes, and stick to one versioning scheme with a link explaining it — [Semantic Versioning](https://semver.org/) is the common choice and says what a major, minor and patch bump each promise. Don't invent a scheme in the notes.
 - **Keep an accumulating history** in one place, newest first, all versions reachable. Readers arrive by searching for a symptom and need old entries.
 - **Make it subscribable** if you can — the audience that most needs breaking changes is the one least likely to visit a page.
 - **Link each entry's documentation**, and make sure that page is already updated when the notes go out.

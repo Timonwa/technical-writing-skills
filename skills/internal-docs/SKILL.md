@@ -67,13 +67,17 @@ Written for someone who is not the expert, executing under pressure, possibly at
 
 ### Decision record — why something is the way it is
 
-The document that saves the most future time, and the one most often skipped.
+The document that saves the most future time, and the one most often skipped. It has an established form — the Nygard template, collected with variants at [adr.github.io](https://adr.github.io/) — so follow that rather than inventing one. ISO/IEC/IEEE 42010 suggests a fuller set of items if you need one.
 
+- **A number and a title** — sequential (`0001`, `0002`), so a record can be cited by number and the log reads in decision order.
+- **Status** — proposed, accepted, rejected, deprecated, or superseded by a named record. This is the field most often dropped, and without it nobody can tell a decision that was taken from one that was merely considered.
 - **Context** — the situation and constraints at the time.
 - **The decision**, stated plainly.
-- **Alternatives considered** and why each was rejected.
-- **Consequences** — what this commits to, and what it costs.
+- **Consequences** — what this commits to, and what it costs, good and bad.
+- **Alternatives considered** and why each was rejected. Nygard folds this into context; keeping it separate is this skill's addition, because the rejected option is the thing someone will propose again.
 - **Date and who decided.**
+
+Keep it to one or two pages. A record nobody can read in five minutes doesn't get read at the moment it's needed.
 
 **Decision records are immutable.** When a decision changes, write a new record that supersedes the old one and link them. Editing the original destroys the reason it existed.
 

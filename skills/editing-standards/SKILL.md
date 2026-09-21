@@ -65,7 +65,9 @@ Work down the levels, in order. A level is only worth running once the level abo
 
 ## Quick-pass checks
 
-For a fast review, or a short document that doesn't need all five levels:
+For a fast review, or a short document that doesn't need all five levels.
+
+The international standard here is [ISO 24495-1:2023](https://www.iso.org/standard/78907.html), which defines plain language as communication whose wording, structure and design are so clear that intended readers can **easily find what they need, understand it, and use it**. Those three tests are the ones to apply when a sentence is arguably fine and you can't say why it isn't. The standard itself is paywalled; the [International Plain Language Federation](https://www.iplfederation.org/iso-standard/) publishes a free summary of its principles.
 
 - **Word level** — cut weak intensifiers (very, really, extremely, incredibly) and filler (just, actually, basically); replace inflated words with plain ones (utilize→use, leverage→use, facilitate→help, commence→start, in order to→to); kill nominalizations and passive voice. The full substitution table is in [Plain English alternatives](references/plain-english-alternatives.md).
 - **Sentence level** — one idea per sentence, under 25 words usually, at most three conjunctions, important information front-loaded, varied lengths.

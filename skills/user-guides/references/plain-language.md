@@ -1,5 +1,7 @@
 # Plain language — vocabulary tiers, formatting, tone checks
 
+Plain language has an international standard: [ISO 24495-1:2023](https://www.iso.org/standard/78907.html). It defines plain language as communication whose wording, structure and design let intended readers **easily find what they need, understand it, and use it** — three tests worth applying to any guide you're unsure about. The standard is paywalled; the [International Plain Language Federation](https://www.iplfederation.org/iso-standard/) publishes a free summary. What follows is how those principles land in a help centre.
+
 ## The four vocabulary tiers
 
 Every word in a help centre falls into one of four tiers. Which words go in which tier is a product fact — ask for it; the tiers and the judgment are the standard. The examples below set the pattern — apply the same judgment to similar words.

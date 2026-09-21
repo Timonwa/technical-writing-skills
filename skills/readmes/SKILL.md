@@ -16,6 +16,8 @@ The right README shape depends on what the repo is — a library leads with inst
 
 ## The universal skeleton
 
+[Standard Readme](https://github.com/RichardLitt/standard-readme) is the closest thing to a spec for this, and its rules are worth following where they apply: the file is `README.md`, the title matches the repository or package name, the short description sits on its own line under 120 characters with no heading of its own, sections appear in a fixed order, and no link in it is broken. It was written for open-source libraries, so the skeleton below adds the config and scripts sections an application or service needs, and the repo-type detection it doesn't cover.
+
 Every shape draws from the same skeleton, in this order. Drop a section that doesn't apply; never reorder:
 
 1. **Title + one-liner** — what it does, in one sentence a stranger understands.
