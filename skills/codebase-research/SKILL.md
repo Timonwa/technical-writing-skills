@@ -55,6 +55,7 @@ A value in source is a claim, not a fact, until you've seen it take effect.
 
 - **Run it, call it, or use the product** and check the value matches. Where you can't, say so.
 - **Where the same value appears in more than one place, find out which one wins** — and if you can't, that's a question, not a judgement call.
+- **A bare number carries no unit.** `30` is seconds or milliseconds depending on what consumes it, and `1000` is bytes, kilobytes or rows. Find the unit in the type, the variable name, or the function that reads the value — never infer it from what seems reasonable.
 - **Cross-check anything surprising.** A limit that seems oddly specific, a default that seems wrong for users, an error that seems unreachable — surprising findings are usually stale code or a misread, not a discovery.
 
 ## The traps

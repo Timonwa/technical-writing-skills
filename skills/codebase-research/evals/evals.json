@@ -1,0 +1,59 @@
+{
+  "skill_name": "codebase-research",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I found `requestTimeout: 30` in the config file. Add it to the docs as the default timeout.",
+      "expected_output": "Should not document 30 as the default on the strength of the source value alone. Should explain that a default in source is routinely overridden by environment configuration, a deployment manifest, or a per-customer setting, and that the source gives no hint when it has been. Should ask what the value is in the environment being documented, check whether the config loader or the validation schema narrows or replaces it, and where the same value appears in more than one place, establish which one wins. Should also ask for the unit, since a bare 30 is ambiguous between seconds and milliseconds.",
+      "files": [],
+      "expectations": [
+        "Does not document 30 as the default from the source value alone",
+        "Explains that environment or deployment config can override a source default",
+        "Asks what the value actually is in the environment being documented",
+        "Checks whether a config loader or validation schema supersedes it",
+        "Asks for the unit rather than assuming seconds or milliseconds",
+        "Treats the source value as a claim to confirm, not a fact"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "There's an exportToPdf function on the main branch. Write the docs page for it.",
+      "expected_output": "Should not document it as available. Should establish that the default branch is not necessarily what users have, and ask which branch or tag corresponds to production, whether this has shipped, and whether it sits behind a feature flag that is off. Should note that a fully built feature behind a flag that is off everywhere is not a feature yet, and that documenting unreleased behaviour reads to a reader as shipped. Should offer to draft against a stated release, or to hold the page until it ships.",
+      "files": [],
+      "expectations": [
+        "Does not document the function as available to users",
+        "Asks whether the code has shipped and which branch or tag is production",
+        "Asks whether it is behind a feature flag and what that flag is set to",
+        "States that documenting unreleased behaviour reads as shipped",
+        "Offers to hold the page or tie it to a stated release"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "legacyUpload() is exported from the package. Should it go in the reference?",
+      "expected_output": "Should not treat being exported as evidence that it is supported or current. Should check whether anything calls it, whether any test covers it, and when it was last changed, since dead code is indistinguishable from live code by reading alone. Should ask whether it is deprecated in practice, which is a question only a person can answer, and note that documenting a dead function creates support for something nobody maintains while omitting a live one leaves a gap. Should recommend confirming with an owner before either documenting or excluding it.",
+      "files": [],
+      "expectations": [
+        "Does not treat 'exported' as meaning supported or current",
+        "Checks for call sites and test coverage",
+        "Checks when it last changed",
+        "Asks whether it is deprecated in practice, as a question for a person",
+        "Recommends confirming with an owner before documenting or excluding it"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Document the error a user sees when an upload is too large. The code throws: throw new UploadError(ERR_CODES.SIZE_EXCEEDED)",
+      "expected_output": "Should recognise that an internal exception class and error constant are not what the user sees, and must not be published as the user-facing message. Should trace the constant to wherever it is mapped to display text or a response body, or search for the literal string as it appears in the product. Should ask for the real message text and, where relevant, the status code returned. Should note that readers search for the exact wording of an error, so an invented or internal approximation makes the troubleshooting entry unfindable.",
+      "files": [],
+      "expectations": [
+        "Does not present UploadError or SIZE_EXCEEDED as the user-facing message",
+        "Traces the constant to where it maps to display text or a response body",
+        "Suggests searching for the literal string as it appears in the product",
+        "Asks for the real message text rather than paraphrasing it",
+        "Notes that readers search for the exact error wording",
+        "Does not invent a plausible error message"
+      ]
+    }
+  ]
+}
