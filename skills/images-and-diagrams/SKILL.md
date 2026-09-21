@@ -122,6 +122,17 @@ This is where image-heavy documentation fails, and it fails quietly:
 - **Caption or transcribe it.** A recording without either is inaccessible and unsearchable.
 - **Recordings age worse than screenshots and cost more to redo** — weigh that before recording a flow that's about to change.
 
+## Before it ships
+
+[references/svg-authoring.md](references/svg-authoring.md) has the markup checklist for a hand-authored graphic. These are the decisions that apply to every visual:
+
+- [ ] It earns its cost — it shows something the prose can't.
+- [ ] No real customer data, personal details, internal hostnames or tokens anywhere in the frame.
+- [ ] Capture conditions match the rest of the set — theme, zoom, window size, language, plan.
+- [ ] Alt text says what the reader needs from it; a complex diagram has a longer description in the page body.
+- [ ] The instructions still work with the images removed.
+- [ ] The date or version captured is recorded, so the next person knows what to re-check.
+
 ## Boundaries
 
 - **Whether the page needs a visual at all**, and where it sits in the structure → `developer-docs`, `user-guides`, or `internal-docs` for that document type.

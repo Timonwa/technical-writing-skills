@@ -87,7 +87,8 @@ An unenforced style guide is a document that makes people feel guilty. Pick at l
 
 ## Boundaries
 
-- **The writing discipline itself** — document types, audience, structure, the voice rules every piece obeys → `writing-standards`. A style guide records a team's local decisions; it doesn't replace the craft.
+- **The voice rules every document obeys** — sentences, claims, prose before code, concrete over vague, formatting, never hard-wrap → [`writing-standards`'s house-voice.md](../writing-standards/references/house-voice.md). These skills already apply that default set, so your guide only has to record where the team departs from it or what it doesn't cover — and a decision you write down overrides it.
+- **The writing discipline itself** — document types, audience, structure → `writing-standards`. A style guide records a team's local decisions; it doesn't replace the craft.
 - **Applying the guide to an existing draft** → `editing-standards`.
 - **Terms specific to one audience's content** — a help centre's concept framings and analogy, a developer reference's naming — are decided here and consumed by `user-guides`, `developer-docs`, `api-reference` and `internal-docs`.
 - **Writing for translation**, and the do-not-translate list the terminology list feeds → `localization`.

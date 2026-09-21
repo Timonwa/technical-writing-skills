@@ -101,7 +101,7 @@ The things that cost a developer a night are rarely in the parameter table. Say 
 ## Boundaries
 
 - **Generating the spec from code** — route registries, schema annotations, spec-build tooling, and keeping generated output in sync with handlers — is an engineering job, not this skill's. This skill covers what the documentation says, including the prose inside a spec someone else generates.
-- The house voice rules — sentences, claims, prose before code, concrete over vague → [`writing-standards`'s house-voice.md](../writing-standards/references/house-voice.md).
+- **The voice rules every document obeys** — sentences, claims, prose before code, concrete over vague, formatting, never hard-wrap → [`writing-standards`'s house-voice.md](../writing-standards/references/house-voice.md). This skill adds only what an API surface needs on top.
 - Which quadrant a surrounding page belongs to, and the general writing discipline → `writing-standards`. Reference is one quadrant; the quickstart and integration guides around it are others.
 - Docs-site page mechanics — navigation, placement, link integrity, next-steps footers → `developer-docs`.
 - Locating a schema, handler or default in the source → `codebase-research`. Getting unverifiable behaviour out of the engineer who wrote it → `sme-interviews`.

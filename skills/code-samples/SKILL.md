@@ -76,9 +76,20 @@ And regardless:
 - **Keep lines short enough not to wrap** in the rendered page; a wrapped line is misread as two.
 - **Comments explain the non-obvious**, not the syntax. A comment restating what the line plainly does is noise in a sample that's meant to be skimmed.
 
+## Before it ships
+
+The house-voice rules cover prose and fence labels. These are the ones specific to a sample, and each is a yes or no:
+
+- [ ] It runs as written — imports present, real values, nothing undefined.
+- [ ] The thing being demonstrated is in the sample, not left as a comment.
+- [ ] No real credential, key, token, internal hostname or customer data anywhere in it.
+- [ ] Nothing in it models a practice you'd not want copied into production — disabled checks, swallowed errors, secrets in code.
+- [ ] Expected output shown where output is the point; the likely error shown where failure is likely.
+- [ ] The versions it was verified against are recorded.
+
 ## Boundaries
 
-- **The prose around the sample** — the sentence before every code block saying what it does and when to use it → the house-voice rules in [`writing-standards`'s house-voice.md](../writing-standards/references/house-voice.md).
+- **The voice rules every document obeys** — sentences, claims, prose before code, concrete over vague, formatting, never hard-wrap → [`writing-standards`'s house-voice.md](../writing-standards/references/house-voice.md). The prose around a sample — the sentence saying what it does and when to use it — is governed there, not here.
 - **Where the sample sits in the page, and which page it belongs on** → `developer-docs`, or `api-reference` for request and response examples on an endpoint.
 - **Quickstart samples in a repository's front door** → `readmes`.
 - **Writing the library or API being demonstrated** is not this skill's job. Where a sample can only be made safe or short by changing the API, that's a finding to raise, not something to paper over.

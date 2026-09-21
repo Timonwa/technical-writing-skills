@@ -12,7 +12,7 @@ disable-model-invocation: true
 
 A **manually-invoked editorial review** of a specific document. Where the audits ask about a whole set, this goes deep on one thing: is this document doing its job, is it true, and can a reader follow it?
 
-The standard is `editing-standards`, plus `writing-standards`' house-voice.md and the skill for whichever document type this is.
+The standard is `editing-standards`, plus [`writing-standards`'s house-voice.md](../writing-standards/references/house-voice.md) and the skill for whichever document type this is.
 
 ## Arguments
 

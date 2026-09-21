@@ -15,7 +15,7 @@ A **manually-invoked consistency sweep** across a set of documents. It answers o
 
 This is work a person cannot do by hand. Nobody notices that a concept is called three things across two hundred pages, because nobody reads two hundred pages in one sitting — but every reader who meets the second name reads it as a second concept.
 
-The standard is `style-guide`, plus the voice rules in `writing-standards`' house-voice.md. Where the project has its own style guide, that wins over both.
+The standard is `style-guide`, plus the voice rules in [`writing-standards`'s house-voice.md](../writing-standards/references/house-voice.md). Where the project has its own style guide, that wins over both.
 
 ## Arguments
 

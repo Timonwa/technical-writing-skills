@@ -105,7 +105,7 @@ Run this on anything published under a human's name — drafts written or heavil
 
 ## Boundaries
 
-- **The house voice rules** — sentences, claims, prose before code, concrete over vague, never hard-wrap → [`writing-standards`'s house-voice.md](../writing-standards/references/house-voice.md). This skill adds only the editing process on top.
+- **The voice rules every document obeys** — sentences, claims, prose before code, concrete over vague, formatting, never hard-wrap → [`writing-standards`'s house-voice.md](../writing-standards/references/house-voice.md). This skill adds only the editing process on top.
 - **Writing from scratch is out of scope** — this skill edits what exists. Draft with the skill for that document type, then edit here.
 - **The conventions being edited to** — which term wins, how the product is capitalized, the date format → `style-guide`. This skill enforces a standard; it doesn't set one.
 - **Restructuring that turns out to need a different document, or several** → the skill for that type (`developer-docs`, `user-guides`, `internal-docs`, `readmes`, `api-reference`), and `docs-planning` if the set itself is wrong.

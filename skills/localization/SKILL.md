@@ -82,7 +82,7 @@ Don't hard-code the conventions of one locale into the source text:
 ## Boundaries
 
 - **Terminology decisions and the glossary** the do-not-translate list and approved translations extend → `style-guide`.
-- **The general plain-language discipline** — short sentences, one idea, active voice — is shared with `writing-standards` and `user-guides`. This skill adds what changes when a second language is involved.
+- **The voice rules every document obeys** — sentences, claims, prose before code, concrete over vague, formatting, never hard-wrap → [`writing-standards`'s house-voice.md](../writing-standards/references/house-voice.md). Short sentences, one idea and active voice are already required there; this skill adds what changes once a second language is involved.
 - **Images with text in them** → `images-and-diagrams` for the capture and authoring side.
 - **Software string localization** — resource files, message formatting, pluralization rules in code — is an engineering concern. This skill covers documentation and the source-text discipline that serves both.
 - **Choosing target languages and markets** is a business decision, asked for rather than assumed.

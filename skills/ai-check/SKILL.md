@@ -110,6 +110,7 @@ Patterns that match a tell but appear to be the author's or the house's choice.
 
 - **This does not determine authorship**, and no report from it should be presented as evidence that something was generated. It finds patterns; that is all it can do.
 - **The full editorial pass** — structure, accuracy, clarity, consistency → `/tw:doc-review`. This is one narrow sweep, and it's the last one to run, after the document is otherwise right.
+- **The voice rules every document obeys** — sentences, claims, prose before code, concrete over vague, formatting, never hard-wrap → [`writing-standards`'s house-voice.md](../writing-standards/references/house-voice.md). A rewrite lands on those rules; this command only finds the passages that need one.
 - **Set-wide voice consistency** → `/tw:style-check`.
 - **A house rule beats every default here.** Where a project has decided on a convention this command would flag, the project wins.
 - **Don't strip a writer's voice in the name of this.** A distinctive human sentence that happens to contain an em dash is not a finding; the target is mechanical padding, not personality.
