@@ -66,7 +66,7 @@ These are skills too, marked `disable-model-invocation` so only you can start th
 | `/tw:doc-review`    | Is **this document** good? The five levels of edit over one file, folder or diff                                                                              |
 | `/tw:ai-check`      | Does it read as **machine-written**? The specific tells, each with a rewrite                                                                                  |
 
-The audits are report-only and never edit a page. `/tw:doc-review` and `/tw:ai-check` take `--apply` to act on approved findings.
+Each writes its report to `_reports/<name>.md` and tells you the path. None of them edit anything to produce it — editing tools are withheld for that turn. Afterwards they list the findings by ID and **ask which you want fixed**; only what you name gets touched. There is no flag and no default subset, so nothing is ever silently "fixed the top three".
 
 None of them assume a codebase. Where source is available it's used as the strongest evidence; where it isn't, they run against the product, a spec, or the content itself, and say which.
 

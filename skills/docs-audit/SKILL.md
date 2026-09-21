@@ -2,7 +2,7 @@
 name: docs-audit
 description: >-
   Manually invoked. Audits a body of documentation for defects a reader would hit — claims that no longer match the product, broken links and anchors, navigation integrity, duplicated and contradictory content, missing coverage, stale images, and content nobody has verified in months. Works on a docs repo, an exported help centre, or any folder of documents. Verifies each finding and writes a prioritized report. Never edits a page.
-argument-hint: '[path] [--source <path-or-url>]'
+argument-hint: '[path] [--source <path-or-url>] [--fix]'
 model: opus
 effort: high
 disable-model-invocation: true
@@ -21,6 +21,7 @@ It is **self-contained** — every check is spelled out below, so it runs with n
 
 - `[path]` — the content to audit: a directory, a single file, a diff, or an exported set. Omitted → ask what to audit rather than guessing.
 - `[--source <path-or-url>]` — where the truth lives, when it isn't the content itself: a code repository, a running product URL, an API spec, a staging login. Omitted → detect a repo if there is one; otherwise run in **unverified mode** and say so.
+- `[--fix]` — don't audit. Read the existing `_reports/docs-audit.md`, list what's in it, and ask which findings to fix. For coming back to a report you ran earlier.
 
 ## Method
 
@@ -28,7 +29,7 @@ It is **self-contained** — every check is spelled out below, so it runs with n
 
 1. **Establish the scope and the source of truth.** What is being audited, what you can check it against, and what you can't. State the unverifiable portion up front — an audit that hides its own blind spots is worse than a smaller honest one.
 2. **Inventory the content** before checking anything: every page, its type, and where it sits. You cannot find an orphan or a duplicate without the full list.
-3. **Load the previous report** if one exists. Carry unresolved findings forward with their original ID and status `UNRESOLVED`, move fixed ones to "Resolved since last audit", and continue the ID numbering. First run → mark everything `NEW`.
+3. **Audit from scratch.** Don't read a previous report for findings — re-check every item against the source, because anything fixed before can regress. The only thing worth reading from an older report is its overall score, for the trend row.
 4. **Run the checklist** below, collecting findings with a precise location — `file:line`, or the page title and section where there are no line numbers.
 5. **Verify each candidate.** Name the concrete reader failure it causes. Drop anything you can't show is real. Where you suspect a defect but can't confirm it — usually because you can't reach the source — mark it **needs confirmation** rather than inflating it into a finding.
 6. **Write the report** and post the chat summary. Recommend fixes; never edit a page. Never commit or push without explicit approval.
@@ -46,7 +47,7 @@ Findings are ordered worst-first.
 
 ### Report format
 
-Write to `_reports/docs-audit.md` where the content lives in a repository. Where it doesn't, ask where the report should go, and fall back to delivering it in chat rather than skipping it.
+Write to `_reports/docs-audit.md`, creating the directory if it doesn't exist. That's where every audit and report in this set goes, so a reader always knows where to look. Tell the user the path when you're done.
 
 ```markdown
 # Docs audit — <scope>
@@ -88,9 +89,6 @@ Write to `_reports/docs-audit.md` where the content lives in a repository. Where
 | ID | Suspected issue | What would settle it | Who to ask |
 | --- | --- | --- | --- |
 
-## Resolved since last audit
-| ID | Issue | How it was resolved |
-| --- | --- | --- |
 ```
 
 ### Output
@@ -149,6 +147,43 @@ Write to `_reports/docs-audit.md` where the content lives in a repository. Where
 - **Pages with no owner**, where the set tracks ownership.
 - **Content changed long after the thing it documents last changed** — or, more often, content untouched while the thing it documents changed repeatedly.
 - **Frontmatter and metadata** — present, valid, and consistent: titles, descriptions, and whatever the platform requires.
+
+**Status values:** `OPEN` for anything still present, `FIXED` for anything fixed during this run after the user chose it. Both describe this run only — the next run re-checks everything from scratch.
+
+## Re-running it
+
+**Every run is a complete, fresh audit.** Never skip a check, and never treat something as absent, because an earlier report said it was resolved. Code regresses, pages get reverted, a fix in one place gets undone in another — a previous report is not evidence about the state of anything today.
+
+- **Report current state only.** What's in the report is what's true now, checked this run.
+- **Overwrite the file.** No resolved history accumulates in it. A report dragging a hundred past findings along spends the reader's tokens and attention on problems that are gone.
+- **Number findings from 1 each run.** IDs identify a finding inside this report, for the conversation you're having about this run — not across runs.
+- **Read the previous report for its scores, and nothing else.** The overall and per-category scores go in the trend row so a reader can see whether the set is improving or degrading. Its findings are never read — those are re-derived from source every run.
+- **History is version control's job**, not the report's. The audit says what's wrong today and how today compares.
+
+## Fixing what it found
+
+The report is written first and nothing is edited to produce it. Then:
+
+1. **List the findings by ID** in chat, worst-first, one line each.
+2. **Ask which to fix.** Accept IDs (`1, 4, 9`), a range, `all`, or `none`.
+3. **Fix only what was named.** Never a default subset, never "the top three", never a severity threshold picked for the user. A finding they didn't choose stays in the report untouched.
+4. **Report back**: what changed, what was skipped, and anything that couldn't be fixed without a decision only they can make.
+5. **Update the report.** Mark each fixed finding `FIXED` in place, with a one-line note of what changed. Leave everything else as it stands. The file on disk has to match reality — a report still listing something that was fixed an hour ago teaches people not to trust it.
+6. **Re-score and show the movement.** After fixing, recompute the scores and report the change against where this run started. That's what scoring is for: it tells you whether the work improved things or made them worse. If several findings were fixed and no score moved, say so plainly — the findings that mattered weren't the ones chosen.
+
+Nothing is edited before step 2 is answered. This command runs with the editing tools removed while it produces the report, so that holds on its own rather than resting on the instruction — they come back for the turn after your question, once the answer is in.
+
+### Fixing from an earlier report
+
+`--fix` skips the audit entirely and works from the report already on disk, whatever its age — ten minutes old, an hour, a month. Use it whenever you want to act on findings you've already read rather than generate a new set; re-auditing would renumber them underneath you.
+
+- **Say how old the report is** — its date, and how long ago that was. Someone deciding what to fix needs to know whether they're looking at today's picture or last month's.
+- **Verify each finding still exists before fixing it.** Check the actual location; don't trust the report's description of it. Between the audit and now, the page may have changed, someone else may have fixed it, or the thing it described may have moved.
+- **Drop anything that's no longer there** and say so. That's a stale entry, not a fix, and it shouldn't be counted as one.
+- **Check cheaply whether the content has moved on** — compare the report's date against file modification times, or the version-control log for the paths it covers. That's a count of what changed, not a re-audit, and it costs seconds. If a lot has changed, say how much and offer a fresh audit; the call is theirs, not yours. Where there's no history or timestamps to compare against, say you can't tell rather than implying you checked.
+- **If no report exists**, say so and offer to run the audit rather than guessing at what to fix.
+
+Everything else is unchanged: list the findings, ask which, fix only those, update the report, re-score.
 
 ## Boundaries
 
