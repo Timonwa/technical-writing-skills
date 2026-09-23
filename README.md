@@ -1,85 +1,113 @@
 # technical-writing-skills
 
-Claude Code skills for technical writers, covering the whole job — planning a docs set, getting facts out of engineers, writing developer docs, user guides, internal docs, READMEs, API references and release notes, the craft layers underneath them, and the audits that keep a set honest. Twenty skills: fifteen Claude reaches for on its own, five you run yourself.
+Twenty Claude Code skills for technical writers — developer docs, user guides, internal docs, API references, release notes.
 
-Built for both kinds of technical writing team: the one at a software company shipping developer documentation and an API reference, and the one at a company that just needs clear user guides and internal documentation that isn't wrong.
+Documentation work is mostly not typing. It's deciding what the set should contain, getting the facts out of the people who have them, verifying a default before writing it down, and finding the page that stopped being true three releases ago. These skills cover that whole job, not just the drafting part.
 
-Stack-agnostic by design. Nothing here assumes a framework, a language, a docs platform, or a publishing tool, so it travels into any organization — including a client's, where the conventions are theirs and not yours.
+Fifteen of them are model-invoked: Claude loads one when the work matches, so asking for a runbook pulls in the runbook standard without you naming it. The other five are commands you run deliberately over content that already exists.
+
+Nothing here assumes a framework, a language, a docs platform, or a publishing tool. The rules are about documents, so they work the same in a Markdown repo, a help-desk tool, a knowledge base, or someone else's codebase where the conventions belong to the client.
 
 ## Install
+
+Run these in Claude Code:
 
 ```shell
 /plugin marketplace add Timonwa/technical-writing-skills
 /plugin install tw@technical-writing-skills
 ```
 
-Most skills are model-invoked — Claude reaches for them when the task matches. The five below are yours to run.
+Pick a scope when it asks. **Local** installs for the current repo only, which is usually right when you're working in a codebase that isn't yours. **Project** shares the skills with everyone who clones the repo. **User** makes them available everywhere.
 
-Choose a scope when installing: **local** for just this repo (the usual choice in someone else's codebase), **project** to share with collaborators, or **user** for everywhere.
+## Deciding what to write
 
-## Skills
+| Skill               | What it's for                                                                                                                |
+| ------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `docs-planning`     | Reader tasks before feature lists — audiences, the real questions from support and search, gap analysis, and what goes where |
+| `style-guide`       | The style guide, terminology list and glossary as decision records, and how to make them enforceable instead of ignored      |
+| `writing-standards` | Which of the four Diátaxis types a document is, who it serves, and the voice checklist every other skill in the set links to |
 
-### Foundation — the two disciplines
+## Finding out what's true
 
-| Skill               | What it covers                                                                                                                              |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| `writing-standards` | The discipline — Diátaxis quadrants, audience-first structure, plain language, and the shared house-voice checklist every other skill links |
-| `editing-standards` | Editing what exists, in five levels — substantive, accuracy, line, copy, proof — plus an AI-tell sweep                                      |
+| Skill               | What it's for                                                                                                                       |
+| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| `sme-interviews`    | Getting what an engineer knows onto the page — preparing from the artifacts, arriving with a wrong draft, protecting their time     |
+| `codebase-research` | Hunting the exact default, limit, UI label and error string in a repo you didn't write, and the traps that produce confident errors |
 
-### Before you write
+## Writing the document
 
-| Skill               | What it covers                                                                                                                              |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| `docs-planning`     | What the set should contain — audience and task inventory, content audit, gap analysis, information architecture, what a release ships with |
-| `sme-interviews`    | Getting accurate information out of engineers and experts, and turning it into a verified draft                                             |
-| `codebase-research` | Finding documentation facts in a codebase you didn't write — and the traps that produce confidently wrong docs                              |
-| `style-guide`       | Owning a style guide, terminology list and glossary — and making them enforceable rather than ignored                                       |
+| Skill            | What it's for                                                                                                          |
+| ---------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `developer-docs` | A docs-site page in any framework — one job per page, verified against source, links that survive a move               |
+| `user-guides`    | Help-centre guides for end users — answer first, plain words, five page types, explain rather than sell                |
+| `internal-docs`  | Runbooks, SOPs, onboarding and decision records, with the owner and review date that stop them rotting in place        |
+| `api-reference`  | Endpoints, parameters, status codes and errors, plus the auth, quickstart, pagination and versioning pages around them |
+| `readmes`        | A fixed skeleton per repo type — library, app, CLI, monorepo, package — and a quickstart somebody actually ran         |
+| `release-notes`  | What changed for me, and do I have to do anything — separated by audience, with breaking changes and deprecations      |
 
-### What you write
+## The parts that aren't prose
 
-| Skill            | What it covers                                                                                                               |
-| ---------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `developer-docs` | Docs-site pages in any framework — one job per page, link integrity, component hygiene, next-steps footers                   |
-| `user-guides`    | Help-centre and user-guide content for non-technical readers — answer first, jargon earned, five page types                  |
-| `internal-docs`  | Runbooks, SOPs, onboarding, decision records — and the ownership and freshness rules that keep them from going quietly wrong |
-| `readmes`        | One fixed README skeleton per repo type, applied the same way every time                                                     |
-| `api-reference`  | Endpoint documentation and the pages around it — auth, quickstart, errors, pagination, webhooks, versioning                  |
-| `release-notes`  | Release notes and changelogs written from the reader's side, plus breaking changes and deprecation notices                   |
+| Skill                 | What it's for                                                                                              |
+| --------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `code-samples`        | Samples that run on arrival, don't model insecure practice, and get tested so they don't quietly rot       |
+| `images-and-diagrams` | Whether a visual earns its cost at all, then capture, annotation, alt text, and diagrams as theme-able SVG |
+| `localization`        | Source text that survives translation, and running a set across locales without half of it going stale     |
+| `editing-standards`   | Five single-dimension passes over a draft that already exists — substantive, accuracy, line, copy, proof   |
 
-### The craft underneath
+## Checking what already exists
 
-| Skill                 | What it covers                                                                                                     |
-| --------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| `code-samples`        | Code examples that run, stay running, and don't teach bad practice                                                 |
-| `images-and-diagrams` | Whether a visual earns its cost, screenshot capture and annotation, alt text, and diagrams as clean theme-able SVG |
-| `localization`        | Writing so it survives translation, and running a documentation set across locales                                 |
+Five commands, each marked `disable-model-invocation`, so Claude never starts one on its own. They take a path and answer one question each.
 
-## Commands
+| Command             | The question                                                                                                         |
+| ------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `/tw:docs-audit`    | Is it true and does it work? Claims the product outgrew, dead links, unreachable pages, contradictions, stale images |
+| `/tw:content-audit` | Is this the right set? Every page inventoried with a keep, merge, split, rewrite or retire verdict, plus the gaps    |
+| `/tw:style-check`   | Does it read as one voice? One concept called three different things across two hundred pages, and the other drift   |
+| `/tw:doc-review`    | Is this document good? The five levels of edit over one file, a folder or a diff                                     |
+| `/tw:ai-check`      | Does it read as machine-written? The specific tells, each with a rewrite — never a verdict on provenance             |
 
-These are skills too, marked `disable-model-invocation` so only you can start them. Claude never runs them on its own.
+Each writes a report to `_reports/<name>.md` and tells you the path. A finding carries a severity, the reader it breaks, and a specific fix; the report closes with a scorecard and how the score moved since last time.
 
-| Command             | The question it answers                                                                                                                                       |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `/tw:docs-audit`    | Is it **true**, and does it **work**? Stale claims, broken links, navigation integrity, duplication, coverage, stale images, freshness                        |
-| `/tw:content-audit` | Is this the **right set**? Full inventory with keep/merge/split/rewrite/retire verdicts, duplicate clusters, orphans, and a gap analysis against reader tasks |
-| `/tw:style-check`   | Does it read as **one voice**? Terminology drift with counts, capitalization and heading case, forbidden words, link text, format consistency                 |
-| `/tw:doc-review`    | Is **this document** good? The five levels of edit over one file, folder or diff                                                                              |
-| `/tw:ai-check`      | Does it read as **machine-written**? The specific tells, each with a rewrite                                                                                  |
+None of them edit anything while auditing — editing tools are withheld for that turn. When the report is written, the command lists the findings by ID and asks which you want fixed, so nothing gets silently improved. Passing `--fix` skips the audit entirely and works from the report already on disk, which is how you come back to findings you read yesterday without renumbering them.
 
-Each writes its report to `_reports/<name>.md` and tells you the path. None of them edit anything to produce it — editing tools are withheld for that turn. Afterwards they list the findings by ID and **ask which you want fixed**; only what you name gets touched. There is no flag and no default subset, so nothing is ever silently "fixed the top three".
+They also don't require a codebase. Where source is available it's the strongest evidence and gets used; where it isn't, the audit works from the running product, a spec, or the content itself, and says which in the report.
 
-None of them assume a codebase. Where source is available it's used as the strongest evidence; where it isn't, they run against the product, a spec, or the content itself, and say which.
+## What the skills won't do
 
-## Conventions come from the project
+**Invent a fact to fill a gap.** No access to the code is not permission to guess. Working from a spec, a recording, or a conversation, the skills write only what they were told, ask for the exact names and values, and leave anything unverified visibly marked rather than plausible.
 
-Every skill asks for the facts it needs rather than assuming them: the product name and its vocabulary, the concept framings, the style guide if one exists, which tools the team publishes with, where drafts go. Nothing is invented, and nothing is inherited from the surrounding docs' habits.
+**Assume your product.** The product name, its vocabulary, the concept framings, the support channel, the style guide if one exists — each is asked for, never inherited from the surrounding pages.
 
-The skills also don't assume you can see the code. Each one has a path for working from a spec, a recording, or a conversation — write only what you were told, ask for the specifics, and mark what you couldn't verify rather than filling the gap with something plausible.
+**Copy the habits of the docs around them.** When an existing page breaks the standard, the skill corrects it rather than matching it. Matching whatever is already there is how drift spreads.
+
+## Repo layout
+
+```
+skills/<skill-name>/
+  SKILL.md        # the skill itself
+  references/     # longer material, loaded only when needed
+  evals/          # prompts and expected behaviour, used when revising the skill
+.claude-plugin/   # plugin and marketplace manifests
+```
+
+Rules shared across skills live in exactly one file and get linked, never restated: [house-voice.md](skills/writing-standards/references/house-voice.md) holds the voice checklist every document obeys, and [ai-writing-detection.md](skills/editing-standards/references/ai-writing-detection.md) holds the machine-written tells.
+
+## Contributing
+
+Issues and pull requests are welcome. A rule that misfires in your organization is worth reporting, and so is a skill that assumes something it has no business assuming.
+
+| Script                 | What it does                                  |
+| ---------------------- | --------------------------------------------- |
+| `npm run format`       | Format everything with Prettier               |
+| `npm run format:check` | Check formatting without writing              |
+| `npm run validate`     | Validate the plugin manifests and skill files |
+
+Keep a change to one skill where you can, and run `npm run validate` before opening a pull request.
 
 ## Related
 
-- [engineering-skills](https://github.com/Timonwa/engineering-skills) — building web apps with Next.js App Router, React and Firebase. The two plugins compose; install both if you write code as well as documentation.
+- [engineering-skills](https://github.com/Timonwa/engineering-skills) — the same idea for building web apps with Next.js App Router, React and Firebase. The two plugins compose; install both if you write code as well as documentation.
 
 ## License
 
-MIT
+[MIT](LICENSE)

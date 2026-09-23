@@ -1,7 +1,7 @@
 ---
 name: user-guides
 description: >-
-  Writing and reviewing help-centre and user-guide content for a product's end users — FAQ answers, how-tos, concept explainers, reference lists, policy pages and troubleshooting — with answer-first openings, write-for-the-least-experienced, the teach-or-cut vocabulary test, one canonical framing per concept, reassure-on-money, warn-at-the-moment-of-risk, and the five page types. Use on "help center article", "support guide", "FAQ answer", "user guide", "explain this to users".
+  Writing and reviewing help-centre and user-guide content for a product's end users — FAQ answers, how-tos, concept explainers, reference lists, policy pages and troubleshooting — with answer-first openings, write-for-the-least-experienced, the teach-or-cut vocabulary test, one canonical framing per concept, reassuring wherever the reader has something at stake, warning at the moment of risk, and the six page types. Use on "help center article", "support guide", "FAQ answer", "user guide", "explain this to users".
 ---
 
 # User guides and help centres
