@@ -5,6 +5,7 @@
   "description": "Claude Code skills for technical writers — developer docs, user guides, internal docs, READMEs, API references, release notes, and the planning, editing and asset craft around them.",
   "license": "MIT",
   "repository": "github:Timonwa/technical-writing-skills",
+  "packageManager": "pnpm@11.1.1",
   "scripts": {
     "format": "prettier --write .",
     "format:check": "prettier --check .",

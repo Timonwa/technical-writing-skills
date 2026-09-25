@@ -96,13 +96,17 @@ Rules shared across skills live in exactly one file and get linked, never restat
 
 Issues and pull requests are welcome. A rule that misfires in your organization is worth reporting, and so is a skill that assumes something it has no business assuming.
 
-| Script                 | What it does                                  |
-| ---------------------- | --------------------------------------------- |
-| `npm run format`       | Format everything with Prettier               |
-| `npm run format:check` | Check formatting without writing              |
-| `npm run validate`     | Validate the plugin manifests and skill files |
+The skills are Markdown, so there's nothing to build and nothing you have to install to edit one.
 
-Keep a change to one skill where you can, and run `npm run validate` before opening a pull request.
+| Script              | What it does                                  | Needs                       |
+| ------------------- | --------------------------------------------- | --------------------------- |
+| `pnpm format`       | Format everything with Prettier               | `pnpm install` first        |
+| `pnpm format:check` | Check formatting without writing              | `pnpm install` first        |
+| `pnpm validate`     | Validate the plugin manifests and skill files | the Claude Code CLI on PATH |
+
+The repo uses [pnpm](https://pnpm.io), and Prettier is its only dependency — install it if you want the format scripts, or skip the install and run `pnpm dlx prettier --write .` instead.
+
+Keep a change to one skill where you can, and run `pnpm validate` before opening a pull request.
 
 ## Related
 
