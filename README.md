@@ -39,7 +39,7 @@ Pick a scope when it asks. **Local** installs for the current repo only, which i
 | Skill            | What it's for                                                                                                          |
 | ---------------- | ---------------------------------------------------------------------------------------------------------------------- |
 | `developer-docs` | A docs-site page in any framework — one job per page, verified against source, links that survive a move               |
-| `user-guides`    | Help-centre guides for end users — answer first, plain words, five page types, explain rather than sell                |
+| `user-guides`    | Help-centre guides for end users — answer first, plain words, six page types, explain rather than sell                 |
 | `internal-docs`  | Runbooks, SOPs, onboarding and decision records, with the owner and review date that stop them rotting in place        |
 | `api-reference`  | Endpoints, parameters, status codes and errors, plus the auth, quickstart, pagination and versioning pages around them |
 | `readmes`        | A fixed skeleton per repo type — library, app, CLI, monorepo, package — and a quickstart somebody actually ran         |
@@ -82,7 +82,7 @@ They also don't require a codebase. Where source is available it's the strongest
 
 ## Repo layout
 
-```
+```text
 skills/<skill-name>/
   SKILL.md        # the skill itself
   references/     # longer material, loaded only when needed
