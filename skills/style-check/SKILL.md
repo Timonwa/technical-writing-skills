@@ -20,14 +20,14 @@ The standard is `style-guide`, plus the voice rules in [`writing-standards`'s ho
 ## Arguments
 
 - `[path]` — the content to sweep. Omitted → ask.
-- `[--guide <path>]` — the project's style guide, terminology list or glossary. Omitted → look for one; if none exists, run in **derive mode**: infer the dominant convention from the content itself, report drift against that, and propose the terminology list the project is missing.
+- `[--guide <path>]` — the project's style guide, terminology list or glossary. Omitted → look for one; if none turns up, ask before assuming there isn't one, since a team's guide often lives outside the repo. Only once the answer is no, run in **derive mode**: infer the dominant convention from the content itself, report drift against that, and propose the terminology list the project is missing.
 - `[--fix]` — don't audit. Read the existing `_reports/style-check.md`, list what's in it, and ask which findings to fix. For coming back to a report you ran earlier.
 
 ## Method
 
 **Frequency decides the rule, not taste.** In derive mode you are not imposing a preference — you are finding the convention the content already mostly follows and flagging the minority that breaks it. Where a set is genuinely split down the middle, that's a finding to raise for a decision, not one to settle yourself.
 
-1. **Load the standard** — the project's guide if there is one, otherwise derive the dominant conventions and state what you derived and how strongly.
+1. **Load the standard** — the project's guide if there is one, asking for it before concluding there isn't. Only then derive the dominant conventions, and state what you derived and how strongly.
 2. **Sweep the whole set**, not a sample. A consistency finding is only meaningful against the full corpus, and the outlier is the point.
 3. **Count everything.** Every finding carries how many times each variant appears and where. A drift report without counts can't be acted on.
 4. **Separate a drift from a decision.** Where two variants both appear substantially, flag it as an open decision with the counts and a recommendation, rather than declaring one correct.

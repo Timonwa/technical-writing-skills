@@ -25,7 +25,7 @@ The standard is `editing-standards`, plus [`writing-standards`'s house-voice.md]
 **Work down the levels in order, and don't skip ahead.** There is no point line-editing a section that's about to move, or checking a comma in a claim that turns out to be false. Each level is only worth running once the level above it is settled.
 
 1. **Establish the document's job** — its type, its audience, and what the reader should be able to do afterward. Ask if it isn't clear; every judgement below depends on it.
-2. **Load the project's standard** — its style guide, terminology list or glossary, if one exists. Editing to a house standard is a different job from editing to your instincts, and the author is entitled to the house standard.
+2. **Load the project's standard** — its style guide, terminology list or glossary. Look for one, and ask before concluding there isn't one; a team's guide often lives outside the repo. Editing to a house standard is a different job from editing to your instincts, and the author is entitled to the house standard.
 3. **Read it once without editing.** Mark problems; fix nothing yet. Editing while first reading produces line edits on paragraphs that should have been cut.
 4. **Run the five levels**, collecting findings.
 5. **Separate the fixes from the questions.** Corrections you can make go in the findings; facts only the author or an expert can settle go in a batched question list. Never close a factual gap by writing the plausible version.

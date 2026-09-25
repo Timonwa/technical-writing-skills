@@ -24,7 +24,7 @@ In documentation these patterns matter for a reason beyond provenance: nearly al
 
 ## Method
 
-1. **Establish the house rule first.** Where a project's style guide mandates something this command would otherwise flag — em-dash asides, a particular closing convention — the guide wins, and only mechanical overuse is reported. Say which rule you're applying.
+1. **Establish the house rule first.** Look for the project's style guide, and ask before concluding there isn't one — a guide that lives outside the repo still governs the draft. Where it mandates something this command would otherwise flag — em-dash asides, a particular closing convention — the guide wins, and only mechanical overuse is reported. Say which rule you're applying.
 2. **Count before judging.** Every tell is reported with a frequency and a location. "Three em dashes in a 400-word section" is actionable; "too many em dashes" is not.
 3. **Sweep each category** below.
 4. **Rewrite each flagged passage**, don't just flag it. A tell without a replacement is a complaint.

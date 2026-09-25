@@ -20,7 +20,7 @@ The standard behind it is `docs-planning`; `writing-standards` supplies the docu
 ## Arguments
 
 - `[path]` — the content set to inventory. Omitted → ask.
-- `[--tasks <path-or-list>]` — the reader tasks to measure coverage against, if you already have them. Omitted → derive a task list from the sources below and **present it for confirmation before running the gap analysis**, because every coverage finding depends on it.
+- `[--tasks <path-or-list>]` — the reader tasks to measure coverage against, if you already have them. Omitted → ask whether a task list, journey map or support-ticket export exists before building one, then derive from the sources below and **present the list for confirmation before running the gap analysis**, because every coverage finding depends on it.
 - `[--fix]` — don't audit. Read the existing `_reports/content-audit.md`, list what's in it, and ask which findings to fix. For coming back to a report you ran earlier.
 
 ## Method

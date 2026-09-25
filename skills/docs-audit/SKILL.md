@@ -20,14 +20,14 @@ It is **self-contained** — every check is spelled out below, so it runs with n
 ## Arguments
 
 - `[path]` — the content to audit: a directory, a single file, a diff, or an exported set. Omitted → ask what to audit rather than guessing.
-- `[--source <path-or-url>]` — where the truth lives, when it isn't the content itself: a code repository, a running product URL, an API spec, a staging login. Omitted → detect a repo if there is one; otherwise run in **unverified mode** and say so.
+- `[--source <path-or-url>]` — where the truth lives, when it isn't the content itself: a code repository, a running product URL, an API spec, a staging login. Omitted → detect a repo if there is one; if nothing turns up, ask before concluding there's nothing to verify against, since the source is often a staging URL or a spec you'd have to be told about. Only once the answer is no, run in **unverified mode** and say so.
 - `[--fix]` — don't audit. Read the existing `_reports/docs-audit.md`, list what's in it, and ask which findings to fix. For coming back to a report you ran earlier.
 
 ## Method
 
 **Mindset — read as the reader, not as the author.** The author knows what the page meant. Follow the instructions literally, in order, with no prior knowledge, and report where that fails. A finding is real when you can name the reader it breaks and what happens to them.
 
-1. **Establish the scope and the source of truth.** What is being audited, what you can check it against, and what you can't. State the unverifiable portion up front — an audit that hides its own blind spots is worse than a smaller honest one.
+1. **Establish the scope and the source of truth.** What is being audited, what you can check it against, and what you can't. Ask for a source before settling for none — running unverified is a decision the user makes, not a default you fall into. State the unverifiable portion up front; an audit that hides its own blind spots is worse than a smaller honest one.
 2. **Inventory the content** before checking anything: every page, its type, and where it sits. You cannot find an orphan or a duplicate without the full list.
 3. **Audit from scratch.** Don't read a previous report for findings — re-check every item against the source, because anything fixed before can regress. The only thing worth reading from an older report is its overall score, for the trend row.
 4. **Run the checklist** below, collecting findings with a precise location — `file:line`, or the page title and section where there are no line numbers.
