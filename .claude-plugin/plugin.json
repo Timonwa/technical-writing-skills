@@ -1,5 +1,6 @@
 {
   "name": "tw",
+  "displayName": "Technical Writing Skills",
   "description": "Skills for technical writers — planning a docs set, interviewing experts, style guides and terminology, developer docs, user guides, internal docs, READMEs, API references, release notes, editing, code samples, screenshots, diagrams and localization, plus commands for auditing a docs set, checking consistency, reviewing a draft and drafting release notes.",
   "version": "2.0.0",
   "author": {
