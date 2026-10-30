@@ -66,7 +66,6 @@ Run [`writing-standards`'s house-voice.md](../writing-standards/references/house
 - [ ] The first line answers the question or states the bottom line.
 - [ ] No plumbing jargon that fails the teach-or-cut test; every required term glossed on first use.
 - [ ] Core concepts use the agreed framing, word-for-word.
-- [ ] Nothing said twice: no fact repeated within the guide, or across the guides it links to or that cover the same screen. Each repeat becomes a link to the fact's one home.
 - [ ] Every interface label the guide names is explained in plain words or linked to the guide that explains it. No lists of bare labels, and no circular descriptions ("Combos: manage combos").
 - [ ] Read it once as a first-time user: any sentence that needs re-reading gets rewritten.
 - [ ] Every irreversible or security step has a bold warning **at that step**, not in a paragraph elsewhere.

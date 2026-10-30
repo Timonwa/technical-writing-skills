@@ -25,7 +25,7 @@ Work down the levels, in order. A level is only worth running once the level abo
 - Does it match one type, or does it drift between them (a how-to that stops to lecture, a reference that gives advice)?
 - Is the order right for the reader — what they need first, first? Is the most important information above the point where a reader gives up?
 - What's missing: prerequisites, the failure case, the expected result, what to do next, the limits and edge cases.
-- What's present that shouldn't be: background nobody asked for, content duplicated from a canonical page, a section serving the author rather than the reader.
+- What's present that shouldn't be: background nobody asked for, content duplicated from a canonical page, the same fact said twice inside the document, a section serving the author rather than the reader.
 - Is anything out of scope for this document and better as a link?
 
 **2. Technical accuracy — is it true?**

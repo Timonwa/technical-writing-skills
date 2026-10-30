@@ -51,5 +51,6 @@ Word-level swaps (long phrase → short, and the AI-tell vocabulary) are in `edi
 ## Keeping it true
 
 - [ ] **Current or deleted.** When a change makes a section wrong, fix or remove that section in the same change. A stale document is worse than a missing one.
+- [ ] **One home per fact.** Each fact, rule or explanation lives in one document; every other document that needs it links there instead of restating it. Inside a document, say each thing once. Copies drift, and a reader who meets two versions can't tell which is current.
 - [ ] **If a section can't be kept current, replace it with a link** to whatever is the source of truth.
 - [ ] **Refresh, don't clobber.** Editing an existing document preserves the parts that are still right and specific to that project — but preserving content is not preserving violations: a section that breaks these rules gets corrected, not kept.
