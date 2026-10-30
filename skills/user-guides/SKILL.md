@@ -44,6 +44,7 @@ A reader learns a concept once and then meets it again three guides later — so
 7. **Warn at the moment of risk.** An irreversible or security-sensitive step gets a bold warning **at that step**, not in a paragraph far away: "Double-check the amount before you confirm. This can't be undone."
 8. **Keep it short.** Most guides land around 500 words; a concept explainer can run longer, but never pad. A section that doesn't help the reader act or understand gets cut.
 9. **Nothing sells; everything explains.** No marketing language ("revolutionary", "empowering", "seamless") anywhere in a help centre.
+10. **One home per fact.** Each fact, rule or explanation lives in one guide; every other guide that needs it links there instead of restating it. Inside a guide, say each thing once: an intro, a step, a caption and a troubleshooting entry that all repeat the same condition are three chances to drift. A concept's one-line framing is reused word for word, but its full explanation still has one home.
 
 ## Structure of every guide
 
@@ -65,6 +66,9 @@ Run [`writing-standards`'s house-voice.md](../writing-standards/references/house
 - [ ] The first line answers the question or states the bottom line.
 - [ ] No plumbing jargon that fails the teach-or-cut test; every required term glossed on first use.
 - [ ] Core concepts use the agreed framing, word-for-word.
+- [ ] Nothing said twice: no fact repeated within the guide, or across the guides it links to or that cover the same screen. Each repeat becomes a link to the fact's one home.
+- [ ] Every interface label the guide names is explained in plain words or linked to the guide that explains it. No lists of bare labels, and no circular descriptions ("Combos: manage combos").
+- [ ] Read it once as a first-time user: any sentence that needs re-reading gets rewritten.
 - [ ] Every irreversible or security step has a bold warning **at that step**, not in a paragraph elsewhere.
 - [ ] Ends with `## Related articles` linking 2–5 existing, genuinely related guides.
 
