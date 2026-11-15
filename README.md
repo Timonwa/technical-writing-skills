@@ -1,10 +1,10 @@
 # technical-writing-skills
 
-Twenty Claude Code skills for technical writers — developer docs, user guides, internal docs, API references, release notes.
+Twenty-one Claude Code skills for technical writers — developer docs, user guides, internal docs, API references, release notes.
 
 Documentation work is mostly not typing. It's deciding what the set should contain, getting the facts out of the people who have them, verifying a default before writing it down, and finding the page that stopped being true three releases ago. These skills cover that whole job, not just the drafting part.
 
-Fifteen of them are model-invoked: Claude loads one when the work matches, so asking for a runbook pulls in the runbook standard without you naming it. The other five are commands you run deliberately over content that already exists.
+Fifteen of them are model-invoked: Claude loads one when the work matches, so asking for a runbook pulls in the runbook standard without you naming it. The other six are commands you run deliberately over content that already exists.
 
 Nothing here assumes a framework, a language, a docs platform, or a publishing tool. The rules are about documents, so they work the same in a Markdown repo, a help-desk tool, a knowledge base, or someone else's codebase where the conventions belong to the client.
 
@@ -56,15 +56,16 @@ Pick a scope when it asks. **Local** installs for the current repo only, which i
 
 ## Checking what already exists
 
-Five commands, each marked `disable-model-invocation`, so Claude never starts one on its own. They take a path and answer one question each.
+Six commands, each marked `disable-model-invocation`, so Claude never starts one on its own. They take a path or a pull request and answer one question each.
 
-| Command             | The question                                                                                                         |
-| ------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `/tw:docs-audit`    | Is it true and does it work? Claims the product outgrew, dead links, unreachable pages, contradictions, stale images |
-| `/tw:content-audit` | Is this the right set? Every page inventoried with a keep, merge, split, rewrite or retire verdict, plus the gaps    |
-| `/tw:style-check`   | Does it read as one voice? One concept called three different things across two hundred pages, and the other drift   |
-| `/tw:doc-review`    | Is this document good? The five levels of edit over one file, a folder or a diff                                     |
-| `/tw:ai-check`      | Does it read as machine-written? The specific tells, each with a rewrite — never a verdict on provenance             |
+| Command              | The question                                                                                                         |
+| -------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `/tw:docs-audit`     | Is it true and does it work? Claims the product outgrew, dead links, unreachable pages, contradictions, stale images |
+| `/tw:content-audit`  | Is this the right set? Every page inventoried with a keep, merge, split, rewrite or retire verdict, plus the gaps    |
+| `/tw:style-check`    | Does it read as one voice? One concept called three different things across two hundred pages, and the other drift   |
+| `/tw:doc-review`     | Is this document good? The five levels of edit over one file, a folder or a diff                                     |
+| `/tw:docs-pr-review` | Are the docs in this PR true of what it changes? Claims checked against the change, and changes left undocumented    |
+| `/tw:ai-check`       | Does it read as machine-written? The specific tells, each with a rewrite — never a verdict on provenance             |
 
 Each writes a report to `_reports/<name>.md` and tells you the path. A finding carries a severity, the reader it breaks, and a specific fix; the report closes with a scorecard and how the score moved since last time.
 
