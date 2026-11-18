@@ -6,9 +6,14 @@
   "description": "Skills for technical writers — developer documentation, user guides, internal docs, API references, release notes, and the planning, editing and asset craft around them.",
   "plugins": [
     {
+      "name": "write",
+      "source": "./plugins/write",
+      "description": "The craft every writer needs, technical or content — writing standards, editing, the machine-written check, images and diagrams, code samples, style guides and drift checks, reviewing one piece, and interviewing experts. The voice and audience come from the project's style guide or the publication's writing guide."
+    },
+    {
       "name": "tw",
-      "source": "./",
-      "description": "Skills for technical writers — planning a docs set, interviewing experts, style guides and terminology, developer docs, user guides, internal docs, READMEs, API references, release notes, editing, code samples, screenshots, diagrams and localization, plus commands for auditing a docs set, checking consistency, reviewing a draft and drafting release notes."
+      "source": "./plugins/tw",
+      "description": "Technical writing — planning a docs set, developer docs, user guides, internal docs, READMEs, API references, release notes and localization, plus commands for auditing a docs set, inventorying it and reviewing the docs in a pull request. Builds on write."
     }
   ]
 }
