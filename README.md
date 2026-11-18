@@ -97,7 +97,7 @@ Rules shared across skills live in exactly one file and get linked, never restat
 
 Issues and pull requests are welcome. A rule that misfires in your organization is worth reporting, and so is a skill that assumes something it has no business assuming.
 
-The skills are Markdown, so there's nothing to build and nothing you have to install to edit one.
+Each skill is a Markdown file, so there's no build step and nothing to install to edit one. The scripts only format and check them:
 
 | Script              | What it does                                  | Needs                       |
 | ------------------- | --------------------------------------------- | --------------------------- |
