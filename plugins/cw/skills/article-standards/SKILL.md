@@ -110,4 +110,4 @@ Decades of eye-tracking find the same thing: people scan web pages rather than r
 - **The voice rules under any piece of writing** → `write:writing-standards`. **Tightening a finished draft** → `cw:editing-standards`. **The machine-written sweep** → `/write:ai-check`.
 - **Code samples that must run** → `write:code-samples`. **Diagrams and screenshots** → `cw:images-and-diagrams`.
 - **A tutorial's companion repository** → `demo-readme`.
-- **A periodic issue covering several pieces** → `newsletter-standards`. **Promoting one piece** → `social-media-posts`. **Whether it's being found** → `content-performance`.
+- **A periodic issue covering several pieces** → `newsletter-standards`. **Promoting one piece** → `social-media-posts`. **Getting it found** → `cw:seo-aeo-geo`. **Whether it's being found** → `content-performance`.

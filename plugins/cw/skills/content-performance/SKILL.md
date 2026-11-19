@@ -101,6 +101,6 @@ Write the report to `_reports/content-performance-[YYYY-MM-DD].md` (ask before o
 
 - **What success means for this publication** → its `profile.md`.
 - **Rewriting a piece once you know what's wrong** → `article-standards` for structure and framing, `cw:editing-standards` for the line level.
-- **The title and opening a rewrite produces** → `article-standards`; this skill says which titles are underperforming, not what they should say.
+- **The title and opening a rewrite produces** → `article-standards`; this skill says which titles are underperforming, not what they should say. **The title tag, meta description, slug and quotable answer** → `cw:seo-aeo-geo`.
 - **Promoting a piece that's fine but unseen** → `social-media-posts`. A discovery problem and a quality problem need different fixes.
 - **Technical implementation in code** — metadata wiring, robots, sitemaps, JSON-LD validity, crawlability — is an engineering job and outside this skill. Name what's wrong; don't change the site.

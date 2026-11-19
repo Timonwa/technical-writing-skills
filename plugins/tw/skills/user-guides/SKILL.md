@@ -78,5 +78,6 @@ Apply `write:writing-standards`' voice rules and `tw:docs-standards` first — t
 - **The voice rules every document obeys** — sentences, claims, concrete over vague, formatting, never hard-wrap → `write:writing-standards`; the documentation voice, prose before code and the four document types → `tw:docs-standards`.
 - **The shared writing discipline** — audience-first, scope → `write:writing-standards`; document type → `tw:docs-standards`.
 - **The agreed vocabulary itself** — which term wins, how each concept is framed, the trusted analogy — is captured and maintained by `tw:style-guide`. This skill consumes those decisions; it doesn't invent them.
+- **Findability** — titles readers search for, meta descriptions, slugs, the help centre's own search → `tw:seo-aeo-geo`.
 - **Tightening an existing draft** → `tw:editing-standards`. **Screenshots** → `tw:images-and-diagrams`. **Announcing what changed** → `release-notes`.
 - **Product facts** — product name, domain vocabulary, the concept framings, the trusted analogy, support channel — are asked for, never assumed and never invented. They don't live in this skill.

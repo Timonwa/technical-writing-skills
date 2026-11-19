@@ -78,4 +78,5 @@ const res = await fetch("https://api.example.com/v1/items", { headers: { Authori
 - **Help centres and user guides for non-technical end users** → `user-guides`, for a different audience and page types.
 - **Internal documentation** — runbooks, onboarding, process docs → `internal-docs`.
 - Project READMEs → `readmes`.
+- Findability — titles, meta descriptions, slugs, versioned canonicals, being quoted in AI answers → `tw:seo-aeo-geo`.
 - The code blocks themselves — choosing, testing and maintaining them → `write:code-samples`. Screenshots, architecture and flow diagrams → `tw:images-and-diagrams`.

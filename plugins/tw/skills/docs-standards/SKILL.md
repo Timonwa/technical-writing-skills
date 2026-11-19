@@ -115,6 +115,7 @@ Note what it doesn't do: no history of why API keys exist (explanation), no full
 - Docs-site page mechanics — components and imports, navigation, link integrity when moving pages, page splitting, next-steps footers → `tw:developer-docs`.
 - Help-centre guides and user guides for end users → `tw:user-guides`. Runbooks, process docs and onboarding → `tw:internal-docs`.
 - Project READMEs → `tw:readmes`. API references → `tw:api-reference`. Release notes and changelogs → `tw:release-notes`.
+- Findability in search, the docs site's own search and AI answers → `tw:seo-aeo-geo`.
 
 **The parts that aren't prose** — code examples → `write:code-samples`; screenshots, diagrams and alt text → `tw:images-and-diagrams`.
 
