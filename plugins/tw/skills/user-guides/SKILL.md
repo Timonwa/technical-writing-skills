@@ -6,7 +6,7 @@ description: >-
 
 # User guides and help centres
 
-Write guides for a product's end users so a first-time reader gets their answer fast and every guide reads like the same person wrote it. Same rules every run, wherever the guides live — a docs folder, a content repo, a help-desk or knowledge-base tool, a PDF manual, or nothing but a chat window.
+Write guides for a product's end users so a first-time reader gets their answer fast and every guide reads like the same person wrote it. Apply these rules wherever the guides live — a docs folder, a content repo, a help-desk or knowledge-base tool, a PDF manual, or nothing but a chat window.
 
 **Voice in one line:** plain, calm, friendly, direct. Explain, never sell. Short sentences. Answer first, details after.
 
@@ -57,7 +57,7 @@ Write the guide itself; whatever renders it usually adds the breadcrumbs and fee
 - **Worked example** for concepts — one concrete number example using the canonical framing. One, not three.
 - **`## Related articles`** closing section — 2–5 links to guides a reader would naturally go to next, using real titles of guides that exist. Never link a guide that doesn't exist yet.
 
-The six page types (concept explainer / how-to / reference / troubleshooting / policy / FAQ), their skeletons, and a weak-vs-strong example for each are in [references/page-types.md](references/page-types.md) — four of them are the standard DITA documentation types, and that file says which two are this skill's own additions. Pick the type first, then follow its skeleton.
+The six page types (concept explainer / how-to / reference / troubleshooting / policy / FAQ), their skeletons, and a weak-vs-strong example for each are in [references/page-types.md](references/page-types.md) — four of them are the standard DITA documentation types. Pick the type first, then follow its skeleton.
 
 ## Pre-publish checklist
 
@@ -75,7 +75,7 @@ Run [`writing-standards`'s house-voice.md](../writing-standards/references/house
 
 - **Developer-facing docs sites** (technical guides, reference pages, SDK docs) → `developer-docs` — same consistency aim, different audience and page types.
 - **Documentation for staff rather than customers** — runbooks, SOPs, onboarding, internal knowledge bases → `internal-docs`. The plain-language discipline is the same; the reader is on the inside and the confidentiality rules differ.
-- **The voice rules every document obeys** — sentences, claims, prose before code, concrete over vague, formatting, never hard-wrap → [`writing-standards`'s house-voice.md](../writing-standards/references/house-voice.md). This skill adds the non-technical layer on top; it doesn't replace it.
+- **The voice rules every document obeys** — sentences, claims, prose before code, concrete over vague, formatting, never hard-wrap → [`writing-standards`'s house-voice.md](../writing-standards/references/house-voice.md).
 - **The shared writing discipline** — audience-first, scope, document type → `writing-standards`.
 - **The agreed vocabulary itself** — which term wins, how each concept is framed, the trusted analogy — is captured and maintained by `style-guide`. This skill consumes those decisions; it doesn't invent them.
 - **Tightening an existing draft** → `editing-standards`. **Screenshots** → `images-and-diagrams`. **Announcing what changed** → `release-notes`.

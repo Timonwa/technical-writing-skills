@@ -51,9 +51,9 @@ Rules that hold across all of them:
 
 Use a fixed set in a fixed order, every release. Readers learn where to look and stop reading the rest.
 
-**Six of these are the [Keep a Changelog](https://keepachangelog.com/) categories** — Added, Changed, Deprecated, Removed, Fixed, Security. That spec is the de facto standard for release history, and following it means readers arrive already knowing the shape. **Breaking changes is this skill's addition**: Keep a Changelog has no separate breaking-change category, leaving them inside Changed and Removed, and a reader who misses one has an outage.
+**Six of these are the [Keep a Changelog](https://keepachangelog.com/) categories** — Added, Changed, Deprecated, Removed, Fixed, Security. That spec is the de facto standard for release history, and following it means readers arrive already knowing the shape. **Add a Breaking changes category ahead of them**: Keep a Changelog leaves breaking changes inside Changed and Removed, and a reader who misses one has an outage.
 
-Two other deliberate differences. Keep a Changelog maintains an `Unreleased` section at the top of a changelog file during development; published notes document what shipped, so that section doesn't appear here. And where a security entry has a CVE identifier, lead with it.
+Leave out Keep a Changelog's `Unreleased` section: published notes document what shipped. Where a security entry has a CVE identifier, lead with it.
 
 | Category         | What belongs in it                                                                |
 | ---------------- | --------------------------------------------------------------------------------- |
@@ -112,7 +112,7 @@ Announce a deprecation as early as you can, repeat it in every release until rem
 
 - **The documentation pages the notes link to** — the feature's how-to, its reference entry, its migration guide → `developer-docs`, `user-guides`, `api-reference`.
 - **A substantial migration guide** is its own document, not a release note. The note links it.
-- **The voice rules every document obeys** — sentences, claims, prose before code, concrete over vague, formatting, never hard-wrap → [`writing-standards`'s house-voice.md](../writing-standards/references/house-voice.md). This skill adds only what an entry announcing a change needs on top.
+- **The voice rules every document obeys** — sentences, claims, prose before code, concrete over vague, formatting, never hard-wrap → [`writing-standards`'s house-voice.md](../writing-standards/references/house-voice.md).
 - **Generating and categorizing the raw change list** from version control or a release tool is an engineering task; this skill covers what the published notes say.
 - **Launch announcements, blog posts and marketing copy** about a release are a different document with a different goal. Release notes stay factual; link the announcement rather than becoming one.
 - **Internal "what shipped" summaries** for other teams → `internal-docs`.

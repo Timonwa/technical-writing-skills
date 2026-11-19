@@ -174,7 +174,7 @@ The report is written first and nothing is edited to produce it. Then:
 5. **Update the report.** Mark each fixed verdict `FIXED` in place, with a one-line note of what changed. Leave everything else as it stands. The file on disk has to match reality — a report still listing something that was fixed an hour ago teaches people not to trust it.
 6. **Re-score and show the movement.** After fixing, recompute the scores and report the change against where this run started. That's what scoring is for: it tells you whether the work improved things or made them worse. If several findings were fixed and no score moved, say so plainly — the findings that mattered weren't the ones chosen.
 
-Nothing is edited before step 2 is answered. This command runs with the editing tools removed while it produces the report, so that holds on its own rather than resting on the instruction — they come back for the turn after your question, once the answer is in.
+Nothing is edited before step 2 is answered. The editing tools are unavailable while this command produces the report; they return for the turn after your question, once the answer is in.
 
 ### Fixing from an earlier report
 

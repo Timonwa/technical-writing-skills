@@ -8,7 +8,7 @@ description: >-
 
 A README answers three questions, in order: what does this do, how do I run it, where is everything else. Everything that doesn't serve one of those three is a candidate for deletion.
 
-This is the standard for every README, wherever it lives — a personal project, a work repo, or a pull request to someone else's. Same detection, same skeleton, same rules, every run. When a README already exists and deviates from it, keep the project-specific facts and correct the shape (see **Refresh, don't clobber**).
+Apply these rules to every README, wherever it lives — a personal project, a work repo, or a pull request to someone else's. When a README already exists and deviates from it, keep the project-specific facts and correct the shape (see **Refresh, don't clobber**).
 
 ## Detect the repo type first
 
@@ -16,7 +16,7 @@ The right README shape depends on what the repo is — a library leads with inst
 
 ## The universal skeleton
 
-[Standard Readme](https://github.com/RichardLitt/standard-readme) is the closest thing to a spec for this, and its rules are worth following where they apply: the file is `README.md`, the title matches the repository or package name, the short description sits on its own line under 120 characters with no heading of its own, sections appear in a fixed order, and no link in it is broken. It was written for open-source libraries, so the skeleton below adds the config and scripts sections an application or service needs, and the repo-type detection it doesn't cover.
+[Standard Readme](https://github.com/RichardLitt/standard-readme) is the closest thing to a spec for this, and its rules are worth following where they apply: the file is `README.md`, the title matches the repository or package name, the short description sits on its own line under 120 characters with no heading of its own, sections appear in a fixed order, and no link in it is broken. Its rules are written for open-source libraries; for an application or service, add the config and scripts sections below, and detect the repo type first.
 
 Every shape draws from the same skeleton, in this order. Drop a section that doesn't apply; never reorder:
 
@@ -41,7 +41,7 @@ Every shape draws from the same skeleton, in this order. Drop a section that doe
 
 ## Boundaries
 
-- **The voice rules every document obeys** — sentences, claims, prose before code, concrete over vague, formatting, never hard-wrap → [`writing-standards`'s house-voice.md](../writing-standards/references/house-voice.md). This skill adds only what a README needs on top.
+- **The voice rules every document obeys** — sentences, claims, prose before code, concrete over vague, formatting, never hard-wrap → [`writing-standards`'s house-voice.md](../writing-standards/references/house-voice.md).
 - The general writing discipline (audience, plain language, prose-before-code) → `writing-standards`.
 - Docs-site pages the README links out to → `developer-docs`; the endpoint reference it links to → `api-reference`.
 - The quickstart's code blocks — choosing them, testing them, keeping them compiling → `code-samples`.

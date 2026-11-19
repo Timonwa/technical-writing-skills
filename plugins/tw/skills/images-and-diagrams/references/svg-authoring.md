@@ -1,6 +1,6 @@
 # SVG authoring
 
-The technical layer for hand-authored vector graphics: clean source, correct accessibility, and theme-able colour. Whether a diagram is worth drawing at all, and the layout and labelling conventions, are in the skill that links here — this file covers writing the SVG itself.
+Writing a hand-authored SVG: clean source, correct accessibility, and theme-able colour. Whether a diagram is worth drawing, and its layout and labelling, are in [SKILL.md](../SKILL.md).
 
 ## Structure
 

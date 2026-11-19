@@ -74,7 +74,7 @@ The document that saves the most future time, and the one most often skipped. It
 - **Context** — the situation and constraints at the time.
 - **The decision**, stated plainly.
 - **Consequences** — what this commits to, and what it costs, good and bad.
-- **Alternatives considered** and why each was rejected. Nygard folds this into context; keeping it separate is this skill's addition, because the rejected option is the thing someone will propose again.
+- **Alternatives considered** and why each was rejected. Nygard folds this into context; keep it separate, because the rejected option is the thing someone will propose again.
 - **Date and who decided.**
 
 Keep it to one or two pages. A record nobody can read in five minutes doesn't get read at the moment it's needed.
@@ -115,7 +115,7 @@ Decide the rules once, write them down, and apply them per document:
 - **Documentation for customers and end users** → `user-guides`. Much of the plain-language discipline is shared; the reader, the confidentiality rules, and the ownership problem are not.
 - **Developer documentation for a public or shared technical surface** → `developer-docs` and `api-reference`, even when the audience is internal — an internal API still gets an API reference.
 - **A repository's own README and contributor docs** → `readmes`.
-- **The voice rules every document obeys** — sentences, claims, prose before code, concrete over vague, formatting, never hard-wrap → [`writing-standards`'s house-voice.md](../writing-standards/references/house-voice.md). This skill adds only what an internal reader and an unowned document need on top.
+- **The voice rules every document obeys** — sentences, claims, prose before code, concrete over vague, formatting, never hard-wrap → [`writing-standards`'s house-voice.md](../writing-standards/references/house-voice.md).
 - **Capturing the knowledge from the person who has it** → `sme-interviews`.
 - **Deciding which internal docs are needed and auditing what exists** → `docs-planning`.
 - **The tool it lives in** — wiki, drive, repo, knowledge base — is the organization's decision, not this skill's. Every rule here works in any of them.

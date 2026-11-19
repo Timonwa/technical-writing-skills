@@ -13,7 +13,7 @@ disallowed-tools: Edit, NotebookEdit
 
 A **manually-invoked audit of documentation that already exists**, looking for the defects that cost a reader their time: something that isn't true any more, something they can't reach, something that contradicts the page next to it, and something nobody has checked since it was written.
 
-It is **self-contained** — every check is spelled out below, so it runs with no other skill loaded. The standards behind the findings live in the skills that ship alongside it: `writing-standards` for the voice rules, `developer-docs`, `user-guides`, `internal-docs`, `readmes` and `api-reference` for each document type's shape, `style-guide` for the project's own terminology, and `code-samples` and `images-and-diagrams` for the parts of a page that aren't prose.
+Every check is spelled out below. For the standard behind a finding: `writing-standards` for the voice rules, `developer-docs`, `user-guides`, `internal-docs`, `readmes` and `api-reference` for each document type's shape, `style-guide` for the project's own terminology, and `code-samples` and `images-and-diagrams` for the parts of a page that aren't prose.
 
 **This audit does not assume a codebase.** Where source is available it is the strongest evidence and gets used; where it isn't, the audit works from the running product, a spec, or what it can establish internally — and says which.
 
@@ -171,7 +171,7 @@ The report is written first and nothing is edited to produce it. Then:
 5. **Update the report.** Mark each fixed finding `FIXED` in place, with a one-line note of what changed. Leave everything else as it stands. The file on disk has to match reality — a report still listing something that was fixed an hour ago teaches people not to trust it.
 6. **Re-score and show the movement.** After fixing, recompute the scores and report the change against where this run started. That's what scoring is for: it tells you whether the work improved things or made them worse. If several findings were fixed and no score moved, say so plainly — the findings that mattered weren't the ones chosen.
 
-Nothing is edited before step 2 is answered. This command runs with the editing tools removed while it produces the report, so that holds on its own rather than resting on the instruction — they come back for the turn after your question, once the answer is in.
+Nothing is edited before step 2 is answered. The editing tools are unavailable while this command produces the report; they return for the turn after your question, once the answer is in.
 
 ### Fixing from an earlier report
 

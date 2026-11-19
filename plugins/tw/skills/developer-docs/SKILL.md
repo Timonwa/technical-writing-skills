@@ -8,7 +8,7 @@ description: >-
 
 How to write a docs-site page, independent of the framework rendering it. Two principles govern everything: document what IS (verified against source, not memory), and give every page one job.
 
-This is the standard for every docs page, in any project. Same rules, every run. When an existing page deviates from them, correct it rather than matching it — matching whatever is there is how drift spreads.
+Apply these rules to every docs page, in any project. When an existing page deviates from them, correct it rather than matching it — matching whatever is there is how drift spreads.
 
 ## Verify against source before writing
 
@@ -68,14 +68,14 @@ const res = await fetch("https://api.example.com/v1/items", { headers: { Authori
 
 ## Boundaries
 
-- **The voice rules every document obeys** — sentences, claims, prose before code, concrete over vague, formatting, never hard-wrap → [`writing-standards`'s house-voice.md](../writing-standards/references/house-voice.md). This skill adds only what a docs-site page needs on top.
+- **The voice rules every document obeys** — sentences, claims, prose before code, concrete over vague, formatting, never hard-wrap → [`writing-standards`'s house-voice.md](../writing-standards/references/house-voice.md).
 - Which document type a page should be, audience, scope, and prose discipline → `writing-standards`.
 - Deciding which pages the set needs at all, and in what order → `docs-planning`. This skill writes a page once the set has a shape.
 - Getting the facts the page depends on out of an engineer or a spec → `sme-interviews`; locating them in the source yourself → `codebase-research`.
 - The project's own terminology, capitalization and word choices → `style-guide`.
 - Auditing an existing docs site for drift, broken links, and stale pages → `docs-audit`.
 - **Endpoint-level API reference** — parameter tables, status codes, auth sections, request and response examples → `api-reference`.
-- **Help centres and user guides for non-technical end users** → `user-guides` — same set-consistency aim, different audience and page types; it links this skill's `site-mechanics.md` for the shared mechanics.
+- **Help centres and user guides for non-technical end users** → `user-guides`, for a different audience and page types.
 - **Internal documentation** — runbooks, onboarding, process docs → `internal-docs`.
 - Project READMEs → `readmes`.
 - The code blocks themselves — choosing, testing and maintaining them → `code-samples`. Screenshots, architecture and flow diagrams → `images-and-diagrams`.

@@ -83,7 +83,7 @@ The rule doesn't relax, it changes shape. Write only what you were told, ask for
 
 ## Boundaries
 
-- **Getting the facts that code cannot give you** — intent, what's deployed, what's deprecated in practice, what readers get wrong → `sme-interviews`. The two are halves of one job: this skill answers _what_, that one answers _why_ and _really?_
+- **Getting the facts that code cannot give you** — intent, what's deployed, what's deprecated in practice, what readers get wrong → `sme-interviews`. This skill answers _what_; that one answers _why_ and _really?_
 - **What to do with the facts** — which document type, how it's structured, how it reads → `writing-standards` and the skill for that document type.
 - **Verifying a docs page against source as a review pass** → `docs-audit`. This skill is for research before writing; that one is for drift after.
 - **Endpoint-level detail** — handlers, schemas, status codes, response shapes → `api-reference`, which has its own verification rules for an API surface.

@@ -2,9 +2,9 @@
 
 Pick the type that matches what the reader needs, then follow its skeleton. A page that mixes types (a how-to that drifts into a concept lecture) gets split.
 
-**Four of these are the standard documentation types**, as defined by DITA ([OASIS DITA information typing](https://docs.oasis-open.org/dita/dita/v1.3/os/part2-tech-content/archSpec/technicalContent/dita-technicalContent-InformationTypes.html)): concept, task (here: how-to), reference, and troubleshooting. **Policy and FAQ are this skill's additions**, because help-centre readers arrive with questions about rules and entitlements that don't fit any of the four.
+**Four of these are the standard documentation types**, as defined by DITA ([OASIS DITA information typing](https://docs.oasis-open.org/dita/dita/v1.3/os/part2-tech-content/archSpec/technicalContent/dita-technicalContent-InformationTypes.html)): concept, task (here: how-to), reference, and troubleshooting. **Policy and FAQ** cover the questions about rules and entitlements that help-centre readers also arrive with, which don't fit any of the four.
 
-This is why the set differs from the four Diátaxis quadrants `writing-standards` uses for developer docs. Diátaxis has no troubleshooting type — it folds problem-solving into how-to guides — and a help centre needs it as its own shape, since a reader with a broken thing is in a different state from a reader learning a task.
+Troubleshooting gets its own shape because a reader with a broken thing is in a different state from a reader learning a task.
 
 ## 1. Concept explainer
 
@@ -72,7 +72,7 @@ A recurring FAQ is often a symptom: the question keeps being asked because the c
 
 ## Before and after: one example per type
 
-Weak draft, then a rewrite that follows the standard. **Each example is a different kind of product on purpose** — the pattern is what transfers, not the subject matter. Swap in your own product's real specifics and agreed framings.
+Weak draft, then a rewrite that follows the standard. **Each example is a different kind of product** — the pattern is what transfers, not the subject matter. Swap in your own product's real specifics and agreed framings.
 
 ### 1. Concept explainer — _a file-storage product_
 
