@@ -1,9 +1,9 @@
 {
-  "name": "technical-writing-skills",
+  "name": "writing-skills",
   "owner": {
     "name": "Timonwa"
   },
-  "description": "Skills for technical writers — developer documentation, user guides, internal docs, API references, release notes, and the planning, editing and asset craft around them.",
+  "description": "Writing skills in three plugins: write, the craft every writer shares; tw, technical writing and documentation; and cw, content writing for any blog or newsletter, from idea to performance review.",
   "plugins": [
     {
       "name": "write",

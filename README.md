@@ -1,117 +1,158 @@
-# technical-writing-skills
+# writing-skills
 
-Twenty-one Claude Code skills for technical writers — developer docs, user guides, internal docs, API references, release notes.
+Forty-one Claude Code skills for writers, in three plugins: `write` for the craft every writer shares, `tw` for technical writing and `cw` for content writing.
 
-Documentation work is mostly not typing. It's deciding what the set should contain, getting the facts out of the people who have them, verifying a default before writing it down, and finding the page that stopped being true three releases ago. These skills cover that whole job, not just the drafting part.
+Most of what goes wrong in writing isn't the sentences. It's a claim nobody checked, a figure lifted from a summary instead of the study, a page that mixes a tutorial with a reference, a tutorial whose code no longer runs, a headline the piece doesn't deliver, a voice that drifts until the archive reads like five writers. These skills hold the rules that prevent those — where a claim comes from, what a page is for, how a piece is edited and reviewed, how it's found — and the commands check existing writing against them.
 
-Fifteen of them are model-invoked: Claude loads one when the work matches, so asking for a runbook pulls in the runbook standard without you naming it. The other six are commands you run deliberately over content that already exists.
+Thirty-two of them are model-invoked: Claude loads one when the work matches, so asking for a newsletter issue pulls in the newsletter standard without you naming it. The other nine are commands you run deliberately over writing that already exists — audits, reviews and checks.
 
-Nothing here assumes a framework, a language, a docs platform, or a publishing tool. The rules are about documents, so they work the same in a Markdown repo, a help-desk tool, a knowledge base, or someone else's codebase where the conventions belong to the client.
+**The skills hold the craft; the voice is always yours.** Documentation follows the project's own style guide, and content follows the publication's writing guide and profile, whatever the subject: software, food, finance, careers. Where neither exists, documentation falls back to `tw:docs-standards` and a content skill asks who the reader is before writing. Each rule follows the current published standard — Google's and Microsoft's style guides, GOV.UK, WCAG, the SPJ Code of Ethics, Google Search Central — not one writer's habits.
 
 ## Install
 
 Run these in Claude Code:
 
 ```shell
-/plugin marketplace add Timonwa/technical-writing-skills
-/plugin install tw@technical-writing-skills
+/plugin marketplace add Timonwa/writing-skills
+/plugin install tw@writing-skills
+/plugin install cw@writing-skills
 ```
 
-Pick a scope when it asks. **Local** installs for the current repo only, which is usually right when you're working in a codebase that isn't yours. **Project** shares the skills with everyone who clones the repo. **User** makes them available everywhere.
+`tw` and `cw` each depend on `write`, so installing either pulls it in. Install the one you need: documentation needs `tw`, a blog or newsletter needs `cw`, and writing both needs both.
 
-## Deciding what to write
+Pick a scope when it asks. **User** makes the skills available everywhere, which suits a writer working across projects. **Project** shares them with everyone who clones a repo. **Local** installs for the current repo only.
 
-| Skill               | What it's for                                                                                                                |
-| ------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `docs-planning`     | Reader tasks before feature lists — audiences, the real questions from support and search, gap analysis, and what goes where |
-| `style-guide`       | The style guide, terminology list and glossary as decision records, and how to make them enforceable instead of ignored      |
-| `writing-standards` | Which of the four Diátaxis types a document is, who it serves, and the voice checklist every other skill in the set links to |
+## Publications
 
-## Finding out what's true
+`cw` writes for a publication — a blog, a newsletter, or both — and reads two files about it before it writes, edits or reviews anything:
 
-| Skill               | What it's for                                                                                                                       |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| `sme-interviews`    | Getting what an engineer knows onto the page — preparing from the artifacts, arriving with a wrong draft, protecting their time     |
-| `codebase-research` | Hunting the exact default, limit, UI label and error string in a repo you didn't write, and the traps that produce confident errors |
+- **`profile.md`** — who it's for, what it's for, and what a piece should make a reader do.
+- **`writing-guide.md`** — how it sounds: voice, person, titles, openings, recurring parts, formatting.
 
-## Writing the document
+Keep them in a folder outside the plugin, one folder per publication, ideally in a private repository, and point your `~/.claude/CLAUDE.md` at it with one line:
 
-| Skill            | What it's for                                                                                                          |
-| ---------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `developer-docs` | A docs-site page in any framework — one job per page, verified against source, links that survive a move               |
-| `user-guides`    | Help-centre guides for end users — answer first, plain words, six page types, explain rather than sell                 |
-| `internal-docs`  | Runbooks, SOPs, onboarding and decision records, with the owner and review date that stop them rotting in place        |
-| `api-reference`  | Endpoints, parameters, status codes and errors, plus the auth, quickstart, pagination and versioning pages around them |
-| `readmes`        | A fixed skeleton per repo type — library, app, CLI, monorepo, package — and a quickstart somebody actually ran         |
-| `release-notes`  | What changed for me, and do I have to do anything — separated by audience, with breaking changes and deprecations      |
+```text
+Publications (profile, writing guide, sources per publication): ~/Documents/writing/publications/
+```
 
-## The parts that aren't prose
+Where there's no such line, the skills look for a `publications/` folder in the current project, and otherwise ask. `cw:style-guide` builds a publication's folder from the template it ships with — converting a style guide you already have, deriving the voice from pieces you've published, or interviewing you — and leaves anything you haven't decided as `unset` rather than guessing.
 
-| Skill                 | What it's for                                                                                              |
-| --------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `code-samples`        | Samples that run on arrival, don't model insecure practice, and get tested so they don't quietly rot       |
-| `images-and-diagrams` | Whether a visual earns its cost at all, then capture, annotation, alt text, and diagrams as theme-able SVG |
-| `localization`        | Source text that survives translation, and running a set across locales without half of it going stale     |
-| `editing-standards`   | Five single-dimension passes over a draft that already exists — substantive, accuracy, line, copy, proof   |
+## Skills
 
-## Checking what already exists
+### write — every writer
 
-Six commands, each marked `disable-model-invocation`, so Claude never starts one on its own. They take a path or a pull request and answer one question each.
+| Skill               | What it's for                                                                                                                                                |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `writing-standards` | The rules under any piece — the reader named first, plain language, claims sourced and credited, certainty that matches the evidence, structure for scanning |
+| `code-samples`      | Code in a docs page or a tutorial that runs as shown — elided with a comment, placeholders, expected output, borrowed code credited                          |
 
-| Command              | The question                                                                                                         |
-| -------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `/tw:docs-audit`     | Is it true and does it work? Claims the product outgrew, dead links, unreachable pages, contradictions, stale images |
-| `/tw:content-audit`  | Is this the right set? Every page inventoried with a keep, merge, split, rewrite or retire verdict, plus the gaps    |
-| `/tw:style-check`    | Does it read as one voice? One concept called three different things across two hundred pages, and the other drift   |
-| `/tw:doc-review`     | Is this document good? The five levels of edit over one file, a folder or a diff                                     |
-| `/tw:docs-pr-review` | Are the docs in this PR true of what it changes? Claims checked against the change, and changes left undocumented    |
-| `/tw:ai-check`       | Does it read as machine-written? The specific tells, each with a rewrite — never a verdict on provenance             |
+### tw — technical writing
 
-Each writes a report to `_reports/<name>.md` and tells you the path. A finding carries a severity, the reader it breaks, and a specific fix; the report closes with a scorecard and how the score moved since last time.
+| Skill                 | What it's for                                                                                                         |
+| --------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `docs-standards`      | The rules every docs page follows — one Diátaxis need per page, the documentation voice, procedures, accessible pages |
+| `docs-planning`       | What a docs set should contain — reader tasks, an audit of what exists, gaps, structure and file naming               |
+| `developer-docs`      | Docs-site pages in any framework — verified against source, one focus per page, links that survive a move             |
+| `api-reference`       | Endpoints, parameters, status codes and errors, and the auth, quickstart and versioning pages around them             |
+| `user-guides`         | Help-centre guides for end users — answer first, plain words, the page types a help centre needs                      |
+| `internal-docs`       | Runbooks, SOPs, onboarding and decision records, with the owner and review date that keep them true                   |
+| `readmes`             | A README per repo type — library, app, CLI, monorepo, package — with a quickstart somebody ran                        |
+| `release-notes`       | What changed from the reader's side, by audience, with breaking changes and deprecations first                        |
+| `codebase-research`   | The exact default, limit, label and error string in a codebase you didn't write                                       |
+| `sme-interviews`      | Getting what an engineer knows onto the page, verified, without wasting their time                                    |
+| `editing-standards`   | Editing an existing docs page in focused passes, down the five levels of edit                                         |
+| `style-guide`         | A docs set's style guide, terminology list and glossary — a base guide plus its departures                            |
+| `images-and-diagrams` | Screenshots, annotation, diagrams as SVG and alt text, and whether a visual earns its upkeep                          |
+| `seo-aeo-geo`         | Docs readers find — titles from the task or error they search, versioned-docs canonicals, site search, AI answers     |
+| `localization`        | Source text that survives translation, and a docs set kept in step across locales                                     |
 
-None of them edit anything while auditing — editing tools are withheld for that turn. When the report is written, the command lists the findings by ID and asks which you want fixed, so nothing gets silently improved. Passing `--fix` skips the audit entirely and works from the report already on disk, which is how you come back to findings you read yesterday without renumbering them.
+### cw — content writing
 
-They also don't require a codebase. Where source is available it's the strongest evidence and gets used; where it isn't, the audit works from the running product, a spec, or the content itself, and says which in the report.
+| Skill                  | What it's for                                                                                                                         |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| `content-planning`     | What to write next — ideas from reader questions and search demand, scored against the publication's purpose, in a cadence that holds |
+| `content-research`     | Original sources over summaries, every figure traced to its table, AI-supplied citations checked                                      |
+| `sme-interviews`       | Interviewing a source — ground rules, consent, quoting exactly, fairness, checking facts back                                         |
+| `article-standards`    | A published piece of any kind — whether it earns its place, its structure by reader intent, trust and disclosure                      |
+| `newsletter-standards` | An email issue — one narrative, the subject line and preview, one call to action, the sender rules email carries                      |
+| `demo-project`         | A tutorial's companion repo — branches or tags per step, pinned versions, a clean clone that runs, its README                         |
+| `images-and-diagrams`  | Photos of the real thing, licences and credits, honest charts, diagrams, and images in email                                          |
+| `cover-images`         | A piece's cover and the card its link shows — one file that survives every platform's crop                                            |
+| `editing-standards`    | Editing a piece in the author's voice, down the five levels of edit, with narrative craft                                             |
+| `seo-aeo-geo`          | Getting a piece found, chosen and cited — title tag, slug, quotable claims, byline and dates                                          |
+| `social-media-posts`   | One piece turned into distinct posts by angle, sized for each platform                                                                |
+| `cross-posting`        | Republishing on dev.to, Hashnode, Medium or a partner site so the original stays the one that ranks                                   |
+| `content-refresh`      | Keeping a published piece true — honest dates, visible correction notes, merging and retiring                                         |
+| `pitching`             | Writing for another publication — the outlet, the pitch and outline, the fee, rights and kill fee                                     |
+| `style-guide`          | A publication's writing guide and profile, built from what exists and kept current                                                    |
+
+## Commands
+
+Nine commands, each marked `disable-model-invocation`, so Claude never starts one on its own.
+
+| Command                   | The question                                                                                                |
+| ------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `/write:ai-check`         | Does this read as machine-written? The specific tells, each with a rewrite, never a verdict on who wrote it |
+| `/tw:doc-review`          | Is this document right? The five levels of edit over one page, a folder or a diff                           |
+| `/tw:docs-audit`          | Is the docs set true, and does it work? Stale claims, dead links, contradictions, missing coverage          |
+| `/tw:content-audit`       | Is this the right set of pages? Every page with a keep, merge, split, rewrite or retire verdict             |
+| `/tw:style-check`         | Does the docs set read as one voice? Terms, capitalisation and mechanics that drifted                       |
+| `/tw:docs-pr-review`      | Are the docs in this pull request true of what it changes? Claims checked, changes left undocumented        |
+| `/cw:review`              | Is this piece ready to publish? The five levels of edit against the publication's guide, with blockers      |
+| `/cw:style-check`         | Does the archive read as one writer? Drift across posts and back issues, measured against the guide         |
+| `/cw:content-performance` | What should change, given how the pieces did? An analytics export turned into ranked fixes                  |
+
+## How the commands behave
+
+Each writes its report to `_reports/` — `ai-check.md`, `doc-review.md`, `docs-audit.md`, `content-audit.md`, `docs-style-check.md`, `content-review.md`, `content-style-check.md`, and a dated `content-performance-<date>.md` — except `/tw:docs-pr-review`, which reports in chat and posts to the pull request only with `--comment`.
+
+The reviews and audits verify a finding before reporting it, rank it by severity (a blocker stops publishing), and give a specific fix for each. `/tw:docs-audit` marks anything it can't prove from the source as "needs confirmation". The style checks separate findings, where the writing drifts from what the guide settles, from proposals where the guide is silent. Reports close with a scorecard and, on a re-run, how the score moved since the last one.
+
+None of them edit while they check: the Edit tool is withheld for the run, and `/cw:content-performance` never edits a page. Every command except `/cw:content-performance` takes `--fix`, which works from the report already on disk: it lists the findings, asks which to fix, fixes only those, and re-scores.
 
 ## What the skills won't do
 
-**Invent a fact to fill a gap.** No access to the code is not permission to guess. Working from a spec, a recording, or a conversation, the skills write only what they were told, ask for the exact names and values, and leave anything unverified visibly marked rather than plausible.
+**Invent a fact.** A figure, a quote or a publication's convention comes from its source or its guide. A field nobody has decided stays `unset`, and the skill asks.
 
-**Assume your product.** The product name, its vocabulary, the concept framings, the support channel, the style guide if one exists — each is asked for, never inherited from the surrounding pages.
+**Impose a voice.** Person, tone, humour and formatting come from the project's style guide or the publication's writing guide. A first-person story or a joke the guide allows is not a defect.
 
-**Copy the habits of the docs around them.** When an existing page breaks the standard, the skill corrects it rather than matching it. Matching whatever is already there is how drift spreads.
+**Copy the habits of the writing around them.** A new piece matches the established terms, not the shape or voice of pages that have drifted.
+
+**Edit while reviewing.** A review or audit reports; changes happen only when you choose which findings to fix.
+
+**Post, publish or schedule for you.** Social posts are written to a file and summarised in chat, and a pull-request review is posted only when you ask.
 
 ## Repo layout
 
 ```text
-skills/<skill-name>/
-  SKILL.md        # the skill itself
-  references/     # longer material, loaded only when needed
-  evals/          # prompts and expected behaviour, used when revising the skill
-.claude-plugin/   # plugin and marketplace manifests
+plugins/<plugin>/                 # write, tw, cw
+  .claude-plugin/plugin.json      # the plugin's manifest and its dependency on write
+  skills/<skill-name>/
+    SKILL.md                      # the skill or command itself
+    references/                   # longer material, loaded only when needed
+    evals/evals.json              # prompts and expected behaviour, used when revising the skill
+.claude-plugin/marketplace.json   # the marketplace listing all three plugins
 ```
-
-Rules shared across skills live in exactly one file and get linked, never restated: [house-voice.md](skills/writing-standards/references/house-voice.md) holds the voice checklist every document obeys, and [ai-writing-detection.md](skills/editing-standards/references/ai-writing-detection.md) holds the machine-written tells.
 
 ## Contributing
 
-Issues and pull requests are welcome. A rule that misfires in your organization is worth reporting, and so is a skill that assumes something it has no business assuming.
+Issues and pull requests are welcome. A rule that misfires on your writing is worth reporting, and so is one that's fallen behind the standard it cites.
 
-Each skill is a Markdown file, so there's no build step and nothing to install to edit one. The scripts only format and check them:
+Each skill is a Markdown file, so there's no build step. The scripts only format and check them:
 
 | Script              | What it does                                  | Needs                       |
 | ------------------- | --------------------------------------------- | --------------------------- |
 | `pnpm format`       | Format everything with Prettier               | `pnpm install` first        |
 | `pnpm format:check` | Check formatting without writing              | `pnpm install` first        |
-| `pnpm validate`     | Validate the plugin manifests and skill files | the Claude Code CLI on PATH |
+| `pnpm validate`     | Validate the marketplace and plugin manifests | the Claude Code CLI on PATH |
 
-The repo uses [pnpm](https://pnpm.io), and Prettier is its only dependency — install it if you want the format scripts, or skip the install and run `pnpm dlx prettier --write .` instead.
+The repo uses [pnpm](https://pnpm.io), and Prettier is its only dependency — install it if you want the format scripts, or run `pnpm dlx prettier --write .` instead.
 
-Keep a change to one skill where you can, and run `pnpm validate` before opening a pull request.
+Keep a change to one skill where you can, update its evals with it, and run `pnpm validate` before opening a pull request.
 
 ## Related
 
-- [engineering-skills](https://github.com/Timonwa/engineering-skills) — the same idea for building web apps with Next.js App Router, React and Firebase. The two plugins compose; install both if you write code as well as documentation.
+- [engineering-skills](https://github.com/Timonwa/engineering-skills) — the same idea for building web apps with Next.js App Router, React and Firebase.
 
 ## License
 
