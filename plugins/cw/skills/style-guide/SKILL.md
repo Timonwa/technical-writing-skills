@@ -102,6 +102,21 @@ One row per concept — the approved term, a one-sentence definition, how it's u
 - **Someone else's guide stays theirs.** A client's editorial brief is kept only while writing for them, and never published.
 - **Keep it where it survives** — in the owner's own files or repository, never inside an installed plugin, which an update replaces.
 
+### The publication's folder
+
+One folder per publication, found from the path the user's `CLAUDE.md` gives, otherwise the project's own `publications/` folder:
+
+```text
+publications/
+  <publication>/
+    profile.md         # who it is, who it's for, what it's for
+    writing-guide.md   # how to write for it
+    sources/           # style guides and reference material already in hand
+  _archive/            # publications no longer written for
+```
+
+Start a new one from the blanks in [references/publication-template/](references/publication-template/): copy them into the publication's folder, never edit them in place.
+
 ## Enforcing and maintaining it
 
 - **A pre-publish checklist** of five items drawn from the guide — the opening, the title format, the ask, the sign-off, the disclosure.
