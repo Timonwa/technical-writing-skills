@@ -8,21 +8,17 @@ description: >-
 
 A published piece has to earn attention that documentation gets for free. Someone arrives at a docs page already wanting the answer; a reader arrives at an article deciding, within a screen, whether to stay.
 
-The craft here holds for any publication on any subject. Who the publication is for, why it exists, how it sounds and what its pieces are called come from its profile and writing guide: a recipe blog, a training-plan newsletter and an engineering blog need the same discipline and must not sound alike.
+## Voice and audience come from the writing's own guide
 
-## Read the publication's folder first
+Before writing or reviewing, find the guide the piece answers to and read it: the publication's `writing-guide.md` and `profile.md` (where the user's `CLAUDE.md` says they live, otherwise the project's `publications/` folder). Who the publication is for, why it exists, how it sounds and what its pieces are called come from that guide, never from this skill.
 
-Establish **which publication this is for**, then find its folder — from the path the user's `CLAUDE.md` gives, otherwise the project's own `publications/` folder, otherwise ask — and read both files in it.
+- Where the guide settles something this skill also covers, the guide wins.
+- Where there's no guide, ask who the reader is and what the piece is for, and offer to build one with `cw:style-guide`.
+- Where a field reads `unset`, ask and write the answer back to the publication's folder, never inside the installed plugin.
 
 **`profile.md` decides whether the piece belongs and who it serves** — the job the publication does for readers, the job it does for its owner, the one action a piece should produce, what the audience already knows, who it's explicitly not for, and the disclosures it makes. A piece serving no stated purpose is the one to cut.
 
 **`writing-guide.md` decides how it reads** — voice, piece types and which carries the house voice, titles, openings, recurring sections, formatting and closings, worded as this publication words them.
-
-Where a field reads `unset`, ask and write the answer back to the publication's folder, never inside the installed plugin. A fact established once belongs in the file, not in this conversation.
-
-### When the publication has no folder yet
-
-Don't improvise one, and don't borrow another publication's. Build it with `cw:style-guide` — from an existing guide, three or four published pieces, then an interview, using its publication template — and get it confirmed before writing anything against it.
 
 **Where a guide and the published work disagree**, say so and ask which wins. A guide that describes an aspiration is common and worth knowing about; silently picking one is not.
 
@@ -46,7 +42,7 @@ The section-by-section blueprint for each intent is in [references/article-struc
 
 ## Does this piece deserve to exist
 
-Google's people-first standard is a useful editorial test regardless of whether you care about ranking: after reading, does someone feel they got what they came for, or do they go back to search for a better answer? That standard is now a continuous, site-wide signal rather than a periodic update, so a body of thin pieces drags down the good ones.
+Google's [people-first standard](https://developers.google.com/search/docs/fundamentals/creating-helpful-content) is a useful editorial test whether or not you care about ranking: after reading, does someone feel they got what they came for, or do they go back to search for a better answer? Since March 2024 Google judges helpfulness inside its core ranking systems, mainly page by page but with some site-wide signals ([Google](https://developers.google.com/search/blog/2024/03/core-update-spam-policies)), so a body of thin pieces can weigh on the good ones.
 
 Before drafting, be able to answer:
 
@@ -57,7 +53,7 @@ Before drafting, be able to answer:
 
 ## Structure for someone who is scanning
 
-Decades of eye-tracking find the same thing: people scan web pages rather than reading them, most often in an F-shaped pattern, and the behaviour has become more pronounced, not less. Write for that reader and the one who reads every word still gets a good piece; write only for the second and you lose most of your audience in the first screen.
+Eye-tracking research finds people scan web pages rather than read them, and on a page of undifferentiated text they fall into an F-shaped pattern that skips whatever isn't at the top or the left edge, on desktop and on mobile ([NN/g](https://www.nngroup.com/articles/f-shaped-pattern-reading-web-content/)). Headings, front-loaded points and highlighted words break that pattern. Write for the scanner and the reader who reads every word still gets a good piece; write only for the second and you lose most of your audience in the first screen.
 
 - **Inverted pyramid.** The conclusion goes first, then the detail, then the background. Open with what the piece delivers, not with how you came to write it.
 - **Front-load every section and paragraph.** The point lands in the first few words. Readers who don't find it there skip the rest of the paragraph.
@@ -112,4 +108,4 @@ Decades of eye-tracking find the same thing: people scan web pages rather than r
 - **Finding and checking the sources behind it** → `cw:content-research`. **A tutorial's companion repository** → `cw:demo-project`.
 - **Updating, correcting, merging or retiring a piece after it's published** → `cw:content-refresh`.
 - **Writing for another publication** — the pitch, the brief and the rights → `cw:pitching`.
-- **A periodic issue covering several pieces** → `newsletter-standards`. **Promoting one piece** → `social-media-posts`. **Getting it found** → `cw:seo-aeo-geo`. **Whether it's being found** → `content-performance`.
+- **A periodic issue covering several pieces** → `cw:newsletter-standards`. **Promoting one piece** → `cw:social-media-posts`. **Getting it found** → `cw:seo-aeo-geo`. **Whether it's being found** → `/cw:content-performance`.

@@ -10,20 +10,20 @@ An issue is not a list of links, and not an article. It's one narrative that mak
 
 Email also carries obligations a blog post doesn't. Someone handed over their inbox, which is both a legal relationship and a fragile one — so an issue that reads well can still fail if it can't be unsubscribed from, can't be read with images off, or isn't what the reader signed up for.
 
-## Load the publication profile first
+## Voice and audience come from the writing's own guide
 
-Establish **which publication this issue belongs to**, then find its folder — from the path the user's `CLAUDE.md` gives, otherwise the project's own `publications/` folder, otherwise ask — and read both files in it: `profile.md` for who it's for and what the newsletter promised, `writing-guide.md` for how it reads. The voice is the publication's, not the newsletter's: an issue and a blog post should read as the same person.
+Before writing or reviewing, find the guide the issue answers to and read it: the publication's `writing-guide.md` and `profile.md` (where the user's `CLAUDE.md` says they live, otherwise the project's `publications/` folder). Who it's for, what the newsletter promised and how it reads come from that guide, never from this skill. An issue and a blog post from the same publication read as the same person.
+
+- Where the guide settles something this skill also covers, the guide wins.
+- Where there's no guide, ask who the reader is and what the newsletter is for, and offer to build one with `cw:style-guide`.
+- Where a field reads `unset`, ask and write the answer back to the publication's folder, never inside the installed plugin.
 
 Four fields decide the issue before a word is written:
 
-- **The promise made at signup.** Whatever the subscribe form said is the contract. An issue that delivers something else is mis-sold however well it reads, and it's the most common reason someone leaves a newsletter they once wanted.
+- **The promise made at signup.** Whatever the subscribe form said is the contract. An issue that delivers something else is mis-sold however well it reads, and it's a common reason someone leaves a newsletter they once wanted.
 - **Cadence.** A monthly issue and a weekly one carry different amounts and a different urgency.
 - **Relationship to the other channels** — whether an issue digests the blog, stands alone, or reports on work. A roundup and a letter are different products.
 - **Sign-off and subject-line format**, which stay the same issue to issue. Consistency is how a subscriber recognizes you in a crowded inbox.
-
-Where a field reads `unset`, ask and write the answer back to the profile.
-
-**When the publication has no folder yet**, build it with `cw:style-guide` before drafting — from an existing guide, two or three past issues, then an interview — and get it confirmed.
 
 ### A first issue is a different job
 
@@ -41,7 +41,7 @@ A first issue also carries an introduction the rest won't — who you are, what 
 
 ## The shape of an issue
 
-- **Subject line** — the highest-leverage line in the whole thing. Concrete over clever: name the thing or the tension, not the category. **30 to 50 characters, roughly 6 to 9 words**, because mobile clients display around 30 to 43 and most email is opened on a phone — so the load-bearing word goes first, not last. Never deceptive: a subject that misrepresents the contents is a trust problem and, in most jurisdictions, unlawful.
+- **Subject line** — the highest-leverage line in the whole thing. Concrete over clever: name the thing or the tension, not the category. Phone clients cut the subject off early, so the word that matters goes first; 30 to 50 characters is a common rule of thumb, not a standard. Never deceptive: under CAN-SPAM the subject must accurately reflect the content ([FTC](https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business)), and a misleading one spends the trust the issue depends on.
 - **Preview text** — the second thing they see, and it falls back to the first line of the body unless you set it. Setting it deliberately is one of the clearest markers of a well-run send. Extend the subject rather than repeating it.
 - **Opening — two or three sentences.** Get to the thread immediately. No "hope you've all been well", no apology for the gap since the last issue.
 - **Body — three to five sections**, each with a bolded lead so it survives skimming, each ending somewhere the reader can act or think.
@@ -53,16 +53,16 @@ A first issue also carries an introduction the rest won't — who you are, what 
 
 Benchmarks describe patterns, not targets. A publication's own trend line beats any cross-industry average, and a small engaged list outperforms a large indifferent one on every measure that matters. Use these to spot something badly wrong, not to chase a figure.
 
-- **Open rate is no longer a reliable measure.** Privacy features that pre-fetch images inflate it, so a reported open may be nobody. Treat it as directional and judge the issue on **click-to-open**, where roughly 10 to 15 percent is healthy and 20 percent is strong.
-- **Unsubscribes above about 0.3 percent** of a send, or **bounces above 2 percent**, mean something is wrong with the list or the promise — not with the writing.
-- **Consistency beats frequency.** Whatever cadence the profile records, holding it matters more than the number. A monthly list that receives three emails in a week is being surprised, and surprise is what people unsubscribe from — receiving too many emails is the most common reason given.
-- **Weekly is the most common cadence** for publications that send often, and most readers are content with at least monthly. Below monthly, expect to reintroduce yourself each time.
+- **Open rate is no longer a reliable measure.** Privacy features that pre-fetch images inflate it, so a reported open may be nobody. Treat it as directional and judge an issue on clicks and click-to-open, against the publication's own previous issues.
+- **Spam complaints are the hard limit.** Gmail asks senders to keep the complaint rate below 0.1% and never reach 0.3% ([Google](https://support.google.com/a/answer/81126)); Yahoo sets the same 0.3% ceiling ([Yahoo](https://senders.yahooinc.com/best-practices/)). Past that, mail stops arriving for everyone on the list.
+- **Unsubscribes and bounces are list signals.** An unsubscribe rate rising above the list's usual level, or more than a couple of percent of addresses bouncing (common practice, not a published threshold), means something is wrong with the list or the promise, not the writing.
+- **Consistency beats frequency.** Whatever cadence the profile records, holding it matters more than the number. A monthly list that receives three emails in a week is being surprised, and surprise is what people unsubscribe from.
 - **Test send times rather than importing someone's best-day advice.** The published "best" days and hours contradict each other across studies, because they're averaging different audiences.
 - **Clean the list every few months.** Sending to people who never open trains filters against you and drags down everyone else's delivery.
 
 ## Written for the inbox
 
-- **Skimmable by default.** Bold leads, short paragraphs, bullets for parallel items. Assume a phone, between other things, about 60 seconds. Eye-tracking on web content finds people scan rather than read, most often in an F-shaped pattern — an inbox is a harsher version of the same behaviour.
+- **Skimmable by default.** Bold leads, short paragraphs, bullets for parallel items. Assume a phone, between other things, about 60 seconds. On text with no structure, readers scan in an F-shaped pattern and skip what isn't at the top or the left edge ([NN/g](https://www.nngroup.com/articles/f-shaped-pattern-reading-web-content/)); an inbox is a harsher version of the same behaviour.
 - **Front-load every section**, and the issue itself. The point goes in the first sentence, not the third; a reader who doesn't find it there skips the paragraph.
 - **One idea per section**, and roughly half the words you'd use in print.
 - **Plain text survives; layout doesn't.** Clients strip CSS and block images by default. An issue that only works with images loaded is broken for a large share of the list.
@@ -71,15 +71,15 @@ Benchmarks describe patterns, not targets. A publication's own trend line beats 
 
 ## What an email owes the reader
 
-Requirements rather than preferences, and they hold for any publication — so they live here, not in a profile. What follows is the shape of the obligations in the major regimes; a publication with real exposure should confirm the specifics for the markets it sends to.
+Requirements rather than preferences, for any publication. What follows is the shape of the obligations in the major regimes; a publication with real exposure confirms the specifics for the markets it sends to.
 
 **Consent and the right to leave**
 
-- **A working unsubscribe in every issue**, obvious and one step. Under US CAN-SPAM the mechanism must keep working for at least 30 days after the send and opt-outs must be honoured within 10 business days; under GDPR, withdrawing consent has to be as easy as giving it. Never make someone log in to leave.
-- **A valid physical postal address** in the footer — a CAN-SPAM requirement, not a convention. A PO box or registered agent's address qualifies.
+- **A working unsubscribe in every issue**, obvious and one step. Under US CAN-SPAM the mechanism must keep working for at least 30 days after the send and opt-outs must be honoured within 10 business days ([FTC](https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business)); Yahoo requires unsubscribes honoured within 2 days ([Yahoo](https://senders.yahooinc.com/best-practices/)); under GDPR, withdrawing consent has to be as easy as giving it. Never make someone log in to leave.
+- **A valid physical postal address** in the footer — a CAN-SPAM requirement, not a convention. A street address, a PO box registered with the postal service, or a private mailbox registered with a commercial mail receiving agency all qualify ([FTC](https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business)).
 - **Honest headers and subject lines.** The "from" name identifies the sender; the subject represents the contents.
 - **A lawful basis for holding the address.** Under GDPR that usually means consent you can evidence — when, how, and what they agreed to. A bought or scraped list fails this before the first send.
-- **One-click unsubscribe headers** (`List-Unsubscribe`, RFC 8058), required by the major inbox providers for bulk senders and expected of everyone else. Normally the platform's job — confirm it's on rather than assuming.
+- **One-click unsubscribe headers** (`List-Unsubscribe`, RFC 8058), required by Gmail for senders of more than 5,000 messages a day to Gmail accounts ([Google](https://support.google.com/a/answer/81126)) and by Yahoo for bulk senders. Normally the platform's job — confirm it's on rather than assuming.
 
 **Accessibility**
 
@@ -91,7 +91,7 @@ Requirements rather than preferences, and they hold for any publication — so t
 
 **Deliverability**
 
-- Authentication — SPF, DKIM, DMARC — is sending setup rather than writing, but an unauthenticated send reaches nobody. Confirm it before a first issue.
+- Authentication is sending setup rather than writing, but an unauthenticated send reaches nobody: Gmail requires SPF or DKIM from every sender, and SPF, DKIM and DMARC from bulk senders ([Google](https://support.google.com/a/answer/81126)). Confirm it before a first issue.
 - Image-heavy, link-heavy, text-light issues are what spam filters are built to catch.
 - List hygiene beats volume. Sending to people who never open trains filters against you.
 
@@ -99,7 +99,7 @@ Requirements rather than preferences, and they hold for any publication — so t
 
 - [ ] It delivers what the signup promised.
 - [ ] One narrative, and every section has a takeaway.
-- [ ] The subject names something specific, runs 30–50 characters, and front-loads the word that matters.
+- [ ] The subject names something specific, fits a phone's preview, and front-loads the word that matters.
 - [ ] Preview text is set and extends the subject.
 - [ ] The opening reaches the point within three sentences.
 - [ ] One CTA, asked once.
@@ -113,8 +113,8 @@ Requirements rather than preferences, and they hold for any publication — so t
 ## Boundaries
 
 - **Audience, cadence, the signup promise and sender details** → the publication's `profile.md`. **Voice, subject format, sign-off and the wording of the ask** → its `writing-guide.md`. Both live in the publication's folder.
-- **The long-form pieces an issue links to** → `article-standards`. An issue summarises them; it never reproduces one.
-- **Promoting a single piece** → `social-media-posts`. A set of posts about one article is a different job from a periodic issue covering several.
+- **The long-form pieces an issue links to** → `cw:article-standards`. An issue summarises them; it never reproduces one.
+- **Promoting a single piece** → `cw:social-media-posts`. A set of posts about one article is a different job from a periodic issue covering several.
 - **The voice rules under every publication** → `write:writing-standards`. **Tightening the draft** → `cw:editing-standards`. **The machine-written sweep** → `/write:ai-check`.
-- **Whether the linked pieces are being found** → `content-performance`.
+- **Whether the linked pieces are being found** → `/cw:content-performance`. **Reviewing an issue before it sends, as a report** → `/cw:review`.
 - **Platform setup** — domain authentication, list imports, automation — is the sender's infrastructure. Name what's missing; don't configure it.

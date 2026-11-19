@@ -8,16 +8,15 @@ description: >-
 
 One published piece becomes a set of posts that sound like the person who wrote it sharing something, not a marketing team announcing it. **Drafts only: never post, never publish, never call an API.**
 
-## Read the publication's folder first
+## Voice and audience come from the writing's own guide
 
-The voice is the publication's, compressed — not a separate social voice. Find its folder — from the path the user's `CLAUDE.md` gives, otherwise the project's own `publications/` folder, otherwise ask — and read:
+Before writing, find the guide the piece answers to and read it: the publication's `writing-guide.md` and `profile.md` (where the user's `CLAUDE.md` says they live, otherwise the project's `publications/` folder). The audience, the one action a piece should produce, what must be disclosed, the voice, stance, person and whether emoji are used at all come from that guide, never from this skill.
 
-- **`profile.md`** — who the audience is, what the publication is for, the one action a piece should produce, and what must be disclosed.
-- **`writing-guide.md`** — voice, stance, person, and whether emoji are used at all.
+- Where the guide settles something this skill also covers, the guide wins.
+- Where there's no guide, ask who the reader is and what the piece is for, and offer to build one with `cw:style-guide`.
+- Where a field reads `unset`, ask and write the answer back to the publication's folder, never inside the installed plugin.
 
-Social compresses that voice; it doesn't replace it. A publication that never uses exclamation marks doesn't start on X.
-
-Where the publication has no folder, build one first with `cw:style-guide`.
+The voice is the publication's, compressed, not a separate social voice. A publication that never uses exclamation marks doesn't start on X.
 
 ## Work only from the piece
 
@@ -48,15 +47,15 @@ Others worth pulling when the piece carries the material: a **quote** worth argu
 
 Verify before relying on these — something in this table changes every few months.
 
-| Platform  | Limit                              | Visible before cutoff | Threads | Idiom                                           |
-| --------- | ---------------------------------- | --------------------- | ------- | ----------------------------------------------- |
-| X         | 280 free · 25,000 Premium          | ~280                  | yes     | punchy, hook-first                              |
-| Bluesky   | 300                                | full                  | yes     | conversational, community                       |
-| Threads   | 500, plus a 10,000-char attachment | full                  | yes     | casual, personal                                |
-| Mastodon  | 500 by default, set per server     | full                  | yes     | earnest, community-oriented                     |
-| LinkedIn  | 3,000                              | ~140                  | no      | narrative; under 1,300 consistently does better |
-| Instagram | 2,200                              | ~125                  | no      | visual-first; the image carries it              |
-| TikTok    | 2,200                              | short                 | no      | hook in the first seconds; caption supports     |
+| Platform  | Limit                              | Visible before cutoff | Threads | Idiom                                       |
+| --------- | ---------------------------------- | --------------------- | ------- | ------------------------------------------- |
+| X         | 280 free · 25,000 Premium          | ~280                  | yes     | punchy, hook-first                          |
+| Bluesky   | 300                                | full                  | yes     | conversational, community                   |
+| Threads   | 500, plus a 10,000-char attachment | full                  | yes     | casual, personal                            |
+| Mastodon  | 500 by default, set per server     | full                  | yes     | earnest, community-oriented                 |
+| LinkedIn  | 3,000                              | ~140                  | no      | narrative                                   |
+| Instagram | 2,200                              | ~125                  | no      | visual-first; the image carries it          |
+| TikTok    | 4,000 in the app · 2,200 via API   | ~100                  | no      | hook in the first seconds; caption supports |
 
 **Characters aren't counted the same way everywhere.** Instagram, LinkedIn, Mastodon and TikTok count UTF-16 units, so one emoji costs two and a family emoji can cost eleven. Bluesky and Threads count what you see. On X a link always costs 23 characters however long it is, and an emoji costs two.
 
@@ -77,7 +76,7 @@ Social is where accessible writing is most often dropped, and the fixes are chea
 
 - **CamelCase every multi-word hashtag** — `#TechWriting`, not `#techwriting`. A screen reader pronounces an all-lowercase tag as one unintelligible word. This is the highest-value habit here.
 - **Hashtags at the end**, never mid-sentence. Inline tags break the sentence for a screen reader and the reading flow for everyone else.
-- **Alt text on every image**, describing what the image is _for_ rather than its textures and lighting. Around 150 characters is plenty. X allows 1,000; Instagram hides the field under Advanced Settings.
+- **Alt text on every image**, describing what the image is _for_ rather than its textures and lighting. Around 150 characters is plenty. X allows 1,000 per image; on Instagram the field sits in the post's advanced settings.
 - **Emoji sparingly, and at the end.** Each one is read aloud, so a list of emoji bullets becomes "sparkles, fire, check mark" before the reader reaches any content. Punctuate with them; don't structure with them.
 - **Never put words only in an image.** Text baked into a graphic is invisible to search and to screen readers.
 - **Avoid ASCII emoticons** — `;)` is read aloud as "semicolon parenthesis".
@@ -116,9 +115,9 @@ Write the set to a file, then summarise it in chat. Never post, publish, or sche
 
 ## Boundaries
 
-- **The piece being promoted** → `article-standards`. This writes the posts, not the post.
+- **The piece being promoted** → `cw:article-standards`. This writes the posts, not the post.
 - **Voice and audience** → the publication's `writing-guide.md` and `profile.md`.
-- **A periodic issue covering several pieces** → `newsletter-standards`.
-- **The image a shared link shows** → `cover-images`.
-- **Whether any of it worked** → `content-performance`.
+- **A periodic issue covering several pieces** → `cw:newsletter-standards`.
+- **The image a shared link shows** → `cw:cover-images`.
+- **Whether any of it worked** → `/cw:content-performance`. **Republishing the whole piece on another platform** → `cw:cross-posting`.
 - **Tightening prose that already exists** → `cw:editing-standards`. **The machine-written sweep** → `/write:ai-check`.

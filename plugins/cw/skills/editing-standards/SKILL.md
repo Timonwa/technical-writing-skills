@@ -117,7 +117,7 @@ The problems content edits keep meeting, with fixes, and a worked before-and-aft
 
 ## Boundaries
 
-- **The rules every piece obeys** — sentences, claims, credit and rights, never hard-wrap → `write:writing-standards`. This skill adds the editing process on top.
+- **The rules every piece obeys** — sentences, claims, credit and rights, never hard-wrap → `write:writing-standards`.
 - **Writing from scratch** is out of scope — draft with `cw:article-standards` or `cw:newsletter-standards`, then edit here.
 - **The conventions being edited to** — which term wins, the date format, the person and tone → `cw:style-guide`. This skill enforces a standard; it doesn't set one.
 - **A full review with numbered findings** → `/cw:review`; **drift across the whole archive** → `/cw:style-check`; **the machine-written sweep as a report** → `/write:ai-check`.
