@@ -41,8 +41,8 @@ Every shape draws from the same skeleton, in this order. Drop a section that doe
 
 ## Boundaries
 
-- **The voice rules every document obeys** — sentences, claims, prose before code, concrete over vague, formatting, never hard-wrap → [`writing-standards`'s house-voice.md](../writing-standards/references/house-voice.md).
-- The general writing discipline (audience, plain language, prose-before-code) → `writing-standards`.
+- **The voice rules every document obeys** — sentences, claims, concrete over vague, formatting, never hard-wrap → `write:writing-standards`; the documentation voice, prose before code and the four document types → `tw:docs-standards`.
+- The general writing discipline (audience, plain language) → `write:writing-standards`; prose before code → `tw:docs-standards`.
 - Docs-site pages the README links out to → `developer-docs`; the endpoint reference it links to → `api-reference`.
-- The quickstart's code blocks — choosing them, testing them, keeping them compiling → `code-samples`.
-- Tightening the prose after drafting → `editing-standards`. Announcing a version → `release-notes`.
+- The quickstart's code blocks — choosing them, testing them, keeping them compiling → `write:code-samples`.
+- Tightening the prose after drafting → `tw:editing-standards`. Announcing a version → `release-notes`.

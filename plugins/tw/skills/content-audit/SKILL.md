@@ -15,7 +15,7 @@ A **manually-invoked audit of the shape of a documentation set**: what exists, w
 
 It asks a different question from `/tw:docs-audit`. That one asks whether a page is **true and working**; this one asks whether the set is the **right set** — and a perfectly accurate page for a task nobody performs still fails this audit.
 
-The standard behind it is `docs-planning`; `writing-standards` supplies the document types. Works on any body of content — a docs repo, an exported help centre, a knowledge base, a folder of documents.
+The standard behind it is `docs-planning`; `tw:docs-standards` supplies the document types. Works on any body of content — a docs repo, an exported help centre, a knowledge base, a folder of documents.
 
 ## Arguments
 

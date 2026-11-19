@@ -80,8 +80,8 @@ Agree a minimum set so documentation isn't renegotiated per release:
 ## Boundaries
 
 - **Writing the pages the plan calls for** → `developer-docs`, `user-guides`, `internal-docs`, `api-reference`, `readmes`, `release-notes`.
-- **Which type a planned page should be**, and why mixing types fails → `writing-standards`.
+- **Which type a planned page should be**, and why mixing types fails → `tw:docs-standards`.
 - **The mechanics of moving, renaming and redirecting** a page the plan retires or relocates → [`developer-docs`'s site-mechanics.md](../developer-docs/references/site-mechanics.md).
-- **Finding out what's actually true** about the product before you can list its tasks → `sme-interviews`.
+- **Finding out what's actually true** about the product before you can list its tasks → `tw:sme-interviews`.
 - **Auditing an existing set for defects** — stale claims, broken links, orphans — rather than planning its shape → `docs-audit`.
-- **Naming and terminology decisions** the structure depends on → `style-guide`.
+- **Naming and terminology decisions** the structure depends on → `tw:style-guide`.

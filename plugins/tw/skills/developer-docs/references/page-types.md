@@ -1,6 +1,6 @@
 # The four docs page types — section blueprints
 
-Which quadrant a topic needs — and why mixing them fails — is `writing-standards`' call (Diátaxis). This file is the docs-site rendering of each: the section order to follow once the type is chosen.
+Which quadrant a topic needs — and why mixing them fails — is `tw:docs-standards`' call (Diátaxis). This file is the docs-site rendering of each: the section order to follow once the type is chosen.
 
 ## 1. Tutorial — learning by doing
 

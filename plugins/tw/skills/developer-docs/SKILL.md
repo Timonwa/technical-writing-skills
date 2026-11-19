@@ -26,7 +26,7 @@ Apply these rules to every docs page, in any project. When an existing page devi
 
 ## Page types and site mechanics
 
-- **Pick the page type first** — which Diátaxis quadrant a topic needs is `writing-standards`' call; the section blueprint for each type once chosen is [references/page-types.md](references/page-types.md), including the mixing-test table for pages drifting between types.
+- **Pick the page type first** — which Diátaxis quadrant a topic needs is `tw:docs-standards`' call; the section blueprint for each type once chosen is [references/page-types.md](references/page-types.md), including the mixing-test table for pages drifting between types.
 - **Placement, navigation, and moving/renaming/removing pages** live in [references/site-mechanics.md](references/site-mechanics.md) — one focus per page, canonical-page linking instead of duplication, the best-practices/troubleshooting placement ladder, sidebar registration, inbound-link greps and redirects before any move. Follow it for every structural change, not just new pages.
 
 ## Writing the page
@@ -68,14 +68,14 @@ const res = await fetch("https://api.example.com/v1/items", { headers: { Authori
 
 ## Boundaries
 
-- **The voice rules every document obeys** — sentences, claims, prose before code, concrete over vague, formatting, never hard-wrap → [`writing-standards`'s house-voice.md](../writing-standards/references/house-voice.md).
-- Which document type a page should be, audience, scope, and prose discipline → `writing-standards`.
+- **The voice rules every document obeys** — sentences, claims, concrete over vague, formatting, never hard-wrap → `write:writing-standards`; the documentation voice, prose before code and the four document types → `tw:docs-standards`.
+- Which document type a page should be → `tw:docs-standards`; audience, scope and prose discipline → `write:writing-standards`.
 - Deciding which pages the set needs at all, and in what order → `docs-planning`. This skill writes a page once the set has a shape.
-- Getting the facts the page depends on out of an engineer or a spec → `sme-interviews`; locating them in the source yourself → `codebase-research`.
-- The project's own terminology, capitalization and word choices → `style-guide`.
+- Getting the facts the page depends on out of an engineer or a spec → `tw:sme-interviews`; locating them in the source yourself → `codebase-research`.
+- The project's own terminology, capitalization and word choices → `tw:style-guide`.
 - Auditing an existing docs site for drift, broken links, and stale pages → `docs-audit`.
 - **Endpoint-level API reference** — parameter tables, status codes, auth sections, request and response examples → `api-reference`.
 - **Help centres and user guides for non-technical end users** → `user-guides`, for a different audience and page types.
 - **Internal documentation** — runbooks, onboarding, process docs → `internal-docs`.
 - Project READMEs → `readmes`.
-- The code blocks themselves — choosing, testing and maintaining them → `code-samples`. Screenshots, architecture and flow diagrams → `images-and-diagrams`.
+- The code blocks themselves — choosing, testing and maintaining them → `write:code-samples`. Screenshots, architecture and flow diagrams → `tw:images-and-diagrams`.

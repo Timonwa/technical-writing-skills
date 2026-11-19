@@ -13,7 +13,7 @@ disable-model-invocation: true
 
 A review of the **documentation in a pull request**, for when developers ship a change and draft the docs, and a writer reviews the docs part. Where `/tw:doc-review` reviews a document on its own, this one reviews it against the change it belongs to: is every claim true of what this PR does, and did anything the PR changes go undocumented?
 
-The editorial standard is `/tw:doc-review`'s five levels of edit, `editing-standards`, and [`writing-standards`'s house-voice.md](../writing-standards/references/house-voice.md), plus the skill for each document type the PR touches. Where the project has its own style guide, that wins.
+The editorial standard is `/tw:doc-review`'s five levels of edit, `tw:editing-standards`, `tw:docs-standards` and `write:writing-standards`' voice rules, plus the skill for each document type the PR touches. Where the project has its own style guide, that wins.
 
 ## Arguments
 
@@ -48,7 +48,7 @@ The shape decides what every claim is checked against. Say which shape it is, an
 
 1. **Missing docs** (code-with-docs and docs-elsewhere shapes) — list every change in the code a reader would notice with no doc line: a new or renamed setting, env var, endpoint, flag or command; a changed default, limit or behaviour; a removed feature still documented; a new error a user can hit. Each with the file and line in the code, and where its doc belongs.
 2. **The five levels** on the changed lines, from `/tw:doc-review` — substantive, technical accuracy (against this PR's source of truth), line, copy and proof — in that order, and don't skip ahead.
-3. **The document type** — each page judged by its type's skill: `developer-docs`, `user-guides`, `api-reference`, `readmes`, `release-notes`, `internal-docs`; samples by `code-samples`, images by `images-and-diagrams`.
+3. **The document type** — each page judged by its type's skill: `developer-docs`, `user-guides`, `api-reference`, `readmes`, `release-notes`, `internal-docs`; samples by `write:code-samples`, images by `tw:images-and-diagrams`.
 
 Use `/tw:doc-review`'s severity scale: **BLOCKER** (untrue, a missing warning on an irreversible action, an example that doesn't work, an undocumented change a reader will hit), **MAJOR**, **MINOR**, **NIT**.
 

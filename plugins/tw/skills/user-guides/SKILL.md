@@ -61,7 +61,7 @@ The six page types (concept explainer / how-to / reference / troubleshooting / p
 
 ## Pre-publish checklist
 
-Run [`writing-standards`'s house-voice.md](../writing-standards/references/house-voice.md) first — it covers verifying against the product, addressing the reader, formatting, heading levels and marketing language for every kind of document. These are the items specific to a guide:
+Apply `write:writing-standards`' voice rules and `tw:docs-standards` first — together they cover verifying against the product, addressing the reader, formatting, heading levels and marketing language for every kind of document. These are the items specific to a guide:
 
 - [ ] The first line answers the question or states the bottom line.
 - [ ] No plumbing jargon that fails the teach-or-cut test; every required term glossed on first use.
@@ -75,8 +75,8 @@ Run [`writing-standards`'s house-voice.md](../writing-standards/references/house
 
 - **Developer-facing docs sites** (technical guides, reference pages, SDK docs) → `developer-docs` — same consistency aim, different audience and page types.
 - **Documentation for staff rather than customers** — runbooks, SOPs, onboarding, internal knowledge bases → `internal-docs`. The plain-language discipline is the same; the reader is on the inside and the confidentiality rules differ.
-- **The voice rules every document obeys** — sentences, claims, prose before code, concrete over vague, formatting, never hard-wrap → [`writing-standards`'s house-voice.md](../writing-standards/references/house-voice.md).
-- **The shared writing discipline** — audience-first, scope, document type → `writing-standards`.
-- **The agreed vocabulary itself** — which term wins, how each concept is framed, the trusted analogy — is captured and maintained by `style-guide`. This skill consumes those decisions; it doesn't invent them.
-- **Tightening an existing draft** → `editing-standards`. **Screenshots** → `images-and-diagrams`. **Announcing what changed** → `release-notes`.
+- **The voice rules every document obeys** — sentences, claims, concrete over vague, formatting, never hard-wrap → `write:writing-standards`; the documentation voice, prose before code and the four document types → `tw:docs-standards`.
+- **The shared writing discipline** — audience-first, scope → `write:writing-standards`; document type → `tw:docs-standards`.
+- **The agreed vocabulary itself** — which term wins, how each concept is framed, the trusted analogy — is captured and maintained by `tw:style-guide`. This skill consumes those decisions; it doesn't invent them.
+- **Tightening an existing draft** → `tw:editing-standards`. **Screenshots** → `tw:images-and-diagrams`. **Announcing what changed** → `release-notes`.
 - **Product facts** — product name, domain vocabulary, the concept framings, the trusted analogy, support channel — are asked for, never assumed and never invented. They don't live in this skill.
