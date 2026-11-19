@@ -1,0 +1,55 @@
+{
+  "skill_name": "images-and-diagrams",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Find me a nice stock photo of a bowl of jollof rice for the top of my recipe post.",
+      "expected_output": "Should recommend a photo of the actual dish the recipe produces over a generic stock image, because readers study real photos of the thing and ignore generic stock. If a stock image is used, it must be licensed for this use and credited as its licence asks. Alt text says what the photo is for in this piece, not a neutral inventory. The cover image itself is cw:cover-images' job. Should read the publication's guide for its image and credit conventions first.",
+      "files": [],
+      "expectations": [
+        "Recommends a photo of the real dish over generic stock",
+        "Requires a licence that covers this use",
+        "Writes alt text from the photo's purpose in the piece",
+        "Reads the publication's guide for image and credit conventions",
+        "Points the cover image to cw:cover-images"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "I'm using a Creative Commons photo of a city skyline I found on a photo-sharing site. Credit it as 'Photo: Creative Commons'.",
+      "expected_output": "Should say that credit is wrong: Creative Commons isn't the author. Should credit in full — title, author, source and licence — crediting the author, not the site it was found on, with links where the licence asks. Should check the licence allows this use (for example, commercial use or modifications).",
+      "files": [],
+      "expectations": [
+        "Rejects 'Creative Commons' as the credit",
+        "Credits title, author, source and licence",
+        "Credits the author rather than the hosting site",
+        "Checks the licence permits the intended use"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Make a bar chart of our survey: 62% of readers cook weekly, 58% monthly. Start the y-axis at 55 so the difference stands out.",
+      "expected_output": "Should refuse to truncate the bar chart's axis: a bar chart starts at zero, and a truncated axis misleads. Should give the chart a title that states the finding, label bars directly, use colours a colour-blind reader can distinguish, put the source and date in the caption, keep it legible at phone width, and put the takeaway in the alt text with the numbers in a table beside it.",
+      "files": [],
+      "expectations": [
+        "Keeps the bar chart axis at zero",
+        "Writes a title that states the finding",
+        "Puts source and date in the caption",
+        "Puts the takeaway in alt text and the data in a table",
+        "Uses colour-blind-safe colours"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "For my newsletter, I made the whole intro a nicely designed image with the text in it so it looks consistent in every inbox.",
+      "expected_output": "Should advise against text baked into an image: many clients block images by default, it can't be read until it loads, can't be searched and won't reflow on a phone, and screen readers can't read it. The issue must make sense before images load, with anything an image says also in the text, and alt text on every image. Should mention dark-mode inversion and sizing images at twice the column width.",
+      "files": [],
+      "expectations": [
+        "Advises against text baked into an image in email",
+        "Requires the issue to work with images off",
+        "Requires alt text on every image",
+        "Mentions dark-mode testing or 2x sizing for email images"
+      ]
+    }
+  ]
+}

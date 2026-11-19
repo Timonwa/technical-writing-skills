@@ -1,0 +1,53 @@
+{
+  "skill_name": "cover-images",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Make a cover for my post 'How I paid off $40k in 18 months': put the whole title in white text across a busy photo of my desk. That's enough — no need for the title elsewhere.",
+      "expected_output": "Should cut the words to a short version in large type, ensure at least 4.5:1 contrast with a solid band or darkened area, and keep the full title in the page's text since a card's title comes from the page. Should keep the words in the centre square that survives a 1:1 crop.",
+      "files": [],
+      "expectations": [
+        "Shortens the words and enlarges the type",
+        "Requires 4.5:1 contrast with a band or darkened area",
+        "Keeps the title in the page text, not only the image",
+        "Keeps words inside the centre crop-safe square"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Give me a separate cover size for Facebook, LinkedIn, X, Bluesky and Mastodon.",
+      "expected_output": "Should explain one file covers all: 1200 x 630 at 1.91:1, under 1 MB (Bluesky's limit), JPEG or PNG, never SVG, with the subject in the centre square — and cite the platforms' published specs. Should recommend checking the preview with the Sharing Debugger, Post Inspector and a draft post.",
+      "files": [],
+      "expectations": [
+        "Recommends one 1200x630 1.91:1 file",
+        "Keeps it under 1 MB and JPEG or PNG",
+        "Keeps important content in the centre square",
+        "Says how to check previews per platform"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Use our logo as the cover for every post — it's on brand.",
+      "expected_output": "Should refuse the logo-alone, same-on-every-piece cover, since a card must say which piece it is (X asks for a unique image; Google Discover says no logo), and offer a template from the writing guide instead: layout, logo position, colours from the profile.",
+      "files": [],
+      "expectations": [
+        "Refuses the logo as every post's cover",
+        "Explains a card must identify the piece",
+        "Offers a recognisable template instead",
+        "Takes the template from the writing guide"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Pick a cover for my essay on burnout. My CLAUDE.md says my publications are in ~/notes/publications/ and this is 'quiet-desk'.",
+      "expected_output": "Should read quiet-desk's writing-guide.md and profile.md for the cover template, palette and photo kinds, and follow them. An essay with nothing to photograph likely gets a typographic card. Alt text on the page and for the card is set, or the page cover marked decorative.",
+      "files": [],
+      "expectations": [
+        "Reads the publication's guide for the cover template",
+        "Chooses a typographic card or fitting image for an essay",
+        "Sets alt text or marks a decorative cover",
+        "Follows the template's colours and type"
+      ]
+    }
+  ]
+}

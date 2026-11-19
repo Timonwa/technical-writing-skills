@@ -1,0 +1,59 @@
+{
+  "skill_name": "doc-review",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "/tw:doc-review docs/guides/rotate-keys.md",
+      "expected_output": "Should review the one document, working down the five levels in order — substantive, technical accuracy, line, copy, proof — without editing anything. Should load the project's style guide first, asking before concluding there isn't one, and apply tw:docs-standards where the guide is silent. Should write the report to _reports/doc-review.md, summarise the findings in chat worst-first with a proposed replacement for each, batch the questions only the author can answer, list what was verified, then ask which findings to fix and edit nothing until answered.",
+      "files": [],
+      "expectations": [
+        "Works down the five levels in order",
+        "Edits nothing before the user picks findings",
+        "Writes the report to _reports/doc-review.md",
+        "Gives each finding a proposed replacement and severity",
+        "Batches author questions into one list",
+        "Asks which findings to fix"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Review this how-to before we publish: it says 'Keys expire after 90 days by default' and shows `acme keys rotate --force`. The config in the repo sets `KEY_TTL_DAYS = 30`, and the CLI has no --force flag. Also step 4 deletes the old key with no warning.",
+      "expected_output": "Should rate the wrong default (90 vs 30 days), the non-existent --force flag (an example that doesn't work as written) and the missing warning before an irreversible delete as BLOCKERs, citing the source checked. Should propose the corrected sentence, the working command, and a warning placed in step 4 before the action. Should record in the Verified section what was checked against the config and the CLI.",
+      "files": [],
+      "expectations": [
+        "Rates the wrong default as a BLOCKER",
+        "Rates the non-existent flag as a BLOCKER",
+        "Rates the missing warning on the delete as a BLOCKER",
+        "Proposes corrected text and a working command",
+        "Places the warning in the step before the action",
+        "Lists what was verified against which source"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "/tw:doc-review --fix — fix findings 2 and 5 from last week's review.",
+      "expected_output": "Should not re-audit. Should read the existing _reports/doc-review.md, say how old it is, verify findings 2 and 5 still exist at their actual locations before fixing, drop any that are gone as stale, check cheaply whether the docs have moved on since the report's date, and fix only 2 and 5. Should then mark them FIXED in the report with a one-line note, leave every other finding untouched, and re-score showing the movement.",
+      "files": [],
+      "expectations": [
+        "Does not run a new audit",
+        "States the report's age",
+        "Verifies each chosen finding still exists before fixing",
+        "Fixes only findings 2 and 5",
+        "Marks them FIXED and leaves others untouched",
+        "Re-scores and reports the movement"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Review docs/concepts/sync.md. Our style guide says headings use title case and we write 'we' for the reader and the team together.",
+      "expected_output": "Should apply the project's guide where it decides — title-case headings and first-person-plural voice are not findings — and apply tw:docs-standards only where the guide is silent, such as minimisers, sentence length and one need per page. Should not report the guide's recorded choices as drift.",
+      "files": [],
+      "expectations": [
+        "Treats title-case headings as the project's decision, not a finding",
+        "Treats 'we' as the project's decision, not a finding",
+        "Applies docs-standards where the guide is silent",
+        "Reports only genuine departures"
+      ]
+    }
+  ]
+}

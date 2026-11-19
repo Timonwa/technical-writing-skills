@@ -1,0 +1,56 @@
+{
+  "skill_name": "writing-standards",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Write the intro for our docs page on rotating API keys. There's no style guide in the repo and nothing in AGENTS.md about voice. Keep it friendly and personal — maybe open with how I lost a weekend to a leaked key last year.",
+      "expected_output": "Should look for the project's style guide and AGENTS.md conventions first and, finding none, apply the documentation voice in tw:docs-standards as the default without asking: second person, present tense, the writer kept out. Should therefore not open the docs page with a first-person anecdote, and should explain briefly that the personal story suits a blog post rather than a reference or how-to page. Should lead with what the reader can do and when they need to (rotate when a key may have leaked or on a schedule), not with background.",
+      "files": [],
+      "expectations": [
+        "Checks for a style guide and AGENTS.md conventions before writing",
+        "Applies tw:docs-standards' documentation voice as the default for docs with no guide",
+        "Does not open the docs page with the writer's first-person anecdote",
+        "Leads with what the reader can do, not background",
+        "Suggests the anecdote belongs in a blog post instead"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Draft the opening of a blog post for my food blog about why my sourdough finally rose. My writing guide says first person, chatty, and openings start with a short scene. Here are my notes: three failed loaves, switched to 75% hydration, starter fed 12 hours before mixing.",
+      "expected_output": "Should read the publication's writing guide and follow it: first person, a chatty tone, an opening that starts with a short scene. Should not flatten the voice into documentation style or second-person instructions, because voice comes from the guide, not this skill. Should still apply the craft rules: concrete details (three failed loaves, 75% hydration, 12 hours) rather than vague claims, and the point of the piece stated by the second or third paragraph rather than withheld. Should not invent facts beyond the notes.",
+      "files": [],
+      "expectations": [
+        "Follows the guide's first person, chatty tone and scene opening",
+        "Does not convert the voice to documentation style",
+        "Uses the concrete figures from the notes",
+        "States the piece's point by the second or third paragraph",
+        "Invents no facts beyond the notes"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Tighten this paragraph for our newsletter: 'This new feature significantly improves performance for a wide range of users. A recent study proves that faster pages increase sales.' We don't have the study link handy.",
+      "expected_output": "Should flag both claims as vague or unsupported: 'significantly improves performance for a wide range of users' needs a number, a measure and who was tested. Should flag 'proves' as overclaiming for a single study: certainty must match the evidence, so a single study 'suggests' or 'is linked to'. Should require the study to be found and linked to its original source, and should not keep the claim as fact without it. Should not invent a figure or a source to fill the gap.",
+      "files": [],
+      "expectations": [
+        "Asks for a concrete measure behind 'significantly improves performance'",
+        "Flags 'proves' as overclaiming and softens it to match one study",
+        "Requires the original study to be found and linked",
+        "Does not invent a number or a source",
+        "Does not publish the unsourced claim as fact"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Our existing docs all say 'simply click Save' and use 'we' everywhere. I'm adding a new page — should I match them so the set stays consistent?",
+      "expected_output": "Should advise matching the established terms for the subject but not the drifted habits: 'simply' is a minimiser to cut, and 'we' should follow the project's guide or, with no guide, the documentation default in tw:docs-standards. Should say the existing pages conflict with the rules and recommend flagging them (e.g. with /tw:style-check) rather than copying the drift into a new page.",
+      "files": [],
+      "expectations": [
+        "Distinguishes matching terms from copying habits",
+        "Flags 'simply' as a minimiser to drop",
+        "Takes person from the guide or tw:docs-standards, not from the existing pages",
+        "Recommends flagging the existing drift rather than copying it"
+      ]
+    }
+  ]
+}

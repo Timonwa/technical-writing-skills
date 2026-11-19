@@ -9,7 +9,7 @@
       "expectations": [
         "Works through the levels of edit in order rather than one undifferentiated rewrite",
         "Replaces 'utilize' with 'use' and 'in order to' with 'to'",
-        "Deletes the hedges 'it is worth noting that' and 'basically'",
+        "Deletes the filler 'it is worth noting that' and 'basically'",
         "Converts the passive 'should be edited by the user' to an imperative instruction",
         "Flags 'a variety of formats' and 'fairly quickly' as unverified rather than inventing values",
         "Asks the author for the config file name, the format list, and a real timing",
@@ -34,17 +34,17 @@
     {
       "id": 3,
       "prompt": "Does this sound AI-written? 'In today's fast-paced development landscape, robust observability has become pivotal. At its core, our comprehensive tracing solution seamlessly integrates with your existing stack — empowering teams to delve into performance bottlenecks — and transforms how you debug. Furthermore, it is worth noting that setup is straightforward. In conclusion, observability matters.'",
-      "expected_output": "Should run the AI-tell pass and name the specific tells rather than giving a general impression. Should flag the opening phrase 'In today's fast-paced...', 'At its core', 'Furthermore', 'It is worth noting that', and 'In conclusion' as blacklisted phrases; the vocabulary robust, pivotal, comprehensive, seamlessly, empowering, delve, transforms; and the two em-dash asides in a single short paragraph as the primary frequency tell. Should also note the structural tell of a concluding sentence that restates the opening and adds nothing. Should point at the references file for the full catalog and offer a rewrite in plain language, noting that the claims (straightforward setup, integration) need concrete support.",
+      "expected_output": "Should run the AI-tell pass and name the specific tells rather than giving a general impression. Should flag the opening phrase 'In today's fast-paced...', 'At its core', 'Furthermore', 'It is worth noting that', and 'In conclusion' as blacklisted phrases; the vocabulary robust, pivotal, comprehensive, seamlessly, empowering, delve, transforms; and the two em-dash asides in one short paragraph as a strong em-dash signal (two in a paragraph), one tell among several. Should also note the structural tell of a concluding sentence that restates the opening and adds nothing. Should point at the references file for the full catalog and offer a rewrite in plain language, noting that the claims (straightforward setup, integration) need concrete support.",
       "files": [],
       "expectations": [
         "Confirms it reads as AI-written and names specific tells rather than generalizing",
         "Flags the blacklisted opening phrase 'In today's fast-paced'",
         "Flags 'At its core', 'Furthermore', 'It is worth noting that', and 'In conclusion'",
         "Flags the blacklisted vocabulary including delve, robust, pivotal, seamless, comprehensive",
-        "Flags em-dash frequency as the primary tell, not the character itself",
+        "Flags em-dash density per 1,000 words as one tell among several, not the character itself",
         "Notes the empty concluding sentence as a structural tell",
         "Offers a plain-language rewrite",
-        "References the AI writing detection reference file"
+        "Points to the AI-tell catalogue in write:writing-standards, and to /write:ai-check for a full report"
       ]
     },
     {

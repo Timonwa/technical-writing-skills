@@ -1,0 +1,43 @@
+{
+  "skill_name": "style-check",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Run a style check on my blog archive in posts/. I don't think I ever wrote a style guide.",
+      "expected_output": "Should ask for a guide before concluding there isn't one, and look for the publication's folder (CLAUDE.md path, else the project's publications/). With none, it derives the dominant conventions and says what it derived and how strongly. Where the guide is silent, universal reader-protecting rules — link text, heading order, alt text, sources and credits — are still findings, while voice-level defaults like minimisers stay proposals with counts. Sweeps the whole archive, counts every variant and writes the report to _reports/content-style-check.md without editing any post.",
+      "files": [],
+      "expectations": [
+        "Asks for a guide before deriving conventions",
+        "Treats link text, heading order, alt text and credits as findings even without a guide",
+        "Treats minimisers and voice defaults as proposals",
+        "Counts every variant across the whole archive",
+        "Writes the report without editing posts"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Older newsletter issues sign off 'Talk soon' and the last 14 say 'Until next week'. The guide says 'Talk soon'. Fix them all to match.",
+      "expected_output": "Should read across time and raise it as an open decision: either the 14 recent issues drift, or the guide is out of date. Should report counts for each variant and ask the owner which is current rather than changing anything. Sent issues are a record and aren't rewritten; changes apply to the web versions and future issues only if the owner chooses.",
+      "files": [],
+      "expectations": [
+        "Reads across time and reports counts for each variant",
+        "Raises it as an open decision for the owner",
+        "Does not change issues before the owner decides",
+        "Notes sent issues are a record"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "After the last style check you fixed findings 2 and 5. Now just fix the rest from that report — it's from last month.",
+      "expected_output": "Should say how old the report is, check cheaply whether the archive has changed since, verify each remaining finding still exists at its actual location before fixing, drop stale ones and say so, then ask which IDs to fix rather than fixing all by default. After fixing, update the report with FIXED notes and re-score.",
+      "files": [],
+      "expectations": [
+        "States the report's age",
+        "Verifies each finding still exists before fixing",
+        "Drops stale findings and says so",
+        "Asks which findings to fix instead of fixing all",
+        "Updates the report and re-scores"
+      ]
+    }
+  ]
+}

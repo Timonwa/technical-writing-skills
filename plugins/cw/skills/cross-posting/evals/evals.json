@@ -1,0 +1,53 @@
+{
+  "skill_name": "cross-posting",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Copy my blog post to Medium by pasting it into a new story. That's all.",
+      "expected_output": "Should say a pasted story needs 'This story was originally published elsewhere' set (or use Import a story, which adds the canonical), and add an 'Originally published' line linking the original. Should check the copy's page source for the canonical after publishing.",
+      "files": [],
+      "expectations": [
+        "Sets Medium's canonical via import or the 'originally published' setting",
+        "Adds an 'Originally published' line linking the original",
+        "Checks the canonical in the copy's source",
+        "Makes links absolute and pointing at originals"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "A partner site wants to republish my full article but won't add noindex.",
+      "expected_output": "Should follow the decision order: Google recommends the partner block indexing; if they won't, ask for a canonical link to the original (Bing's guidance); if neither, offer an excerpt with a clear link back, and accept the copy may outrank the original. Should agree terms in writing.",
+      "files": [],
+      "expectations": [
+        "Asks for noindex first, per Google",
+        "Falls back to a canonical link, per Bing",
+        "Offers an excerpt with a link if neither",
+        "Puts the syndication terms in writing"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "I just published this tutorial an hour ago. Cross-post it to dev.to, Hashnode and LinkedIn right now.",
+      "expected_output": "Should advise waiting until the original is indexed (practice), then set dev.to's canonical_url and Hashnode's republishing URL, and on LinkedIn (no canonical field) add a link back or post a summary. Should record each copy in the publication's list of copies.",
+      "files": [],
+      "expectations": [
+        "Advises waiting for the original to be indexed first",
+        "Sets dev.to canonical_url and Hashnode's original URL",
+        "Uses a link back or summary on LinkedIn",
+        "Records the copies in the publication's list"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Cross-post my newsletter essay to Substack following my publication's rules.",
+      "expected_output": "Should read the publication's writing-guide.md and profile.md (CLAUDE.md path → publications/ → ask) for which platforms it uses and how the 'originally published' line reads, and check rights if the essay was commissioned. Substack has no canonical field, so add a link back or post a summary.",
+      "files": [],
+      "expectations": [
+        "Reads the publication's guide first",
+        "Uses the guide's 'originally published' wording",
+        "Notes Substack has no canonical field and links back",
+        "Checks rights if the piece was written for someone else"
+      ]
+    }
+  ]
+}

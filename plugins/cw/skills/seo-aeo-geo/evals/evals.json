@@ -1,0 +1,55 @@
+{
+  "skill_name": "seo-aeo-geo",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "My post on budgeting apps from 2024 is slipping in search. Can I just change the date to today so it looks fresh?",
+      "expected_output": "Should say no: changing the date to make a page seem fresh when the content hasn't substantially changed is a warning sign in Google's helpful-content guidance. Should recommend a real update first — checking facts, prices, app features and links — and only then show a labelled 'Updated' date, keeping the original published date, with visible and structured dates matching. Should point to cw:content-refresh for the update itself.",
+      "files": [],
+      "expectations": [
+        "Refuses to re-date the post without a substantive update",
+        "Cites Google's guidance on fake freshness",
+        "Recommends a real content update first",
+        "Keeps the original published date and labels the updated date",
+        "Points to cw:content-refresh for the refresh"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Add an FAQ section with FAQ schema to my sourdough article so it shows up as an FAQ rich result, and create an llms.txt so AI engines rank it.",
+      "expected_output": "Should explain that FAQ rich results stopped appearing in Google Search on 7 May 2026, so FAQ markup won't produce them; a questions section is fine only if readers need it. Should explain that Google Search ignores llms.txt and other AI files, and that being cited comes from an indexed page with clear, sourced, quotable answers and original material. Should check the reader's guide and profile for what the piece is for before adding sections.",
+      "files": [],
+      "expectations": [
+        "States FAQ rich results no longer appear in Google Search",
+        "Says llms.txt is ignored by Google Search",
+        "Recommends quotable, sourced answers and original material instead",
+        "Keeps a questions section only if it serves readers"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Write the title tag, meta description and slug for my article 'The Spreadsheet That Saved My Wedding Budget'.",
+      "expected_output": "Should first read the publication's writing guide and profile, found from the path the user's CLAUDE.md gives, otherwise the project's publications/ folder, otherwise asking. Should keep the headline's voice but make the title tag make sense on a results page next to competing pieces, unique, with the site name after a separator as the guide sets. The meta description summarises this piece and isn't a keyword list. The slug is short, readable, lowercase, hyphenated, without a long ID. Should note that the platform renders the tags; the writer sets the text.",
+      "files": [],
+      "expectations": [
+        "Reads the publication's writing guide and profile first",
+        "Writes a title tag that works on a results page and differs from the headline only where useful",
+        "Writes a unique meta description, not a keyword list",
+        "Proposes a short lowercase hyphenated slug",
+        "Separates what the writer sets from what the platform renders"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Make me 30 versions of my 'how to save on groceries' post, one for each city, so we rank everywhere.",
+      "expected_output": "Should decline: near-duplicate pages for query variations made primarily to manipulate rankings are scaled content abuse under Google's spam policies. Should suggest one strong piece that answers the question, with genuinely local pieces only where there is real local information or experience to add. Should not produce the variant pages.",
+      "files": [],
+      "expectations": [
+        "Declines to produce near-duplicate city pages",
+        "Names scaled content abuse in Google's spam policies",
+        "Recommends one strong piece, with local pieces only where they add real information",
+        "Does not generate the 30 variants"
+      ]
+    }
+  ]
+}

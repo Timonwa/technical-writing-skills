@@ -1,0 +1,53 @@
+{
+  "skill_name": "content-planning",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Plan the next quarter for my newsletter. CLAUDE.md points my publications to ~/pubs/; this one is 'side-income-weekly'.",
+      "expected_output": "Should read ~/pubs/side-income-weekly/profile.md and writing-guide.md first and judge every idea against the profile's reader job, owner job and one action. Should keep the plan as plan.md in that publication's folder, never inside the installed plugin.",
+      "files": [],
+      "expectations": [
+        "Reads profile.md and writing-guide.md from the CLAUDE.md path",
+        "Scores ideas against the profile's purpose and reader",
+        "Saves the plan in the publication's folder",
+        "Does not write the plan inside the plugin"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Give me 60 blog post ideas, one for every variation of 'best credit card for X' — students, travel, cashback, bad credit, and so on — and I'll publish two a week.",
+      "expected_output": "Should warn that near-duplicate pieces per keyword variant and volume for its own sake match Google's scaled content abuse and search-engine-first warning signs. Should propose fewer, distinct pieces chosen from reader questions and search data, scored on fit and first-hand experience, at a cadence the writer can keep.",
+      "files": [],
+      "expectations": [
+        "Flags near-duplicate keyword-variant pieces as a problem",
+        "Cites scaled content abuse or search-first signals",
+        "Proposes fewer distinct pieces scored on fit and experience",
+        "Sets a sustainable cadence with a buffer"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "What should I write next for my developer blog? I don't want to guess.",
+      "expected_output": "Should gather ideas from evidence: reader questions in their own words, Search Console queries with impressions but no matching piece, Trends and autocomplete as relative signals, gaps from /cw:content-performance, and the writer's own recent work. Each idea kept with its source and scored before scheduling.",
+      "files": [],
+      "expectations": [
+        "Draws ideas from reader questions and Search Console queries",
+        "Treats Trends as relative, not absolute volume",
+        "Includes gaps from the last performance review",
+        "Records each idea's source and scores it"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "I want to start a 6-part series on building a budgeting app. Just schedule part 1 for Monday; I'll figure out the rest later.",
+      "expected_output": "Should plan the whole series before publishing part 1 — the parts, what each delivers on its own, links between parts — and make sure each part stands alone for a reader arriving from search. Should work back from publish dates through research, demo project, images, edit and review.",
+      "files": [],
+      "expectations": [
+        "Plans all six parts before scheduling part 1",
+        "Makes each part stand alone with links between parts",
+        "Works back from publish dates through the production steps",
+        "Plans the demo project with the series"
+      ]
+    }
+  ]
+}

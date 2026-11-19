@@ -1,0 +1,56 @@
+{
+  "skill_name": "localization",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Make this onboarding paragraph ready for translation into German, Japanese and Arabic: 'Getting started is a piece of cake — hit the ground running with our out-of-the-box templates. Don't forget to not skip the welcome tour, it's a home run!'",
+      "expected_output": "Should remove the idioms and sports references ('piece of cake', 'hit the ground running', 'out of the box', 'home run') and say what they mean, rewrite the double negative as a single clear instruction, and split the text into short sentences with one idea each and explicit subjects. Should keep any product or feature names on a do-not-translate list. Should note that Arabic reads right to left and that German text runs longer, so layouts around the text need room.",
+      "files": [],
+      "expectations": [
+        "Removes each idiom and replaces it with its plain meaning",
+        "Removes the sports reference",
+        "Rewrites the double negative as a single positive instruction",
+        "Splits the text into short sentences with explicit subjects",
+        "Mentions right-to-left layout and text expansion"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Our app shows 'You have ' + count + ' file' + (count === 1 ? '' : 's') + ' left to upload.' in the help article's embedded status text, and the docs show the same pattern. Can the translators just translate the pieces?",
+      "expected_output": "Should explain that building a sentence from fragments is untranslatable in some languages because word order, gender and agreement differ, and that plurals are not a suffix — languages have different numbers of plural forms. Should recommend keeping the whole sentence as one unit with a placeholder for the number and plural forms handled per language. Should note that string localization in code is an engineering concern, while the docs must not repeat the fragment pattern.",
+      "files": [],
+      "expectations": [
+        "Explains why concatenated fragments can't be translated",
+        "States that plurals are not a suffix and vary by language",
+        "Recommends whole sentences with a placeholder",
+        "Routes code string handling to engineering",
+        "Keeps the docs free of the fragment pattern"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "We have a diagram with English labels baked into the PNG and twelve screenshots of the product, which is only in English. We're translating the guide into French. What happens to the images?",
+      "expected_output": "Should explain that text inside an image can't be translated without recreating the image per language, and recommend moving explanatory text into the page, keeping diagram labels minimal with the editable source file, or using numbered callouts with the legend in the page text. Since the product isn't localized, the French guide should keep English UI labels in the screenshots and text and gloss them, rather than recapturing screenshots.",
+      "files": [],
+      "expectations": [
+        "Explains text in images needs recreating per language",
+        "Recommends moving text into the page or using numbered callouts",
+        "Recommends keeping the diagram's source file",
+        "Keeps English UI labels in the French guide because the product isn't localized, with a gloss"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Our terminology list says 'workspace' is never translated and 'invoice' is always 'Rechnung' in German. A translator used 'Arbeitsbereich' for workspace on three pages and 'Faktura' for invoice on two. Review it.",
+      "expected_output": "Should treat the project's terminology list and approved translations as the standard, flag the three 'Arbeitsbereich' uses as breaking the do-not-translate rule and the two 'Faktura' uses as breaking the approved translation, and explain that two translations of one concept in a language is the same defect as two source terms. Should recommend fixing the terms and getting terminology reviewed in-market before bulk translation continues.",
+      "files": [],
+      "expectations": [
+        "Uses the project's terminology list as the standard",
+        "Flags the do-not-translate violations with their count",
+        "Flags the wrong translation of 'invoice' with its count",
+        "Explains why inconsistent translations are a defect",
+        "Recommends in-market terminology review"
+      ]
+    }
+  ]
+}

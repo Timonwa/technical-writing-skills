@@ -18,15 +18,14 @@
     {
       "id": 2,
       "prompt": "This sample is too long for the docs page. Strip it down — you can drop the certificate verification and the try/catch, they're just noise for an example.",
-      "expected_output": "Should decline to remove the security check and the error handling on the grounds that readers copy samples into production unchanged, so a sample is an implicit recommendation. Should state that a sample with no error handling teaches that none is needed, and that disabling certificate verification 'for the example' is the kind of line that ships. Should offer the legitimate ways to shorten it instead: cut unrelated configuration, logging and framework scaffolding, or elide an irrelevant middle with a marker comment. If a shortcut is genuinely unavoidable, should require a note at that line saying what the real version must do.",
+      "expected_output": "Should decline to remove the certificate verification: disabling a security check 'for the example' is the kind of line readers copy into production. For the try/catch, should apply the rule that error handling stays when it's part of what the sample shows; if this sample isn't about errors, the handling can go, but a comment at that line must say that real code has to handle the failure, so the omission is never silent. Should offer the legitimate ways to shorten it: cut unrelated configuration, logging and scaffolding, or elide an irrelevant middle with a comment in the sample's language, never '...'.",
       "files": [],
       "expectations": [
         "Declines to remove the certificate verification",
-        "Declines to remove the error handling",
-        "States that readers copy samples into production unchanged",
-        "Offers legitimate ways to shorten the sample instead",
-        "Requires a note at the line if a shortcut is unavoidable",
-        "Does not comply silently with the request as stated"
+        "Keeps the error handling only if it is part of what the sample shows",
+        "Requires a comment at the line saying real code must handle the failure if it is removed",
+        "Offers legitimate ways to shorten the sample",
+        "Elides with a comment in the sample's language, not '...'"
       ]
     },
     {
@@ -40,6 +39,19 @@
         "Flags the undefined variables as making the sample unrunnable",
         "Asks for the real logic rather than inventing a plausible transformation",
         "Does not approve the sample as-is"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "For my tutorial post, step 3 shows `const client = new Client({ apiKey: 'YOUR_API_KEY' })`, but the demo repo's code at that step uses process.env.API_KEY. My publication's guide sets no placeholder convention.",
+      "expected_output": "Should flag the mismatch: the code in the piece must match the companion repo at that step, so a reader who copies from the article gets the same result as the repo. Should read the key from the environment in the piece too, matching the repo and the rule against literal secrets. With no convention in the guide, should use Google's placeholder style (uppercase with underscores, no possessive like YOUR_), e.g. API_KEY, and explain it after the sample. Should recommend running the tutorial from a clean start, copying from the rendered post.",
+      "files": [],
+      "expectations": [
+        "Flags that the post's code and the repo's code differ",
+        "Reads the key from the environment in the post",
+        "Uses an uppercase placeholder without YOUR_ when the guide sets none",
+        "Explains the placeholder after the sample",
+        "Recommends running the tutorial from a clean start"
       ]
     }
   ]

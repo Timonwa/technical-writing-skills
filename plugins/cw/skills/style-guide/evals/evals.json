@@ -1,0 +1,43 @@
+{
+  "skill_name": "style-guide",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Set up a writing guide for my new food blog. I have an old 'brand voice' PDF from a course and about twenty published posts.",
+      "expected_output": "Should start by finding what exists: the publication's folder (from the CLAUDE.md path, else the project's publications/, else ask), the brand-voice PDF placed in its sources/ folder, and the posts. Should convert the source rather than copy it, transcribing exact wording where it fixes wording and leaving the rest unset; derive from three or four typical posts and ask which posts aren't typical; then interview the owner for the profile. Should write the files to the publication's folder from the template, never inside the installed plugin, and record what it was built from and the date.",
+      "files": [],
+      "expectations": [
+        "Finds the publication folder from CLAUDE.md, then publications/, then asks",
+        "Puts the existing PDF in sources/ and converts rather than copies it",
+        "Derives from three or four typical posts and asks which are atypical",
+        "Interviews the owner for the profile",
+        "Writes files to the publication's folder, not inside the plugin",
+        "Records provenance and date"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Just fill in every field of the writing guide with sensible defaults so I don't have to answer questions.",
+      "expected_output": "Should keep unknown fields as 'unset' rather than inventing plausible answers, because a guessed rule becomes a house rule nobody agreed. Should offer to derive what it can from published pieces and ask only the questions that remain, few at a time. A skill that later meets an unset field asks and writes the answer back.",
+      "files": [],
+      "expectations": [
+        "Leaves unknown fields as unset",
+        "Explains why invented defaults are harmful",
+        "Offers to derive from published pieces",
+        "Asks only the remaining questions"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "My blog and my newsletter sound alike. Can I use one writing guide for both, and also share it with my friend's similar cooking blog?",
+      "expected_output": "Should say one guide per publication covers every channel, so the blog and its newsletter share one guide with channel logistics in the profile. Two different publications never share a guide, however similar, so the friend's blog gets its own. Should also note a client's or someone else's guide stays theirs.",
+      "files": [],
+      "expectations": [
+        "Uses one guide across a publication's blog and newsletter",
+        "Puts channel logistics in the profile",
+        "Refuses to share one guide between two publications",
+        "Notes someone else's guide stays theirs"
+      ]
+    }
+  ]
+}

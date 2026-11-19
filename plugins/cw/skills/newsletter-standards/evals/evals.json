@@ -1,0 +1,43 @@
+{
+  "skill_name": "newsletter-standards",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Draft this month's issue of our newsletter. Here are the five posts I published in October.",
+      "expected_output": "Should find the publication's folder from the CLAUDE.md path, otherwise the project's publications/, otherwise ask, and read profile.md and writing-guide.md first — especially the signup promise, cadence, sign-off and subject-line format. Should find one narrative thread rather than listing five posts, give every section a takeaway, link out instead of reproducing articles, and ask once for one call to action.",
+      "files": [],
+      "expectations": [
+        "Reads the publication's profile and writing guide first",
+        "Checks what the signup form promised",
+        "Builds the issue around one narrative, not a changelog",
+        "Links out rather than reproducing the posts",
+        "Uses one call to action"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Subject line for this week's issue: 'October Newsletter #12'. Good?",
+      "expected_output": "Should say it names the category, not the content: a subject should be concrete, name the thing or the tension, run about 30 to 50 characters and front-load the word that matters. Should propose alternatives drawn from the issue's actual contents, set preview text that extends the subject rather than repeating it, and keep the publication's subject-line format from the guide.",
+      "files": [],
+      "expectations": [
+        "Rejects a category-only subject line",
+        "Proposes concrete alternatives from the issue's contents",
+        "Keeps the subject around 30 to 50 characters",
+        "Sets preview text that extends the subject",
+        "Follows the guide's subject-line format"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "We're launching our first newsletter issue next week. Our platform footer is off — can we skip the unsubscribe link for the first one since everyone just signed up?",
+      "expected_output": "Should say no: every issue needs a working, obvious unsubscribe and a valid postal address (CAN-SPAM), honest headers and a lawful basis for the addresses. Should confirm one-click unsubscribe headers are on in the platform. Should treat a first issue as setting the pattern: introduce who's sending, what subscribers signed up for, how often it comes and how to leave.",
+      "files": [],
+      "expectations": [
+        "Requires an unsubscribe link in every issue including the first",
+        "Requires a postal address",
+        "Mentions one-click unsubscribe headers as the platform's job to confirm",
+        "Treats the first issue as setting the pattern and introducing the newsletter"
+      ]
+    }
+  ]
+}
