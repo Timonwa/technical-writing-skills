@@ -1,7 +1,7 @@
 {
   "name": "write",
   "displayName": "Writing Skills",
-  "description": "The craft every writer needs, technical or content — writing standards, editing, the machine-written check, images and diagrams, code samples, style guides and drift checks, reviewing one piece, and interviewing experts. The voice and audience come from the project's style guide or the publication's writing guide.",
+  "description": "The rules every writer shares, technical or content — the writing standards true of any piece, the machine-written check, and code samples that run. The voice and audience come from the project's style guide or the publication's writing guide.",
   "version": "1.0.0",
   "author": {
     "name": "Timonwa"

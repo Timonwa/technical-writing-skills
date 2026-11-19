@@ -1,7 +1,7 @@
 ---
 name: ai-check
 description: >-
-  Manually invoked. Checks whether a draft reads as machine-written and reports the specific tells rather than a verdict — em-dash frequency and pattern, blacklisted vocabulary and phrases, the structural tells (uniform section lengths, lists of exactly three, summaries that restate, closers that congratulate), hollow claims, and rhythm. Returns a rewrite for each flagged passage, then asks which to apply.
+  Manually invoked. Checks whether a draft (a docs page, a blog post, a newsletter, any piece published under a person's name) reads as machine-written, and reports the specific tells rather than a verdict: citations that don't hold, em-dash frequency and pattern, blacklisted vocabulary and phrases, the structural tells (uniform section lengths, lists of exactly three, summaries that restate, closers that congratulate), hollow claims, and rhythm. Returns a rewrite for each flagged passage, then asks which to apply.
 argument-hint: '[path] [--fix]'
 model: opus
 effort: high
@@ -15,7 +15,14 @@ A **manually-invoked sweep for the fingerprints of machine-written prose**, on a
 
 **It reports tells, not a verdict.** No one can determine whether text was generated, and claiming to is both wrong and harmful — human writers use em dashes, and careful AI-assisted drafts carry none of these markers. What this command does is find the specific patterns that make prose read as generated, each with its location and a rewrite. Whether the draft then gets changed is the author's call.
 
-In documentation these patterns matter for a reason beyond provenance: nearly all of them are padding. A sentence that exists to transition, a paragraph that restates the heading, a closer that tells the reader they're now well equipped — each costs the reader time and delivers nothing. The full catalog is in `editing-standards`'s [AI writing detection](../editing-standards/references/ai-writing-detection.md) reference.
+These patterns matter for a reason beyond provenance: nearly all of them are padding. A sentence that exists to transition, a paragraph that restates the heading, a closer that tells the reader they're now well equipped — each costs the reader time and delivers nothing. In content there's a second cost: a reader who suspects a piece was generated stops trusting the person whose name is on it. The full catalog is in [the AI writing detection reference](../writing-standards/references/ai-writing-detection.md), and worked examples for documentation and for content are in [references/examples.md](references/examples.md).
+
+## Voice and audience come from the writing's own guide
+
+Before applying this skill, find the guide the writing answers to and read it: for documentation, the project's style guide and the conventions its `AGENTS.md` or contributing docs record; for content, the publication's `writing-guide.md` and `profile.md` (where the user's `CLAUDE.md` says they live, otherwise the project's `publications/` folder). Voice, person, tone, terminology, formatting choices and who the reader is come from that guide, never from this skill.
+
+- Where the guide settles something this skill also covers, the guide wins.
+- Where there's no guide: for documentation, the documentation voice in `tw:docs-standards` is the default; for content, ask who the reader is and what the piece is for before checking it, and offer to build a guide with `cw:style-guide`.
 
 ## Arguments
 
@@ -24,24 +31,24 @@ In documentation these patterns matter for a reason beyond provenance: nearly al
 
 ## Method
 
-1. **Establish the house rule first.** Look for the project's style guide, and ask before concluding there isn't one — a guide that lives outside the repo still governs the draft. Where it mandates something this command would otherwise flag — em-dash asides, a particular closing convention — the guide wins, and only mechanical overuse is reported. Say which rule you're applying.
+1. **Establish the house rule first.** Read the guide the draft answers to — the project's style guide, or the publication's writing guide — and ask before concluding there isn't one; a guide that lives outside the repo still governs the draft. Where it mandates something this command would otherwise flag — em-dash asides, a particular closing convention — the guide wins, and only mechanical overuse is reported. Say which rule you're applying.
 2. **Count before judging.** Every tell is reported with a frequency and a location. "Three em dashes in a 400-word section" is actionable; "too many em dashes" is not.
 3. **Sweep each category** below.
 4. **Rewrite each flagged passage**, don't just flag it. A tell without a replacement is a complaint.
-5. **Read the result aloud.** If you wouldn't say it to a colleague, it isn't fixed yet.
+5. **Read the result aloud.** If you wouldn't say it to the reader in person, it isn't fixed yet.
 6. **Report**, then ask which rewrites to take (see below).
 
 ### What to check
 
 **Punctuation rhythm**
 
-- **Em-dash frequency and pattern** — the primary tell, and it is the frequency, not the character. More than one per page is a signal; two in a paragraph is strong. Flag the mechanical ones — the parenthetical aside used as a default rhythm — and leave the deliberate ones. Replace with commas, colons, parentheses, or a full stop.
+- **Em-dash frequency and pattern** — one tell among several, judged by density per 1,000 words, never by the character. More than about 3 per 1,000 words is a signal; more than about 6, or two in one paragraph, is strong. It's a working threshold, not a published standard, and it's the one the Tell density score uses. Flag the mechanical ones — the parenthetical aside used as a default rhythm — and leave the deliberate ones. Replace with commas, colons, parentheses, or a full stop.
 - **The rule-of-three cadence** — three adjectives, three clauses, three list items, repeatedly. Real writing is lumpier.
 - **Uniform sentence length** across a paragraph, with no short sentence anywhere.
 
 **Vocabulary**
 
-- Flag and replace: delve, leverage, robust, comprehensive, pivotal, seamless, transformative, intricate, nuanced, realm, landscape, underscore, harness, foster, myriad, plethora, crucial, vital, essential.
+- Flag and replace: delve, leverage, robust, comprehensive, pivotal, seamless, transformative, intricate, nuanced, realm, landscape, underscore, harness, foster, myriad, plethora, crucial, vital.
 - Transition words used as connective filler: furthermore, moreover, additionally, notably, importantly, ultimately.
 - Intensifiers that carry nothing: very, incredibly, truly, remarkably, significantly.
 
@@ -60,19 +67,21 @@ In documentation these patterns matter for a reason beyond provenance: nearly al
 - **Every list the same length**, and lists where prose belongs.
 - **A heading restated as the first sentence beneath it.**
 - **Symmetry that the content doesn't justify** — every section with an intro, three bullets and a wrap-up.
+- **Markdown where prose belongs** — bold scattered through sentences, headings on a three-paragraph answer, bullets breaking up an argument.
 
 **Substance**
 
-- **Claims with nothing behind them** — "significantly improves performance", "a wide range of options" — where no number, source or specific follows. This is the tell that matters most in documentation: it reads fine and says nothing.
+- **A citation, quote or study that doesn't exist or doesn't say what the piece claims** — open every source and check it. This is the tell that misleads rather than merely pads, and checking sources is more reliable than any style signal ([Wikipedia: Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing)). Vague attribution — "experts say", "studies show" — belongs here too.
+- **Claims with nothing behind them** — "significantly improves performance", "a wide range of options", "this changed everything for me" — where no number, source, example or specific follows. This is the tell that matters most: it reads fine and says nothing.
 - **Explanations that restate the term** instead of defining it.
-- **Balanced both-sides padding** where the document should take a position or state a fact.
+- **Balanced both-sides padding** where the piece should take a position or state a fact. An opinion piece with no opinion is the content version of this tell.
 
 ### Report format
 
 Write to `_reports/ai-check.md`, creating the directory if it doesn't exist — that's where every audit and report in this set goes — and summarise in chat. Tell the user the path when you're done.
 
 ```markdown
-# AI check — <document>
+# AI check — <piece>
 
 **Date:** <YYYY-MM-DD> · **Words:** <N> · **House rule applied:** <guide, or "none — defaults"> · **Tell density:** <N per 1,000 words> · **Overall:** <X>/10
 
@@ -88,7 +97,7 @@ Write to `_reports/ai-check.md`, creating the directory if it doesn't exist — 
 | Vocabulary | <N> | |
 | Phrases | <N> | |
 | Structure | <N> | |
-| Hollow claims | <N> | |
+| Substance | <N> | |
 
 ## Findings
 | ID | Category | Tell | Status | Location |
@@ -121,7 +130,7 @@ Higher means it reads more like a person wrote it.
 ### Output
 
 - **Findings** in chat with a rewrite for each, grouped by category, worst-first.
-- **Tell density** per 1,000 words, so a long document isn't flagged merely for being long.
+- **Tell density** per 1,000 words, so a long piece isn't flagged merely for being long.
 - **The rewrites you were asked for**, and a note of what was deliberately left.
 
 ## Re-running it
@@ -147,7 +156,7 @@ The report is written first and nothing is edited to produce it. Then:
 5. **Update the report.** Mark each fixed finding `FIXED` in place, with a one-line note of what changed. Leave everything else as it stands. The file on disk has to match reality — a report still listing something that was fixed an hour ago teaches people not to trust it.
 6. **Re-score and show the movement.** After fixing, recompute the scores and report the change against where this run started. That's what scoring is for: it tells you whether the work improved things or made them worse. If several findings were fixed and no score moved, say so plainly — the findings that mattered weren't the ones chosen.
 
-Nothing is edited before step 2 is answered. This command runs with the editing tools removed while it produces the report, so that holds on its own rather than resting on the instruction — they come back for the turn after your question, once the answer is in.
+Nothing is edited before step 2 is answered. The editing tools are unavailable while this command produces the report; they return for the turn after your question, once the answer is in.
 
 ### Fixing from an earlier report
 
@@ -164,8 +173,8 @@ Everything else is unchanged: list the findings, ask which, fix only those, upda
 ## Boundaries
 
 - **This does not determine authorship**, and no report from it should be presented as evidence that something was generated. It finds patterns; that is all it can do.
-- **The full editorial pass** — structure, accuracy, clarity, consistency → `/tw:doc-review`. This is one narrow sweep, and it's the last one to run, after the document is otherwise right.
-- **The voice rules every document obeys** — sentences, claims, prose before code, concrete over vague, formatting, never hard-wrap → [`writing-standards`'s house-voice.md](../writing-standards/references/house-voice.md). A rewrite lands on those rules; this command only finds the passages that need one.
-- **Set-wide voice consistency** → `/tw:style-check`.
-- **A house rule beats every default here.** Where a project has decided on a convention this command would flag, the project wins.
-- **Don't strip a writer's voice in the name of this.** A distinctive human sentence that happens to contain an em dash is not a finding; the target is mechanical padding, not personality.
+- **The full editorial pass** — structure, accuracy, clarity, consistency → `/tw:doc-review` for documentation, `/cw:review` for a published piece. This is one narrow sweep, and it's the last one to run, after the piece is otherwise right.
+- **The rules every piece obeys** — sentences, claims, examples, concrete over vague, formatting, never hard-wrap → [`writing-standards`'s house-voice.md](../writing-standards/references/house-voice.md). A rewrite lands on those rules; this command only finds the passages that need one.
+- **Voice consistency across a set of pieces** → `/tw:style-check` or `/cw:style-check`.
+- **A house rule beats every default here.** Where a project or publication has decided on a convention this command would flag, its guide wins.
+- **Don't strip a writer's voice in the name of this.** A distinctive human sentence that happens to contain an em dash is not a finding, and neither is a first-person aside, a joke or a sign-off the publication always uses; the target is mechanical padding, not personality.

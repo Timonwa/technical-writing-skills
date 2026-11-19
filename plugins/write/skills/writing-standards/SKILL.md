@@ -1,100 +1,65 @@
 ---
 name: writing-standards
 description: >-
-  The discipline behind developer documentation — the Diátaxis quadrants (tutorial, how-to, reference, explanation) and picking the right one, audience-first structure, prose before code, concrete over vague, plain language, and the shared house-voice checklist. Applies the same standard every run rather than inheriting the surrounding docs' habits. Use on "write docs", "document this", "API reference", "how-to guide", "is this a tutorial or a guide".
+  The rules under every piece of writing, documentation or content — naming the reader, the goal and the scope before drafting, plain language, concrete claims whose certainty matches the evidence, crediting what's borrowed, structure for readers who scan, accessible formatting, and keeping a piece true, with the shared checklist every writing skill links. Voice, person and tone come from the project's style guide or the publication's writing guide. Use on "write this", "draft", "is this clear", "make this plainer".
 ---
 
-# Technical writing
+# Writing standards
 
-The discipline of developer-facing documentation. Every document serves one reader, pursuing one goal, in one mode — decide who and which mode before writing a word.
+The discipline every piece of writing shares, whatever it is: a docs page, a README, a blog post, an essay, a newsletter issue. A reader arrives with a reason and leaves the moment the writing stops serving it. Decide who that reader is and what they came for before writing a word.
 
-## Pick the Diátaxis quadrant first
+## Voice and audience come from the writing's own guide
 
-Every doc is exactly one of four types ([diataxis.fr](https://diataxis.fr/)). Pick one per document and don't mix — a mixed-mode doc fails all of its readers at once:
+Before applying this skill, find the guide the writing answers to and read it: for documentation, the project's style guide and the conventions its `AGENTS.md` or contributing docs record; for content, the publication's `writing-guide.md` and `profile.md` (where the user's `CLAUDE.md` says they live, otherwise the project's `publications/` folder). Voice, person, tone, terminology, formatting choices and who the reader is come from that guide, never from this skill.
 
-- **Tutorial — a lesson (learning-oriented).** Walks a newcomer to a guaranteed success. You own every decision — versions, names, values — so the reader only follows. Minimize choices and explanation; link out for "why".
-- **How-to guide — a recipe (problem-oriented).** Steps for a reader who already knows what they want ("rotate an API key"). Assume competence: start from prerequisites, skip the teaching, get to the goal.
-- **Reference — a dictionary (information-oriented).** Describes the machinery: parameters, types, returns, defaults, errors — complete, accurate, structured for lookup (tables over prose). Never narrative, never persuasive.
-- **Explanation — a discussion (understanding-oriented).** Why things are the way they are: design decisions, trade-offs, background. No steps, no API listings.
+- Where the guide settles something this skill also covers, the guide wins.
+- Where there's no guide: for documentation, the documentation voice in `tw:docs-standards` is the default, applied without asking; for content, ask who the reader is and what the piece is for, and offer to build a guide with `cw:style-guide`.
+- **For documentation, also apply `tw:docs-standards`** — its page rules (one need per page, procedures, accessible pages, code on the page) hold even where the project has a guide, which overrides it only where it decides. **For content, also apply the publication's writing guide and the content-writing skills (`cw`).**
 
-**Fix mixing by moving, not deleting** — a tutorial that pauses to discuss architecture moves that discussion to an explanation page and links it; a reference entry with a walkthrough spins it out as a how-to; a how-to that teaches basics links the tutorial instead.
+## Craft and voice
 
-## Establish audience, goal, and scope before writing
+**Judge the craft** — whether a sentence can be followed, whether a claim is true and credited, whether a reader who scans finds what they came for.
 
-- **Name the audience** — "novice developers new to the framework" vs "experienced operators", and write to exactly that level. Copy that tries to serve everyone serves no one.
-- **State the reader's goal** — what they can do after reading that they couldn't before. Lead with that goal, not the feature; answer "why should I care" before "how it works".
-- **Bound the scope** — decide what's excluded and link to where it lives, instead of letting the doc sprawl.
-- **Outline before drafting** anything longer than one page — headings first, prose second; a bad structure can't be edited into a good doc.
-- **Don't inherit the surrounding docs' habits.** Match a project's terminology for its own concepts, but not its shape or its voice — if the existing content has drifted (mixed modes, vague claims, passive filler), matching it copies the drift. Where what's there conflicts with these rules, say so and follow the rules.
+**Take the voice from the guide.** Person ("you", "we", "I"), tone, humor, contractions, how much of the writer shows — those are the writing's identity, and they differ on purpose between a reference page and a personal essay. A voice stays constant while its tone shifts with the reader's situation ([Mailchimp](https://styleguide.mailchimp.com/voice-and-tone/)); the guide says which.
 
-> **The checkable rules live in [references/house-voice.md](references/house-voice.md)** — sentences, claims, code, structure, formatting, and keeping a document true. Every writing skill links that one copy; this section is the reasoning behind it.
+## Establish the reader, the goal and the scope before writing
+
+- **Name the reader** — specifically enough to decide what they already know. Writing that tries to serve everyone serves no one.
+- **State what the reader leaves with** — what they can do, understand or decide afterwards that they couldn't before. Lead with that goal, not with the feature, the topic or the background.
+- **Bound the scope** — decide what's excluded and link to where it lives, instead of letting the piece sprawl.
+- **Outline before drafting** anything longer than a page — headings first, prose second. A bad structure can't be edited into a good piece.
+- **Don't inherit the surrounding writing's habits.** Match the established terms for the subject, but not its shape or its voice — if what's already published has gone vague, padded or inconsistent, copying it copies the drift. Where what's there conflicts with the guide or these rules, say so and follow the guide and the rules.
+
+> **The checkable rules are in [references/house-voice.md](references/house-voice.md)** — sentences, claims, credit and rights, structure, formatting, and keeping a piece true.
 
 ## Writing principles
 
-- **Plain language, active voice, present tense** — sentences under 25 words, one idea per paragraph, define a term on first use and then use exactly that term everywhere (never "delete" here and "remove" there).
-- **Show, don't just tell** — every concept gets a complete, runnable example with its expected output, and the common failure case where one exists. No pseudocode, no `<PLACEHOLDER>` values.
-- **Prose before code** — every code block is introduced by a sentence saying what it does and when to use it. A reader should understand the page with the code blocks collapsed.
-- **Concrete over vague** — real numbers, names, and timeframes ("responds in under 200 ms", not "fast"; "retries 3 times", not "retries a few times"). If a claim can't be made specific, it's probably filler — cut it.
-- **Progressive disclosure** — simple before complex, quickstart before deep dive; link advanced topics instead of inlining them, so beginners aren't buried.
-- **Scannable structure** — descriptive headings that match what readers search for, bullets for 3+ items, tables for parameter/option/error matrices.
-- **Accuracy is non-negotiable** — verify symbol names, signatures, defaults, and versions against the source, never from memory. Wrong docs are worse than no docs.
+- **Plain language, active voice** — check sentences over about 25 words and split them unless the length is deliberate, vary sentence length, keep paragraphs short, and define a term on first use, then use exactly that term ([GOV.UK](https://guidance.publishing.service.gov.uk/writing-to-gov-uk-standards/writing-guidelines/clear-language/)). Plain language serves specialists too: it lets them understand faster. The international standard, [ISO 24495-1](https://www.iso.org/standard/78907.html), tests whether readers can find what they need, understand it and use it.
+- **Put the most important thing first** — the answer, the result or the point in the opening lines, the qualification after ([GOV.UK](https://guidance.publishing.service.gov.uk/writing-to-gov-uk-standards/writing-guidelines/clear-structure/), [Microsoft](https://learn.microsoft.com/en-us/style-guide/brand-voice-above-all-simple-human)). A piece that opens on a story states why it matters by the second or third paragraph.
+- **Concrete over vague** — real numbers, names and timeframes. If a claim can't be made specific, it's probably filler.
+- **Certainty matches the evidence** — say plainly what's established, and "suggests" for what one study found. Overclaiming is a factual error, not a style choice.
+- **Show, don't assert** — evidence beside every claim that matters: a runnable example, a figure, a quote, a source, an anecdote with a point.
+- **Credit what you borrow** — words, ideas, data and images, linked to their originator, within their licence.
+- **Progressive disclosure** — simple before complex, the main path before the edge cases; link the advanced topic rather than burying a beginner in it.
+- **Structure for scanning** — most readers scan before they read. Headings that say what's under them in the reader's words, bullets for three or more parallel items, tables for anything compared across the same attributes.
+- **True, and traceable** — check names, figures, quotes and claims against the original source, never memory. A wrong fact costs the reader more than a missing one.
 
-## Style
+## Formatting
 
-- **Address the reader as "you"**; use "we" only for genuinely shared actions; avoid "I" outside opinionated pieces. Conversational but professional.
-- **Formatting has semantics** — **bold** for UI elements and buttons, `code` for commands, identifiers, and file names, _italics_ sparingly for emphasis.
-- **Never hard-wrap prose** — one physical line per paragraph or list item; break only where Markdown semantics require it.
+- **Formatting has meaning** — what bold and italics mark is the guide's decision, applied consistently; `code` for commands, identifiers and file names. Decoration that carries no meaning is noise to a screen reader and a scanner.
+- **Headings in order** — no skipped levels, and one H1 where the piece is kept as Markdown (a CMS usually supplies the title as the H1); link text that makes sense on its own, never "click here".
+- **Never hard-wrap prose** where the piece is kept as Markdown — one physical line per paragraph or list item; break only where Markdown requires it.
 
-## Example
+## Worked examples
 
-A how-to opening that obeys the rules — one mode, goal first, prose before code, concrete values, expected output:
-
-````markdown
-## Rotate an API key
-
-Rotate a key when it may have leaked or on your regular schedule. Rotation issues a new key immediately; the old key keeps working for 24 hours so deployed clients don't break.
-
-Create the replacement key with the CLI:
-
-```bash
-acme keys rotate --name production
-```
-
-The command prints the new key once — store it in your secret manager now, it is not retrievable later:
-
-```text
-Rotated key "production". New key: ak_live_9f2c… (old key expires in 24h)
-```
-````
-
-Note what it doesn't do: no history of why API keys exist (explanation), no full flag listing (reference), no hand-holding about installing the CLI (tutorial) — those are links, not sections.
+A documentation page: `tw:docs-standards`. An article: the content-writing skills (`cw`). Before-and-after edits: `tw:editing-standards` and `cw:editing-standards`.
 
 ## Boundaries
 
-This skill is the shared discipline every other one builds on. Each of them adds the rules specific to its own shape and links back here rather than restating the common ground.
-
-**Before writing**
-
-- Deciding which documents a set needs, how they're grouped, and in what order → `docs-planning`.
-- Getting the facts out of an engineer, an expert, or a spec → `sme-interviews`; finding them in the codebase yourself → `codebase-research`.
-- The project's own terminology, capitalization and naming decisions → `style-guide`.
-
-**Writing a document**
-
-- Docs-site page mechanics — components and imports, navigation registration, link integrity when moving pages, page splitting, next-steps footers → `developer-docs`.
-- Help-centre guides and user guides for non-technical end users → `user-guides`.
-- Runbooks, process docs, onboarding and other internal documentation → `internal-docs`.
-- Project READMEs → `readmes`. API references and the pages around them → `api-reference`. Release notes and changelogs → `release-notes`.
-
-**The parts of a document that aren't prose**
-
-- Code examples — completeness, testing, placeholder conventions, safety → `code-samples`.
-- Screenshots, diagrams, flowcharts and alt text → `images-and-diagrams`.
-
-**After writing**
-
-- Tightening and polishing existing prose, including de-AI-ifying it → `editing-standards`.
-- Writing so it survives translation, and running a multi-language set → `localization`.
-- Auditing an existing docs site → `docs-audit`.
-
-**Out of scope** — standalone tutorials and blog articles are a different shape from a docs page (narrative, published off-repo), and marketing or conversion copy is a different craft with a different goal.
+- **Documentation** — the four documentation types, the documentation voice, procedures, accessible docs pages → `tw:docs-standards`.
+- **Content** — articles, newsletters and social posts for a publication → the content-writing skills (`cw`).
+- **The guide this skill defers to** — a docs style guide → `tw:style-guide`; a publication's writing guide → `cw:style-guide`.
+- **Getting facts out of an expert or a source** → `tw:sme-interviews` or `cw:sme-interviews`.
+- **Code in a piece** → `write:code-samples`. **Screenshots, photos, diagrams and alt text** → `tw:images-and-diagrams` or `cw:images-and-diagrams`.
+- **Tightening a finished draft** → `tw:editing-standards` or `cw:editing-standards`; **the machine-written sweep** → `/write:ai-check`.
+- **Marketing and conversion copy** — landing pages, ads, sales sequences — is a different craft with a different goal, and out of scope.
