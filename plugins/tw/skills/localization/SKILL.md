@@ -10,6 +10,13 @@ Two jobs live here: writing source content that translates cleanly, and running 
 
 The cost of translation is driven by the source. Inconsistent terminology, long sentences and cultural references multiply both the price and the error rate across every language at once.
 
+## Voice and audience come from the writing's own guide
+
+Before writing or reviewing source content, find the project's style guide and the conventions its `AGENTS.md` or contributing docs record, and read them. Voice, person, tone, terminology and formatting choices come from that guide, never from this skill.
+
+- Where the guide settles something this skill also covers, the guide wins.
+- Where the guide is silent or there isn't one, `tw:docs-standards` is the default — apply it without asking.
+
 ## Decide early
 
 - **Ask whether translation is planned**, for which languages, for which content, and by whom. The answers change what you write today.

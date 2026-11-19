@@ -10,6 +10,13 @@ An API reference answers one question at a time, for a developer who is mid-inte
 
 The reference is only half the job. A complete API documentation set is a reference **plus** the pages that let someone reach their first successful call: authentication, a quickstart, and the cross-cutting behaviours (pagination, errors, rate limits, versioning) that every endpoint inherits and no endpoint should restate.
 
+## Voice and audience come from the writing's own guide
+
+Before writing or reviewing the reference, find the project's style guide and the conventions its `AGENTS.md` or contributing docs record, and read them. Voice, person, tone, terminology and formatting choices come from that guide, never from this skill.
+
+- Where the guide settles something this skill also covers, the guide wins.
+- Where the guide is silent or there isn't one, `tw:docs-standards` is the default — apply it without asking.
+
 ## Establish what you're working from
 
 The shape of the work depends on where the descriptions live. Ask, once, up front:
@@ -103,7 +110,7 @@ The things that cost a developer a night are rarely in the parameter table. Say 
 - **Generating the spec from code** — route registries, schema annotations, spec-build tooling, and keeping generated output in sync with handlers — is an engineering job, not this skill's. This skill covers what the documentation says, including the prose inside a spec someone else generates.
 - **The voice rules every document obeys** — sentences, claims, concrete over vague, formatting, never hard-wrap → `write:writing-standards`; the documentation voice, prose before code and the four document types → `tw:docs-standards`.
 - Which quadrant a surrounding page belongs to, and the documentation types → `tw:docs-standards`. Reference is one quadrant; the quickstart and integration guides around it are others.
-- Docs-site page mechanics — navigation, placement, link integrity, next-steps footers → `developer-docs`.
-- Locating a schema, handler or default in the source → `codebase-research`. Getting unverifiable behaviour out of the engineer who wrote it → `tw:sme-interviews`.
-- Announcing an API change to the people who integrate against it → `release-notes`.
-- Sweeping an existing reference for drift against the code → `docs-audit`.
+- Docs-site page mechanics — navigation, placement, link integrity, next-steps footers → `tw:developer-docs`.
+- Locating a schema, handler or default in the source → `tw:codebase-research`. Getting unverifiable behaviour out of the engineer who wrote it → `tw:sme-interviews`.
+- Announcing an API change to the people who integrate against it → `tw:release-notes`.
+- Sweeping an existing reference for drift against the code → `/tw:docs-audit`.

@@ -12,6 +12,13 @@ Every documentation standard says the same thing: verify against source, never f
 
 The danger runs the other way too. A writer who has read the code has more confidence than one who hasn't, and confidence built on a value that production overrides is worse than an honest gap. The **Traps** section is the part of this skill that matters most.
 
+## Voice and audience come from the writing's own guide
+
+Before writing up what you find, find the project's style guide and the conventions its `AGENTS.md` or contributing docs record, and read them. Voice, person, tone, terminology and formatting choices come from that guide, never from this skill.
+
+- Where the guide settles something this skill also covers, the guide wins.
+- Where the guide is silent or there isn't one, `tw:docs-standards` is the default — apply it without asking.
+
 ## Before you open a file
 
 - **Write down the list of facts you need.** "Understand the export feature" is not a research task. "The accepted formats, the row limit, the default filename, and the error when it times out" is — and you'll know when you're done.
@@ -85,7 +92,7 @@ The rule doesn't relax, it changes shape. Write only what you were told, ask for
 
 - **Getting the facts that code cannot give you** — intent, what's deployed, what's deprecated in practice, what readers get wrong → `tw:sme-interviews`. This skill answers _what_; that one answers _why_ and _really?_
 - **What to do with the facts** — which document type, how it's structured, how it reads → `tw:docs-standards` and the skill for that document type.
-- **Verifying a docs page against source as a review pass** → `docs-audit`. This skill is for research before writing; that one is for drift after.
-- **Endpoint-level detail** — handlers, schemas, status codes, response shapes → `api-reference`, which has its own verification rules for an API surface.
+- **Verifying a docs page against source as a review pass** → `/tw:docs-audit`. This skill is for research before writing; that one is for drift after.
+- **Endpoint-level detail** — handlers, schemas, status codes, response shapes → `tw:api-reference`, which has its own verification rules for an API surface.
 - **The code that ends up in the docs** — choosing, testing and maintaining examples → `write:code-samples`.
 - **This skill never changes code.** A bug or an inconsistency you find is a finding to report, not something to fix in passing.

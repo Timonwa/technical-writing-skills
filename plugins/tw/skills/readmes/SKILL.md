@@ -10,6 +10,13 @@ A README answers three questions, in order: what does this do, how do I run it, 
 
 Apply these rules to every README, wherever it lives — a personal project, a work repo, or a pull request to someone else's. When a README already exists and deviates from it, keep the project-specific facts and correct the shape (see **Refresh, don't clobber**).
 
+## Voice and audience come from the writing's own guide
+
+Before writing a README, find the project's style guide and the conventions its `AGENTS.md` or contributing docs record, and read them. Voice, person, tone, terminology and formatting choices come from that guide, never from this skill.
+
+- Where the guide settles something this skill also covers, the guide wins.
+- Where the guide is silent or there isn't one, `tw:docs-standards` is the default — apply it without asking.
+
 ## Detect the repo type first
 
 The right README shape depends on what the repo is — a library leads with install + usage, an app with what it does + local setup, a CLI with its top commands, a monorepo root is a map, a package inside one covers only itself. The detection signals and the full per-type skeletons (including the monorepo no-duplication rule and a worked CLI example) are in [references/repo-skeletons.md](references/repo-skeletons.md) — detect the type there before writing, and confirm with the user only when the signals conflict. A repo accompanying a tutorial (blog post or video) has its own shape — star callouts, branch variants, About metadata — and is not this skill's job.
@@ -43,6 +50,6 @@ Every shape draws from the same skeleton, in this order. Drop a section that doe
 
 - **The voice rules every document obeys** — sentences, claims, concrete over vague, formatting, never hard-wrap → `write:writing-standards`; the documentation voice, prose before code and the four document types → `tw:docs-standards`.
 - The general writing discipline (audience, plain language) → `write:writing-standards`; prose before code → `tw:docs-standards`.
-- Docs-site pages the README links out to → `developer-docs`; the endpoint reference it links to → `api-reference`.
+- Docs-site pages the README links out to → `tw:developer-docs`; the endpoint reference it links to → `tw:api-reference`.
 - The quickstart's code blocks — choosing them, testing them, keeping them compiling → `write:code-samples`.
-- Tightening the prose after drafting → `tw:editing-standards`. Announcing a version → `release-notes`.
+- Tightening the prose after drafting → `tw:editing-standards`. Announcing a version → `tw:release-notes`.

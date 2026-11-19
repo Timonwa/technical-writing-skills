@@ -13,6 +13,13 @@ Documentation for colleagues rather than customers. The writing discipline is th
 - **Wrong is worse than missing.** A stale customer doc produces a support ticket. A stale runbook produces an incident, and a stale process doc produces work done incorrectly by someone who did exactly what they were told.
 - **Confidentiality is a live constraint.** What can be written down, and where, is a real question with real answers.
 
+## Voice and audience come from the writing's own guide
+
+Before writing an internal doc, find the project's style guide and the conventions its `AGENTS.md` or contributing docs record, and read them. Voice, person, tone, terminology and formatting choices come from that guide, never from this skill.
+
+- Where the guide settles something this skill also covers, the guide wins.
+- Where the guide is silent or there isn't one, `tw:docs-standards` is the default — apply it without asking.
+
 ## Every internal document carries its metadata
 
 This is the difference between a knowledge base and a graveyard. Every document states, where a reader sees it immediately:
@@ -112,10 +119,10 @@ Decide the rules once, write them down, and apply them per document:
 
 ## Boundaries
 
-- **Documentation for customers and end users** → `user-guides`. Much of the plain-language discipline is shared; the reader, the confidentiality rules, and the ownership problem are not.
-- **Developer documentation for a public or shared technical surface** → `developer-docs` and `api-reference`, even when the audience is internal — an internal API still gets an API reference.
-- **A repository's own README and contributor docs** → `readmes`.
+- **Documentation for customers and end users** → `tw:user-guides`. Much of the plain-language discipline is shared; the reader, the confidentiality rules, and the ownership problem are not.
+- **Developer documentation for a public or shared technical surface** → `tw:developer-docs` and `tw:api-reference`, even when the audience is internal — an internal API still gets an API reference.
+- **A repository's own README and contributor docs** → `tw:readmes`.
 - **The voice rules every document obeys** — sentences, claims, concrete over vague, formatting, never hard-wrap → `write:writing-standards`; the documentation voice, prose before code and the four document types → `tw:docs-standards`.
 - **Capturing the knowledge from the person who has it** → `tw:sme-interviews`.
-- **Deciding which internal docs are needed and auditing what exists** → `docs-planning`.
+- **Deciding which internal docs are needed and auditing what exists** → `tw:docs-planning`.
 - **The tool it lives in** — wiki, drive, repo, knowledge base — is the organization's decision, not this skill's. Every rule here works in any of them.

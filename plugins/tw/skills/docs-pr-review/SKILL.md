@@ -13,7 +13,14 @@ disable-model-invocation: true
 
 A review of the **documentation in a pull request**, for when developers ship a change and draft the docs, and a writer reviews the docs part. Where `/tw:doc-review` reviews a document on its own, this one reviews it against the change it belongs to: is every claim true of what this PR does, and did anything the PR changes go undocumented?
 
-The editorial standard is `/tw:doc-review`'s five levels of edit, `tw:editing-standards`, `tw:docs-standards` and `write:writing-standards`' voice rules, plus the skill for each document type the PR touches. Where the project has its own style guide, that wins.
+The editorial standard is `/tw:doc-review`'s five levels of edit, `tw:editing-standards`, `tw:docs-standards` and `write:writing-standards`' voice rules, plus the skill for each document type the PR touches.
+
+## Voice and audience come from the writing's own guide
+
+Before reviewing, find the project's style guide and the conventions its `AGENTS.md` or contributing docs record, and read them. Voice, person, tone, terminology and formatting choices come from that guide, never from this skill.
+
+- Where the guide settles something this skill also covers, the guide wins.
+- Where the guide is silent or there isn't one, `tw:docs-standards` is the default — apply it without asking; a page that departs from it is a finding.
 
 ## Arguments
 
@@ -31,16 +38,16 @@ The editorial standard is `/tw:doc-review`'s five levels of edit, `tw:editing-st
 
 The shape decides what every claim is checked against. Say which shape it is, and the source, at the top of the review.
 
-| The PR                                                                                          | Checked against                                             | Extra checks                                                                                                              |
-| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| **Docs alongside a code change**                                                                | The code this PR changes                                    | Every change in the code that a reader would notice and the docs don't mention                                            |
-| **Docs only, updating existing pages**                                                          | The current code on the base branch, or the running product | The update doesn't contradict other pages; links, anchors and navigation still hold                                       |
-| **Docs only, new pages**                                                                        | The current code or product                                 | The right type of page, its place in the navigation, links in and out, no duplicate of an existing page (`docs-planning`) |
-| **Docs for code that lives elsewhere** — another repo, a separate code PR, an unreleased change | The linked PR, repo or spec                                 | The same missing-docs check, against that change                                                                          |
+| The PR                                                                                          | Checked against                                             | Extra checks                                                                                                                 |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| **Docs alongside a code change**                                                                | The code this PR changes                                    | Every change in the code that a reader would notice and the docs don't mention                                               |
+| **Docs only, updating existing pages**                                                          | The current code on the base branch, or the running product | The update doesn't contradict other pages; links, anchors and navigation still hold                                          |
+| **Docs only, new pages**                                                                        | The current code or product                                 | The right type of page, its place in the navigation, links in and out, no duplicate of an existing page (`tw:docs-planning`) |
+| **Docs for code that lives elsewhere** — another repo, a separate code PR, an unreleased change | The linked PR, repo or spec                                 | The same missing-docs check, against that change                                                                             |
 
 - **No source to check against** — docs-only with no access to the code, and nothing linked: ask for one. If none comes, mark each unchecked claim as unverified. Never close the gap with the plausible version.
 - **The shape isn't clear** — docs describing behaviour that isn't in the code yet, a code change that might be in another PR: ask rather than guess.
-- **Finding the facts in the code** — defaults, limits, labels, error strings, env vars, flags — follows `codebase-research`.
+- **Finding the facts in the code** — defaults, limits, labels, error strings, env vars, flags — follows `tw:codebase-research`.
 
 ## Step 3 — Review
 
@@ -48,7 +55,7 @@ The shape decides what every claim is checked against. Say which shape it is, an
 
 1. **Missing docs** (code-with-docs and docs-elsewhere shapes) — list every change in the code a reader would notice with no doc line: a new or renamed setting, env var, endpoint, flag or command; a changed default, limit or behaviour; a removed feature still documented; a new error a user can hit. Each with the file and line in the code, and where its doc belongs.
 2. **The five levels** on the changed lines, from `/tw:doc-review` — substantive, technical accuracy (against this PR's source of truth), line, copy and proof — in that order, and don't skip ahead.
-3. **The document type** — each page judged by its type's skill: `developer-docs`, `user-guides`, `api-reference`, `readmes`, `release-notes`, `internal-docs`; samples by `write:code-samples`, images by `tw:images-and-diagrams`.
+3. **The document type** — each page judged by its type's skill: `tw:developer-docs`, `tw:user-guides`, `tw:api-reference`, `tw:readmes`, `tw:release-notes`, `tw:internal-docs`; samples by `write:code-samples`, images by `tw:images-and-diagrams`.
 
 Use `/tw:doc-review`'s severity scale: **BLOCKER** (untrue, a missing warning on an irreversible action, an example that doesn't work, an undocumented change a reader will hit), **MAJOR**, **MINOR**, **NIT**.
 

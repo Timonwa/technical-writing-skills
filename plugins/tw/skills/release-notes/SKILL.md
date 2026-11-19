@@ -10,6 +10,13 @@ Release notes answer one question: **what changed for me, and do I need to do an
 
 They are read by people deciding whether to upgrade, people debugging something that worked yesterday, and people who asked for a fix six months ago. None of them are reading for pleasure, and none of them want the commit log.
 
+## Voice and audience come from the writing's own guide
+
+Before writing the notes, find the project's style guide and the conventions its `AGENTS.md` or contributing docs record, and read them. Voice, person, tone, terminology and formatting choices come from that guide, never from this skill.
+
+- Where the guide settles something this skill also covers, the guide wins.
+- Where the guide is silent or there isn't one, `tw:docs-standards` is the default — apply it without asking.
+
 ## Decide the audience first
 
 One release usually needs more than one set of notes, and merging them serves nobody:
@@ -110,9 +117,9 @@ Announce a deprecation as early as you can, repeat it in every release until rem
 
 ## Boundaries
 
-- **The documentation pages the notes link to** — the feature's how-to, its reference entry, its migration guide → `developer-docs`, `user-guides`, `api-reference`.
+- **The documentation pages the notes link to** — the feature's how-to, its reference entry, its migration guide → `tw:developer-docs`, `tw:user-guides`, `tw:api-reference`.
 - **A substantial migration guide** is its own document, not a release note. The note links it.
 - **The voice rules every document obeys** — sentences, claims, concrete over vague, formatting, never hard-wrap → `write:writing-standards`; the documentation voice, prose before code and the four document types → `tw:docs-standards`.
 - **Generating and categorizing the raw change list** from version control or a release tool is an engineering task; this skill covers what the published notes say.
 - **Launch announcements, blog posts and marketing copy** about a release are a different document with a different goal. Release notes stay factual; link the announcement rather than becoming one.
-- **Internal "what shipped" summaries** for other teams → `internal-docs`.
+- **Internal "what shipped" summaries** for other teams → `tw:internal-docs`.

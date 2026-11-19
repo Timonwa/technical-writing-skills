@@ -10,6 +10,13 @@ Most documentation problems are planning problems wearing a writing costume. A p
 
 Plan the set before writing the page. The output of this skill is a list of documents to write, in order, with a home for each.
 
+## Voice and audience come from the writing's own guide
+
+Before planning the set, find the project's style guide and the conventions its `AGENTS.md` or contributing docs record, and read them. Voice, person, tone, terminology and formatting choices come from that guide, never from this skill.
+
+- Where the guide settles something this skill also covers, the guide wins.
+- Where the guide is silent or there isn't one, `tw:docs-standards` is the default — apply it without asking.
+
 ## Start from reader tasks, not the product
 
 The two organizing principles that fail are the feature list and the org chart. Both describe how the product was built, and neither matches how anyone looks for help.
@@ -80,9 +87,9 @@ Agree a minimum set so documentation isn't renegotiated per release:
 
 ## Boundaries
 
-- **Writing the pages the plan calls for** → `developer-docs`, `user-guides`, `internal-docs`, `api-reference`, `readmes`, `release-notes`.
+- **Writing the pages the plan calls for** → `tw:developer-docs`, `tw:user-guides`, `tw:internal-docs`, `tw:api-reference`, `tw:readmes`, `tw:release-notes`.
 - **Which type a planned page should be**, and why mixing types fails → `tw:docs-standards`.
-- **The mechanics of moving, renaming and redirecting** a page the plan retires or relocates → [`developer-docs`'s site-mechanics.md](../developer-docs/references/site-mechanics.md).
+- **The mechanics of moving, renaming and redirecting** a page the plan retires or relocates → [`tw:developer-docs`'s site-mechanics.md](../developer-docs/references/site-mechanics.md).
 - **Finding out what's actually true** about the product before you can list its tasks → `tw:sme-interviews`.
-- **Auditing an existing set for defects** — stale claims, broken links, orphans — rather than planning its shape → `docs-audit`.
+- **Auditing an existing set for defects** — stale claims, broken links, orphans — rather than planning its shape → `/tw:docs-audit`.
 - **Naming and terminology decisions** the structure depends on → `tw:style-guide`.

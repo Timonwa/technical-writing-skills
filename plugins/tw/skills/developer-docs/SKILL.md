@@ -10,6 +10,13 @@ How to write a docs-site page, independent of the framework rendering it. Two pr
 
 Apply these rules to every docs page, in any project. When an existing page deviates from them, correct it rather than matching it — matching whatever is there is how drift spreads.
 
+## Voice and audience come from the writing's own guide
+
+Before writing a page, find the project's style guide and the conventions its `AGENTS.md` or contributing docs record, and read them. Voice, person, tone, terminology and formatting choices come from that guide, never from this skill.
+
+- Where the guide settles something this skill also covers, the guide wins.
+- Where the guide is silent or there isn't one, `tw:docs-standards` is the default — apply it without asking.
+
 ## Verify against source before writing
 
 **When the code is available, it is the source of truth** — read it first, and never document from memory or from what the old page claimed:
@@ -70,13 +77,13 @@ const res = await fetch("https://api.example.com/v1/items", { headers: { Authori
 
 - **The voice rules every document obeys** — sentences, claims, concrete over vague, formatting, never hard-wrap → `write:writing-standards`; the documentation voice, prose before code and the four document types → `tw:docs-standards`.
 - Which document type a page should be → `tw:docs-standards`; audience, scope and prose discipline → `write:writing-standards`.
-- Deciding which pages the set needs at all, and in what order → `docs-planning`. This skill writes a page once the set has a shape.
-- Getting the facts the page depends on out of an engineer or a spec → `tw:sme-interviews`; locating them in the source yourself → `codebase-research`.
+- Deciding which pages the set needs at all, and in what order → `tw:docs-planning`. This skill writes a page once the set has a shape.
+- Getting the facts the page depends on out of an engineer or a spec → `tw:sme-interviews`; locating them in the source yourself → `tw:codebase-research`.
 - The project's own terminology, capitalization and word choices → `tw:style-guide`.
-- Auditing an existing docs site for drift, broken links, and stale pages → `docs-audit`.
-- **Endpoint-level API reference** — parameter tables, status codes, auth sections, request and response examples → `api-reference`.
-- **Help centres and user guides for non-technical end users** → `user-guides`, for a different audience and page types.
-- **Internal documentation** — runbooks, onboarding, process docs → `internal-docs`.
-- Project READMEs → `readmes`.
+- Auditing an existing docs site for drift, broken links, and stale pages → `/tw:docs-audit`.
+- **Endpoint-level API reference** — parameter tables, status codes, auth sections, request and response examples → `tw:api-reference`.
+- **Help centres and user guides for non-technical end users** → `tw:user-guides`, for a different audience and page types.
+- **Internal documentation** — runbooks, onboarding, process docs → `tw:internal-docs`.
+- Project READMEs → `tw:readmes`.
 - Findability — titles, meta descriptions, slugs, versioned canonicals, being quoted in AI answers → `tw:seo-aeo-geo`.
 - The code blocks themselves — choosing, testing and maintaining them → `write:code-samples`. Screenshots, architecture and flow diagrams → `tw:images-and-diagrams`.

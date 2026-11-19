@@ -13,9 +13,16 @@ disallowed-tools: Edit, NotebookEdit
 
 A **manually-invoked audit of documentation that already exists**, looking for the defects that cost a reader their time: something that isn't true any more, something they can't reach, something that contradicts the page next to it, and something nobody has checked since it was written.
 
-Every check is spelled out below. For the standard behind a finding: `write:writing-standards` and `tw:docs-standards` for the voice rules, `developer-docs`, `user-guides`, `internal-docs`, `readmes` and `api-reference` for each document type's shape, `tw:style-guide` for the project's own terminology, and `write:code-samples` and `tw:images-and-diagrams` for the parts of a page that aren't prose.
+Every check is spelled out below. For the standard behind a finding: `write:writing-standards` and `tw:docs-standards` for the voice rules, `tw:developer-docs`, `tw:user-guides`, `tw:internal-docs`, `tw:readmes` and `tw:api-reference` for each document type's shape, `tw:style-guide` for the project's own terminology, and `write:code-samples` and `tw:images-and-diagrams` for the parts of a page that aren't prose.
 
 **This audit does not assume a codebase.** Where source is available it is the strongest evidence and gets used; where it isn't, the audit works from the running product, a spec, or what it can establish internally — and says which.
+
+## Voice and audience come from the writing's own guide
+
+Before auditing it, find the project's style guide and the conventions its `AGENTS.md` or contributing docs record, and read them. Voice, person, tone, terminology and formatting choices come from that guide, never from this skill.
+
+- Where the guide settles something this skill also covers, the guide wins.
+- Where the guide is silent or there isn't one, `tw:docs-standards` is the default — apply it without asking; a page that departs from it is a finding.
 
 ## Arguments
 

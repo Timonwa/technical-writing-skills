@@ -15,7 +15,9 @@ A **manually-invoked audit of the shape of a documentation set**: what exists, w
 
 It asks a different question from `/tw:docs-audit`. That one asks whether a page is **true and working**; this one asks whether the set is the **right set** — and a perfectly accurate page for a task nobody performs still fails this audit.
 
-The standard behind it is `docs-planning`; `tw:docs-standards` supplies the document types. Works on any body of content — a docs repo, an exported help centre, a knowledge base, a folder of documents.
+## Voice and audience come from the writing's own guide
+
+Before inventorying it, find the project's style guide and the conventions its `AGENTS.md` or contributing docs record, and read them; where the guide settles something, the guide wins, and where it's silent or there isn't one, `tw:docs-standards` is the default, applied without asking. The standard behind the verdicts is `tw:docs-planning`; `tw:docs-standards` supplies the document types. Works on any body of content — a docs repo, an exported help centre, a knowledge base, a folder of documents.
 
 ## Arguments
 
@@ -193,5 +195,5 @@ Everything else is unchanged: list the findings, ask which, fix only those, upda
 - **Defects inside a page** — stale claims, broken links, untested examples → `/tw:docs-audit`.
 - **Terminology and voice consistency across the set** → `/tw:style-check`.
 - **Writing the pages this queue calls for** → the skill for each document type.
-- **The mechanics of a move or a retirement** the plan recommends — inbound links, redirects, navigation → [`developer-docs`'s site-mechanics.md](../developer-docs/references/site-mechanics.md).
+- **The mechanics of a move or a retirement** the plan recommends — inbound links, redirects, navigation → [`tw:developer-docs`'s site-mechanics.md](../developer-docs/references/site-mechanics.md).
 - **The audience and task list are asked for, not invented.** Where no evidence is available, the coverage findings are explicitly marked as resting on an assumed task list.
