@@ -1,0 +1,112 @@
+---
+name: content-refresh
+description: >-
+  Keeping a published piece true and useful after it ships — a blog post, article, tutorial, essay or a newsletter issue's web version: deciding whether to refresh, rewrite, merge, redirect or retire it, what to recheck, dates that move only for a real update, visible correction and update notes, and merging or retiring pieces without breaking links. Use on "update this old post", "refresh this article", "is this post outdated", "merge these posts", "retire this article", "redirect this post".
+---
+
+# Refreshing published content
+
+A published piece keeps making claims after the day it ships: prices change, versions move, links die, a better piece appears beside it. This skill decides what an existing piece needs and does it honestly — readers and search engines both see what changed and when.
+
+## Voice and audience come from the writing's own guide
+
+Before refreshing, find the guide the piece answers to and read it: the publication's `writing-guide.md` and `profile.md` (where the user's `CLAUDE.md` says they live, otherwise the project's `publications/` folder). Voice, person, tone, terminology, formatting choices and who the reader is come from that guide, never from this skill.
+
+- Where the guide settles something this skill also covers — how update notes are worded, where corrections sit, whether old issues are ever edited — the guide wins.
+- Where there's no guide, ask who the reader is and what the piece is for, and offer to build one with `cw:style-guide`.
+
+## When to look again
+
+- **A performance review flags it** — ranking decay, a click-through gap, two pieces competing for one query, a page with no impressions (`/cw:content-performance`).
+- **A fact in it has moved** — a price, a version, a law, a statistic, a product's name or interface.
+- **A reader reports a problem** — an error, a broken step, a dead link. Treat every report as a lead to check, not a fix to apply blindly.
+- **The demo or code no longer runs** on the current versions.
+- **A newer piece covers the same ground**, or the publication's own thinking has changed.
+- **On the publication's review cadence**, for pieces that carry facts which date — the cadence itself comes from `/cw:content-performance`.
+
+## Decide what the piece needs
+
+Read the piece against its current reader and the profile's purpose, then pick one:
+
+| Decision     | When                                                                                                       | The URL                                 | The date                            |
+| ------------ | ---------------------------------------------------------------------------------------------------------- | --------------------------------------- | ----------------------------------- |
+| **Refresh**  | The piece is sound; some facts, links, screenshots or code have aged                                       | Unchanged                               | "Updated" date, only if substantive |
+| **Rewrite**  | The question is still worth answering, but the piece no longer answers it well                             | Unchanged                               | "Updated" date, with an update note |
+| **Merge**    | Two or more pieces answer the same question for the same reader                                            | One survives; the others redirect to it | The survivor's "Updated" date       |
+| **Redirect** | The piece is superseded by another that serves its reader fully                                            | Permanent redirect to the replacement   | —                                   |
+| **Retire**   | Nothing should replace it: the subject is gone, the advice is unsafe, the piece no longer fits the profile | Removed: 404 or 410                     | —                                   |
+
+A piece that is wrong but still useful is corrected, not retired. A piece that only needs promotion needs neither — it needs `cw:social-media-posts`.
+
+## Refresh: what to recheck
+
+Work through the piece as a reader arriving today:
+
+- **Facts and figures** — every number, price, date, statistic and "currently", against its original source. A figure whose source has updated gets the new figure and the new source.
+- **Versions and steps** — every version named, and every step of a tutorial run again on the current versions (`write:code-samples`, Code in a tutorial).
+- **The demo repo** — it builds, runs and matches the piece; its README still describes it (`cw:demo-project`).
+- **Screenshots and images** — retaken where the interface changed; alt text updated to match (`cw:images-and-diagrams`).
+- **Links** — every external link resolves to what it claims; a moved source is relinked, a dead one replaced or removed with the claim it supported rechecked.
+- **Internal links** — out to newer pieces that now answer the follow-up question, and in from newer pieces that should point here.
+- **The title's promise** — the title and description still describe the piece after the changes (`cw:seo-aeo-geo`).
+- **Claims of first, best, only, latest** — the easiest to go stale; recheck or remove.
+
+### Substantive or cosmetic
+
+- **Substantive:** a fact, figure, step, recommendation or conclusion changed; a section was added or removed; code was replaced. These get an "Updated" date and, where a reader of the earlier version could have acted on it, an update note.
+- **Cosmetic:** a typo, a broken link swapped for its new address, an image recompressed, a heading reworded with no change in meaning. These change nothing the reader sees about dates.
+
+## Dates
+
+- **Show the dates and label them** — "Published" and, after a substantive change, "Updated" ([Google: publication dates](https://developers.google.com/search/docs/appearance/publication-dates)).
+- **Move the updated date only for a substantive change.** Google's own self-assessment asks: "Are you changing the date of pages to make them seem fresh when the content has not substantially changed?" ([Google: helpful content](https://developers.google.com/search/docs/fundamentals/creating-helpful-content)). Re-dating a piece without changing it misleads readers and earns nothing.
+- **Keep the original publish date.** The piece was first published then; the update date says it has been kept current since.
+- **Keep the visible date and the structured date the same** — `datePublished` and `dateModified`, where the platform sets them, must match what the reader sees ([Google: publication dates](https://developers.google.com/search/docs/appearance/publication-dates)).
+
+## Correction and update notes
+
+- **A correction gets a visible, dated note** saying what was wrong and what it now says: "Correction, 12 March: an earlier version gave the fee as 3%. It is 2.5%." Acknowledge mistakes and correct them promptly and prominently ([SPJ Code of Ethics](https://www.spj.org/spj-code-of-ethics/)). Place it where a reader who saw the error will see it — at the top for a material error, beside the corrected passage for a small one, as the guide sets.
+- **A substantial update gets an update note** — what changed and when: "Updated 4 June: steps 3–5 now use version 5; the old flag is gone." One line, not a changelog of every edit.
+- **Never correct silently** anything a reader may have relied on, quoted or acted on. A silent fix makes an earlier reader's screenshot or citation look like their mistake.
+
+### What never changes silently
+
+- **Quotes.** A quote stays as the person said it. If it was wrong, correct with a note; if the person retracts it later, say so in a note.
+- **Claims others have cited** — a statistic, a ranking, a recommendation. Change it with a note, so a citation elsewhere still makes sense.
+- **The conclusion or recommendation.** A piece that now reaches a different answer says so at the top.
+- **Disclosures** — a sponsorship or affiliation that applied when the piece was written stays disclosed.
+
+## Merging pieces
+
+- **Pick the survivor** — usually the piece with the stronger URL, the more inbound links, or the better answer; the profile's purpose breaks a tie.
+- **Bring over what's worth keeping** from the others — a section, an example, a reader's question — and drop the rest. The merged piece reads as one piece, not a stack.
+- **Permanently redirect every retired URL to the survivor**, directly, with no chain of redirects ([Google: redirects](https://developers.google.com/search/docs/crawling-indexing/301-redirects); [site moves](https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes)). The redirect is set in the site's hosting or CMS.
+- **Update internal links** to point at the survivor rather than through the redirect, and keep the redirects for as long as possible — Google says at least a year, and indefinitely is better for readers ([Google: site moves](https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes)).
+- **Add an update note** to the survivor if a reader of a merged piece would wonder where it went.
+
+## Retiring a piece
+
+- **Redirect only to a real equivalent.** "Don't redirect many old URLs to one irrelevant single URL destination, such as the home page" ([Google: site moves](https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes)). With no equivalent, let the URL return 404 or 410, and Google removes it from the index ([Google: HTTP status codes](https://developers.google.com/search/docs/crawling-indexing/http-network-errors)).
+- **Remove internal links** to the retired piece, and take it out of series pages, reading lists and anything the platform lists it in.
+- **Archive its demo repo** and say in that repo's README that the piece is retired.
+- **Keep the slug retired.** Don't reuse a retired URL for a different piece; old links and citations would land on the wrong answer.
+
+## Newsletter issues
+
+- **A sent issue is a record.** Correct the web version with a dated note, as above; don't rewrite it to read as if the error never went out.
+- **A material error gets a correction in the next issue** — one or two sentences, linking the corrected web version. A typo doesn't.
+- **An archived issue that's now wrong** gets a note at the top pointing to what's current, rather than a rewrite.
+
+## After a substantial refresh
+
+- **Recheck findability** — the title, description, slug and opening still match the question the piece answers (`cw:seo-aeo-geo`).
+- **Re-promote what changed** — a new angle or a materially better answer is worth sharing again (`cw:social-media-posts`); a significant update can go in the newsletter (`cw:newsletter-standards`).
+- **Record the refresh** where the publication tracks its pieces, so the next review knows it was checked and when.
+
+## Boundaries
+
+- **Finding which pieces need attention** → `/cw:content-performance`.
+- **Rewriting the piece's structure or framing** → `cw:article-standards`; **the line-level edit** → `cw:editing-standards`; **a full review before republishing** → `/cw:review`.
+- **Tutorial code and the demo repo** → `write:code-samples`, `cw:demo-project`.
+- **Republishing the piece elsewhere** → `cw:cross-posting`.
+- **Setting up redirects, status codes and structured dates** — the site's hosting or CMS; this skill says which ones a piece needs.

@@ -119,5 +119,6 @@ Write the set to a file, then summarise it in chat. Never post, publish, or sche
 - **The piece being promoted** → `article-standards`. This writes the posts, not the post.
 - **Voice and audience** → the publication's `writing-guide.md` and `profile.md`.
 - **A periodic issue covering several pieces** → `newsletter-standards`.
+- **The image a shared link shows** → `cover-images`.
 - **Whether any of it worked** → `content-performance`.
 - **Tightening prose that already exists** → `cw:editing-standards`. **The machine-written sweep** → `/write:ai-check`.

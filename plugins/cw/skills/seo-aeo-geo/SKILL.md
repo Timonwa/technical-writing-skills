@@ -127,6 +127,6 @@ When the piece is republished on another site — dev.to, Hashnode, Medium, a pa
 
 - **The site's code** — metadata APIs, sitemaps, robots rules, structured data templates → the site's developers; this skill covers what the writer controls.
 - **The piece itself** → `cw:article-standards`; **a newsletter issue** → `cw:newsletter-standards`.
-- **Images** → `cw:images-and-diagrams`. **Updating an old piece** → `cw:content-refresh`. **Republishing elsewhere** → `cw:cross-posting`.
+- **Images** → `cw:images-and-diagrams`. **The cover image and share card** → `cw:cover-images`. **Updating an old piece** → `cw:content-refresh`. **Republishing elsewhere** → `cw:cross-posting`.
 - **How it's performing after publishing** → `/cw:content-performance`.
 - **Documentation pages** → `tw:seo-aeo-geo`.

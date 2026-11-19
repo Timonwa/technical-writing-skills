@@ -108,6 +108,7 @@ Decades of eye-tracking find the same thing: people scan web pages rather than r
 - **Audience, purpose and disclosures** → the publication's `profile.md`. **Voice, titles, section names and formatting** → its `writing-guide.md`. Both live in the publication's folder.
 - **Technical documentation** — docs sites, API references, product help — is a different job with a different reader → `tw:developer-docs`, `tw:api-reference`, `tw:user-guides`.
 - **The voice rules under any piece of writing** → `write:writing-standards`. **Tightening a finished draft** → `cw:editing-standards`. **The machine-written sweep** → `/write:ai-check`.
-- **Code samples that must run** → `write:code-samples`. **Diagrams and screenshots** → `cw:images-and-diagrams`.
-- **A tutorial's companion repository** → `demo-readme`.
+- **Code samples that must run** → `write:code-samples`. **Diagrams and screenshots** → `cw:images-and-diagrams`. **The cover image** → `cw:cover-images`.
+- **A tutorial's companion repository** → `cw:demo-project`.
+- **Updating, correcting, merging or retiring a piece after it's published** → `cw:content-refresh`.
 - **A periodic issue covering several pieces** → `newsletter-standards`. **Promoting one piece** → `social-media-posts`. **Getting it found** → `cw:seo-aeo-geo`. **Whether it's being found** → `content-performance`.
