@@ -57,6 +57,7 @@ Lay the task list against the inventory. Three findings come out of it:
 - **Give every page one job**, and decide up front what each page excludes and where that content lives instead.
 - **Sequence within a section** from what a newcomer needs first to what only an advanced reader reaches. Alphabetical order is right for reference material and wrong for everything else.
 - **Plan the entry points**, not just the tree. Where does a reader land from search, from the product, from a README, from a support reply? Each of those is a front door that has to work cold.
+- **Name the files and folders so the tree reads in order.** Kebab-case file names that say what the page is (`rotate-api-keys.md`), a two-digit number prefix only where reading order matters (`01-install.md`, `02-configure.md`), and an index file per folder whose name sorts first (`_README.md`, `index.md` where the docs platform requires it). Where the docs platform builds URLs from file names, a renamed file is a moved page.
 - **Draft the table of contents and review it before writing a page.** A structure is cheap to change as a list and expensive to change as forty files with inbound links.
 
 ## What a change ships with
