@@ -109,6 +109,7 @@ Decades of eye-tracking find the same thing: people scan web pages rather than r
 - **Technical documentation** — docs sites, API references, product help — is a different job with a different reader → `tw:developer-docs`, `tw:api-reference`, `tw:user-guides`.
 - **The voice rules under any piece of writing** → `write:writing-standards`. **Tightening a finished draft** → `cw:editing-standards`. **The machine-written sweep** → `/write:ai-check`.
 - **Code samples that must run** → `write:code-samples`. **Diagrams and screenshots** → `cw:images-and-diagrams`. **The cover image** → `cw:cover-images`.
-- **A tutorial's companion repository** → `cw:demo-project`.
+- **Finding and checking the sources behind it** → `cw:content-research`. **A tutorial's companion repository** → `cw:demo-project`.
 - **Updating, correcting, merging or retiring a piece after it's published** → `cw:content-refresh`.
+- **Writing for another publication** — the pitch, the brief and the rights → `cw:pitching`.
 - **A periodic issue covering several pieces** → `newsletter-standards`. **Promoting one piece** → `social-media-posts`. **Getting it found** → `cw:seo-aeo-geo`. **Whether it's being found** → `content-performance`.

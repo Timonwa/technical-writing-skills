@@ -96,7 +96,7 @@ The question sets that work for a feature, a profile and an opinion piece are in
 ## Boundaries
 
 - **What the material becomes** — the piece's shape → `cw:article-standards`; the rules every piece obeys → `write:writing-standards`.
-- **Deciding who to interview for which piece** → `cw:content-planning`.
+- **Deciding who to interview for which piece** → `cw:content-planning`. **Written sources, figures and fact-checking** → `cw:content-research`.
 - **Editing the draft** → `cw:editing-standards`; **reviewing it** → `/cw:review`.
 - **Interviewing an engineer or expert for documentation** → `tw:sme-interviews`.
 - **The source is the authority on facts, not on wording.** How it's phrased for the reader is the writer's call.
