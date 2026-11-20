@@ -30,24 +30,27 @@ Pick a scope when it asks. **User** makes the skills available everywhere, which
 
 ## Your publication's guide
 
-`cw` writes for a publication — a blog, a newsletter, or both — and reads two files about it before it writes, edits or reviews anything:
+`cw` writes for a publication — a blog, a newsletter, or both — and reads what you've recorded about it before it writes, edits or reviews anything. A publication has five parts:
 
-- **`profile.md`** — who it's for, what it's for, and what a piece should make a reader do.
-- **`writing-guide.md`** — how it sounds: voice, person, titles, openings, recurring parts, formatting.
+- **The profile** (`profile.md`) — who it's for, what it's for, and what a piece should make a reader do.
+- **The writing guide** (`writing-guide.md`) — how it sounds: voice, person, titles, openings, recurring parts, formatting.
+- **The brand** (`brand.md`) — how it looks: colours, fonts, the logo, the cover template, the style of its images and charts.
+- **Sources** (`sources/`) — any style guide or brief you already have, which the writing guide is built from.
+- **Examples** (`examples/`) — sample covers, logo files, and the two or three pieces that best show the voice.
 
 **In the Claude app:**
 
 1. Create a **Project** for each blog or newsletter.
-2. In that Project, say "set up my publication". `cw:style-guide` asks you about it, or reads a style guide or past pieces you paste in, and gives you `profile.md` and `writing-guide.md`. Anything you haven't decided stays `unset` rather than guessed.
-3. Add both files to the Project's files.
+2. In that Project, say "set up my publication". `cw:style-guide` asks you about it, or reads a style guide, past pieces or past covers you share, and gives you `profile.md`, `writing-guide.md` and `brand.md`. Anything you haven't decided stays `unset` rather than guessed.
+3. Add the three files to the Project's files, with your logo, sample covers and any style guide you already have. Images go in the Project's files too.
 4. Write from that Project: "plan my next posts", "edit this draft", "turn this into LinkedIn posts". When Claude gives you an updated file, replace the old one in the Project.
 
-Outside a Project, attach the two files to the chat, or Claude asks for them.
+Outside a Project, attach the files to the chat, or Claude asks for them.
 
 **In a codebase:** keep one folder per publication, ideally in a private repository, and name it in the project's `AGENTS.md`, which every coding agent reads:
 
 ```text
-Publications (profile, writing guide, sources per publication): publications/
+Publications (profile, writing guide, brand, sources and examples per publication): publications/
 ```
 
 For a folder kept outside the repo, put the same line in your personal agent instructions, such as `~/.claude/CLAUDE.md`. A `CLAUDE.md` can import `AGENTS.md` with `@AGENTS.md`. Where nothing names a folder, the skills look for `publications/` in the project, then ask.

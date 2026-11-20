@@ -1,21 +1,23 @@
 ---
 name: style-guide
 description: >-
-  Building and keeping a publication's writing guide and profile — a blog, a newsletter, or both, on any subject: converting an existing style guide, deriving the voice from published pieces, interviewing the owner, voice versus tone, the decisions a guide makes (titles, openings, closings, length, formatting, slugs, meta descriptions, reading level, quotes), sourcing, corrections, AI and disclosure policies, and provenance. Use on "writing guide", "my blog's voice", "set up my newsletter's style", "style guide for my publication".
+  Building and keeping a publication's writing guide, profile and brand — a blog, a newsletter, or both, on any subject: converting an existing guide, deriving the voice from published pieces, interviewing the owner, voice versus tone, the decisions a guide makes (titles, openings, length, formatting, slugs), sourcing, corrections, AI and disclosure policies, colours, fonts, logo, cover template, and provenance. Use on "writing guide", "my blog's voice", "set up my publication", "style guide for my publication", "my brand colours".
 ---
 
 # A publication's writing guide
 
 A writing guide stops the same question being answered differently every week — how titles are written, how a piece opens, how it signs off. It's a decision record, not an essay on good writing: every entry settles something that was genuinely open, and anything never in doubt doesn't belong in it.
 
-A publication — a blog, a newsletter, or both under one name — answers to two files:
+A publication — a blog, a newsletter, or both under one name — answers to three files, with two folders beside them:
 
 - **The writing guide** says _how_ it reads. It changes as the writing matures.
 - **The profile** says _who_ it is, _who_ it's for and _why_. It changes rarely. Its fields are in [references/profile.md](references/profile.md).
+- **The brand** says how it _looks_ — colours, fonts, the logo, the cover template, the image and chart style. Its fields are in [references/publication-template/brand.md](references/publication-template/brand.md).
+- **`sources/`** holds the guides and briefs it was built from; **`examples/`** holds sample covers, logo files and the pieces that best show the voice.
 
 ## Voice and audience come from the writing's own guide
 
-This skill builds the guide, so it starts by finding what already exists: the publication's `writing-guide.md`, `profile.md` and anything in its `sources/`:
+This skill builds the guide, so it starts by finding what already exists: the publication's `writing-guide.md`, `profile.md`, `brand.md` and anything in its `sources/` and `examples/`:
 
 - **In a codebase:** the folder the project's `AGENTS.md` names, or, for a guide kept outside the repo, the folder the user's personal agent instructions name (such as `~/.claude/CLAUDE.md`); otherwise the project's `publications/` folder.
 - **In a chat app:** the project's files (a Claude Project's knowledge, or the equivalent elsewhere), or files attached to the conversation.
@@ -38,6 +40,7 @@ Saving the guide: in a codebase, write the files to the publication's folder; in
 2. **Convert it, don't copy it.** Map what the source settles onto the guide's fields, transcribe exact wording wherever the source fixes wording — a sign-off, a banned phrase, a name — and leave what it doesn't cover `unset`. The source is never rewritten; it stays the record of where each answer came from.
 3. **Derive from three or four published pieces** most like what's wanted — title shapes, openings, recurring sections, sentence rhythm, the words that never appear. **Ask which pieces aren't typical** and name them; deriving a voice from one terse setup post makes everything written afterwards read cold.
 4. **Interview the owner for the rest**, and always for the profile — a writing guide rarely says who the readers are, who the publication is not for, or what success looks like.
+5. **Collect the look.** Ask for an existing brand guide, the logo files, the colours and fonts, and three or four past covers; they go in `examples/`, and `brand.md` records the rules. Where nothing exists, read the colours and fonts off past covers or the site and mark each one `unset` until the owner confirms it. A brand guide covers the logo and its use, the colour palette, typography and imagery ([Bynder](https://www.bynder.com/en/glossary/brand-guidelines-definition/)); `brand.md` keeps the parts a publication's covers, images and charts need.
 
 **`unset` is a valid answer.** A skill that meets `unset` asks, then writes the answer back. A plausible guess becomes a house rule nobody agreed to.
 
@@ -119,11 +122,13 @@ publications/
   <publication>/
     profile.md         # who it is, who it's for, what it's for
     writing-guide.md   # how to write for it
+    brand.md           # how it looks: colours, fonts, logo, cover template
     sources/           # style guides and reference material already in hand
+    examples/          # sample covers, logo files, pieces that show the voice
   _archive/            # publications no longer written for
 ```
 
-In a chat app, the same files sit in the project's files: `profile.md`, `writing-guide.md`, and any sources uploaded beside them.
+In a chat app, the same files sit in the project's files: `profile.md`, `writing-guide.md`, `brand.md`, and the sources, sample covers and logo files uploaded beside them.
 
 Start a new one from the blanks in [references/publication-template/](references/publication-template/): fill copies of them, never the templates themselves.
 

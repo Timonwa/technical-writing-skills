@@ -10,16 +10,17 @@ A cover does two jobs. On the page it tells the reader they've arrived at the pi
 
 ## Voice and audience come from the writing's own guide
 
-Before applying this skill, find the publication's `profile.md` and `writing-guide.md` and read them:
+Before applying this skill, find the publication's `profile.md`, `writing-guide.md` and `brand.md`, and the sample covers and logo files in its `examples/`, and read them:
 
 - **In a codebase:** the folder the project's `AGENTS.md` names, or, for a guide kept outside the repo, the folder the user's personal agent instructions name (such as `~/.claude/CLAUDE.md`); otherwise the project's `publications/` folder.
 - **In a chat app:** the project's files (a Claude Project's knowledge, or the equivalent elsewhere), or files attached to the conversation.
 - **Otherwise:** ask for them.
 
-Its cover template, palette, type, logo rules and image policy come from that guide, never from this skill.
+Its cover template, colours, fonts, logo rules and image style come from `brand.md`, and its image policy from the writing guide, never from this skill.
 
-- Where the guide settles something this skill also covers, the guide wins.
-- Where there's no guide, ask who the reader is and what the piece is for, and offer to build one with `cw:style-guide`.
+- Where `brand.md` or the guide settles something this skill also covers, it wins; match the sample covers in `examples/`.
+- Where there's no `brand.md`, use the defaults below and offer to record the choices in one with `cw:style-guide`.
+- Where there's no guide at all, ask who the reader is and what the piece is for, and offer to build one with `cw:style-guide`.
 
 When a guide changes: in a codebase, save the file where it was found; in a chat app, give the user the updated file to replace in the project. Never write inside the installed plugin.
 
@@ -70,7 +71,7 @@ The cover on the page itself is sized by the platform's theme: upload the larges
 
 ## A template across the publication
 
-A reader should recognise the publication's cards in a feed before reading them. Record the template in the writing guide (→ `cw:style-guide`): the layout, where words and the logo sit, the typeface, the colours from the profile, the kinds of photo used, and what the card shows when there's no photo. Then each cover is the template with one decision — the image or the words — not a new design.
+A reader should recognise the publication's cards in a feed before reading them. The template lives in `brand.md`'s cover template (→ `cw:style-guide`): the layout, where words and the logo sit, the typeface, the colours, the kinds of photo used, and what the card shows when there's no photo. Keep three or four covers that follow it in `examples/`. Then each cover is the template with one decision — the image or the words — not a new design.
 
 ## Who sets what
 
@@ -94,7 +95,7 @@ Change the image before the piece is first shared: every platform keeps the card
 - [ ] The share image is 1200 × 630 or larger at 1.91:1, under 1 MB, JPEG or PNG, with everything that matters in the centre square.
 - [ ] Rights and credit are in order, and an AI-generated or composite cover is labelled.
 - [ ] Alt text is set on the page and for the card, or the page cover is marked decorative.
-- [ ] It follows the publication's template.
+- [ ] It follows the cover template in `brand.md`, and matches the sample covers.
 - [ ] The preview is checked on the platforms the piece will be shared on.
 
 ## Boundaries

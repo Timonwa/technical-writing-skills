@@ -28,15 +28,15 @@
     },
     {
       "id": 3,
-      "prompt": "Make a bar chart of our survey: 62% of readers cook weekly, 58% monthly. Start the y-axis at 55 so the difference stands out.",
-      "expected_output": "Should refuse to truncate the bar chart's axis: a bar chart starts at zero, and a truncated axis misleads. Should give the chart a title that states the finding, label bars directly, use colours a colour-blind reader can distinguish, put the source and date in the caption, keep it legible at phone width, and put the takeaway in the alt text with the numbers in a table beside it.",
+      "prompt": "Make a bar chart of our survey: 62% of readers cook weekly, 58% monthly. Start the y-axis at 55 so the difference stands out. Use our chart colours from brand.md, in order: sage #9CAF88, then mint #A8D5BA.",
+      "expected_output": "Should refuse to truncate the bar chart's axis: a bar chart starts at zero, and a truncated axis misleads. Should read brand.md's chart style and use its series colours in order, but check them: sage and mint sit at nearly the same lightness, so a colour-blind reader may not tell them apart; propose a darker or lighter step of one, and offer to record it back in brand.md through the publication's guide. Should give the chart a title that states the finding, label bars directly, put the source and date in the caption, keep it legible at phone width, and put the takeaway in the alt text with the numbers in a table beside it.",
       "files": [],
       "expectations": [
         "Keeps the bar chart axis at zero",
-        "Writes a title that states the finding",
-        "Puts source and date in the caption",
-        "Puts the takeaway in alt text and the data in a table",
-        "Uses colour-blind-safe colours"
+        "Uses brand.md's series colours in order",
+        "Flags that the two brand colours are too close in lightness and proposes a changed step, recorded back in brand.md",
+        "Writes a title that states the finding, with source and date in the caption",
+        "Puts the takeaway in alt text and the data in a table"
       ]
     },
     {

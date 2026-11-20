@@ -10,16 +10,17 @@ In a lot of content the image isn't support for the text — it's part of what t
 
 ## Voice and audience come from the writing's own guide
 
-Before applying this skill, find the publication's `profile.md` and `writing-guide.md` and read them:
+Before applying this skill, find the publication's `profile.md`, `writing-guide.md` and `brand.md`, and the samples in its `examples/`, and read them:
 
 - **In a codebase:** the folder the project's `AGENTS.md` names, or, for a guide kept outside the repo, the folder the user's personal agent instructions name (such as `~/.claude/CLAUDE.md`); otherwise the project's `publications/` folder.
 - **In a chat app:** the project's files (a Claude Project's knowledge, or the equivalent elsewhere), or files attached to the conversation.
 - **Otherwise:** ask for them.
 
-Its image policy — credits, photo rights, AI-generated images — and its palette and type come from that guide, never from this skill.
+Its image policy — credits, photo rights, AI-generated images — comes from the writing guide, and its colours, fonts, image style and chart style from `brand.md`, never from this skill.
 
-- Where the guide settles something this skill also covers, the guide wins.
-- Where there's no guide, ask who the reader is and what the piece is for, and offer to build one with `cw:style-guide`.
+- Where `brand.md` or the guide settles something this skill also covers, it wins.
+- Where there's no `brand.md`, use the defaults below and offer to record the choices in one with `cw:style-guide`.
+- Where there's no guide at all, ask who the reader is and what the piece is for, and offer to build one with `cw:style-guide`.
 
 When a guide changes: in a codebase, save the file where it was found; in a chat app, give the user the updated file to replace in the project. Never write inside the installed plugin.
 
@@ -54,6 +55,7 @@ Say in one sentence what the reader gets from the picture that they wouldn't fro
 - **The title states the finding** — "Rents rose faster than wages every year since 2019", not "Rents and wages, 2019–2025".
 - **Label lines and bars directly**, next to what they name, rather than in a legend the reader has to match by colour ([Datawrapper](https://www.datawrapper.de/blog/text-in-data-visualizations)).
 - **Colours a colour-blind reader can tell apart** — vary them by lightness, and never pair red and green, or orange and green, at the same brightness ([Datawrapper](https://www.datawrapper.de/blog/colorblindness-part2)). Never rely on colour alone.
+- **The publication's chart style** — series colours in the order `brand.md` gives, its label font and background. Check those colours still pass the two tests above; a brand palette that fails them gets a lighter or darker step, recorded back in `brand.md`. Parts of a chart the reader needs to read it need 3:1 contrast against what's next to them ([WCAG 1.4.11](https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html)).
 - **Honest axes** — a bar chart starts at zero; a truncated axis is marked; charts the reader compares share a scale.
 - **Source and date in the caption** — where the data came from, and when.
 - **Legible at phone width** — labels, numbers and lines still readable on the narrowest screen the piece is read on.
