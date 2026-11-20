@@ -19,10 +19,7 @@ Every check is spelled out below. For the standard behind a finding: `write:writ
 
 ## Voice and audience come from the writing's own guide
 
-Before auditing it, find the project's style guide and the conventions its `AGENTS.md` or contributing docs record, and read them. Voice, person, tone, terminology and formatting choices come from that guide, never from this skill.
-
-- Where the guide settles something this skill also covers, the guide wins.
-- Where the guide is silent or there isn't one, `tw:docs-standards` is the default — apply it without asking; a page that departs from it is a finding.
+Before auditing it, find the project's style guide and conventions and read them — in a codebase, the ones the project's `AGENTS.md` names or its contributing docs; in a chat app, the style guide in the project's files or attached to the conversation; otherwise, ask whether one exists before concluding there isn't one. Voice, person, tone, terminology and formatting come from that guide; where it's silent or there isn't one, `tw:docs-standards` applies without asking, and a page that departs from it is a finding.
 
 ## Arguments
 

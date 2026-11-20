@@ -10,7 +10,13 @@ Most documentation errors start as a gap the writer filled in rather than a ques
 
 ## Voice and audience come from the writing's own guide
 
-Before interviewing, find the project's style guide and the conventions its `AGENTS.md` or contributing docs record, and read them. Voice, person, terminology and who the reader is come from that guide, never from this skill; where the guide is silent, `tw:docs-standards` is the default.
+Before interviewing, find the project's style guide and conventions and read them:
+
+- **In a codebase:** the style guide and conventions the project's `AGENTS.md` names, or its contributing docs.
+- **In a chat app:** the style guide in the project's files (a Claude Project's knowledge, or the equivalent elsewhere), or attached to the conversation.
+- **Otherwise:** ask whether one exists before concluding there isn't one.
+
+Voice, person, terminology and who the reader is come from that guide; where it's silent, `tw:docs-standards` applies.
 
 ## Prepare from what already exists
 

@@ -10,7 +10,13 @@ The discipline that makes documentation documentation. Every page serves one rea
 
 ## Voice and audience come from the writing's own guide
 
-Before applying this skill, read the project's style guide and the conventions its `AGENTS.md` or contributing docs record. Its voice and page rules apply wherever the project's guide is silent. Where the project's guide decides otherwise — person, tone, terminology, formatting — the guide wins.
+Before applying this skill, find the project's style guide and conventions and read them:
+
+- **In a codebase:** the style guide and conventions the project's `AGENTS.md` names, or its contributing docs.
+- **In a chat app:** the style guide in the project's files (a Claude Project's knowledge, or the equivalent elsewhere), or attached to the conversation.
+- **Otherwise:** ask whether one exists before concluding there isn't one.
+
+Its voice and page rules apply wherever the project's guide is silent. Where the project's guide decides otherwise — person, tone, terminology, formatting — the guide wins.
 
 - Where there's no guide, these rules apply in full, without asking. Ask only who the reader is and what the page is for, if the request doesn't make that clear, and offer to build a guide with `tw:style-guide`.
 

@@ -17,7 +17,7 @@ It asks a different question from `/tw:docs-audit`. That one asks whether a page
 
 ## Voice and audience come from the writing's own guide
 
-Before inventorying it, find the project's style guide and the conventions its `AGENTS.md` or contributing docs record, and read them; where the guide settles something, the guide wins, and where it's silent or there isn't one, `tw:docs-standards` is the default, applied without asking. The standard behind the verdicts is `tw:docs-planning`; `tw:docs-standards` supplies the document types. Works on any body of content — a docs repo, an exported help centre, a knowledge base, a folder of documents.
+Before inventorying it, find the project's style guide and conventions and read them — in a codebase, the ones the project's `AGENTS.md` names or its contributing docs; in a chat app, the style guide in the project's files or attached to the conversation; otherwise, ask whether one exists before concluding there isn't one. Where the guide settles something, the guide wins; where it's silent or there isn't one, `tw:docs-standards` applies without asking. The standard behind the verdicts is `tw:docs-planning`; `tw:docs-standards` supplies the document types. Works on any body of content — a docs repo, an exported help centre, a knowledge base, a folder of documents.
 
 ## Arguments
 

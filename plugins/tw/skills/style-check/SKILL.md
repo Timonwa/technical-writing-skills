@@ -17,10 +17,17 @@ This is work a person cannot do by hand. Nobody notices that a concept is called
 
 ## Voice and audience come from the writing's own guide
 
-Before checking it, find the project's style guide and the conventions its `AGENTS.md` or contributing docs record, and read them. Voice, person, tone, terminology and formatting choices come from that guide, never from this skill.
+Before checking it, find the project's style guide and conventions and read them:
+
+- **In a codebase:** the style guide and conventions the project's `AGENTS.md` names, or its contributing docs.
+- **In a chat app:** the style guide in the project's files (a Claude Project's knowledge, or the equivalent elsewhere), or attached to the conversation.
+- **Otherwise:** ask whether one exists before concluding there isn't one.
+
+Voice, person, tone, terminology and formatting come from that guide.
 
 - Where the guide settles something this skill also covers, the guide wins — including where it departs from the documentation voice and says so.
 - Where the guide is silent or there isn't one, `tw:docs-standards` is the default, applied without asking, and drift from it is a **finding**, not a proposal.
+- When a fix adds to the guide — a terminology entry, a recorded decision — in a codebase, save it in the guide's file; in a chat app, give the user the updated guide to replace in the project's files.
 
 ## Arguments
 

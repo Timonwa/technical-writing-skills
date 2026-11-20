@@ -10,9 +10,14 @@ Improve a document that already exists through focused passes, preserving what t
 
 ## Voice and audience come from the writing's own guide
 
-Before editing, find the project's style guide, glossary or terminology list and the conventions its `AGENTS.md` or contributing docs record, and read them — ask for them before concluding there isn't one. Voice, person, tone, terminology and formatting choices come from that guide, never from this skill.
+Before editing, find the project's style guide, glossary or terminology list and its conventions, and read them:
 
-- Where the guide settles something this skill also covers, the guide wins.
+- **In a codebase:** the style guide and conventions the project's `AGENTS.md` names, or its contributing docs.
+- **In a chat app:** the style guide in the project's files (a Claude Project's knowledge, or the equivalent elsewhere), or attached to the conversation.
+- **Otherwise:** ask whether one exists before concluding there isn't one.
+
+Voice, person, tone, terminology and formatting come from that guide; where it settles something this skill also covers, the guide wins.
+
 - Where the guide is silent or there isn't one, `tw:docs-standards` is the default — "you", present tense, imperatives for instructions, the writer kept out, one need per page — and a page that departs from it is a finding, not a matter of taste. Apply it without asking; ask only who the reader is and what the page is for, if the page doesn't make that clear.
 - For anything neither the guide nor the defaults settle — the serial comma, the date format, number style — infer the convention from the document itself and say what you inferred.
 

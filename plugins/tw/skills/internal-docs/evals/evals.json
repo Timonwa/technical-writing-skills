@@ -42,6 +42,18 @@
         "Identifies what triggers the process and who starts it",
         "Treats the missing metadata as a substantive finding, not a formatting nit"
       ]
+    },
+    {
+      "id": 4,
+      "prompt": "New chat, no files attached. Write an onboarding page for new support staff: how to get access to the ticketing tool, the escalation rota, and where the refund policy lives.",
+      "expected_output": "Should ask whether the team has a style guide — in the project's files, attached, or named in a repository's AGENTS.md — before concluding there isn't one, and offer to work without it. With none, should apply the tw:docs-standards voice without further questions: 'you', present tense, imperatives for steps. Should build the onboarding shape the skill sets — an owner and review date, access steps that are checkable, and links to the living sources (the rota, the refund policy) rather than copying them into the page.",
+      "files": [],
+      "expectations": [
+        "Asks once whether a style guide exists before concluding there isn't one",
+        "With no guide, applies the documentation voice without asking about voice",
+        "Gives the page an owner and a review date",
+        "Links to the rota and the refund policy instead of copying them"
+      ]
     }
   ]
 }

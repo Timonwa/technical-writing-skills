@@ -12,10 +12,17 @@ Alongside it sit the **terminology list** — the approved term for each concept
 
 ## Voice and audience come from the writing's own guide
 
-This skill builds the guide, so it starts by finding what already exists — the project's style guide, the conventions its `AGENTS.md` or contributing docs record, any terminology list, contributor guidelines or notes — and reads it. The voice, terminology and reader the guide records come from the project, the existing guide and the published docs, never from this skill.
+This skill builds the guide, so it starts by finding what already exists — the project's style guide and conventions, any terminology list, contributor guidelines or notes — and reads it:
+
+- **In a codebase:** what the project's `AGENTS.md` names, its contributing docs, and any style guide file in the repository.
+- **In a chat app:** anything in the project's files (a Claude Project's knowledge, or the equivalent elsewhere), or attached to the conversation.
+- **Otherwise:** ask — a wiki page, a PDF, a page of notes all count.
+
+The voice, terminology and reader the guide records come from the project, the existing guide and the published docs, never from this skill.
 
 - Where an existing guide or source settles something, the new guide keeps it and says where it came from.
 - Where nothing settles it, `tw:docs-standards` is the default the guide departs from, and the guide records only the departures.
+- **Saving it:** in a codebase, write the guide where the project keeps its docs conventions and name it in `AGENTS.md`, so every agent finds it; in a chat app, give the user the guide as a file to add to the project's files.
 
 ## Build it from what exists
 

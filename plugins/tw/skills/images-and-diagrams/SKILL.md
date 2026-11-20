@@ -16,7 +16,13 @@ None of that means avoid them. It means each one has to earn the cost, and there
 
 ## Voice and audience come from the writing's own guide
 
-Before adding or changing a visual, find the project's style guide and the conventions its `AGENTS.md` or contributing docs record, and read them — capture conditions, annotation style, palette and file locations often live there. Where the guide settles something this skill also covers, the guide wins; where it's silent, `tw:docs-standards` is the default.
+Before adding or changing a visual, find the project's style guide and conventions and read them — capture conditions, annotation style, palette and file locations often live there:
+
+- **In a codebase:** the style guide and conventions the project's `AGENTS.md` names, or its contributing docs.
+- **In a chat app:** the style guide in the project's files (a Claude Project's knowledge, or the equivalent elsewhere), or attached to the conversation.
+- **Otherwise:** ask whether one exists before concluding there isn't one.
+
+Where the guide settles something this skill also covers, the guide wins; where it's silent, `tw:docs-standards` applies.
 
 ## Does this visual earn its place?
 

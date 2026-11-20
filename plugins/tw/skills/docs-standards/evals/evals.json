@@ -31,14 +31,14 @@
     },
     {
       "id": 3,
-      "prompt": "Our docs style guide says: 'We write in first person plural — \"we\" for the reader and the team together, as in \"Next, we configure the client\".' Write the steps for configuring the client.",
-      "expected_output": "Should follow the project's style guide on person, because the project's guide wins over the documentation-voice default where it decides something. Should write the steps using 'we' as the guide sets, while still applying the docs-standards rules the guide doesn't decide — numbered steps, one action each, present tense, no minimisers. May note once that the base default is 'you', without overriding the guide or asking repeatedly.",
+      "prompt": "I'm working in a Claude Project for our product docs. Our docs style guide, docs-style-guide.md, is in the project's files; it says 'We write in first person plural — \"we\" for the reader and the team together, as in \"Next, we configure the client\".' Write the steps for configuring the client.",
+      "expected_output": "Should read the docs style guide from the project's files before writing, without asking for it again or looking for an AGENTS.md. Should follow it on person, because the project's guide wins over the documentation-voice default where it decides something: the steps use 'we'. Should still apply the docs-standards rules the guide doesn't decide — numbered steps, one action each, present tense, no minimisers. May note once that the base default is 'you', without overriding the guide or asking repeatedly.",
       "files": [],
       "expectations": [
+        "Reads the style guide from the project's files rather than asking for it or looking for a repository file",
         "Writes the steps in first person plural as the project guide requires",
         "Does not override the project's decision with 'you'",
-        "Still applies the procedure rules the guide doesn't cover",
-        "Does not argue with or repeatedly question the recorded decision"
+        "Still applies the procedure rules the guide doesn't cover"
       ]
     },
     {

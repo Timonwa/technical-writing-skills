@@ -12,10 +12,13 @@ Write guides for a product's end users so a first-time reader gets their answer 
 
 ## Voice and audience come from the writing's own guide
 
-Before writing a guide, find the project's style guide and the conventions its `AGENTS.md` or contributing docs record, and read them. Voice, person, tone, terminology and formatting choices come from that guide.
+Before writing a guide, find the project's style guide and conventions and read them:
 
-- Where the guide settles something this skill also covers, the guide wins.
-- Where the guide is silent or there isn't one, the voice line above and `tw:docs-standards` are the default — apply them without asking.
+- **In a codebase:** the style guide and conventions the project's `AGENTS.md` names, or its contributing docs.
+- **In a chat app:** the style guide in the project's files (a Claude Project's knowledge, or the equivalent elsewhere), or attached to the conversation.
+- **Otherwise:** ask whether one exists before concluding there isn't one.
+
+Voice, person, tone, terminology and formatting choices come from that guide. Where it settles something this skill also covers, the guide wins; where it's silent or there isn't one, the voice line above and `tw:docs-standards` apply without asking.
 
 ## Verify before writing
 
