@@ -40,7 +40,7 @@
     {
       "id": 4,
       "prompt": "Cross-post my newsletter essay to Substack following my publication's rules.",
-      "expected_output": "Should read the publication's writing-guide.md and profile.md (CLAUDE.md path → publications/ → ask) for which platforms it uses and how the 'originally published' line reads, and check rights if the essay was commissioned. Substack has no canonical field, so add a link back or post a summary.",
+      "expected_output": "Should read the publication's writing-guide.md and profile.md (the folder AGENTS.md or the user's personal agent instructions name, else the project's publications/; in a chat app, the project's files; else ask) for which platforms it uses and how the 'originally published' line reads, and check rights if the essay was commissioned. Substack has no canonical field, so add a link back or post a summary.",
       "files": [],
       "expectations": [
         "Reads the publication's guide first",

@@ -4,7 +4,7 @@
     {
       "id": 1,
       "prompt": "I've written up an idea for a guide to migrating a blog from WordPress to a static site. Send the same pitch to four tech publications at once so I hear back faster.",
-      "expected_output": "Should advise one outlet at a time unless an outlet's guidelines welcome simultaneous pitches; where sent to several, say so and withdraw from the others as soon as one accepts. Should first read each outlet's recent pieces and contributor guidelines, and check the fit with the writer's own profile (found from the CLAUDE.md path, else the project's publications/, else ask). Should tailor the pitch to each outlet's readers.",
+      "expected_output": "Should advise one outlet at a time unless an outlet's guidelines welcome simultaneous pitches; where sent to several, say so and withdraw from the others as soon as one accepts. Should first read each outlet's recent pieces and contributor guidelines, and check the fit with the writer's own profile (the folder AGENTS.md or the user's personal agent instructions name, else the project's publications/; in a chat app, the project's files; else ask). Should tailor the pitch to each outlet's readers.",
       "files": [],
       "expectations": [
         "Recommends one outlet at a time unless guidelines allow simultaneous pitches",

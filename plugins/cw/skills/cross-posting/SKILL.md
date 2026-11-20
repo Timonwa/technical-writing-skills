@@ -10,10 +10,18 @@ A copy of a piece on another site reaches that site's readers, and competes with
 
 ## Voice and audience come from the writing's own guide
 
-Before cross-posting, find the guide the piece answers to and read it: the publication's `writing-guide.md` and `profile.md` (where the user's `CLAUDE.md` says they live, otherwise the project's `publications/` folder). Voice, person, tone, terminology, formatting choices and who the reader is come from that guide, never from this skill.
+Before cross-posting, find the publication's `profile.md` and `writing-guide.md` and read them:
+
+- **In a codebase:** the folder the project's `AGENTS.md` names, or, for a guide kept outside the repo, the folder the user's personal agent instructions name (such as `~/.claude/CLAUDE.md`); otherwise the project's `publications/` folder.
+- **In a chat app:** the project's files (a Claude Project's knowledge, or the equivalent elsewhere), or files attached to the conversation.
+- **Otherwise:** ask for them.
+
+Voice, person, tone, terminology, formatting choices and who the reader is come from that guide, never from this skill.
 
 - Where the guide settles something this skill also covers — which platforms the publication uses, how the "originally published" line reads, whether full copies or excerpts go out — the guide wins.
 - Where there's no guide, ask who the reader is and what the piece is for, and offer to build one with `cw:style-guide`.
+
+When a guide changes: in a codebase, save the file where it was found; in a chat app, give the user the updated file to replace in the project. Never write inside the installed plugin.
 
 ## What the search engines ask for
 
@@ -75,7 +83,7 @@ Check a copy after it's live: open its page source and confirm the canonical lin
 
 - **A copy doesn't update itself.** When the original is corrected or substantially updated, update every copy the same day with the same note (`cw:content-refresh`).
 - **When the original is retired, merged or redirected,** update or remove the copies and point their links at the replacement.
-- **Keep a list of copies** in the publication's folder: platform, URL, date, whether the canonical or `noindex` is set, and the last date it was synced. Without it, a correction reaches the original and misses the copies.
+- **Keep a list of copies** beside the publication's guide (in a chat app, as a file the user adds to the project): platform, URL, date, whether the canonical or `noindex` is set, and the last date it was synced. Without it, a correction reaches the original and misses the copies.
 
 ## Before cross-posting
 

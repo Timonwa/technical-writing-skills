@@ -40,7 +40,7 @@
     {
       "id": 4,
       "prompt": "Two of my posts — 'Meal prep for beginners' and 'Beginner's guide to meal prepping' — compete for the same search. Fix it, following my publication's rules.",
-      "expected_output": "Should first read the publication's writing-guide.md and profile.md (CLAUDE.md path → project publications/ → ask) for how update notes are worded. Then merge: pick the survivor, bring over what's worth keeping, permanently redirect the other URL directly to it, update internal links, and add an update note if needed.",
+      "expected_output": "Should first read the publication's writing-guide.md and profile.md (the folder AGENTS.md or the user's personal agent instructions name, else the project's publications/; in a chat app, the project's files; else ask) for how update notes are worded. Then merge: pick the survivor, bring over what's worth keeping, permanently redirect the other URL directly to it, update internal links, and add an update note if needed.",
       "files": [],
       "expectations": [
         "Reads the publication's guide for update-note wording first",

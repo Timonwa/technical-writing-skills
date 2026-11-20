@@ -4,10 +4,10 @@
     {
       "id": 1,
       "prompt": "Set up a writing guide for my new food blog. I have an old 'brand voice' PDF from a course and about twenty published posts.",
-      "expected_output": "Should start by finding what exists: the publication's folder (from the CLAUDE.md path, else the project's publications/, else ask), the brand-voice PDF placed in its sources/ folder, and the posts. Should convert the source rather than copy it, transcribing exact wording where it fixes wording and leaving the rest unset; derive from three or four typical posts and ask which posts aren't typical; then interview the owner for the profile. Should write the files to the publication's folder from the template, never inside the installed plugin, and record what it was built from and the date.",
+      "expected_output": "Should start by finding what exists: the publication's folder (the folder AGENTS.md or the user's personal agent instructions name, else the project's publications/; in a chat app, the project's files; else ask), the brand-voice PDF placed in its sources/ folder, and the posts. Should convert the source rather than copy it, transcribing exact wording where it fixes wording and leaving the rest unset; derive from three or four typical posts and ask which posts aren't typical; then interview the owner for the profile. Should write the files to the publication's folder from the template, never inside the installed plugin, and record what it was built from and the date.",
       "files": [],
       "expectations": [
-        "Finds the publication folder from CLAUDE.md, then publications/, then asks",
+        "Finds existing files via AGENTS.md or the user's agent instructions, then publications/, or the project's files in a chat app, then asks",
         "Puts the existing PDF in sources/ and converts rather than copies it",
         "Derives from three or four typical posts and asks which are atypical",
         "Interviews the owner for the profile",
@@ -37,6 +37,18 @@
         "Puts channel logistics in the profile",
         "Refuses to share one guide between two publications",
         "Notes someone else's guide stays theirs"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "I write in a Claude Project for my newsletter 'Pocket Garden'. Its profile.md and writing-guide.md are in the project knowledge. Our sign-off changed from 'Happy digging' to 'Grow slowly' last month — update the guide.",
+      "expected_output": "Should read profile.md and writing-guide.md from the project's files rather than looking for a folder on disk. Should update the sign-off entry, date the change and say where it came from, and keep every other decision as it was. Because a chat app can't save to the project, should give the user the complete updated writing-guide.md to replace in the project knowledge, and never write anything inside the installed plugin.",
+      "files": [],
+      "expectations": [
+        "Reads the guide from the project's files, not a folder path",
+        "Changes only the sign-off decision, with a date and provenance",
+        "Hands back the complete updated writing-guide.md to replace in the project",
+        "Does not claim to have saved the file or write inside the plugin"
       ]
     }
   ]

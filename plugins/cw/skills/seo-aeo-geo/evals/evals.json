@@ -29,7 +29,7 @@
     {
       "id": 3,
       "prompt": "Write the title tag, meta description and slug for my article 'The Spreadsheet That Saved My Wedding Budget'.",
-      "expected_output": "Should first read the publication's writing guide and profile, found from the path the user's CLAUDE.md gives, otherwise the project's publications/ folder, otherwise asking. Should keep the headline's voice but make the title tag make sense on a results page next to competing pieces, unique, with the site name after a separator as the guide sets. The meta description summarises this piece and isn't a keyword list. The slug is short, readable, lowercase, hyphenated, without a long ID. Should note that the platform renders the tags; the writer sets the text.",
+      "expected_output": "Should first read the publication's writing guide and profile, found in the folder AGENTS.md or the user's agent instructions name, otherwise the project's publications/ folder, or in a chat app the project's files, otherwise asking. Should keep the headline's voice but make the title tag make sense on a results page next to competing pieces, unique, with the site name after a separator as the guide sets. The meta description summarises this piece and isn't a keyword list. The slug is short, readable, lowercase, hyphenated, without a long ID. Should note that the platform renders the tags; the writer sets the text.",
       "files": [],
       "expectations": [
         "Reads the publication's writing guide and profile first",

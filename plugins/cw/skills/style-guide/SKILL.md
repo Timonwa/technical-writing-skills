@@ -15,10 +15,18 @@ A publication — a blog, a newsletter, or both under one name — answers to tw
 
 ## Voice and audience come from the writing's own guide
 
-This skill builds the guide, so it starts by finding what already exists: the publication's `writing-guide.md`, `profile.md` and anything in its `sources/` folder (where the user's `CLAUDE.md` says they live, otherwise the project's `publications/` folder). The voice, terminology and reader the guide records come from the owner, the existing guide and the published work, never from this skill.
+This skill builds the guide, so it starts by finding what already exists: the publication's `writing-guide.md`, `profile.md` and anything in its `sources/`:
+
+- **In a codebase:** the folder the project's `AGENTS.md` names, or, for a guide kept outside the repo, the folder the user's personal agent instructions name (such as `~/.claude/CLAUDE.md`); otherwise the project's `publications/` folder.
+- **In a chat app:** the project's files (a Claude Project's knowledge, or the equivalent elsewhere), or files attached to the conversation.
+- **Otherwise:** ask for them.
+
+The voice, terminology and reader the guide records come from the owner, the existing guide and the published work, never from this skill.
 
 - Where an existing guide or source settles something, the new guide keeps it and says where it came from.
 - Where nothing exists, start by asking who the reader is and what the publication is for.
+
+Saving the guide: in a codebase, write the files to the publication's folder; in a chat app, give the user the files to add to the project. Never write inside the installed plugin.
 
 ## Voice and tone are different decisions
 
@@ -104,7 +112,7 @@ One row per concept — the approved term, a one-sentence definition, how it's u
 
 ### The publication's folder
 
-One folder per publication, found from the path the user's `CLAUDE.md` gives, otherwise the project's own `publications/` folder:
+In a codebase, one folder per publication — the folder the project's `AGENTS.md` or the user's personal agent instructions name, otherwise the project's own `publications/` folder:
 
 ```text
 publications/
@@ -115,7 +123,9 @@ publications/
   _archive/            # publications no longer written for
 ```
 
-Start a new one from the blanks in [references/publication-template/](references/publication-template/): copy them into the publication's folder, never edit them in place.
+In a chat app, the same files sit in the project's files: `profile.md`, `writing-guide.md`, and any sources uploaded beside them.
+
+Start a new one from the blanks in [references/publication-template/](references/publication-template/): fill copies of them, never the templates themselves.
 
 ## Enforcing and maintaining it
 

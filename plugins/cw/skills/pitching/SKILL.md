@@ -10,7 +10,13 @@ A pitch sells one idea to one editor, for their readers, in a few short paragrap
 
 ## Voice and audience come from the writing's own guide
 
-Before pitching, read two things. **Whether to pitch at all** comes from the writer's own publication `profile.md` (where the user's `CLAUDE.md` says it lives, otherwise the project's `publications/` folder): what the writer is building, which audiences and topics serve it. **How the piece reads** comes from the outlet: its contributor guidelines and style guide, which replace the writer's own writing guide for this piece.
+Before pitching, read two things. **Whether to pitch at all** comes from the writer's own publication `profile.md`: what the writer is building, which audiences and topics serve it. Find it here:
+
+- **In a codebase:** the folder the project's `AGENTS.md` names, or, for a guide kept outside the repo, the folder the user's personal agent instructions name (such as `~/.claude/CLAUDE.md`); otherwise the project's `publications/` folder.
+- **In a chat app:** the project's files (a Claude Project's knowledge, or the equivalent elsewhere), or files attached to the conversation.
+- **Otherwise:** ask for them.
+
+**How the piece reads** comes from the outlet: its contributor guidelines and style guide, which replace the writer's own writing guide for this piece.
 
 - Where the outlet's guidelines settle something this skill also covers — how to pitch, length, format, exclusivity — the outlet wins.
 - Where the outlet has no written guide, build a short profile and guide for it with `cw:style-guide`, from its recent pieces, and confirm it with the editor.

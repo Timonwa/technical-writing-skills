@@ -4,7 +4,7 @@
     {
       "id": 1,
       "prompt": "Draft this month's issue of our newsletter. Here are the five posts I published in October.",
-      "expected_output": "Should find the publication's folder from the CLAUDE.md path, otherwise the project's publications/, otherwise ask, and read profile.md and writing-guide.md first — especially the signup promise, cadence, sign-off and subject-line format. Should find one narrative thread rather than listing five posts, give every section a takeaway, link out instead of reproducing articles, and ask once for one call to action.",
+      "expected_output": "Should find the publication's guide in the folder AGENTS.md or the user's agent instructions name, otherwise the project's publications/, or in a chat app the project's files, otherwise ask, and read profile.md and writing-guide.md first — especially the signup promise, cadence, sign-off and subject-line format. Should find one narrative thread rather than listing five posts, give every section a takeaway, link out instead of reproducing articles, and ask once for one call to action.",
       "files": [],
       "expectations": [
         "Reads the publication's profile and writing guide first",

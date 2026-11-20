@@ -10,10 +10,18 @@ Most errors in an article start as a gap the writer filled in rather than a ques
 
 ## Voice and audience come from the writing's own guide
 
-Before interviewing, find the guide the piece answers to and read it: the publication's `writing-guide.md` and `profile.md` (where the user's `CLAUDE.md` says they live, otherwise the project's `publications/` folder). Its policies on sources come first — whether anonymous sources are used, whether a source may see a draft, how people are named and quotes are edited.
+Before interviewing, find the publication's `profile.md` and `writing-guide.md` and read them:
+
+- **In a codebase:** the folder the project's `AGENTS.md` names, or, for a guide kept outside the repo, the folder the user's personal agent instructions name (such as `~/.claude/CLAUDE.md`); otherwise the project's `publications/` folder.
+- **In a chat app:** the project's files (a Claude Project's knowledge, or the equivalent elsewhere), or files attached to the conversation.
+- **Otherwise:** ask for them.
+
+Its policies on sources come first — whether anonymous sources are used, whether a source may see a draft, how people are named and quotes are edited.
 
 - Where the guide settles something this skill also covers, the guide wins.
 - Where there's no guide, ask who the reader is and what the piece is for, and offer to build one with `cw:style-guide`.
+
+When a guide changes: in a codebase, save the file where it was found; in a chat app, give the user the updated file to replace in the project. Never write inside the installed plugin.
 
 ## Prepare from what already exists
 

@@ -40,7 +40,7 @@
     {
       "id": 4,
       "prompt": "Write the README for my tutorial's demo repo.",
-      "expected_output": "Should resolve the owner first: for the owner's own repo, take author name, publication URL and audience from the publication's profile.md (CLAUDE.md path → publications/ → ask) and the GitHub handle from the git remote; a third party's repo uses their details. The writing guide's defaults override the README template's.",
+      "expected_output": "Should resolve the owner first: for the owner's own repo, take author name, publication URL and audience from the publication's profile.md (the folder AGENTS.md or the user's personal agent instructions name, else the project's publications/; in a chat app, the project's files; else ask) and the GitHub handle from the git remote; a third party's repo uses their details. The writing guide's defaults override the README template's.",
       "files": [],
       "expectations": [
         "Determines whether the repo is the owner's or a third party's",

@@ -4,7 +4,7 @@
     {
       "id": 1,
       "prompt": "Write social posts for my article on paying off student loans faster. Make them punchy — add some stats about how much people save, I'm sure readers will love that.",
-      "expected_output": "Should read the publication's folder first (profile.md and writing-guide.md, found from the CLAUDE.md path, else the project's publications/, else ask). Should work only from the piece and never invent a number, detail or quote; a stat not in the article is cut or the author is asked for its source. Should ask for the live URL rather than guessing it. Should write posts by angle — announcement, key point, lesson — one angle per post, rewritten per platform.",
+      "expected_output": "Should read the publication's folder first (profile.md and writing-guide.md, found from AGENTS.md or the user's agent instructions, else the project's publications/, or the project's files in a chat app, else ask). Should work only from the piece and never invent a number, detail or quote; a stat not in the article is cut or the author is asked for its source. Should ask for the live URL rather than guessing it. Should write posts by angle — announcement, key point, lesson — one angle per post, rewritten per platform.",
       "files": [],
       "expectations": [
         "Reads the publication's profile and writing guide first",

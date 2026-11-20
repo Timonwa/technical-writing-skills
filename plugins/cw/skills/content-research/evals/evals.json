@@ -40,7 +40,7 @@
     {
       "id": 4,
       "prompt": "Research my next newsletter issue on student loan changes. Use my publication's citation style.",
-      "expected_output": "Should read the publication's writing-guide.md and profile.md (from the CLAUDE.md path, else project publications/, else ask) for citation format, sources the publication won't use and its AI-use policy. Should list the claims first, find originals (the law or official notice), and keep a source log beside the draft.",
+      "expected_output": "Should read the publication's writing-guide.md and profile.md (the folder AGENTS.md or the user's personal agent instructions name, else the project's publications/; in a chat app, the project's files; else ask) for citation format, sources the publication won't use and its AI-use policy. Should list the claims first, find originals (the law or official notice), and keep a source log beside the draft.",
       "files": [],
       "expectations": [
         "Reads the publication's guide for citation format and AI policy",

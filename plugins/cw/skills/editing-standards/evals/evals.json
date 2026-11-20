@@ -4,7 +4,7 @@
     {
       "id": 1,
       "prompt": "Edit my essay. Make it sound more professional — cut the jokes, the 'I' and the one-line paragraphs.",
-      "expected_output": "Should check the publication's writing guide first (CLAUDE.md path → publications/ → ask). Where the guide's voice uses first person, humour and fragments for rhythm, should keep them as voice, not defects, and edit to the guide rather than to 'professional'. If there's no guide, ask about reader and purpose before editing beyond facts and typos.",
+      "expected_output": "Should check the publication's writing guide first (the folder AGENTS.md or the user's personal agent instructions name, else the project's publications/; in a chat app, the project's files; else ask). Where the guide's voice uses first person, humour and fragments for rhythm, should keep them as voice, not defects, and edit to the guide rather than to 'professional'. If there's no guide, ask about reader and purpose before editing beyond facts and typos.",
       "files": [],
       "expectations": [
         "Reads the publication's writing guide first",

@@ -17,11 +17,19 @@ Turn exported analytics into a ranked list of what to fix. **This reads data and
 
 ## Voice and audience come from the writing's own guide
 
-Before analysing anything, find the guide the publication answers to and read it: its `writing-guide.md` and `profile.md` (where the user's `CLAUDE.md` says they live, otherwise the project's `publications/` folder). What the publication is for and what success looks like come from that profile, never from this skill.
+Before analysing anything, find the publication's `profile.md` and `writing-guide.md` and read them:
+
+- **In a codebase:** the folder the project's `AGENTS.md` names, or, for a guide kept outside the repo, the folder the user's personal agent instructions name (such as `~/.claude/CLAUDE.md`); otherwise the project's `publications/` folder.
+- **In a chat app:** the project's files (a Claude Project's knowledge, or the equivalent elsewhere), or files attached to the conversation.
+- **Otherwise:** ask for them.
+
+What the publication is for and what success looks like come from that profile, never from this skill.
 
 - Where the profile settles what success means, rank against it.
 - Where there's no profile, ask who the reader is and what the publication is for, and offer to build one with `cw:style-guide`.
-- Where success is `unset`, ask before producing a ranked list, and write the answer back to the publication's folder, never inside the installed plugin.
+- Where success is `unset`, ask before producing a ranked list, and record the answer in the guide.
+
+When a guide changes: in a codebase, save the file where it was found; in a chat app, give the user the updated file to replace in the project. Never write inside the installed plugin.
 
 Traffic is rarely the goal; it's a proxy for one. A publication that exists to drive tool use is failing at 100,000 readers who never open the tool and succeeding at 500 who do. One that exists to attract work is measured in enquiries. One that exists because its author likes writing has no performance problem at all, and an honest report says so rather than inventing one.
 

@@ -10,10 +10,18 @@ A plan decides which pieces get written, in what order, and why each one is wort
 
 ## Voice and audience come from the writing's own guide
 
-Before planning, find the guide the publication answers to and read it: its `writing-guide.md` and `profile.md` (where the user's `CLAUDE.md` says they live, otherwise the project's `publications/` folder). Voice, person, tone, terminology, formatting choices and who the reader is come from that guide, never from this skill.
+Before planning, find the publication's `profile.md` and `writing-guide.md` and read them:
+
+- **In a codebase:** the folder the project's `AGENTS.md` names, or, for a guide kept outside the repo, the folder the user's personal agent instructions name (such as `~/.claude/CLAUDE.md`); otherwise the project's `publications/` folder.
+- **In a chat app:** the project's files (a Claude Project's knowledge, or the equivalent elsewhere), or files attached to the conversation.
+- **Otherwise:** ask for them.
+
+Voice, person, tone, terminology, formatting choices and who the reader is come from that guide, never from this skill.
 
 - Where the guide settles something this skill also covers — piece types, cadence, the topics it never covers — the guide wins.
 - Where there's no guide, ask who the reader is and what the publication is for, and offer to build one with `cw:style-guide`.
+
+When a guide changes: in a codebase, save the file where it was found; in a chat app, give the user the updated file to replace in the project. Never write inside the installed plugin.
 
 ## Start from the profile
 
@@ -86,7 +94,7 @@ Balance what the plan asks of readers and of the writer:
 
 ## Where the plan lives
 
-Keep the plan in the publication's folder, beside its `profile.md` and `writing-guide.md`, wherever the user's `CLAUDE.md` says that folder is — a `plan.md` with the idea list, the scores, the series, and the calendar. Never write it inside the installed plugin: an update replaces the plugin's files and the plan goes with them.
+Keep the plan beside the publication's `profile.md` and `writing-guide.md` — a `plan.md` with the idea list, the scores, the series, and the calendar. In a codebase, save it in the publication's folder; in a chat app, give the user the file to add to the project. Never write it inside the installed plugin: an update replaces the plugin's files and the plan goes with them.
 
 Each entry records:
 
@@ -110,7 +118,7 @@ Each entry records:
 - [ ] Series are planned to the last part.
 - [ ] Updates are scheduled beside new pieces.
 - [ ] The cadence survives a bad month, with a buffer.
-- [ ] The plan is saved in the publication's folder.
+- [ ] The plan is saved beside the guide, or handed over to add to the project.
 
 ## Boundaries
 

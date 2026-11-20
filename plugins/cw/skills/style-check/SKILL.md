@@ -17,11 +17,19 @@ Nobody notices that a series is called two things across two hundred posts, or t
 
 ## Voice and audience come from the writing's own guide
 
-Before checking it, find the guide the publication answers to and read it: its `writing-guide.md` and `profile.md` (where the user's `CLAUDE.md` says they live, otherwise the project's `publications/` folder). Voice, person, tone, terminology and formatting choices come from that guide, never from this skill.
+Before checking it, find the publication's `profile.md` and `writing-guide.md` and read them:
+
+- **In a codebase:** the folder the project's `AGENTS.md` names, or, for a guide kept outside the repo, the folder the user's personal agent instructions name (such as `~/.claude/CLAUDE.md`); otherwise the project's `publications/` folder.
+- **In a chat app:** the project's files (a Claude Project's knowledge, or the equivalent elsewhere), or files attached to the conversation.
+- **Otherwise:** ask for them.
+
+Voice, person, tone, terminology and formatting choices come from that guide, never from this skill.
 
 - Where the guide settles something, drift from it is a **finding**.
 - Where the guide is silent, the universal rules in `write:writing-standards` that protect the reader are still **findings** — link text that says where it goes, heading levels in order, alt text, sources and credits. Voice-level defaults — minimisers, person, sentence length — stay **proposals**, because a publication's voice may be loose by design: first person, jokes, fragments, a mood that changes with the subject.
 - Where there's no guide at all, ask who the reader is and what the publication is for, and offer to build one with `cw:style-guide`.
+
+When a guide changes: in a codebase, save the file where it was found; in a chat app, give the user the updated file to replace in the project. Never write inside the installed plugin.
 
 **Drift is measured against that guide.** A blog written in first person with title-case headlines is consistent if that's what its guide says; it drifts when some pieces don't.
 
