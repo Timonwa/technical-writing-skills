@@ -19,10 +19,17 @@ These patterns matter for a reason beyond provenance: nearly all of them are pad
 
 ## Voice and audience come from the writing's own guide
 
-Before applying this skill, find the guide the writing answers to and read it: for documentation, the project's style guide and the conventions its `AGENTS.md` or contributing docs record; for content, the publication's `writing-guide.md` and `profile.md` (where the user's `CLAUDE.md` says they live, otherwise the project's `publications/` folder). Voice, person, tone, terminology, formatting choices and who the reader is come from that guide, never from this skill.
+Before applying this skill, find the guide the writing answers to and read it — for documentation, the project's style guide and conventions; for content, the publication's `profile.md` and `writing-guide.md`:
+
+- **In a codebase:** what the project's `AGENTS.md` names (its style guide, or a publication's folder), or, for a guide kept outside the repo, what the user's personal agent instructions name (such as `~/.claude/CLAUDE.md`); otherwise the contributing docs or the project's `publications/` folder.
+- **In a chat app:** the project's files (a Claude Project's knowledge, or the equivalent elsewhere), or files attached to the conversation.
+- **Otherwise:** ask.
+
+Voice, person, tone, terminology, formatting choices and who the reader is come from that guide, never from this skill.
 
 - Where the guide settles something this skill also covers, the guide wins.
 - Where there's no guide: for documentation, the documentation voice in `tw:docs-standards` is the default; for content, ask who the reader is and what the piece is for before checking it, and offer to build a guide with `cw:style-guide`.
+- When a guide changes: in a codebase, save the file where it was found; in a chat app, give the user the updated file to replace in the project.
 
 ## Arguments
 

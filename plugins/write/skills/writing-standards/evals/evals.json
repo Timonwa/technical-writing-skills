@@ -16,15 +16,15 @@
     },
     {
       "id": 2,
-      "prompt": "Draft the opening of a blog post for my food blog about why my sourdough finally rose. My writing guide says first person, chatty, and openings start with a short scene. Here are my notes: three failed loaves, switched to 75% hydration, starter fed 12 hours before mixing.",
-      "expected_output": "Should read the publication's writing guide and follow it: first person, a chatty tone, an opening that starts with a short scene. Should not flatten the voice into documentation style or second-person instructions, because voice comes from the guide, not this skill. Should still apply the craft rules: concrete details (three failed loaves, 75% hydration, 12 hours) rather than vague claims, and the point of the piece stated by the second or third paragraph rather than withheld. Should not invent facts beyond the notes.",
+      "prompt": "In my food blog's Claude Project, the writing guide is in the project's files. Draft the opening of a post about why my sourdough finally rose. Notes: three failed loaves, switched to 75% hydration, longer cold proof. Also, I've decided to allow em-dash asides from now on — update my guide.",
+      "expected_output": "Should read the writing guide from the Project's files and follow it: first person, chatty, an opening that starts with a short scene, with the craft rules (concrete detail, the point reached soon after the scene) still applied. Should not convert the voice to documentation style. Should record the em-dash decision in the writing guide and, because this is a chat app, give the user the updated writing-guide.md to replace in the Project rather than claiming it saved the file.",
       "files": [],
       "expectations": [
+        "Reads the writing guide from the Project's files before drafting",
         "Follows the guide's first person, chatty tone and scene opening",
         "Does not convert the voice to documentation style",
-        "Uses the concrete figures from the notes",
-        "States the piece's point by the second or third paragraph",
-        "Invents no facts beyond the notes"
+        "Gives the updated writing-guide.md for the user to replace in the Project",
+        "Does not claim to have saved the guide itself"
       ]
     },
     {

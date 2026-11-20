@@ -10,32 +10,49 @@ Thirty-two of them are model-invoked: Claude loads one when the work matches, so
 
 ## Install
 
-Run these in Claude Code:
+**In the Claude app (web or desktop):**
+
+1. Open **Customize > Plugins**, then **Add > Add marketplace**, and enter `Timonwa/writing-skills`.
+2. Add **cw** for a blog or newsletter, **tw** for documentation, or both. Each brings in **write**.
+3. Skills need file creation turned on: **Settings > Capabilities > Code execution and file creation** (on Team and Enterprise plans, an admin turns it on).
+
+Installed plugins are saved to your account, so they also work in chat on mobile.
+
+**In Claude Code:**
 
 ```shell
 /plugin marketplace add Timonwa/writing-skills
-/plugin install tw@writing-skills
 /plugin install cw@writing-skills
+/plugin install tw@writing-skills
 ```
-
-`tw` and `cw` each depend on `write`, so installing either pulls it in. Install the one you need: documentation needs `tw`, a blog or newsletter needs `cw`, and writing both needs both.
 
 Pick a scope when it asks. **User** makes the skills available everywhere, which suits a writer working across projects. **Project** shares them with everyone who clones a repo. **Local** installs for the current repo only.
 
-## Publications
+## Your publication's guide
 
 `cw` writes for a publication — a blog, a newsletter, or both — and reads two files about it before it writes, edits or reviews anything:
 
 - **`profile.md`** — who it's for, what it's for, and what a piece should make a reader do.
 - **`writing-guide.md`** — how it sounds: voice, person, titles, openings, recurring parts, formatting.
 
-Keep them in a folder outside the plugin, one folder per publication, ideally in a private repository, and point your `~/.claude/CLAUDE.md` at it with one line:
+**In the Claude app:**
+
+1. Create a **Project** for each blog or newsletter.
+2. In that Project, say "set up my publication". `cw:style-guide` asks you about it, or reads a style guide or past pieces you paste in, and gives you `profile.md` and `writing-guide.md`. Anything you haven't decided stays `unset` rather than guessed.
+3. Add both files to the Project's files.
+4. Write from that Project: "plan my next posts", "edit this draft", "turn this into LinkedIn posts". When Claude gives you an updated file, replace the old one in the Project.
+
+Outside a Project, attach the two files to the chat, or Claude asks for them.
+
+**In a codebase:** keep one folder per publication, ideally in a private repository, and name it in the project's `AGENTS.md`, which every coding agent reads:
 
 ```text
-Publications (profile, writing guide, sources per publication): ~/Documents/writing/publications/
+Publications (profile, writing guide, sources per publication): publications/
 ```
 
-Where there's no such line, the skills look for a `publications/` folder in the current project, and otherwise ask. `cw:style-guide` builds a publication's folder from the template it ships with — converting a style guide you already have, deriving the voice from pieces you've published, or interviewing you — and leaves anything you haven't decided as `unset` rather than guessing.
+For a folder kept outside the repo, put the same line in your personal agent instructions, such as `~/.claude/CLAUDE.md`. A `CLAUDE.md` can import `AGENTS.md` with `@AGENTS.md`. Where nothing names a folder, the skills look for `publications/` in the project, then ask.
+
+**For documentation,** the same applies to the project's style guide: in the app, put it in the Project's files; in a repo, name it in `AGENTS.md`. With no style guide, `tw` uses the documentation defaults in `tw:docs-standards`.
 
 ## Skills
 
