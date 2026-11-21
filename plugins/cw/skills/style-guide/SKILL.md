@@ -74,17 +74,17 @@ Saving the guide: in a codebase, write the files to the publication's folder; in
 
 - **Piece types** — the kinds it publishes, and which carries the house voice.
 - **Length targets per type** — a how-to, an essay, a newsletter issue — as ranges, so a piece that runs long is a decision, not an accident.
-- **Titles** — the formats it uses, with a real example of each; whether questions and numbers appear.
+- **Titles** — the formats it uses, with a real example of each; whether questions and numbers appear; and the title tag for search, about 50–60 characters as a working target, because results cut titles by pixel width ([Google](https://developers.google.com/search/docs/appearance/title-link) sets no limit; full targets in `cw:seo-aeo-geo`).
 - **Openings and closings** — how a piece opens, how it never opens; how it ends, its one ask, its sign-off per channel.
 - **Recurring sections and devices**, in their exact form — a "what you'll need" box, a series name, a closing question.
 - **In-piece formatting** — how often subheads appear, what bold is for, when a list beats a paragraph, pull quotes.
-- **Newsletter subject lines and preview text** — length, style, whether they echo the title.
+- **Newsletter subject lines and preview text** — length, style, whether they echo the title; working lengths are in `cw:newsletter-standards`.
 
 **On the page and in search**
 
 - **Slugs** — short, readable words separated by hyphens, in the reader's language; avoid long ID numbers ([Google](https://developers.google.com/search/docs/crawling-indexing/url-structure)).
-- **Meta descriptions** — one written for each piece, never the same text across pages; for a post it may carry the author and the date. Google sets no length limit but truncates to fit the screen ([Google](https://developers.google.com/search/docs/appearance/snippet)).
-- **A reading-level target, if it has one.** Some publishers write for a low reading age even for specialists — GOV.UK's guidance is widely cited as a reading age of 9 — and WCAG 2.2's success criterion 3.1.5 (level AAA) asks for supplementary content where text needs more than lower-secondary reading ability ([W3C](https://www.w3.org/TR/WCAG22/#reading-level)). Record the target and how it's checked, or `unset`.
+- **Meta descriptions** — one written for each piece, never the same text across pages; for a post it may carry the author and the date. Google sets no length limit but truncates to fit the screen ([Google](https://developers.google.com/search/docs/appearance/snippet)); about 150–160 characters, with the point in the first 120 for mobile, is the working target ([Ahrefs](https://ahrefs.com/blog/meta-description/)).
+- **A reading-level target, if it has one.** Some publishers write for a low reading age even for specialists — GOV.UK's guidance is widely cited as a reading age of 9 — and WCAG 2.2's success criterion 3.1.5 (level AAA) asks for supplementary content where text needs more than lower-secondary reading ability ([W3C](https://www.w3.org/TR/WCAG22/#reading-level)). For general web writing, about grade 8 on a Flesch-Kincaid or Hemingway reading is common practice. Record the target and the tool that checks it, or `unset`; the score points at long sentences and words, it isn't the goal.
 
 **Quotes, titles of works and code**
 
@@ -99,6 +99,11 @@ Saving the guide: in a codebase, write the files to the publication's folder; in
 - **AI use** — whether AI assists drafting, research or images, and what readers are told.
 - **Disclosure** — affiliate links, sponsorship, gifted products: what's disclosed and where. A disclosure belongs close to the recommendation, not at the foot of the page ([FTC](https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking)).
 - **Rights** — the images, excerpts and embeds it may use, and how they're credited.
+
+## What the profile and the brand decide
+
+- **The profile** settles who the publication is for and what it's for: the reader and what they already know, who it's not for, the job it does for readers and for the owner, the one action a piece should lead to, the channels and cadence, and the disclosures it owes. It changes when the audience or the purpose does, and it decides whether a piece belongs at all. Fields: [references/profile.md](references/profile.md).
+- **The brand** settles how the publication looks: its colours and the pairs that pass contrast, its fonts, the logo and its use, the cover template, and the image and chart style. `cw:cover-images` and `cw:images-and-diagrams` follow it over their own defaults. Fields: [references/publication-template/brand.md](references/publication-template/brand.md).
 
 ## The terminology list
 

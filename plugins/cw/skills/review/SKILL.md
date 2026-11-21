@@ -93,6 +93,7 @@ The editing craft is `cw:editing-standards`; the universal writing rules are `wr
 - **Images load, carry their credit, and have alt text that serves the piece.**
 - **The share preview** — title, description, image — shows what the piece is.
 - **A newsletter issue's envelope** — the subject line reflects what's inside; the preview text adds to the subject rather than repeating it; the sender name is the one subscribers recognise; the unsubscribe link and the publication's postal address are in the footer. US law requires a clear way to opt out and a valid physical postal address in commercial email, and a subject line that matches the content ([FTC, CAN-SPAM](https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business)).
+- **A newsletter issue's sending checks** — the subject and preview text within the lengths `cw:newsletter-standards` sets; the message under Gmail's 102 KB clipping point, past which the footer with the unsubscribe link is hidden ([Mailchimp](https://mailchimp.com/help/gmail-is-clipping-my-email/)); images in email-safe formats and GIFs under 1 MB (`cw:images-and-diagrams`).
 
 ### Blockers — do not publish
 

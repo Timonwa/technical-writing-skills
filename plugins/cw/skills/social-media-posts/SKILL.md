@@ -1,7 +1,7 @@
 ---
 name: social-media-posts
 description: >-
-  Turning one published piece into a set of social posts — repurposing by angle so one piece yields distinct posts rather than the same post reworded, per-platform limits and how each platform counts characters, plain-text formatting, threading, accessible hashtags and alt text, and disclosure. Reads the publication's profile and writing guide for voice and audience. Returns drafts; never publishes. Use on "promote this post", "write a thread about", "social posts for this article".
+  Turning one published piece into a set of social posts — repurposing by angle so one piece yields distinct posts rather than the same post reworded, per-platform limits, working lengths and image sizes, how each platform counts characters, plain-text formatting, threading, accessible hashtags and alt text, and disclosure. Reads the publication's profile and writing guide for voice and audience. Returns drafts; never publishes. Use on "promote this post", "write a thread about", "social posts for this article".
 ---
 
 # Social media posts
@@ -55,19 +55,36 @@ Others worth pulling when the piece carries the material: a **quote** worth argu
 
 Verify before relying on these — something in this table changes every few months.
 
-| Platform  | Limit                              | Visible before cutoff | Threads | Idiom                                       |
-| --------- | ---------------------------------- | --------------------- | ------- | ------------------------------------------- |
-| X         | 280 free · 25,000 Premium          | ~280                  | yes     | punchy, hook-first                          |
-| Bluesky   | 300                                | full                  | yes     | conversational, community                   |
-| Threads   | 500, plus a 10,000-char attachment | full                  | yes     | casual, personal                            |
-| Mastodon  | 500 by default, set per server     | full                  | yes     | earnest, community-oriented                 |
-| LinkedIn  | 3,000                              | ~140                  | no      | narrative                                   |
-| Instagram | 2,200                              | ~125                  | no      | visual-first; the image carries it          |
-| TikTok    | 4,000 in the app · 2,200 via API   | ~100                  | no      | hook in the first seconds; caption supports |
+| Platform  | Limit                              | Visible before cutoff        | Working length (practice)                      | Threads | Idiom                                       |
+| --------- | ---------------------------------- | ---------------------------- | ---------------------------------------------- | ------- | ------------------------------------------- |
+| X         | 280 free · 25,000 Premium          | ~280                         | ~70–100 characters for a standalone post       | yes     | punchy, hook-first                          |
+| Bluesky   | 300                                | full                         | well under the limit                           | yes     | conversational, community                   |
+| Threads   | 500, plus a 10,000-char attachment | full                         | a few sentences                                | yes     | casual, personal                            |
+| Mastodon  | 500 by default, set per server     | full                         | a few sentences                                | yes     | earnest, community-oriented                 |
+| LinkedIn  | 3,000                              | ~210 desktop · ~140 mobile   | hook in the first ~140; ~1,000–2,000 total     | no      | narrative                                   |
+| Facebook  | 63,206                             | ~3 lines before "See more"   | short — under ~80 characters for a link post   | no      | conversational, community                   |
+| Instagram | 2,200                              | ~125                         | the point before the cutoff                    | no      | visual-first; the image carries it          |
+| Pinterest | title 100 · description 500        | ~40 of the title in the feed | title front-loaded; a keyword-rich description | no      | search-first; the image is the post         |
+| TikTok    | 4,000 in the app · 2,200 via API   | ~100                         | the hook in the first line                     | no      | hook in the first seconds; caption supports |
+
+The working lengths are common practice, not platform rules: they're what keeps a post readable before the fold.
 
 **Characters aren't counted the same way everywhere.** Instagram, LinkedIn, Mastodon and TikTok count UTF-16 units, so one emoji costs two and a family emoji can cost eleven. Bluesky and Threads count what you see. On X a link always costs 23 characters however long it is, and an emoji costs two.
 
 **The visible cutoff matters more than the ceiling.** Put the point before the fold, and count the full string — spaces, line breaks, emoji, hashtags — before returning any post.
+
+### Native images and video
+
+Sizes for an image or video posted on the platform itself (the image a shared link shows is `cw:cover-images`). Verify before relying on these:
+
+| Platform                         | Size                                                             |
+| -------------------------------- | ---------------------------------------------------------------- |
+| Instagram feed                   | 1080 × 1350 (4:5) or 1080 × 1440 (3:4); 1080 × 1080 square       |
+| Instagram Stories, Reels; TikTok | 1080 × 1920 (9:16), key content clear of the top and bottom bars |
+| X                                | 1600 × 900 (16:9)                                                |
+| LinkedIn                         | 1200 × 627, or 1080 × 1080 square                                |
+| Facebook                         | 1080 × 1350 (4:5) or 1080 × 1080                                 |
+| Pinterest                        | 1000 × 1500 (2:3)                                                |
 
 ## Plain text only
 
@@ -91,6 +108,7 @@ Social is where accessible writing is most often dropped, and the fixes are chea
 
 ## Hashtags
 
+- **Respect the caps.** Instagram allows up to 5 hashtags per post or Reel ([Social Media Today](https://www.socialmediatoday.com/news/instagram-implements-new-limits-on-hashtag-use/808309/)); Threads allows one topic tag per post ([Threads Help](https://help.instagram.com/1356090605000312)).
 - **Match the platform's culture.** Instagram and TikTok use them for discovery; LinkedIn treats them as weak categorization; X, Bluesky, Reddit, Slack and Discord largely don't want them. Mastodon is the exception among text platforms — it has no full-text search by default, so a tag is often how a post gets found at all.
 - **Few and specific.** One or two carries both the accessibility and the relevance case; a wall of generic tags reads as spam and can suppress reach.
 - **A mismatched tag costs more than no tag.** A post about rate limiting tagged with a motivational hashtag reads as a semantic conflict.

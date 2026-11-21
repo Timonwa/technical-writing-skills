@@ -47,13 +47,20 @@ Settle how the conversation can be used before it starts, in plain words, and wr
 - **Agree the terms in plain words, not jargon.** The Associated Press's guidance notes that not everyone understands "off the record" or "on background" to mean the same things — so say what each means here: quoted by name, described without a name, or not used at all. Unless something else is agreed, the conversation is on the record.
 - **Agree how they'll be identified** — name, role, organisation — so readers can judge the source's reliability and motives ([SPJ Code of Ethics](https://www.spj.org/spj-code-of-ethics/)).
 - **Anonymity is the exception.** The SPJ code, revised in October 2026, reserves anonymity or confidentiality "as a last resort for sources with information of substantial public interest who may face danger, retribution or other harm", and the reader is told why. A publication's own policy can be stricter, and wins.
-- **Recording needs consent**, said on the recording. In some places recording a call needs everyone's consent by law.
+- **Recording needs consent**, said on the recording. About 11 US states — among them California, Florida, Illinois, Pennsylvania and Washington — require every party's consent, and a call across state lines may fall under the stricter law, so ask every time ([RCFP](https://www.rcfp.org/introduction-to-reporters-recording-guide/)). Other countries set their own rules.
 - **Don't pay for the interview or the information.** The SPJ code, revised in October 2026, says: "Do not pay sources in exchange for interviews or information" ([SPJ](https://www.spj.org/spj-code-of-ethics/)). Expenses a publication's own policy allows, such as a contributor's fee for a commissioned piece they write, are a different thing — follow the policy, and disclose it where it says to.
 - **Embargoes.** Information given under embargo — a study, a launch, an announcement — isn't published before the agreed date and time. Record the embargo when you receive it, and don't agree to one the publication's policy doesn't allow.
 
+### Vulnerable sources and trauma
+
+- **Use heightened sensitivity** with crime victims (especially victims of sex crimes), juveniles, and sources who are inexperienced or unable to give consent — the SPJ code's 2026 wording.
+- **Minors**: a parent's or guardian's consent as well as the child's, and the publication's policy on naming and photographing them.
+- **Trauma-aware questions.** Survivors consistently name "How do you feel?" as the most distressing question; ask "How are you now?" or "What do you think about…?" instead. Let them set limits, tell them they needn't answer, don't press for detail that serves the story rather than the reader, and tell them at the end how the interview will be used ([Dart Center guidance, via The Journalist's Resource](https://journalistsresource.org/home/trauma-informed-journalism-explainer/)).
+- **Someone who isn't used to being quoted** gets the ground rules explained twice, and a chance to ask what they mean.
+
 ## Running the interview
 
-- **Timebox it and say the box aloud**, one topic per session.
+- **Timebox it and say the box aloud**, one topic per session. As working lengths (common practice): about 20–30 minutes for an expert's input on a piece, 30–60 minutes for a feature or a profile.
 - **Open questions, not leading ones.** "What happened when the first restaurant closed?" rather than "That must have been hard, right?" — a leading question gets agreement, not information.
 - **Let silence work.** After an answer, wait a beat before the next question; people often add the most candid thing into a pause.
 - **Chase the vague answer** — "it depends", "a lot of people", "usually" — and **ask for the number** and where it comes from.
@@ -64,18 +71,17 @@ Settle how the conversation can be used before it starts, in plain words, and wr
 
 The question sets that work for a feature, a profile and an opinion piece are in [references/questions.md](references/questions.md).
 
-## Vulnerable sources and trauma
-
-- **Use heightened sensitivity** with crime victims (especially victims of sex crimes), juveniles, and sources who are inexperienced or unable to give consent — the SPJ code's 2026 wording.
-- **Minors**: a parent's or guardian's consent as well as the child's, and the publication's policy on naming and photographing them.
-- **Trauma-aware questions.** Survivors consistently name "How do you feel?" as the most distressing question; ask "How are you now?" or "What do you think about…?" instead. Let them set limits, tell them they needn't answer, don't press for detail that serves the story rather than the reader, and tell them at the end how the interview will be used ([Dart Center guidance, via The Journalist's Resource](https://journalistsresource.org/home/trauma-informed-journalism-explainer/)).
-- **Someone who isn't used to being quoted** gets the ground rules explained twice, and a chance to ask what they mean.
-
-## Email and written interviews
+### Email and written interviews
 
 - **Answers come back polished**, sometimes drafted by someone else, and you can't follow up in the moment. Prefer a call for anything that depends on how someone thinks; use email for facts and for sources who can only answer that way.
 - **Say so in the piece** — "said in an email", "said in a statement" — so readers know a written reply isn't a conversation ([ONA Ethics](https://ethics.journalists.org/topics/interviewing/)). The guide may set the exact wording.
-- **Send few, numbered questions**, each answerable on its own, and a date you need them by.
+- **Send five to seven numbered questions** (common practice), each answerable on its own, and a date you need them by.
+
+## Turning it into a draft
+
+- **Separate fact from opinion** in your notes, and attribute each opinion to its owner.
+- **Mark every gap visibly** rather than writing the plausible version. An invented detail that reads naturally is the worst defect this work produces, because nothing about it looks wrong.
+- **Verify what you can yourself** — read the study, check the date — rather than spending the source's next minutes on it.
 
 ## Quoting and attributing
 
@@ -94,12 +100,6 @@ The question sets that work for a feature, a profile and an opinion piece are in
 - **Whether a source may see or approve a quote** is the publication's policy, not yours to promise in the moment.
 - **Keep a record** of what you asked, what you were told and any terms agreed, with dates.
 - **Close the loop** — tell them when it's published and send the link.
-
-## Turning it into a draft
-
-- **Separate fact from opinion** in your notes, and attribute each opinion to its owner.
-- **Mark every gap visibly** rather than writing the plausible version. An invented detail that reads naturally is the worst defect this work produces, because nothing about it looks wrong.
-- **Verify what you can yourself** — read the study, check the date — rather than spending the source's next minutes on it.
 
 ## Boundaries
 

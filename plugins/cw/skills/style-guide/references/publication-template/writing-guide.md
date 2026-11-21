@@ -21,6 +21,18 @@ One guide covers every channel. A blog post and a newsletter issue from the same
 | Three words it is    |                                                             |
 | Three words it isn't |                                                             |
 
+### Tone by situation
+
+The voice stays; the tone shifts with the moment. One line each, with an example.
+
+| Moment               | Tone |
+| -------------------- | ---- |
+| A launch             |      |
+| A correction         |      |
+| Bad news             |      |
+| A sponsor's piece    |      |
+| A reader's complaint |      |
+
 ## Words
 
 | Field                    | Your answer                                                  |
@@ -30,22 +42,37 @@ One guide covers every channel. A blog post and a newsletter issue from the same
 | Names and capitalization | _products, tools, your own name, anything spelled a set way_ |
 | Style guide followed     | _AP · Chicago · Google · Microsoft · your own · none_        |
 
+## Mechanics
+
+| Field                      | Your answer                                                 |
+| -------------------------- | ----------------------------------------------------------- |
+| Dictionary and spelling    | _the dictionary, and British · American · other_            |
+| Numbers                    | _when a number is spelled out_                              |
+| Dates and times            | _the format, with an example_                               |
+| Currency and units         | _symbol or code, where it sits, metric or imperial_         |
+| Abbreviations and acronyms | _written out on first use or not; full stops; plurals_      |
+| Lists                      | _serial comma or not; whether items end in full stops_      |
+| Titles of works            | _italics or quotation marks for books, films, publications_ |
+| Inclusive language         | _the terms replaced, and what replaces them_                |
+
 ## Piece types
 
 Not every piece reads alike — a setup guide is terse where an essay is warm. Name the types, and mark which one carries the house voice.
 
-| Type | What it's for | Voice reference? |
-| ---- | ------------- | ---------------- |
-|      |               |                  |
+| Type | What it's for | Length | Voice reference? |
+| ---- | ------------- | ------ | ---------------- |
+|      |               |        |                  |
+
+Length is a range per type (a how-to, an essay, an issue), so a piece that runs long is a decision, not an accident.
 
 ## Titles
 
-| Field        | Your answer                            |
-| ------------ | -------------------------------------- |
-| Formats      | _the shapes, with a real example each_ |
-| Case         | _sentence case · title case_           |
-| Subtitles    | _used or not_                          |
-| Length limit | _if you have one_                      |
+| Field     | Your answer                                                                                                                                   |
+| --------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| Formats   | _the shapes, with a real example each_                                                                                                        |
+| Case      | _sentence case · title case_                                                                                                                  |
+| Subtitles | _used or not_                                                                                                                                 |
+| Title tag | _the version for search results — about 50–60 characters is the working target, because results cut titles by pixel width (`cw:seo-aeo-geo`)_ |
 
 ## Openings
 
@@ -93,6 +120,45 @@ _Delete this section if the publication doesn't publish code._
 | The one ask   | _the wording you use_                               |
 | Sign-off      | _exact wording, per channel if they differ_         |
 | Subject lines | _newsletter only — the format, with a real example_ |
+
+## Quotes
+
+| Field              | Your answer                                              |
+| ------------------ | -------------------------------------------------------- |
+| Omissions          | _how a cut inside a quote is marked_                     |
+| Brackets, [sic]    | _used or not_                                            |
+| Cleaning up speech | _whether "um" and false starts are removed_              |
+| Attribution        | _"said" or another verb; name and role on first mention_ |
+
+## Search and preview
+
+| Field            | Your answer                                                                              |
+| ---------------- | ---------------------------------------------------------------------------------------- |
+| Slug             | _short readable words, hyphenated; set once_                                             |
+| Meta description | _one per piece; about 150–160 characters, the point in the first 120 (`cw:seo-aeo-geo`)_ |
+| Reading level    | _a target and the tool that checks it, or `unset`_                                       |
+
+## Newsletter
+
+_Delete this section if the publication has no newsletter._
+
+| Field        | Your answer                                                            |
+| ------------ | ---------------------------------------------------------------------- |
+| Subject line | _the format, a real example, and a length (`cw:newsletter-standards`)_ |
+| Preview text | _the format and a length; it follows the subject, never repeats it_    |
+| Sender name  | _the name readers see_                                                 |
+
+## Policies
+
+| Field                     | Your answer                                                           |
+| ------------------------- | --------------------------------------------------------------------- |
+| Sourcing                  | _what counts as a source; how sources are credited and linked_        |
+| Anonymous sources         | _used or not, and when_                                               |
+| Quote approval            | _whether a source sees quotes before publishing (facts, not wording)_ |
+| Corrections and updates   | _the note's wording and where it sits_                                |
+| AI use                    | _what AI may help with, and what readers are told_                    |
+| Image credits and consent | _how credits read; consent for identifiable people_                   |
+| Disclosure                | _affiliate links, sponsorship, gifts: the wording and placement_      |
 
 ## Provenance
 

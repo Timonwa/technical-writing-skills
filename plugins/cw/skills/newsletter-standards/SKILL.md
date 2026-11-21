@@ -1,7 +1,7 @@
 ---
 name: newsletter-standards
 description: >-
-  Drafting or reviewing an email newsletter issue — finding the one narrative that holds a period together, subject lines and preview text, the shape of an issue, skimmability for a phone read, the one-CTA rule, and the legal, accessibility and deliverability obligations an email carries that a web page doesn't. Reads the publication's profile rather than assuming a house voice. Use on "write the newsletter", "draft this month's issue", "review this issue before it sends", "subject line".
+  Drafting or reviewing an email newsletter issue — finding the one narrative that holds a period together, subject lines and preview text, the shape of an issue, skimmability for a phone read, Gmail clipping, the one-CTA rule, the legal, accessibility and deliverability obligations an email carries, and reading the numbers after it sends. Reads the publication's profile rather than assuming a house voice. Use on "write the newsletter", "draft this month's issue", "review this issue before it sends", "subject line".
 ---
 
 # Newsletter standards
@@ -50,23 +50,12 @@ A first issue also carries an introduction the rest won't — who you are, what 
 ## The shape of an issue
 
 - **Subject line** — the highest-leverage line in the whole thing. Concrete over clever: name the thing or the tension, not the category. Phone clients cut the subject off early, so the word that matters goes first; 30 to 50 characters is a common rule of thumb, not a standard. Never deceptive: under CAN-SPAM the subject must accurately reflect the content ([FTC](https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business)), and a misleading one spends the trust the issue depends on.
-- **Preview text** — the second thing they see, and it falls back to the first line of the body unless you set it. Setting it deliberately is one of the clearest markers of a well-run send. Extend the subject rather than repeating it.
+- **Preview text** — the second thing they see, and it falls back to the first line of the body unless you set it. Setting it deliberately is one of the clearest markers of a well-run send. Extend the subject rather than repeating it. Clients show anywhere from none to about 278 characters, so keep it under 90 with the point first ([Litmus](https://www.litmus.com/blog/the-ultimate-guide-to-preview-text-support)).
 - **Opening — two or three sentences.** Get to the thread immediately. No "hope you've all been well", no apology for the gap since the last issue.
 - **Body — three to five sections**, each with a bolded lead so it survives skimming, each ending somewhere the reader can act or think.
 - **One CTA.** Pick the single thing you want — read it, reply, share — and ask once. Three competing asks get none of them.
 - **Sign-off** — short, in the publication's voice, the same every issue.
 - **Footer** — who's sending, why they're receiving it, and how to stop.
-
-## What the numbers say
-
-Benchmarks describe patterns, not targets. A publication's own trend line beats any cross-industry average, and a small engaged list outperforms a large indifferent one on every measure that matters. Use these to spot something badly wrong, not to chase a figure.
-
-- **Open rate is no longer a reliable measure.** Privacy features that pre-fetch images inflate it, so a reported open may be nobody. Treat it as directional and judge an issue on clicks and click-to-open, against the publication's own previous issues.
-- **Spam complaints are the hard limit.** Gmail asks senders to keep the complaint rate below 0.1% and never reach 0.3% ([Google](https://support.google.com/a/answer/81126)); Yahoo sets the same 0.3% ceiling ([Yahoo](https://senders.yahooinc.com/best-practices/)). Past that, mail stops arriving for everyone on the list.
-- **Unsubscribes and bounces are list signals.** An unsubscribe rate rising above the list's usual level, or more than a couple of percent of addresses bouncing (common practice, not a published threshold), means something is wrong with the list or the promise, not the writing.
-- **Consistency beats frequency.** Whatever cadence the profile records, holding it matters more than the number. A monthly list that receives three emails in a week is being surprised, and surprise is what people unsubscribe from.
-- **Test send times rather than importing someone's best-day advice.** The published "best" days and hours contradict each other across studies, because they're averaging different audiences.
-- **Clean the list every few months.** Sending to people who never open trains filters against you and drags down everyone else's delivery.
 
 ## Written for the inbox
 
@@ -74,6 +63,8 @@ Benchmarks describe patterns, not targets. A publication's own trend line beats 
 - **Front-load every section**, and the issue itself. The point goes in the first sentence, not the third; a reader who doesn't find it there skips the paragraph.
 - **One idea per section**, and roughly half the words you'd use in print.
 - **Plain text survives; layout doesn't.** Clients strip CSS and block images by default. An issue that only works with images loaded is broken for a large share of the list.
+- **Under Gmail's clipping size.** Gmail clips a message larger than 102 KB behind a "View entire message" link, which hides the footer with the unsubscribe link and stops opens being tracked ([Mailchimp](https://mailchimp.com/help/gmail-is-clipping-my-email/)). Keep the HTML well under it; about 80 KB leaves room (common practice).
+- **Built for a phone.** A content width of about 600 pixels, body text of about 14–16 pixels and links or buttons about 44 pixels tall are the usual working sizes (common practice); the platform's template normally sets them, so check rather than assume.
 - **Write to one person.** A newsletter is one person writing to one person, even at ten thousand subscribers. The profile decides the person and the register.
 - **No engagement bait.** No fake urgency, no manufactured scarcity, no "you won't believe". The subscriber gave you their inbox; that's the trust being spent.
 
@@ -101,14 +92,14 @@ Requirements rather than preferences, for any publication. What follows is the s
 
 - Authentication is sending setup rather than writing, but an unauthenticated send reaches nobody: Gmail requires SPF or DKIM from every sender, and SPF, DKIM and DMARC from bulk senders ([Google](https://support.google.com/a/answer/81126)). Confirm it before a first issue.
 - Image-heavy, link-heavy, text-light issues are what spam filters are built to catch.
-- List hygiene beats volume. Sending to people who never open trains filters against you.
 
 ## Reviewing an issue before it sends
 
 - [ ] It delivers what the signup promised.
 - [ ] One narrative, and every section has a takeaway.
 - [ ] The subject names something specific, fits a phone's preview, and front-loads the word that matters.
-- [ ] Preview text is set and extends the subject.
+- [ ] Preview text is set, extends the subject, and is under about 90 characters.
+- [ ] The issue's size is under Gmail's 102 KB clipping point.
 - [ ] The opening reaches the point within three sentences.
 - [ ] One CTA, asked once.
 - [ ] Every link resolves, points at a canonical URL, and has descriptive text.
@@ -117,6 +108,18 @@ Requirements rather than preferences, for any publication. What follows is the s
 - [ ] Sign-off matches the profile.
 - [ ] It reads on a phone — no wall of text, no layout that needs images.
 - [ ] Nothing sells. Nothing baits.
+
+## After it sends
+
+Benchmarks describe patterns, not targets. A publication's own trend line beats any cross-industry average, and a small engaged list outperforms a large indifferent one on every measure that matters. Use these to spot something badly wrong, not to chase a figure.
+
+- **Reference figures, dated.** Mailchimp's all-industry averages are 35.63% opens, 2.62% clicks and 0.22% unsubscribes, from data last updated in December 2023 ([Mailchimp](https://mailchimp.com/resources/email-marketing-benchmarks/)). Read them as a rough floor for spotting something badly wrong, never a goal.
+- **Open rate is no longer a reliable measure.** Privacy features that pre-fetch images inflate it, so a reported open may be nobody. Treat it as directional and judge an issue on clicks and click-to-open, against the publication's own previous issues.
+- **Spam complaints are the hard limit.** Gmail asks senders to keep the complaint rate below 0.1% and never reach 0.3% ([Google](https://support.google.com/a/answer/81126)); Yahoo sets the same 0.3% ceiling ([Yahoo](https://senders.yahooinc.com/best-practices/)). Past that, mail stops arriving for everyone on the list.
+- **Unsubscribes and bounces are list signals.** An unsubscribe rate rising above the list's usual level, or more than a couple of percent of addresses bouncing (common practice, not a published threshold), means something is wrong with the list or the promise, not the writing.
+- **Consistency beats frequency.** Whatever cadence the profile records, holding it matters more than the number. A monthly list that receives three emails in a week is being surprised, and surprise is what people unsubscribe from.
+- **Test send times rather than importing someone's best-day advice.** The published "best" days and hours contradict each other across studies, because they're averaging different audiences.
+- **Clean the list every few months.** Sending to people who never open trains filters against you and drags down everyone else's delivery.
 
 ## Boundaries
 

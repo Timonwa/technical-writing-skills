@@ -36,19 +36,27 @@ Say in one sentence what the reader gets from the picture that they wouldn't fro
 - **Never an image of text you could write** — a paragraph, a code block, an error message. Where an image of text is the point — a quote card, a screenshot of a post — its words go in the alt text ([W3C](https://www.w3.org/WAI/tutorials/images/textual/)).
 - **Never decoration** — an image that carries nothing costs page weight and attention for no return.
 
-## Rights and credits
+## Alt text
+
+- **Write it from the image's purpose in this piece**, not a neutral inventory. W3C's example for a family photo conveying a mood is "We're family-friendly" ([W3C](https://www.w3.org/WAI/tutorials/images/informative/)); for a bread recipe, "the crumb, open and even", not "a loaf of bread".
+- **A decorative image gets an empty `alt=""`** so a screen reader skips it ([W3C](https://www.w3.org/WAI/tutorials/images/decorative/)); in a platform's editor, that's the "decorative" option or an empty field.
+- **An image of text carries its words** in the alt text.
+- **A complex image** — a chart, a detailed diagram — gets a short alt text with the takeaway, and the full detail in the text or a table beside it.
+- **Keep it to about 125–150 characters**, with anything longer in the page itself. That's a working guideline, not a hard limit: screen readers read longer alt text, but checkers flag it and it's tiring to hear ([yatil.net](https://yatil.net/blog/there-is-no-character-limit-for-alt-text)).
+- **Don't start with "image of" or "photo of"**, and don't repeat the caption.
+
+## Rights, credits and honesty
 
 - **Licence first.** Finding an image online doesn't give you the right to use it. Use your own, one licensed for this use, or one whose licence terms you follow.
 - **Credit Creative Commons images in full** — title, author, source and licence. Credit the author, not the site you found it on, and never "Creative Commons", which isn't the author ([Creative Commons](https://wiki.creativecommons.org/wiki/Recommended_practices_for_attribution)).
 - **Consent from identifiable people** before publishing a photo of them, and particular care with children — the publication's policy decides how consent is recorded.
 - **Embeds and screenshots of other people's posts** are their words and images: attribute them, and check the platform's terms before reproducing one.
+- **Keep every visual true.** An edit that changes what a photo shows, a composite, or an AI-generated image or chart is labelled as such. The SPJ code, revised in 2026, says never publish fabricated content that could be confused with reality, and clearly label illustrations and reenactments.
 
 ## Photos
 
-- **Alt text says what the photo is for in this piece**, not a neutral inventory. W3C's example for a family photo conveying a mood is "We're family-friendly" ([W3C](https://www.w3.org/WAI/tutorials/images/informative/)); for a bread recipe, "the crumb, open and even", not "a loaf of bread".
-- **Keep photos true.** An edit that changes what a photo shows, a composite or an AI-generated image is labelled as such. The SPJ code, revised in 2026, says never publish fabricated content that could be confused with reality, and clearly label illustrations and reenactments.
 - **Caption what the image needs** — who, where, when — and the credit where the licence or the guide asks for one. Don't repeat the caption in the alt text.
-- **Compress and size for the column it sits in**; a photo straight off a phone is usually the heaviest thing on the page.
+- **Compress and size for the column it sits in**; a photo straight off a phone is usually the heaviest thing on the page. As working targets (common practice): about 200 KB or less per photo on the web, exported at twice the displayed width, in WebP or AVIF where the platform serves them and JPEG otherwise.
 
 ## Charts
 
@@ -86,7 +94,8 @@ A newsletter's images arrive in mail clients, not a browser you control:
 - **No text baked into an image** — it can't be read until it loads, can't be searched, and won't reflow on a phone.
 - **Dark mode**: some clients invert colours, so a dark logo on a transparent background can vanish and a white box can appear around a light one. Test the issue in dark mode, and give images that need it a background or outline in the file itself ([Litmus](https://www.litmus.com/blog/the-ultimate-guide-to-dark-mode-for-email-marketers)).
 - **Size for the column, at twice the pixels** — an image shown 600 px wide exported at 1,200 px and set to 600 in the markup, so it's sharp on high-density screens without overflowing on a phone.
-- **The first frame of every GIF** carries the message.
+- **The first frame of every GIF** carries the message, and the GIF stays under 1 MB ([Litmus](https://www.litmus.com/blog/a-guide-to-animated-gifs-in-email)).
+- **JPEG, PNG and GIF are safe everywhere.** SVG and WebP images render in most clients, but Gmail converts them to PNG or JPEG and doesn't animate WebP; inline `<svg>` markup works in only about 40% of clients ([caniemail](https://www.caniemail.com/features/html-svg/)). Export diagrams to PNG for email.
 
 ## Keeping them true
 
@@ -97,7 +106,8 @@ A newsletter's images arrive in mail clients, not a browser you control:
 
 - [ ] Every visual earns its place; no generic stock as content, no image of text that could be written.
 - [ ] Every image is licensed and credited as its licence and the guide ask; identifiable people consented.
-- [ ] Alt text serves the piece's purpose; images of text carry their words.
+- [ ] Alt text serves the piece's purpose, decorative images have an empty `alt`, images of text carry their words, and alt text runs about 150 characters or less.
+- [ ] Photos are compressed to the working size; a newsletter's images are JPEG, PNG or GIF, and its GIFs are under 1 MB.
 - [ ] Charts state the finding, start at zero, label directly, survive colour blindness and a phone screen, and have a source, a date and their data as text.
 - [ ] Edited, composite and AI-generated images are labelled.
 - [ ] Screenshots are scrubbed and captured with demo data; a tutorial doesn't screenshot every step.

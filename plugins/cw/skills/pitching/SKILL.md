@@ -30,7 +30,7 @@ Before pitching, read two things. **Whether to pitch at all** comes from the wri
 
 ## The pitch
 
-Short — the whole email readable without scrolling. In this order:
+Short — the whole email readable without scrolling: about 150–300 words is the working length (common practice), and no more than about 500 words even with an outline. Outlets that set a cap mean it — [The Open Notebook](https://www.theopennotebook.com/submissions-guidelines/) asks for no more than 3,000 characters, about 500 words. In this order:
 
 1. **Subject line** that states the idea, not "Pitch" alone: `Pitch: Rotating API keys without downtime, a step-by-step guide`.
 2. **The idea in one or two sentences** — what the reader will be able to do or understand.
@@ -58,7 +58,8 @@ Before writing, get the terms in writing — an email confirming them is enough 
 
 - **Scope and angle** — the approved outline, the reader, anything the editor added or cut.
 - **Length and deadline**, and the date of any outline or draft checkpoint.
-- **Fee and when it's paid** — on acceptance or on publication, and how (invoice, platform, bank transfer).
+- **Fee and when it's paid** — on acceptance or on publication, and how (invoice, platform, bank transfer). Judge the fee per word or per piece against the outlet's published rates and what other writers report it pays; a rate that's well below that for the work asked is a reason to negotiate or decline.
+- **Payment terms** — how many days after the invoice; 30 days ("net 30") is the usual term where none is stated (common practice).
 - **Rights granted** — which rights, where, in what formats, and for how long. Exclusivity for a period starting on publication is normal; the Guild calls its duration "the key point", because later uses of the piece have value. LogRocket, for example, asks to "keep it exclusive to us for the first month". Avoid granting all rights or work-for-hire unless the fee reflects it; the Guild notes a piece isn't a work made for hire unless you expressly agree in writing that it is.
 - **Reversion** — rights return to the writer if the outlet doesn't publish within an agreed time.
 - **Kill fee** — what's paid if the outlet commissions the piece and then doesn't run it. The Guild recommends a kill fee of "50 percent (or higher) of the agreed fee", with expenses reimbursed in full, and prefers payment on acceptance that's nonrefundable.
@@ -81,20 +82,20 @@ Before writing, get the terms in writing — an email confirming them is enough 
 
 ## Invoicing and records
 
-- **Invoice on the agreed trigger** — acceptance or publication — with the piece title, the agreed fee, the date, payment details and any reference the outlet asked for. Keep a copy.
+- **Invoice on the agreed trigger** — acceptance or publication — with the piece title, the agreed fee, the date, the payment terms, payment details and any reference the outlet asked for. Keep a copy, and chase politely once the terms lapse.
 - **Keep a pitch log**: outlet, editor, idea, date sent, follow-up date, outcome, fee, rights, exclusivity end date, published link, payment received. It shows which ideas to re-pitch, when a follow-up is due and when a piece can be republished.
 
 ## Before sending a pitch
 
 - [ ] The outlet is open to pitches and you've followed its guidelines exactly.
 - [ ] The idea is new to this outlet and fits its readers and piece types.
-- [ ] Subject line names the idea; idea, why this outlet, why now, why you, title, outline, length, timing, clips — and nothing else.
+- [ ] Subject line names the idea; idea, why this outlet, why now, why you, title, outline, length, timing, clips — and nothing else, in about 150–300 words, within any cap the outlet sets.
 - [ ] The outline is in the format the outlet asked for, in the email body.
 - [ ] You know your follow-up date and whether simultaneous pitches are allowed.
 
 ## Before writing the piece
 
-- [ ] Scope, length, deadline, fee, payment trigger, rights, exclusivity period, reversion, kill fee, byline and editing process are confirmed in writing.
+- [ ] Scope, length, deadline, fee, payment trigger and terms, rights, exclusivity period, reversion, kill fee, byline and editing process are confirmed in writing.
 - [ ] You have the outlet's style guide, or a short one built with `cw:style-guide` and confirmed with the editor.
 
 ## Boundaries
