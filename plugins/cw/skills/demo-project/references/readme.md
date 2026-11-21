@@ -130,6 +130,7 @@ Write the metadata to a `github-about.md` file in the working tree; the user pas
 - **Description** — one sentence, at most 350 characters, core technology and what it is first.
 - **Website** — the live demo, otherwise the tutorial URL.
 - **Topics** — up to 20, lowercase and hyphenated, space-separated in the field; prefer the topic names GitHub suggests, covering the stack, the domain and `tutorial` or `example` where they fit.
+- **Social preview image** — set in the repository's settings, so a shared link to the repo shows a card. Reuse the piece's cover (`cw:cover-images`): PNG, JPG or GIF under 1 MB, at least 640 × 320, best at 1280 × 640 ([GitHub](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/customizing-your-repositorys-social-media-preview)).
 
 ```markdown
 # GitHub About (paste into the repo's About panel, then delete this file)
@@ -139,6 +140,8 @@ Write the metadata to a `github-about.md` file in the working tree; the user pas
 **Website:** <demo or tutorial URL>
 
 **Topics:** tag-one tag-two tag-three
+
+**Social preview:** <the cover file to upload in Settings>
 ```
 
 ## Style

@@ -43,6 +43,8 @@ Collect from what readers do, not from guesses about what they might want.
   - Google Trends shows relative interest, "scaled on a range of 0 to 100" from a sample of searches; it compares topics and seasons, never absolute volume ([Google Trends help](https://support.google.com/trends/answer/4365533)).
   - Autocomplete predictions "reflect real searches that have been done on Google", though Google warns they aren't the most common queries and shouldn't be compared with Trends ([Google autocomplete help](https://support.google.com/websearch/answer/7368877)).
   - The related questions Google shows beside results suggest the follow-up questions a piece should answer (practice).
+  - Google Ads' Keyword Planner estimates the number of searches a keyword gets each month ([Keyword Planner help](https://support.google.com/google-ads/answer/7337243)); accounts without active ad spend often see broad ranges, which are still enough to compare two ideas (common practice).
+- **What kind of page wins** — search the query and look at what ranks. If the results are product pages, tools or videos, a post won't take the spot; plan the kind of piece the results show the reader wants (common practice).
 - **Gaps from the last review** — the findings of `/cw:content-performance`: decayed pieces, missing pieces, queries with no page.
 - **The writer's own work** — what they built, broke, measured or learned this month. First-hand material is the hardest to copy and the easiest to trust.
 
@@ -68,7 +70,7 @@ Experience matters because Google asks whether content "clearly demonstrate[s] f
 - **Topics chosen only because they trend.** Google lists "writing about things simply because they seem trending" and "producing lots of content on many different topics" as signs of search-engine-first content ([Google: helpful content](https://developers.google.com/search/docs/fundamentals/creating-helpful-content)).
 - **Volume for its own sake.** Scaled content abuse is "when many pages are generated for the primary purpose of manipulating search rankings and not helping users", "no matter how it's created" — including generating many pages with AI "without adding value for users" ([Google spam policies](https://developers.google.com/search/docs/essentials/spam-policies#scaled-content)).
 - **Near-duplicate pieces** — one per keyword variant, or the same piece retold for a new year. Update the original instead (`cw:content-refresh`).
-- **A word-count target.** Google has no preferred length; a piece is as long as its job.
+- **A fixed word-count target.** Google has no preferred length; size each piece by its job and by what currently ranks for its question. As a reference point, one annual survey of content marketers put the average post at 1,333 words in 2025, with 9% publishing over 2,000 words and those writers more likely to report strong results ([Orbit Media via MarketingProfs](https://www.marketingprofs.com/charts/2025/53736/blogging-benchmarks-2025-word-count-frequency-study-orbit-media)) — an average, not a target.
 
 ## Series and clusters
 
@@ -92,9 +94,19 @@ Balance what the plan asks of readers and of the writer:
 - **Plan the distribution with the piece** — the newsletter issue that carries it (`cw:newsletter-standards`), the posts that share it (`cw:social-media-posts`), the copies on other platforms (`cw:cross-posting`).
 - **Date the seasonal and the timely** — launches, events, the start of a tax year — far enough ahead to write them well.
 
+## A brief for each scheduled piece
+
+Before drafting starts, each scheduled piece gets a short brief (standard editorial practice):
+
+- the reader, and the question in their words;
+- the search query and the kind of page that ranks for it;
+- the angle — what this piece adds that the others don't;
+- an outline, the sources to check (`cw:content-research`) and the people to interview (`cw:sme-interviews`);
+- the one action it asks for, and the internal links in and out.
+
 ## Where the plan lives
 
-Keep the plan beside the publication's `profile.md` and `writing-guide.md` — a `plan.md` with the idea list, the scores, the series, and the calendar. In a codebase, save it in the publication's folder; in a chat app, give the user the file to add to the project. Never write it inside the installed plugin: an update replaces the plugin's files and the plan goes with them.
+Keep the plan beside the publication's `profile.md` and `writing-guide.md` — a `plan.md` with the idea list, the scores, the series, the calendar and the briefs. In a codebase, save it in the publication's folder; in a chat app, give the user the file to add to the project. Never write it inside the installed plugin: an update replaces the plugin's files and the plan goes with them.
 
 Each entry records:
 

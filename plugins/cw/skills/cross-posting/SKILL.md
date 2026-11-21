@@ -23,6 +23,19 @@ Voice, person, tone, terminology, formatting choices and who the reader is come 
 
 When a guide changes: in a codebase, save the file where it was found; in a chat app, give the user the updated file to replace in the project. Never write inside the installed plugin.
 
+## Decide which copies to make
+
+Before setting anything up, decide where copies go and what kind each is:
+
+1. **Where the profile's readers already are.** A copy on a platform the publication's readers don't use costs effort and earns nothing; the profile's channels and audience decide it.
+2. **What each platform gets:**
+   - a **full copy** where the platform can point search engines back to the original (a canonical field);
+   - an **excerpt** — the opening two or three paragraphs, or about 150–300 words, ending in a "continue reading" link — where it can't (common practice);
+   - a **summary post** with a link where the platform is a feed rather than a publication.
+3. **The order**, with the original first and the copies spaced out (see Timing).
+
+Record the decision beside the publication's guide, with the list of copies (Keeping copies in step).
+
 ## What the search engines ask for
 
 The two engines disagree, so a copy is set up for both where the platform allows it.
@@ -52,7 +65,7 @@ Check a copy after it's live: open its page source and confirm the canonical lin
 
 ## Timing
 
-- **Publish the original first, and wait until it's indexed** before any copy goes out — a copy that's crawled first can be taken for the original. Check the original's URL in Google Search Console's URL Inspection, or search for its exact title.
+- **Publish the original first, and wait until it's indexed** before any copy goes out — a copy that's crawled first can be taken for the original. Check the original's URL in Google Search Console's URL Inspection, or search for its exact title. A few days to two weeks after the original is the usual gap (common practice).
 - **Space the copies**, rather than posting everywhere the same hour, so each platform's readers get the piece when it suits them and the original has a head start.
 
 ## Adapting the copy

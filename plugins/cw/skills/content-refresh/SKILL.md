@@ -30,7 +30,11 @@ When a guide changes: in a codebase, save the file where it was found; in a chat
 - **A reader reports a problem** — an error, a broken step, a dead link. Treat every report as a lead to check, not a fix to apply blindly.
 - **The demo or code no longer runs** on the current versions.
 - **A newer piece covers the same ground**, or the publication's own thinking has changed.
-- **On the publication's review cadence**, for pieces that carry facts which date — the cadence itself comes from `/cw:content-performance`.
+- **On a review cadence** the publication records in its guide (common practice where it records none):
+  - the pieces that bring in most readers, every quarter;
+  - pieces built on fast-moving facts — prices, versions, laws — every six months;
+  - every other piece at least once a year;
+  - at once, when clicks fall by about 30% or more against the same period a year earlier (`/cw:content-performance`).
 
 ## Decide what the piece needs
 
@@ -49,6 +53,8 @@ A piece that is wrong but still useful is corrected, not retired. A piece that o
 ## Refresh: what to recheck
 
 Work through the piece as a reader arriving today:
+
+- **What ranks for its question now** — search the query and read the top results. A shift in what readers want (a comparison where a how-to used to win), subtopics the piece misses, and the follow-up questions Google shows beside the results are the usual reasons a sound piece slipped (common practice).
 
 - **Facts and figures** — every number, price, date, statistic and "currently", against its original source. A figure whose source has updated gets the new figure and the new source.
 - **Versions and steps** — every version named, and every step of a tutorial run again on the current versions (`write:code-samples`, Code in a tutorial).
@@ -108,6 +114,7 @@ Work through the piece as a reader arriving today:
 ## After a substantial refresh
 
 - **Recheck findability** — the title, description, slug and opening still match the question the piece answers (`cw:seo-aeo-geo`).
+- **Ask Google to recrawl it** — in a site you manage in Search Console, request indexing for the URL with URL Inspection ([Google: ask Google to recrawl](https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl)). The sitemap's `<lastmod>` should change with a substantive update and only then: Google uses it only when it's "consistently and verifiably" accurate ([Google: sitemaps](https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap)). Setting it is the site's developers' work or the CMS's.
 - **Re-promote what changed** — a new angle or a materially better answer is worth sharing again (`cw:social-media-posts`); a significant update can go in the newsletter (`cw:newsletter-standards`).
 - **Record the refresh** where the publication tracks its pieces, so the next review knows it was checked and when.
 

@@ -100,13 +100,21 @@ For a fast edit, or a short piece that doesn't need all five levels. The plain-l
 - **Sentence level** — one idea per sentence, long sentences checked, lengths varied, the point where the reader needs it.
 - **Paragraph level** — one topic each, a strong first sentence, white space between.
 - **Piece level** — read only the title, the opening and the subheads: do they tell a scanning reader what the piece is and where to find their part?
+- **Working targets** — paragraphs of 150 words or fewer, a subheading at least every 300 words, and no more than a quarter of sentences over 20 words ([Yoast's scoring](https://github.com/Yoast/wordpress-seo/blob/trunk/packages/yoastseo/src/scoring/assessments/SCORING%20READABILITY.md)); roughly a US grade 8–9 reading level for a general audience (common practice). Run a checker such as Hemingway or Yoast and treat the score as a pointer to sentences worth a look, never as the goal.
+
+Techniques editors use on every pass (common practice):
+
+- **Leave a gap** between drafting and editing, overnight if the deadline allows; the writer's eye fills in what isn't there.
+- **Read it aloud**, or have the device read it; rhythm problems and missing words surface by ear.
+- **Change the view** for the proof — a different font, the phone preview, a printout — so the eye reads what's on the page, not what it remembers.
+- **Cut by a tenth.** A second draft roughly 10% shorter than the first is a common target, and the cut usually comes from throat-clearing and repetition.
 
 ## The AI-tell pass
 
 Run it on anything published under a person's name — a reader who decides a piece was generated stops trusting the author. The full catalogue is the AI writing detection reference in `write:writing-standards`; the short version:
 
 - **Claims that don't hold** — a citation, quote or study that doesn't exist or doesn't say what the piece claims. Check the sources before the style.
-- **Em-dash density** — the flag is frequency and pattern, not the character: about 3 per 1,000 words is a signal, 6 is strong, and two in one paragraph is worth a look; swap for commas, colons, parentheses or a full stop. A guide whose voice uses em-dash asides wins.
+- **Em-dash density** — the flag is frequency and pattern, not the character: more than about 3 per 1,000 words is a signal, more than about 6 or two in one paragraph is strong. That's a working threshold, the same one `/write:ai-check` scores against, not a published standard; swap for commas, colons, parentheses or a full stop. A guide whose voice uses em-dash asides wins.
 - **Stock vocabulary** — delve, leverage, robust, comprehensive, pivotal, seamless, transformative, "furthermore", "moreover".
 - **Stock phrases** — "In today's fast-paced world…", "It's worth noting that…", "At its core…", "In conclusion…", "Whether you're a X, Y, or Z…". Delete, or rewrite as something the author would say aloud.
 - **Structural patterns** — every section the same length, every list exactly three items, a summary restating what was just said, a closing that congratulates the reader, an opinion piece that never takes a side.

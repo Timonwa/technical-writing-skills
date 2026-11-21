@@ -38,7 +38,7 @@ Rights, credits and consent for a photo follow the same rules as any image in th
 
 ## Words on the image
 
-- **Few words, large type.** A card is often seen at a few hundred pixels wide on a phone; a title that needs reading at full size is unreadable there. A short version of the title, or none.
+- **Few words, large type.** A card is often seen at a few hundred pixels wide on a phone; a title that needs reading at full size is unreadable there. A short version of the title, or none — about six to eight words at most (common practice).
 - **Contrast** of at least 4.5:1 between the words and what's behind them, the same bar as any text ([WCAG 1.4.3](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html)). Over a photo, put the words on a solid band or a darkened area, not straight on a busy background.
 - **Never the only place the title appears.** The card's title and description come from the page's text, and a screen reader, a search engine and a reader with images off get only those. The image adds to the title; it never replaces it.
 
@@ -46,14 +46,14 @@ Rights, credits and consent for a photo follow the same rules as any image in th
 
 Each platform crops and limits the image differently. One file covers them all if it follows the tightest rules:
 
-| Platform                              | What it asks for                                                                                                                                                                         |
-| ------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Facebook and other Open Graph readers | at least 1200 × 630, as close to 1.91:1 as possible, under 8 MB ([Meta](https://developers.facebook.com/docs/sharing/webmasters/images/))                                                |
-| LinkedIn                              | at least 1200 × 627, 1.91:1, up to 5 MB; under 401 px wide shows as a small thumbnail ([LinkedIn](https://www.linkedin.com/help/linkedin/answer/a521928))                                |
-| X                                     | the large-image card is 2:1, 300 × 157 to 4096 × 4096, under 5 MB; no SVG ([X](https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/summary-card-with-large-image)) |
-| Bluesky                               | any image type, at most 1 MB ([Bluesky's link-card schema](https://github.com/bluesky-social/atproto/blob/main/packages/api/lexicons/app/bsky/embed/external.json))                      |
-| Mastodon                              | JPEG, PNG, GIF or WebP up to 8 MB, shown at about 640 × 360 ([Mastodon source](https://github.com/mastodon/mastodon/blob/main/app/models/preview_card.rb))                               |
-| Google Discover                       | at least 1200 px wide, 16:9 preferred, never a logo ([Google](https://developers.google.com/search/docs/appearance/google-discover))                                                     |
+| Platform                              | What it asks for                                                                                                                                                                                                                       |
+| ------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Facebook and other Open Graph readers | at least 1200 × 630, as close to 1.91:1 as possible, under 8 MB ([Meta](https://developers.facebook.com/docs/sharing/webmasters/images/))                                                                                              |
+| LinkedIn                              | at least 1200 × 627, 1.91:1, up to 5 MB; under 401 px wide shows as a small thumbnail ([LinkedIn](https://www.linkedin.com/help/linkedin/answer/a521928))                                                                              |
+| X                                     | the large-image card is 2:1, 300 × 157 to 4096 × 4096, under 5 MB; no SVG ([X](https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/summary-card-with-large-image))                                               |
+| Bluesky                               | any image type, at most 1 MB ([Bluesky's link-card schema](https://github.com/bluesky-social/atproto/blob/main/packages/api/lexicons/app/bsky/embed/external.json))                                                                    |
+| Mastodon                              | JPEG, PNG, GIF or WebP up to 8 MB, shown at about 640 × 360 ([Mastodon source](https://github.com/mastodon/mastodon/blob/main/app/models/preview_card.rb))                                                                             |
+| Google Discover                       | at least 1200 px wide and more than 300,000 pixels, 16:9 preferred, never a logo; large images also need the site's `max-image-preview:large` setting ([Google](https://developers.google.com/search/docs/appearance/google-discover)) |
 
 So the share image is:
 
@@ -62,7 +62,9 @@ So the share image is:
 - **JPEG or PNG** — WebP where the platform supports it, never SVG.
 - **Cropped safely.** The same image is shown at 1.91:1, 2:1, 16:9, 3:2 and sometimes square. Keep the subject and any words in the centre, inside the square that survives a 1:1 crop (the middle 630 × 630 of a 1200 × 630 image), with nothing that matters at the edges.
 
-The cover on the page itself is sized by the platform's theme: upload the largest size it asks for and let it resize down. A newsletter's header image follows email's rules → `cw:images-and-diagrams`.
+That one file covers the social cards. For Google, where the publishing platform lets you add more crops of the cover, Article structured data recommends several images at 16:9, 4:3 and 1:1, each at least 50,000 pixels ([Google: Article structured data](https://developers.google.com/search/docs/appearance/structured-data/article)).
+
+The cover on the page itself is sized by the platform's theme: upload the largest size it asks for and let it resize down. It's usually the largest thing on the page, so it decides how fast the page appears: compress it to roughly 200 KB or less, and use WebP or AVIF on the page where the platform allows (common practice). Never lazy-loading it and giving it high fetch priority are the site's developers' work ([web.dev: optimise LCP](https://web.dev/articles/optimize-lcp)). A newsletter's header image follows email's rules → `cw:images-and-diagrams`.
 
 ## Alt text
 
@@ -75,7 +77,7 @@ A reader should recognise the publication's cards in a feed before reading them.
 
 ## Who sets what
 
-The writer chooses the image, its words and its alt text, and enters them in the publishing platform's social-image fields. The tags that carry them to other sites — `og:image`, `og:image:alt`, `twitter:card` — are written by the site's code. Where the platform has no field for the share image, or the wrong image keeps appearing, that's the site's developers' work; name what's wrong rather than working around it.
+The writer chooses the image, its words and its alt text, and enters them in the publishing platform's social-image fields. The tags that carry them to other sites — `og:image`, `og:image:alt`, `twitter:card` — and the `max-image-preview:large` robots setting Google Discover needs are written by the site's code. Where the platform has no field for the share image, or the wrong image keeps appearing, that's the site's developers' work; name what's wrong rather than working around it.
 
 ## Check the preview before posting
 

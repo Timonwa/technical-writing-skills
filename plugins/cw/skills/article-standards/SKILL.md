@@ -1,7 +1,7 @@
 ---
 name: article-standards
 description: >-
-  Writing and reviewing a published piece for any blog or publication — deciding what the piece is and whether it earns its existence, structuring it for readers who scan rather than read, the inverted pyramid, first-hand experience and trust signals, disclosure, accessible formatting, and the pre-publish checklist. Works for any subject — technical, food, fitness, finance — by reading the publication's profile for voice, audience and purpose. Use on "write an article", "draft a post", "review this draft", "does this match our style".
+  Writing and reviewing a published piece for any blog or publication — deciding what the piece is and whether it earns its existence, the title and opening, structuring it for readers who scan, readability targets, first-hand experience and trust signals, disclosure, accessible formatting, and the pre-publish checklist. Works for any subject — technical, food, fitness, finance — by reading the publication's profile for voice, audience and purpose. Use on "write an article", "draft a post", "review this draft", "does this match our style".
 ---
 
 # Article standards
@@ -32,6 +32,17 @@ When a guide changes: in a codebase, save the file where it was found; in a chat
 
 **The profile wins over precedent.** A published piece that breaks the profile is a miss, not a pattern to match.
 
+## Does this piece deserve to exist
+
+Google's [people-first standard](https://developers.google.com/search/docs/fundamentals/creating-helpful-content) is a useful editorial test whether or not you care about ranking: after reading, does someone feel they got what they came for, or do they go back to search for a better answer? Since March 2024 Google judges helpfulness inside its core ranking systems, mainly page by page but with some site-wide signals ([Google](https://developers.google.com/search/blog/2024/03/core-update-spam-policies)), so a body of thin pieces can weigh on the good ones.
+
+Before drafting, be able to answer:
+
+- **What does this add that the existing pieces on this topic don't?** If the honest answer is nothing, either find the angle only you have or don't write it.
+- **What first-hand evidence can you show?** Your own photos, your own measurements, the error you actually hit, the thing that went wrong on attempt three. Experience is the part of E-E-A-T that can't be faked or researched — and it's the part readers can tell is missing.
+- **Who is it for, and what will they do differently afterwards?**
+- **Can every factual claim be sourced?** Anything about health, money, safety or law needs a citation, not a recollection.
+
 ## Decide what the piece is
 
 Classify by what the reader wants to walk away able to do. The publication's own name for the type comes from its profile; this is the underlying intent, and it decides the structure.
@@ -48,16 +59,14 @@ One intent per piece. A piece serving two is usually two pieces, and it serves n
 
 The section-by-section blueprint for each intent is in [references/article-structures.md](references/article-structures.md).
 
-## Does this piece deserve to exist
+## Title and opening
 
-Google's [people-first standard](https://developers.google.com/search/docs/fundamentals/creating-helpful-content) is a useful editorial test whether or not you care about ranking: after reading, does someone feel they got what they came for, or do they go back to search for a better answer? Since March 2024 Google judges helpfulness inside its core ranking systems, mainly page by page but with some site-wide signals ([Google](https://developers.google.com/search/blog/2024/03/core-update-spam-policies)), so a body of thin pieces can weigh on the good ones.
+The title and the first screen decide whether anyone reads the rest.
 
-Before drafting, be able to answer:
-
-- **What does this add that the existing pieces on this topic don't?** If the honest answer is nothing, either find the angle only you have or don't write it.
-- **What first-hand evidence can you show?** Your own photos, your own measurements, the error you actually hit, the thing that went wrong on attempt three. Experience is the part of E-E-A-T that can't be faked or researched — and it's the part readers can tell is missing.
-- **Who is it for, and what will they do differently afterwards?**
-- **Can every factual claim be sourced?** Anything about health, money, safety or law needs a citation, not a recollection.
+- **The meaning in the first words.** Readers scanning a list of titles often take in only the first couple of words, so lead with the words that carry the subject ([NN/g](https://www.nngroup.com/articles/first-2-words-a-signal-for-scanning/)).
+- **A shape the profile uses** — a how-to, a number, a question, an outcome — chosen for the piece's intent. The title tag and its length are `cw:seo-aeo-geo`'s; the headline on the page can carry more voice.
+- **Write two or three candidates** and pick the one that promises exactly what the piece delivers. Where the platform can test headlines, test them; newsrooms run headline tests routinely, and winners have lifted click-through by 20% or more ([Nieman Lab](https://www.niemanlab.org/2021/10/how-a-b-testing-can-and-cant-improve-your-headline-writing/)).
+- **A short opening before the payoff:** about two to four sentences, or under about 100 words, before the reader gets what the title promised (common practice). A story opening is fine where the guide uses one; the point still arrives by the second or third paragraph.
 
 ## Structure for someone who is scanning
 
@@ -71,6 +80,9 @@ Eye-tracking research finds people scan web pages rather than read them, and on 
 - **Highlight the load-bearing words** — bold or a link on the term that matters, not on whole sentences.
 - **Lists for parallel items, tables for comparisons, prose for argument.** A three-way comparison in prose is unreadable; an argument in bullets loses its reasoning.
 - **Break up long stretches.** A screen of unbroken text reads as work before it reads as anything else.
+- **Working targets for readability**, from Yoast's published scoring: paragraphs of 150 words or fewer, a subheading at least every 300 words, and no more than a quarter of sentences over 20 words ([Yoast](https://github.com/Yoast/wordpress-seo/blob/trunk/packages/yoastseo/src/scoring/assessments/SCORING%20READABILITY.md)). For a general audience, aim for roughly a US grade 8–9 reading level on a checker such as Hemingway (common practice); the score is a pointer, not the goal.
+- **Long pieces get a way in:** a short summary or key-takeaways box at the top, a table of contents, and a reading time where the platform shows one (common practice).
+- **Two to five internal links** to related pieces, and a link back from an older piece to the new one, so neither is stranded (common practice).
 
 ## Writing it
 
@@ -78,9 +90,16 @@ Eye-tracking research finds people scan web pages rather than read them, and on 
 - **Show the failure case.** What goes wrong, what it looks like when it does, and how to recover. A piece that only describes the happy path reads as untested, whatever the subject.
 - **Trust the reader.** Link prerequisites instead of re-teaching them, and cut anything that tells them what they just read.
 - **Explain before you show.** Whatever the artefact is — a code block, a table, a chart, a photo of a technique — a sentence first saying what it is and why it's there.
-- **Descriptive link text.** "Read the caching write-up", never "click here"; assistive technology lists links out of context, and a scanning reader reads them the same way.
 - **Every claim that isn't yours gets a source**, linked inline where a reader would want to check it.
-- **Alt text on every image**, and never information carried only in an image.
+
+## Accessible formatting
+
+- **One H1, headings in order** — no skipped levels, so a screen reader's outline matches the piece.
+- **Descriptive link text.** "Read the caching write-up", never "click here"; assistive technology lists links out of context, and a scanning reader reads them the same way.
+- **Alt text on every informative image**, written from its purpose, and never information carried only in an image (`cw:images-and-diagrams`).
+- **Captions or a transcript** for video and audio ([WCAG 1.2](https://www.w3.org/WAI/WCAG22/quickref/#time-based-media)).
+- **Never meaning by colour alone** — "the red line" needs a label too ([WCAG 1.4.1](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html)).
+- **Tables with a header row**, used for data rather than layout.
 
 ## Trust and disclosure
 
@@ -100,7 +119,10 @@ Eye-tracking research finds people scan web pages rather than read them, and on 
 - [ ] Every number, quantity and quote is real.
 - [ ] Every non-obvious claim has a source.
 - [ ] First-hand evidence is present and identifiable as first-hand.
-- [ ] Images have alt text; nothing important exists only inside an image.
+- [ ] Title leads with the words that carry the subject; the opening reaches the payoff in about 100 words.
+- [ ] Paragraphs, sections and sentences within the readability targets, or deliberately not.
+- [ ] One H1, headings in order; images have alt text; captions for video and audio; nothing carried by colour alone.
+- [ ] Two to five internal links, and an older piece links here.
 - [ ] Link text is descriptive; every link resolves and is canonical.
 - [ ] Required disclosures appear before the content they affect.
 - [ ] Byline and date present.

@@ -1,7 +1,7 @@
 ---
 name: content-performance
 description: >-
-  Manually invoked. Turns an exported analytics file from any platform into a ranked list of content fixes — titles to rewrite where impressions are high but clicks are not, pages decaying in rank, queries you rank for with no page, orphaned or thin pages, internal links worth adding, and AI-assistant referrals where the export shows them. Works from whatever columns the export actually has. Reports only; never edits a page.
+  Manually invoked. Turns an exported analytics file (search, web analytics, AI-answer reports or email) into a ranked list of content fixes — titles to rewrite where impressions are high but clicks are not, pages decaying in rank, queries you rank for with no page, orphaned or thin pages, internal links worth adding, and AI-assistant referrals where the export shows them. Works from whatever columns the export actually has. Reports only; never edits a page.
 argument-hint: "[path to export(s)] [site URL]"
 disable-model-invocation: true
 ---
@@ -39,15 +39,16 @@ Without that answer, the ranking optimises for whatever the export happens to me
 
 Any platform's export is fine, because the analysis keys off **columns, not tools**. Read the header row first, map it to the signals below, and work with what's there.
 
-| Signal you need    | Columns that carry it, whatever they're called                     |
-| ------------------ | ------------------------------------------------------------------ |
-| **Reach**          | impressions · views · pageviews · sessions · displays              |
-| **Engagement**     | clicks · visits · entrances · CTR (or derive it from clicks/reach) |
-| **Position**       | position · rank · avg. rank · SERP position                        |
-| **Query**          | query · keyword · search term                                      |
-| **Page**           | page · URL · address · landing page · path · slug                  |
-| **Time**           | date · period · month · week — needed for any trend claim          |
-| **Onward journey** | bounce rate · exits · time on page · next page · scroll depth      |
+| Signal you need    | Columns that carry it, whatever they're called                               |
+| ------------------ | ---------------------------------------------------------------------------- |
+| **Reach**          | impressions · views · pageviews · sessions · displays                        |
+| **Engagement**     | clicks · visits · entrances · CTR (or derive it from clicks/reach)           |
+| **Position**       | position · rank · avg. rank · SERP position                                  |
+| **Query**          | query · keyword · search term                                                |
+| **Page**           | page · URL · address · landing page · path · slug                            |
+| **Time**           | date · period · month · week — needed for any trend claim                    |
+| **Onward journey** | engagement rate · average engagement time · exits · next page · scroll depth |
+| **Email**          | sends · delivered · opens · clicks · click-to-open · unsubscribes            |
 
 - **Say what the data can't answer.** No click column means no CTR findings; no position column means no decay or striking-distance findings; one date range means no trend findings. Name the sections you're skipping and why, rather than filling them with guesses.
 - **Ask when a column is ambiguous** — "views" can mean sessions or pageviews, and the difference changes the conclusion. One question beats a wrong ranking.
@@ -55,9 +56,19 @@ Any platform's export is fine, because the analysis keys off **columns, not tool
 - **Two windows beat one.** For anything about decay or growth, ask for a second export from an earlier period — a single snapshot cannot show a trend.
 - **Attribute every claim** to the export and date range it came from, since a 7-day window and a 12-month window support very different recommendations.
 
+What the common exports mean, so a number isn't misread:
+
+- **Search Console** keeps 16 months of data. Its average position is the topmost position the page appeared at, averaged across impressions, and it hides rare queries for privacy, so query rows add up to less than page totals ([Search Console Performance report](https://support.google.com/webmasters/answer/7576553)).
+- **Google Analytics 4** has no time-on-page metric. Its engaged session lasts longer than 10 seconds, records a key event, or has two or more page views, and its bounce rate is the share of sessions that weren't engaged ([GA4 engagement](https://support.google.com/analytics/answer/12195621)). Use engagement rate and average engagement time.
+- **Email platforms** inflate opens through privacy features that load images automatically, so judge an issue on clicks and click-to-open against the publication's own earlier issues (`cw:newsletter-standards`).
+
 ## What to look for
 
-Work through whichever the data supports:
+Work through whichever the data supports, with thresholds stated so a re-run reaches the same findings:
+
+- **"Low CTR"** means below the site's own median CTR for pages at the same position. An outside curve helps as a sanity check: around 26% for position 1 in one 2025 study, lower again when an AI Overview shows ([Advanced Web Ranking](https://www.advancedwebranking.com/seo/organic-ctr)).
+- **"Real impressions"** means past a minimum count the report states up front and applies to every finding (common practice), so one-off queries don't drive rewrites.
+- **"A long window"** for thin pages is 6–12 months, and any decay claim compares a period with the same period a year earlier, so seasonality isn't read as decline (common practice).
 
 | Finding                     | The signal                                                    | The fix                                                           |
 | --------------------------- | ------------------------------------------------------------- | ----------------------------------------------------------------- |
@@ -72,7 +83,13 @@ Work through whichever the data supports:
 
 ## Traffic from AI answer engines
 
-Referrals from AI assistants appear in analytics as ordinary referral traffic where they appear at all, and a citation that produces no click produces no row anywhere. Where the export carries referral sources, report what it shows; where it doesn't, say the question can't be answered from this data instead of estimating. Making a piece easier to quote and cite is `cw:seo-aeo-geo`'s work.
+Report only what the export carries, and name which kind of data it is:
+
+- **Search Console's Generative AI performance report** counts impressions in AI Overviews and AI Mode — impressions only, no clicks ([Google](https://support.google.com/webmasters/answer/16984139)). Those impressions are also inside the normal Performance report, so don't add the two.
+- **Bing Webmaster Tools' AI Performance report** counts citations in Copilot and Bing's AI answers, without clicks ([Search Engine Land](https://searchengineland.com/bing-webmaster-tools-ai-performance-report-468751)).
+- **Google Analytics 4's AI Assistant channel** counts visits from assistants such as ChatGPT, Gemini and Copilot; visits from AI Overviews and AI Mode land in Organic Search instead ([GA4 channels](https://support.google.com/analytics/answer/9756891)). ChatGPT's links are commonly tagged `utm_source=chatgpt.com` (reported by third parties, not by OpenAI).
+
+Where the export carries none of these, say the question can't be answered from this data instead of estimating. Making a piece easier to quote and cite is `cw:seo-aeo-geo`'s work.
 
 ## Reporting
 

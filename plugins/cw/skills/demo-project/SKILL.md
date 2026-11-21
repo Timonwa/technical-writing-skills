@@ -54,13 +54,14 @@ Name branches and tags after what the piece calls them. Never rewrite a branch o
 - **Install and run in the commands the piece gives**, and nothing else: no global installs it doesn't mention, no step only the author's machine has.
 - **A smoke check proves it runs**: a test, a script, or a build that exits non-zero when the demo is broken. The README names the command.
 - **Before publishing, run the piece from a fresh clone on a clean environment** — a new directory, a container or a CI job — copying commands from the rendered piece, not from memory.
+- **Offer a way in without local setup** where the stack allows: a dev container definition (`.devcontainer/devcontainer.json`) that GitHub Codespaces can open ([GitHub Codespaces](https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/introduction-to-dev-containers)), or a link that opens the repo in an online editor. A reader who can't install the toolchain can still follow along (common practice).
 
 ## It keeps running
 
 Code rots as dependencies and platforms move on. Catch it before readers do:
 
 - **Run the smoke check in CI** on every push and on a schedule. A scheduled GitHub Actions workflow can run as often as every 5 minutes; a weekly or monthly run is plenty for a demo. In a public repository, scheduled workflows are disabled after 60 days with no repository activity, so a quiet demo repo needs its schedule re-enabled or another trigger ([GitHub Actions](https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows)).
-- **Turn on dependency updates** with a `dependabot.yml` committed in `.github/` ([GitHub](https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuring-dependabot-version-updates)) or an equivalent bot, on a slow schedule. An update that changes what the piece shows is merged only together with an update to the piece.
+- **Turn on dependency updates** with a `dependabot.yml` committed in `.github/` ([GitHub](https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuring-dependabot-version-updates)) or an equivalent bot, on a slow schedule, with updates grouped into one pull request per run so the bot stays quiet ([Dependabot groups](https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file)). An update that changes what the piece shows is merged only together with an update to the piece.
 - **A failing run means the piece may be wrong**, not only the repo. Check the piece's steps against the fix.
 
 ## Secrets and environment

@@ -45,6 +45,7 @@ Use original sources whenever possible ([SPJ Code of Ethics](https://www.spj.org
 - **Read laterally.** Before relying on an unfamiliar site or author, leave the page and see what others say about it — the "investigate the source" and "find better coverage" moves of [SIFT](https://hapgood.us/2019/06/19/sift-the-four-moves/).
 - **When the original can't be found, say so** in your notes, and either drop the claim or attribute it to where you did find it ("according to…"), never state it as established.
 - **A person is a source too.** When the written record runs out, or a claim needs an expert's judgement, interview → `cw:sme-interviews`.
+- **Tools that reach originals** (common practice): [Google Scholar](https://scholar.google.com) for papers and its "Cited by" list for what came after; the statistics portal of the agency that collects the figure; searches restricted with `site:` to an official domain and `filetype:pdf` for reports.
 
 ## Judge the source
 
@@ -95,9 +96,11 @@ Claim: Remote roles fell 18% year on year in Q2
 Source: Agency X, Labour Market Report Q2 2026, table 4 (link)
 Checked: 2026-11-12 — figure, period and wording match
 Notes: covers full-time roles only; say so in the piece
+Archived: web.archive.org link saved on 2026-11-12
 ```
 
 - **Every claim in the draft maps to a line**; a claim with no line gets one or comes out.
+- **Archive every web source you cite** with the Wayback Machine's [Save Page Now](https://web.archive.org/save) and record the archived link; pages move and change, and the archive shows what the source said when you checked it (common practice).
 - **Keep it after publishing** — it's what a correction, a reader's challenge or a refresh (`cw:content-refresh`) starts from.
 
 ## Cite in the piece
