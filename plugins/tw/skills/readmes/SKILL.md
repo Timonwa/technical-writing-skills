@@ -31,12 +31,15 @@ The right README shape depends on what the repo is — a library leads with inst
 Every shape draws from the same skeleton, in this order. Drop a section that doesn't apply; never reorder:
 
 1. **Title + one-liner** — what it does, in one sentence a stranger understands.
-2. **Badges** — only if they carry information someone acts on (CI status, published version, license). No decorative badge walls; 4 badges max.
-3. **Quickstart** — the shortest real path from clone/install to seeing it work.
-4. **Config / env** — the variables needed to get running, with name, required-or-not, and what it's for. **Up to ~10, table them; past that, list only the required ones and point at the project's example env file for the rest.** A 40-row table buries the quickstart and becomes a second copy that drifts on the next commit — the example env file is the source of truth, and a README that reproduces it wholesale is signing up to keep two files in sync. If the project uses environment variables but ships no example file, flag that it needs one.
-5. **Scripts table** — the commands a contributor actually runs (build, test, run locally, anything non-obvious), taken from wherever the project defines them: a package manifest, a Makefile, a task runner, or the documented commands themselves. Skip internal plumbing.
-6. **Contributing pointer** — one line linking `CONTRIBUTING.md` or stating the workflow (issues, PRs, branch naming). Not a policy essay.
-7. **License** — always present; link the `LICENSE` file.
+2. **Badges** — only if they carry information someone acts on (CI status, published version, license). No decorative badge walls; 4 at most (a house rule, not part of Standard Readme).
+3. **Table of contents** — for a README of 100 lines or more, linking every second-level heading ([Standard Readme](https://github.com/RichardLitt/standard-readme/blob/main/spec.md)).
+4. **Prerequisites** — what must already be installed, with versions: the runtime (Node 24, Python 3.12), the package manager, any service it needs.
+5. **Quickstart** — the shortest real path from clone/install to seeing it work, with install and usage each shown in a code block (Standard Readme).
+6. **Config / env** — the variables needed to get running, with name, required-or-not, and what it's for. **Up to ~10, table them; past that, list only the required ones and point at the project's example env file for the rest.** A 40-row table buries the quickstart and becomes a second copy that drifts on the next commit — the example env file is the source of truth, and a README that reproduces it wholesale is signing up to keep two files in sync. If the project uses environment variables but ships no example file, flag that it needs one.
+7. **Scripts table** — the commands a contributor actually runs (build, test, run locally, anything non-obvious), taken from wherever the project defines them: a package manifest, a Makefile, a task runner, or the documented commands themselves. Skip internal plumbing.
+8. **Support and security** — one line on where to get help (issues, discussions, a forum), and a pointer to `SECURITY.md` for reporting a vulnerability privately, where the repo has one ([GitHub community health files](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/creating-a-default-community-health-file)).
+9. **Contributing pointer** — one line linking `CONTRIBUTING.md` or stating the workflow (issues, PRs, branch naming). Not a policy essay.
+10. **License** — always present and always last ([Standard Readme](https://github.com/RichardLitt/standard-readme/blob/main/spec.md)); link the `LICENSE` file.
 
 ## Rules
 

@@ -29,7 +29,7 @@ Voice, person, tone, terminology, formatting choices and who the reader is come 
 
 **Take the voice from the guide.** Person ("you", "we", "I"), tone, humor, contractions, how much of the writer shows — those are the writing's identity, and they differ on purpose between a reference page and a personal essay. A voice stays constant while its tone shifts with the reader's situation ([Mailchimp](https://styleguide.mailchimp.com/voice-and-tone/)); the guide says which.
 
-## Establish the reader, the goal and the scope before writing
+## Before drafting: the reader, the goal and the scope
 
 - **Name the reader** — specifically enough to decide what they already know. Writing that tries to serve everyone serves no one.
 - **State what the reader leaves with** — what they can do, understand or decide afterwards that they couldn't before. Lead with that goal, not with the feature, the topic or the background.
@@ -39,27 +39,39 @@ Voice, person, tone, terminology, formatting choices and who the reader is come 
 
 > **The checkable rules are in [references/house-voice.md](references/house-voice.md)** — sentences, claims, credit and rights, structure, formatting, and keeping a piece true.
 
-## Writing principles
+## Plain language
 
-- **Plain language, active voice** — check sentences over about 25 words and split them unless the length is deliberate, vary sentence length, keep paragraphs short, and define a term on first use, then use exactly that term ([GOV.UK](https://guidance.publishing.service.gov.uk/writing-to-gov-uk-standards/writing-guidelines/clear-language/)). Plain language serves specialists too: it lets them understand faster. The international standard, [ISO 24495-1](https://www.iso.org/standard/78907.html), tests whether readers can find what they need, understand it and use it.
+- **Sentences averaging 15–20 words**, mixed short and long — the average the [Plain English Campaign](https://mstrust.org.uk/sites/default/files/plain_english_campaign_how_to_write_plain.pdf) recommends, which is an average, not a length for every sentence. Check any sentence over about 25 words and split it unless the length is deliberate ([GOV.UK](https://guidance.publishing.service.gov.uk/writing-to-gov-uk-standards/writing-guidelines/clear-language/)).
+- **Paragraphs of no more than 5 sentences** ([GOV.UK](https://guidance.publishing.service.gov.uk/writing-to-gov-uk-standards/writing-guidelines/clear-language/)), each doing one job.
+- **Active voice, everyday words, a term defined on first use and then used exactly.** Plain language serves specialists too: it lets them understand faster. The international standard, [ISO 24495-1](https://www.iso.org/standard/78907.html), tests whether readers can find what they need, understand it and use it.
+- **A reading level the reader can manage.** For a general audience, aim for a reading age of about 9 — UK government teams write to that "even if you are writing for a specialist audience" ([Home Office](https://design.homeoffice.gov.uk/accessibility/written-content/readability)) — and check it with a readability tool (Word's readability statistics, Hemingway). The score points at sentences to look at; it isn't the goal, and a specialist piece the guide pitches higher follows the guide.
+
+## Claims and evidence
+
 - **Put the most important thing first** — the answer, the result or the point in the opening lines, the qualification after ([GOV.UK](https://guidance.publishing.service.gov.uk/writing-to-gov-uk-standards/writing-guidelines/clear-structure/), [Microsoft](https://learn.microsoft.com/en-us/style-guide/brand-voice-above-all-simple-human)). A piece that opens on a story states why it matters by the second or third paragraph.
 - **Concrete over vague** — real numbers, names and timeframes. If a claim can't be made specific, it's probably filler.
 - **Certainty matches the evidence** — say plainly what's established, and "suggests" for what one study found. Overclaiming is a factual error, not a style choice.
 - **Show, don't assert** — evidence beside every claim that matters: a runnable example, a figure, a quote, a source, an anecdote with a point.
-- **Credit what you borrow** — words, ideas, data and images, linked to their originator, within their licence.
-- **Progressive disclosure** — simple before complex, the main path before the edge cases; link the advanced topic rather than burying a beginner in it.
-- **Structure for scanning** — most readers scan before they read. Headings that say what's under them in the reader's words, bullets for three or more parallel items, tables for anything compared across the same attributes.
 - **True, and traceable** — check names, figures, quotes and claims against the original source, never memory. A wrong fact costs the reader more than a missing one.
 
-## Formatting
+## Credit
+
+- **Credit what you borrow** — words, ideas, data and images, linked to their originator, within their licence; quote or paraphrase in your own words, never a close paraphrase. The rights and fairness checks are in [house-voice.md](references/house-voice.md#credit-rights-and-fairness).
+
+## Structure for scanning
+
+- **Most readers scan before they read.** Headings that say what's under them in the reader's words, bullets for three or more parallel items, tables for anything compared across the same attributes.
+- **Progressive disclosure** — simple before complex, the main path before the edge cases; link the advanced topic rather than burying a beginner in it.
+
+## Accessible formatting
 
 - **Formatting has meaning** — what bold and italics mark is the guide's decision, applied consistently; `code` for commands, identifiers and file names. Decoration that carries no meaning is noise to a screen reader and a scanner.
-- **Headings in order** — no skipped levels, and one H1 where the piece is kept as Markdown (a CMS usually supplies the title as the H1); link text that makes sense on its own, never "click here".
+- **Headings in order** — no skipped levels, and one H1 where the piece is kept as Markdown (a CMS usually supplies the title as the H1); link text that makes sense on its own, never "click here"; alt text on every meaningful image.
 - **Never hard-wrap prose** where the piece is kept as Markdown — one physical line per paragraph or list item; break only where Markdown requires it.
 
-## Worked examples
+## Keeping it true
 
-A documentation page: `tw:docs-standards`. An article: the content-writing skills (`cw`). Before-and-after edits: `tw:editing-standards` and `cw:editing-standards`.
+- **Living writing is fixed in the same change** that makes it wrong; a dated piece — an article, a sent issue — is corrected with a visible, dated note, never silently. One home per fact within a docs set or series; a standalone piece restates what its reader needs. The checks are in [house-voice.md](references/house-voice.md#keeping-it-true).
 
 ## Boundaries
 
@@ -69,4 +81,5 @@ A documentation page: `tw:docs-standards`. An article: the content-writing skill
 - **Getting facts out of an expert or a source** → `tw:sme-interviews` or `cw:sme-interviews`.
 - **Code in a piece** → `write:code-samples`. **Screenshots, photos, diagrams and alt text** → `tw:images-and-diagrams` or `cw:images-and-diagrams`.
 - **Tightening a finished draft** → `tw:editing-standards` or `cw:editing-standards`; **the machine-written sweep** → `/write:ai-check`.
+- **Worked examples** — a documentation page: `tw:docs-standards`; an article: the content-writing skills (`cw`); before-and-after edits: `tw:editing-standards` and `cw:editing-standards`.
 - **Marketing and conversion copy** — landing pages, ads, sales sequences — is a different craft with a different goal, and out of scope.

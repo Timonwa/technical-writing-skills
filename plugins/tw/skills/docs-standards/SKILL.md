@@ -38,7 +38,7 @@ The defaults documentation uses where the project's style guide doesn't decide o
 - [ ] **Address the reader as "you"**, the person doing the task or making the decision ([Google](https://developers.google.com/style/person)), and "we" only for the organization behind the docs, with a clear antecedent. "I" only in an explicitly opinionated piece such as a design rationale signed by its author.
 - [ ] **Present tense, active voice** — "the function returns a promise", "the server validates the token".
 - [ ] **Instructions are imperatives** — "Run `acme keys rotate`", not "You'll want to run…".
-- [ ] **Sentences of 25 words or fewer** — split a longer one, or make it a list; a sentence with two "and"s or more than three conjunctions is two sentences. GOV.UK asks writers to [try to split](https://guidance.publishing.service.gov.uk/writing-to-gov-uk-standards/writing-guidelines/clear-language/) sentences over 25 words; a reader following steps mid-task needs the firmer rule.
+- [ ] **Sentences of 25 words or fewer, and 20 or fewer in a procedure step** — the limits Simplified Technical English sets for descriptive and procedural sentences ([ASD-STE100](https://en.wikipedia.org/wiki/Simplified_Technical_English)). Split a longer one, or make it a list; a sentence with two "and"s or more than three conjunctions is two sentences. GOV.UK asks writers to [try to split](https://guidance.publishing.service.gov.uk/writing-to-gov-uk-standards/writing-guidelines/clear-language/) sentences over 25 words; a reader following steps mid-task needs the firmer rule.
 - [ ] **The writer stays out of it.** No anecdotes, no jokes that cost a reader time, no persuasion. Conversational is fine; personal is not the point here.
 - [ ] **No minimisers** — "simply", "just", "easy", "obviously" tell a reader who's stuck that they shouldn't be. These are findings in documentation, not suggestions.
 - [ ] **Links between pages are relative and resolve.** A moved or renamed page breaks them silently; check every one before the page ships.
@@ -59,6 +59,15 @@ The defaults documentation uses where the project's style guide doesn't decide o
 - **Include the step that completes the task** — selecting **Save** or **Apply** — and the result the reader should see.
 - **An optional step starts with "Optional:"**; a single-step procedure is written as a sentence, not a list of one.
 - **Warnings sit in the step they apply to**, before the action, never paragraphs away.
+- **As few steps as possible** ([Google](https://developers.google.com/style/procedures)), and all of them on one screen where you can ([Microsoft](https://learn.microsoft.com/en-us/style-guide/procedures-instructions/writing-step-by-step-instructions)). Past about 7–10 steps (a rule of thumb), split the task into procedures under their own headings.
+- **Sub-steps go one or two levels deep** — lowercase letters, then lowercase Roman numerals ([Google](https://developers.google.com/style/procedures)); a third level means the step is a procedure of its own.
+
+## Notes and warnings
+
+- **Pick the notice by what's at stake** ([Google](https://developers.google.com/style/notices)): a **note** for an aside that's "useful but not critical"; a **caution** to tell the reader to proceed carefully; a **warning** when it means "Don't do this" or the step "might be irreversible" — data loss, a charge, a lockout. Use the type names the docs platform renders.
+- **Few of them.** Notices lose their force when a page has many, and two in a row read as one block — "Don't use too many notices", and avoid grouping two or more together ([Google](https://developers.google.com/style/notices)). Three notices on a page usually mean the content needs reorganising.
+- **A warning goes before the action it warns about**, inside that step — never after it, never at the end of the page.
+- **The notice says what to do**, not only what could go wrong.
 
 ## Formatting in documentation
 

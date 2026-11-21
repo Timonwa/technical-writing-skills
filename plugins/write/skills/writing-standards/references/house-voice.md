@@ -11,7 +11,9 @@ Word-level swaps (long phrase → short): [plain-english-alternatives.md](plain-
 - [ ] **Active voice.** "The server validates the token", not "the token is validated by the server". Passive is acceptable only when the actor is genuinely unknown or irrelevant.
 - [ ] **Present tense for how things work.** "The function returns a promise", "the dough doubles in an hour", not "will return". A story told in the past tense stays in the past tense.
 - [ ] **Check any sentence over about 25 words, and vary the lengths.** Split a long one unless the length is deliberate — [GOV.UK](https://guidance.publishing.service.gov.uk/writing-to-gov-uk-standards/writing-guidelines/clear-language/) says to "try to split up sentences that are over 25 words long", not never to write one. A run of sentences all the same length reads mechanically; mix short and long.
-- [ ] **One idea per paragraph.** A paragraph doing two jobs is two paragraphs.
+- [ ] **Sentences average 15–20 words** across the piece ([Plain English Campaign](https://mstrust.org.uk/sites/default/files/plain_english_campaign_how_to_write_plain.pdf)) — an average, so short and long sentences both belong.
+- [ ] **One idea per paragraph, and no more than 5 sentences** ([GOV.UK](https://guidance.publishing.service.gov.uk/writing-to-gov-uk-standards/writing-guidelines/clear-language/)). A paragraph doing two jobs is two paragraphs.
+- [ ] **A reading level the reader can manage.** For a general audience, about a reading age of 9, checked with a readability tool ([Home Office](https://design.homeoffice.gov.uk/accessibility/written-content/readability)); the score points at sentences to look at, and a guide that pitches higher wins.
 - [ ] **One person, held throughout.** Use the person the guide sets — "you", "we" or "I" — and don't drift between them without a reason. With no guide, documentation takes the voice in `tw:docs-standards`; content asks.
 - [ ] **No filler or minimisers.** Cut "basically", "essentially", "actually", "of course", and the minimisers "simply", "just", "obviously", "easy" — each either adds nothing or tells a reader who's struggling that they should already have understood.
 

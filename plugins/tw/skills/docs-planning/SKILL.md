@@ -69,6 +69,8 @@ Lay the task list against the inventory. Three findings come out of it:
 - **Plan the entry points**, not just the tree. Where does a reader land from search, from the product, from a README, from a support reply? Each of those is a front door that has to work cold.
 - **Name the files and folders so the tree reads in order.** Kebab-case file names that say what the page is (`rotate-api-keys.md`), a two-digit number prefix only where reading order matters (`01-install.md`, `02-configure.md`), and an index file per folder whose name sorts first (`_README.md`, `index.md` where the docs platform requires it). Where the docs platform builds URLs from file names, a renamed file is a moved page.
 - **Draft the table of contents and review it before writing a page.** A structure is cheap to change as a list and expensive to change as forty files with inbound links.
+- **Test the structure with readers before building it.** A card sort generates the groupings from how readers think; a tree test checks whether they can find things in the proposed tree, with no pages written — "card sorting is used to generate ideas for an IA while tree testing is used to evaluate IA options", and running both gives a structure readers find intuitive ([NN/g](https://www.nngroup.com/articles/card-sorting-tree-testing-differences/)). Run the same tree test before and after a restructure to measure it.
+- **Rank the tasks before arranging them.** Asking readers to pick their few most important tasks from the long list — the Top Tasks method (common practice) — shows which belong on the main path and which can sit deeper.
 
 ## What a change ships with
 

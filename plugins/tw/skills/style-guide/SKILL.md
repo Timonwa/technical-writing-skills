@@ -99,7 +99,7 @@ A reader-facing glossary is a real page with real rules, not a dump of the termi
 
 An unenforced guide is a document that makes people feel guilty. Pick at least one mechanism:
 
-- **A prose linter in CI**, on the same pull requests as the docs change, with the terminology list and banned words as rules — warnings first, errors once the set is clean. A linter that fails every file on day one gets switched off.
+- **A prose linter in CI**, on the same pull requests as the docs change, with the terminology list and banned words as rules — warnings first, errors once the set is clean. [Vale](https://vale.sh) is the usual tool: start from its ready-made Google or Microsoft package to match the base guide, add `alex` for inclusive language, and put the project's terms and departures in its own package on top. A linter that fails every file on day one gets switched off.
 - **Page templates** per type, in the repository, so a new page starts with the right sections.
 - **A five-item checklist in the pull-request or review template**, so every docs change is checked against the guide where it's reviewed.
 - **A findable home**, one link away from where people write.

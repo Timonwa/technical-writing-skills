@@ -29,7 +29,7 @@ Voice, person, tone, terminology, formatting choices and who the reader is come 
 
 - **Each sample answers exactly one thing.** A sample demonstrating authentication, pagination and error handling at once demonstrates none of them, because the reader can't tell which lines are the point.
 - **Minimal but complete** — every line needed to run it, and nothing that isn't. Cut the logging, the framework scaffolding, the unrelated configuration.
-- **Fits on a screen** where possible. Past about 30 lines, a reader stops reading and starts scrolling; past that length, it's usually a tutorial rather than a sample, and is built up in steps (see Code in a tutorial).
+- **Fits on a screen** where possible. Past about 30 lines (a rule of thumb, not a published limit), a reader stops reading and starts scrolling; past that length, it's usually a tutorial rather than a sample, and is built up in steps (see Code in a tutorial).
 - **Introduce it** with a sentence saying what it does, usually ending in a colon right before the block ([Google](https://developers.google.com/style/code-samples)). The reader decides from that sentence whether this is the sample they need.
 - **Show the line that matters.** Where the platform supports line highlighting, use it; otherwise order the sample so the important call isn't buried.
 
@@ -49,7 +49,7 @@ Voice, person, tone, terminology, formatting choices and who the reader is come 
 - **One placeholder convention per docs set or publication**, obviously fake, and consistent everywhere. Where the guide sets none, use [Google's](https://developers.google.com/style/placeholders): uppercase with underscores (`PROJECT_ID`), no possessives (`MY_PROJECT_ID`, `YOUR_PROJECT_ID`), and after the sample, a list introduced with "Replace the following:" that explains each one in the order it appears.
 - **Never a real credential.** Not an expired one, not a revoked one, not one from a test account. Keys pasted out of a terminal into published writing are a recurring source of real incidents — check every sample for anything that looks like a secret before it publishes.
 - **Read secrets from the environment in samples**, rather than showing a literal assignment. This is both safer and the practice you want copied.
-- **Use reserved example domains and obviously fictional names** for hosts, emails and identifiers. Never a real customer's data, a real person's details, or a real internal hostname.
+- **Use reserved example values and obviously fictional names** for hosts, emails and identifiers: the domains `example.com`, `example.org`, `example.net` and the `.example` top-level domain ([RFC 2606](https://www.rfc-editor.org/rfc/rfc2606), [RFC 6761](https://www.rfc-editor.org/rfc/rfc6761)); the IPv4 ranges `192.0.2.0/24`, `198.51.100.0/24` and `203.0.113.0/24` ([RFC 5737](https://www.rfc-editor.org/rfc/rfc5737)); the IPv6 prefix `2001:db8::/32` ([RFC 3849](https://www.rfc-editor.org/rfc/rfc3849)); North American phone numbers `555-0100` to `555-0199` (common practice). Never a real customer's data, a real person's details, or a real internal hostname.
 - **Keep example values plausible in shape** — an id shaped like the product's real ids, a timestamp in its real format. A reader uses the sample to infer the format.
 
 ## Borrowed code
@@ -107,7 +107,8 @@ A tutorial or a build-along article doesn't show one sample; it builds a working
 - **Don't mix commands and their output** in the same block — the reader copies both and the shell chokes on the output.
 - **Don't prefix shell commands with a prompt character.** It gets copied and breaks the command. If you must show a prompt, show output separately.
 - **Label every fence with its language**, and label it the same way across the whole docs set or publication. An unlabelled fence loses highlighting and tells the reader nothing.
-- **Keep lines short enough not to wrap** in the rendered page — 80 characters is the usual ceiling, less where readers are on phones; a wrapped line is misread as two.
+- **Keep lines short enough not to wrap** in the rendered page — wrap at 80 characters ([Google](https://developers.google.com/style/code-samples)), less where readers are on phones; a wrapped line is misread as two.
+- **Indent the way the language's own style guide does**; where it has none, spaces rather than tabs, two per level ([Google](https://developers.google.com/style/code-samples)), and the same throughout the set.
 - **Comments explain the non-obvious**, not the syntax. A comment restating what the line plainly does is noise in a sample that's meant to be skimmed.
 
 ## Before it ships

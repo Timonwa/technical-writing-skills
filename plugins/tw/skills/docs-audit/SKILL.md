@@ -33,7 +33,7 @@ Before auditing it, find the project's style guide and conventions and read them
 
 1. **Establish the scope and the source of truth.** What is being audited, what you can check it against, and what you can't. Ask for a source before settling for none — running unverified is a decision the user makes, not a default you fall into. State the unverifiable portion up front; an audit that hides its own blind spots is worse than a smaller honest one.
 2. **Inventory the content** before checking anything: every page, its type, and where it sits. You cannot find an orphan or a duplicate without the full list.
-3. **Audit from scratch.** Don't read a previous report for findings — re-check every item against the source, because anything fixed before can regress. The only thing worth reading from an older report is its overall score, for the trend row.
+3. **Audit from scratch.** Re-check every item against the source, because anything fixed before can regress; a previous report is never evidence. Read it only for what [Re-running it](#re-running-it) lists.
 4. **Run the checklist** below, collecting findings with a precise location — `file:line`, or the page title and section where there are no line numbers.
 5. **Verify each candidate.** Name the concrete reader failure it causes. Drop anything you can't show is real. Where you suspect a defect but can't confirm it — usually because you can't reach the source — mark it **needs confirmation** rather than inflating it into a finding.
 6. **Write the report** and post the chat summary. Recommend fixes; never edit a page. Never commit or push without explicit approval.
@@ -51,7 +51,7 @@ Findings are ordered worst-first.
 
 ### Report format
 
-Write to `_reports/docs-audit.md`, creating the directory if it doesn't exist. That's where every audit and report in this set goes, so a reader always knows where to look. Tell the user the path when you're done.
+Write to `_reports/docs-audit.md`, with one Overall row in the score change, creating the directory if it doesn't exist. That's where every audit and report in this set goes, so a reader always knows where to look. Tell the user the path when you're done.
 
 ```markdown
 # Docs audit — <scope>
@@ -68,10 +68,13 @@ Write to `_reports/docs-audit.md`, creating the directory if it doesn't exist. T
 | --- | --- | --- | --- | --- | --- |
 | 1 | HIGH | Stale claims | NEW | <one-line issue> | `<path>:<line>` or <page › section> |
 
+**Status:** `NEW` — found this run for the first time · `UNRESOLVED` — still present from an earlier run · `FIXED` — fixed after the audit; the note names the commit · `WON'T FIX` — the owner ruled it not a defect, intended, or accepted as it is; the note gives their reason
+
 ### F1 — <title>
 - **What:** <the defect, and the evidence that proves it real>
 - **Who it breaks:** <the reader, and what happens to them>
 - **Fix:** <the specific remediation>
+- **Note:** <only once `FIXED` (the commit and what changed) or `WON'T FIX` (the owner's reason)>
 
 ## Scorecard
 | Category | Score | Notes |
@@ -116,7 +119,7 @@ Write to `_reports/docs-audit.md`, creating the directory if it doesn't exist. T
 
 ### Links, anchors and navigation
 
-- **Every internal link resolves**, including deep links to headings; every anchor still matches a heading that exists.
+- **Every internal link resolves**, including deep links to headings; every anchor still matches a heading that exists. Run an automated link checker over the built site where one is available (lychee, or the docs framework's own broken-link check) and verify by hand what it can't reach.
 - **External links resolve** and still point at what the sentence claims.
 - **No orphans** — every page is reachable from at least one other page, not only from the navigation.
 - **No ghosts** — every navigation entry points at a page that exists.
@@ -152,16 +155,13 @@ Write to `_reports/docs-audit.md`, creating the directory if it doesn't exist. T
 - **Content changed long after the thing it documents last changed** — or, more often, content untouched while the thing it documents changed repeatedly.
 - **Frontmatter and metadata** — present, valid, and consistent: titles, descriptions, and whatever the platform requires.
 
-**Status values:** `OPEN` for anything still present, `FIXED` for anything fixed during this run after the user chose it. Both describe this run only — the next run re-checks everything from scratch.
-
 ## Re-running it
 
 **Every run is a complete, fresh audit.** Never skip a check, and never treat something as absent, because an earlier report said it was resolved. Code regresses, pages get reverted, a fix in one place gets undone in another — a previous report is not evidence about the state of anything today.
 
 - **Report current state only.** What's in the report is what's true now, checked this run.
 - **Overwrite the file.** No resolved history accumulates in it. A report dragging a hundred past findings along spends the reader's tokens and attention on problems that are gone.
-- **Number findings from 1 each run.** IDs identify a finding inside this report, for the conversation you're having about this run — not across runs.
-- **Read the previous report for its scores, and nothing else.** The overall and per-category scores go in the trend row so a reader can see whether the set is improving or degrading. Its findings are never read — those are re-derived from source every run.
+- **Use the previous report only for continuity.** Keep the ID of each finding still present (status `UNRESOLVED`), carry its `WON'T FIX` findings forward unchanged — never re-raised as new findings — drop its `FIXED` findings and any no longer present, continue ID numbering from its highest ID, and take its scores for the score-change row, so a reader can see whether the set is improving or degrading. First run → mark all `NEW`.
 - **History is version control's job**, not the report's. The audit says what's wrong today and how today compares.
 
 ## Fixing what it found
@@ -172,14 +172,14 @@ The report is written first and nothing is edited to produce it. Then:
 2. **Ask which to fix.** Accept IDs (`1, 4, 9`), a range, `all`, or `none`.
 3. **Fix only what was named.** Never a default subset, never "the top three", never a severity threshold picked for the user. A finding they didn't choose stays in the report untouched.
 4. **Report back**: what changed, what was skipped, and anything that couldn't be fixed without a decision only they can make.
-5. **Update the report.** Mark each fixed finding `FIXED` in place, with a one-line note of what changed. Leave everything else as it stands. The file on disk has to match reality — a report still listing something that was fixed an hour ago teaches people not to trust it.
-6. **Re-score and show the movement.** After fixing, recompute the scores and report the change against where this run started. That's what scoring is for: it tells you whether the work improved things or made them worse. If several findings were fixed and no score moved, say so plainly — the findings that mattered weren't the ones chosen.
+5. **Update the report in place — never re-run the audit to update it.** A re-run re-checks the whole set, costs a full audit and raises new findings mid-fix. Mark each fixed finding `FIXED` with its commit and a one-line note of what changed, mark a finding the owner rules out `WON'T FIX` with their reason, and leave everything else as it stands. The file on disk has to match reality — a report still listing something that was fixed an hour ago teaches people not to trust it.
+6. **Re-score and show the movement.** Recompute the scorecard categories the fixes touched and the Overall, and rewrite the one score-change row (previous → current) — never add a second row. That's what scoring is for: it tells you whether the work improved things or made them worse. If several findings were fixed and no score moved, say so plainly — the findings that mattered weren't the ones chosen.
 
 Nothing is edited before step 2 is answered. The editing tools are unavailable while this command produces the report; they return for the turn after your question, once the answer is in.
 
 ### Fixing from an earlier report
 
-`--fix` skips the audit entirely and works from the report already on disk, whatever its age — ten minutes old, an hour, a month. Use it whenever you want to act on findings you've already read rather than generate a new set; re-auditing would renumber them underneath you.
+`--fix` skips the audit entirely and works from the report already on disk, whatever its age — ten minutes old, an hour, a month. Use it whenever you want to act on findings you've already read rather than generate a new set; re-auditing would re-check the whole set and raise new findings mid-fix.
 
 - **Say how old the report is** — its date, and how long ago that was. Someone deciding what to fix needs to know whether they're looking at today's picture or last month's.
 - **Verify each finding still exists before fixing it.** Check the actual location; don't trust the report's description of it. Between the audit and now, the page may have changed, someone else may have fixed it, or the thing it described may have moved.

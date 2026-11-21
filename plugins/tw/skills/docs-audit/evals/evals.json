@@ -31,12 +31,13 @@
     {
       "id": 3,
       "prompt": "Run the docs audit again — last time's report said the links were fixed, so skip those.",
-      "expected_output": "Should decline to skip any check: every run re-checks everything from scratch because fixes regress, reading the previous report only for its overall score in the trend row. Should number findings from 1, overwrite the report and mark statuses for this run only.",
+      "expected_output": "Should decline to skip any check: every run re-checks everything against the source because fixes regress. The previous report is used only to keep the IDs of findings still present (UNRESOLVED), carry WON'T FIX findings forward unchanged, drop FIXED ones and any no longer present, continue numbering from its highest ID, and take its scores for the one score-change row. Should overwrite the whole report, with no resolved history.",
       "files": [],
       "expectations": [
         "Re-checks the links rather than skipping them",
-        "Reads the previous report only for its score",
-        "Numbers findings from 1 and overwrites the report",
+        "Uses the previous report only for IDs, WON'T FIX findings, numbering and scores",
+        "Marks a finding still present UNRESOLVED under its old ID and drops FIXED ones",
+        "Overwrites the report with one score-change row",
         "Explains why a previous report isn't evidence"
       ]
     },

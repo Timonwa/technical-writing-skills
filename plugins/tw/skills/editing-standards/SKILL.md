@@ -85,7 +85,8 @@ For a fast review, or a short document that doesn't need all five levels. The in
 
 - **Word level** — cut weak intensifiers (very, really, extremely) and filler (just, actually, basically); replace inflated words where they're used in the inflated sense (utilize→use, facilitate→help, in order to→to); kill nominalizations and needless passives. The full table is `write:writing-standards`' plain-English alternatives.
 - **Sentence level** — one idea per sentence, at most three conjunctions, over 25 words split or listed, important information front-loaded, varied lengths.
-- **Paragraph level** — one topic each, a strong opening sentence, short enough to scan, and white space between them.
+- **Paragraph level** — one topic each, a strong opening sentence, no more than 5 sentences ([GOV.UK](https://guidance.publishing.service.gov.uk/writing-to-gov-uk-standards/writing-guidelines/clear-language/)), and white space between them.
+- **Run the tools first** — a prose linter such as [Vale](https://vale.sh) with the project's style package (or the Google or Microsoft package where it has none), and a readability checker (Hemingway, Word's readability statistics). They catch the mechanical misses so the manual passes go to judgement; a score points at a sentence, it doesn't decide it.
 - **Document level** — can a reader who skims only the headings tell what the page covers and find their section?
 
 ## The AI-tell pass
@@ -93,7 +94,7 @@ For a fast review, or a short document that doesn't need all five levels. The in
 Run this on anything published under a person's name — in documentation, machine-written patterns read as padding. The full catalog is the AI writing detection reference in `write:writing-standards` (the same one `/write:ai-check` sweeps with); the short version:
 
 - **Claims that don't hold** — a citation, command or default that doesn't exist or doesn't say what the page claims. Checking sources beats any style signal.
-- **Em-dash density** — the flag is frequency and pattern, not the character: more than one per page (about 3 per 1,000 words) is a signal; swap for commas, colons or parentheses. A guide that mandates em-dash asides wins.
+- **Em-dash density** — the flag is frequency and pattern, not the character: judged by density per 1,000 words, the same thresholds `/write:ai-check` scores against — more than about 3 per 1,000 is a signal, more than about 6 or two in one paragraph is strong; swap for commas, colons or parentheses. A guide that mandates em-dash asides wins.
 - **Blacklisted vocabulary** — delve, leverage, robust, comprehensive, pivotal, seamless, transformative, "furthermore", "moreover".
 - **Blacklisted phrases** — "In today's fast-paced world…", "It's worth noting that…", "At its core…", "In conclusion…", "Whether you're a X, Y, or Z…". Delete or rewrite as something a person would say aloud.
 - **Structural patterns** — every section the same length, every list exactly three items, a summary restating what was just said, a closing that congratulates the reader.

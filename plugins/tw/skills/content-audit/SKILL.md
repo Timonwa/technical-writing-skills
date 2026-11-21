@@ -40,18 +40,18 @@ Before inventorying it, find the project's style guide and conventions and read 
 
 One row per document. Leave a cell blank rather than guessing, and treat a blank owner or last-verified as a finding in itself:
 
-| Column        | What it holds                                                            |
-| ------------- | ------------------------------------------------------------------------ |
-| Title         | As published                                                             |
-| Location      | Path or URL                                                              |
-| Type          | Tutorial, how-to, reference, explanation — or the type it drifts between |
-| Audience      | Who it's for                                                             |
-| Task          | What it lets a reader do; blank means no task was identifiable           |
-| Owner         | Accountable person or team                                               |
-| Last verified | When someone last confirmed it true, not when it was last edited         |
-| Usage         | Traffic, search hits, ticket deflection — whatever signal exists         |
-| Words         | Rough length, to spot the thin and the bloated                           |
-| Verdict       | Keep · Update · Merge · Split · Rewrite · Retire                         |
+| Column        | What it holds                                                                                                                                 |
+| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| Title         | As published                                                                                                                                  |
+| Location      | Path or URL                                                                                                                                   |
+| Type          | Tutorial, how-to, reference, explanation — or the type it drifts between                                                                      |
+| Audience      | Who it's for                                                                                                                                  |
+| Task          | What it lets a reader do; blank means no task was identifiable                                                                                |
+| Owner         | Accountable person or team                                                                                                                    |
+| Last verified | When someone last confirmed it true, not when it was last edited                                                                              |
+| Usage         | Traffic, search hits, ticket deflection — whatever signal exists, over at least 12 months so a seasonal page isn't retired for a quiet season |
+| Words         | Rough length, to spot the thin and the bloated                                                                                                |
+| Verdict       | Keep · Update · Merge · Split · Rewrite · Retire                                                                                              |
 
 ### Verdicts
 
@@ -62,7 +62,7 @@ One row per document. Leave a cell blank rather than guessing, and treat a blank
 - **Rewrite** — right topic, wrong type, wrong audience, or wrong structure.
 - **Retire** — the task is gone, the feature is gone, or nobody has ever needed it. Name what happens to its URL and its inbound links.
 
-**Judge the job, not the prose.** A well-written page for a task nobody has is still a Retire; a scrappy page carrying the main path is a Keep or an Update.
+**Judge the job, not the prose.** A well-written page for a task nobody has is still a Retire; a scrappy page carrying the main path is a Keep or an Update. The verdicts cover the usual ROT categories — redundant (Merge), outdated (Update or Rewrite), trivial (Retire) — in the terms a content inventory uses (common practice).
 
 ### Gap analysis
 

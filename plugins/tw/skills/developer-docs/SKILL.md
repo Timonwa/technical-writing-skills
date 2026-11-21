@@ -44,10 +44,19 @@ Voice, person, tone, terminology and formatting come from that guide. Where it s
 - **The opening paragraph states what the page covers and why the reader needs it** — no "This page explains…" / "In this section we will…" filler; the reader should know within two sentences whether they're on the right page.
 - **Prose before every code block** — a sentence saying what the code does and when to use it. "Read once and understand": no code without context.
 - **Code examples use concrete, runnable values** — no undefined variables, no placeholder comments standing in for real arguments inside calls, no pseudocode. An example that can't run as written will be copied and will fail.
-- **Frontmatter serves search** — a concise, keyword-rich `title` (it's the sidebar label — "MCP Tools", not "Overview of MCP Tool Integration") and a unique 1–2 sentence `description` (it's the search snippet).
+- **Frontmatter serves search** — a concise, keyword-rich `title` (it's the sidebar label — "MCP Tools", not "Overview of MCP Tool Integration") and a unique 1–2 sentence `description` (it's the search snippet). Working targets, as rules of thumb from how results truncate by pixel width (Google sets no limit): a title of about 50–60 characters with the identifying words first, a description of about 150–160 characters with the point in the first 120. The reasons and sources are in `tw:seo-aeo-geo`.
 - **Descriptive anchor text** — "[create custom servers](/docs/custom-servers)", never "click here". Headings should match what readers search for ("Environment variables", not "Configuration details").
 - **One term per concept, site-wide** — define it once, then use exactly that word everywhere. A synonym for a technical concept reads as a second concept; if a page nearby uses a different term for the same thing, say so rather than adding a third.
 - **End every page with next-steps links** to 2–4 related pages — a Cards grid, a "Next steps" list, whatever the framework offers — so no page is a dead end.
+
+## Versioned docs
+
+Where the product ships versions people stay on, the docs do too:
+
+- **A version switcher on every page**, defaulting to the current version, the way docs frameworks provide one (Docusaurus, Read the Docs).
+- **"Available since vX"** on a feature or option added after the first supported version, and "Deprecated in vY — use Z" where it's going away.
+- **A banner on every page of an old version** saying it isn't the latest, linking to the same page in the current version.
+- **When a version is retired**, its pages stay readable at their URLs or redirect to the current equivalent — never a 404 for a reader on an old release. Canonical links between versions are in `tw:seo-aeo-geo`.
 
 ## Components, includes and imports
 
