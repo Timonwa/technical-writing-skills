@@ -1,0 +1,60 @@
+{
+  "skill_name": "seo-aeo-geo",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Our docs have versions 2.x, 3.x and 4.x at /v2/, /v3/ and /v4/. Google keeps showing the v2 'Configure retries' page for searches, but most people are on v4. What should we do? The v3 and v4 pages are identical; v2 used a different config key.",
+      "expected_output": "Should point the canonical of the v3 page at the v4 page, since they're equivalent, and give the v4 page a self-referencing canonical. Should keep v2's own canonical because its content genuinely differs (a different config key), and add a banner on v2 linking to the current page, rather than canonicalising a different page onto v4. Should strengthen the signal by pointing internal links at v4. Should not use robots.txt to block old versions, and should reserve noindex for versions that must never appear, such as unsupported releases, since noindex removes the page from search entirely rather than choosing between duplicates.",
+      "files": [],
+      "expectations": [
+        "Canonicalises the equivalent v3 page to v4 with a self-canonical on v4",
+        "Keeps v2's own canonical because it differs, and adds a banner",
+        "Recommends internal links point at the current version",
+        "Rejects robots.txt for blocking duplicates",
+        "Reserves noindex for versions that should never appear"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Readers keep opening tickets about 'ERR_CERT_DATE_INVALID: certificate has expired' when they connect the agent. We have a page called 'Connection problems' that says 'If you see a certificate error, renew your certificate.' How do we make sure people find it?",
+      "expected_output": "Should put the exact error string, verbatim and in a code span, in a heading or the first line under it on the troubleshooting page, because readers paste the whole error into search and a paraphrase is unfindable. Should give the page or section a title shaped around the symptom or the exact error, keep the answer first, and make the section self-contained so it still names its subject if quoted alone. Should suggest using the docs site's search log and ticket wording to find the readers' words, and adding the error to the site search's synonyms if the tool supports it. Under that heading, a direct answer of about 40–55 words says what the error means and the fix before any background, so a featured snippet or the docs site's search can lift it; the fix steps follow as a numbered list.",
+      "files": [],
+      "expectations": [
+        "Puts the exact error string verbatim in a code span",
+        "Places it in a heading or the first line under it",
+        "Explains that paraphrased errors are unfindable",
+        "Writes a direct answer of about 40–55 words under the heading, before background",
+        "Gives the fix as a numbered list",
+        "Uses search logs and tickets for the readers' words"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "We want our docs to show up in ChatGPT and Google's AI answers. Should we add an llms.txt file, HowTo schema on every how-to page, and TechArticle markup?",
+      "expected_output": "Should explain that Google says there are no additional requirements for its AI features and no AI text files or special markup are needed; that llms.txt is an optional proposal Google doesn't use, worth publishing only if the docs platform generates it cheaply and never as a substitute for findable pages; that HowTo rich results were withdrawn in 2023 so HowTo markup earns nothing in Google results; and that Google's Article markup accepts Article, NewsArticle and BlogPosting, not TechArticle. Should redirect the effort to what helps a page get quoted: answer-first sentences, self-contained sections, exact names and values in text, one task per page, and copyable code. Should mention that breadcrumbs are structured data that still counts. For citation by AI answers, each section should make sense quoted alone, naming its subject, with names and values in text rather than only in images, one task per page and copyable code.",
+      "files": [],
+      "expectations": [
+        "States Google needs no AI files or special markup for AI features",
+        "Describes llms.txt as optional and not used by Google",
+        "States HowTo rich results were withdrawn in 2023",
+        "States TechArticle isn't accepted by Google's Article markup",
+        "Redirects effort to self-contained sections that name their subject, with names and values in text",
+        "Mentions breadcrumbs as markup that still counts"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Our project's docs guide says every page title ends with ' — Acme Platform Docs (Official)'. Rewrite the title of the page 'Overview' in our webhooks section, which explains how webhook retries work.",
+      "expected_output": "Should replace the generic 'Overview' with a unique, specific title in the readers' words for an explanation page, such as 'How webhook retries work', with the identifying words first. Should follow the project's guide for the suffix, since the guide wins where it decides something, rather than substituting its own branding format, while noting that a long suffix is truncated in results so the identifying words must come first. Should make the visible H1 say the same thing as the title. The full title runs well past the working target of about 50–60 characters (roughly 600 pixels on desktop, a rule of thumb since Google sets no limit), so the identifying words go first and the guide's suffix is what gets cut off, not the page's subject.",
+      "files": [],
+      "expectations": [
+        "Replaces 'Overview' with a unique, specific title",
+        "Shapes it for an explanation page in the readers' words",
+        "Keeps the identifying words first",
+        "Uses the suffix the project's guide sets",
+        "Notes the about 50–60-character target as a rule of thumb from pixel truncation, not a Google limit",
+        "Makes the H1 match the title"
+      ]
+    }
+  ]
+}

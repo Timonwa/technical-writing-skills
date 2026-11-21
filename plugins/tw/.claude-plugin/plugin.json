@@ -1,0 +1,13 @@
+{
+  "name": "tw",
+  "displayName": "Technical Writing Skills",
+  "description": "Technical writing — planning a docs set, the documentation standards, developer docs, user guides, internal docs, READMEs, API references, release notes, localization, editing and reviewing docs, style guides and drift checks, screenshots and diagrams, and interviewing experts, plus commands for auditing a docs set and reviewing the docs in a pull request. Builds on write.",
+  "version": "3.0.0",
+  "dependencies": ["write"],
+  "author": {
+    "name": "Timonwa"
+  },
+  "homepage": "https://github.com/Timonwa/writing-skills",
+  "repository": "https://github.com/Timonwa/writing-skills",
+  "license": "MIT"
+}

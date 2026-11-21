@@ -1,0 +1,57 @@
+{
+  "skill_name": "review",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Review newsletter-issues/issue-42.md before it goes out tomorrow. It's our monthly gardening newsletter; the footer was trimmed this month to save space and now ends at the sign-off.",
+      "expected_output": "Should load the publication's writing guide and profile first, finding them in the folder AGENTS.md or the user's agent instructions name, otherwise the project's publications/ folder, or in a chat app the project's files, otherwise asking. Should review down the five levels and flag the missing unsubscribe link and postal address as a BLOCKER, since a newsletter issue without them must not send. Should also check the envelope: the subject line reflects the contents, the preview text adds to the subject, the sender name is the recognised one. Should write the report to _reports/content-review.md, list the findings by ID and ask which to fix, without editing the issue.",
+      "files": [],
+      "expectations": [
+        "Reads the publication's writing-guide.md and profile.md before reviewing",
+        "Flags the missing unsubscribe link and postal address as a BLOCKER",
+        "Checks subject line, preview text and sender name",
+        "Writes the report to _reports/content-review.md",
+        "Lists findings by ID and asks which to fix",
+        "Does not edit the issue while reviewing"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Can you review my post drafts/landlord-fees.md? It says a named letting agency 'routinely overcharges tenants by 40%' — I heard it from three people in a local forum.",
+      "expected_output": "Should treat the claim as an unverified allegation about a named company and mark it a BLOCKER: it needs a second source or a document, and the agency needs a fair chance to respond before publication (SPJ). Should flag the 40% figure as having no source presented as fact. Should put the open factual points in a batched question list for the author rather than rewriting the claim into something plausible. Should not soften the finding because the author is confident.",
+      "files": [],
+      "expectations": [
+        "Marks the allegation about a named company as a BLOCKER",
+        "Requires corroboration by a second source or a document",
+        "Requires a fair chance for the company to respond",
+        "Flags the 40% figure as unsourced",
+        "Puts unresolved facts in a question list rather than inventing a fix"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Review tutorials/deploy-a-static-site.md. It's a build-along tutorial; I wrote the commands from memory last night.",
+      "expected_output": "Should run every command and sample from a clean start, in order, copying from the rendered piece, following write:code-samples' Code in a tutorial, and record what was run in the report's Verified section. A step that fails when followed is a BLOCKER (an example that doesn't work). Should also check the companion repo matches if one is linked. Should not claim the code works without having run it, and should say plainly which commands could not be run and why.",
+      "files": [],
+      "expectations": [
+        "Runs each command in order from a clean start",
+        "Copies commands from the piece rather than retyping them",
+        "Records what was run in the Verified section",
+        "Treats a failing step as a BLOCKER",
+        "States which commands could not be run instead of implying they were checked"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Just fix whatever's wrong in essays/why-i-left-consulting.md — no need to show me a list.",
+      "expected_output": "Should explain that the review is report-only: it writes findings with proposed replacements, then asks which to fix, and never edits as part of the review, because the author owns the piece and a finding is a proposal. Should offer to run the review now and then fix exactly the findings named, by ID or all. Should respect the essay's first-person voice where the guide allows it rather than flagging it.",
+      "files": [],
+      "expectations": [
+        "Does not edit the essay as part of the review",
+        "Explains findings are proposals the author chooses from",
+        "Offers to review first and then fix only the named findings",
+        "Does not treat first-person voice as a defect when the guide allows it"
+      ]
+    }
+  ]
+}

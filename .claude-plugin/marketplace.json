@@ -1,14 +1,24 @@
 {
-  "name": "technical-writing-skills",
+  "name": "writing-skills",
   "owner": {
     "name": "Timonwa"
   },
-  "description": "Skills for technical writers — developer documentation, user guides, internal docs, API references, release notes, and the planning, editing and asset craft around them.",
+  "description": "Writing skills in three plugins: write, the craft every writer shares; tw, technical writing and documentation; and cw, content writing for any blog or newsletter, from idea to performance review.",
   "plugins": [
     {
+      "name": "write",
+      "source": "./plugins/write",
+      "description": "The rules every writer shares, technical or content — the writing standards true of any piece, the machine-written check, and code samples that run. The voice and audience come from the project's style guide or the publication's writing guide."
+    },
+    {
       "name": "tw",
-      "source": "./",
-      "description": "Skills for technical writers — planning a docs set, interviewing experts, style guides and terminology, developer docs, user guides, internal docs, READMEs, API references, release notes, editing, code samples, screenshots, diagrams and localization, plus commands for auditing a docs set, checking consistency, reviewing a draft and drafting release notes."
+      "source": "./plugins/tw",
+      "description": "Technical writing — planning a docs set, the documentation standards, developer docs, user guides, internal docs, READMEs, API references, release notes, localization, editing and reviewing docs, style guides and drift checks, screenshots and diagrams, and interviewing experts, plus commands for auditing a docs set and reviewing the docs in a pull request. Builds on write."
+    },
+    {
+      "name": "cw",
+      "source": "./plugins/cw",
+      "description": "Content writing for any blog or newsletter, on any subject — articles and tutorials, newsletter issues, social posts, a tutorial's demo project, editing and reviewing a piece, the publication's writing guide and drift checks, photos, charts and diagrams, interviewing sources, and reviewing content performance. Builds on write."
     }
   ]
 }

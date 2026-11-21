@@ -1,0 +1,41 @@
+{
+  "skill_name": "content-performance",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "/cw:content-performance ~/Downloads/search-console-queries.csv https://example-recipes.com",
+      "expected_output": "Should read the publication's profile.md first (the folder AGENTS.md or the user's personal agent instructions name, else the project's publications/; in a chat app, the project's files; else ask) to learn what success means, and ask if it's unset before ranking. Then map the export's columns to signals, say which findings the data can't support, and rank fixes by expected impact with the numbers each came from. Writes the report to _reports/content-performance-<date>.md and edits no page.",
+      "files": [],
+      "expectations": [
+        "Reads profile.md for what success means before ranking",
+        "Maps the export's columns and names analyses the data can't support",
+        "Ranks findings by expected impact with the source numbers",
+        "Writes the dated report and does not edit any page"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Here's a 7-day Search Console export for my personal finance blog. Which posts are decaying and what's our estimated monthly search volume for 'roth ira ladder'?",
+      "expected_output": "Should say a single 7-day window can't show decay and ask for an earlier export to compare. Should refuse to estimate search volume that isn't in the export; derived CTR from clicks and impressions is fine, invented volumes are not.",
+      "files": [],
+      "expectations": [
+        "Says one short window can't show a trend",
+        "Asks for a second, earlier export",
+        "Refuses to estimate search volume not present in the data",
+        "Still reports what the data does support"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "My analytics say the post 'Kubernetes ingress basics' gets 40k impressions and 0.3% CTR at position 5. Just republish it with today's date so Google sees it as fresh.",
+      "expected_output": "Should identify a title/snippet mismatch (high impressions, low CTR, decent position) and recommend rewriting the title and meta description to match the query intent, pointing the change to cw:seo-aeo-geo. Should refuse re-dating as a ranking tactic.",
+      "files": [],
+      "expectations": [
+        "Classifies it as a title/snippet mismatch from the numbers",
+        "Recommends rewriting title and description, pointing to cw:seo-aeo-geo",
+        "Refuses republishing with a fresh date as a tactic",
+        "Does not edit the page itself"
+      ]
+    }
+  ]
+}

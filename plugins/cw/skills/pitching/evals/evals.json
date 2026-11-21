@@ -1,0 +1,43 @@
+{
+  "skill_name": "pitching",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I've written up an idea for a guide to migrating a blog from WordPress to a static site. Send the same pitch to four tech publications at once so I hear back faster.",
+      "expected_output": "Should advise one outlet at a time unless an outlet's guidelines welcome simultaneous pitches; where sent to several, say so and withdraw from the others as soon as one accepts. Should first read each outlet's recent pieces and contributor guidelines, and check the fit with the writer's own profile (the folder AGENTS.md or the user's personal agent instructions name, else the project's publications/; in a chat app, the project's files; else ask). Should tailor the pitch to each outlet's readers.",
+      "files": [],
+      "expectations": [
+        "Recommends one outlet at a time unless guidelines allow simultaneous pitches",
+        "Says to disclose and withdraw if pitching several",
+        "Reads each outlet's recent pieces and contributor guidelines",
+        "Checks fit with the writer's own profile",
+        "Tailors the pitch to each outlet"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "An editor accepted my outline and offered $400. What should I confirm before I start writing?",
+      "expected_output": "Should list what to agree in writing: scope and angle, length and deadline, the fee and when it's paid (acceptance or publication), the rights granted and the exclusivity period, reversion if unpublished, a kill fee if the piece is commissioned but not run (the Authors Guild recommends 50 percent or more), byline and bio, editing and approval rounds, and where the code repo lives under what licence. Should note it isn't legal advice on a specific contract.",
+      "files": [],
+      "expectations": [
+        "Lists fee and payment trigger",
+        "Lists rights, exclusivity and reversion",
+        "Includes a kill fee with the Authors Guild recommendation",
+        "Includes editing and approval process and byline",
+        "Notes it isn't legal advice"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "The outlet that commissioned my piece uses title case and 'we'. My own blog uses sentence case and 'I'. Which should the article follow?",
+      "expected_output": "Should say the outlet's style guide and piece type govern this piece — title case and 'we' — not the writer's own publication guide; the writer's own profile only decided whether to pitch. Should keep structure guidance from cw:article-standards and point to cw:editing-standards before delivery. When republishing later, only within the rights granted, pointing the copy at the outlet's original.",
+      "files": [],
+      "expectations": [
+        "Follows the outlet's style guide for the commissioned piece",
+        "Uses the writer's own profile only to decide whether to pitch",
+        "Notes republishing is limited to the rights granted",
+        "Points the copy at the outlet's original when republishing"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "skill_name": "content-research",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I'm writing about remote work. A news article says remote roles fell 18% last year — use that figure.",
+      "expected_output": "Should trace the figure to its original source (the agency report or dataset and its table) rather than citing the news article, checking the period, population and wording. If the original can't be found, attribute the figure to where it was found or drop it.",
+      "files": [],
+      "expectations": [
+        "Traces the figure to the original report or dataset",
+        "Checks the period, population and exact wording",
+        "Cites the original, not the news article",
+        "Attributes or drops the claim if no original is found"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "ChatGPT gave me three studies showing intermittent fasting improves focus. Add them to my health post's sources.",
+      "expected_output": "Should verify each citation against the original paper — that it exists, says what's claimed, and hasn't been retracted (Retraction Watch Database) — before using it, and cite the original rather than the AI. Should match certainty to the evidence ('suggests' for observational work).",
+      "files": [],
+      "expectations": [
+        "Checks each AI-supplied study exists and says what's claimed",
+        "Checks for retractions",
+        "Cites the original, never the AI",
+        "Matches certainty words to the evidence"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "A study says people who drink coffee live longer, and a brand's press release says their supplement 'doubles' energy. Write that coffee extends life and the supplement doubles energy.",
+      "expected_output": "Should flag correlation presented as cause and a relative change with no baseline, and rewrite with certainty matching the evidence and the absolute numbers. Should name the press release's funder or interest in the sentence where the reader needs it.",
+      "files": [],
+      "expectations": [
+        "Flags correlation vs causation in the coffee claim",
+        "Asks for the baseline behind 'doubles'",
+        "Rewrites with hedged, evidence-matched wording",
+        "Names the source's interest where it matters"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Research my next newsletter issue on student loan changes. Use my publication's citation style.",
+      "expected_output": "Should read the publication's writing-guide.md and profile.md (the folder AGENTS.md or the user's personal agent instructions name, else the project's publications/; in a chat app, the project's files; else ask) for citation format, sources the publication won't use and its AI-use policy. Should list the claims first, find originals (the law or official notice), and keep a source log beside the draft.",
+      "files": [],
+      "expectations": [
+        "Reads the publication's guide for citation format and AI policy",
+        "Writes down the claims the piece must establish first",
+        "Uses the official law or notice as the original",
+        "Keeps a source log beside the draft"
+      ]
+    }
+  ]
+}

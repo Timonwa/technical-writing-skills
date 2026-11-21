@@ -1,0 +1,59 @@
+{
+  "skill_name": "seo-aeo-geo",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "My guide to budgeting apps isn't getting cited by ChatGPT or Perplexity. Should I just change the date to today and add a line telling AI tools to cite it?",
+      "expected_output": "Should refuse both shortcuts: re-dating without a real update is a freshness warning sign, and wording engineered to trigger citations counts as abuse in Bing's guidelines. Should instead make the piece citable: specific, named claims with numbers and their original sources linked; something first-hand (the writer's own tests or data, with what was done and when); exact names for each app and version; the text in text, not only in screenshots. Should check, with whoever runs the site, that OAI-SearchBot and PerplexityBot are allowed, and point to cw:content-refresh if the content really needs updating.",
+      "files": [],
+      "expectations": [
+        "Refuses re-dating without a substantive change",
+        "Refuses wording aimed at triggering citations",
+        "Asks for specific, sourced claims and first-hand material",
+        "Names exact products and versions consistently",
+        "Checks that the AI search crawlers (OAI-SearchBot, PerplexityBot) are allowed",
+        "Points to cw:content-refresh for a real update"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Add an FAQ section with FAQ schema to my sourdough article so it wins the featured snippet for 'how long does a sourdough starter take', and create an llms.txt so AI engines rank it.",
+      "expected_output": "Should explain that FAQ rich results stopped appearing in Google Search on 7 May 2026, that there's no markup to claim a featured snippet, and that Google Search ignores llms.txt. Should instead add a question heading in the reader's words ('How long does a sourdough starter take?') with a direct answer of about 40–55 words under it, stating the time range and the condition, then the detail — noting the word range is a working target from what Google displays, not a rule. A question-and-answer section can stay for readers.",
+      "files": [],
+      "expectations": [
+        "States FAQ rich results are gone since 7 May 2026",
+        "States featured snippets can't be claimed with markup",
+        "States Google Search ignores llms.txt",
+        "Writes a question heading in the reader's words",
+        "Writes a direct answer of about 40–55 words under it, then detail",
+        "Labels the length as a working target, not a Google rule"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Write the title tag, meta description and slug for my article 'The Spreadsheet That Saved My Wedding Budget'.",
+      "expected_output": "Should read the publication's guide first (title case, separator, slug style). Should write a title tag of about 50–60 characters with the words that decide the click first and the site name after a separator, a meta description of about 150–160 characters with the point inside the first 120, and a short slug of 3–5 hyphenated lowercase words. Should explain that Google sets no length limit and truncates to the device width — about 600 pixels for titles and 920 (desktop) or 680 (mobile) for descriptions — so these are working targets, not rules; and that the headline on the page can differ from the title tag.",
+      "files": [],
+      "expectations": [
+        "Reads the publication's guide for title case and slug style",
+        "Title tag about 50–60 characters, key words first, site name after a separator",
+        "Meta description about 150–160 characters, point within the first 120",
+        "Slug 3–5 hyphenated lowercase words",
+        "Explains Google sets no limit and truncates by device width, so these are working targets",
+        "Distinguishes the headline from the title tag"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Make me 30 versions of my 'how to save on groceries' post, one for each city, so we rank everywhere.",
+      "expected_output": "Should decline: near-duplicate pages for query variations made primarily to manipulate rankings are scaled content abuse under Google's spam policies. Should suggest one strong piece that answers the question, with genuinely local pieces only where there is real local information or experience to add. Should not produce the variant pages.",
+      "files": [],
+      "expectations": [
+        "Declines to produce near-duplicate city pages",
+        "Names scaled content abuse in Google's spam policies",
+        "Recommends one strong piece, with local pieces only where they add real information",
+        "Does not generate the 30 variants"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "skill_name": "style-guide",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Set up my new food blog's publication files. I have an old 'brand voice' PDF from a course, about twenty published posts, and the covers from my last ten posts, but no brand guide.",
+      "expected_output": "Should start by finding what exists: the publication's folder (the folder AGENTS.md or the user's personal agent instructions name, else the project's publications/; in a chat app, the project's files; else ask), the brand-voice PDF placed in its sources/ folder, and the posts. Should convert the source rather than copy it, transcribing exact wording where it fixes wording and leaving the rest unset; derive from three or four typical posts and ask which posts aren't typical; then interview the owner for the profile. For the look, should ask for the logo files and any brand guide, read colours and fonts off the past covers into brand.md, mark each one unset until the owner confirms it, and put three or four sample covers and the logo in examples/ with a line on why each is there. Should write the files to the publication's folder from the template, never inside the installed plugin, and record what each was built from and the date.",
+      "files": [],
+      "expectations": [
+        "Finds existing files via AGENTS.md or the user's agent instructions, then publications/, or the project's files in a chat app, then asks",
+        "Puts the existing PDF in sources/ and converts rather than copies it",
+        "Derives from three or four typical posts and asks which are atypical",
+        "Interviews the owner for the profile",
+        "Builds brand.md from the past covers, marking colours and fonts unset until confirmed, and asks for the logo files",
+        "Puts sample covers and the logo in examples/ with a line on each",
+        "Writes files to the publication's folder, not inside the plugin, with provenance and date"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Just fill in every field of the writing guide with sensible defaults so I don't have to answer questions.",
+      "expected_output": "Should keep unknown fields as 'unset' rather than inventing plausible answers, because a guessed rule becomes a house rule nobody agreed. Should offer to derive what it can from published pieces and ask only the questions that remain, few at a time. A skill that later meets an unset field asks and writes the answer back.",
+      "files": [],
+      "expectations": [
+        "Leaves unknown fields as unset",
+        "Explains why invented defaults are harmful",
+        "Offers to derive from published pieces",
+        "Asks only the remaining questions"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "My blog and my newsletter sound alike. Can I use one writing guide for both, and also share it with my friend's similar cooking blog?",
+      "expected_output": "Should say one guide per publication covers every channel, so the blog and its newsletter share one guide with channel logistics in the profile. Two different publications never share a guide, however similar, so the friend's blog gets its own. Should also note a client's or someone else's guide stays theirs.",
+      "files": [],
+      "expectations": [
+        "Uses one guide across a publication's blog and newsletter",
+        "Puts channel logistics in the profile",
+        "Refuses to share one guide between two publications",
+        "Notes someone else's guide stays theirs"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "I write in a Claude Project for my newsletter 'Pocket Garden'. Its profile.md and writing-guide.md are in the project knowledge. Our sign-off changed from 'Happy digging' to 'Grow slowly' last month — update the guide.",
+      "expected_output": "Should read profile.md and writing-guide.md from the project's files rather than looking for a folder on disk. Should update the sign-off entry, date the change and say where it came from, and keep every other decision as it was. Because a chat app can't save to the project, should give the user the complete updated writing-guide.md to replace in the project knowledge, and never write anything inside the installed plugin.",
+      "files": [],
+      "expectations": [
+        "Reads the guide from the project's files, not a folder path",
+        "Changes only the sign-off decision, with a date and provenance",
+        "Hands back the complete updated writing-guide.md to replace in the project",
+        "Does not claim to have saved the file or write inside the plugin"
+      ]
+    }
+  ]
+}

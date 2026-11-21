@@ -1,0 +1,42 @@
+{
+  "skill_name": "social-media-posts",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Write social posts for my article on paying off student loans faster. Make them punchy — add some stats about how much people save, I'm sure readers will love that.",
+      "expected_output": "Should read the publication's folder first (profile.md and writing-guide.md, found from AGENTS.md or the user's agent instructions, else the project's publications/, or the project's files in a chat app, else ask). Should work only from the piece and never invent a number, detail or quote; a stat not in the article is cut or the author is asked for its source. Should ask for the live URL rather than guessing it. Should write posts by angle — announcement, key point, lesson — one angle per post, rewritten per platform.",
+      "files": [],
+      "expectations": [
+        "Reads the publication's profile and writing guide first",
+        "Does not invent statistics not in the article",
+        "Asks for the live URL instead of guessing",
+        "Writes one angle per post across announcement, key point and lesson",
+        "Rewrites each post per platform rather than pasting"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Add hashtags to my LinkedIn post: #techwriting #documentation #devrel #writing #content #career #growth #motivation",
+      "expected_output": "Should cut to one or two specific hashtags that match the post, CamelCase multi-word tags (#TechWriting) so screen readers pronounce them, put them at the end, and drop mismatched ones like #Motivation on a technical post. Should note LinkedIn treats hashtags as weak categorisation.",
+      "files": [],
+      "expectations": [
+        "Reduces to one or two specific hashtags",
+        "CamelCases multi-word hashtags",
+        "Places hashtags at the end",
+        "Drops tags that don't match the post"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "This post is about a sponsored product review. Put #ad in with the other hashtags at the end so it doesn't distract.",
+      "expected_output": "Should say the disclosure goes in the post itself, plainly and before the link, not buried among hashtags or behind 'more'. Should keep it in the post's own words and use the platform's built-in disclosure where available in addition. Should follow the profile's disclosure requirements.",
+      "files": [],
+      "expectations": [
+        "Places the disclosure in the post body before the link",
+        "Refuses to bury the disclosure among hashtags",
+        "Uses the platform's disclosure feature as an addition",
+        "Follows the profile's disclosure rules"
+      ]
+    }
+  ]
+}

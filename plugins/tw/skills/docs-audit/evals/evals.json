@@ -1,0 +1,57 @@
+{
+  "skill_name": "docs-audit",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "/tw:docs-audit help/ — it's an exported help centre, there's no code.",
+      "expected_output": "Should ask for a source of truth before settling for none — a running product URL, a staging login or a spec — because unverified mode is the user's decision. Only if the answer is no should it run in unverified mode and say so up front. Should inventory every page before checking, run the checklist, verify each candidate by naming the reader it breaks, mark unverifiable suspicions as needs confirmation, write _reports/docs-audit.md and never edit a page.",
+      "files": [],
+      "expectations": [
+        "Asks for a source of truth before running unverified",
+        "States the unverifiable portion up front",
+        "Inventories every page before checking",
+        "Verifies each finding by naming the reader failure",
+        "Marks unverifiable suspicions as needs confirmation",
+        "Writes the report to _reports/docs-audit.md without editing pages"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Audit docs/. Known issues: the quickstart's `acme init --template web` fails because the template was renamed to `webapp`; the billing page says refunds are automatic but they need a manual request; and two pages link to /docs/legacy-sso, which 404s.",
+      "expected_output": "Should rank by what it costs the reader: wrong money guidance on refunds as CRITICAL, the broken quickstart command as HIGH (the reader can't complete the task, and the quickstart is the highest-value check), and the dead links as HIGH if on the main path or MEDIUM otherwise. Should give each finding a precise location and order findings worst-first.",
+      "files": [],
+      "expectations": [
+        "Rates the wrong refund guidance as CRITICAL",
+        "Rates the broken quickstart as HIGH",
+        "Rates the dead links by whether they're on the main path",
+        "Gives each finding a precise location",
+        "Orders findings worst-first"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Run the docs audit again — last time's report said the links were fixed, so skip those.",
+      "expected_output": "Should decline to skip any check: every run re-checks everything against the source because fixes regress. The previous report is used only to keep the IDs of findings still present (UNRESOLVED), carry WON'T FIX findings forward unchanged, drop FIXED ones and any no longer present, continue numbering from its highest ID, and take its scores for the one score-change row. Should overwrite the whole report, with no resolved history.",
+      "files": [],
+      "expectations": [
+        "Re-checks the links rather than skipping them",
+        "Uses the previous report only for IDs, WON'T FIX findings, numbering and scores",
+        "Marks a finding still present UNRESOLVED under its old ID and drops FIXED ones",
+        "Overwrites the report with one score-change row",
+        "Explains why a previous report isn't evidence"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Audit docs/. Our contributing guide says the docs use British spelling and 'we' for the team; don't flag those.",
+      "expected_output": "Should treat the project's recorded conventions as the standard — British spelling and 'we' for the team are not findings — and judge drift and voice against the project's guide first, with tw:docs-standards only where it's silent.",
+      "files": [],
+      "expectations": [
+        "Does not flag British spelling",
+        "Does not flag 'we' for the team",
+        "Judges against the project's guide first",
+        "Uses docs-standards only where the guide is silent"
+      ]
+    }
+  ]
+}

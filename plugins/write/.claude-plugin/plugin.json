@@ -1,0 +1,12 @@
+{
+  "name": "write",
+  "displayName": "Writing Skills",
+  "description": "The rules every writer shares, technical or content — the writing standards true of any piece, the machine-written check, and code samples that run. The voice and audience come from the project's style guide or the publication's writing guide.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Timonwa"
+  },
+  "homepage": "https://github.com/Timonwa/writing-skills",
+  "repository": "https://github.com/Timonwa/writing-skills",
+  "license": "MIT"
+}
