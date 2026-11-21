@@ -20,7 +20,7 @@ Writing a hand-authored SVG: clean source, correct accessibility, and theme-able
 - For multi-color diagrams, use a **cohesive palette from the project tokens**; avoid pure `#000`/`#fff` (use near-black/near-white) so it holds up in both themes. In inline diagrams, expose a small set of CSS custom properties with fallbacks (`--diagram-node-fill`, `--diagram-node-stroke`, `--diagram-line`, `--diagram-text`) so the host theme controls the colors.
 - `vector-effect="non-scaling-stroke"` on lines/borders keeps stroke width constant when a diagram scales responsively.
 - Apply color via `fill`/`stroke` attributes (not inline `style`) where possible; `fill-opacity`/`stroke-opacity` for transparency.
-- Meet **WCAG AA contrast** for text and meaningful graphics (verify it, don't eyeball it).
+- Meet **WCAG AA contrast**: 4.5:1 for text (3:1 for large text), and 3:1 for meaningful graphics such as strokes, arrows and shape outlines ([1.4.3](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html), [1.4.11](https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html)). Verify it with a checker, don't eyeball it.
 
 ## Accessibility
 
@@ -89,7 +89,7 @@ UI icon (theme-able, decorative next to a label — inline in JSX/HTML, hence no
 
 - [ ] `viewBox` set; dimensions appropriate; scales cleanly.
 - [ ] Icons use `currentColor`; diagram colors from project tokens; no pure black/white.
-- [ ] Text readable at display size; contrast meets AA.
+- [ ] Text readable at display size; contrast meets 4.5:1 for text and 3:1 for meaningful graphics.
 - [ ] Arrows point correctly; markers positioned, not overlapping.
 - [ ] Aligned, evenly spaced; no overlapping/clipped elements.
 - [ ] A11y: informative → `role="img"` + `<title>`/`aria-labelledby`; decorative → `aria-hidden="true"`.

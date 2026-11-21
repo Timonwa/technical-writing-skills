@@ -1,7 +1,7 @@
 ---
 name: internal-docs
 description: >-
-  Documentation written for colleagues rather than customers — runbooks and operational procedures, SOPs and process docs, onboarding, internal reference and policy pages, and decision records. Covers why internal docs fail (no owner, no review date, undiscoverable, quietly wrong), the skeleton for each type, confidentiality rules, and retiring content. Use on "runbook", "SOP", "process doc", "internal wiki", "onboarding doc", "knowledge base", "decision record".
+  Documentation written for colleagues rather than customers — runbooks and operational procedures, SOPs and process docs, incident postmortems, onboarding, internal reference and policy pages, and decision records. Covers why internal docs fail (no owner, no review date, undiscoverable, quietly wrong), the skeleton for each type, confidentiality rules, and retiring content. Use on "runbook", "postmortem", "incident review", "SOP", "process doc", "internal wiki", "onboarding doc", "knowledge base", "decision record".
 ---
 
 # Internal documentation
@@ -29,7 +29,7 @@ This is the difference between a knowledge base and a graveyard. Every document 
 
 - **Owner** — a named role or person accountable for it being right. A team name is acceptable; blank is not.
 - **Last reviewed** — the date someone last confirmed it's still true, which is not the date it was last edited.
-- **Review cadence** — how often that has to happen, chosen from how fast the underlying thing changes.
+- **Review cadence** — how often that has to happen, chosen from how fast the underlying thing changes. Common practice: quarterly for runbooks and on-call docs, with a scheduled dry run; yearly for policy and reference pages; and immediately after any incident the document was used in.
 - **Status** — current, draft, or superseded, with a link to whatever replaced it.
 
 If your platform supports it, surface the stale ones automatically. If it doesn't, a periodic sweep of last-reviewed dates is the minimum.
@@ -58,6 +58,18 @@ Written for someone who is not the expert, executing under pressure, possibly at
 - **When to escalate, and to whom** — a role and a channel, not a person who may have left.
 - **Known failure modes** and what each means.
 
+### Postmortem — what happened in an incident, and what changes
+
+Written after an incident, for the people who'll prevent the next one. **Blameless**: it identifies "the contributing causes of the incident without indicting any individual or team", on the understanding that people acted in good faith with what they knew ([Google SRE](https://sre.google/sre-book/postmortem-culture/)).
+
+- **When to write one** — agree the triggers in advance: user-visible downtime or degradation past a threshold, any data loss, an on-call intervention such as a rollback, resolution taking longer than a threshold, or monitoring that failed to catch it (same source).
+- **Summary and impact** — what happened, who was affected, for how long, in numbers.
+- **Timeline** — detection, response, mitigation and resolution, with times and the time zone.
+- **Contributing causes** — the conditions in the system and process that let it happen, rarely just one.
+- **What went well, what went badly, where we got lucky.**
+- **Action items** — each with an owner, a priority and a due date, filed in the team's tracker so they can't quietly lapse.
+- **Review** — "An unreviewed postmortem might as well never have existed" (same source). Hold the review, close the discussion, then publish it where others can learn from it.
+
 ### Process doc or SOP — how work gets done
 
 - **What triggers it** and who is responsible for starting it.
@@ -77,14 +89,14 @@ Written for someone who is not the expert, executing under pressure, possibly at
 
 ### Decision record — why something is the way it is
 
-The document that saves the most future time, and the one most often skipped. It has an established form — the Nygard template, collected with variants at [adr.github.io](https://adr.github.io/) — so follow that rather than inventing one. ISO/IEC/IEEE 42010 suggests a fuller set of items if you need one.
+The document that saves the most future time, and the one most often skipped. It has an established form — the Nygard template, collected with variants at [adr.github.io](https://adr.github.io/) — so follow that rather than inventing one. For records kept as Markdown files beside the code, MADR (Markdown Architectural Decision Records) is the widely used template: Context and Problem Statement, Decision Drivers, Considered Options, Decision Outcome and Consequences ([MADR](https://adr.github.io/madr/)). ISO/IEC/IEEE 42010 suggests a fuller set of items if you need one.
 
 - **A number and a title** — sequential (`0001`, `0002`), so a record can be cited by number and the log reads in decision order.
 - **Status** — proposed, accepted, rejected, deprecated, or superseded by a named record. This is the field most often dropped, and without it nobody can tell a decision that was taken from one that was merely considered.
 - **Context** — the situation and constraints at the time.
 - **The decision**, stated plainly.
 - **Consequences** — what this commits to, and what it costs, good and bad.
-- **Alternatives considered** and why each was rejected. Nygard folds this into context; keep it separate, because the rejected option is the thing someone will propose again.
+- **Alternatives considered** and why each was rejected. Nygard folds this into context; keep it separate, as MADR's Considered Options does, because the rejected option is the thing someone will propose again.
 - **Date and who decided.**
 
 Keep it to one or two pages. A record nobody can read in five minutes doesn't get read at the moment it's needed.

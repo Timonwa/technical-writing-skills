@@ -56,6 +56,9 @@ Rules that hold across all of them:
 - **Plain and factual, not promotional.** Release notes are reference material. No "we're thrilled", no "game-changing", no exclamation marks per entry.
 - **Present tense, active voice, and the reader as "you".**
 - **One entry per change.** A single entry covering four things can't be scanned or linked to.
+- **Link the issue or pull request** behind each entry where the project's history is public, and credit outside contributors by name (common practice in open source).
+
+**Open each release with two or three lines of highlights** — the changes most readers care about — above the categories, so someone skimming knows in seconds whether to read on (common practice).
 
 ## Categories
 
@@ -63,7 +66,7 @@ Use a fixed set in a fixed order, every release. Readers learn where to look and
 
 **Six of these are the [Keep a Changelog](https://keepachangelog.com/) categories** — Added, Changed, Deprecated, Removed, Fixed, Security. That spec is the de facto standard for release history, and following it means readers arrive already knowing the shape. **Add a Breaking changes category ahead of them**: Keep a Changelog leaves breaking changes inside Changed and Removed, and a reader who misses one has an outage.
 
-Leave out Keep a Changelog's `Unreleased` section: published notes document what shipped. Where a security entry has a CVE identifier, lead with it.
+In the changelog file, keep an `Unreleased` section at the top to collect changes as they merge, and move its entries into the version's section at release ([Keep a Changelog](https://keepachangelog.com/en/1.1.0/)). Published release notes leave it out: they document what shipped. Where a security entry has a CVE identifier, lead with it.
 
 | Category         | What belongs in it                                                                |
 | ---------------- | --------------------------------------------------------------------------------- |
@@ -90,6 +93,17 @@ These carry the highest cost of being unclear, and get the most space:
 - **Explain briefly why**, when it helps someone accept the work. One sentence.
 - **Link a full migration guide** rather than inlining it, when it's substantial. The note announces; the guide instructs.
 
+### The migration guide
+
+One page per breaking release, in this order:
+
+1. **Who's affected** — the versions, plans, platforms or configurations, so readers can rule themselves out.
+2. **What changes**, with before and after side by side: the old call, setting or behaviour, and the new one.
+3. **The steps**, numbered, in the order they have to happen, each runnable.
+4. **How to verify** the migration worked — the output, response or state that proves it.
+5. **How to roll back** if it didn't, and what that costs.
+6. **The dates** — when the old behaviour stops, and where to get help before then.
+
 ## Deprecations
 
 A deprecation notice answers four things, and readers will hunt for each:
@@ -110,6 +124,9 @@ Announce a deprecation as early as you can, repeat it in every release until rem
 
 ## Publishing
 
+- **Name the file `CHANGELOG.md`** in a repository, and **write dates as `YYYY-MM-DD`**, which sorts correctly and reads the same everywhere ([Keep a Changelog](https://keepachangelog.com/en/1.1.0/)).
+- **Make every version heading linkable**, usually to the diff between it and the previous release (`[1.1.2]: …/compare/v1.1.1...v1.1.2`).
+- **Mark a pulled release, never delete it**: `## [0.0.5] - 2014-12-13 [YANKED]` — the loud tag is the point.
 - **State the version and the date** on every set of notes, and stick to one versioning scheme with a link explaining it — [Semantic Versioning](https://semver.org/) is the common choice and says what a major, minor and patch bump each promise. Don't invent a scheme in the notes.
 - **Keep an accumulating history** in one place, newest first, all versions reachable. Readers arrive by searching for a symptom and need old entries.
 - **Make it subscribable** if you can — the audience that most needs breaking changes is the one least likely to visit a page.
@@ -121,7 +138,7 @@ Announce a deprecation as early as you can, repeat it in every release until rem
 ## Boundaries
 
 - **The documentation pages the notes link to** — the feature's how-to, its reference entry, its migration guide → `tw:developer-docs`, `tw:user-guides`, `tw:api-reference`.
-- **A substantial migration guide** is its own document, not a release note. The note links it.
+- **A substantial migration guide** is its own page, shaped as above; the note links it, and the how-to pages it points to are → `tw:developer-docs`.
 - **The voice rules every document obeys** — sentences, claims, concrete over vague, formatting, never hard-wrap → `write:writing-standards`; the documentation voice, prose before code and the four document types → `tw:docs-standards`.
 - **Generating and categorizing the raw change list** from version control or a release tool is an engineering task; this skill covers what the published notes say.
 - **Launch announcements, blog posts and marketing copy** about a release are a different document with a different goal. Release notes stay factual; link the announcement rather than becoming one.

@@ -49,6 +49,8 @@ Fixes a specific problem ("Why can't I log in?", "Why can't other people hear me
 - Numbered fix steps, with device or browser noted if it matters
 - Focused on getting them unstuck — no background theory
 
+Where the help centre follows Knowledge-Centered Service (KCS), each article is structured as Issue (in the customer's words), Environment, Resolution and Cause, with one cause and one resolution per article ([KCS v6 Practices Guide](https://library.serviceinnovation.org/KCS/KCS_v6/KCS_v6_Practices_Guide/030/040/010/020)). A symptom with several causes then gets a hub article that lists the causes and links to each fix. Without KCS, a short set of causes can stay as sections in one guide; split into a hub once a cause's fix runs long.
+
 ## 5. Policy / rules
 
 Explains how something is decided or governed ("How disputes are resolved", "Account limits").

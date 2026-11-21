@@ -52,9 +52,10 @@ A reader learns a concept once and then meets it again three guides later — so
 5. **The teach-or-cut test for plumbing jargon.** Behind-the-scenes technology terms (infrastructure, protocols, internals) get one test: would a first-time user need this word to complete the task or understand the answer? If yes — it names something they must see, tap, or do — use it and explain it plainly once. If no, cut it; if it genuinely comes up, describe what it does instead of naming it.
 6. **Reassure early and plainly wherever the reader has something at stake** — their money, their personal data, their account access, their health, or anything they can't undo. Say the reassuring thing directly; don't bury it and don't over-explain the technical reason behind it. "Only you can see your notes." "Nothing is charged until you confirm." "You can undo this for 30 days."
 7. **Warn at the moment of risk.** An irreversible or security-sensitive step gets a bold warning **at that step**, not in a paragraph far away: "Double-check the amount before you confirm. This can't be undone."
-8. **Keep it short.** Most guides land around 500 words; a concept explainer can run longer, but never pad. A section that doesn't help the reader act or understand gets cut.
+8. **Keep it short.** Most guides land around 500 words — a rule of thumb, not a target; a concept explainer can run longer, but never pad. A section that doesn't help the reader act or understand gets cut.
 9. **Nothing sells; everything explains.** No marketing language ("revolutionary", "empowering", "seamless") anywhere in a help centre.
-10. **One home per fact.** Each fact, rule or explanation lives in one guide; every other guide that needs it links there instead of restating it. Inside a guide, say each thing once: an intro, a step, a caption and a troubleshooting entry that all repeat the same condition are three chances to drift. A concept's one-line framing is reused word for word, but its full explanation still has one home.
+10. **Check the reading level.** Aim for a reading age of about 9 — roughly US grade 6–8 — even for specialist readers, and check it with a readability tool such as Word's checker or Hemingway ([Home Office design manual](https://design.homeoffice.gov.uk/accessibility/written-content/readability)). Treat the score as a pointer to long sentences and rare words, not a goal in itself.
+11. **One home per fact.** Each fact, rule or explanation lives in one guide; every other guide that needs it links there instead of restating it. Inside a guide, say each thing once: an intro, a step, a caption and a troubleshooting entry that all repeat the same condition are three chances to drift. A concept's one-line framing is reused word for word, but its full explanation still has one home.
 
 ## Structure of every guide
 
@@ -68,6 +69,15 @@ Write the guide itself; whatever renders it usually adds the breadcrumbs and fee
 - **`## Related articles`** closing section — 2–5 links to guides a reader would naturally go to next, using real titles of guides that exist. Never link a guide that doesn't exist yet.
 
 The six page types (concept explainer / how-to / reference / troubleshooting / policy / FAQ), their skeletons, and a weak-vs-strong example for each are in [references/page-types.md](references/page-types.md) — four of them are the standard DITA documentation types. Pick the type first, then follow its skeleton.
+
+## Keeping guides current
+
+A help centre goes wrong quietly: the product changes and the guides don't. Common practice:
+
+- **Review every guide a release touches**, before the release ships — an interface label that moved makes every step that names it wrong.
+- **Treat reader signals as triggers:** "Was this helpful?" votes, a site search that returns nothing, and support tickets that cite a guide or ask what a guide should already answer.
+- **Show a last-reviewed date and name an owner** for each guide, and review the whole set at least yearly.
+- **Retire or redirect** a guide for a feature that's gone; never leave it live and wrong.
 
 ## Pre-publish checklist
 

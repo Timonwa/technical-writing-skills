@@ -39,6 +39,7 @@ Voice, person, tone, terminology and formatting come from that guide. Where it s
 - **Prefer simple verb forms** — present tense, active voice, imperative for instructions. Phrasal verbs ("set up", "turn on", "back up") are a known trouble spot; where a single-word equivalent reads naturally, use it.
 - **Write out abbreviations** on first use, and don't invent new ones.
 - **Keep headings full and grammatical**, not fragments.
+- **For content that must translate predictably** — procedures, safety and maintenance text, regulated documentation — use the controlled-language standard, Simplified Technical English (ASD-STE100): no more than 20 words in a procedural sentence, 25 in a descriptive one, and six sentences per paragraph, from an approved dictionary ([Simplified Technical English](https://en.wikipedia.org/wiki/Simplified_Technical_English)).
 
 ## Don't build sentences from parts
 
@@ -59,7 +60,7 @@ Text inside an image can't be translated without recreating the image, in every 
 
 Don't hard-code the conventions of one locale into the source text:
 
-- **Dates** — write them unambiguously in source and expect the format to change per locale. A date that could be read two ways is a support ticket in every language.
+- **Dates** — write them unambiguously in source — ISO 8601 (`2026-03-04`) in technical contexts, or the month spelled out (4 March 2026) in prose — and expect the format to change per locale. `03/04/2026` is a different day in the US and the UK, and a support ticket in every language.
 - **Numbers** — decimal and thousands separators differ, including which character means which.
 - **Currency** — symbol, placement, and decimal conventions all vary, and so do the actual prices and available payment methods.
 - **Units** — state the unit explicitly and consider whether the target market uses a different system.
@@ -69,8 +70,21 @@ Don't hard-code the conventions of one locale into the source text:
 
 ## Layout and expansion
 
-- **Translated text runs longer than English**, commonly by a third and sometimes far more for short strings. Anything laid out tightly — a table with narrow columns, a diagram label, a button, a heading beside an icon — will break.
+- **Translated text runs longer than English**, commonly by about a third and far more for short strings. Anything laid out tightly — a table with narrow columns, a diagram label, a button, a heading beside an icon — will break. Plan for the expansion IBM published for European languages ([W3C](https://www.w3.org/International/articles/article-text-size)):
+
+  | English source length | Average expansion                                                                  |
+  | --------------------- | ---------------------------------------------------------------------------------- |
+  | Up to 10 characters   | 200–300%                                                                           |
+  | 11–20                 | 180–200%                                                                           |
+  | 21–30                 | 160–180%                                                                           |
+  | 31–50                 | 140–160%                                                                           |
+  | 51–70                 | 151–170% as published — out of step with the rows around it, so treat it with care |
+  | Over 70               | 130%                                                                               |
+
+  Text in Chinese or Korean often takes fewer characters, but each character is about twice the width of a Latin one — measure the width, not the character count.
+
 - **Leave room**, avoid layouts that depend on a specific text length, and check the longest target language rather than the shortest.
+- **Test with pseudo-localization before translation starts** — a build where every string is replaced by accented, padded text (`[Ŝéţţîñĝš ~~~~]`) shows truncation, hard-coded strings and layouts that can't expand, at no translation cost (common practice).
 - **Some languages read right to left**, and some need taller line heights for their characters. Where your platform supports them, check a page in one before declaring the template done.
 
 ## Terminology and what not to translate
@@ -87,6 +101,7 @@ Don't hard-code the conventions of one locale into the source text:
 - **Get an in-market review** — a native speaker who knows the product, checking that it reads naturally and that examples make sense locally. Fluent translation of a misunderstood source still reads as wrong.
 - **State your machine-translation policy** and make it visible to readers where you use it. Post-editing by a human is the usual minimum; for legal, safety, financial and security content, machine translation without review is not acceptable.
 - **Track coverage and freshness per locale**, and be honest in the interface about which pages are current.
+- **Name locales with BCP 47 language tags** — `en-GB`, `pt-BR`, `zh-Hant` — in URLs, `lang` attributes and file names, so the platform, search engines and screen readers read the same identifier (common practice).
 - **Don't let a locale become a fork.** Local additions that only exist in one language drift out of the set entirely; either they belong in the source for everyone, or they're documented as locale-specific on purpose.
 
 ## Boundaries

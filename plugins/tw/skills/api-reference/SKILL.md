@@ -43,7 +43,7 @@ An API reference is the least forgiving document a writer produces: a wrong defa
 The fixed shape, in this order. A reader learns it once and then knows where to look on every other endpoint:
 
 1. **Method and path** as the heading — `POST /v1/projects/{projectId}/items`.
-2. **One-sentence summary**, verb first, stating what it does or returns: "Creates an item in a project." Not "This endpoint can be used to create items."
+2. **Summary and description.** The summary is a short label shown in navigation — "Create an item", no full stop. The description is one sentence, verb first, stating what it does or returns: "Creates an item in a project." Not "This endpoint can be used to create items."
 3. **When you'd use it**, one or two sentences, only where it isn't obvious from the summary — the distinction from a similar endpoint, a prerequisite, a state the resource has to be in.
 4. **Authentication and permissions** — which credential, which scope or role. Present even when the answer is "none required"; silence reads as an oversight.
 5. **Parameters**, in a table per location (path, query, header, body), each with: name, type, required or optional, default, and what it does. Constraints belong here too — max length, allowed values, format.
@@ -62,7 +62,9 @@ The fixed shape, in this order. A reader learns it once and then knows where to 
 
 ### Writing the summary and description
 
-Write for the developer consuming the API, not the one who built it:
+In an OpenAPI spec these are two fields: `summary` is "a short summary of what the operation does" — the label a reference viewer puts in its sidebar — and `description` is "a verbose explanation of the operation behavior", which may use CommonMark ([OpenAPI 3.1, Operation Object](https://spec.openapis.org/oas/v3.1.0.html#operation-object)). Lint the prose fields with the spec linter the project already runs (Spectral or Redocly CLI are the common ones) so a missing description fails the build.
+
+Write both for the developer consuming the API, not the one who built it:
 
 - **Include** — what it does or returns, action verb first; non-obvious behaviour the caller has to plan for (side effects, idempotency, eventual consistency, state transitions that can't be undone); the distinction from a sibling endpoint that does something similar.
 - **Exclude** — anything the entry already encodes elsewhere ("requires authentication", "rate-limited", "the body is optional"); internal implementation details (which database, which queue, which service owns it); internal permission strings; cross-references to schema names the reader can't see; roadmap notes.
@@ -77,12 +79,24 @@ An endpoint list alone doesn't get anyone integrated. These pages carry everythi
 
 - **Quickstart** — credential to first successful response, in as few steps as possible, with the real output shown. This is the most-read page in an API's docs and deserves the most testing. One path only; alternatives are links.
 - **Authentication** — how to get a credential, how to send it, how long it lasts, how to rotate it, what an auth failure looks like. Include the literal header.
-- **Errors** — the shared error envelope, the full status-code table, what each means for the caller, and the retry guidance. Endpoint pages link here instead of restating it.
+- **Errors** — the shared error envelope, the full status-code table, what each means for the caller, and the retry guidance. Where the API returns the standard Problem Details shape (`application/problem+json`, with `type`, `title`, `status`, `detail`, `instance`), say so and document each `type` it returns ([RFC 9457](https://www.rfc-editor.org/rfc/rfc9457.html)). Endpoint pages link here instead of restating it.
 - **Pagination** — the mechanism (cursor, page number, offset), the parameters, how to detect the last page, and a worked loop that fetches all of it.
 - **Rate limits** — the actual numbers per tier, the headers that report remaining quota, and the correct back-off behaviour. Vague limits ("reasonable use") are worse than none.
 - **Webhooks and other callbacks**, where they exist — the event list, the payload for each, signature verification, retry and ordering behaviour, and how to test one locally.
-- **Versioning and deprecation** — how versions are selected, what constitutes a breaking change, the notice period, and where deprecations are announced. Mark a deprecated endpoint at the top of its own entry with the removal date and the replacement.
+- **Versioning and deprecation** — how versions are selected, what constitutes a breaking change, the notice period, and where deprecations are announced. At least 12 months' notice before removing anything from a stable API is common practice; state the project's own figure. Mark a deprecated endpoint at the top of its own entry with the removal date and the replacement, and document the signals the API sends:
+  - `deprecated: true` on the operation or field in the spec, so reference viewers and generated clients flag it ([OpenAPI 3.1](https://spec.openapis.org/oas/v3.1.0.html#operation-object)).
+  - The `Deprecation` response header, carrying the date the endpoint was or will be deprecated ([RFC 9745](https://www.rfc-editor.org/rfc/rfc9745.html)).
+  - The `Sunset` response header, carrying the removal date — never earlier than the deprecation date ([RFC 8594](https://www.rfc-editor.org/rfc/rfc8594.html), RFC 9745).
 - **Changelog** — what changed in the API and when. This is the page integrators subscribe to.
+
+## SDK documentation
+
+Where the API ships client libraries, each one is documented beside the reference, not instead of it:
+
+- **Install, per language** — the package name, the install command, and the supported runtime versions.
+- **The reference generated from the library's own docstrings or type signatures**, so it can't drift from the code; the prose goes in those docstrings, held to the same rules as the API descriptions above.
+- **Which SDK version supports which API version**, in a table, and how the SDK's own changelog maps to the API's.
+- **The same quickstart in each language**, reaching the same first successful call, with samples at parity across languages.
 
 ## Idempotency, side effects, and other surprises
 
