@@ -28,13 +28,13 @@
     {
       "id": 3,
       "prompt": "I just published this tutorial an hour ago. Cross-post it to dev.to, Hashnode and LinkedIn right now.",
-      "expected_output": "Should advise waiting until the original is indexed (practice), then set dev.to's canonical_url and Hashnode's republishing URL, and on LinkedIn (no canonical field) add a link back or post a summary. Should record each copy in the publication's list of copies.",
+      "expected_output": "Should advise waiting until the original is indexed (practice), then set dev.to's canonical_url and Hashnode's republishing URL, and on LinkedIn (no canonical field) add a link back or post a summary. Should record each copy in the piece's copies.md: platform, URL, date and whether the canonical is set.",
       "files": [],
       "expectations": [
         "Advises waiting for the original to be indexed first",
         "Sets dev.to canonical_url and Hashnode's original URL",
         "Uses a link back or summary on LinkedIn",
-        "Records the copies in the publication's list"
+        "Records the copies in the piece's copies.md"
       ]
     },
     {

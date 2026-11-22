@@ -82,6 +82,7 @@ The question sets that work for a feature, a profile and an opinion piece are in
 - **Separate fact from opinion** in your notes, and attribute each opinion to its owner.
 - **Mark every gap visibly** rather than writing the plausible version. An invented detail that reads naturally is the worst defect this work produces, because nothing about it looks wrong.
 - **Verify what you can yourself** — read the study, check the date — rather than spending the source's next minutes on it.
+- **Keep notes and transcripts in the piece's `interviews/` folder**, one file per interview, with the date and the consent given — to record, to quote, on or off the record — at the top (in a chat app, `<piece folder name>--interview-<name>.md`). A correction or a challenge starts there.
 
 ## Quoting and attributing
 

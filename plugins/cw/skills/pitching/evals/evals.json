@@ -38,6 +38,18 @@
         "Notes republishing is limited to the rights granted",
         "Points the copy at the outlet's original when republishing"
       ]
+    },
+    {
+      "id": 4,
+      "prompt": "I'd paused my own blog piece on rent-to-own schemes halfway through the draft. Now a personal-finance magazine has commissioned a 1,500-word piece on pension auto-enrolment, due Friday. Start the commissioned piece.",
+      "expected_output": "Should give the magazine its own publication folder (profile and writing guide built from its guidelines and the brief) and start the commissioned piece in its own piece folder under it, with a brief.md holding the agreed scope and deadline and its Held by set. Should leave the paused piece's folder untouched, change only the new piece's line in the magazine's plan.md, and record the commission in pitch-log.md at the publications root. In a chat app, should hand back only the new piece's files, named after its folder, and the one plan.md line.",
+      "files": [],
+      "expectations": [
+        "Creates a publication folder for the magazine and a piece folder under it",
+        "Writes a brief.md with the agreed scope, deadline and Held by",
+        "Leaves the paused piece's folder and plan.md line untouched",
+        "Records the commission in pitch-log.md at the publications root"
+      ]
     }
   ]
 }

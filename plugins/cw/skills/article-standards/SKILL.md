@@ -24,13 +24,22 @@ Who the publication is for, why it exists, how it sounds and what its pieces are
 
 When a guide changes: in a codebase, save the file where it was found; in a chat app, give the user the updated file to replace in the project. Never write inside the installed plugin.
 
-**`profile.md` decides whether the piece belongs and who it serves** — the job the publication does for readers, the job it does for its owner, the one action a piece should produce, what the audience already knows, who it's explicitly not for, and the disclosures it makes. A piece serving no stated purpose is the one to cut.
+**Read `profile.md` to check the piece fits the publication.** It says who the publication is for and what it's for — the job the publication does for readers, the job it does for its owner, the one action a piece should produce, what the audience already knows, who it's explicitly not for, and the disclosures it makes. A piece serving no stated purpose is the one to cut.
 
 **`writing-guide.md` decides how it reads** — voice, piece types and which carries the house voice, titles, openings, recurring sections, formatting and closings, worded as this publication words them.
 
 **Where a guide and the published work disagree**, say so and ask which wins. A guide that describes an aspiration is common and worth knowing about; silently picking one is not.
 
 **The profile wins over precedent.** A published piece that breaks the profile is a miss, not a pattern to match.
+
+## Work in the piece's folder
+
+Each piece has its own folder in the publication's `pieces/` (`pieces/2026-11-rates-explainer/`), made when it's briefed (`cw:content-planning`).
+
+- **Claim it before drafting.** Read `brief.md`: if **Held by** names someone else and the status isn't `paused`, leave it and say so. Otherwise set **Held by** to yourself and the date, the status to `drafting`, and the piece's line in the publication's `plan.md` to match — that line only.
+- **Draft from the brief, into the folder** — the reader, question, angle and outline come from `brief.md`; the draft goes in `draft.md` (or a link to it in the platform); every claim's source goes in `sources.md`.
+- **When stopping**, set the status — `paused`, or `in review` — and clear **Held by**. Resuming starts by reading `brief.md`, `draft.md` and `sources.md`.
+- **In a chat app**, name the files `<piece folder name>--<file>` (`2026-11-rates-explainer--draft.md`) and hand back only that piece's files and its `plan.md` line.
 
 ## Does this piece deserve to exist
 
@@ -128,10 +137,11 @@ Eye-tracking research finds people scan web pages rather than read them, and on 
 - [ ] Byline and date present.
 - [ ] Recurring sections, devices and closer match the profile exactly.
 - [ ] The piece answers the reader's question without sending them back to search.
+- [ ] The draft is in the piece's `draft.md`, its sources in `sources.md`, and `brief.md`'s status and holder are current.
 
 ## Boundaries
 
-- **Audience, purpose and disclosures** → the publication's `profile.md`. **Voice, titles, section names and formatting** → its `writing-guide.md`. Both live in the publication's folder.
+- **Audience, purpose and disclosures** → the publication's `profile.md`. **Voice, titles, section names and formatting** → its `writing-guide.md`. Both live in the publication's folder; the piece's brief, draft and sources live in its folder under `pieces/`.
 - **Technical documentation** — docs sites, API references, product help — is a different job with a different reader → `tw:developer-docs`, `tw:api-reference`, `tw:user-guides`.
 - **The voice rules under any piece of writing** → `write:writing-standards`. **Tightening a finished draft** → `cw:editing-standards`. **The machine-written sweep** → `/write:ai-check`.
 - **Code samples that must run** → `write:code-samples`. **Diagrams and screenshots** → `cw:images-and-diagrams`. **The cover image** → `cw:cover-images`.

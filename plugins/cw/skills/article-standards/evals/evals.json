@@ -4,13 +4,14 @@
     {
       "id": 1,
       "prompt": "Draft a blog post for my food blog on sourdough starters. My ~/.claude/CLAUDE.md says my publications live in ~/writing/publications/, and this one is 'crumb-notes'.",
-      "expected_output": "Should find the publication's folder from the path in the user's personal agent instructions (~/.claude/CLAUDE.md), read profile.md and writing-guide.md there before drafting, and take the voice, title format and recurring sections from them. Any field marked unset is asked about and the answer written back to that folder, never inside the installed plugin.",
+      "expected_output": "Should find the publication's folder from the path in the user's personal agent instructions (~/.claude/CLAUDE.md), read profile.md and writing-guide.md there before drafting, and take the voice, title format and recurring sections from them. Any field marked unset is asked about and the answer written back to that folder, never inside the installed plugin. Should work in the piece's folder under pieces/: claim it in brief.md before drafting and write the draft to draft.md.",
       "files": [],
       "expectations": [
         "Reads ~/writing/publications/crumb-notes/profile.md and writing-guide.md first",
         "Takes voice, title format and recurring sections from the writing guide",
         "Asks about any unset field instead of guessing",
-        "Writes answers back to the publication's folder, not the plugin"
+        "Writes answers back to the publication's folder, not the plugin",
+        "Claims the piece in brief.md and drafts into the piece's draft.md"
       ]
     },
     {

@@ -34,7 +34,7 @@ Before setting anything up, decide where copies go and what kind each is:
    - a **summary post** with a link where the platform is a feed rather than a publication.
 3. **The order**, with the original first and the copies spaced out (see Timing).
 
-Record the decision beside the publication's guide, with the list of copies (Keeping copies in step).
+Record the decision in the piece's `copies.md`, in its folder in the publication's `pieces/` (Keeping copies in step).
 
 ## What the search engines ask for
 
@@ -96,7 +96,7 @@ Check a copy after it's live: open its page source and confirm the canonical lin
 
 - **A copy doesn't update itself.** When the original is corrected or substantially updated, update every copy the same day with the same note (`cw:content-refresh`).
 - **When the original is retired, merged or redirected,** update or remove the copies and point their links at the replacement.
-- **Keep a list of copies** beside the publication's guide (in a chat app, as a file the user adds to the project): platform, URL, date, whether the canonical or `noindex` is set, and the last date it was synced. Without it, a correction reaches the original and misses the copies.
+- **Keep the list of copies in the piece's `copies.md`** (in a chat app, `<piece folder name>--copies.md`): platform, URL, date, whether the canonical or `noindex` is set, and the last date it was synced. Without it, a correction reaches the original and misses the copies.
 
 ## Before cross-posting
 
@@ -106,7 +106,7 @@ Check a copy after it's live: open its page source and confirm the canonical lin
 - [ ] Links are absolute and point at originals; images load with alt text; embeds replaced where dropped.
 - [ ] Tags, cover image and AI disclosure set for this platform.
 - [ ] Rights checked for the piece and everything in it.
-- [ ] The copy is added to the publication's list of copies.
+- [ ] The copy is added to the piece's `copies.md`.
 
 ## Boundaries
 

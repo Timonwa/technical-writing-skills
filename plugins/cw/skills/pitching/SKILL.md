@@ -21,6 +21,8 @@ Before pitching, read two things. **Whether to pitch at all** comes from the wri
 - Where the outlet's guidelines settle something this skill also covers — how to pitch, length, format, exclusivity — the outlet wins.
 - Where the outlet has no written guide, build a short profile and guide for it with `cw:style-guide`, from its recent pieces, and confirm it with the editor.
 
+An outlet or client written for gets its own publication folder beside the writer's own, with its `profile.md` and `writing-guide.md` built from its guidelines and brief. A commissioned piece is a piece folder under it — `pieces/<yyyy-mm>-<slug>/`, with its `brief.md` holding the agreed scope and deadline.
+
 ## Choose the outlet
 
 - **Read what it has published recently**, ten pieces or more: the piece types it runs, length, depth, how technical, whether it takes first person, and what it has already covered — a pitch that repeats a recent piece is declined.
@@ -83,7 +85,7 @@ Before writing, get the terms in writing — an email confirming them is enough 
 ## Invoicing and records
 
 - **Invoice on the agreed trigger** — acceptance or publication — with the piece title, the agreed fee, the date, the payment terms, payment details and any reference the outlet asked for. Keep a copy, and chase politely once the terms lapse.
-- **Keep a pitch log**: outlet, editor, idea, date sent, follow-up date, outcome, fee, rights, exclusivity end date, published link, payment received. It shows which ideas to re-pitch, when a follow-up is due and when a piece can be republished.
+- **Keep a pitch log** in `pitch-log.md`, at the root of the publications folder, one for every outlet (in a chat app, a file in the project): outlet, editor, idea, date sent, follow-up date, outcome, fee, rights, exclusivity end date, published link, payment received. It shows which ideas to re-pitch, when a follow-up is due and when a piece can be republished.
 
 ## Before sending a pitch
 
@@ -97,6 +99,8 @@ Before writing, get the terms in writing — an email confirming them is enough 
 
 - [ ] Scope, length, deadline, fee, payment trigger and terms, rights, exclusivity period, reversion, kill fee, byline and editing process are confirmed in writing.
 - [ ] You have the outlet's style guide, or a short one built with `cw:style-guide` and confirmed with the editor.
+- [ ] The outlet has its own publication folder, and the piece its folder and `brief.md` under it.
+- [ ] The pitch and its outcome are in `pitch-log.md`.
 
 ## Boundaries
 

@@ -4,12 +4,12 @@
     {
       "id": 1,
       "prompt": "Plan the next quarter for my newsletter. My project's AGENTS.md points my publications to ~/pubs/; this one is 'side-income-weekly'.",
-      "expected_output": "Should find the folder from AGENTS.md, read ~/pubs/side-income-weekly/profile.md and writing-guide.md first and judge every idea against the profile's reader job, owner job and one action. Should keep the plan as plan.md in that publication's folder, never inside the installed plugin.",
+      "expected_output": "Should find the folder from AGENTS.md, read ~/pubs/side-income-weekly/profile.md and writing-guide.md first and judge every idea against the profile's reader job, owner job and one action. Should keep plan.md in that publication's folder as the calendar — one line per piece with its date, status and holder — and give each briefed piece its own folder under pieces/ with a brief.md, never writing inside the installed plugin.",
       "files": [],
       "expectations": [
         "Reads profile.md and writing-guide.md from the folder AGENTS.md names",
         "Scores ideas against the profile's purpose and reader",
-        "Saves the plan in the publication's folder",
+        "Keeps plan.md as one line per piece, with each briefed piece in its own folder and brief.md",
         "Does not write the plan inside the plugin"
       ]
     },

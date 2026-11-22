@@ -89,7 +89,7 @@ AI tools are a starting point for finding leads, never a source:
 
 ## Keep a source log
 
-Record sources as you go, not at the end — a file beside the draft, one line per claim:
+Record sources as you go, not at the end — in the piece's `sources.md`, in its folder in the publication's `pieces/` (in a chat app, `<piece folder name>--sources.md`), one entry per claim:
 
 ```text
 Claim: Remote roles fell 18% year on year in Q2
@@ -122,7 +122,7 @@ Charts, photos, screenshots and datasets carry rights and credits of their own �
 - [ ] Every figure is traced to its table and the arithmetic redone.
 - [ ] Every quote is checked against its original.
 - [ ] Nothing AI-supplied is used without the original confirmed.
-- [ ] The source log is complete and saved beside the draft.
+- [ ] The source log is complete and saved as the piece's `sources.md`.
 
 ## Boundaries
 

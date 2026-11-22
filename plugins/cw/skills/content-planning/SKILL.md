@@ -94,26 +94,42 @@ Balance what the plan asks of readers and of the writer:
 - **Plan the distribution with the piece** — the newsletter issue that carries it (`cw:newsletter-standards`), the posts that share it (`cw:social-media-posts`), the copies on other platforms (`cw:cross-posting`).
 - **Date the seasonal and the timely** — launches, events, the start of a tax year — far enough ahead to write them well.
 
-## A brief for each scheduled piece
+## Where the plan lives
 
-Before drafting starts, each scheduled piece gets a short brief (standard editorial practice):
+`plan.md` sits beside the publication's `profile.md` and `writing-guide.md`, and it is the calendar only — one line per piece:
+
+```text
+2026-11-18 · 2026-11-rates-explainer · drafting · held by the drafting agent, since 2026-11-10 · pieces/2026-11-rates-explainer/
+```
+
+An idea not yet briefed is a line too, with status `idea`, where it came from and its score. Status is one of `idea`, `briefed`, `drafting`, `in review`, `scheduled`, `published`, `paused`, `retired`.
+
+Lines sit in three sections, the usual order for an editorial calendar: **Coming up** — pieces with a publish date, soonest first; **Ideas** — no date yet, newest first; **Published** — published or retired, newest first. A new line goes in its place in its section, and a line moves when its piece gets a date or goes live.
+
+`plan.md` is the one file every piece shares: change only your piece's line, never rewrite the file. Never write it inside the installed plugin — an update replaces the plugin's files and the plan goes with them.
+
+## A folder and a brief for each piece
+
+When an idea is briefed, it gets its own folder in the publication's `pieces/`, named `<yyyy-mm>-<slug>` for the month it's due (`pieces/2026-11-rates-explainer/`). Everything for that piece lives there — the brief, the draft, the source log, interviews, images, social posts, the list of copies and its reports — so two pieces never share a file.
+
+The folder starts with `brief.md`. At the top: **Status**, **Held by** (who, or which agent, and since when) and **Publish date**. Below, the brief itself (standard editorial practice):
 
 - the reader, and the question in their words;
 - the search query and the kind of page that ranks for it;
 - the angle — what this piece adds that the others don't;
 - an outline, the sources to check (`cw:content-research`) and the people to interview (`cw:sme-interviews`);
-- the one action it asks for, and the internal links in and out.
+- the one action it asks for, and the internal links in and out;
+- the series or cluster it belongs to, its score and intent.
 
-## Where the plan lives
+## Claiming and pausing a piece
 
-Keep the plan beside the publication's `profile.md` and `writing-guide.md` — a `plan.md` with the idea list, the scores, the series, the calendar and the briefs. In a codebase, save it in the publication's folder; in a chat app, give the user the file to add to the project. Never write it inside the installed plugin: an update replaces the plugin's files and the plan goes with them.
+- **Before working on a piece, read its `brief.md`.** If **Held by** names someone else and the status isn't `paused`, leave it and say so.
+- **When starting**, set **Held by** to yourself and the date, and the status; change the piece's line in `plan.md` to match.
+- **When stopping**, set the status — `paused`, or the next one — and clear **Held by**.
+- **A paused piece keeps everything in its folder.** Resuming starts by reading its `brief.md`, `draft.md` and `sources.md`.
+- **Starting another piece** never touches the paused one's folder — the new piece gets its own folder and its own line.
 
-Each entry records:
-
-- the idea in the reader's words, and where it came from;
-- its score and intent;
-- its status — idea, scheduled, drafting, published, to refresh;
-- the publish date and the series or cluster it belongs to.
+In a chat app, a project's files can't hold folders: name a piece's files `<piece folder name>--<file>` (`2026-11-rates-explainer--brief.md`), keep the publication's own files under their names, and hand back only that piece's files and the single `plan.md` line to add or change.
 
 ## Review the plan
 
@@ -130,7 +146,9 @@ Each entry records:
 - [ ] Series are planned to the last part.
 - [ ] Updates are scheduled beside new pieces.
 - [ ] The cadence survives a bad month, with a buffer.
-- [ ] The plan is saved beside the guide, or handed over to add to the project.
+- [ ] `plan.md` has one line per piece, in its section and order, and no other piece's line was rewritten.
+- [ ] Each briefed piece has its own folder with `brief.md` — status, who holds it and the publish date at the top.
+- [ ] In a chat app, only the piece's files and its `plan.md` line are handed back.
 
 ## Boundaries
 
