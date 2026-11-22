@@ -11,7 +11,8 @@
         "Removes the sports reference",
         "Rewrites the double negative as a single positive instruction",
         "Splits the text into short sentences with explicit subjects",
-        "Mentions right-to-left layout and text expansion"
+        "Mentions right-to-left layout and text expansion",
+        "Takes the target languages from the request rather than asking for them again"
       ]
     },
     {

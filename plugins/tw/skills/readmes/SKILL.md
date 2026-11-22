@@ -20,6 +20,17 @@ Before writing a README, find the project's style guide and conventions and read
 
 Voice, person, tone, terminology and formatting come from that guide. Where it settles something this skill also covers, the guide wins; where it's silent or there isn't one, `tw:docs-standards` applies without asking.
 
+## Ask first
+
+Read the answers from the request, the repository and its guide first; ask only what's missing. Ask with the app's question tool where it has one, so the choices can be picked; otherwise as a numbered list answered by number. Offer choices where the answers are known and a short typed answer otherwise.
+
+1. **Which repository or package?** A path. Default: the current directory.
+2. **What type is it?** Library · app · CLI · monorepo root · package inside a monorepo · demo · one of a set of templates. Detected from the signals; ask only when they conflict.
+3. **New or refresh?** Write a new README · refresh the existing one.
+4. **Who reads it first?** Someone installing or using it · a contributor running it locally · both.
+5. **Can the quickstart be run here?** Yes · no — it needs credentials or a paid service, and the README says so.
+6. **Is it published, and where?** The package registry name · the live URL · not published — this decides the version badge and the live link.
+
 ## Detect the repo type first
 
 The right README shape depends on what the repo is — a library leads with install + usage, an app with what it does + local setup, a CLI with its top commands, a monorepo root is a map, a package inside one covers only itself. The detection signals and the full per-type skeletons (including the monorepo no-duplication rule and a worked CLI example) are in [references/repo-skeletons.md](references/repo-skeletons.md) — detect the type there before writing, and confirm with the user only when the signals conflict. A repo accompanying a tutorial (blog post or video) has its own shape — star callouts, branch variants, About metadata — and is not this skill's job.
@@ -28,7 +39,7 @@ The right README shape depends on what the repo is — a library leads with inst
 
 [Standard Readme](https://github.com/RichardLitt/standard-readme) is the closest thing to a spec for this, and its rules are worth following where they apply: the file is `README.md`, the title matches the repository or package name, the short description sits on its own line under 120 characters with no heading of its own, sections appear in a fixed order, and no link in it is broken. Its rules are written for open-source libraries; for an application or service, add the config and scripts sections below, and detect the repo type first.
 
-Every shape draws from the same skeleton, in this order. Drop a section that doesn't apply; never reorder:
+Every shape draws from the same skeleton, in this order. Drop a section that doesn't apply; never reorder. The fill-in version is at the top of [references/repo-skeletons.md](references/repo-skeletons.md#the-universal-skeleton-to-fill-in):
 
 1. **Title + one-liner** — what it does, in one sentence a stranger understands.
 2. **Badges** — only if they carry information someone acts on (CI status, published version, license). No decorative badge walls; 4 at most (a house rule, not part of Standard Readme).

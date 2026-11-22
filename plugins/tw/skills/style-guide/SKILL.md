@@ -24,12 +24,26 @@ The voice, terminology and reader the guide records come from the project, the e
 - Where nothing settles it, `tw:docs-standards` is the default the guide departs from, and the guide records only the departures.
 - **Saving it:** in a codebase, write the guide where the project keeps its docs conventions and name it in `AGENTS.md`, so every agent finds it; in a chat app, give the user the guide as a file to add to the project's files.
 
+## Ask first
+
+Read the answers from the request, the existing guide, the published docs and the project first; ask only what's missing. Ask with the app's question tool where it has one, so the choices can be picked; otherwise as a numbered list answered by number. Offer choices where the answers are known and a short typed answer otherwise. Record the profile answers in the guide's profile.
+
+1. **What exists already, and where?** A style guide · a terminology list · contributor guidelines · notes · nothing — with a path or link for each.
+2. **What's being built?** The style guide · the terminology list · the glossary · one decision.
+3. **Who reads the docs?** Developers integrating · administrators configuring · end users — pick any.
+4. **Which product and versions do the docs cover?** A short answer, and how older versions are handled.
+5. **Which base guide, dictionary and spelling?** The Google developer documentation style guide · the Microsoft Writing Style Guide · another (name it); the dictionary and spelling variant as a short answer.
+6. **Who owns the guide?** The role or person who decides when it's silent and approves changes.
+7. **Where does it live?** A path in the docs repository · the project's files in a chat app.
+
 ## Build it from what exists
 
 1. **Ask whether a guide already exists**, and ask broadly — a style guide, a terminology list, contributor guidelines, a page of notes. Most teams have something and don't think of it as a guide.
 2. **Convert it, don't copy it.** Map what the source settles onto the guide's fields, transcribe exact wording wherever it fixes wording — a product name, a banned phrase — and leave what it doesn't cover `unset`.
 3. **Derive from what's already written** — existing pages, the product UI and support conversations — for the conventions they mostly follow, and name any page that isn't typical.
 4. **Interview for the rest**, field by field.
+
+Start from the fill-in templates: the style guide file in [references/style-guide-template.md](references/style-guide-template.md), the terminology list and glossary entries in [references/terminology-template.md](references/terminology-template.md).
 
 **`unset` is a valid answer.** A skill that meets `unset` asks, then writes the answer back. A plausible guess becomes a house rule nobody agreed to. **Where a source and the docs disagree**, record both and flag the conflict for the owner. **Get the guide confirmed** before anything is written against it.
 

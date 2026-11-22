@@ -39,6 +39,20 @@
         "Checks whether an example env file exists and flags its absence",
         "Explains the drift problem rather than just shortening the list"
       ]
+    },
+    {
+      "id": 4,
+      "prompt": "Write a README for this repo.",
+      "expected_output": "Should detect the repo type from its signals rather than asking, and check whether a README already exists to decide between writing and refreshing. Should ask only what the repository can't answer — who reads it first, whether the quickstart can be run here, and whether and where the project is published — as choices. Should start from the universal fill-in skeleton, apply the repo type's changes, run the quickstart before shipping it, and leave no placeholder in the written file.",
+      "files": [],
+      "expectations": [
+        "Detects the repo type from the signals instead of asking",
+        "Checks for an existing README to decide between new and refresh",
+        "Asks only what the repository can't answer, offering choices",
+        "Starts from the universal fill-in skeleton and applies the repo type",
+        "Runs the quickstart or says it could not be run",
+        "Leaves no placeholder tokens in the written file"
+      ]
     }
   ]
 }

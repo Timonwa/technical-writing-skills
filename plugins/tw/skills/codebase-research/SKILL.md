@@ -22,12 +22,16 @@ Before writing up what you find, find the project's style guide and conventions 
 
 Voice, person, tone, terminology and formatting come from that guide. Where it settles something this skill also covers, the guide wins; where it's silent or there isn't one, `tw:docs-standards` applies without asking.
 
-## Before you open a file
+## Ask first
 
-- **Write down the list of facts you need.** "Understand the export feature" is not a research task. "The accepted formats, the row limit, the default filename, and the error when it times out" is — and you'll know when you're done.
-- **Ask what is actually deployed.** The branch you're reading is not necessarily what users have. Ask which branch or tag corresponds to production, and read that.
-- **Ask for an entry point.** One sentence from an engineer — "start at `handlers/export.ts`" — saves an hour of searching and costs them nothing. This is the cheapest question in documentation.
-- **Ask what's real.** Which parts are live, which are behind a flag, which are half-built. Code gives no signal about any of this.
+Read the answers from the request, the project's `AGENTS.md` or contributing docs and its guide first; ask only what's missing. Ask with the app's question tool where it has one, so the choices can be picked; otherwise as a numbered list answered by number. Offer choices where the answers are known and a short typed answer otherwise; where the project records a default, show it and ask whether to use it. Record the answers in the header of the [research notes](references/research-notes.md).
+
+1. **Which facts do you need?** A short list: "the accepted formats, the row limit, the default filename, the timeout error" — never "how the export works". The list is how you know when you're done.
+2. **Which branch or tag is production?** Short answer, or "don't know". The branch you're reading is not necessarily what users have.
+3. **Which environment does the doc describe?** production · staging · the self-hosted default · a specific customer's configuration.
+4. **Where should the search start?** A file or directory · none — search backwards from the string the user sees. One sentence from an engineer saves an hour and costs them nothing; it's the cheapest question in documentation.
+5. **What's live?** Short answer: the parts behind a flag, half-built, or switched off — or "don't know". Code gives no signal about any of this.
+6. **What access is there?** the repository · someone with access who can look things up · none — see [When you don't have access](#when-you-dont-have-access).
 
 ## Read for names and values, not for logic
 
@@ -82,6 +86,8 @@ Each of these produces a confidently wrong document, which is the most expensive
 - **A skipped or commented-out test documents nothing.** Check it actually runs before treating it as a specification.
 
 ## Record what you found
+
+Keep the notes in the template in [references/research-notes.md](references/research-notes.md): one row per fact, with its location, version, unit and status.
 
 - **Note the file and the version, tag or commit you read it at.** When that area changes, you know exactly what to re-verify — and this is the difference between documentation you can maintain and documentation you have to redo.
 - **Separate what you confirmed from what you inferred**, in your notes and in the draft. An inference that reads as a fact is the defect this whole skill exists to prevent.

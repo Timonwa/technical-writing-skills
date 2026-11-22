@@ -20,6 +20,17 @@ Before writing or reviewing source content, find the project's style guide and c
 
 Voice, person, tone, terminology and formatting come from that guide. Where it settles something this skill also covers, the guide wins; where it's silent or there isn't one, `tw:docs-standards` applies without asking.
 
+## Ask first
+
+Read the answers from the request, the project, its guide and any terminology list first; ask only what's missing. Ask with the app's question tool where it has one, so the choices can be picked; otherwise as a numbered list answered by number. Offer choices where the answers are known and a short typed answer otherwise.
+
+1. **Which job?** Write or review source content for translation · plan or run a translated set · build the do-not-translate list or approved translations.
+2. **Which locales?** BCP 47 tags (`de-DE`, `pt-BR`) · not decided yet — the source rules apply either way.
+3. **Which content, in which order?** Named pages or sections · everything. Default: getting started, then anything about money, safety or legal duties, then the most-used pages.
+4. **Is the product's interface localized?** Yes, in which locales · no, source language only · not known.
+5. **Who translates, and who reviews?** Professional translators · machine translation with human post-editing · community · not decided; the in-market reviewer, if there is one.
+6. **Does a terminology or do-not-translate list exist?** Its path · no.
+
 ## Decide early
 
 - **Ask whether translation is planned**, for which languages, for which content, and by whom. The answers change what you write today.
@@ -88,6 +99,8 @@ Don't hard-code the conventions of one locale into the source text:
 - **Some languages read right to left**, and some need taller line heights for their characters. Where your platform supports them, check a page in one before declaring the template done.
 
 ## Terminology and what not to translate
+
+The do-not-translate list, the approved translations and the per-locale coverage tracker each have a template in [references/templates.md](references/templates.md).
 
 - **Maintain a do-not-translate list** — product names, feature names that are trademarks, code identifiers, commands, file paths, UI labels that aren't localized, and any term the business has decided stays in the source language.
 - **Supply the approved translation** for each domain term, per language, rather than letting each translator decide. Two translations of the same concept in one language is the same defect as two terms in the source.

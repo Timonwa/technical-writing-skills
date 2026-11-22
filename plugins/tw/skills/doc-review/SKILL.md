@@ -25,6 +25,18 @@ Voice, person, tone, terminology and formatting come from that guide. Where it s
 
 The editing craft is `tw:editing-standards`; the rules every piece obeys are `write:writing-standards`; the structure for the page's type comes from the skill for that type.
 
+## Ask first
+
+Read the answers from the request, the arguments, the document itself, the project and its guide first; ask only what's missing. Ask with the app's question tool where it has one, so the choices can be picked; otherwise as a numbered list answered by number. Offer choices where the answers are known and a short typed answer otherwise; where the project records a default, show it and ask whether to use it. Record the answers in the report's header.
+
+1. **Fresh review, or fix from the last report?** fresh review · fix from the page's report (`--fix`).
+2. **Which document?** a file · a folder · a diff. The path.
+3. **What type is it?** tutorial · how-to · reference · explanation · runbook or other internal doc · README · release note · user guide.
+4. **Who reads it, and what should they be able to do afterward?** Short answer.
+5. **What can its claims be checked against?** the code · the running product · a spec or schema · the tests · nothing — mark claims unverified.
+6. **Which product version does it describe?** Short answer.
+7. **Can the rendered page be previewed?** a preview URL or local build · source only — the proof pass then notes what it couldn't see.
+
 ## Arguments
 
 - `[path]` — a file, a folder, or a diff. Omitted → review the current changes if there are any, otherwise ask.
@@ -66,50 +78,7 @@ The editing craft is `tw:editing-standards`; the rules every piece obeys are `wr
 
 ### Report format
 
-Write to `_reports/doc-review-<page-slug>.md`, one report per page, creating the directory if it doesn't exist — the slug is the page's path under the docs folder with slashes as hyphens and no extension (`docs/guides/rotate-keys.md` → `_reports/doc-review-guides-rotate-keys.md`). Summarise the findings in chat, and tell the user the path when you're done.
-
-```markdown
-# Review — <document>
-
-**Date:** <YYYY-MM-DD> · **Type:** <document type> · **Audience:** <who> · **Standard:** <guide, or "none found — tw:docs-standards"> · **Verdict:** <Ready / Ready with fixes / Needs rework> · **Overall:** <X>/10
-
-## Score change (previous → current)
-| Metric | Previous | Current | Δ | Trend |
-| --- | --- | --- | --- | --- |
-| Overall | <prev/10 or N/A> | <cur/10> | <+N / -N / 0> | <▲ / ▼ / ■ / N/A> |
-
-## Findings
-| ID | Level | Severity | Status | Issue | Location |
-| --- | --- | --- | --- | --- | --- |
-| 1 | Substantive | MAJOR | OPEN | <one-line> | <section or line> |
-
-### R1 — <title>
-- **Level:** <which of the five>
-- **Problem:** <what it costs the reader>
-- **Now:** <the current text>
-- **Proposed:** <the replacement>
-
-## Questions for the author
-Facts that can't be settled without you. Nothing below has been guessed at in the draft.
-
-| # | Question | Why it matters | Where |
-| --- | --- | --- | --- |
-
-## Verified
-What was checked against a real source, and what couldn't be.
-
-| Claim | Checked against | Result |
-| --- | --- | --- |
-
-## Scorecard
-| Level | Score | Notes |
-| --- | --- | --- |
-| Substantive | <X>/10 | right document, right order, nothing missing |
-| Accuracy | <X>/10 | claims verified against a real source |
-| Line | <X>/10 | sentence-level clarity |
-| Copy | <X>/10 | consistency with the guide |
-| Proof | <X>/10 | links, images, rendering |
-```
+The report follows the template in [references/output-format.md](references/output-format.md): a header recording the scope answers, the score change, the findings with a proposed replacement each, the questions for the author, what was verified, and the scorecard by level. It goes to `_reports/doc-review-<page-slug>.md`, one report per page — the slug is the page's path under the docs folder with slashes as hyphens (`docs/guides/rotate-keys.md` → `_reports/doc-review-guides-rotate-keys.md`).
 
 ### Output
 

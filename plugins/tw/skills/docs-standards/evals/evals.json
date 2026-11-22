@@ -4,7 +4,7 @@
     {
       "id": 1,
       "prompt": "Write a page called 'Webhooks' for our docs. Walk the reader through creating their first webhook endpoint, then list every event type with its payload fields, then explain why we sign payloads with HMAC-SHA256.",
-      "expected_output": "Should recognise that the request mixes three needs — a tutorial or how-to (creating the first endpoint), a reference (every event type and its fields) and an explanation (why payloads are signed) — and that a page mixing them fails each reader. Should propose separate pages, one per need, linked to each other, rather than one 'Webhooks' page, and should fix the mixing by splitting, not by cutting content. Should give the task page a bare-infinitive heading such as 'Create a webhook endpoint', put the event list in tables on a reference page, and keep the signing rationale on an explanation page with no steps.",
+      "expected_output": "Should recognise that the request mixes three needs — a tutorial or how-to (creating the first endpoint), a reference (every event type and its fields) and an explanation (why payloads are signed) — and that a page mixing them fails each reader. Should propose separate pages, one per need, linked to each other, rather than one 'Webhooks' page, and should fix the mixing by splitting, not by cutting content. Should give the task page a bare-infinitive heading such as 'Create a webhook endpoint', put the event list in tables on a reference page, and keep the signing rationale on an explanation page with no steps. Should take the reader and the need from the request rather than asking what it already answers.",
       "files": [],
       "expectations": [
         "Identifies the three Diátaxis needs mixed in one request",
@@ -12,7 +12,8 @@
         "Keeps all the content by moving it, not deleting it",
         "Uses a bare-infinitive heading for the task page",
         "Puts the event list in tables on a reference page",
-        "Keeps the rationale page free of steps"
+        "Keeps the rationale page free of steps",
+        "Does not ask questions the request already answers"
       ]
     },
     {

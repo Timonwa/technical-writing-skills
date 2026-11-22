@@ -59,7 +59,8 @@
         "Converts the passive 'an error is thrown by the client' to active voice",
         "Asks for the real option name and its default rather than inventing one",
         "Batches the questions for the author instead of asking one at a time",
-        "Does not fabricate a retry count, option name, or default value"
+        "Does not fabricate a retry count, option name, or default value",
+        "Returns the findings as edit notes — the scope in the header, then the edits, the questions for the author and the unverified claims"
       ]
     }
   ]

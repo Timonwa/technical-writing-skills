@@ -12,7 +12,8 @@
         "References where the credential is stored and who grants access instead",
         "Includes a prerequisites section covering required access",
         "Gives each step an observable result to check before continuing",
-        "Includes rollback and escalation, with escalation as a role not a person"
+        "Includes rollback and escalation, with escalation as a role not a person",
+        "Starts from the runbook template, with the metadata block (owner, last reviewed, review cadence, status, classification) on top"
       ]
     },
     {
@@ -52,7 +53,8 @@
         "Asks once whether a style guide exists before concluding there isn't one",
         "With no guide, applies the documentation voice without asking about voice",
         "Gives the page an owner and a review date",
-        "Links to the rota and the refund policy instead of copying them"
+        "Links to the rota and the refund policy instead of copying them",
+        "Asks only what the request leaves open — the owner and where the page lives — and not what it already answers"
       ]
     }
   ]

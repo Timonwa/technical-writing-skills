@@ -29,6 +29,17 @@ Voice, person, tone, terminology and formatting come from that guide.
 - Where the guide is silent or there isn't one, `tw:docs-standards` is the default, applied without asking, and drift from it is a **finding**, not a proposal.
 - When a fix adds to the guide — a terminology entry, a recorded decision — in a codebase, save it in the guide's file; in a chat app, give the user the updated guide to replace in the project's files.
 
+## Ask first
+
+Read the answers from the arguments, the request and the project first; ask only what's missing. Ask with the app's question tool where it has one, so the choices can be picked; otherwise as a numbered list answered by number. Offer choices where the answers are known and a short typed answer otherwise. Record the answers in the report's header.
+
+1. **Which docs to sweep?** A path or a section; the whole set when the docs folder is obvious.
+2. **Which standard?** The guide's path · no guide anywhere (derive mode). Ask before assuming there isn't one.
+3. **Which version of the docs?** Current only · all versions · a named version. Default: current only.
+4. **Anything to leave out?** Generated reference · changelogs and release notes · translated locales · none — each can hold old, generated or other-language names on purpose.
+5. **Where can the product's own names be checked?** The running product · the API reference · the source code · none.
+6. **Report, or fix from the last report?** A fresh report · fix from the existing report (`--fix`). Default: a fresh report.
+
 ## Arguments
 
 - `[path]` — the docs to sweep. Omitted → ask.
@@ -79,61 +90,7 @@ Voice, person, tone, terminology and formatting come from that guide.
 
 ### Report format
 
-Write to `_reports/docs-style-check.md`, creating the directory if it doesn't exist. That's where every audit and report in this set goes. Tell the user the path when you're done.
-
-```markdown
-# Style check — <scope>
-
-**Date:** <YYYY-MM-DD> · **Scope:** <what was swept> · **Pages:** <N> · **Standard:** <guide path, or "tw:docs-standards + derived"> · **Mode:** Report-only · **Consistency:** <X>/10
-
-## Score change (previous → current)
-| Metric | Previous | Current | Δ | Trend |
-| --- | --- | --- | --- | --- |
-| Consistency | <prev/10 or N/A> | <cur/10> | <+N / -N / 0> | <▲ / ▼ / ■ / N/A> |
-
-## Terminology drift
-| ID | Concept | Variants (count) | Recommended | Confidence | Occurrences | Status |
-| --- | --- | --- | --- | --- | --- | --- |
-| 1 | <concept> | `<a>` (74), `<b>` (9), `<c>` (2) | `<a>` | High | 11 | OPEN |
-
-### T1 — <concept>
-- **Variants:** `<a>` ×74 · `<b>` ×9 · `<c>` ×2
-- **What the product calls it:** <the canonical UI or API string, or "unverified">
-- **Recommendation:** <winner, and why>
-- **Locations to change:** `<path>:<line>` …
-
-## Open decisions
-Splits too close to call, and majorities that break a default the project hasn't recorded.
-
-| # | Question | Variant A (count) | Variant B (count) | Recommendation |
-| --- | --- | --- | --- | --- |
-
-## Voice findings
-| # | Issue | Count | Example | Locations |
-| --- | --- | --- | --- | --- |
-| V1 | "simply" on pages for newcomers | 41 across 18 pages | `getting-started/install.md:14` | … |
-
-## Mechanics drift
-| # | Category | Dominant convention | Exceptions | Locations |
-| --- | --- | --- | --- | --- |
-
-## Proposed terminology entries
-Ready to paste into the project's terminology list.
-
-| Term | Definition | Use | Don't use | Notes |
-| --- | --- | --- | --- | --- |
-
-## Scorecard
-| Category | Score | Notes |
-| --- | --- | --- |
-| Terminology | <X>/10 | |
-| Voice | <X>/10 | |
-| Capitalization & headings | <X>/10 | |
-| UI & code formatting | <X>/10 | |
-| Lists & punctuation | <X>/10 | |
-| Numbers, dates & units | <X>/10 | |
-| Link text | <X>/10 | |
-```
+Write to `_reports/docs-style-check.md`, creating the directory if it doesn't exist. That's where every audit and report in this set goes. Tell the user the path when you're done. The template — header with the scope answers, score change, terminology drift, open decisions, voice and mechanics findings, proposed terminology entries and the scorecard — is in [references/output-format.md](references/output-format.md); fill it exactly, every section present.
 
 ### Output
 

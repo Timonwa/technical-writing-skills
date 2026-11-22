@@ -12,7 +12,9 @@
         "Names a published base guide in one line",
         "Records only departures and product-specific decisions",
         "Includes a docs-set profile with an owner",
-        "Uses unset rather than guessing"
+        "Uses unset rather than guessing",
+        "Asks what's missing in one batch — who reads the docs, which product and versions, the owner and where the guide lives",
+        "Starts from the style guide template, leaving every undecided row as unset"
       ]
     },
     {

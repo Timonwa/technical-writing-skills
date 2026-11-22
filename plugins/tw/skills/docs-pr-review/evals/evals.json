@@ -4,14 +4,15 @@
     {
       "id": 1,
       "prompt": "Review the docs in PR #214. It changes the retry logic in src/client.ts (the diff sets DEFAULT_RETRIES = 5) and updates docs/configuration.md, which now says 'The client retries a failed request three times by default.'",
-      "expected_output": "Should classify the PR as docs alongside a code change and name the PR's own code diff as the source of truth. Should flag the retry default as a BLOCKER: the docs say three, the diff sets five, quoting both lines and giving the replacement. Should also check the rest of the code diff for changes a reader would notice that the docs don't mention.",
+      "expected_output": "Should classify the PR as docs alongside a code change and name the PR's own code diff as the source of truth. Should flag the retry default as a BLOCKER: the docs say three, the diff sets five, quoting both lines and giving the replacement. Should also check the rest of the code diff for changes a reader would notice that the docs don't mention. Should record the shape, the source of truth, the readers and the release in the review header, asking only for what the PR doesn't show.",
       "files": [],
       "expectations": [
         "States the PR's shape and that the code diff is the source of truth",
         "Flags the three-versus-five default as a blocker",
         "Quotes the code line and the doc line",
         "Gives the corrected sentence as a replacement",
-        "Checks the code diff for other undocumented changes"
+        "Checks the code diff for other undocumented changes",
+        "Records the shape, source of truth, readers and release in the review header"
       ]
     },
     {

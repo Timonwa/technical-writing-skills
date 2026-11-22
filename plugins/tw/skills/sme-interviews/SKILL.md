@@ -18,6 +18,18 @@ Before interviewing, find the project's style guide and conventions and read the
 
 Voice, person, terminology and who the reader is come from that guide; where it's silent, `tw:docs-standards` applies.
 
+## Ask first
+
+Read the answers from the request, the draft and the project first; ask only what's missing. Ask with the app's question tool where it has one, so the choices can be picked; otherwise as a numbered list answered by number. Offer choices where the answers are known and a short typed answer otherwise. Record the answers in the interview notes' header.
+
+1. **Which page or feature is this for?** The draft or outline, and what its reader must be able to do.
+2. **Who is the expert?** Their name or role, and what they built or own.
+3. **What already exists to read first?** The pull request or diff · the issue · the design document · the tests · the existing docs · support conversations — pick any.
+4. **What kind of session?** A live interview · a screen-share while they do the task · a written question list · a technical review of a draft.
+5. **How much time, and when does the page publish?** Minutes booked; the publish date.
+6. **May the session be recorded?** Yes · no · ask at the start.
+7. **Where do the notes go?** A path in the project · in the conversation only.
+
 ## Prepare from what already exists
 
 Arriving with no preparation converts an expert into a search engine, and it's the fastest way to lose access to one.
@@ -91,7 +103,7 @@ The curse of knowledge is the default condition of a useful expert, not a failin
 - **Separate fact from opinion.** A fact is a claim to verify — "it returns 409 on a duplicate" — by running it, reading the code or reading the test. **An engineer's opinion never appears in the docs as a claim**: "nobody really uses that flag" shapes what you emphasise and cut, but the page states only behaviour.
 - **Mark every gap visibly** where you don't have the answer, rather than writing the plausible version. An invented default that reads naturally is the worst defect this work produces, because nothing about it looks wrong.
 - **Verify what's verifiable yourself** — run the command, read the code — rather than spending the expert's next session on things you can check.
-- **Keep a record of what you asked and what you were told**, with dates. It stops you re-asking, and tells you what to re-check when the feature changes.
+- **Keep a record of what you asked and what you were told**, with dates, in the interview notes template ([references/interview-notes.md](references/interview-notes.md)), one file per session named `<yyyy-mm-dd>-<name>.md`. It stops you re-asking, and tells you what to re-check when the feature changes.
 
 ## Getting a review that actually happens
 

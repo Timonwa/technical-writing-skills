@@ -21,6 +21,17 @@ Voice, person, tone, terminology and formatting come from that guide; where it s
 - Where the guide is silent or there isn't one, `tw:docs-standards` is the default — "you", present tense, imperatives for instructions, the writer kept out, one need per page — and a page that departs from it is a finding, not a matter of taste. Apply it without asking; ask only who the reader is and what the page is for, if the page doesn't make that clear.
 - For anything neither the guide nor the defaults settle — the serial comma, the date format, number style — infer the convention from the document itself and say what you inferred.
 
+## Ask first
+
+Read the answers from the request, the document and the project first; ask only what's missing. Ask with the app's question tool where it has one, so the choices can be picked; otherwise as a numbered list answered by number. Offer choices where the answers are known and a short typed answer otherwise. Record the answers in the edit notes' header.
+
+1. **What is the document?** Docs page · user guide · internal doc · README · reference entry · engineer's draft.
+2. **Who reads it, and what should they be able to do afterwards?** A short answer; skip it when the page makes both clear.
+3. **Which product and version does it describe?** A short answer — what the technical accuracy pass checks against.
+4. **What can claims be checked against?** The code · the running product · the vendor's docs · nothing (every claim goes on the unverified list).
+5. **Which passes?** All five levels · substantive · technical accuracy · line · copy · proof · a quick pass. Default: all five, in order.
+6. **Edit the file, or propose edits?** Propose edits for the author · edit the file and list the questions. Default: propose — the author decides.
+
 ## Before editing
 
 - **Establish the document's job** — which need it serves, who it's for, and what the reader should be able to do afterwards. You can't judge whether a paragraph belongs without knowing what the document is trying to be.
@@ -103,6 +114,8 @@ Run this on anything published under a person's name — in documentation, machi
 The common documentation problems, with a before-and-after edit, are in [references/problems.md](references/problems.md).
 
 ## Working collaboratively
+
+The findings go back in the edit notes template, [references/edit-notes.md](references/edit-notes.md) — the scope answers, then the edits, the questions for the author and the unverified claims.
 
 1. **Run a pass and present findings** — what you found, where, and why it's a problem for the reader.
 2. **Recommend specific edits** — propose the replacement, don't just flag the defect.

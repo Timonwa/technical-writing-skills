@@ -12,7 +12,8 @@
         "Derives other conventions from the majority with counts",
         "Flags even splits as open decisions with a recommendation",
         "Proposes missing terminology entries",
-        "Writes the report to _reports/docs-style-check.md without editing pages"
+        "Writes the report to _reports/docs-style-check.md without editing pages",
+        "Records the scope, version, exclusions and standard in the report header"
       ]
     },
     {
@@ -26,7 +27,8 @@
         "Checks the UI and API for the product's own term",
         "Proposes a terminology entry with don't-use variants",
         "Checks titles, navigation, tables, captions and link text",
-        "Checks whether a word names two concepts"
+        "Checks whether a word names two concepts",
+        "Asks which docs to sweep, since no path is given, before sweeping"
       ]
     },
     {

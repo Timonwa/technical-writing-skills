@@ -20,6 +20,17 @@ Before writing a guide, find the project's style guide and conventions and read 
 
 Voice, person, tone, terminology and formatting choices come from that guide. Where it settles something this skill also covers, the guide wins; where it's silent or there isn't one, the voice line above and `tw:docs-standards` apply without asking.
 
+## Ask first
+
+Read the answers from the request, the product, the existing guides and the project's guide and glossary first; ask only what's missing. Ask with the app's question tool where it has one, so the choices can be picked; otherwise as a numbered list answered by number. Offer choices where the answers are known and a short typed answer otherwise.
+
+1. **Which page type?** Concept explainer · how-to · reference · troubleshooting · policy · FAQ answer — the skeletons are in [references/page-types.md](references/page-types.md).
+2. **What's the reader's question, in their words?** A short answer — it becomes the title.
+3. **Which product, and which plan, platform or version does it cover?** A short answer.
+4. **What can it be checked against?** The running app · the code · a spec or recording only (anything unchecked is marked).
+5. **Where does it live?** A docs folder · a help-desk or knowledge-base tool · a PDF manual · the chat only.
+6. **Where are the product's terms and agreed framings?** The glossary or style guide's path · not written down (then the product facts below are asked once, in one batch).
+
 ## Verify before writing
 
 A guide that describes a button that isn't there, or a flow that changed last sprint, sends the reader in circles and costs support a ticket. So check, at whatever level of access you have:

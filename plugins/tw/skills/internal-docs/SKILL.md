@@ -23,6 +23,17 @@ Before writing an internal doc, find the project's style guide and conventions a
 
 Voice, person, tone, terminology and formatting come from that guide. Where it settles something this skill also covers, the guide wins; where it's silent or there isn't one, `tw:docs-standards` applies without asking.
 
+## Ask first
+
+Read the answers from the request, the existing doc and the project first; ask only what's missing. Ask with the app's question tool where it has one, so the choices can be picked; otherwise as a numbered list answered by number. Offer choices where the answers are known and a short typed answer otherwise.
+
+1. **Which type?** Runbook · postmortem · SOP or process doc · onboarding · decision record · internal reference or policy.
+2. **Who uses it, and in what situation?** A short answer — the on-call engineer at night, a new joiner on day one.
+3. **What starts it?** The alert or symptom (runbook) · the incident (postmortem) · the trigger (SOP) · the role and start date (onboarding) · the decision and the next record number (decision record).
+4. **Where does the knowledge come from?** A person to capture it from · a task or incident just done · an existing doc to restructure · notes in hand.
+5. **Who owns it, and how often is it reviewed?** A role or team; quarterly · yearly · after every use. Default: quarterly for runbooks, yearly for policy and reference.
+6. **Where does it live, and who may read it?** The tool or path; the organisation's classification level.
+
 ## Every internal document carries its metadata
 
 This is the difference between a knowledge base and a graveyard. Every document states, where a reader sees it immediately:
@@ -44,6 +55,8 @@ An internal doc that can't be found is worse than none, because the effort was s
 - **Answer the frequent question once, publicly, then link the answer.** Every time you answer something in a message, that's a signal it belongs in a document.
 
 ## The types and their skeletons
+
+Each type below has a fill-in template, with the metadata block on top, in [references/templates.md](references/templates.md). Start every new document from its template.
 
 ### Runbook — an operational procedure
 

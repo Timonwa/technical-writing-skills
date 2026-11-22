@@ -4,7 +4,7 @@
     {
       "id": 1,
       "prompt": "Write the docs page for our new createClient() function.",
-      "expected_output": "Should not draft a page from the function name. Should ask to read the source, or ask for the exact signature, the options object with every field, their types and defaults, what it returns, and what it throws. Should state that symbol names, signatures and defaults are verified against source rather than written from memory, and that a page with a wrong signature is worse than no page. If no code access is available, should say the rule changes shape rather than relaxing — write only what you are told, ask for exact names and values, and mark anything unverified.",
+      "expected_output": "Should not draft a page from the function name. Should ask to read the source, or ask for the exact signature, the options object with every field, their types and defaults, what it returns, and what it throws. Should state that symbol names, signatures and defaults are verified against source rather than written from memory, and that a page with a wrong signature is worse than no page. If no code access is available, should say the rule changes shape rather than relaxing — write only what you are told, ask for exact names and values, and mark anything unverified. Should ask, in one batch, only what the request leaves open: the reader's need (tutorial, how-to, reference or explanation), who the reader is, the product version and the docs framework.",
       "files": [],
       "expectations": [
         "Asks to read the source or asks for the exact signature and options",
@@ -12,7 +12,8 @@
         "Does not invent option names, defaults or a return shape",
         "States that symbols are verified against source rather than memory",
         "Offers the no-access path (write only what you are told, mark the unverified)",
-        "Does not produce a plausible page for the user to correct"
+        "Does not produce a plausible page for the user to correct",
+        "Asks the page type, reader, version and docs framework in one batch, only where the request doesn't answer them"
       ]
     },
     {

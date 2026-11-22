@@ -12,7 +12,8 @@
         "Batches the questions into one ask rather than several",
         "Asks whether a style guide or glossary exists",
         "Does not invent button labels, screen names, provider lists or error messages",
-        "Does not produce a plausible connection flow for the user to correct"
+        "Does not produce a plausible connection flow for the user to correct",
+        "Takes the page type (a how-to) and the reader's task from the request rather than asking for them"
       ]
     },
     {

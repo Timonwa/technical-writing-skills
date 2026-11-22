@@ -2,6 +2,66 @@
 
 Every README draws from the universal skeleton in SKILL.md; the repo type decides what leads and what drops. Detect the type from the signals below, and confirm with the user only when the signals conflict.
 
+## The universal skeleton, to fill in
+
+Start every README from this, in this order, then apply the repo type's changes below. Replace every `<…>` with a real value taken from the repo; a section that doesn't apply is deleted whole, and no placeholder survives into the written file.
+
+````markdown
+# <name — matches the repository or package>
+
+<What it does, in one sentence a stranger understands, under 120 characters.>
+
+<Badges that carry information someone acts on — CI status, published version, license; four at most.>
+
+## Table of contents
+
+<Only for a README of 100 lines or more: a link to every second-level heading.>
+
+## Prerequisites
+
+- <Runtime and version>
+- <Package manager and version>
+- <Any service it needs>
+
+## Quickstart
+
+```bash
+<install command>
+```
+
+```bash
+<the shortest command that shows it working>
+```
+
+<What the reader should see.>
+
+## Configuration
+
+| Variable | Required | What it's for |
+| -------- | -------- | ------------- |
+| `<NAME>` | Yes      |               |
+
+<Past about ten variables: only the required ones, then "The full list is in `<example env file>`.">
+
+## Scripts
+
+| Command     | What it does |
+| ----------- | ------------ |
+| `<command>` |              |
+
+## Support
+
+<Where to get help.> To report a vulnerability, see [SECURITY.md](SECURITY.md).
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## License
+
+[<license name>](LICENSE)
+````
+
 ## Library / package
 
 Signal: `package.json` with `main`/`exports` (or the language's equivalent), no app framework entry.

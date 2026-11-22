@@ -8,7 +8,7 @@ description: >-
 
 Most documentation problems are planning problems wearing a writing costume. A page nobody can find, three pages covering the same thing differently, a missing page the support queue answers forty times a month — none of those are fixed by better sentences.
 
-Plan the set before writing the page. The output of this skill is a list of documents to write, in order, with a home for each.
+Plan the set before writing the page. The output of this skill is a list of documents to write, in order, with a home for each, in the template in [references/plan-template.md](references/plan-template.md).
 
 ## Voice and audience come from the writing's own guide
 
@@ -19,6 +19,17 @@ Before planning the set, find the project's style guide and conventions and read
 - **Otherwise:** ask whether one exists before concluding there isn't one.
 
 Voice, person, tone, terminology and formatting come from that guide. Where it settles something this skill also covers, the guide wins; where it's silent or there isn't one, `tw:docs-standards` applies without asking.
+
+## Ask first
+
+Read the answers from the request, the existing docs, the project and its guide first; ask only what's missing. Ask with the app's question tool where it has one, so the choices can be picked; otherwise as a numbered list answered by number. Offer choices where the answers are known and a short typed answer otherwise; where the project records a default, show it and ask whether to use it. Record the answers in the plan's header.
+
+1. **What's being planned?** a new docs set · restructuring an existing set · the docs for one release or feature · where one page goes.
+2. **Which product and version?** Short answer.
+3. **Who reads it?** One line per audience: who they are and what they already know.
+4. **What evidence of reader tasks exists?** support tickets · search queries · community or internal questions · analytics · none — the task list is then marked assumed.
+5. **What already exists?** The path or URL of the current set · none — starting from scratch.
+6. **Where will it live?** The docs platform or framework, and the repo and path. It decides file naming, ordering and whether a rename moves a URL.
 
 ## Start from reader tasks, not the product
 

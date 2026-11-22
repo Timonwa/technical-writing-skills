@@ -18,7 +18,16 @@ Before applying this skill, find the project's style guide and conventions and r
 
 Its voice and page rules apply wherever the project's guide is silent. Where the project's guide decides otherwise — person, tone, terminology, formatting — the guide wins.
 
-- Where there's no guide, these rules apply in full, without asking. Ask only who the reader is and what the page is for, if the request doesn't make that clear, and offer to build a guide with `tw:style-guide`.
+- Where there's no guide, these rules apply in full, without asking, and offer to build a guide with `tw:style-guide`.
+
+## Ask first
+
+Read the answers from the request, the page, the project and its guide first; ask only what's missing. Ask with the app's question tool where it has one, so the choices can be picked; otherwise as a numbered list answered by number. Offer choices where the answers are known and a short typed answer otherwise; where the project records a default, show it and ask whether to use it.
+
+1. **Who's the reader?** Short answer: who they are and what they already know.
+2. **What does the reader need from the page?** learning (tutorial) · a task (how-to) · lookup (reference) · understanding (explanation) · none of the four (a landing page, a README, a release note).
+3. **Writing a page, or checking one against these rules?** writing · checking an existing page (path).
+4. **What are its facts checked against?** the code · the running product · a spec · nothing yet — mark what's unverified.
 
 ## Keep each page to one need
 
@@ -29,7 +38,7 @@ Documentation readers come with one of four needs ([diataxis.fr](https://diataxi
 - **Reference — lookup.** Describes the machinery: parameters, types, returns, defaults, errors — complete, accurate, structured for lookup (tables over prose). Never narrative, never persuasive.
 - **Explanation — understanding.** Why things are the way they are: design decisions, trade-offs, background. No steps, no API listings.
 
-Diátaxis is "a guide, not a plan" ([diataxis.fr](https://diataxis.fr/how-to-use-diataxis/)): it tells you whether a page is mixing needs, not that a docs set must have four sections. Never create empty sections to fill the shape; a landing page, a README or a release note isn't forced into one of the four. **Fix mixing by moving, not deleting** — a tutorial that pauses to discuss architecture moves that discussion to an explanation page and links it; a reference entry with a walkthrough spins it out as a how-to; a how-to that teaches basics links the tutorial instead.
+Diátaxis is "a guide, not a plan" ([diataxis.fr](https://diataxis.fr/how-to-use-diataxis/)): it tells you whether a page is mixing needs, not that a docs set must have four sections. Never create empty sections to fill the shape; a landing page, a README or a release note isn't forced into one of the four. Once the need is chosen, the section order for each type on a docs site is in [`tw:developer-docs`' page-types.md](../developer-docs/references/page-types.md), and for a help centre in [`tw:user-guides`' page-types.md](../user-guides/references/page-types.md). **Fix mixing by moving, not deleting** — a tutorial that pauses to discuss architecture moves that discussion to an explanation page and links it; a reference entry with a walkthrough spins it out as a how-to; a how-to that teaches basics links the tutorial instead.
 
 ## The documentation voice
 

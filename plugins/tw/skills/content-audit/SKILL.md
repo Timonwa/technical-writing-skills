@@ -19,6 +19,18 @@ It asks a different question from `/tw:docs-audit`. That one asks whether a page
 
 Before inventorying it, find the project's style guide and conventions and read them — in a codebase, the ones the project's `AGENTS.md` names or its contributing docs; in a chat app, the style guide in the project's files or attached to the conversation; otherwise, ask whether one exists before concluding there isn't one. Where the guide settles something, the guide wins; where it's silent or there isn't one, `tw:docs-standards` applies without asking. The standard behind the verdicts is `tw:docs-planning`; `tw:docs-standards` supplies the document types. Works on any body of content — a docs repo, an exported help centre, a knowledge base, a folder of documents.
 
+## Ask first
+
+Read the answers from the request, the arguments, the project and its guide first; ask only what's missing. Ask with the app's question tool where it has one, so the choices can be picked; otherwise as a numbered list answered by number. Offer choices where the answers are known and a short typed answer otherwise; where the project records a default, show it and ask whether to use it. Record the answers in the report's header.
+
+1. **Fresh audit, or fix from the last report?** fresh audit · fix from `_reports/content-audit.md` (`--fix`).
+2. **Which content set?** A docs repo or folder (path) · a site (URL) · an exported help centre or knowledge base (path).
+3. **Which product and version does it document?** Short answer.
+4. **Who reads it?** One line per audience: who they are and what they already know.
+5. **What evidence of reader tasks exists?** a task list or journey map · support-ticket export · search queries · community questions · none — derive one and confirm it.
+6. **What usage data exists?** analytics · search logs · ticket counts · none. Over at least 12 months where it's available.
+7. **Where are owners and last-verified dates kept?** page front matter · a spreadsheet or tracker · nowhere.
+
 ## Arguments
 
 - `[path]` — the content set to inventory. Omitted → ask.
@@ -88,67 +100,11 @@ Run it in both directions — the second one is the one people skip:
 
 ### Report format
 
-Write to `_reports/content-audit.md`, creating the directory if it doesn't exist. That's where every audit and report in this set goes. Tell the user the path when you're done.
-
-```markdown
-# Content audit — <scope>
-
-**Date:** <YYYY-MM-DD> · **Scope:** <what was inventoried> · **Pages:** <N> · **Audiences:** <list> · **Task list:** <confirmed / assumed> · **Mode:** Report-only · **Overall:** <X>/10
-
-## Score change (previous → current)
-| Metric | Previous | Current | Δ | Trend |
-| --- | --- | --- | --- | --- |
-| Overall | <prev/10 or N/A> | <cur/10> | <+N / -N / 0> | <▲ / ▼ / ■ / N/A> |
-
-## Summary
-| Verdict | Count | Share |
-| --- | --- | --- |
-| Keep / Update / Merge / Split / Rewrite / Retire | <N> | <%> |
-
-**Coverage:** <N> of <M> reader tasks have an adequate page. **Unowned:** <N> pages. **Never verified:** <N> pages.
-
-## Inventory
-| Title | Location | Type | Audience | Task | Owner | Last verified | Usage | Words | Verdict |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-
-## Gaps — the writing queue
-| ID | Reader task | Audience | Why it matters | Doc type needed | Priority | Status |
-| --- | --- | --- | --- | --- | --- | --- |
-
-## Duplicate clusters
-| Topic | Pages | Canonical | Action |
-| --- | --- | --- | --- |
-
-## Structure findings
-| ID | Finding | Evidence | Recommendation | Status |
-| --- | --- | --- | --- | --- |
-
-## Retire list
-| Page | Why | URL disposition | Inbound links to update |
-| --- | --- | --- | --- |
-
-## Proposed structure
-<the table of contents the set should have, as a nested list>
-
-## Open questions
-| # | Question | Who can answer it | What it blocks |
-| --- | --- | --- | --- |
-
-## Scorecard
-| Category | Score | Notes |
-| --- | --- | --- |
-| Coverage | <X>/10 | reader tasks with an adequate page |
-| Ownership | <X>/10 | pages with a named owner |
-| Freshness | <X>/10 | pages verified within their cadence |
-| Duplication | <X>/10 | topics covered in exactly one place |
-| Structure | <X>/10 | grouping, depth, naming |
-| Findability | <X>/10 | entry points, orphans, ghosts |
-
-```
+The report follows the template in [references/output-format.md](references/output-format.md): a header recording the scope answers, the verdict summary, the inventory, the writing queue, duplicate clusters, structure findings, the retire list, the proposed structure, open questions and the scorecard. It goes to `_reports/content-audit.md`.
 
 ### Output
 
-- **Full report** at the path above.
+- **Full report** at `_reports/content-audit.md`.
 - **Chat summary** — coverage as a fraction, the verdict counts, the top five gaps worst-first, the largest duplicate cluster, and the report path.
 
 **Report-only** — it recommends a plan; it never edits, moves, merges or deletes anything.

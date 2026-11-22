@@ -20,6 +20,18 @@ Before writing the notes, find the project's style guide and conventions and rea
 
 Voice, person, tone, terminology and formatting come from that guide. Where it settles something this skill also covers, the guide wins; where it's silent or there isn't one, `tw:docs-standards` applies without asking.
 
+## Ask first
+
+Read the answers from the request, the change list, the existing `CHANGELOG.md` and the project first; ask only what's missing. Ask with the app's question tool where it has one, so the choices can be picked; otherwise as a numbered list answered by number. Offer choices where the answers are known and a short typed answer otherwise.
+
+1. **Who are these notes for?** End users · developers integrating · operators · internal readers. One audience per document; "everyone" means two or more documents.
+2. **What's being written?** A `CHANGELOG.md` entry · published release notes · a deprecation notice · a migration guide.
+3. **Which version, and which release date?** A short answer — `2.1.0`, `2026-12-04`.
+4. **Where's the change list?** Merged pull requests · a commit range or tags · a release tool's draft · a list in hand.
+5. **Which versioning scheme?** Semantic Versioning · calendar versioning · another (name it). Default: what the project already uses.
+6. **Does the release carry a breaking change, a deprecation or a security fix?** None · breaking · deprecation · security — and for security, who owns disclosure.
+7. **Is the project's history public?** Yes — link each pull request and credit outside contributors · no.
+
 ## Decide the audience first
 
 One release usually needs more than one set of notes, and merging them serves nobody:
@@ -41,6 +53,8 @@ The default failure is publishing the change list instead of the notes. For ever
 - **Work from the change list, but verify it shipped.** An entry for something that was reverted or held back is the one error that costs you the reader's trust in the whole document.
 
 ## The entry
+
+The release notes page, the `CHANGELOG.md` file, the entry, the deprecation notice, the security entry and the migration guide each have a fill-in template in [references/templates.md](references/templates.md).
 
 Each entry, in this order, as short as the change allows:
 

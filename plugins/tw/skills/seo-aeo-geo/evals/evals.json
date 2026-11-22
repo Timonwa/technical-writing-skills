@@ -53,7 +53,8 @@
         "Keeps the identifying words first",
         "Uses the suffix the project's guide sets",
         "Notes the about 50–60-character target as a rule of thumb from pixel truncation, not a Google limit",
-        "Makes the H1 match the title"
+        "Makes the H1 match the title",
+        "Writes one title only, with no separate SEO title or share title"
       ]
     }
   ]

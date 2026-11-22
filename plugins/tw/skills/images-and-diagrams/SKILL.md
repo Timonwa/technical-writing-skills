@@ -24,6 +24,18 @@ Before adding or changing a visual, find the project's style guide and conventio
 
 Where the guide settles something this skill also covers, the guide wins; where it's silent, `tw:docs-standards` applies.
 
+## Ask first
+
+Read the answers from the request, the page, the project's capture conditions record ([references/capture-conditions.md](references/capture-conditions.md)) and its guide first; ask only what's missing. Ask with the app's question tool where it has one, so the choices can be picked; otherwise as a numbered list answered by number. Offer choices where the answers are known and a short typed answer otherwise.
+
+1. **What's the job?** A new screenshot · a new diagram · a recording · alt text or a caption for an existing visual · review a page's images.
+2. **What should the reader get from it that the text doesn't give?** One sentence. No answer means the paragraph, not a picture.
+3. **Which page does it go on?** A path or URL.
+4. **What can it be captured from?** The running product, with the demo account and plan or role · existing images only · nothing (ask for the screens).
+5. **Which product version is shown?** A short answer — recorded beside the image.
+6. **Light, dark or both?** Light · dark · both. Default: what the record says.
+7. **Diagrams: which tool?** Mermaid · PlantUML · D2 · hand-authored SVG. Default: Mermaid where the docs platform renders it.
+
 ## Does this visual earn its place?
 
 **Use a screenshot when the reader needs to recognize something visually:**
@@ -51,7 +63,7 @@ Where the guide settles something this skill also covers, the guide wins; where 
 
 Consistency across a set matters more than perfection in any one image — a set captured at different zoom levels, themes and window sizes looks broken even when every image is correct.
 
-- **Fix the conditions and write them down**: operating system, browser, theme, zoom level, window size, language, and which plan or role the account is on — where the next person to update an image will find them.
+- **Fix the conditions and write them down**: operating system, browser, theme, zoom level, window size, language, and which plan or role the account is on — where the next person to update an image will find them, in the capture conditions record ([references/capture-conditions.md](references/capture-conditions.md)).
 - **Use clean demo data** in a demo account — realistic, plausible, entirely fictional, and the same across pages so the reader recognizes it. Never a real customer's account, names, email addresses, balances or identifiers.
 - **Scrub before publishing** — personal data, customer names, internal hostnames and URLs, account numbers, tokens in a URL bar, browser bookmarks, notifications, the rest of your desktop. Check the whole frame, not the part you were looking at.
 - **Crop to the region that matters**, with just enough surrounding context to orient. A full-screen capture to show one button wastes the reader's attention on finding it.
@@ -128,7 +140,7 @@ Every visual needs a text alternative — a diagram as much as a screenshot, and
 
 This is where image-heavy documentation fails, and it fails quietly.
 
-- **Record the product version or date** each image was captured at, beside the image or in the page's source.
+- **Record the product version or date** each image was captured at, beside the image, in the page's source or in the record's image log.
 - **A stale screenshot is worse than none**, because it contradicts the text and the reader trusts the picture. When the interface changes, update the image or remove it.
 - **Check the images on every page a release touches**, and treat an outdated one as a defect, not a cosmetic issue.
 - **Fewer images means more of them stay current.** The right number is the smallest that does the job.

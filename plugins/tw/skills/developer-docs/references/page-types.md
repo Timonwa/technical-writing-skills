@@ -2,6 +2,26 @@
 
 Which quadrant a topic needs — and why mixing them fails — is `tw:docs-standards`' call (Diátaxis). This file is the docs-site rendering of each: the section order to follow once the type is chosen.
 
+## The frame every page shares
+
+Whatever the type, a page opens and closes the same way; the type's sections go in the middle. Front matter field names follow the docs framework.
+
+```mdx
+---
+title: "" # the sidebar label and search title: the identifying words first, about 50–60 characters
+description: "" # the search snippet: unique, 1–2 sentences, about 150–160 characters
+---
+
+<What the page covers and why the reader needs it, in one or two sentences.>
+
+<The type's sections, from the blueprint below.>
+
+## Next steps
+
+- [<Related page>](<relative link>)
+- [<Related page>](<relative link>)
+```
+
 ## 1. Tutorial — learning by doing
 
 The reader is new and wants a guaranteed win. You own every decision; they own nothing but the typing.

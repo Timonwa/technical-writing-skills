@@ -4,7 +4,7 @@
     {
       "id": 1,
       "prompt": "Document our POST /v1/invoices endpoint for the API reference.",
-      "expected_output": "Should refuse to draft the entry from the endpoint name alone and ask for the specifics first. Should establish where the descriptions live (a spec or hand-written pages), whether any spec is generated from code or hand-maintained, and whether a sandbox or test credential exists so the endpoint can actually be called. Should ask what it does, which credential and scope it needs, the request body fields with types and defaults, the success status, the response shape, and any endpoint-specific errors. Must not produce a parameter table, status codes, field names or an error table invented from what an invoices endpoint would plausibly have.",
+      "expected_output": "Should refuse to draft the entry from the endpoint name alone and ask for the specifics first. Should establish where the descriptions live (a spec or hand-written pages), whether any spec is generated from code or hand-maintained, and whether a sandbox or test credential exists so the endpoint can actually be called. Should ask what it does, which credential and scope it needs, the request body fields with types and defaults, the success status, the response shape, and any endpoint-specific errors. Must not produce a parameter table, status codes, field names or an error table invented from what an invoices endpoint would plausibly have. Should ask only what the request doesn't answer, offering choices where the answers are known (for where the descriptions live: a generated spec, a hand-maintained spec, hand-written pages).",
       "files": [],
       "expectations": [
         "Asks for the specifics before drafting any entry",
@@ -12,7 +12,8 @@
         "Asks whether the endpoint can be called against a sandbox or test account",
         "Asks for auth, parameters, success status, response shape and errors",
         "Does not invent parameter names, types, defaults, status codes or error codes",
-        "Does not present a plausible-looking entry as a draft to be corrected later"
+        "Does not present a plausible-looking entry as a draft to be corrected later",
+        "Asks only what the request doesn't answer, with choices where the answers are known (generated spec · hand-maintained spec · hand-written pages)"
       ]
     },
     {

@@ -4,7 +4,7 @@
     {
       "id": 1,
       "prompt": "/tw:docs-audit help/ — it's an exported help centre, there's no code.",
-      "expected_output": "Should ask for a source of truth before settling for none — a running product URL, a staging login or a spec — because unverified mode is the user's decision. Only if the answer is no should it run in unverified mode and say so up front. Should inventory every page before checking, run the checklist, verify each candidate by naming the reader it breaks, mark unverifiable suspicions as needs confirmation, write _reports/docs-audit.md and never edit a page.",
+      "expected_output": "Should ask for a source of truth before settling for none — a running product URL, a staging login or a spec — because unverified mode is the user's decision. Only if the answer is no should it run in unverified mode and say so up front. Should inventory every page before checking, run the checklist, verify each candidate by naming the reader it breaks, mark unverifiable suspicions as needs confirmation, write _reports/docs-audit.md and never edit a page. Should record the scope answers — product version, readers, what it was verified against, the guide — in the report header.",
       "files": [],
       "expectations": [
         "Asks for a source of truth before running unverified",
@@ -12,7 +12,8 @@
         "Inventories every page before checking",
         "Verifies each finding by naming the reader failure",
         "Marks unverifiable suspicions as needs confirmation",
-        "Writes the report to _reports/docs-audit.md without editing pages"
+        "Writes the report to _reports/docs-audit.md without editing pages",
+        "Records the scope answers (product version, readers, source, guide) in the report header"
       ]
     },
     {

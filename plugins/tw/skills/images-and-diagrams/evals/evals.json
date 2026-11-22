@@ -39,6 +39,20 @@
         "Recommends a long description in the page body for a complex diagram",
         "Explains why a long alt string is unusable (announced as one unnavigable block)"
       ]
+    },
+    {
+      "id": 4,
+      "prompt": "Add a screenshot of the new billing page to our docs.",
+      "expected_output": "Should read the request, the page and any capture conditions record first, then ask only what's missing, as choices where it can: what the reader should get from the screenshot that the text doesn't give (and write the paragraph instead if nothing), which page it goes on, what it can be captured from (the demo account and its plan or role, never a real customer's account), which product version is shown, and light, dark or both. Should capture to the recorded conditions and add a row to the image log with the version and date.",
+      "files": [],
+      "expectations": [
+        "Reads any capture conditions record before asking",
+        "Asks what the reader should get from the screenshot that the text does not give",
+        "Asks which page it goes on and which product version is shown",
+        "Asks for a demo account rather than using a real customer account",
+        "Offers choices where the answers are known, such as light, dark or both",
+        "Records the capture in the image log with the version and date"
+      ]
     }
   ]
 }

@@ -4,7 +4,7 @@
     {
       "id": 1,
       "prompt": "I found `requestTimeout: 30` in the config file. Add it to the docs as the default timeout.",
-      "expected_output": "Should not document 30 as the default on the strength of the source value alone. Should explain that a default in source is routinely overridden by environment configuration, a deployment manifest, or a per-customer setting, and that the source gives no hint when it has been. Should ask what the value is in the environment being documented, check whether the config loader or the validation schema narrows or replaces it, and where the same value appears in more than one place, establish which one wins. Should also ask for the unit, since a bare 30 is ambiguous between seconds and milliseconds.",
+      "expected_output": "Should not document 30 as the default on the strength of the source value alone. Should explain that a default in source is routinely overridden by environment configuration, a deployment manifest, or a per-customer setting, and that the source gives no hint when it has been. Should ask what the value is in the environment being documented, check whether the config loader or the validation schema narrows or replaces it, and where the same value appears in more than one place, establish which one wins. Should also ask for the unit, since a bare 30 is ambiguous between seconds and milliseconds. Should ask which environment the doc describes, offered as choices (production, staging, the self-hosted default, a customer's configuration).",
       "files": [],
       "expectations": [
         "Does not document 30 as the default from the source value alone",
@@ -12,7 +12,8 @@
         "Asks what the value actually is in the environment being documented",
         "Checks whether a config loader or validation schema supersedes it",
         "Asks for the unit rather than assuming seconds or milliseconds",
-        "Treats the source value as a claim to confirm, not a fact"
+        "Treats the source value as a claim to confirm, not a fact",
+        "Asks which environment the doc describes, offering production, staging, the self-hosted default or a customer's configuration as choices"
       ]
     },
     {

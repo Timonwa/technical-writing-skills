@@ -4,7 +4,7 @@
     {
       "id": 1,
       "prompt": "/tw:doc-review docs/guides/rotate-keys.md",
-      "expected_output": "Should review the one document, working down the five levels in order — substantive, technical accuracy, line, copy, proof — without editing anything. Should load the project's style guide first, asking before concluding there isn't one, and apply tw:docs-standards where the guide is silent. Should write the report to _reports/doc-review-guides-rotate-keys.md, summarise the findings in chat worst-first with a proposed replacement for each, batch the questions only the author can answer, list what was verified, then ask which findings to fix and edit nothing until answered.",
+      "expected_output": "Should review the one document, working down the five levels in order — substantive, technical accuracy, line, copy, proof — without editing anything. Should load the project's style guide first, asking before concluding there isn't one, and apply tw:docs-standards where the guide is silent. Should write the report to _reports/doc-review-guides-rotate-keys.md, summarise the findings in chat worst-first with a proposed replacement for each, batch the questions only the author can answer, list what was verified, then ask which findings to fix and edit nothing until answered. Should read the document's type, audience and source of truth from the page and the project, ask only what's missing, and record them in the report header.",
       "files": [],
       "expectations": [
         "Works down the five levels in order",
@@ -12,7 +12,8 @@
         "Writes the report to _reports/doc-review-guides-rotate-keys.md",
         "Gives each finding a proposed replacement and severity",
         "Batches author questions into one list",
-        "Asks which findings to fix"
+        "Asks which findings to fix",
+        "Records type, audience, product version and what claims were checked against in the report header"
       ]
     },
     {

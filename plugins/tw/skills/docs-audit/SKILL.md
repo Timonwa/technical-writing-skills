@@ -21,6 +21,17 @@ Every check is spelled out below. For the standard behind a finding: `write:writ
 
 Before auditing it, find the project's style guide and conventions and read them — in a codebase, the ones the project's `AGENTS.md` names or its contributing docs; in a chat app, the style guide in the project's files or attached to the conversation; otherwise, ask whether one exists before concluding there isn't one. Voice, person, tone, terminology and formatting come from that guide; where it's silent or there isn't one, `tw:docs-standards` applies without asking, and a page that departs from it is a finding.
 
+## Ask first
+
+Read the answers from the request, the arguments, the project and its guide first; ask only what's missing. Ask with the app's question tool where it has one, so the choices can be picked; otherwise as a numbered list answered by number. Offer choices where the answers are known and a short typed answer otherwise; where the project records a default, show it and ask whether to use it. Record the answers in the report's header.
+
+1. **Fresh audit, or fix from the last report?** fresh audit · fix from `_reports/docs-audit.md` (`--fix`).
+2. **What should be audited?** a directory · a single file · a diff · an exported set. The path.
+3. **What's the source of truth?** a code repository · a running product (URL) · an API spec · a staging login · none — run unverified.
+4. **Which product version or branch do the docs describe?** Short answer.
+5. **Who reads these docs?** Short answer: the readers a finding is judged against.
+6. **Where are owners and last-verified dates kept?** page front matter · a spreadsheet or tracker · not tracked.
+
 ## Arguments
 
 - `[path]` — the content to audit: a directory, a single file, a diff, or an exported set. Omitted → ask what to audit rather than guessing.
@@ -51,56 +62,11 @@ Findings are ordered worst-first.
 
 ### Report format
 
-Write to `_reports/docs-audit.md`, with one Overall row in the score change, creating the directory if it doesn't exist. That's where every audit and report in this set goes, so a reader always knows where to look. Tell the user the path when you're done.
-
-```markdown
-# Docs audit — <scope>
-
-**Date:** <YYYY-MM-DD> · **Scope:** <what was audited> · **Verified against:** <source, or "unverified — no source available"> · **Mode:** Report-only · **Overall:** <X>/10
-
-## Score change (previous → current)
-| Metric | Previous | Current | Δ | Trend |
-| --- | --- | --- | --- | --- |
-| Overall | <prev/10 or N/A> | <cur/10> | <+N / -N / 0> | <▲ / ▼ / ■ / N/A> |
-
-## Findings
-| ID | Severity | Category | Status | Issue | Location |
-| --- | --- | --- | --- | --- | --- |
-| 1 | HIGH | Stale claims | NEW | <one-line issue> | `<path>:<line>` or <page › section> |
-
-**Status:** `NEW` — found this run for the first time · `UNRESOLVED` — still present from an earlier run · `FIXED` — fixed after the audit; the note names the commit · `WON'T FIX` — the owner ruled it not a defect, intended, or accepted as it is; the note gives their reason
-
-### F1 — <title>
-- **What:** <the defect, and the evidence that proves it real>
-- **Who it breaks:** <the reader, and what happens to them>
-- **Fix:** <the specific remediation>
-- **Note:** <only once `FIXED` (the commit and what changed) or `WON'T FIX` (the owner's reason)>
-
-## Scorecard
-| Category | Score | Notes |
-| --- | --- | --- |
-| Accuracy | <X>/10 | <one-line justification> |
-| Links & anchors | <X>/10 | <one-line justification> |
-| Navigation & findability | <X>/10 | <one-line justification> |
-| Duplication & contradiction | <X>/10 | <one-line justification> |
-| Coverage | <X>/10 | <one-line justification> |
-| Structure & type discipline | <X>/10 | <one-line justification> |
-| Examples & images | <X>/10 | <one-line justification> |
-| Freshness & ownership | <X>/10 | <one-line justification> |
-
-## Action items
-| # | Priority | Task (finding ID) | Effort |
-| --- | --- | --- | --- |
-
-## Needs confirmation
-| ID | Suspected issue | What would settle it | Who to ask |
-| --- | --- | --- | --- |
-
-```
+The report follows the template in [references/output-format.md](references/output-format.md): a header recording the scope answers, the score change, the findings table with a block per finding, the scorecard, action items and what needs confirmation. It goes to `_reports/docs-audit.md`, one Overall row in the score change.
 
 ### Output
 
-- **Full report** at the path above, overwriting the previous run.
+- **Full report** at `_reports/docs-audit.md`, overwriting the previous run.
 - **Chat summary** — the overall `<X>/10` with the change since last run, a severity count, the top findings worst-first (id · severity · one-line · location), anything in "needs confirmation", and the report path.
 
 **Report-only** — this audit recommends fixes; it never edits a page.

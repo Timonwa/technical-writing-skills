@@ -17,7 +17,7 @@
     {
       "id": 2,
       "prompt": "Our docs are organised by product module: Payments, Ledger, Identity, Reports. Support says people can't find how to refund a customer. Plan a fix.",
-      "expected_output": "Should identify module-based grouping as a cause, since readers look for tasks, not modules, and recommend grouping by what the reader is trying to do. Should start from reader tasks in their words ('refund a payment'), gathered from support tickets and search queries, inventory the existing pages with type, owner and last-verified date, run a gap analysis (tasks with no page, tasks inside the wrong page, pages with no task), and prioritise by impact rather than ease. Should name and place a 'Refund a payment' page in the plan rather than only writing it.",
+      "expected_output": "Should identify module-based grouping as a cause, since readers look for tasks, not modules, and recommend grouping by what the reader is trying to do. Should start from reader tasks in their words ('refund a payment'), gathered from support tickets and search queries, inventory the existing pages with type, owner and last-verified date, run a gap analysis (tasks with no page, tasks inside the wrong page, pages with no task), and prioritise by impact rather than ease. Should name and place a 'Refund a payment' page in the plan rather than only writing it. Should ask for the task evidence it doesn't have as choices (support tickets, search queries, community questions, analytics) and the product version, rather than assuming them.",
       "files": [],
       "expectations": [
         "Identifies module-based grouping as the cause",
@@ -25,7 +25,8 @@
         "Inventories existing pages before planning",
         "Runs the gap analysis in both directions",
         "Prioritises by impact, not ease",
-        "Gives the refund task a named home in the plan"
+        "Gives the refund task a named home in the plan",
+        "Asks for the missing task evidence as a choice list rather than assuming what readers need"
       ]
     },
     {

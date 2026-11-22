@@ -20,6 +20,18 @@ Before writing a page, find the project's style guide and conventions and read t
 
 Voice, person, tone, terminology and formatting come from that guide. Where it settles something this skill also covers, the guide wins; where it's silent or there isn't one, `tw:docs-standards` applies without asking.
 
+## Ask first
+
+Read the answers from the request, the docs set, the project and its guide first; ask only what's missing. Ask with the app's question tool where it has one, so the choices can be picked; otherwise as a numbered list answered by number. Offer choices where the answers are known and a short typed answer otherwise; where the project records a default, show it and ask whether to use it.
+
+1. **What's the job?** a new page · rewriting a page · moving, renaming, splitting or removing pages.
+2. **What does the reader need from the page?** learning (tutorial) · a task (how-to) · lookup (reference) · understanding (explanation). Settled with `tw:docs-standards` where it isn't clear.
+3. **What's the page about?** Short answer: the task or topic in the reader's words.
+4. **Who's the reader, and what do they already know?** Short answer.
+5. **Which product version does it document?** Short answer, and whether the docs are versioned.
+6. **Where does it live?** The docs framework (Docusaurus · Mintlify · Nextra · MkDocs · Starlight · other) and the section or path in the navigation.
+7. **What's the source of truth?** the code (path) · a spec · a walkthrough or an engineer's answers · none yet.
+
 ## Verify against source before writing
 
 **When the code is available, it is the source of truth** — read it first, and never document from memory or from what the old page claimed:
@@ -36,7 +48,7 @@ Voice, person, tone, terminology and formatting come from that guide. Where it s
 
 ## Page types and site mechanics
 
-- **Pick the page type first** — which Diátaxis quadrant a topic needs is `tw:docs-standards`' call; the section blueprint for each type once chosen is [references/page-types.md](references/page-types.md), including the mixing-test table for pages drifting between types.
+- **Pick the page type first** — which Diátaxis quadrant a topic needs is `tw:docs-standards`' call; the frame every page shares and the section blueprint for each type once chosen are in [references/page-types.md](references/page-types.md), with the mixing-test table for pages drifting between types.
 - **Placement, navigation, and moving/renaming/removing pages** live in [references/site-mechanics.md](references/site-mechanics.md) — one focus per page, canonical-page linking instead of duplication, the best-practices/troubleshooting placement ladder, sidebar registration, inbound-link greps and redirects before any move. Follow it for every structural change, not just new pages.
 
 ## Writing the page

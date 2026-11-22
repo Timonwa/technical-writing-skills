@@ -4,7 +4,7 @@
     {
       "id": 1,
       "prompt": "/tw:content-audit docs/",
-      "expected_output": "Should ask who reads the set and whether a task list, journey map or support-ticket export exists before building one, then derive the reader tasks and present them for confirmation before the gap analysis. Should inventory every page with type, audience, task, owner, last-verified date, usage and words, leaving unknown cells blank as findings, assign a verdict per page, cluster duplicates with a canonical page, run the gap analysis in both directions, write _reports/content-audit.md and never edit, move, merge or delete a page.",
+      "expected_output": "Should ask who reads the set and whether a task list, journey map or support-ticket export exists before building one, then derive the reader tasks and present them for confirmation before the gap analysis. Should inventory every page with type, audience, task, owner, last-verified date, usage and words, leaving unknown cells blank as findings, assign a verdict per page, cluster duplicates with a canonical page, run the gap analysis in both directions, write _reports/content-audit.md and never edit, move, merge or delete a page. Should ask the missing scope questions as one numbered list or with the question tool — product version, usage data, where owners and last-verified dates are kept — and record the answers in the report header.",
       "files": [],
       "expectations": [
         "Asks about audiences and existing task lists first",
@@ -12,7 +12,8 @@
         "Inventories every page with the full columns",
         "Treats blank owner or last-verified as findings",
         "Assigns a verdict per page and clusters duplicates",
-        "Writes the report without editing any page"
+        "Writes the report without editing any page",
+        "Asks the missing scope questions in one batch and records the answers in the report header"
       ]
     },
     {

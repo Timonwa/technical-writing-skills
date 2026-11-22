@@ -25,6 +25,17 @@ Before reviewing, find the project's style guide and conventions and read them:
 
 Voice, person, tone, terminology and formatting come from that guide. Where it settles something this skill also covers, the guide wins; where it's silent or there isn't one, `tw:docs-standards` applies without asking, and a page that departs from it is a finding.
 
+## Ask first
+
+Read the answers from the request, the arguments, the PR itself, the project and its guide first; ask only what's missing. Ask with the app's question tool where it has one, so the choices can be picked; otherwise as a numbered list answered by number. Offer choices where the answers are known and a short typed answer otherwise; where the project records a default, show it and ask whether to use it. Record the answers in the review's header.
+
+1. **Which PR?** A number · a URL · a branch. Default: the current branch's PR.
+2. **What's the source of truth, where the PR doesn't carry it?** the code in this PR · the base branch · the running product · another repo, PR or spec (link) · none — mark claims unverified.
+3. **Only if the diff doesn't show it — which shape is the PR?** docs alongside a code change · docs only, updating pages · docs only, new pages · docs for code that lives elsewhere.
+4. **Who reads these docs?** Short answer.
+5. **Which release does the PR ship in?** Short answer: the product version.
+6. **What should happen with the review?** chat only (default) · post it on the PR (`--comment`) · fix the named findings on the PR's branch (`--fix`).
+
 ## Arguments
 
 - `[pr-number | pr-url | branch]` — the PR to review; a branch with no PR is compared with its base. Omitted → the current branch's PR, if there is one, otherwise ask.
@@ -66,28 +77,7 @@ Use `/tw:doc-review`'s severity scale: **BLOCKER** (untrue, a missing warning on
 
 In chat, worst first. The author is usually a developer, so every finding says what's wrong, gives the replacement, and says why in one line — feedback they can apply and learn from.
 
-```markdown
-## Docs review of #<n> — <title>
-
-**Shape:** <one of the four> · **Checked against:** <the source> · **Standard:** <guide, or "none found"> · **Verdict:** <Ready / Ready with fixes / Needs rework>
-
-### Missing docs
-| # | Change in the code | Where | Where the doc belongs |
-| --- | --- | --- | --- |
-
-### Findings
-| # | Severity | Level | Where | Issue | Replacement |
-| --- | --- | --- | --- | --- | --- |
-
-### Questions for the author
-Facts only the author can settle — nothing below has been guessed in the docs.
-
-### Unverified
-Claims that couldn't be checked, and why.
-
-### Not this PR's to fix
-Problems in docs the PR didn't touch.
-```
+The review follows the template in [references/output-format.md](references/output-format.md): a header naming the shape, the source of truth and the scope answers, then missing docs, findings, questions for the author, what's unverified, and problems that aren't this PR's to fix.
 
 Nothing found → say so plainly, with what was checked.
 

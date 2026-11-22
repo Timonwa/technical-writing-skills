@@ -20,9 +20,21 @@ Before writing or reviewing the reference, find the project's style guide and co
 
 Voice, person, tone, terminology and formatting come from that guide. Where it settles something this skill also covers, the guide wins; where it's silent or there isn't one, `tw:docs-standards` applies without asking.
 
+## Ask first
+
+Read the answers from the request, the spec, the project and its guide first; ask only what's missing. Ask with the app's question tool where it has one, so the choices can be picked; otherwise as a numbered list answered by number. Offer choices where the answers are known and a short typed answer otherwise; where the project records a default, show it and ask whether to use it.
+
+1. **What are you writing?** endpoint entries · the prose fields in a spec · a page around the reference (quickstart · authentication · errors · pagination · rate limits · webhooks · versioning and deprecation · changelog) · SDK docs · an audit of an existing reference.
+2. **Which endpoints or resource group?** Short answer.
+3. **Which API version?** Short answer.
+4. **Who integrates against it, and in which languages?** Short answer: the developers and the languages the samples need.
+5. **Where do the descriptions live, and who owns them?** a spec generated from code · a hand-maintained spec · hand-written pages · another format (name it). The owner as a short answer.
+6. **What renders it?** a reference viewer · a docs site · a developer portal · a PDF.
+7. **Can the API be called?** a sandbox · a test account · neither — work from the schema, the handler and an engineer's answers.
+
 ## Establish what you're working from
 
-The shape of the work depends on where the descriptions live. Ask, once, up front:
+The shape of the work depends on where the descriptions live; questions 5–7 above settle it, and these are what the answers decide:
 
 - **Is there a spec** (OpenAPI, AsyncAPI, GraphQL SDL, a Protobuf definition, a vendor's own format), and **is it generated from the code or hand-maintained?** Generated means your edits belong in the source annotations or the description fields, never in the generated output — anything written into generated output is erased on the next build.
 - **Who owns it** — if engineering owns the spec, your changes go through them or through the same review as code; agree the route before writing.
@@ -40,7 +52,7 @@ An API reference is the least forgiving document a writer produces: a wrong defa
 
 ## Every endpoint entry
 
-The fixed shape, in this order. A reader learns it once and then knows where to look on every other endpoint:
+The fixed shape, in this order, with a fill-in skeleton in [references/endpoint-entry.md](references/endpoint-entry.md). A reader learns it once and then knows where to look on every other endpoint:
 
 1. **Method and path** as the heading — `POST /v1/projects/{projectId}/items`.
 2. **Summary and description.** The summary is a short label shown in navigation — "Create an item", no full stop. The description is one sentence, verb first, stating what it does or returns: "Creates an item in a project." Not "This endpoint can be used to create items."
@@ -75,7 +87,7 @@ Write both for the developer consuming the API, not the one who built it:
 
 ## The pages around the reference
 
-An endpoint list alone doesn't get anyone integrated. These pages carry everything the endpoints share, written once:
+An endpoint list alone doesn't get anyone integrated. These pages carry everything the endpoints share, written once; each has a skeleton in [references/api-pages.md](references/api-pages.md):
 
 - **Quickstart** — credential to first successful response, in as few steps as possible, with the real output shown. This is the most-read page in an API's docs and deserves the most testing. One path only; alternatives are links.
 - **Authentication** — how to get a credential, how to send it, how long it lasts, how to rotate it, what an auth failure looks like. Include the literal header.

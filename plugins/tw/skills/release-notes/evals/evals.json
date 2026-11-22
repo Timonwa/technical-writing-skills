@@ -41,6 +41,20 @@
         "Asks whether a deprecation notice preceded the removal",
         "Declines to publish it as a single line with no migration path"
       ]
+    },
+    {
+      "id": 4,
+      "prompt": "Write the release notes for our next version.",
+      "expected_output": "Should read the change list, the existing CHANGELOG.md and the project's versioning first, then ask what's missing in one batch with choices: who the notes are for (one audience per document), what's being written (a changelog entry, published notes, a deprecation notice or a migration guide), the version and release date, where the change list is, and whether the release carries a breaking change, deprecation or security fix. Should fill the matching template with the categories in the fixed order, breaking changes first, and omit empty categories.",
+      "files": [],
+      "expectations": [
+        "Reads the existing CHANGELOG.md and versioning before asking",
+        "Asks who the notes are for, and treats \"everyone\" as more than one document",
+        "Asks for the version, the release date and where the change list is",
+        "Asks whether the release carries a breaking change, deprecation or security fix",
+        "Fills the matching template with the categories in the fixed order",
+        "Omits empty categories rather than writing None"
+      ]
     }
   ]
 }
