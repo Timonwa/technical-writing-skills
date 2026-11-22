@@ -1,12 +1,12 @@
 ---
 name: social-media-posts
 description: >-
-  Turning one published piece into a set of social posts in its topic folder's social.md — repurposing by angle so one piece yields distinct posts, single posts, threads and summaries with a link, per-platform limits and how each platform counts characters, plain-text formatting, accessible hashtags and alt text, and disclosure. Reads the publication's profile and writing guide for voice and audience. Writes drafts; never publishes. Use on "promote this post", "write a thread about", "social posts for this article".
+  Writing social posts for any account — a person, a publication or a company — from a published piece, an announcement or a topic's brief, into the topic's social.md: the account's voice and each platform's tone, repurposing by angle, single posts, threads and summaries with a link, per-platform limits and how each counts characters, plain text, accessible hashtags and alt text, and disclosure. Writes drafts; never publishes. Use on "promote this post", "write a thread about", "social posts for this article".
 ---
 
 # Social media posts
 
-One published piece becomes a set of posts that sound like the person who wrote it sharing something, not a marketing team announcing it. **Drafts only: never post, never publish, never call an API.**
+Write social posts in the voice of the account that posts them — a person, a publication or a company — from a published piece, an announcement or the topic's brief. Each post is written for its platform, and a set of them covers different angles rather than repeating one. **Drafts only: never post, never publish, never call an API.**
 
 ## Voice and audience come from the writing's own guide
 
@@ -16,7 +16,7 @@ Before writing, find the publication's `profile.md` and `writing-guide.md` and r
 - **In a chat app:** the project's files (a Claude Project's knowledge, or the equivalent elsewhere), or files attached to the conversation.
 - **Otherwise:** ask for them.
 
-The audience, the one action a piece should produce, what must be disclosed, the voice, stance, person and whether emoji are used at all come from that guide, never from this skill.
+The audience, the one action, what must be disclosed, the voice, and the guide's **Social** section — the accounts and whose each is, "I" or "we", the tone on each platform, emoji, hashtags and mentions — come from that guide, never from this skill.
 
 - Where the guide settles something this skill also covers, the guide wins.
 - Where there's no guide, ask who the reader is and what the piece is for, and offer to build one with `cw:style-guide`.
@@ -24,19 +24,21 @@ The audience, the one action a piece should produce, what must be disclosed, the
 
 When a guide changes: in a codebase, save the file where it was found; in a chat app, give the user the updated file to replace in the project. Never write inside the installed plugin.
 
-The voice is the publication's, compressed, not a separate social voice. A publication that never uses exclamation marks doesn't start on X.
+**The voice stays the same; the tone moves with the platform.** The account sounds like itself everywhere, and the guide's Social section says how its tone shifts on each platform — relaxed on one, more formal on another. Where the section is missing, ask the writer for the tone on each platform in play and record it there. A personal account writes as "I", a publication's or company's as "we", unless the guide says otherwise.
 
 ## Ask first
 
 Read the answers from the topic's `brief.md` (its **Social posts** row above all), then `profile.md`'s Defaults, then the request; ask only what's missing. Ask with the app's question tool where it has one, so the choices can be picked; otherwise as a numbered list answered by number. Offer choices where the answers are known and a short typed answer otherwise; where the profile has a default, show it and ask whether to use it. Record each answer in the `brief.md` field it belongs to — the **What this topic becomes** table or a row of **The brief** — and any answer with no field under **Notes for whoever picks it up next**, so the next skill doesn't ask again.
 
 1. **Which topic folder are the posts for?** The folder name under `topics/`, or "new" — a stand-alone post or thread is its own topic, briefed first with `cw:content-planning`.
-2. **Which platforms?** Pick any of the profile's. Default: the Social posts row's Where it goes, then the profile's Social platforms.
-3. **What kind of post on each?** single post · thread · summary with link, per platform.
-4. **Which angles?** announcement · key point · lesson · quote · number · question · gotcha — pick any. Default: announcement, key point and lesson, where the piece carries them.
-5. **When does each go out?** A date per platform. Default: the Social posts row's publish date, after the piece is live.
-6. **What link do the posts share?** The published URL, or "not live yet". Default: the Blog post row's Link, or `published_url` in `blog.md`.
-7. **What must the posts disclose?** sponsorship · affiliate links · gifted item · AI assistance · none — pick any. Default: the profile's Constraints.
+2. **Which account posts them?** a person's own · the publication's · a company's · a colleague sharing the company's piece. Default: the guide's Social section.
+3. **What are the posts from?** a published piece · an announcement (a launch, an event, news) · the brief alone. Default: the piece, where the brief lists one.
+4. **Which platforms?** Pick any of the profile's. Default: the Social posts row's Where it goes, then the profile's Social platforms.
+5. **What kind of post on each?** single post · thread · summary with link, per platform.
+6. **Which angles?** announcement · key point · lesson · quote · number · question · gotcha — pick any. Default: announcement, key point and lesson, where the piece carries them.
+7. **When does each go out?** A date per platform. Default: the Social posts row's publish date, after the piece is live.
+8. **What link do the posts share?** The published URL, or "not live yet". Default: the Blog post row's Link, or `published_url` in `blog.md`.
+9. **What must the posts disclose?** sponsorship · affiliate links · gifted item · AI assistance · none — pick any. Default: the profile's Constraints.
 
 ## Work in the topic folder
 
@@ -46,9 +48,11 @@ Each topic has its own folder in the publication's `topics/` (`topics/2026-12-so
 - **Write only `social.md`.** Where the brief has no Social posts row, say so and ask whether to add one.
 - **Read before writing over.** A `social.md` that already exists may hold scheduled or live posts: add new sections, and never edit a post that's live.
 
-## Work only from the piece
+## Work only from the source material
 
-- **Never invent a detail, number, or quote.** A claim that can't be traced to a line in the piece gets cut.
+The source is the published piece, the announcement's facts as the writer gives them, or the brief.
+
+- **Never invent a detail, number, or quote.** A claim that can't be traced to the source gets cut.
 - **Take the link from the brief or `blog.md`**, and ask if neither has it. Never guess it from a filename. A piece that isn't live yet leaves the link field blank and `[link]` in the post, counted at that platform's link cost.
 - **Strip citation markers** (`[1]`, `[2.3]`) that come along when reading a rendered page.
 - **Don't pin a post to a detail that may change.** "Four steps" breaks when the piece is edited to five; the general claim survives.
@@ -57,15 +61,15 @@ Each topic has its own folder in the publication's `topics/` (`topics/2026-12-so
 
 The unit is the **angle**, not the platform. Each post has one focus, and every angle is written fresh for each platform in play — three angles across three platforms is nine posts, each in its platform's idiom.
 
-| Angle            | What it does                                                                             |
-| ---------------- | ---------------------------------------------------------------------------------------- |
-| **Announcement** | The piece exists, and here's the problem it solves. Leads with the pain, not the byline. |
-| **Key point**    | One idea standing on its own — valuable even if nobody clicks.                           |
-| **Lesson**       | What you learned making it. The honest, specific takeaway.                               |
+| Angle            | What it does                                                                                                                        |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| **Announcement** | What's new — a piece, a launch, an event — and the problem it solves. Leads with the reader's problem, not the byline or the brand. |
+| **Key point**    | One idea standing on its own — valuable even if nobody clicks.                                                                      |
+| **Lesson**       | What the author or the team learned making it. The honest, specific takeaway.                                                       |
 
-Others worth pulling when the piece carries the material: a **quote** worth arguing with, a **number** that reframes something, a **question** the piece answers, a **contrarian take**, a **gotcha** that cost you time, a **comparison**, a **use case** the reader hadn't considered.
+Others worth pulling when the piece carries the material: a **quote** worth arguing with, a **number** that reframes something, a **question** the piece answers, a **contrarian take**, a **gotcha** that cost someone time, a **comparison**, a **use case** the reader hadn't considered.
 
-- **One angle per post, and no angle twice.** The announcement is the only post that leads with the piece's existence.
+- **One angle per post, and no angle twice.** The announcement is the only post that leads with the news itself.
 - **The same angle reads differently per platform.** Three bullets on X, a short narrative on LinkedIn, one sentence in a note. Rewritten, never pasted.
 - **Spacing the set out is what makes it a set.** The same post twice is spam; the same idea from a new angle is a new post.
 - **Stop at the material.** A piece with one idea produces two posts, not three padded ones. Say so rather than manufacturing a third.
@@ -121,7 +125,7 @@ Social is where accessible writing is most often dropped, and the fixes are chea
 
 ## Threads
 
-X, Bluesky and Threads have a thread composer; on Mastodon, replies to your own post read as a thread (common practice). Elsewhere a post stands alone.
+X, Bluesky and Threads have a thread composer; on Mastodon, an account's replies to its own post read as a thread (common practice). Elsewhere a post stands alone.
 
 - **First item hooks, middle items explain, last item carries the ask.** The link goes where the platform expects it, not mid-thread as filler.
 - **Every item is a separate post** and fits the per-post limit on its own. Never collapse a thread into one long string with "1/" markers standing in for real posts.

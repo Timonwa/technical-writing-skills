@@ -40,15 +40,15 @@
     },
     {
       "id": 4,
-      "prompt": "Write the posts for topics/2026-12-sourdough-starter: a thread on X and Bluesky, a summary with link on LinkedIn and one on Mastodon. The post isn't live yet. The emoji are fine.",
-      "expected_output": "Should read brief.md and claim the topic (Held by and the date, the Social posts row to drafting, the calendar.md line to match), unless someone else holds it and it isn't paused. Should write social.md by its template: the header with the posts' link left blank, one ## section per platform, each post with a table of kind, scheduled date, post URL left blank and characters used / limit counted the platform's way — weighted on X (emoji 2, URL 23), graphemes and bytes on Bluesky, graphemes with URLs at 23 on Mastodon — then the text in a fenced block, a thread as numbered separate posts. The LinkedIn summary lives in social.md, not copies.md. Should clear Held by when stopping.",
+      "prompt": "Write the posts for topics/2026-12-sourdough-starter from the bakery's company accounts: a thread on X and a summary with link on LinkedIn. The post isn't live yet.",
+      "expected_output": "Should read brief.md's Social posts row and the writing guide's Social section first, asking only what's missing — here, if the guide has no Social section, the tone the company uses on X and on LinkedIn, recording the answers there. Should write as \"we\" in the company's voice, keeping the voice the same and letting the tone shift per platform. Should claim the topic, write only social.md from its template with one section per platform, leave the post URL and the link blank with [link] counted at each platform's link cost, count characters the platform's way, and keep every thread item within the per-post limit.",
       "files": [],
       "expectations": [
-        "Claims the topic in brief.md before writing, and clears Held by when stopping",
-        "Writes social.md by the template, with the posts' link and each post URL present but blank",
-        "Counts characters the platform's way and records used / limit for each post",
-        "Writes each thread item as a separate numbered post within the per-post limit",
-        "Keeps the LinkedIn summary in social.md, not copies.md"
+        "Reads the guide's Social section for the account, person and per-platform tone, and asks for the tone only if it's missing",
+        "Writes as \"we\" for the company account, with the same voice and a tone fitted to each platform",
+        "Writes only social.md from the template, one section per platform, with the post URL and link blank until live",
+        "Counts characters the platform's way, with [link] counted at the platform's link cost",
+        "Keeps each thread item a separate post within the per-post limit"
       ]
     }
   ]

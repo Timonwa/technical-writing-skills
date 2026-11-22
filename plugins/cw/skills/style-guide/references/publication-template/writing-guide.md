@@ -138,6 +138,20 @@ _Delete this section if the publication doesn't publish code._
 | Description   | _one per piece, used as the meta description, share description and listing excerpt; about 150–160 characters, the point in the first 120 (`cw:seo-aeo-geo`)_ |
 | Reading level | _a target and the tool that checks it, or `unset`_                                                                                                            |
 
+## Social
+
+_Delete this section if the publication posts nowhere. The voice stays the same on every platform; the tone can change with the platform._
+
+| Field             | Your answer                                                                                 |
+| ----------------- | ------------------------------------------------------------------------------------------- |
+| Accounts          | _one line per platform: the handle, and whose it is — a person, the publication, a company_ |
+| Person            | _"I" or "we" on each account_                                                               |
+| Tone per platform | _one line per platform, with a real post as the example: relaxed on one, formal on another_ |
+| Emoji             | _never · sparingly, at the end · per platform_                                              |
+| Hashtags          | _none · one or two named tags · per platform_                                               |
+| Mentions and tags | _who gets tagged (partners, people quoted, the company), and who never does_                |
+| Never on social   | _the topics, claims or formats the accounts don't post_                                     |
+
 ## Newsletter
 
 _Delete this section if the publication has no newsletter._
