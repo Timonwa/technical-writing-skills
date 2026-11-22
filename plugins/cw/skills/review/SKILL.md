@@ -176,7 +176,7 @@ Everything else is unchanged: list the findings, ask which, fix only those, upda
 
 ## Boundaries
 
-- **Drift across the whole archive** → `/cw:style-check`. **Does it sound machine-written** → `/write:ai-check`, run on request.
+- **Bringing an old piece up to the current guide** → `cw:content-refresh`. **Does it sound machine-written** → `/write:ai-check`, run on request.
 - **Writing from scratch** — this reviews what exists. A finding that the piece should be several pieces is raised, not acted on.
 - **Documentation** is reviewed with `/tw:doc-review`.
 - **The author owns the piece** and usually knows something about the subject you don't. Findings are proposals, and a rejected finding is not re-argued.

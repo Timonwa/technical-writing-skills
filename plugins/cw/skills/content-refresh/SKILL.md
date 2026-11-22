@@ -86,6 +86,7 @@ Work through the piece as a reader arriving today:
 - **Internal links** — out to newer pieces that now answer the follow-up question, and in from newer pieces that should point here.
 - **The title's promise** — the title and description still describe the piece after the changes (`cw:seo-aeo-geo`).
 - **Claims of first, best, only, latest** — the easiest to go stale; recheck or remove.
+- **The current writing guide** — while the piece is open, bring its title format, terms and mechanics up to the guide as it stands now (`cw:editing-standards`). Keep the author's own voice; only the rules the guide sets change.
 
 ### Substantive or cosmetic
 

@@ -1,10 +1,10 @@
 # writing-skills
 
-Forty-one Claude Code skills for writers, in three plugins: `write` for the craft every writer shares, `tw` for technical writing and `cw` for content writing.
+Forty Claude Code skills for writers, in three plugins: `write` for the craft every writer shares, `tw` for technical writing and `cw` for content writing.
 
 Most of what goes wrong in writing isn't the sentences. It's a claim nobody checked, a figure lifted from a summary instead of the study, a page that mixes a tutorial with a reference, a tutorial whose code no longer runs, a headline the piece doesn't deliver, a voice that drifts until the archive reads like five writers. These skills hold the rules that prevent those — where a claim comes from, what a page is for, how a piece is edited and reviewed, how it's found — and the commands check existing writing against them.
 
-Thirty-two of them are model-invoked: Claude loads one when the work matches, so asking for a newsletter issue pulls in the newsletter standard without you naming it. The other nine are commands you run deliberately over writing that already exists — audits, reviews and checks.
+Thirty-two of them are model-invoked: Claude loads one when the work matches, so asking for a newsletter issue pulls in the newsletter standard without you naming it. The other eight are commands you run deliberately over writing that already exists — audits, reviews and checks.
 
 **The skills hold the craft; the voice is always yours.** Documentation follows the project's own style guide, and content follows the publication's writing guide and profile, whatever the subject: software, food, finance, careers. Where neither exists, documentation falls back to `tw:docs-standards` and a content skill asks who the reader is before writing. Each rule follows the current published standard — Google's and Microsoft's style guides, GOV.UK, WCAG, the SPJ Code of Ethics, Google Search Central — not one writer's habits.
 
@@ -39,7 +39,7 @@ Pick a scope when it asks. **User** makes the skills available everywhere, which
 - **The brand** (`brand.md`) — how it looks: colours, fonts, the logo, the cover template, the style of its images and charts.
 - **Sources** (`sources/`) — any style guide or brief you already have, which the writing guide is built from.
 - **Examples** (`examples/`) — sample covers, logo files, and the two or three pieces that best show the voice.
-- **The media kit** (`media-kit.md`) — what sponsors get: who reads it, dated numbers, what a sponsor can buy, the rate card and how to book.
+- **The media kit** (`media-kit.md`) — what a sponsor email cites: who reads it, its numbers with the date each was measured, and where a sponsor can appear.
 
 Beside those sit the calendar, the series and one folder per topic. A topic is one subject, and it can become a blog post, a newsletter issue, social posts, cross-posts or a demo project — one, some or all. Its folder holds one file per format, and the file names never change, so adding a format adds a file:
 
@@ -130,12 +130,12 @@ For a folder kept outside the repo, put the same line in your personal agent ins
 | `social-media-posts`   | One piece turned into distinct posts by angle, sized for each platform                                                                |
 | `cross-posting`        | Republishing on dev.to, Hashnode, Medium or a partner site so the original stays the one that ranks                                   |
 | `content-refresh`      | Keeping a published piece true — honest dates, visible correction notes, merging and retiring                                         |
-| `pitching`             | Collaborations that end in writing — pitches, swaps, co-written and guest pieces, sponsorships, the media kit and the agreement       |
+| `pitching`             | Pitch emails and the conversation after — guest posts, swaps, co-written and guest pieces, sponsors, through to the confirmation      |
 | `style-guide`          | A publication's writing guide and profile, built from what exists and kept current                                                    |
 
 ## Commands
 
-Nine commands, each marked `disable-model-invocation`, so Claude never starts one on its own.
+Eight commands, each marked `disable-model-invocation`, so Claude never starts one on its own.
 
 | Command                   | The question                                                                                                |
 | ------------------------- | ----------------------------------------------------------------------------------------------------------- |
@@ -146,7 +146,6 @@ Nine commands, each marked `disable-model-invocation`, so Claude never starts on
 | `/tw:style-check`         | Does the docs set read as one voice? Terms, capitalisation and mechanics that drifted                       |
 | `/tw:docs-pr-review`      | Are the docs in this pull request true of what it changes? Claims checked, changes left undocumented        |
 | `/cw:review`              | Is this piece ready to publish? The five levels of edit against the publication's guide, with blockers      |
-| `/cw:style-check`         | Does the archive read as one writer? Drift across posts and back issues, measured against the guide         |
 | `/cw:content-performance` | What should change, given how the pieces did? An analytics export turned into ranked fixes                  |
 
 ## How the commands behave
@@ -154,7 +153,7 @@ Nine commands, each marked `disable-model-invocation`, so Claude never starts on
 Each writes its report to a file, except `/tw:docs-pr-review`, which reports in chat and posts to the pull request only with `--comment`:
 
 - **One report per page or topic:** `/tw:doc-review` to `_reports/doc-review-<page-slug>.md`; `/write:ai-check` to `_reports/ai-check-<page-slug>.md` for documentation, or the topic's `reports/ai-check.md` for content, covering every format file its brief lists; `/cw:review` to the topic's `reports/review.md`.
-- **One report per docs set or publication:** `/tw:docs-audit`, `/tw:content-audit` and `/tw:style-check` to `_reports/docs-audit.md`, `content-audit.md` and `docs-style-check.md`; `/cw:style-check` to the publication's `reports/style-check.md`; `/cw:content-performance` to the publication's `reports/content-performance-<date>.md`.
+- **One report per docs set or publication:** `/tw:docs-audit`, `/tw:content-audit` and `/tw:style-check` to `_reports/docs-audit.md`, `content-audit.md` and `docs-style-check.md`; `/cw:content-performance` to the publication's `reports/content-performance-<date>.md`.
 
 The reviews and audits verify a finding before reporting it, rank it by severity (a blocker stops publishing), and give a specific fix for each. `/tw:docs-audit` marks anything it can't prove from the source as "needs confirmation". The style checks separate findings, where the writing drifts from what the guide settles, from proposals where the guide is silent. Reports close with a scorecard and, on a re-run, how the score moved since the last one.
 

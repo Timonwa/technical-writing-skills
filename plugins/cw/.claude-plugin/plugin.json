@@ -1,7 +1,7 @@
 {
   "name": "cw",
   "displayName": "Content Writing Skills",
-  "description": "Content writing for any blog or newsletter, on any subject — articles and tutorials, newsletter issues, social posts, a tutorial's demo project, editing and reviewing a piece, the publication's writing guide and drift checks, photos, charts and diagrams, interviewing sources, and reviewing content performance. Builds on write.",
+  "description": "Content writing for any blog or newsletter, on any subject — articles and tutorials, newsletter issues, social posts, a tutorial's demo project, editing and reviewing a piece, the publication's writing guide, photos, charts and diagrams, interviewing sources, and reviewing content performance. Builds on write.",
   "version": "1.0.0",
   "dependencies": ["write"],
   "author": {

@@ -39,7 +39,7 @@ Read the answers from the publication's existing files, its `sources/`, its publ
 3. **Which three or four published pieces are most typical, and which aren't?** Links or file names.
 4. **Who reads it, and who is it not for?** A short answer for each.
 5. **What should a piece lead the reader to do?** subscribe · try it · reply · read the next one · nothing.
-6. **What does a new topic usually become, and where does each go?** blog post · newsletter issue · social posts · cross-posts · demo project, pick any; then each cross-post platform with full copy or opening excerpt, and each social platform with its account. These are the profile's Defaults.
+6. **What does a new topic usually become, and where does each go?** blog post · newsletter issue · social posts · cross-posts · demo project, pick any; then each cross-post platform with full copy or opening excerpt, and each social platform with its account and whose it is — a person, the publication or a company. These are the profile's Defaults; the tone on each platform goes in the writing guide's Social section.
 7. **Which base guide and spelling variant?** AP · Chicago · another, named; and US · UK · another English.
 8. **Is there a brand guide or logo files?** none · a brand guide · logo files only — and where they are.
 
@@ -91,6 +91,7 @@ Read the answers from the publication's existing files, its `sources/`, its publ
 - **Openings and closings** — how a piece opens, how it never opens; how it ends, its one ask, its sign-off per channel.
 - **Recurring sections and devices**, in their exact form — a "what you'll need" box, a series name, a closing question.
 - **In-piece formatting** — how often subheads appear, what bold is for, when a list beats a paragraph, pull quotes.
+- **Social** — the accounts and whose each is (a person, the publication, a company), "I" or "we" on each, the tone on each platform with a real post as the example, and the rules for emoji, hashtags and mentions. The voice stays the same everywhere; the tone moves with the platform.
 - **Newsletter subject lines and preview text** — length, style, whether they echo the title; working lengths are in `cw:newsletter-standards`.
 
 **On the page and in search**
@@ -141,12 +142,12 @@ publications/
     profile.md         # who it's for, what it's for, its channels and defaults
     writing-guide.md   # how to write for it
     brand.md           # how it looks: colours, fonts, logo, cover template
-    media-kit.md       # what sponsors get: audience, numbers, slots, prices
+    media-kit.md       # what sponsor emails cite: audience, dated numbers, slots
     sources/           # style guides and reference material already in hand
     examples/          # sample covers, logo files, pieces that show the voice
     calendar.md        # the editorial calendar: one line per topic
     series/            # one file per series: <series-slug>.md
-    reports/           # style-check.md, content-performance-<yyyy-mm-dd>.md
+    reports/           # content-performance-<yyyy-mm-dd>.md
     topics/
       <yyyy-mm>-<slug>/  # one folder per topic
         brief.md         # status, who holds it, what the topic becomes, the brief
@@ -168,7 +169,7 @@ publications/
 - **Ask-first answers go in the brief**, in the field they belong to — the "What this topic becomes" table or a row of "The brief"; an answer with no field goes under "Notes for whoever picks it up next".
 - **Status** is one of `idea` · `briefed` · `drafting` · `in review` · `scheduled` · `published` · `paused` · `retired`. Each format in the brief has its own; the topic's is the overall one, `published` once every listed format is.
 - **`calendar.md` is the editorial calendar and the one shared file** — one line per topic: first publish date · topic folder · formats · status · held by · series · link, under **Coming up** (dated, soonest first), **Ideas** (undated, newest first) and **Published** (newest first). Change only your topic's line; never rewrite the file. A topic's other dates live in its brief.
-- **`media-kit.md` is what sponsors get** — who reads the publication, its dated numbers, what a sponsor can buy, the rate card, past sponsors and how to book; `cw:pitching` fills and sends it. `brand.md` is logos and colours; `media-kit.md` is what sponsors get and never repeats the brand.
+- **`media-kit.md` is what a sponsor email cites** — who reads the publication, its numbers with the date each was measured and where it came from, and where a sponsor can appear; `cw:pitching` reads it and links it. `brand.md` is logos and colours; `media-kit.md` never repeats the brand.
 - **`series/<series-slug>.md` plans a series** — its name, reader, what it covers and leaves out, cadence, and one row per part. Each part is its own topic whose brief names the series and the part.
 
 In a chat app, a project's files can't hold folders, so a topic's files are named `<topic folder>--<file>` (`2026-12-sourdough-starter--brief.md`). The publication's own files keep their names — `profile.md`, `writing-guide.md`, `brand.md`, `media-kit.md`, `calendar.md`, a series' `<series-slug>.md`, and the sources, sample covers and logo files beside them — and for `calendar.md` Claude hands back only the line to add or change.
@@ -179,7 +180,7 @@ Start from the blanks in [references/publication-template/](references/publicati
 
 - **A pre-publish checklist** of five items drawn from the guide — the opening, the title format, the ask, the sign-off, the disclosure.
 - **A template per piece type**, with the recurring sections already in place.
-- **`/cw:style-check` across the archive** every few months, reading across time for a voice that's moved.
+- **Rebuild the guide from recent pieces** when it no longer describes how the publication writes, rather than checking old pieces against an old guide. Old pieces come up to the current guide when they're refreshed (`cw:content-refresh`).
 - **Name an owner, add a decision when a question is asked twice, date every entry**, prune rules about things that no longer exist, and apply a new decision to the pieces still being updated.
 
 ## Example entry
@@ -189,7 +190,7 @@ Start from the blanks in [references/publication-template/](references/publicati
 ## Boundaries
 
 - **The rules every piece obeys by default** → `write:writing-standards`. A guide records only where it departs from them, or what they don't cover.
-- **Applying the guide to a draft** → `cw:editing-standards`; **checking the archive for drift** → `/cw:style-check`.
+- **Applying the guide to a draft** → `cw:editing-standards`; **bringing an old piece up to the current guide** → `cw:content-refresh`.
 - **The pieces that consume it** → `cw:article-standards`, `cw:newsletter-standards`.
 - **A docs set's style guide** → `tw:style-guide`.
 - **The publication's own facts** — its name, readers, sign-off — are asked for and recorded, never invented here.

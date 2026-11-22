@@ -143,6 +143,6 @@ Everything else is unchanged: list the findings, ask which, fix only those, upda
 - **This does not determine authorship**, and no report from it should be presented as evidence that something was generated. It finds patterns; that is all it can do.
 - **The full editorial pass** — structure, accuracy, clarity, consistency → `/tw:doc-review` for documentation, `/cw:review` for a published piece. This is one narrow sweep, and it's the last one to run, after the piece is otherwise right.
 - **The rules every piece obeys** — sentences, claims, examples, concrete over vague, formatting, never hard-wrap → [`writing-standards`'s house-voice.md](../writing-standards/references/house-voice.md). A rewrite lands on those rules; this command only finds the passages that need one.
-- **Voice consistency across a set of pieces** → `/tw:style-check` or `/cw:style-check`.
+- **Voice consistency across a docs set** → `/tw:style-check`.
 - **A house rule beats every default here.** Where a project or publication has decided on a convention this command would flag, its guide wins.
 - **Don't strip a writer's voice in the name of this.** A distinctive human sentence that happens to contain an em dash is not a finding, and neither is a first-person aside, a joke or a sign-off the publication always uses; the target is mechanical padding, not personality.
