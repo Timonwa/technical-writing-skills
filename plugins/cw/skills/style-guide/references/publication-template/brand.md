@@ -2,7 +2,7 @@
 
 **How the publication looks.** How it sounds is [writing-guide.md](writing-guide.md); who it's for is [profile.md](profile.md).
 
-Fill in what you know. Leave the rest as `unset` and a skill will ask rather than guess. Make each rule checkable: "clear space equal to half the icon's height" can be checked; "plenty of space around the logo" can't ([Vistaprint](https://www.vistaprint.com/hub/logo-usage-guidelines)).
+Fill in what you know. Leave anything not known blank; a skill asks about a blank field rather than guessing. Make each rule checkable: "clear space equal to half the icon's height" can be checked; "plenty of space around the logo" can't ([Vistaprint](https://www.vistaprint.com/hub/logo-usage-guidelines)).
 
 ## Colours
 

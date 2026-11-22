@@ -1,6 +1,6 @@
 # Sources — <topic folder>
 
-**The source log for every format this topic becomes.** Each source is listed once under Sources; each claim is checked under Claims, in the order it appears. Keep every column, and leave a cell empty until it's known.
+**The source log for every format this topic becomes.** Each source is listed once under Sources; each claim is checked under Claims, in the order it appears. Keep every column, and leave a cell blank until it's known; a skill asks about a blank cell rather than guessing.
 
 ## Sources
 

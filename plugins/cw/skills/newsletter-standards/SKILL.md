@@ -1,7 +1,7 @@
 ---
 name: newsletter-standards
 description: >-
-  Drafting or reviewing an email newsletter issue — finding the one narrative that holds a period together, subject lines and preview text, the shape of an issue, skimmability for a phone read, Gmail clipping, the one-CTA rule, the legal, accessibility and deliverability obligations an email carries, and reading the numbers after it sends. Reads the publication's profile rather than assuming a house voice. Use on "write the newsletter", "draft this month's issue", "review this issue before it sends", "subject line".
+  Drafting or reviewing an email newsletter issue — finding the one narrative that holds a period together, subject lines and preview text, the shape of an issue, skimmability for a phone read, Gmail clipping, the one-CTA rule, the legal and accessibility obligations an email carries, and reading the numbers after it sends. Reads the publication's profile rather than assuming a house voice. Use on "write the newsletter", "draft this month's issue", "review this issue before it sends", "subject line".
 ---
 
 # Newsletter standards
@@ -22,7 +22,7 @@ Who it's for, what the newsletter promised and how it reads come from that guide
 
 - Where the guide settles something this skill also covers, the guide wins.
 - Where there's no guide, ask who the reader is and what the newsletter is for, and offer to build one with `cw:style-guide`.
-- Where a field reads `unset`, ask and record the answer in the guide.
+- Where a field is blank, ask and record the answer in the guide.
 
 When a guide changes: in a codebase, save the file where it was found; in a chat app, give the user the updated file to replace in the project. Never write inside the installed plugin.
 
@@ -53,7 +53,7 @@ Read the answers from the topic's `brief.md` and `profile.md`'s Defaults first; 
 
 ## Work in the topic folder
 
-An issue is one of the things a topic can become. Each topic has its own folder in the publication's `topics/` (`topics/2026-12-sourdough-starter/`), made when it's briefed (`cw:content-planning`).
+An issue is one of the things a topic can become. Each topic has its own folder in the publication's `topics/` (`topics/2026-12-grocery-budget/`), made when it's briefed (`cw:content-planning`).
 
 - **An issue about a topic** is `newsletter.md` in that topic's folder, and the brief's **What this topic becomes** table has a Newsletter issue row.
 - **An issue that isn't about one topic** — a roundup, a personal note — is its own topic whose brief lists only a newsletter issue (`topics/2026-12-december-roundup/`). Where it has no folder yet, brief it first with `cw:content-planning`.
@@ -61,11 +61,11 @@ An issue is one of the things a topic can become. Each topic has its own folder 
 - **Write only the issue.** Fill `newsletter.md` and no other format's file; each has its own skill. Where the table has no Newsletter issue row, say so and ask whether to add one.
 - **`newsletter.md` follows the [template](../style-guide/references/publication-template/topics/_template/newsletter.md)**: front matter, then the body. Every field stays present, left `""` until it's known: `subject`, `preview_text`, `send_date`, `audience` (the list or segment), `cover_image`, `cover_alt`, and `web_url`, blank until it's sent. Subject and preview-text lengths are in [The shape of an issue](#the-shape-of-an-issue).
 - **Sources go in `sources.md`**, by its [template](../style-guide/references/publication-template/topics/_template/sources.md); images in `images/`.
-- **In a chat app**, name the files `<topic folder>--<file>` (`2026-12-sourdough-starter--newsletter.md`) and hand back only that topic's files and the line to add or change in `calendar.md`.
+- **In a chat app**, name the files `<topic folder>--<file>` (`2026-12-grocery-budget--newsletter.md`) and hand back only that topic's files and the line to add or change in `calendar.md`.
 
 ## What earns a place
 
-- **One narrative, not a changelog.** Find the thread connecting the period — a theme, a lesson, a question you kept hitting — and hang the issue on it. "Here are five things I published" is a list; "I spent this month fighting caching, and here's what finally worked" is an issue.
+- **One narrative, not a changelog.** Find the thread connecting the period — a theme, a lesson, a question you kept hitting — and hang the issue on it. "Here are five things I published" is a list; "I spent this month trying to cut our grocery bill by a third, and here's what finally worked" is an issue.
 - **Every section carries a takeaway.** A reader who opens it and reads nothing else should still get something. Cut any section that only announces a thing exists.
 - **Three to five items, not everything.** A complete inventory of the period is an archive page's job.
 - **Link out, don't reproduce.** Summarise the piece and give a reason to click; never paste an article into an email.
@@ -87,7 +87,7 @@ An issue is one of the things a topic can become. Each topic has its own folder 
 - **Skimmable by default.** Bold leads, short paragraphs, bullets for parallel items. Assume a phone, between other things, about 60 seconds. On text with no structure, readers scan in an F-shaped pattern and skip what isn't at the top or the left edge ([NN/g](https://www.nngroup.com/articles/f-shaped-pattern-reading-web-content/)); an inbox is a harsher version of the same behaviour.
 - **Front-load every section**, and the issue itself. The point goes in the first sentence, not the third; a reader who doesn't find it there skips the paragraph.
 - **One idea per section**, and roughly half the words you'd use in print.
-- **Plain text survives; layout doesn't.** Clients strip CSS and block images by default. An issue that only works with images loaded is broken for a large share of the list.
+- **Plain text survives; layout doesn't.** Clients strip CSS and block images by default. An issue that only works with images loaded is broken for a large share of the list, and image-heavy, link-heavy, text-light issues are what spam filters are built to catch.
 - **Under Gmail's clipping size.** Gmail clips a message larger than 102 KB behind a "View entire message" link, which hides the footer with the unsubscribe link and stops opens being tracked ([Mailchimp](https://mailchimp.com/help/gmail-is-clipping-my-email/)). Keep the HTML well under it; about 80 KB leaves room (common practice).
 - **Built for a phone.** A content width of about 600 pixels, body text of about 14–16 pixels and links or buttons about 44 pixels tall are the usual working sizes (common practice); the platform's template normally sets them, so check rather than assume.
 - **Write to one person.** A newsletter is one person writing to one person, even at ten thousand subscribers. The profile decides the person and the register.
@@ -97,26 +97,18 @@ An issue is one of the things a topic can become. Each topic has its own folder 
 
 Requirements rather than preferences, for any publication. What follows is the shape of the obligations in the major regimes; a publication with real exposure confirms the specifics for the markets it sends to.
 
-**Consent and the right to leave**
+**The footer and the headers**
 
-- **A working unsubscribe in every issue**, obvious and one step. Under US CAN-SPAM the mechanism must keep working for at least 30 days after the send and opt-outs must be honoured within 10 business days ([FTC](https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business)); Yahoo requires unsubscribes honoured within 2 days ([Yahoo](https://senders.yahooinc.com/best-practices/)); under GDPR, withdrawing consent has to be as easy as giving it. Never make someone log in to leave.
-- **A valid physical postal address** in the footer — a CAN-SPAM requirement, not a convention. A street address, a PO box registered with the postal service, or a private mailbox registered with a commercial mail receiving agency all qualify ([FTC](https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business)).
+- **Every issue's footer has a working unsubscribe link**, and the sender's postal address where the law or the platform requires one — US CAN-SPAM does ([FTC](https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business)).
 - **Honest headers and subject lines.** The "from" name identifies the sender; the subject represents the contents.
-- **A lawful basis for holding the address.** Under GDPR that usually means consent you can evidence — when, how, and what they agreed to. A bought or scraped list fails this before the first send.
-- **One-click unsubscribe headers** (`List-Unsubscribe`, RFC 8058), required by Gmail for senders of more than 5,000 messages a day to Gmail accounts ([Google](https://support.google.com/a/answer/81126)) and by Yahoo for bulk senders. Normally the platform's job — confirm it's on rather than assuming.
 
 **Accessibility**
 
 - **Alt text on every image**, and no image carrying information the text doesn't. A screen-reader user and a reader with images blocked are in the same position.
 - **Real text, not text baked into an image.** An image-only issue is unreadable to a screen reader, unsearchable, and blocked by default.
-- **Descriptive link text.** "Read the caching write-up", never "click here" — screen readers can list links out of context.
+- **Descriptive link text.** "Read the grocery-budget breakdown", never "click here" — screen readers can list links out of context.
 - **Semantic headings and sufficient contrast**, as for any web content.
 - **A plain-text alternative** where the platform offers one, saying the same things rather than being a stripped husk.
-
-**Deliverability**
-
-- Authentication is sending setup rather than writing, but an unauthenticated send reaches nobody: Gmail requires SPF or DKIM from every sender, and SPF, DKIM and DMARC from bulk senders ([Google](https://support.google.com/a/answer/81126)). Confirm it before a first issue.
-- Image-heavy, link-heavy, text-light issues are what spam filters are built to catch.
 
 ## Reviewing an issue before it sends
 
@@ -129,7 +121,7 @@ Requirements rather than preferences, for any publication. What follows is the s
 - [ ] One CTA, asked once.
 - [ ] Every link resolves, points at a canonical URL, and has descriptive text.
 - [ ] Every image has alt text, and the issue still makes sense with images off.
-- [ ] Unsubscribe present and working; postal address present.
+- [ ] Unsubscribe link present and working; postal address present where it's required.
 - [ ] Sign-off matches the profile.
 - [ ] It reads on a phone — no wall of text, no layout that needs images.
 - [ ] Nothing sells. Nothing baits.
@@ -141,11 +133,9 @@ Benchmarks describe patterns, not targets. A publication's own trend line beats 
 
 - **Reference figures, dated.** Mailchimp's all-industry averages are 35.63% opens, 2.62% clicks and 0.22% unsubscribes, from data last updated in December 2023 ([Mailchimp](https://mailchimp.com/resources/email-marketing-benchmarks/)). Read them as a rough floor for spotting something badly wrong, never a goal.
 - **Open rate is no longer a reliable measure.** Privacy features that pre-fetch images inflate it, so a reported open may be nobody. Treat it as directional and judge an issue on clicks and click-to-open, against the publication's own previous issues.
-- **Spam complaints are the hard limit.** Gmail asks senders to keep the complaint rate below 0.1% and never reach 0.3% ([Google](https://support.google.com/a/answer/81126)); Yahoo sets the same 0.3% ceiling ([Yahoo](https://senders.yahooinc.com/best-practices/)). Past that, mail stops arriving for everyone on the list.
-- **Unsubscribes and bounces are list signals.** An unsubscribe rate rising above the list's usual level, or more than a couple of percent of addresses bouncing (common practice, not a published threshold), means something is wrong with the list or the promise, not the writing.
+- **Unsubscribes are a signal about the promise.** An unsubscribe rate rising above the list's usual level means something is wrong with the list or the promise, not the writing.
 - **Consistency beats frequency.** Whatever cadence the profile records, holding it matters more than the number. A monthly list that receives three emails in a week is being surprised, and surprise is what people unsubscribe from.
 - **Test send times rather than importing someone's best-day advice.** The published "best" days and hours contradict each other across studies, because they're averaging different audiences.
-- **Clean the list every few months.** Sending to people who never open trains filters against you and drags down everyone else's delivery.
 
 ## Boundaries
 
@@ -155,4 +145,4 @@ Benchmarks describe patterns, not targets. A publication's own trend line beats 
 - **The emails with a sponsor** — the pitch, the replies and the confirmation of what was agreed → `cw:pitching`.
 - **The voice rules under every publication** → `write:writing-standards`. **Tightening the draft** → `cw:editing-standards`. **The machine-written sweep** → `/write:ai-check`.
 - **Whether the linked pieces are being found** → `/cw:content-performance`. **Reviewing an issue before it sends, as a report** → `/cw:review`.
-- **Platform setup** — domain authentication, list imports, automation — is the sender's infrastructure. Name what's missing; don't configure it.
+- **List management and deliverability** — consent records, list cleaning, sender authentication, complaint rates, automation → the sending platform. Name what's missing; don't configure it.

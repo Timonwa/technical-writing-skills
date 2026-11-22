@@ -108,7 +108,7 @@ Place each image near the text it supports, give it alt text that says what it s
 Featured snippets, "People also ask", AI Overviews and voice assistants all lift a short passage that answers a question outright. Google decides which page becomes a featured snippet, and there's no markup to claim one ([Google](https://developers.google.com/search/docs/appearance/featured-snippets)); the writer's part is a passage that's easy to lift.
 
 - **Answer near the top.** The reader who arrived from a question gets the answer, or a clear promise of it, in the first paragraphs; context and detail follow. A feature or essay may open on a scene, but the nut graf lands by the second or third paragraph.
-- **Question-shaped headings** for the questions readers ask, in their words: "How long does sourdough starter take?", not "Starter timeline".
+- **Question-shaped headings** for the questions readers ask, in their words: "How long should a beginner rest between sets?", not "Rest periods".
 - **A direct answer of about 40–55 words under the heading**, then the detail. Paragraph featured snippets are most often 40–55 words and almost never longer than about 320 characters ([Portent](https://portent.com/blog/seo/featured-snippet-display-lengths-study-portent.htm)) — a working target from what Google displays, not a rule. The answer stands on its own: the claim, the number, the condition.
 - **Lists for steps, tables for comparisons.** Featured snippets come as paragraphs, lists and tables; Google gives no format guidance, so this is practice — use the shape the answer has.
 - **"People also ask" as a source of sub-questions.** Featured snippets can appear inside that related-questions group ([Google](https://developers.google.com/search/docs/appearance/featured-snippets)); the questions it shows for the topic are the sections readers expect.
@@ -139,7 +139,7 @@ An AI answer — ChatGPT search, Perplexity, Claude, Copilot, Google's AI Mode �
 
 ## Cross-posted copies
 
-When the piece is republished on another site — dev.to, Hashnode, Medium, a partner blog — the original should stay the one that ranks.
+When the piece is republished on another site — Medium, Substack, dev.to, a partner blog — the original should stay the one that ranks.
 
 - **Publish the original first**, and cross-post once it's indexed.
 - **Google** doesn't recommend a cross-domain canonical link for syndicated copies; it recommends that the other site block its copy from indexing ([Google](https://developers.google.com/search/docs/crawling-indexing/canonicalization-troubleshooting)). Ask for that where the platform allows it.
@@ -177,7 +177,7 @@ When the piece is republished on another site — dev.to, Hashnode, Medium, a pa
 
 ## Boundaries
 
-- **The site's code** — metadata APIs, sitemaps, robots rules, structured data templates → the site's developers; this skill covers what the writer controls.
+- **The site's code** — metadata APIs, sitemaps, robots rules, structured data templates → whoever runs the site; this skill covers what the writer controls.
 - **The piece itself** → `cw:article-standards`; **a newsletter issue** → `cw:newsletter-standards`.
 - **Images** → `cw:images-and-diagrams`. **The cover image and share card** → `cw:cover-images`. **Updating an old piece** → `cw:content-refresh`. **Republishing elsewhere** → `cw:cross-posting`.
 - **How it's performing after publishing** → `/cw:content-performance`.

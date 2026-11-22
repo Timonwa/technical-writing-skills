@@ -20,7 +20,7 @@ The audience, the one action, what must be disclosed, the voice, and the guide's
 
 - Where the guide settles something this skill also covers, the guide wins.
 - Where there's no guide, ask who the reader is and what the piece is for, and offer to build one with `cw:style-guide`.
-- Where a field reads `unset`, ask and record the answer in the guide.
+- Where a field is blank, ask and record the answer in the guide.
 
 When a guide changes: in a codebase, save the file where it was found; in a chat app, give the user the updated file to replace in the project. Never write inside the installed plugin.
 

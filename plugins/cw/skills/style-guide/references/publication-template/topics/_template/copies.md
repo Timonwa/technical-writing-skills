@@ -2,10 +2,12 @@
 
 Only copies on other blogging platforms (Medium, Hashnode, dev.to, Substack posts, LinkedIn articles, X articles and the like); social posts that share the link live in `social.md`. The post itself is never repeated here: a full copy is `blog.md`, and only each platform's settings are recorded.
 
-| Field          | Answer                                   |
-| -------------- | ---------------------------------------- |
-| Original title |                                          |
-| Original URL   | the published URL; blank until it's live |
+Italic text is a hint; replace it. Leave anything not known blank; a skill asks about a blank field rather than guessing.
+
+| Field          | Answer                                     |
+| -------------- | ------------------------------------------ |
+| Original title |                                            |
+| Original URL   | _the published URL; blank until it's live_ |
 
 ## Opening excerpt
 
@@ -13,13 +15,13 @@ Written once and shared by every platform below that takes an excerpt: the post'
 
 ## <Platform>
 
-| Field          | Answer                                         |
-| -------------- | ---------------------------------------------- |
-| Kind           | full copy · opening excerpt                    |
-| Canonical      | canonical URL set · `noindex` agreed · neither |
-| Tags           |                                                |
-| Cover image    |                                                |
-| AI disclosure  |                                                |
-| Published date |                                                |
-| URL            | blank until it's live                          |
-| Last synced    |                                                |
+| Field          | Answer                                           |
+| -------------- | ------------------------------------------------ |
+| Kind           | _full copy · opening excerpt_                    |
+| Canonical      | _canonical URL set · `noindex` agreed · neither_ |
+| Tags           |                                                  |
+| Cover image    |                                                  |
+| AI disclosure  |                                                  |
+| Published date |                                                  |
+| URL            | _blank until it's live_                          |
+| Last synced    |                                                  |

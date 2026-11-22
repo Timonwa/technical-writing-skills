@@ -1,10 +1,10 @@
 # SVG authoring
 
-How to write the SVG for a hand-drawn diagram or icon: clean source, correct accessibility and theme-able colour. Whether to draw one, and its layout and labels, are in [screenshots-and-diagrams.md](screenshots-and-diagrams.md).
+How to write the SVG for a hand-drawn diagram: clean source, correct accessibility and theme-able colour. Whether to draw one, and its layout and labels, are in [screenshots-and-diagrams.md](screenshots-and-diagrams.md).
 
 ## Structure
 
-- Root `<svg>`: `xmlns="http://www.w3.org/2000/svg"` and an explicit **`viewBox`** (e.g. `0 0 800 400`); prefer `viewBox` over fixed `width`/`height` for responsive scaling. Exception: SVG **inlined in JSX/HTML** doesn't need `xmlns`; **standalone `.svg` files** (and anything served as an image) always do.
+- Root `<svg>`: `xmlns="http://www.w3.org/2000/svg"` and an explicit **`viewBox`** (e.g. `0 0 800 400`); prefer `viewBox` over fixed `width`/`height` for responsive scaling. Exception: SVG **inlined in a page's HTML** doesn't need `xmlns`; **standalone `.svg` files** (and anything served as an image) always do.
 - `<defs>` for reusable pieces (markers, gradients, filters, clip paths, patterns).
 - Group with `<g>` + descriptive `id`; **position groups with `transform`** rather than absolute coords on every child.
 - Paint order is document order (back-to-front). Separate logical sections with comments (`<!-- Nodes -->`, `<!-- Arrows -->`).
@@ -16,7 +16,6 @@ How to write the SVG for a hand-drawn diagram or icon: clean source, correct acc
 
 ## Color & theming
 
-- **Icons: use `fill="currentColor"`** (and/or `stroke="currentColor"`) so they inherit the surrounding text color — one icon works in light/dark and any context. This is the default for UI icons.
 - For multi-color diagrams, use a **cohesive palette from the publication's or project's colours**; avoid pure `#000`/`#fff` (use near-black/near-white) so it holds up in both themes. In inline diagrams, expose a small set of CSS custom properties with fallbacks (`--diagram-node-fill`, `--diagram-node-stroke`, `--diagram-line`, `--diagram-text`) so the host theme controls the colors.
 - `vector-effect="non-scaling-stroke"` on lines/borders keeps stroke width constant when a diagram scales responsively.
 - Apply color via `fill`/`stroke` attributes (not inline `style`) where possible; `fill-opacity`/`stroke-opacity` for transparency.
@@ -24,10 +23,9 @@ How to write the SVG for a hand-drawn diagram or icon: clean source, correct acc
 
 ## Accessibility
 
-- **Informative** SVG (conveys meaning): `role="img"` on root + a `<title>` (short name) as the first child, referenced via `aria-labelledby`; add `<desc>` for a longer description. Example: `<svg role="img" aria-labelledby="t"> <title id="t">Data pipeline</title> …`. The id must be **unique per page** — the same SVG inlined twice with a fixed id breaks the `aria-labelledby` association; derive it from `useId()` in React, hand-author unique ids otherwise.
+- **Informative** SVG (conveys meaning): `role="img"` on root + a `<title>` (short name) as the first child, referenced via `aria-labelledby`; add `<desc>` for a longer description. Example: `<svg role="img" aria-labelledby="t"> <title id="t">Weekly training split</title> …`. The id must be **unique per page** — the same SVG inlined twice with a fixed id breaks the `aria-labelledby` association, so give each copy its own id (`t-1`, `t-2`).
 - Animated SVG respects **`prefers-reduced-motion`** — pause or reduce via a media query.
-- **Decorative** SVG (icon next to a text label, pure ornament): mark it `aria-hidden="true"` (and `focusable="false"`) so screen readers skip it — the adjacent text carries the meaning.
-- An icon-only control gets its accessible name from the **button/link**, not the SVG (`aria-label` on the control; the SVG stays `aria-hidden`).
+- **Decorative** SVG (pure ornament): mark it `aria-hidden="true"` (and `focusable="false"`) so screen readers skip it — the adjacent text carries the meaning.
 
 ## Arrows & markers
 
@@ -44,9 +42,8 @@ How to write the SVG for a hand-drawn diagram or icon: clean source, correct acc
 ## Optimization
 
 - Strip defaults and cruft: no redundant attributes, empty `<g>`, or unused `<defs>`; 1–2 decimal places on coordinates; attributes over inline `style`.
-- Run generated/exported SVGs through **SVGO** (or the editor's "optimize"); in a build pipeline, wire it in via the SVGO CLI, a bundler plugin, or SVGR's `svgo` option. Aim < 10KB for icons, < 50KB for most diagrams.
-- **Embedding decision**: **inline** when the SVG is styled/animated/themed (`currentColor`, CSS vars, a11y wiring); **`<img src>`/`background-image`** for static art you want cached and out of the DOM; **sprite + `<use>`** for icons repeated many times on a page.
-- **Never inline untrusted/user-uploaded SVG** — it can execute scripts. Sanitize it (DOMPurify) or serve it via `<img>` where scripts don't run.
+- Run an exported SVG through **SVGO** or the editor's optimise option. Aim < 50KB for most diagrams.
+- **Inline** a diagram that's themed with CSS custom properties or `currentColor`; use an image file (`<img src>`) for a static diagram.
 
 ## Patterns
 
@@ -76,19 +73,10 @@ Arrow connection:
       stroke-width="2" marker-end="url(#arrowhead)"/>
 ```
 
-UI icon (theme-able, decorative next to a label — inline in JSX/HTML, hence no `xmlns`; a standalone `.svg` file would carry it):
-
-```svg
-<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
-     stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-  <path d="M5 12h14M13 6l6 6-6 6"/>
-</svg>
-```
-
 ## Checklist
 
 - [ ] `viewBox` set; dimensions appropriate; scales cleanly.
-- [ ] Icons use `currentColor`; diagram colors from the publication's or project's colours; no pure black/white.
+- [ ] Diagram colours from the publication's or project's colours; no pure black/white.
 - [ ] Text readable at display size; contrast meets AA.
 - [ ] Arrows point correctly; markers positioned, not overlapping.
 - [ ] Aligned, evenly spaced; no overlapping/clipped elements.

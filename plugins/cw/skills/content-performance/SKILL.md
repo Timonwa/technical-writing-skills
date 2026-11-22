@@ -27,11 +27,11 @@ What the publication is for and what success looks like come from that profile, 
 
 - Where the profile settles what success means, rank against it.
 - Where there's no profile, ask who the reader is and what the publication is for, and offer to build one with `cw:style-guide`.
-- Where success is `unset`, ask before producing a ranked list, record the answer in the report, and offer to add it to `profile.md`.
+- Where success is blank, ask before producing a ranked list, record the answer in the report, and offer to add it to `profile.md`.
 
 When a guide changes: in a codebase, save the file where it was found; in a chat app, give the user the updated file to replace in the project. Never write inside the installed plugin.
 
-Traffic is rarely the goal; it's a proxy for one. A publication that exists to drive tool use is failing at 100,000 readers who never open the tool and succeeding at 500 who do. One that exists to attract work is measured in enquiries. One that exists because its author likes writing has no performance problem at all, and an honest report says so rather than inventing one.
+Traffic is rarely the goal; it's a proxy for one. A publication that exists to sell a cookbook is failing at 100,000 readers who never buy it and succeeding at 500 who do. One that exists to attract work is measured in enquiries. One that exists because its author likes writing has no performance problem at all, and an honest report says so rather than inventing one.
 
 Without that answer, the ranking optimises for whatever the export happens to measure, which is almost always reach.
 
@@ -105,7 +105,7 @@ Where the export carries none of these, say the question can't be answered from 
 ## Reporting
 
 - **Ranked by expected impact**, not by severity label — a title rewrite on a page with 50k impressions outranks a perfect fix on a page with 40.
-- **Each finding carries the numbers it came from**, the page, and the specific change. "Rewrite the title" is not a finding; "position 6, 12k impressions, 0.4% CTR — the title says _Configuration_ where the query is _how to set environment variables_" is.
+- **Each finding carries the numbers it came from**, the page, and the specific change. "Rewrite the title" is not a finding; "position 6, 12k impressions, 0.4% CTR — the title says _Sunday prep_ where the query is _how long does cooked rice keep in the fridge_" is.
 - **Group by action**, so a batch of title rewrites can be done in one sitting.
 - **Name what you'd do first** if only three things get done.
 - **Separate observations from recommendations.** A number in the export is a fact; what to do about it is a judgement, and the report should be readable by someone who wants to disagree with the second part.
@@ -131,4 +131,4 @@ Write the report to the publication's `reports/content-performance-<yyyy-mm-dd>.
 - **The title and opening a rewrite produces** → `cw:article-standards`; this skill says which titles are underperforming, not what they should say. **The title, description, slug and quotable answer** → `cw:seo-aeo-geo`.
 - **Refreshing, merging, redirecting or retiring a piece the findings point at** → `cw:content-refresh`.
 - **Promoting a piece that's fine but unseen** → `cw:social-media-posts`. A discovery problem and a quality problem need different fixes.
-- **Technical implementation in code** — metadata wiring, robots, sitemaps, JSON-LD validity, crawlability — is the site's developers' work and outside this skill. Name what's wrong; don't change the site.
+- **Technical implementation in code** — metadata wiring, robots, sitemaps, JSON-LD validity, crawlability — is work for whoever runs the site and outside this skill. Name what's wrong; don't change the site.

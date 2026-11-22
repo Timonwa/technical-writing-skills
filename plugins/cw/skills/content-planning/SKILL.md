@@ -87,9 +87,9 @@ Experience matters because Google asks whether content "clearly demonstrate[s] f
 
 ## Series and clusters
 
-- **A series** is a run of pieces a reader follows in order — a tutorial in parts, a build log, a monthly report. Plan it whole before publishing the first part: the parts, what each delivers on its own, and the date of the last one. A series that stops halfway is worse than a single piece.
+- **A series** is a run of pieces a reader follows in order — a tutorial in parts, a twelve-week training log, a monthly spending report. Plan it whole before publishing the first part: the parts, what each delivers on its own, and the date of the last one. A series that stops halfway is worse than a single piece.
 - **A series gets its own file**, `series/<series-slug>.md`, filled from [the template](../style-guide/references/publication-template/series/_template.md): its name, who it's for, what it covers and leaves out, cadence, and a parts table — part · working title · topic folder · publish date · status. Each part is its own topic: create its folder when that part is briefed, with **Series** and **Part** in its brief.
-- **A cluster** is a main piece on a topic and the narrower pieces around it. The main piece links to each narrower one, and each links back and to its neighbours. Links "connect your users and search engines to other parts of your site" ([Google SEO starter guide](https://developers.google.com/search/docs/fundamentals/seo-starter-guide)); the cluster shape itself is practice, not a Google requirement.
+- **A cluster** is a main piece on a topic and the narrower pieces around it — a main piece on a beginner's running plan, with narrower pieces on shoes, pacing and the first 5k. The main piece links to each narrower one, and each links back and to its neighbours. Links "connect your users and search engines to other parts of your site" ([Google SEO starter guide](https://developers.google.com/search/docs/fundamentals/seo-starter-guide)); the cluster shape itself is practice, not a Google requirement.
 - **Each piece still stands alone.** A reader arriving from search at part three gets what part three promises, with a link back for what came before.
 
 ## Mix the piece types
@@ -103,7 +103,7 @@ Balance what the plan asks of readers and of the writer:
 ## Calendar and cadence
 
 - **Pick a cadence the writer can keep through a bad month** — weekly, fortnightly, monthly. Consistency builds a readership; a burst and a silence loses it (practice).
-- **Work back from each publish date** — research, interview, draft, demo project (`cw:demo-project`), images (`cw:cover-images`), edit (`cw:editing-standards`), review (`/cw:review`), findability (`cw:seo-aeo-geo`).
+- **Work back from each publish date** — research, interview, draft, a demo project where the piece has one (`cw:demo-project`), images (`cw:cover-images`), edit (`cw:editing-standards`), review (`/cw:review`), findability (`cw:seo-aeo-geo`).
 - **Keep a buffer** of one or two finished pieces, so a missed week doesn't break the run.
 - **Plan the distribution with the topic** — its brief lists what it becomes: the newsletter issue that carries it (`cw:newsletter-standards`), the posts that share it (`cw:social-media-posts`), the copies on other platforms (`cw:cross-posting`), each with its own date.
 - **Date the seasonal and the timely** — launches, events, the start of a tax year — far enough ahead to write them well.

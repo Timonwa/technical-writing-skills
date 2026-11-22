@@ -23,7 +23,7 @@ The problems an edit of an article, essay, tutorial or newsletter issue keeps me
 An opening as drafted for a home-cooking publication whose guide sets a first-person, conversational voice:
 
 ```markdown
-In today's busy world, baking bread at home has become more popular than ever. Many people want to try it, but it can seem intimidating. In this post, I'm going to share everything you need to know about overnight bread, which is basically the easiest method there is.
+In today's busy world, baking bread at home has become more popular than ever. Many people want to try it, but it can seem intimidating. In this post, I'm going to share everything you need to know about overnight bread, which is basically the easiest method there is — only about ten minutes of actual work. I learned the hard way, too: I ruined three loaves before I realised my kitchen was just too cold.
 ```
 
 Edited:
@@ -36,7 +36,7 @@ Here's the overnight method I use now: ten minutes of work tonight, and the loaf
 
 What changed and why:
 
-- **Substantive** — the point (what the reader gets) arrives in the second paragraph, and the piece now opens on the writer's own result, which is the evidence the method works.
+- **Substantive** — the point (what the reader gets) arrives in the second paragraph, and the piece now opens on the writer's own result, moved up from the end of the draft's paragraph, which is the evidence the method works.
 - **Line** — the stock opener and "In this post, I'm going to…" cut as throat-clearing; "basically the easiest method" replaced by what's actually easy about it.
 - **Accuracy** — "more popular than ever" dropped: an unsourced trend claim with nothing behind it.
 - **Voice** — the first person kept, because it's the publication's voice, not a defect.

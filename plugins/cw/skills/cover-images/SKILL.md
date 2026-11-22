@@ -75,13 +75,13 @@ So the share image is:
 
 That one file covers the social cards. For Google, where the publishing platform lets you add more crops of the cover, Article structured data recommends several images at 16:9, 4:3 and 1:1, each at least 50,000 pixels ([Google: Article structured data](https://developers.google.com/search/docs/appearance/structured-data/article)).
 
-The cover on the page itself is sized by the platform's theme: upload the largest size it asks for and let it resize down. It's usually the largest thing on the page, so it decides how fast the page appears: compress it to roughly 200 KB or less, and use WebP or AVIF on the page where the platform allows (common practice). Never lazy-loading it and giving it high fetch priority are the site's developers' work ([web.dev: optimise LCP](https://web.dev/articles/optimize-lcp)). A newsletter's header image follows email's rules → `cw:images-and-diagrams`.
+The cover on the page itself is sized by the platform's theme: upload the largest size it asks for and let it resize down. It's usually the largest thing on the page, so it decides how fast the page appears: compress it to roughly 200 KB or less, and use WebP or AVIF on the page where the platform allows (common practice). Never lazy-loading it and giving it high fetch priority are set in the site's theme or code, by whoever runs the site ([web.dev: optimise LCP](https://web.dev/articles/optimize-lcp)). A newsletter's header image follows email's rules → `cw:images-and-diagrams`.
 
 ## Alt text
 
 - **On the page**, a cover that shows something the reader needs — the dish, the place, the chart — gets alt text written from why it's there ([W3C](https://www.w3.org/WAI/tutorials/images/informative/)). A cover that only repeats the title or decorates gets empty alt text (`alt=""`) so a screen reader skips it ([W3C](https://www.w3.org/WAI/tutorials/images/decorative/)).
 - **In a card**, the image alt text is set as `og:image:alt` — "a description of what is in the image (not a caption)" ([Open Graph](https://ogp.me/)) — and X reads up to 420 characters ([X](https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/summary-card-with-large-image)). Where the platform has an alt field for the social image, fill it.
-- **In the front matter**, `cover_alt` describes what the image shows, so the card always has it. Whether the page also uses it, or renders a cover that only repeats the title with `alt=""`, is the theme's work; name it to the site's developers if it's wrong.
+- **In the front matter**, `cover_alt` describes what the image shows, so the card always has it. Whether the page also uses it, or renders a cover that only repeats the title with `alt=""`, is the theme's work; name it to whoever runs the site if it's wrong.
 
 ## A template across the publication
 
@@ -89,7 +89,7 @@ A reader should recognise the publication's cards in a feed before reading them.
 
 ## Who sets what
 
-The writer chooses the image, its words and its alt text, and enters them in the publishing platform's social-image fields. The tags that carry them to other sites — `og:image`, `og:image:alt`, `twitter:card` — and the `max-image-preview:large` robots setting Google Discover needs are written by the site's code. Where the platform has no field for the share image, or the wrong image keeps appearing, that's the site's developers' work; name what's wrong rather than working around it.
+The writer chooses the image, its words and its alt text, and enters them in the publishing platform's social-image fields. The tags that carry them to other sites — `og:image`, `og:image:alt`, `twitter:card` — and the `max-image-preview:large` robots setting Google Discover needs are written by the site's code. Where the platform has no field for the share image, or the wrong image keeps appearing, that's work for whoever runs the site; name what's wrong rather than working around it.
 
 ## Check the preview before posting
 

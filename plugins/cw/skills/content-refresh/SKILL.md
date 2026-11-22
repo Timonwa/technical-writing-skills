@@ -6,7 +6,7 @@ description: >-
 
 # Refreshing published content
 
-A published piece keeps making claims after the day it ships: prices change, versions move, links die, a better piece appears beside it. This skill decides what an existing piece needs and does it honestly — readers and search engines both see what changed and when.
+A published piece keeps making claims after the day it ships: prices change, versions move, links die, a better piece appears beside it. Decide what an existing piece needs and do it honestly, so readers and search engines both see what changed and when.
 
 ## Voice and audience come from the writing's own guide
 
@@ -50,7 +50,7 @@ A refresh works in the topic's own folder, `topics/<yyyy-mm>-<slug>/` in the pub
 - **A performance review flags it** — ranking decay, a click-through gap, two pieces competing for one query, a page with no impressions (`/cw:content-performance`).
 - **A fact in it has moved** — a price, a version, a law, a statistic, a product's name or interface.
 - **A reader reports a problem** — an error, a broken step, a dead link. Treat every report as a lead to check, not a fix to apply blindly.
-- **The demo or code no longer runs** on the current versions.
+- **The demo or code no longer runs** on the current versions, where the piece has either.
 - **A newer piece covers the same ground**, or the publication's own thinking has changed.
 - **On a review cadence** the publication records in its guide (common practice where it records none):
   - the pieces that bring in most readers, every quarter;
@@ -80,7 +80,7 @@ Work through the piece as a reader arriving today:
 
 - **Facts and figures** — every number, price, date, statistic and "currently", against its original source. A figure whose source has updated gets the new figure and the new source.
 - **Versions and steps** — every version named, and every step of a tutorial run again on the current versions (`write:code-samples`, Code in a tutorial).
-- **The demo repo** — it builds, runs and matches the piece; its README still describes it (`cw:demo-project`).
+- **The demo repo**, where the piece has one — it builds, runs and matches the piece; its README still describes it (`cw:demo-project`).
 - **Screenshots and images** — retaken where the interface changed; alt text updated to match (`cw:images-and-diagrams`).
 - **Links** — every external link resolves to what it claims; a moved source is relinked, a dead one replaced or removed with the claim it supported rechecked.
 - **Internal links** — out to newer pieces that now answer the follow-up question, and in from newer pieces that should point here.
@@ -103,7 +103,7 @@ Work through the piece as a reader arriving today:
 ## Correction and update notes
 
 - **A correction gets a visible, dated note** saying what was wrong and what it now says: "Correction, 12 March: an earlier version gave the fee as 3%. It is 2.5%." Acknowledge mistakes and correct them promptly and prominently ([SPJ Code of Ethics](https://www.spj.org/spj-code-of-ethics/)). Place it where a reader who saw the error will see it — at the top for a material error, beside the corrected passage for a small one, as the guide sets.
-- **A substantial update gets an update note** — what changed and when: "Updated 4 June: steps 3–5 now use version 5; the old flag is gone." One line, not a changelog of every edit.
+- **A substantial update gets an update note** — what changed and when: "Updated 4 June: weeks 3–5 now include a rest day; the old plan had none." One line, not a changelog of every edit.
 - **Never correct silently** anything a reader may have relied on, quoted or acted on. A silent fix makes an earlier reader's screenshot or citation look like their mistake.
 
 ### What never changes silently
@@ -126,7 +126,7 @@ Work through the piece as a reader arriving today:
 
 - **Redirect only to a real equivalent.** "Don't redirect many old URLs to one irrelevant single URL destination, such as the home page" ([Google: site moves](https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes)). With no equivalent, let the URL return 404 or 410, and Google removes it from the index ([Google: HTTP status codes](https://developers.google.com/search/docs/crawling-indexing/http-network-errors)).
 - **Remove internal links** to the retired piece, and take it out of series pages, reading lists and anything the platform lists it in — including its row in the series file under `series/`, whose status becomes `retired`.
-- **Archive its demo repo** and say in that repo's README that the piece is retired.
+- **Archive its demo repo**, where it has one, and say in that repo's README that the piece is retired.
 - **Its copies follow it** — every cross-post in `copies.md` is taken down, or gets a note at the top pointing to what's current, and its row records which.
 - **Keep the slug retired.** Don't reuse a retired URL for a different piece; old links and citations would land on the wrong answer.
 
@@ -139,7 +139,7 @@ Work through the piece as a reader arriving today:
 ## After a substantial refresh
 
 - **Recheck findability** — the title, description, slug and opening still match the question the piece answers (`cw:seo-aeo-geo`).
-- **Ask Google to recrawl it** — in a site you manage in Search Console, request indexing for the URL with URL Inspection ([Google: ask Google to recrawl](https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl)). The sitemap's `<lastmod>` should change with a substantive update and only then: Google uses it only when it's "consistently and verifiably" accurate ([Google: sitemaps](https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap)). Setting it is the site's developers' work or the CMS's.
+- **Suggest the writer ask Google to recrawl it** — where they manage the site in Search Console, they can request indexing for the URL with URL Inspection ([Google: ask Google to recrawl](https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl)). The sitemap's `<lastmod>` should change with a substantive update and only then: Google uses it only when it's "consistently and verifiably" accurate ([Google: sitemaps](https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap)). The CMS or whoever runs the site sets it.
 - **Re-promote what changed** — a new angle or a materially better answer is worth sharing again (`cw:social-media-posts`, which adds the posts to `social.md`; posts already live aren't edited); a significant update can go in the newsletter (`cw:newsletter-standards`).
 - **Record the refresh** in the topic's `brief.md`, so the next review knows it was checked and when.
 

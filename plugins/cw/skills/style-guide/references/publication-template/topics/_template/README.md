@@ -16,8 +16,8 @@ A topic is the folder; a piece is one thing published from it — the blog post,
 | `images/`       | the cover, the share card and the diagrams                                          |
 | `reports/`      | `review.md`, `ai-check.md`, `seo.md`                                                |
 
-File names are fixed: adding a format later adds its file, and nothing is renamed. A field that isn't known yet stays in the file, blank — never removed. A skill's answers go into the brief field they belong to, or under its "Notes for whoever picks it up next" when none fits.
+File names are fixed: adding a format later adds its file, and nothing is renamed. A field that isn't known yet stays in the file, blank — never removed — and a skill asks about it rather than guessing. A skill's answers go into the brief field they belong to, or under its "Notes for whoever picks it up next" when none fits.
 
-Only a skill that edits the format files claims the topic in `brief.md`. A read-only check — a review, an AI check, a style check, an SEO check, a performance review — runs even while someone holds the topic, never sets Held by, and writes only its own file in `reports/`.
+Whoever edits the format files — the writer or a skill — claims the topic in `brief.md`. A read-only check — a review, an AI check, a style check, an SEO check, a performance review — runs even while someone holds the topic, never sets Held by, and writes only its own file in `reports/`.
 
 In a chat app, a project's files can't hold folders, so each file takes the topic folder's name as a prefix: `2026-12-sourdough-starter--brief.md`, `2026-12-sourdough-starter--blog.md`, and an interview `2026-12-sourdough-starter--interview-2026-12-03-<name>.md`.

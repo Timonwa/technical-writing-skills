@@ -2,7 +2,7 @@
 
 **What a sponsor email draws on — who reads it, the numbers, and where a sponsor can appear.** Who the publication is for is [profile.md](profile.md); how it looks is [brand.md](brand.md), never repeated here.
 
-Fill in what you know. Leave the rest as `unset` and a skill will ask rather than guess. Every number is read from the platform or analytics tool and dated; none is estimated, rounded up or carried over without a new date. `cw:pitching` reads it for a sponsor email and asks for current figures when the dates are old.
+Fill in what you know. Leave anything not known blank; a skill asks about a blank field rather than guessing. Every number is read from the platform or analytics tool and dated; none is estimated, rounded up or carried over without a new date. `cw:pitching` reads it for a sponsor email and asks for current figures when the dates are old.
 
 ## What it is and who reads it
 

@@ -6,7 +6,7 @@ description: >-
 
 # Cross-posting
 
-A copy of a piece on another site reaches that site's readers, and competes with the original in search and AI answers unless it's set up to defer to it. This skill makes each copy point readers, search engines and answer engines back to the original.
+A copy of a piece on another site reaches that site's readers, and competes with the original in search and AI answers unless it's set up to defer to it. Set each copy up to point readers, search engines and answer engines back to the original.
 
 ## Voice and audience come from the writing's own guide
 
@@ -36,7 +36,7 @@ Read the answers from the topic's `brief.md` (its **Cross-posts** row above all)
 
 ## Work in the topic folder
 
-Each topic has its own folder in the publication's `topics/` (`topics/2026-12-sourdough-starter/`), made when it's briefed (`cw:content-planning`). Copies are recorded in its `copies.md`; in a chat app, `<topic folder>--copies.md`.
+Each topic has its own folder in the publication's `topics/` (`topics/2026-12-lisbon-on-a-budget/`), made when it's briefed (`cw:content-planning`). Copies are recorded in its `copies.md`; in a chat app, `<topic folder>--copies.md`.
 
 - **Claim it before writing.** Read `brief.md`: if **Held by** names someone else and the status isn't `paused`, leave it and say so. Otherwise set **Held by** and the date, the Cross-posts row's status to `drafting`, and the topic's line in the publication's `calendar.md` to match — that line only. When stopping, set the status and clear **Held by**.
 - **Write only `copies.md`.** A full copy is `blog.md` itself, never rewritten into `copies.md`; where the brief has no Cross-posts row, say so and ask whether to add one.
@@ -104,7 +104,7 @@ Check a copy after it's live: open its page source and confirm the canonical lin
 - **Links become absolute** — a relative link that worked on the original site points nowhere on a copy.
 - **Links to the publication's other pieces** go to the originals, never to other copies.
 - **Images:** an import usually re-hosts them on the platform; a pasted copy may hotlink the originals. Open the copy and check every image loads, with its alt text intact (`cw:images-and-diagrams`).
-- **Embeds** — a code sandbox, a video, a chart widget — often don't survive. Replace a dropped embed with a link and a still image, and check code blocks keep their language label.
+- **Embeds** — a video, a recipe card, a chart widget, a code sandbox — often don't survive. Replace a dropped embed with a link and a still image, and where the piece has code, check code blocks keep their language label.
 - **Tracking:** tag the link back with campaign parameters if the publication measures referrals, the same way each time.
 
 ## Rights
@@ -134,4 +134,4 @@ Check a copy after it's live: open its page source and confirm the canonical lin
 
 - **Getting the original found** → `cw:seo-aeo-geo`. **The cover image and share card** → `cw:cover-images`. **Correcting or retiring the original** → `cw:content-refresh`.
 - **Posts that share the piece rather than copy it, summary posts included** → `cw:social-media-posts`. **The newsletter issue that announces it** → `cw:newsletter-standards`.
-- **The site's own canonical and robots settings** are set by its code or CMS — the site's developers' work; this skill covers what the writer sets on each copy.
+- **The site's own canonical and robots settings** are set by its code or CMS — work for whoever runs the site; this skill covers what the writer sets on each copy.

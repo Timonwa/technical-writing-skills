@@ -4,7 +4,9 @@
 
 One guide covers every channel. A blog post and a newsletter issue from the same publication should read as one person — only logistics differ, and those live in the profile.
 
-**If you already have a guide of your own**, put it in `sources/` and fill this in from it rather than replacing it. Where your guide fixes exact wording, copy the wording; where it's silent, leave `unset`.
+Fill in what you know. Leave anything not known blank; a skill asks about a blank field rather than guessing.
+
+**If you already have a guide of your own**, put it in `sources/` and fill this in from it rather than replacing it. Where your guide fixes exact wording, copy the wording; where it's silent, leave the field blank.
 
 ## Voice
 
@@ -105,21 +107,20 @@ Length is a range per type (a how-to, an essay, an issue), so a piece that runs 
 
 _Delete this section if the publication doesn't publish code._
 
-| Field              | Your answer                          |
-| ------------------ | ------------------------------------ |
-| Languages          |                                      |
-| Comment style      |                                      |
-| Placeholders       | _how you mark "your code goes here"_ |
-| How much per block | _whole files · incremental_          |
+| Field              | Your answer                                                    |
+| ------------------ | -------------------------------------------------------------- |
+| Languages          |                                                                |
+| Comment style      |                                                                |
+| Placeholders       | _how a value the reader replaces is marked, e.g. `PROJECT_ID`_ |
+| How much per block | _whole files · incremental_                                    |
 
 ## Closing and asks
 
-| Field         | Your answer                                         |
-| ------------- | --------------------------------------------------- |
-| Last section  | _its name and shape_                                |
-| The one ask   | _the wording you use_                               |
-| Sign-off      | _exact wording, per channel if they differ_         |
-| Subject lines | _newsletter only — the format, with a real example_ |
+| Field        | Your answer                                 |
+| ------------ | ------------------------------------------- |
+| Last section | _its name and shape_                        |
+| The one ask  | _the wording you use_                       |
+| Sign-off     | _exact wording, per channel if they differ_ |
 
 ## Quotes
 
@@ -136,7 +137,7 @@ _Delete this section if the publication doesn't publish code._
 | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Slug          | _short readable words, hyphenated; set once_                                                                                                                  |
 | Description   | _one per piece, used as the meta description, share description and listing excerpt; about 150–160 characters, the point in the first 120 (`cw:seo-aeo-geo`)_ |
-| Reading level | _a target and the tool that checks it, or `unset`_                                                                                                            |
+| Reading level | _a target and the tool that checks it_                                                                                                                        |
 
 ## Social
 

@@ -17,7 +17,7 @@ A publication — a blog, a newsletter, or both under one name — answers to th
 
 ## Voice and audience come from the writing's own guide
 
-This skill builds the guide, so it starts by finding what already exists: the publication's `writing-guide.md`, `profile.md`, `brand.md` and anything in its `sources/` and `examples/`:
+Building the guide starts by finding what already exists: the publication's `writing-guide.md`, `profile.md`, `brand.md` and anything in its `sources/` and `examples/`:
 
 - **In a codebase:** the folder the project's `AGENTS.md` names, or, for a guide kept outside the repo, the folder the user's personal agent instructions name (such as `~/.claude/CLAUDE.md`); otherwise the project's `publications/` folder.
 - **In a chat app:** the project's files (a Claude Project's knowledge, or the equivalent elsewhere), or files attached to the conversation.
@@ -50,12 +50,12 @@ Read the answers from the publication's existing files, its `sources/`, its publ
 ## Build it from what exists
 
 1. **Ask whether a guide already exists**, and ask broadly — a style guide, a tone-of-voice document, a client's editorial brief, contributor guidelines, even a page of notes. It goes in the publication's `sources/` folder.
-2. **Convert it, don't copy it.** Map what the source settles onto the guide's fields, transcribe exact wording wherever the source fixes wording — a sign-off, a banned phrase, a name — and leave what it doesn't cover `unset`. The source is never rewritten; it stays the record of where each answer came from.
+2. **Convert it, don't copy it.** Map what the source settles onto the guide's fields, transcribe exact wording wherever the source fixes wording — a sign-off, a banned phrase, a name — and leave what it doesn't cover blank. The source is never rewritten; it stays the record of where each answer came from.
 3. **Derive from three or four published pieces** most like what's wanted — title shapes, openings, recurring sections, sentence rhythm, the words that never appear. **Ask which pieces aren't typical** and name them; deriving a voice from one terse setup post makes everything written afterwards read cold.
 4. **Interview the owner for the rest**, and always for the profile — a writing guide rarely says who the readers are, who the publication is not for, or what success looks like.
-5. **Collect the look.** Ask for an existing brand guide, the logo files, the colours and fonts, and three or four past covers; they go in `examples/`, and `brand.md` records the rules. Where nothing exists, read the colours and fonts off past covers or the site and mark each one `unset` until the owner confirms it. A brand guide covers the logo and its use, the colour palette, typography and imagery ([Bynder](https://www.bynder.com/en/glossary/brand-guidelines-definition/)); `brand.md` keeps the parts a publication's covers, images and charts need.
+5. **Collect the look.** Ask for an existing brand guide, the logo files, the colours and fonts, and three or four past covers; they go in `examples/`, and `brand.md` records the rules. Where nothing exists, read the colours and fonts off past covers or the site and leave each one blank until the owner confirms it. A brand guide covers the logo and its use, the colour palette, typography and imagery ([Bynder](https://www.bynder.com/en/glossary/brand-guidelines-definition/)); `brand.md` keeps the parts a publication's covers, images and charts need.
 
-**`unset` is a valid answer.** A skill that meets `unset` asks, then writes the answer back. A plausible guess becomes a house rule nobody agreed to.
+**A blank field is a valid answer.** A skill that meets a blank field asks, then writes the answer back. A plausible guess becomes a house rule nobody agreed to.
 
 **Where a source and the published pieces disagree**, record both and flag the conflict. Only the owner knows which is right now — guides drift ahead of practice, and practice drifts away from guides.
 
@@ -98,7 +98,7 @@ Read the answers from the publication's existing files, its `sources/`, its publ
 
 - **Slugs** — short, readable words separated by hyphens, in the reader's language; avoid long ID numbers ([Google](https://developers.google.com/search/docs/crawling-indexing/url-structure)).
 - **Descriptions** — one per piece, used as the meta description, the share description and the listing excerpt, written for each piece and never the same text across pages; for a post it may carry the author and the date. Google sets no length limit but truncates to fit the screen ([Google](https://developers.google.com/search/docs/appearance/snippet)); about 150–160 characters, with the point in the first 120 for mobile, is the working target ([Ahrefs](https://ahrefs.com/blog/meta-description/)).
-- **A reading-level target, if it has one.** Some publishers write for a low reading age even for specialists — GOV.UK's guidance is widely cited as a reading age of 9 — and WCAG 2.2's success criterion 3.1.5 (level AAA) asks for supplementary content where text needs more than lower-secondary reading ability ([W3C](https://www.w3.org/TR/WCAG22/#reading-level)). For general web writing, about grade 8 on a Flesch-Kincaid or Hemingway reading is common practice. Record the target and the tool that checks it, or `unset`; the score points at long sentences and words, it isn't the goal.
+- **A reading-level target, if it has one.** Some publishers write for a low reading age even for specialists — GOV.UK's guidance is widely cited as a reading age of 9 — and WCAG 2.2's success criterion 3.1.5 (level AAA) asks for supplementary content where text needs more than lower-secondary reading ability ([W3C](https://www.w3.org/TR/WCAG22/#reading-level)). For general web writing, about grade 8 on a Flesch-Kincaid or Hemingway reading is common practice. Record the target and the tool that checks it, or leave it blank; the score points at long sentences and words, it isn't the goal.
 
 **Quotes, titles of works and code**
 

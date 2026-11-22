@@ -12,7 +12,7 @@
 
 ## Parts
 
-One row per part, in reading order. Leave a cell blank until it's known; the topic folder stays blank until the part is briefed.
+One row per part, in reading order. Leave a cell blank until it's known, and a skill asks about it rather than guessing; the topic folder stays blank until the part is briefed.
 
 | Part | Working title | Topic folder | Publish date | Status |
 | ---- | ------------- | ------------ | ------------ | ------ |

@@ -20,7 +20,7 @@ Who the publication is for, why it exists, how it sounds and what its pieces are
 
 - Where the guide settles something this skill also covers, the guide wins.
 - Where there's no guide, ask who the reader is and what the piece is for, and offer to build one with `cw:style-guide`.
-- Where a field reads `unset`, ask and record the answer in the guide.
+- Where a field is blank, ask and record the answer in the guide.
 
 When a guide changes: in a codebase, save the file where it was found; in a chat app, give the user the updated file to replace in the project. Never write inside the installed plugin.
 
@@ -46,7 +46,7 @@ Read the answers from the topic's `brief.md` and `profile.md`'s Defaults first; 
 
 ## Work in the topic folder
 
-Each topic has its own folder in the publication's `topics/` (`topics/2026-11-rates-explainer/`), made when it's briefed (`cw:content-planning`). A blog post is one of the things a topic can become; the **What this topic becomes** table in `brief.md` says which.
+Each topic has its own folder in the publication's `topics/` (`topics/2026-12-beginner-strength-plan/`), made when it's briefed (`cw:content-planning`). A blog post is one of the things a topic can become; the **What this topic becomes** table in `brief.md` says which.
 
 - **Claim it before writing.** Read `brief.md`: if **Held by** names someone else and the status isn't `paused`, leave it and say so. Otherwise set **Held by** to yourself and the date, the topic's status and its Blog post row to `drafting`, and the topic's line in the publication's `calendar.md` to match — that line only.
 - **Write only the blog post.** Where the table has a Blog post row, write `blog.md` and no other format's file; each has its own skill. Where it has none, say so and ask whether to add the row before writing.
@@ -59,7 +59,7 @@ Each topic has its own folder in the publication's `topics/` (`topics/2026-11-ra
   - The body doesn't repeat the title as an H1; the platform renders it.
 - **Every claim's source goes in `sources.md`**, by its [template](../style-guide/references/publication-template/topics/_template/sources.md).
 - **When stopping**, set the status — `paused`, or `in review` — and clear **Held by**. Resuming starts with `brief.md`, then `blog.md` and `sources.md`.
-- **In a chat app**, name the files `<topic folder>--<file>` (`2026-11-rates-explainer--blog.md`) and hand back only that topic's files and the line to add or change in `calendar.md`.
+- **In a chat app**, name the files `<topic folder>--<file>` (`2026-12-beginner-strength-plan--blog.md`) and hand back only that topic's files and the line to add or change in `calendar.md`.
 
 ## Does this piece deserve to exist
 
@@ -124,7 +124,7 @@ Eye-tracking research finds people scan web pages rather than read them, and on 
 ## Accessible formatting
 
 - **One H1, headings in order** — the platform renders the title as the H1, so the body starts at H2 and skips no level, and a screen reader's outline matches the piece.
-- **Descriptive link text.** "Read the caching write-up", never "click here"; assistive technology lists links out of context, and a scanning reader reads them the same way.
+- **Descriptive link text.** "Read the full packing list", never "click here"; assistive technology lists links out of context, and a scanning reader reads them the same way.
 - **Alt text on every informative image**, written from its purpose, and never information carried only in an image (`cw:images-and-diagrams`).
 - **Captions or a transcript** for video and audio ([WCAG 1.2](https://www.w3.org/WAI/WCAG22/quickref/#time-based-media)).
 - **Never meaning by colour alone** — "the red line" needs a label too ([WCAG 1.4.1](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html)).

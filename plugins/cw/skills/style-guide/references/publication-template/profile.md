@@ -2,7 +2,7 @@
 
 **Who this publication is, who it's for, and what it's trying to do.** Not how to write it — that's [writing-guide.md](writing-guide.md).
 
-Fill in what you know. Leave the rest as `unset` and a skill will ask rather than guess.
+Fill in what you know. Leave anything not known blank; a skill asks about a blank field rather than guessing.
 
 ## The publication
 
@@ -56,14 +56,14 @@ Fill in what you know. Leave the rest as `unset` and a skill will ask rather tha
 
 **Newsletter**
 
-| Field                   | Your answer                                                        |
-| ----------------------- | ------------------------------------------------------------------ |
-| Platform                |                                                                    |
-| Cadence                 |                                                                    |
-| The signup promise      | _verbatim — the contract every issue is measured against_          |
-| What an issue contains  | _a letter · curated links · product news · a digest of your posts_ |
-| Issues sent so far      | _zero is a valid answer and changes how the first one is written_  |
-| Sender name and address | _the "from" line, and the postal address required in the footer_   |
+| Field                   | Your answer                                                                          |
+| ----------------------- | ------------------------------------------------------------------------------------ |
+| Platform                |                                                                                      |
+| Cadence                 |                                                                                      |
+| The signup promise      | _verbatim — the contract every issue is measured against_                            |
+| What an issue contains  | _a letter · curated links · product news · a digest of your posts_                   |
+| Issues sent so far      | _zero is a valid answer and changes how the first one is written_                    |
+| Sender name and address | _the "from" line, and the postal address where the law or the platform requires one_ |
 
 ## Defaults
 

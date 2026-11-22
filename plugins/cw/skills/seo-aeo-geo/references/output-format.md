@@ -37,7 +37,7 @@ Targets: title about 50–60 characters; description about 150–160, the point 
 
 <facts only the writer can supply — first-hand data, dates, sources — batched>
 
-## Checked with the site's developers
+## Checked with whoever runs the site
 
 <crawler access, structured data, sitemap — what was asked, and the answer, or "not checked">
 ```

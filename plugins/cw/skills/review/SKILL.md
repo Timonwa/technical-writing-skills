@@ -112,7 +112,7 @@ A topic lives in `topics/<yyyy-mm>-<slug>/` in the publication's folder; the for
 - **Links and anchors resolve**; affiliate links are tagged as the platform requires.
 - **Images load, carry their credit, and have alt text that serves the piece.**
 - **The share preview** — the front matter's `title`, `description`, `cover_image` and `cover_alt` — shows what the piece is.
-- **A newsletter issue's envelope** — the subject line reflects what's inside; the preview text adds to the subject rather than repeating it; the sender name is the one subscribers recognise; the unsubscribe link and the publication's postal address are in the footer. US law requires a clear way to opt out and a valid physical postal address in commercial email, and a subject line that matches the content ([FTC, CAN-SPAM](https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business)).
+- **A newsletter issue's envelope** — the subject line reflects what's inside; the preview text adds to the subject rather than repeating it; the sender name is the one subscribers recognise; the unsubscribe link is in the footer, and the publication's postal address where the law or the platform requires one. US law requires a clear way to opt out and a valid physical postal address in commercial email, and a subject line that matches the content ([FTC, CAN-SPAM](https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business)).
 - **A newsletter issue's sending checks** — the subject and preview text within the lengths `cw:newsletter-standards` sets; the message under Gmail's 102 KB clipping point, past which the footer with the unsubscribe link is hidden ([Mailchimp](https://mailchimp.com/help/gmail-is-clipping-my-email/)); images in email-safe formats and GIFs under 1 MB (`cw:images-and-diagrams`).
 
 ### Blockers — do not publish
@@ -124,7 +124,7 @@ A topic lives in `topics/<yyyy-mm>-<slug>/` in the publication's folder; the for
 - **A quote, image or excerpt used without permission** beyond fair use or fair dealing, or a passage plagiarised from someone else.
 - **An identifiable person's photo or personal details published without their consent.**
 - **A health, finance or legal claim with no source**, or without the qualified review the profile says such claims need.
-- **A newsletter issue with no unsubscribe link or no postal address**, or a subject line that misleads about what's inside.
+- **A newsletter issue with no unsubscribe link, or no postal address where one is required**, or a subject line that misleads about what's inside.
 - **An edited, composite or AI-generated image presented as a real photo.** The SPJ code, revised in 2026, says never publish fabricated content that could be confused with reality, and clearly label illustrations and reenactments.
 
 ### Severity

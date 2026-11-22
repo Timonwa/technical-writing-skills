@@ -1,7 +1,7 @@
 ---
 name: sme-interviews
 description: >-
-  Helping a writer interview a source for content — an expert, founder, chef or researcher an article, feature, profile or newsletter draws on. Before: research the source, verify who they are, draft the request with the ground rules and the question list. After: turn the transcript or notes into checked interview notes, check every quote, list the facts to confirm and draft the check-back email. Covers consent, vulnerable sources, quoting and attribution. Use on "interview a source", "interview an expert for my article", "quote someone", "on the record".
+  Helping a writer interview a source for content — an expert, founder, chef or researcher an article, feature, profile or newsletter draws on. Before: research and verify the source, and draft the request, ground rules and questions. After: turn the transcript or notes into checked notes, check every quote, list the facts to confirm and draft the check-back email. Covers consent, vulnerable sources, quoting and attribution. Use on "interview a source", "interview an expert for my article", "quote someone", "on the record".
 ---
 
 # Interviewing sources for content
