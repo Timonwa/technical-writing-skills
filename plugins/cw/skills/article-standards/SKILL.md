@@ -134,7 +134,8 @@ Eye-tracking research finds people scan web pages rather than read them, and on 
 
 - **Say who wrote it and why they're worth reading on this** — a byline and a line of relevant standing, especially where the topic touches health, money, safety or law.
 - **Date it, and say when it was updated.** A piece with no date is unevaluable, and readers treat it accordingly.
-- **Disclose what the profile's Constraints section requires** — affiliate links, sponsorship, gifted products, AI assistance — at the top, before the reader has invested time, not in a footer. A sponsored post's agreement and its label come from `cw:pitching`.
+- **Disclose what the profile's Constraints section requires** — affiliate links, sponsorship, gifted products, AI assistance — at the top, before the reader has invested time, not in a footer.
+- **Label a sponsored post before the headline** — `Sponsored by <brand>` or `Ad: <brand>`, naming the brand, never a logo alone — and record it in the brief's **Disclosure** field. Regulators expect it of bloggers, not only brands ([FTC](https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking); [ASA](https://www.asa.org.uk/advice-online/recognising-ads-social-media.html)).
 - **Separate what you tested from what you read.** "I ran this for six weeks" and "the manufacturer claims" are different classes of evidence and should look different on the page.
 - **Correct in public.** When a piece turns out to be wrong, fix it and say what changed. Silent edits cost more trust than the original error.
 
@@ -167,5 +168,5 @@ Eye-tracking research finds people scan web pages rather than read them, and on 
 - **Code samples that must run** → `write:code-samples`. **Diagrams and screenshots** → `cw:images-and-diagrams`. **The cover image** → `cw:cover-images`.
 - **Finding and checking the sources behind it** → `cw:content-research`. **A tutorial's companion repository** → `cw:demo-project`.
 - **Updating, correcting, merging or retiring a piece after it's published** → `cw:content-refresh`.
-- **Writing for another publication, a swap, a co-written or guest piece, or a sponsorship** — the pitch, the agreement and the rights → `cw:pitching`.
+- **The emails for writing for another publication, a swap, a co-written or guest piece, or a sponsor** — the pitch, the replies and the confirmation of what was agreed → `cw:pitching`.
 - **A periodic issue covering several pieces** → `cw:newsletter-standards`. **Promoting one piece** → `cw:social-media-posts`. **Getting it found** → `cw:seo-aeo-geo`. **Whether it's being found** → `/cw:content-performance`.

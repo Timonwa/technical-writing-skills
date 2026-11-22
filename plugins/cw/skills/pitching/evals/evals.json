@@ -3,56 +3,54 @@
   "evals": [
     {
       "id": 1,
-      "prompt": "A meal-kit company might be a good fit for my baking newsletter. Write the pitch email offering them a sponsored slot, and send my media kit with it.",
-      "expected_output": "Should ask first which kind it is (or read it as sponsored from the request), then read profile.md, media-kit.md and pitch-log.md and ask only what's missing — above all the current subscribers, open rate, click rate and monthly readers with the date each was measured, the slot and price (offering the rate card in media-kit.md as the default), and what the newsletter won't do for a sponsor — never inventing a figure. If media-kit.md is missing, should build it from the template beside profile.md: who reads it, dated numbers, what a sponsor can buy, the rate card, past sponsors (named only with permission) and how to book, without repeating brand.md. Should write the email from the sponsor pitch template: why the brand fits, the dated numbers, the slot and price, the link to the media kit, and that the slot is written in the newsletter's voice and labelled. Should log a row in pitch-log.md with Direction sent and Kind sponsored. Once agreed, the slot's issue is a topic folder in the writer's own publication whose brief.md has Collaboration sponsored, Partner the brand, and Disclosure the label (such as 'Ad: paid for by <brand>' at the top of the slot), citing the FTC and ASA guidance rather than 'Sponsored' alone.",
+      "prompt": "I want to pitch a guest post to a developer magazine about rotating API keys without downtime. Write the pitch email.",
+      "expected_output": "Should treat it as writing for them and ask first, reading profile.md, pitch-log.md and the outlet's contributor guidelines before asking only what's missing: the outlet, the editor and the guidelines' link, who reads it and what it has run lately, what its guidelines ask a pitch to include, the idea and angle, why the writer and why now, the length and delivery date, two or three sample links, and whether the idea has gone to another outlet. Should write the email from the pitch template: a subject line that states the idea, the idea in one or two sentences, why the outlet's readers, why now and why the writer, a proposed title and outline, length and delivery date and the sample links, about 150–300 words and within any cap the guidelines set, sending the pitch rather than the article and no attachments unless asked. Should add a row to pitch-log.md with Direction sent, Kind writing for them, Status open and a follow-up date from the stated response time or about two weeks. Must not raise fees, rights, exclusivity or invoices.",
       "files": [],
       "expectations": [
-        "Asks first, reading profile.md and media-kit.md before asking only what's missing",
-        "Asks for current figures with the date measured and never invents a number",
-        "Uses or builds media-kit.md beside profile.md, with numbers, slots, rate card and how to book",
-        "Writes the email from the sponsor pitch template, linking the media kit",
-        "Logs the pitch in pitch-log.md with Direction sent and Kind sponsored",
-        "Places the sponsored issue in a topic folder in the writer's own publication with Collaboration, Partner and a disclosure label that isn't 'Sponsored' alone"
+        "Asks first: the kind, then the writing-for-them questions, reading the profile, pitch log and the outlet's guidelines before asking only what's missing",
+        "Writes the email from the pitch template, with a subject line that states the idea, an outline and two or three sample links",
+        "Keeps it short and within any cap the guidelines set, and sends the pitch rather than the finished article",
+        "Logs the pitch in pitch-log.md with Direction sent, Kind writing for them and a follow-up date",
+        "Doesn't mention fees, rights, exclusivity, payment or invoices"
       ]
     },
     {
       "id": 2,
-      "prompt": "Another food blogger and I want to swap posts — I write one for her blog, she writes one for mine. Write the proposal and tell me what we need to agree.",
-      "expected_output": "Should ask first: the kind (swap), then the partner and where she publishes, why the two readerships fit, each side's topic and format, the two dates, what each side gives back (bio link, social mention, newsletter mention), and whether the writer has contributor guidelines to send — reading profile.md and pitch-log.md before asking. Should write the swap proposal from its template and list the agreement items for a swap: the two pieces, the two dates and what happens if one is late, links back, promotion, rights (first publication by the host, exclusive for a period, then the author's to republish with a link to the original), and each side's guidelines and brief. Should note the writer's piece follows the partner's guidelines and the guest's piece follows the writer's own guide. Should create two topic folders in the writer's own publication, one per piece, each brief.md with Collaboration swap and Partner naming the blogger and the other folder (for example 2026-12-sourdough-starter), claimed by setting Held by; and log the proposal in pitch-log.md with Direction sent and Kind swap.",
+      "prompt": "A meal-kit company might be a good fit for my baking newsletter. Write the email asking if they'd like to sponsor it.",
+      "expected_output": "Should treat it as sponsored and ask first, reading profile.md, media-kit.md and pitch-log.md: who the contact at the brand is, why the newsletter's readers would want the product, what the brand would appear in (a slot, an issue or a post, from the media kit's options), who reads the newsletter, the current numbers with the date each was measured and where it came from, the open dates, and what the newsletter won't do for any sponsor. The audience facts come from media-kit.md; if a figure is missing or its date is more than a month or two old, should ask for the current one and never invent or estimate it. Should write the email from the sponsor pitch template: why the brand fits, who reads it and the dated numbers (leading with subscribers and click rate rather than open rate), where the brand could appear, a link to the media kit, and the open dates. Should add a row to pitch-log.md with Direction sent and Kind sponsored. Must not quote prices, a rate card, payment terms or a results report.",
       "files": [],
       "expectations": [
-        "Asks first: the kind, then the swap questions, reading the profile and pitch log first",
-        "Writes the proposal from the swap template, with both topics and what each side gives back",
-        "Lists the swap agreement items: two pieces, two dates, links back, promotion, rights, guidelines",
-        "Uses the partner's guidelines for the writer's piece and the writer's own guide for the guest's",
-        "Creates two topic folders in the writer's own publication with Collaboration swap and Partner filled",
-        "Logs the proposal in pitch-log.md with Direction sent and Kind swap"
+        "Reads who reads the newsletter and its numbers from media-kit.md and profile.md before asking only what's missing",
+        "Asks for any missing or out-of-date figure with the date measured, and never invents a number",
+        "Writes the email from the sponsor pitch template, citing the dated numbers and where the brand could appear, and linking the media kit",
+        "Logs the pitch in pitch-log.md with Direction sent and Kind sponsored",
+        "Doesn't mention prices, a rate card, payment or a results report"
       ]
     },
     {
       "id": 3,
-      "prompt": "Someone I don't know pitched me a guest post for my personal-finance blog about using budgeting apps. It's decent but overlaps with a post I ran in March. How do I reply?",
-      "expected_output": "Should ask first: the kind (guest on ours, they pitched), whether it fits the readers and what's been published, the answer (accept, ask to revise, decline), whether it's paid and the rights asked for, the draft date and edit rounds, and whether contributor guidelines exist — reading profile.md and pitch-log.md first. Given the overlap, should recommend asking to revise with the specific change (an angle the March post didn't cover) using the reply template's revise version, or decline in a line, and log the pitch in pitch-log.md with Direction received, Kind guest on ours and Status asked to revise. If accepted later, should send the contributor guidelines and a guest brief, agree the terms in writing (paid or unpaid, rights, originality, edit rounds, no undisclosed paid links), and put the piece in a topic folder in the writer's own publication with Collaboration guest on ours and Partner the guest, editing the draft there to the writer's guide and sending the final edit and title before it goes out.",
+      "prompt": "Another food blogger and I want to swap posts — I write one for her blog, she writes one for mine. Write the proposal.",
+      "expected_output": "Should ask first: the kind (swap), then the partner, where she publishes and her address, who reads her blog and the overlap with the writer's readers, each side's topic and format, the two dates, what each side gets back (a bio link, a social or newsletter mention), her house rules for the writer's piece, and whether the writer has contributor guidelines to send — reading profile.md and pitch-log.md first. Should write the email from the swap proposal template with both topics, both formats, the timing and what each side gets back, offering to send contributor guidelines and a brief. Should note that once she agrees, a confirmation email restates the two pieces, length, dates, bylines and links and edit rounds, and the guest brief goes with it. Should create two topic folders in the writer's own publication, one per piece, each brief.md with Collaboration swap and Partner naming the blogger and the other folder, each half in its author's voice, the writer's half following the partner's house rules recorded in its brief; and log the proposal in pitch-log.md with Direction sent and Kind swap. Must not raise rights, exclusivity, fees or invoices.",
       "files": [],
       "expectations": [
-        "Asks first: the kind, then the guest questions, reading the profile and pitch log first",
-        "Uses the reply template's revise or decline version, naming the specific change",
-        "Logs the pitch in pitch-log.md with Direction received and Kind guest on ours",
-        "Sends contributor guidelines and a guest brief on acceptance, with terms agreed in writing",
-        "Puts an accepted guest piece in a topic folder in the writer's own publication with Collaboration and Partner filled"
+        "Asks first: the kind, then the swap questions, reading the profile and pitch log first",
+        "Writes the proposal from the swap template, with both topics, both dates and what each side gets back",
+        "Plans a confirmation email restating what was agreed, and sends the contributor guidelines and a guest brief",
+        "Creates two topic folders in the writer's own publication with Collaboration swap and Partner filled, the writer's half following the partner's house rules",
+        "Logs the proposal in pitch-log.md with Direction sent and Kind swap, and doesn't mention rights, exclusivity or money"
       ]
     },
     {
       "id": 4,
-      "prompt": "I'd paused my own blog piece on rent-to-own schemes halfway through the draft. Now a personal-finance magazine has commissioned a 1,500-word piece on pension auto-enrolment, due Friday. Start the commissioned piece.",
-      "expected_output": "Should treat it as writing for them, reading the magazine's guidelines and pitch-log.md before asking only what's missing. Should give the magazine its own publication folder (profile and writing guide built from its guidelines and the brief) and start the commissioned piece in its own topic folder under the magazine's topics/, with a brief.md holding the agreed scope and deadline, Collaboration writing for them, Partner the magazine, a Blog post row whose destination is the magazine, and its Held by set; the piece itself goes in blog.md. Should confirm the agreement for writing for them (fee, payment terms, rights, exclusivity, reversion, kill fee) is in writing. Should leave the paused topic's folder untouched, change only the new topic's line in the magazine's calendar.md, and record the agreement in pitch-log.md at the publications root, in the Agreements table. In a chat app, should hand back only the new topic's files, named after its folder, and the one calendar.md line.",
+      "prompt": "Someone I don't know pitched me a guest post for my personal-finance blog about using budgeting apps. It's decent but overlaps with a post I ran in March. How do I reply?",
+      "expected_output": "Should ask first: the kind (guest on ours, they pitched), who they are and links to their work, whether it fits the readers and which published piece it overlaps, and the answer (accept, ask to revise with the change, decline with the reason) — reading profile.md and pitch-log.md first. Given the overlap with the March post, should recommend asking to revise with the specific change (an angle the March post didn't cover) using the reply template's revise version, or declining in a line, within the response time the contributor guidelines state or two weeks. Should log it in pitch-log.md with Direction received, Kind guest on ours, Status asked to revise and the date a reply is due. If a revised pitch is accepted, should reply with the accept version (angle, length, draft date, edit rounds, byline and links), send the contributor guidelines and a guest brief, confirm what was agreed in one email, and put the piece in a topic folder in the writer's own publication with Collaboration guest on ours and Partner the guest. Must not ask about payment or rights.",
       "files": [],
       "expectations": [
-        "Reads the magazine's guidelines and pitch log before asking only what's missing",
-        "Creates a publication folder for the magazine and a topic folder under its topics/",
-        "Writes a brief.md with the agreed scope, deadline, Collaboration, Partner and Held by, and the piece in blog.md",
-        "Leaves the paused topic's folder and calendar.md line untouched",
-        "Records the agreement in pitch-log.md at the publications root, in the template's Agreements table"
+        "Asks first: the kind, then the guest questions, reading the profile and pitch log first",
+        "Uses the reply template's revise or decline version, naming the specific change or the reason",
+        "Logs the pitch in pitch-log.md with Direction received and Kind guest on ours",
+        "On acceptance, sends the contributor guidelines and a guest brief and a confirmation email, with no payment or rights questions",
+        "Puts an accepted guest piece in a topic folder in the writer's own publication with Collaboration and Partner filled"
       ]
     }
   ]

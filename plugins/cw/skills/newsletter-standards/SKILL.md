@@ -77,6 +77,7 @@ An issue is one of the things a topic can become. Each topic has its own folder 
 - **Preview text** — the second thing they see, and it falls back to the first line of the body unless you set it. Setting it deliberately is one of the clearest markers of a well-run send. Extend the subject rather than repeating it. Clients show anywhere from none to about 278 characters, so keep it under 90 with the point first ([Litmus](https://www.litmus.com/blog/the-ultimate-guide-to-preview-text-support)).
 - **Opening — two or three sentences.** Get to the thread immediately. No "hope you've all been well", no apology for the gap since the last issue.
 - **Body — three to five sections**, each with a bolded lead so it survives skimming, each ending somewhere the reader can act or think.
+- **A sponsored slot or issue is labelled before the reader reaches it** — `Sponsored by <brand>` or `Ad: <brand>` at the top of the slot, or in a sponsored issue's opening line, naming the brand, never a logo alone — and recorded in the brief's **Disclosure** field. Regulators expect it of newsletter writers, not only brands ([FTC](https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking); [ASA](https://www.asa.org.uk/advice-online/recognising-ads-social-media.html)).
 - **One CTA.** Pick the single thing you want — read it, reply, share — and ask once. Three competing asks get none of them.
 - **Sign-off** — short, in the publication's voice, the same every issue.
 - **Footer** — who's sending, why they're receiving it, and how to stop.
@@ -151,7 +152,7 @@ Benchmarks describe patterns, not targets. A publication's own trend line beats 
 - **Audience, cadence, the signup promise and sender details** → the publication's `profile.md`. **Voice, subject format, sign-off and the wording of the ask** → its `writing-guide.md`. Both live in the publication's folder.
 - **The long-form pieces an issue links to** → `cw:article-standards`. An issue summarises them; it never reproduces one.
 - **Promoting a single piece** → `cw:social-media-posts`. A set of posts about one article is a different job from a periodic issue covering several.
-- **A sponsored slot or a sponsored issue** — the agreement with the sponsor and its disclosure label → `cw:pitching`.
+- **The emails with a sponsor** — the pitch, the replies and the confirmation of what was agreed → `cw:pitching`.
 - **The voice rules under every publication** → `write:writing-standards`. **Tightening the draft** → `cw:editing-standards`. **The machine-written sweep** → `/write:ai-check`.
 - **Whether the linked pieces are being found** → `/cw:content-performance`. **Reviewing an issue before it sends, as a report** → `/cw:review`.
 - **Platform setup** — domain authentication, list imports, automation — is the sender's infrastructure. Name what's missing; don't configure it.

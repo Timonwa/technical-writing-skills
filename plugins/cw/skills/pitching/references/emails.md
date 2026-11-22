@@ -1,6 +1,6 @@
 # Email templates
 
-One template per email. Copy the block, fill every `<blank>` from the brief, `profile.md`, `media-kit.md` and the partner's guidelines, and keep a line whose blank isn't known yet until it is — never drop it silently. Cut a line only where the template marks it optional. Each email stays readable without scrolling: about 150–300 words (common practice), within any cap the partner sets. Write in the publication's voice from `writing-guide.md`; the structure is fixed, the wording isn't.
+One template per email. Copy the block, fill every `<blank>` from the brief, `profile.md`, `media-kit.md`, the partner's guidelines and the thread, and keep a line whose blank isn't known yet until it is — never drop it silently. Cut a line only where the template marks it optional. Each email stays readable without scrolling: about 150–300 words (common practice), within any cap the partner sets. Write in the publication's voice from `writing-guide.md`; the structure is fixed, the wording isn't.
 
 After sending, add or update the row in `pitch-log.md`.
 
@@ -47,6 +47,22 @@ Hi <first name>,
 Following up on the <pitch or proposal> below, sent <date>: <the idea in one line>. <Why it's timely, if a date matters.>
 
 If it isn't a fit, a quick no is welcome and I'll take it elsewhere.
+
+<Sign-off>
+<Name>
+```
+
+## Withdrawal
+
+To every other outlet that has a simultaneous pitch, the moment one accepts.
+
+```text
+To: <same address>
+Subject: Re: <original subject>
+
+Hi <first name>,
+
+I'm withdrawing the pitch below — it's been accepted elsewhere. Thanks for considering it.
 
 <Sign-off>
 <Name>
@@ -111,11 +127,11 @@ Hi <first name>,
 
 Yes — <the piece> is a fit for <publication>'s readers, <one line on why>.
 
-What we'd like: <the angle, as agreed or adjusted>, about <words>, by <draft date>.
+What we'd like: <the angle, as pitched or adjusted>, about <words>, by <draft date>.
 
-Terms: <fee and when it's paid, or unpaid>; <the rights you ask for: first publication, exclusive for <period>, then theirs to republish with a link back>; <the number of edit rounds>; a byline, a bio of <length> and <number> link(s).
+You'll get <number> round(s) of edits and see the final edit and the title before it goes out, with a byline, a bio of <length> and <number> link(s).
 
-Our contributor guidelines and the brief: <link or attached>. Reply to confirm and I'll put it in the calendar.
+Our contributor guidelines and the brief: <link or attached>.
 
 <Sign-off>
 <Name>
@@ -155,17 +171,17 @@ Thanks for thinking of <publication>. We'll pass on this one: <the reason in one
 
 ```text
 To: <the person who runs sponsorships or partnerships at the brand>
-Subject: Sponsoring <publication>: <the reader> who <what they'd want from the brand>
+Subject: <Publication>: <the reader> who <what they'd want from the brand>
 
 Hi <first name>,
 
 <Why this brand: a product your readers use or ask about, in one or two sentences — never a claim you haven't checked.>
 
-<Publication> reaches <who reads it>. As of <date measured>: <subscribers>, <open rate>, <click rate>, <monthly readers>.
+<Publication> reaches <who reads it>. As of <date measured>: <subscribers>, <click rate>, <monthly readers> <(source: the platform or analytics tool)>.
 
-What you could book: <the slot, issue or post that fits them>, from <price> — the full options are in the media kit: <link or attached>.
+Where <brand> could appear: <the slot, issue or post that fits them>. The media kit has the full picture: <link or attached>.
 
-Every sponsored placement is written in <publication>'s voice, labelled <the disclosure label>, and followed by a results report.
+Everything is written in <publication>'s voice, for its readers.
 
 Dates open: <the next available dates>.
 
@@ -175,7 +191,7 @@ Dates open: <the next available dates>.
 
 ## Reply to a sponsor
 
-When a brand approaches you. Two versions; send one.
+When a brand writes to you. Two versions; send one.
 
 **Interested**
 
@@ -186,11 +202,11 @@ Hi <first name>,
 
 Thanks for reaching out. <One line on why the product fits your readers, or the question you need answered to know.>
 
-The media kit has the audience, the numbers (measured <date>), the slots and the rate card: <link or attached>.
+The media kit has who reads <publication>, the numbers (measured <date>) and where a sponsor can appear: <link or attached>.
 
-Before we book: <the questions — the product or link to feature, the dates they want, who approves the copy>.
+So I can check the fit: <the questions — the product or link to feature, the dates they want, who reviews the copy>.
 
-Every sponsored placement is written in <publication>'s voice and labelled <the disclosure label>; <what you won't do, from the profile>.
+Everything is written in <publication>'s voice; <what you won't do, from the profile>.
 
 <Sign-off>
 <Name>
@@ -209,34 +225,28 @@ Thanks for thinking of <publication>. It isn't a fit for our readers, so we'll p
 <Name>
 ```
 
-## Sponsor results report
+## Confirmation
 
-Sent within the time the agreement sets, or within a week of the placement (common practice). Every figure comes from the platform or the analytics tool, with the date it was read; a figure you don't have is left blank and said, never estimated.
+Once the thread settles it, restate what was agreed in one email, from the thread, and ask the partner to reply if anything is wrong. Keep every line that applies to the kind; cut the kind-only lines that don't.
 
 ```text
-To: <sponsor contact>
-Subject: Results: <brand> in <publication>, <date of the placement>
+To: <partner's name and address>
+Subject: Confirming: <the piece or placement>
 
 Hi <first name>,
 
-Here's how <the slot / issue / post> did, as of <date read>.
+Here's what we agreed, so we're both working from the same list — reply if anything's wrong.
 
-| Measure                     | Result |
-| --------------------------- | ------ |
-| Placement                   |        |
-| Sent or published on        |        |
-| Delivered to                |        |
-| Opens (unique)              |        |
-| Clicks on your link (unique) |        |
-| Click rate                  |        |
-| Page views (a post)         |        |
-| Replies or comments         |        |
+- Topic: <the piece, its angle and format — a blog post, a newsletter issue, a slot>
+- Length: <words>
+- Dates: <draft due>, <edits back by>, <publish or send date>
+- Byline and links: <whose name, the bio's length, the links each side gets>
+- Edit rounds: <number>; <who> sees the final edit and the title before it goes out
+- <A swap only: the other piece — its topic, author, format and date>
+- <Co-written only: who writes which part, where it runs first, and the copy on the other platform>
+- <Sponsored only: labelled "Sponsored by <brand>" / "Ad: <brand>" at <the top of the slot / the issue's opening line / before the headline>>
 
-<What readers said, if anything: quoted with permission, or summarised.>
-
-<Open rates are inflated by mail clients that load images automatically, so clicks are the better measure — optional.>
-
-<The next open dates, if they'd book again — optional.>
+Next: <I'll send the brief and our contributor guidelines / I'll send the draft by <date>>.
 
 <Sign-off>
 <Name>
