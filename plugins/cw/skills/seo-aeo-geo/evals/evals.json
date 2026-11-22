@@ -31,16 +31,16 @@
     },
     {
       "id": 3,
-      "prompt": "Write the title tag, meta description and slug for my article 'The Spreadsheet That Saved My Wedding Budget'.",
-      "expected_output": "Should read the publication's guide first (title case, separator, slug style). Should write a title tag of about 50–60 characters with the words that decide the click first and the site name after a separator, a meta description of about 150–160 characters with the point inside the first 120, and a short slug of 3–5 hyphenated lowercase words. Should explain that Google sets no length limit and truncates to the device width — about 600 pixels for titles and 920 (desktop) or 680 (mobile) for descriptions — so these are working targets, not rules; and that the headline on the page can differ from the title tag.",
+      "prompt": "Write the title tag, meta description, SEO title and share title for my article 'The Spreadsheet That Saved My Wedding Budget' in topics/2026-11-wedding-budget-spreadsheet. Someone else is editing the post right now.",
+      "expected_output": "Should read the publication's guide (title case, slug style) and the topic's brief.md first, taking the reader's question and search query from the brief and asking only what's missing — such as whether the site adds its name to titles. Should explain the piece has one title and one description in blog.md's front matter: the title is the H1 and the title in search and share previews, about 50–60 characters with the words that decide the click first; the description is the meta description, share description and listing excerpt, about 150–160 characters with the point inside the first 120 — so no separate title tag, SEO title or share title. Should explain Google sets no limit and truncates by device width (about 600 pixels for titles, 920 desktop or 680 mobile for descriptions), so these are working targets. Because someone else holds the topic, should write only reports/seo.md, by the output template, with the proposed title and description and their lengths, and not edit blog.md or set Held by.",
       "files": [],
       "expectations": [
-        "Reads the publication's guide for title case and slug style",
-        "Title tag about 50–60 characters, key words first, site name after a separator",
-        "Meta description about 150–160 characters, point within the first 120",
-        "Slug 3–5 hyphenated lowercase words",
+        "Reads the guide and the brief first, asking only what the brief leaves open",
+        "Writes one title of about 50–60 characters serving as the H1 and the search and share title, key words first",
+        "Writes one description of about 150–160 characters, point within the first 120, serving as meta, share and listing text",
+        "Declines a separate title tag, SEO title or share title",
         "Explains Google sets no limit and truncates by device width, so these are working targets",
-        "Distinguishes the headline from the title tag"
+        "Writes only reports/seo.md, without claiming or editing blog.md, while someone else holds the topic"
       ]
     },
     {

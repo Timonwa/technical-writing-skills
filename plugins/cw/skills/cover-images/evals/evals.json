@@ -3,51 +3,54 @@
   "evals": [
     {
       "id": 1,
-      "prompt": "Make a cover for my post 'How I paid off $40k in 18 months': put the whole title in white text across a busy photo of my desk. That's enough — no need for the title elsewhere.",
-      "expected_output": "Should cut the words to a short version in large type, ensure at least 4.5:1 contrast with a solid band or darkened area, and keep the full title in the page's text since a card's title comes from the page. Should keep the words in the centre square that survives a 1:1 crop.",
-      "files": [],
-      "expectations": [
-        "Shortens the words and enlarges the type",
-        "Requires 4.5:1 contrast with a band or darkened area",
-        "Keeps the title in the page text, not only the image",
-        "Keeps words inside the centre crop-safe square"
-      ]
-    },
-    {
-      "id": 2,
       "prompt": "Give me a separate cover size for Facebook, LinkedIn, X, Bluesky and Mastodon.",
-      "expected_output": "Should explain one file covers all: 1200 x 630 at 1.91:1, under 1 MB (Bluesky's limit), JPEG or PNG, never SVG, with the subject in the centre square — and cite the platforms' published specs. Should recommend checking the preview with the Sharing Debugger, Post Inspector and a draft post.",
+      "expected_output": "Should explain one file covers all: 1200 x 630 at 1.91:1, under 1 MB (Bluesky's limit), JPEG or PNG, never SVG, with the subject in the centre square — and cite the platforms' published specs. Should recommend checking the preview with the Sharing Debugger, Post Inspector and a draft post, asking first which platforms the link will be shared on — defaulting to the brief's Social posts row, then the profile's Social platforms.",
       "files": [],
       "expectations": [
         "Recommends one 1200x630 1.91:1 file",
         "Keeps it under 1 MB and JPEG or PNG",
         "Keeps important content in the centre square",
-        "Says how to check previews per platform"
+        "Says how to check previews per platform",
+        "Takes the platforms to check from the brief or profile's Defaults, asking only if they're missing"
       ]
     },
     {
-      "id": 3,
+      "id": 2,
       "prompt": "Use our logo as the cover for every post — it's on brand.",
-      "expected_output": "Should refuse the logo-alone, same-on-every-piece cover, since a card must say which piece it is (X asks for a unique image; Google Discover says no logo), and offer a template from the writing guide instead: layout, logo position, colours from the profile.",
+      "expected_output": "Should refuse the logo-alone, same-on-every-piece cover, since a card must say which piece it is (X asks for a unique image; Google Discover says no logo), and offer a recognisable template instead, recorded in brand.md's cover template: layout, logo position, colours.",
       "files": [],
       "expectations": [
         "Refuses the logo as every post's cover",
         "Explains a card must identify the piece",
         "Offers a recognisable template instead",
-        "Takes the template from the writing guide"
+        "Puts the template in brand.md's cover template"
       ]
     },
     {
-      "id": 4,
+      "id": 3,
       "prompt": "Pick a cover for my essay on burnout. I'm in my Claude Project for 'quiet-desk'; brand.md and three sample covers are in the project's files. brand.md says covers with no photo are a typographic card: cream text (#F6F1E7) on deep green (#1F3A2E), the short title only, logo bottom-right.",
-      "expected_output": "Should read the publication's profile.md, writing-guide.md and brand.md, and the sample covers, from the Claude Project's files, and follow brand.md's cover template rather than this skill's defaults. An essay with nothing to photograph gets the typographic card brand.md describes: the short title in cream on deep green, the logo bottom-right, words inside the centre square, 1200 × 630 under 1 MB. Should check the colour pair's contrast is at least 4.5:1 (it is) and match the sample covers. Alt text is set on the page and for the card, or the page cover marked decorative; the title also stays in the page's text.",
+      "expected_output": "Should read the publication's profile.md, writing-guide.md and brand.md, and the sample covers, from the Claude Project's files, and follow brand.md's cover template rather than this skill's defaults. An essay with nothing to photograph gets the typographic card brand.md describes: the short title in cream on deep green, the logo bottom-right, words inside the centre square, 1200 × 630 under 1 MB. Should check the colour pair's contrast is at least 4.5:1 (it is) and match the sample covers. Alt text is set on the page and for the card, or the page cover marked decorative; the title also stays in the page's text. Should hand back the cover named <topic folder>--cover.jpg, since a chat app's project can't hold folders.",
       "files": [],
       "expectations": [
         "Reads brand.md and the sample covers from the Project's files",
         "Follows brand.md's typographic card template over the skill's defaults",
         "Keeps the words in the centre square at 1200 × 630 under 1 MB",
         "Checks the text and background contrast",
-        "Sets alt text or marks a decorative cover, and keeps the title in the page text"
+        "Sets alt text or marks a decorative cover, and keeps the title in the page text",
+        "Hands the cover back named <topic folder>--cover.jpg"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Make the cover for topics/2026-12-sourdough-starter and wire it into the blog post.",
+      "expected_output": "Should read brief.md and profile.md's Defaults first and ask only what's missing — which format's cover, the kind of cover (offering the profile's Cover image default and asking whether to use it), where the image comes from, the words, and whether it's saved in images/ or hosted — recording the answers in brief.md. Should save the cover and share card in the topic's images/ (cover.jpg, share-card.png) without claiming, then claim the topic in brief.md before filling cover_image (images/cover.jpg or a hosted URL) and cover_alt in blog.md's front matter, leaving every other field present, and clear Held by when done. If someone else holds the topic and it isn't paused, should leave blog.md alone and say so.",
+      "files": [],
+      "expectations": [
+        "Reads the brief and profile's Defaults and asks only what's missing, offering the default",
+        "Saves the cover and share card in the topic's images/",
+        "Claims the topic before editing blog.md, and respects someone else's hold",
+        "Fills cover_image with a file in images/ or a hosted URL, and cover_alt",
+        "Leaves every other front-matter field present"
       ]
     }
   ]

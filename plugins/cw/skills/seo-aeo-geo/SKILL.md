@@ -1,7 +1,7 @@
 ---
 name: seo-aeo-geo
 description: >-
-  SEO, AEO and GEO for a content piece — a blog article, tutorial, essay or web newsletter issue. SEO: the question it targets, title tag and meta description lengths, slug, links, byline and dates. AEO: question headings with a short direct answer, lists and tables for featured snippets and People also ask. GEO: quotable, sourced claims and the crawlers AI answers need. Use on "SEO for my article", "meta description", "title tag", "featured snippet", "AI Overviews", "get cited by ChatGPT".
+  SEO, AEO and GEO for a content piece — a blog article, tutorial, essay or web newsletter issue. SEO: the question it targets, the one title and one description in blog.md and their lengths, slug, links, byline and dates. AEO: question headings with a short direct answer, lists and tables for featured snippets and People also ask. GEO: quotable, sourced claims and the crawlers AI answers need. Reports to reports/seo.md. Use on "SEO for my article", "meta description", "title tag", "featured snippet", "get cited by ChatGPT".
 ---
 
 # SEO, AEO and GEO for content
@@ -18,10 +18,28 @@ Before applying this skill, find the publication's `profile.md` and `writing-gui
 
 Voice, person, tone, terminology, formatting choices and who the reader is come from that guide, never from this skill.
 
-- Where the guide settles something this skill also covers — title case, slug style, how dates are shown — the guide wins.
+- Where the guide settles something this skill also covers — title case, slug style, how dates are shown — the guide wins. Its lengths for the title and description follow the targets below.
 - Where there's no guide, ask who the reader is and what the piece is for before writing anything, and offer to build one with `cw:style-guide`.
 
 When a guide changes: in a codebase, save the file where it was found; in a chat app, give the user the updated file to replace in the project. Never write inside the installed plugin.
+
+## Ask first
+
+Read the answers from the topic's `brief.md` (its **Reader** and **Search query** rows above all), then `profile.md`'s Defaults, then the request; ask only what's missing. Ask with the app's question tool where it has one, so the choices can be picked; otherwise as a numbered list answered by number. Offer choices where the answers are known and a short typed answer otherwise; where the profile has a default, show it and ask whether to use it. Record the answers in the report's header, and any the brief lacks in the `brief.md` field they belong to (or under **Notes for whoever picks it up next**) so the next skill doesn't ask again.
+
+1. **Which topic folder, and which piece?** The folder name under `topics/`; the blog post (`blog.md`) · the newsletter issue's web version (`newsletter.md`).
+2. **Check only, or check and fix?** report only — writes `reports/seo.md` · fix too — edits the format file after you choose the findings. Default: report only.
+3. **What question does the piece answer, in the reader's words?** Short answer. Default: the brief's Reader.
+4. **What search query is it for, and what kind of page ranks for it?** a step-by-step guide · a comparison · an explainer · a list · a product page. Default: the brief's Search query.
+5. **Does the site add its name to the title in search results?** yes, after a separator (which) · no · not sure.
+
+## The topic folder
+
+A topic lives in `topics/<yyyy-mm>-<slug>/` in the publication's folder; its formats are listed in its `brief.md` ([template](../style-guide/references/publication-template/topics/_template/brief.md)), each in its own file. In a chat app, its files are named `<topic folder>--<file>`.
+
+- **A check only reads.** It runs even while someone holds the topic, never sets **Held by** or a status, and writes only its own `reports/seo.md`, by [references/output-format.md](references/output-format.md).
+- **A fix edits the format file**, so it claims: read `brief.md`; if **Held by** names someone else and the status isn't `paused`, leave it and say so. Otherwise set **Held by** and the date, change only the findings chosen, and clear **Held by** when you stop.
+- **The title and description are fields in `blog.md`'s front matter** ([template](../style-guide/references/publication-template/topics/_template/blog.md)), one of each. A newsletter's web version has no such fields; its findings go in the report.
 
 ## Write for the reader first
 
@@ -42,28 +60,29 @@ When a guide changes: in a codebase, save the file where it was found; in a chat
 
 ### What the writer controls, and what the platform does
 
-| The writer sets                                                                | The platform or site usually handles                           |
-| ------------------------------------------------------------------------------ | -------------------------------------------------------------- |
-| The question, the headline, the title tag text, the meta description, the slug | The `<title>` and meta tags in the page's code                 |
-| Headings, the opening, the body, links and their anchor text                   | Sitemaps, robots rules, canonical tags on the site's own pages |
-| Image choice, alt text and file names                                          | Image sizes and formats served                                 |
-| The byline, the published and updated dates shown on the page                  | Article structured data (headline, author, dates, image)       |
+| The writer sets                                               | The platform or site usually handles                           |
+| ------------------------------------------------------------- | -------------------------------------------------------------- |
+| The question, the title, the description, the slug            | The `<title>` and meta tags in the page's code                 |
+| Headings, the opening, the body, links and their anchor text  | Sitemaps, robots rules, canonical tags on the site's own pages |
+| Image choice, alt text and file names                         | Image sizes and formats served                                 |
+| The byline, the published and updated dates shown on the page | Article structured data (headline, author, dates, image)       |
 
 Check that the platform fills the right-hand column correctly once; after that, each piece is the left-hand column.
 
-### Title tag, meta description and slug
+### Title, description and slug
+
+A piece has one title and one description, the `title` and `description` in `blog.md`'s front matter. The title is the H1 on the page and the title in search results and share previews; the description is the meta description, the share description and the excerpt in listings. Never a separate headline and title tag, SEO title, share title or share description.
 
 Google sets no length limit on either the title or the meta description; both are "truncated … as needed, typically to fit the device width" ([Google: title links](https://developers.google.com/search/docs/appearance/title-link), [Google: snippets](https://developers.google.com/search/docs/appearance/snippet)). The working targets below are rules of thumb from measuring where results cut off, not Google rules — aim for them so the words that decide the click are never the ones cut.
 
-|                  | Working target                                                | Why                                                                                                                      |
-| ---------------- | ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| Title tag        | about 50–60 characters                                        | desktop results cut titles past about 600 pixels ([Ahrefs](https://ahrefs.com/blog/title-tag-seo/))                      |
-| Meta description | about 150–160 characters, with the point inside the first 120 | about 920 pixels on desktop, 680 on mobile, roughly 120 characters ([Ahrefs](https://ahrefs.com/blog/meta-description/)) |
-| Slug             | 3–5 words                                                     | practice: short, readable and still true if the piece is updated                                                         |
+|             | Working target                                                | Why                                                                                                                      |
+| ----------- | ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| Title       | about 50–60 characters                                        | desktop results cut titles past about 600 pixels ([Ahrefs](https://ahrefs.com/blog/title-tag-seo/))                      |
+| Description | about 150–160 characters, with the point inside the first 120 | about 920 pixels on desktop, 680 on mobile, roughly 120 characters ([Ahrefs](https://ahrefs.com/blog/meta-description/)) |
+| Slug        | 3–5 words                                                     | practice: short, readable and still true if the piece is updated                                                         |
 
-- **Title tag** — descriptive and concise, unique to the piece, the words that decide the click first, no repeated keywords, with the site name at the start or end after a separator ([Google](https://developers.google.com/search/docs/appearance/title-link)).
-- **Headline versus title tag.** The headline on the page can carry the publication's voice; the title tag has to make sense on a results page next to competing pieces. Where the platform allows one, write both. Google may build the title link from either, or from headings and link text pointing at the page ([Google](https://developers.google.com/search/docs/appearance/title-link)).
-- **Meta description** — a summary of this piece, never shared across pieces, with details such as the author or date where they help; no keyword lists ([Google](https://developers.google.com/search/docs/appearance/snippet)). Snippets are "primarily created from the page content itself", and the description is used when it's more accurate, so the opening matters as much.
+- **Title** — descriptive and concise, unique to the piece, the words that decide the click first, no repeated keywords ([Google](https://developers.google.com/search/docs/appearance/title-link)). It carries the publication's voice and still makes sense on a results page next to competing pieces. The site may add its name after a separator ([Google](https://developers.google.com/search/docs/appearance/title-link)), and the end is what gets cut first; where it does, don't type the name into the field as well. Google may build the title link from the title, the headings or link text pointing at the page, so a title that matches the piece is the one that shows.
+- **Description** — a summary of this piece, never shared across pieces, with details such as the author or date where they help; no keyword lists ([Google](https://developers.google.com/search/docs/appearance/snippet)). Snippets are "primarily created from the page content itself", and the description is used when it's more accurate, so the opening matters as much. A cross-post's opening excerpt is a different thing (`cw:cross-posting`).
 - **Slug** — short, readable words joined by hyphens, in the reader's language, lowercase; avoid long ID numbers ([Google](https://developers.google.com/search/docs/crawling-indexing/url-structure)). Set it before publishing and don't change it afterwards without a redirect.
 
 ### Links
@@ -127,16 +146,12 @@ When the piece is republished on another site — dev.to, Hashnode, Medium, a pa
 - **Bing** still prefers a canonical link on the copy pointing to the original, so set the platform's canonical URL field too.
 - **Link back** to the original from the copy, in the text. The full process is `cw:cross-posting`.
 
-## The piece's folder
-
-A piece lives in `pieces/<yyyy-mm>-<slug>/` in the publication's folder. Make the changes in its `draft.md`; the search query and the reader's question are in its `brief.md`. Where the findings are worth keeping, write them to the piece's `reports/seo.md`. In a chat app, its files are named `<piece folder name>--<file>`. If "Held by" in `brief.md` names someone else and the status isn't `paused`, leave it and say so.
-
 ## Before publishing
 
 **SEO**
 
 - [ ] The piece answers one main question, in the reader's words, better than what already ranks — with something first-hand.
-- [ ] Title tag about 50–60 characters and meta description about 150–160, key words first; slug short; all written for this piece; no stuffing.
+- [ ] One title of about 50–60 characters and one description of about 150–160, key words first, in `blog.md`'s front matter; slug short; all written for this piece; no stuffing.
 - [ ] Internal links to and from related pieces; descriptive anchor text; sponsored links marked.
 - [ ] Byline with a bio link; labelled, visible date matching the structured data.
 - [ ] Images near their text, with alt text and descriptive file names.
@@ -158,7 +173,7 @@ A piece lives in `pieces/<yyyy-mm>-<slug>/` in the publication's folder. Make th
 
 **Files**
 
-- [ ] The changes are in the piece's `draft.md`, and any findings kept are in its `reports/seo.md`.
+- [ ] The findings are in the topic's `reports/seo.md`, and any fixes chosen are in `blog.md`, made under a claim.
 
 ## Boundaries
 

@@ -1,7 +1,7 @@
 ---
 name: cover-images
 description: >-
-  A content piece's cover image and the cards its link shows when shared — what a cover is for, choosing or making one (a photo of the real thing, an illustration, a typographic card), words on the image, one file that survives every platform's crop and size limit, formats and weight, alt text, a template across a publication, and checking the preview before posting. Use on "cover image", "featured image", "share card", "og image", "thumbnail for my post", "the preview image is wrong".
+  A content piece's cover image and the cards its link shows when shared — what a cover is for, choosing or making one (a photo of the real thing, an illustration, a typographic card), words on the image, one file that survives every platform's crop and size limit, formats and weight, alt text, a template across a publication, checking the preview, and saving it to the topic's images/ with cover_image and cover_alt filled. Use on "cover image", "featured image", "share card", "og image", "thumbnail for my post".
 ---
 
 # Cover images and share cards
@@ -23,6 +23,17 @@ Its cover template, colours, fonts, logo rules and image style come from `brand.
 - Where there's no guide at all, ask who the reader is and what the piece is for, and offer to build one with `cw:style-guide`.
 
 When a guide changes: in a codebase, save the file where it was found; in a chat app, give the user the updated file to replace in the project. Never write inside the installed plugin.
+
+## Ask first
+
+Read the answers from the topic's `brief.md`, then `profile.md`'s Defaults and `brand.md`, then the request; ask only what's missing. Ask with the app's question tool where it has one, so the choices can be picked; otherwise as a numbered list answered by number. Offer choices where the answers are known and a short typed answer otherwise; where the profile has a default, show it and ask whether to use it. Record each answer in the `brief.md` field it belongs to — the **What this topic becomes** table or a row of **The brief** — and any answer with no field under **Notes for whoever picks it up next**, so the next skill doesn't ask again.
+
+1. **Which topic folder, and which format's cover?** The folder name under `topics/`; blog post (`blog.md`) · newsletter issue (`newsletter.md`) · both. Default: the formats the brief lists.
+2. **What kind of cover?** a photo of the real thing · an illustration or diagram · a typographic card · none. Default: the profile's Cover image, then `brand.md`'s cover template.
+3. **Where does the image come from?** a file you have (its path) · a hosted URL · to be made · licensed stock (which licence) · AI-generated, labelled.
+4. **What words go on it?** the short title (offer one) · none.
+5. **Where will the link be shared?** Pick any platforms, to check their previews. Default: the brief's Social posts row, then the profile's Social platforms.
+6. **Where does the cover live?** saved in the topic's `images/` · a hosted URL (which) — what goes in `cover_image`.
 
 ## What to put on it
 
@@ -70,6 +81,7 @@ The cover on the page itself is sized by the platform's theme: upload the larges
 
 - **On the page**, a cover that shows something the reader needs — the dish, the place, the chart — gets alt text written from why it's there ([W3C](https://www.w3.org/WAI/tutorials/images/informative/)). A cover that only repeats the title or decorates gets empty alt text (`alt=""`) so a screen reader skips it ([W3C](https://www.w3.org/WAI/tutorials/images/decorative/)).
 - **In a card**, the image alt text is set as `og:image:alt` — "a description of what is in the image (not a caption)" ([Open Graph](https://ogp.me/)) — and X reads up to 420 characters ([X](https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/summary-card-with-large-image)). Where the platform has an alt field for the social image, fill it.
+- **In the front matter**, `cover_alt` describes what the image shows, so the card always has it. Whether the page also uses it, or renders a cover that only repeats the title with `alt=""`, is the theme's work; name it to the site's developers if it's wrong.
 
 ## A template across the publication
 
@@ -92,7 +104,9 @@ Change the image before the piece is first shared: every platform keeps the card
 
 ## Where the files go
 
-Save the cover, the share card and their source files in the piece's `images/` folder (`pieces/<yyyy-mm>-<slug>/images/`), with names that say which is which (`cover.jpg`, `share-card.png`). In a chat app, hand them back named `<piece folder name>--cover.jpg`. Before working on a piece, read its `brief.md`: if "Held by" names someone else and the status isn't `paused`, leave it and say so.
+- **Save the cover, the share card and their source files in the topic's `images/`** (`topics/<yyyy-mm>-<slug>/images/`), named for which is which (`cover.jpg`, `share-card.png`). In a chat app, hand them back named `<topic folder>--cover.jpg`. Saving into `images/` needs no claim.
+- **Fill the cover fields** in the format file's front matter — `blog.md` by its [template](../style-guide/references/publication-template/topics/_template/blog.md), `newsletter.md` by [its template](../style-guide/references/publication-template/topics/_template/newsletter.md): `cover_image` is the file in `images/` (`images/cover.jpg`) or a hosted URL, and `cover_alt` the alt text (Alt text). Both fields are always present, left `""` until known; a piece with no cover keeps them blank.
+- **Claim the topic before filling them**, since that edits a format file. Read `brief.md`: if **Held by** names someone else and the status isn't `paused`, leave it and say so. Otherwise set **Held by** and the date, leave the format rows' statuses as they are, and clear **Held by** when you stop.
 
 ## Before publishing
 
@@ -103,7 +117,7 @@ Save the cover, the share card and their source files in the piece's `images/` f
 - [ ] Alt text is set on the page and for the card, or the page cover is marked decorative.
 - [ ] It follows the cover template in `brand.md`, and matches the sample covers.
 - [ ] The preview is checked on the platforms the piece will be shared on.
-- [ ] The cover and share card are saved in the piece's `images/`.
+- [ ] The cover and share card are saved in the topic's `images/`, and `cover_image` and `cover_alt` are filled in `blog.md` or `newsletter.md`.
 
 ## Boundaries
 

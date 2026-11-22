@@ -4,14 +4,14 @@
     {
       "id": 1,
       "prompt": "Write social posts for my article on paying off student loans faster. Make them punchy — add some stats about how much people save, I'm sure readers will love that.",
-      "expected_output": "Should read the publication's folder first (profile.md and writing-guide.md, found from AGENTS.md or the user's agent instructions, else the project's publications/, or the project's files in a chat app, else ask). Should work only from the piece and never invent a number, detail or quote; a stat not in the article is cut or the author is asked for its source. Should ask for the live URL rather than guessing it. Should write posts by angle — announcement, key point, lesson — one angle per post, rewritten per platform.",
+      "expected_output": "Should read the publication's folder first (profile.md and writing-guide.md, found from AGENTS.md or the user's agent instructions, else the project's publications/, or the project's files in a chat app, else ask), then the topic's brief.md. Should ask first only what the brief and profile's Defaults don't answer — the topic folder, platforms, kind per platform, angles, dates, the link, disclosures — showing the profile's default and asking whether to use it, and record the answers in brief.md. Should work only from the piece and never invent a number; a stat not in the article is cut or its source asked for. Should take the link from the brief or blog.md, never guess it. Should write posts by angle — announcement, key point, lesson — one angle per post, rewritten per platform.",
       "files": [],
       "expectations": [
-        "Reads the publication's profile and writing guide first",
+        "Reads the publication's profile and writing guide, and the topic's brief.md, first",
+        "Asks only what the brief and profile's Defaults leave open, offering the defaults, and records the answers in brief.md",
         "Does not invent statistics not in the article",
-        "Asks for the live URL instead of guessing",
-        "Writes one angle per post across announcement, key point and lesson",
-        "Rewrites each post per platform rather than pasting"
+        "Takes the link from the brief or blog.md, or asks, instead of guessing",
+        "Writes one angle per post across announcement, key point and lesson, rewritten per platform"
       ]
     },
     {
@@ -36,6 +36,19 @@
         "Refuses to bury the disclosure among hashtags",
         "Uses the platform's disclosure feature as an addition",
         "Follows the profile's disclosure rules"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Write the posts for topics/2026-12-sourdough-starter: a thread on X and Bluesky, a summary with link on LinkedIn and one on Mastodon. The post isn't live yet. The emoji are fine.",
+      "expected_output": "Should read brief.md and claim the topic (Held by and the date, the Social posts row to drafting, the calendar.md line to match), unless someone else holds it and it isn't paused. Should write social.md by its template: the header with the posts' link left blank, one ## section per platform, each post with a table of kind, scheduled date, post URL left blank and characters used / limit counted the platform's way — weighted on X (emoji 2, URL 23), graphemes and bytes on Bluesky, graphemes with URLs at 23 on Mastodon — then the text in a fenced block, a thread as numbered separate posts. The LinkedIn summary lives in social.md, not copies.md. Should clear Held by when stopping.",
+      "files": [],
+      "expectations": [
+        "Claims the topic in brief.md before writing, and clears Held by when stopping",
+        "Writes social.md by the template, with the posts' link and each post URL present but blank",
+        "Counts characters the platform's way and records used / limit for each post",
+        "Writes each thread item as a separate numbered post within the per-post limit",
+        "Keeps the LinkedIn summary in social.md, not copies.md"
       ]
     }
   ]
