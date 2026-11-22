@@ -90,6 +90,10 @@ Look at the card before anyone else does:
 
 Change the image before the piece is first shared: every platform keeps the card it fetched first for a while.
 
+## Where the files go
+
+Save the cover, the share card and their source files in the piece's `images/` folder (`pieces/<yyyy-mm>-<slug>/images/`), with names that say which is which (`cover.jpg`, `share-card.png`). In a chat app, hand them back named `<piece folder name>--cover.jpg`. Before working on a piece, read its `brief.md`: if "Held by" names someone else and the status isn't `paused`, leave it and say so.
+
 ## Before publishing
 
 - [ ] The cover shows what the piece delivers, and isn't the logo or a generic stock image.
@@ -99,6 +103,7 @@ Change the image before the piece is first shared: every platform keeps the card
 - [ ] Alt text is set on the page and for the card, or the page cover is marked decorative.
 - [ ] It follows the cover template in `brand.md`, and matches the sample covers.
 - [ ] The preview is checked on the platforms the piece will be shared on.
+- [ ] The cover and share card are saved in the piece's `images/`.
 
 ## Boundaries
 

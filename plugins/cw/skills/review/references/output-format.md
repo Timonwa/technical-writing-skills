@@ -1,6 +1,6 @@
 # Review output format
 
-Write to `_reports/content-review.md`, creating the directory if it doesn't exist, and summarise the findings in chat. Tell the user the path when you're done.
+Write to the piece's `reports/review.md` (`pieces/<yyyy-mm>-<slug>/reports/review.md`), creating the folder if it doesn't exist, and summarise the findings in chat. In a chat app, hand it back as `<piece folder name>--review.md`. Tell the user the path when you're done.
 
 ```markdown
 # Review — <piece>

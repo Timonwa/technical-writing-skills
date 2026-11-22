@@ -4,7 +4,7 @@
     {
       "id": 1,
       "prompt": "Run a style check on my blog archive in posts/. I don't think I ever wrote a style guide.",
-      "expected_output": "Should ask for a guide before concluding there isn't one, and look for the publication's folder (the folder AGENTS.md or the user's personal agent instructions name, else the project's publications/; in a chat app, the project's files; else ask). With none, it derives the dominant conventions and says what it derived and how strongly. Where the guide is silent, universal reader-protecting rules — link text, heading order, alt text, sources and credits — are still findings, while voice-level defaults like minimisers stay proposals with counts. Sweeps the whole archive, counts every variant and writes the report to _reports/content-style-check.md without editing any post.",
+      "expected_output": "Should ask for a guide before concluding there isn't one, and look for the publication's folder (the folder AGENTS.md or the user's personal agent instructions name, else the project's publications/; in a chat app, the project's files; else ask). With none, it derives the dominant conventions and says what it derived and how strongly. Where the guide is silent, universal reader-protecting rules — link text, heading order, alt text, sources and credits — are still findings, while voice-level defaults like minimisers stay proposals with counts. Sweeps the whole archive, counts every variant and writes the report to the publication's reports/style-check.md without editing any post.",
       "files": [],
       "expectations": [
         "Asks for a guide before deriving conventions",

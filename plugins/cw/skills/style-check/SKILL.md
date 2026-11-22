@@ -37,7 +37,7 @@ When a guide changes: in a codebase, save the file where it was found; in a chat
 
 - `[path]` — the archive to sweep. Omitted → ask.
 - `[--guide <path>]` — the writing guide or terminology list. Omitted → look for one; if none turns up, ask before assuming there isn't one, since a publication's guide often lives outside the repo. Only once the answer is no, run in **derive mode**: infer the dominant convention from the pieces, report drift against that, and propose the entries the guide is missing.
-- `[--fix]` — don't sweep. Read the existing `_reports/content-style-check.md`, list what's in it, and ask which findings to fix.
+- `[--fix]` — don't sweep. Read the publication's existing `reports/style-check.md`, list what's in it, and ask which findings to fix.
 
 ## Method
 

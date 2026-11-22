@@ -124,18 +124,29 @@ In a codebase, one folder per publication — the folder the project's `AGENTS.m
 
 ```text
 publications/
-  <publication>/
+  <publication>/       # a blog, a newsletter, or an outlet or client written for
     profile.md         # who it is, who it's for, what it's for
     writing-guide.md   # how to write for it
     brand.md           # how it looks: colours, fonts, logo, cover template
     sources/           # style guides and reference material already in hand
     examples/          # sample covers, logo files, pieces that show the voice
+    plan.md            # the calendar: one line per piece
+    reports/           # style-check.md, content-performance-<yyyy-mm-dd>.md
+    pieces/
+      <yyyy-mm>-<slug>/  # one folder per piece: brief.md, draft.md, sources.md,
+                         # interviews/, images/, social.md, copies.md, reports/
+  pitch-log.md         # pitches to every outlet
   _archive/            # publications no longer written for
 ```
 
-In a chat app, the same files sit in the project's files: `profile.md`, `writing-guide.md`, `brand.md`, and the sources, sample covers and logo files uploaded beside them.
+- **Every piece gets its own folder**, so two pieces — or two agents, or one paused piece and the next — never write to the same file. A commissioned piece is a piece folder under the outlet's or client's publication folder.
+- **`brief.md` says who holds the piece.** Before working on one, read it: if "Held by" names someone else and the status isn't `paused`, leave it and say so. When starting, set Held by and the date; when stopping, set the status and clear Held by. Resuming a paused piece starts by reading its `brief.md`, `draft.md` and `sources.md`.
+- **Status** is one of `idea` · `briefed` · `drafting` · `in review` · `scheduled` · `published` · `paused` · `retired`.
+- **`plan.md` is the only shared file.** Change only your piece's line; never rewrite the file. Lines sit under **Coming up** (dated, soonest first), **Ideas** (undated, newest first) and **Published** (newest first).
 
-Start a new one from the blanks in [references/publication-template/](references/publication-template/): fill copies of them, never the templates themselves.
+In a chat app, a project's files can't hold folders, so a piece's files are named `<piece folder name>--<file>` (`2026-11-rates-explainer--brief.md`), and Claude hands back only that piece's files and the one `plan.md` line to change. The publication's own files keep their names: `profile.md`, `writing-guide.md`, `brand.md`, `plan.md`, and the sources, sample covers and logo files uploaded beside them.
+
+Start a new one from the blanks in [references/publication-template/](references/publication-template/), and a new piece from [pieces/\_template/](references/publication-template/pieces/_template/): fill copies of them, never the templates themselves.
 
 ## Enforcing and maintaining it
 

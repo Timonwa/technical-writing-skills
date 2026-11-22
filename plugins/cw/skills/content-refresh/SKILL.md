@@ -23,6 +23,15 @@ Voice, person, tone, terminology, formatting choices and who the reader is come 
 
 When a guide changes: in a codebase, save the file where it was found; in a chat app, give the user the updated file to replace in the project. Never write inside the installed plugin.
 
+## The piece's folder
+
+A refresh works in the piece's own folder, `pieces/<yyyy-mm>-<slug>/` in the publication's folder; in a chat app, its files are named `<piece folder name>--<file>`.
+
+- **Claim it first.** Read `brief.md`. If "Held by" names someone else and the status isn't `paused`, leave it and say so. Otherwise set Held by and the date, and move the status from `published` back to `drafting`.
+- **Edit `draft.md`**, recheck claims against `sources.md`, and put new screenshots in `images/`.
+- **Keep the change notes in the piece** — the reader-facing correction or update note in the draft, and a dated line on what changed in `brief.md`.
+- **When it's live again**, set the status to `published` (or `retired`), clear Held by, and change the piece's line in `plan.md` — only that line.
+
 ## When to look again
 
 - **A performance review flags it** — ranking decay, a click-through gap, two pieces competing for one query, a page with no impressions (`/cw:content-performance`).
@@ -116,7 +125,7 @@ Work through the piece as a reader arriving today:
 - **Recheck findability** — the title, description, slug and opening still match the question the piece answers (`cw:seo-aeo-geo`).
 - **Ask Google to recrawl it** — in a site you manage in Search Console, request indexing for the URL with URL Inspection ([Google: ask Google to recrawl](https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl)). The sitemap's `<lastmod>` should change with a substantive update and only then: Google uses it only when it's "consistently and verifiably" accurate ([Google: sitemaps](https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap)). Setting it is the site's developers' work or the CMS's.
 - **Re-promote what changed** — a new angle or a materially better answer is worth sharing again (`cw:social-media-posts`); a significant update can go in the newsletter (`cw:newsletter-standards`).
-- **Record the refresh** where the publication tracks its pieces, so the next review knows it was checked and when.
+- **Record the refresh** in the piece's `brief.md`, so the next review knows it was checked and when.
 
 ## Boundaries
 

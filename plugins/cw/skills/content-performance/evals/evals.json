@@ -4,7 +4,7 @@
     {
       "id": 1,
       "prompt": "/cw:content-performance ~/Downloads/search-console-queries.csv https://example-recipes.com",
-      "expected_output": "Should read the publication's profile.md first (the folder AGENTS.md or the user's personal agent instructions name, else the project's publications/; in a chat app, the project's files; else ask) to learn what success means, and ask if it's unset before ranking. Then map the export's columns to signals, say which findings the data can't support, and rank fixes by expected impact with the numbers each came from. Writes the report to _reports/content-performance-<date>.md and edits no page.",
+      "expected_output": "Should read the publication's profile.md first (the folder AGENTS.md or the user's personal agent instructions name, else the project's publications/; in a chat app, the project's files; else ask) to learn what success means, and ask if it's unset before ranking. Then map the export's columns to signals, say which findings the data can't support, and rank fixes by expected impact with the numbers each came from. Writes the report to the publication's reports/content-performance-<date>.md and edits no page.",
       "files": [],
       "expectations": [
         "Reads profile.md for what success means before ranking",

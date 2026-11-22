@@ -99,7 +99,7 @@ Where the export carries none of these, say the question can't be answered from 
 - **Name what you'd do first** if only three things get done.
 - **Separate observations from recommendations.** A number in the export is a fact; what to do about it is a judgement, and the report should be readable by someone who wants to disagree with the second part.
 
-Write the report to `_reports/content-performance-[YYYY-MM-DD].md` (ask before overwriting), and summarise the top findings in the chat.
+Write the report to the publication's `reports/content-performance-[YYYY-MM-DD].md` (ask before overwriting), and summarise the top findings in the chat.
 
 ## Never
 

@@ -1,6 +1,6 @@
 # Style check output format
 
-Write to `_reports/content-style-check.md`, creating the directory if it doesn't exist. Tell the user the path when you're done.
+Write to the publication's `reports/style-check.md` (`publications/<publication>/reports/style-check.md`), creating the folder if it doesn't exist. In a chat app, hand it back as `style-check.md`. Tell the user the path when you're done.
 
 ```markdown
 # Style check — <publication>

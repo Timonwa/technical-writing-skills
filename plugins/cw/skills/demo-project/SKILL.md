@@ -78,6 +78,7 @@ Code rots as dependencies and platforms move on. Catch it before readers do:
 
 ## In step with the piece
 
+- **The repo stays its own repository**, never inside the publication's folder. The piece's `brief.md` (`pieces/<yyyy-mm>-<slug>/brief.md`) links it and the tag the piece is written against, so whoever picks the piece up next finds it.
 - **The piece links the exact state it was written against**: a tag or a commit, not only the branch, so a reader can always get the version the steps describe.
 - **Change both together.** An update to the repo that changes a step, an output or a screenshot is an update to the piece, and the reverse; publish them at the same time.
 - **A "Tested with" line** in the README — the runtime and key dependency versions and the date it was last run end to end — tells a reader how fresh it is.
@@ -96,6 +97,7 @@ Each branch gets a README that links the piece in its first screenful, says whic
 - [ ] No secrets in the repo or its history; `.env.example` complete; placeholders match the piece.
 - [ ] A licence file; borrowed code and assets credited.
 - [ ] README per branch with Tested with and License; `github-about.md` written for the user to paste.
+- [ ] The piece's `brief.md` links the repo and its tag.
 
 ## Boundaries
 

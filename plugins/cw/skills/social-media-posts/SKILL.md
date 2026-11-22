@@ -134,7 +134,7 @@ If the piece or the post is sponsored, affiliate-linked, gifted or otherwise com
 
 Write the set to a file, then summarise it in chat. Never post, publish, or schedule.
 
-- **Where:** `_social/<slug>.md`, with the slug from the piece's title. Ask before overwriting — a previous set may already be scheduled.
+- **Where:** the piece's `social.md` (`pieces/<yyyy-mm>-<slug>/social.md`); in a chat app, `<piece folder name>--social.md`. Ask before overwriting — a previous set may already be scheduled.
 - **Layout:** grouped by platform, one section per post, each heading carrying its angle and character count (`### Key point — 247 chars`).
 - **Each post body sits in its own fenced block**, so it copies out cleanly. Thread items each get a block, numbered in the heading only.
 - **Open with a one-line index** — title, URL, platforms, angles used — so the file reads on its own weeks later.

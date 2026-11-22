@@ -32,8 +32,8 @@ The editing craft is `cw:editing-standards`; the universal writing rules are `wr
 
 ## Arguments
 
-- `[path]` — a file, a folder of drafts, or a diff. Omitted → review the current changes if there are any, otherwise ask.
-- `[--fix]` — don't review. Read the existing `_reports/content-review.md`, list what's in it, and ask which findings to fix. For coming back to a review you ran earlier.
+- `[path]` — a piece's folder, its draft, or a diff. Omitted → review the current changes if there are any, otherwise ask.
+- `[--fix]` — don't review. Read the piece's existing `reports/review.md`, list what's in it, and ask which findings to fix. For coming back to a review you ran earlier.
 
 ## Method
 

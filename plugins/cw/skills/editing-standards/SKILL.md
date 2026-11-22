@@ -27,6 +27,7 @@ When a guide changes: in a codebase, save the file where it was found; in a chat
 
 ## Before editing
 
+- **Work in the piece's folder.** A piece lives in `pieces/<yyyy-mm>-<slug>/` in the publication's folder: edit its `draft.md`, take the job from its `brief.md`, and check claims against its `sources.md`. In a chat app, its files are named `<piece folder name>--<file>`. If "Held by" in `brief.md` names someone else and the status isn't `paused`, leave it and say so; otherwise set Held by and the date, and clear it when you stop.
 - **Establish the piece's job** — what it is, who it's for, and what the reader should do, understand or decide afterwards. You can't judge whether a paragraph belongs without knowing what the piece is trying to be.
 - **Edit to the guide, not your instincts.** For anything neither the guide nor the author settles, infer the convention from the piece itself and say what you inferred.
 - **Note what you can verify and what you can't** — which claims you checked against a real source, and which you're taking on trust.

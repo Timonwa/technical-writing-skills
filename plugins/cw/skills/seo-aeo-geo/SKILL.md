@@ -127,6 +127,10 @@ When the piece is republished on another site — dev.to, Hashnode, Medium, a pa
 - **Bing** still prefers a canonical link on the copy pointing to the original, so set the platform's canonical URL field too.
 - **Link back** to the original from the copy, in the text. The full process is `cw:cross-posting`.
 
+## The piece's folder
+
+A piece lives in `pieces/<yyyy-mm>-<slug>/` in the publication's folder. Make the changes in its `draft.md`; the search query and the reader's question are in its `brief.md`. Where the findings are worth keeping, write them to the piece's `reports/seo.md`. In a chat app, its files are named `<piece folder name>--<file>`. If "Held by" in `brief.md` names someone else and the status isn't `paused`, leave it and say so.
+
 ## Before publishing
 
 **SEO**
@@ -151,6 +155,10 @@ When the piece is republished on another site — dev.to, Hashnode, Medium, a pa
 **Copies**
 
 - [ ] For a cross-post: the original is live and indexed first.
+
+**Files**
+
+- [ ] The changes are in the piece's `draft.md`, and any findings kept are in its `reports/seo.md`.
 
 ## Boundaries
 

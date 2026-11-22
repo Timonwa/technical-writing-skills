@@ -102,6 +102,10 @@ A newsletter's images arrive in mail clients, not a browser you control:
 - **A published tutorial's screenshots go stale** when the product changes. Record the version or date captured, and update or remove an image that no longer matches — with an update note.
 - **A dated piece keeps its original photos**; a correction to a caption or a credit is marked like any other correction.
 
+## Where the files go
+
+Save every image, diagram source and chart's data in the piece's `images/` folder (`pieces/<yyyy-mm>-<slug>/images/`), named for what each shows (`fee-comparison-chart.png`, not `image3.png`). In a chat app, hand them back named `<piece folder name>--<file>`. Before working on a piece, read its `brief.md`: if "Held by" names someone else and the status isn't `paused`, leave it and say so.
+
 ## Before it ships
 
 - [ ] Every visual earns its place; no generic stock as content, no image of text that could be written.
@@ -112,6 +116,7 @@ A newsletter's images arrive in mail clients, not a browser you control:
 - [ ] Edited, composite and AI-generated images are labelled.
 - [ ] Screenshots are scrubbed and captured with demo data; a tutorial doesn't screenshot every step.
 - [ ] For a newsletter: it reads with images off, survives dark mode, and every GIF works on its first frame.
+- [ ] Every file, with its source and data, is saved in the piece's `images/`.
 
 A worked example — deciding, fixing, crediting and describing every visual in one piece — is in [references/worked-example.md](references/worked-example.md).
 

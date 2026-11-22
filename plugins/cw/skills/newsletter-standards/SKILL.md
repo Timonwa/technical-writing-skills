@@ -26,6 +26,8 @@ Who it's for, what the newsletter promised and how it reads come from that guide
 
 When a guide changes: in a codebase, save the file where it was found; in a chat app, give the user the updated file to replace in the project. Never write inside the installed plugin.
 
+**Each issue is a piece with its own folder**, `pieces/<yyyy-mm>-<slug>/` in the newsletter's publication folder: the issue in `draft.md`, its sources in `sources.md`, its images in `images/`, and one line in `plan.md`. In a chat app, its files are named `<piece folder name>--<file>`. Before working on an issue, read its `brief.md`: if "Held by" names someone else and the status isn't `paused`, leave it and say so. Set Held by and the date when you start; set the status and clear Held by when you stop.
+
 Four fields decide the issue before a word is written:
 
 - **The promise made at signup.** Whatever the subscribe form said is the contract. An issue that delivers something else is mis-sold however well it reads, and it's a common reason someone leaves a newsletter they once wanted.
@@ -108,6 +110,7 @@ Requirements rather than preferences, for any publication. What follows is the s
 - [ ] Sign-off matches the profile.
 - [ ] It reads on a phone — no wall of text, no layout that needs images.
 - [ ] Nothing sells. Nothing baits.
+- [ ] The issue is in its folder's `draft.md`, and its `brief.md` and its line in `plan.md` show it `scheduled`.
 
 ## After it sends
 
