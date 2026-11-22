@@ -1,38 +1,36 @@
 ---
 name: sme-interviews
 description: >-
-  Getting accurate information out of engineers and subject-matter experts and turning it into a verified docs draft — preparing from the change, the tests and the product first, the question sets that surface what an expert has stopped noticing, screen-sharing and precise read-backs, what stays internal, getting a technical review that gets answered, and never filling a gap by guessing. Use on "interview an engineer", "talk to the engineer", "questions about this feature", "technical review of my draft", "get this reviewed by engineering".
+  Helping a writer get accurate information from an engineer or subject-matter expert for documentation. Before: read the change, the tests and the existing docs, run the product, draft the page and the question list, and write the request for time. After: turn the transcript or notes into verified facts, check them against the code, mark the gaps, update the draft and write a review request that gets answered. Use on "interview an engineer", "talk to the engineer", "questions about this feature", "technical review of my draft", "get this reviewed by engineering".
 ---
 
 # Working with subject-matter experts
 
-Most documentation errors start as a gap the writer filled in rather than a question the writer asked. The skill here is getting what an engineer or a product expert knows — including the parts they've stopped noticing they know — onto the page accurately, without spending more of their time than the page is worth. The test of the result is whether a reader can act on it without asking anyone.
+Help the writer before and after a session with an engineer or product expert. The writer holds the session; never contact the expert yourself. Before it, learn everything the code, the tests and the existing docs already say, and draft the page so the expert has something to correct. After it, turn what the writer brings back into facts verified against the code, with every gap marked.
 
-## How this works
+Most documentation errors start as a gap the writer filled in rather than a question the writer asked. The test of the result is whether a reader can act on the page without asking anyone.
 
-The skill works with you before and after a session with the expert; you hold the session yourself. It never contacts the expert, and the expert never sees it.
+| Stage  | The writer                                                                                   | You                                                                                                                                      | Output                                                                 |
+| ------ | -------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| Before | answers the Ask first questions and points you at the change, the issue and the tests        | read them and the existing docs, run the product where you can, draft the page, write the question list and the request for time         | the request, the question list, the draft, and the notes file started  |
+| During | holds the session — a call, a screen-share while the expert does the task, or a written list | nothing live; for a written list, write the message the writer sends                                                                     | the recording, the writer's notes or the expert's written answers      |
+| After  | gives you the transcript, the answers or their notes                                         | separate fact from opinion, check each fact against the code or the tests, mark the gaps, update the draft, and write the review request | verified notes, the draft with its gaps marked, and the review request |
 
-| Stage  | You                                                                                                      | The skill                                                                                                                                                                       | You end up with                                                                         |
-| ------ | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| Before | answer its questions (Ask first), and point it at the change, the issue, the tests and the existing docs | reads them, runs the product where it can, drafts an outline or a first draft, the question list marked blocking or nice-to-have, and the message asking for time               | the request to send, the question list, the draft, and the session's notes file started |
-| During | hold the session — a call, a screen-share while they do the task, or a written question list             | isn't there; for a written list, it writes the message you send                                                                                                                 | the recording, your notes or their written answers                                      |
-| After  | give it the transcript, the answers or your notes                                                        | separates fact from opinion, checks each fact against the code or the tests where it can, marks the gaps, updates the draft, fills the notes file and drafts the review request | verified notes, the draft with its gaps marked, and the review request                  |
+Every message follows its template in [references/messages.md](references/messages.md); the notes follow [references/interview-notes.md](references/interview-notes.md).
 
-The request, the written question list and the review request follow the [message templates](references/messages.md).
+## Find the project's guide
 
-## Voice and audience come from the writing's own guide
-
-Before interviewing, find the project's style guide and conventions and read them:
+Read the project's style guide and conventions before drafting anything:
 
 - **In a codebase:** the style guide and conventions the project's `AGENTS.md` names, or its contributing docs.
 - **In a chat app:** the style guide in the project's files (a Claude Project's knowledge, or the equivalent elsewhere), or attached to the conversation.
-- **Otherwise:** ask whether one exists before concluding there isn't one.
+- **Otherwise:** ask the writer whether one exists before concluding there isn't one.
 
 Voice, person, terminology and who the reader is come from that guide; where it's silent, `tw:docs-standards` applies.
 
 ## Ask first
 
-Read the answers from the request, the draft and the project first; ask only what's missing. Ask with the app's question tool where it has one, so the choices can be picked; otherwise as a numbered list answered by number. Offer choices where the answers are known and a short typed answer otherwise. Record the answers in the interview notes' header.
+Read the answers from the request, the draft and the project first; ask the writer only what's missing. Ask with the app's question tool where it has one, so the choices can be picked; otherwise as a numbered list answered by number. Offer choices where the answers are known and a short typed answer otherwise. Record the answers in the notes file's header.
 
 1. **Which page or feature is this for?** The draft or outline, and what its reader must be able to do.
 2. **Who is the expert?** Their name or role, and what they built or own.
@@ -44,120 +42,86 @@ Read the answers from the request, the draft and the project first; ask only wha
 
 ## Before the session
 
-The skill prepares everything you take into the session: what the change and the tests already say, a draft to react to, and the questions.
+### Learn what already exists
 
-### Prepare from what already exists
+An expert asked what the code could have answered is an expert spent; read first.
 
-Arriving with no preparation converts an expert into a search engine, and it's the fastest way to lose access to one.
-
-- **Read everything that already exists** before asking for time:
+- **Read everything that already exists:**
   - **the change itself** — the pull request or diff, the issue that started it, and its discussion;
   - **the design document and the specification**, including what was decided against;
-  - **the tests** — a test suite is a specification of behaviour that someone maintained, including the edge cases nobody thinks to mention;
+  - **the tests** — a test suite is a specification of behaviour someone maintained, including the edge cases nobody thinks to mention;
   - **the existing docs**, and the support conversations about this area.
-- **Use the product.** Run it, sign up for it, call it. Ten minutes of hands-on removes half the questions and turns the rest into good ones.
-- **Arrive with a draft or an outline, not a blank page.** An expert correcting a wrong draft produces far more, far faster, than an expert asked to explain from scratch.
-- **Write your questions down in advance**, and mark which block the draft and which are nice to have. If time runs short, you'll know what to protect.
-- **Ask for the artifact rather than the explanation** — a schema, a test, a log, a recording of the demo. A page reconstructed from memory is a second source of error.
+- **Run the product** where you can — the command, the sign-up, the call. What you can confirm yourself comes off the question list.
+- **Draft the page or an outline.** An expert correcting a wrong draft produces far more, far faster, than one asked to explain from scratch.
+- **Ask for the artifact rather than the explanation** — a schema, a test, a log, a recording of the demo — and put the request in the question list.
 
-### What stays internal
+### Agree what stays internal
 
-Documentation doesn't quote its engineers, so attribution rarely applies. The ground rule that matters is **what's internal**: unreleased plans, internal hostnames, workarounds only staff can use, anything a customer must not see. Agree before you start what may reach the public page, and mark the rest in your notes as internal.
+Documentation doesn't quote its engineers, so attribution rarely applies. What matters is **what's internal**: unreleased plans, internal hostnames, workarounds only staff can use, anything a customer must not see. Put "what may reach the public page?" at the top of the question list, and mark anything internal in the notes as internal.
+
+### Write the question list and the request
+
+- **Mark each question blocking or nice-to-have**, blocking first, so a short session still gets what the page needs.
+- **Write questions that surface what the expert has stopped noticing.** The sets that work — purpose and scope, what readers get wrong, behaviour and limits, reality checks — are in [references/questions.md](references/questions.md).
+- **Open questions, not leading ones:** "What happens if the token expires mid-request?", not "It retries automatically, right?"
+- **Ask where each value is defined** — the constant, the config, the schema — so the writer reads it there rather than taking a rounded number from conversation.
+- **Write the request for time** from the [template](references/messages.md#asking-for-time): one topic, a timebox (thirty focused minutes gets answered; "can I pick your brain" gets postponed), the draft linked, and the one or two things the draft can't settle.
 
 ## During the session
 
-You hold it; the skill isn't there. What follows is how to run it well, and for a written question list the skill writes the message.
+The writer holds it. Give them a short running sheet with the question list:
 
-### Running it
+- **The timebox, said aloud at the start**, and one topic per session.
+- **Ask to record**, saying what it's for and when it will be deleted; in some places recording a call needs everyone's consent by law.
+- **Have the expert do the task on a screen-share** — what they do is more accurate than what they say they do, and the steps they perform without mentioning are the steps missing from every draft.
+- **Do the task while the expert watches** — the moment the writer gets stuck is the moment the expert sees the gap.
+- **Read the understanding back as a precise statement**, with the values in it: "So with no value, it defaults to the account setting, and with none of those it fails with a 400 — is that right?" A vague read-back gets a vague yes.
+- **Don't cut off a thread for a small question**; note it and come back.
 
-- **Timebox it and say the box out loud.** Thirty focused minutes gets answered; an open-ended "can I pick your brain" gets postponed.
-- **One topic per session.** A session covering three features produces shallow material on all three.
-- **Record it, only with permission** — said on the recording, with what it's for and when it will be deleted — so you can listen rather than transcribe. In some places recording a call needs everyone's consent by law.
-- **Screen-share while they do the task.** What they do is more accurate than what they say they do, and the steps they perform without mentioning are exactly the steps missing from every draft.
-- **Do the task yourself while they watch.** This is the single most effective technique against expert blindness — the moment you get stuck is the moment they see the gap.
-- **Don't interrupt a thread to ask a small question.** Note it and come back; the tangent you cut off was often the useful part.
-- **Ask open questions, not leading ones.** "What happens if the token expires mid-request?" rather than "It retries automatically, right?" — a leading question gets agreement, not information.
-- **Read your understanding back as a precise statement**, with the values in it: "So if I pass no value, it defaults to the account setting, and if there isn't one it fails with a 400 — is that right?" A vague read-back gets a vague yes.
-- **Chase the vague answer** — "it's usually fast", "it depends" — and **ask where the real value is defined**: the constant, the config, the schema. Read it there rather than accepting the rounded number from conversation.
-
-### The questions that work
-
-**Purpose and scope**
-
-- What problem does this solve, and for whom? What did people do before it?
-- Who is it not for? What does it deliberately not do?
-- What's the shortest path from nothing to it working?
-
-**The things readers get wrong**
-
-- What do people get wrong about this? What have you had to explain more than once?
-- What would you tell a new teammate on their first day with it that isn't written down anywhere?
-- If someone skims the docs and starts using it, where do they hurt themselves?
-- What's the mistake that's expensive to recover from?
-
-**Behaviour and limits**
-
-- What happens when it fails? What does the reader see, and what should they do?
-- What are the real limits — sizes, rates, timeouts, quantities — and what happens at them?
-- What's slower, or different, than someone would assume?
-- Is anything here irreversible?
-- What does this depend on, and what breaks if that's unavailable?
-
-**Reality checks**
-
-- What's the difference between how this is supposed to work and how it works today?
-- What's changing soon enough that I shouldn't document it as permanent?
-- Who else needs to check this before it's published?
-
-### When they've forgotten what's hard
-
-The curse of knowledge is the default condition of a useful expert, not a failing. Work around it:
-
-- **Follow the instructions literally** and report where you stopped. "I got to step 3 and there was no such button" produces a precise answer; "this is confusing" doesn't.
-- **Ask what they had to look up** the first time they worked on it.
-- **Ask what they'd delete** from your draft, and what they'd be embarrassed for a colleague to read. Both get honest answers where "any feedback?" doesn't.
-- **Show them the failure**, not a description of it.
+**For a written question list**, write the message from the [template](references/messages.md#a-written-question-list): the draft attached, blocking questions numbered first, each answerable in a sentence, and the date it publishes with or without an answer.
 
 ## After the session
 
-Give the skill the transcript, the written answers or your notes. It checks what it can, updates the draft with the gaps marked, fills the notes file and drafts the review request.
+The writer gives you the transcript, the written answers or their notes. Then:
 
-### Turning it into a draft
+### Turn it into verified facts
 
-- **Separate fact from opinion.** A fact is a claim to verify — "it returns 409 on a duplicate" — by running it, reading the code or reading the test. **An engineer's opinion never appears in the docs as a claim**: "nobody really uses that flag" shapes what you emphasise and cut, but the page states only behaviour.
-- **Mark every gap visibly** where you don't have the answer, rather than writing the plausible version. An invented default that reads naturally is the worst defect this work produces, because nothing about it looks wrong.
-- **Verify what's verifiable yourself** — run the command, read the code — rather than spending the expert's next session on things you can check.
-- **Keep a record of what you asked and what you were told**, with dates, in the interview notes template ([references/interview-notes.md](references/interview-notes.md)), one file per session named `<yyyy-mm-dd>-<name>.md`. It stops you re-asking, and tells you what to re-check when the feature changes.
+- **Fill the [notes template](references/interview-notes.md)**: what was asked, what was answered, what's internal, with the date.
+- **Separate fact from opinion.** A fact is a claim to verify — "it returns 409 on a duplicate" — by running it, reading the code or reading the test. An engineer's opinion never appears on the page as a claim: "nobody really uses that flag" shapes what the page emphasises, but the page states only behaviour.
+- **Check every fact you can against the code or the tests** before it goes in the draft, and record where it was confirmed.
+- **Mark every gap visibly** where there's no answer, rather than writing the plausible version. An invented default that reads naturally is the worst defect this work produces, because nothing about it looks wrong.
+- **Update the draft**, with the gaps marked.
 
-### Getting a review that actually happens
+### When the expert has forgotten what's hard
 
-- **Ask for technical accuracy only**, explicitly, and say you're not asking about wording. Reviewers who think they're being asked about style give you style notes and skip the incorrect default.
-- **Ask specific questions inline**, not "any thoughts?" — a comment pointing at one sentence and asking "is this still true in the current version?" gets answered.
-- **Keep the ask small.** A 4-page review gets postponed; three flagged paragraphs get answered today.
-- **Give a deadline and a consequence** — when it publishes, or what happens if you don't hear back ("if I don't hear by Thursday, it ships with that point marked unverified").
-- **Separate reviewers by job.** Technical accuracy from the expert, clarity from someone in the audience, style from whoever owns the style guide. One reviewer asked for all three does none well.
-- **Close the loop.** Tell them what you changed, so the next review is worth their time.
+If the answers are too smooth, the expert has stopped seeing the hard parts. Add to the next questions: where the writer got stuck following the steps literally ("step 3 has no such button"), what the expert had to look up the first time, what they'd delete from the draft, and the failure itself rather than a description of it.
 
-## When you can't get the time
+### Write the review request
 
-- **Read the tests** before anything else — they answer more behaviour questions than a meeting does.
-- **Send a batched written question list** with the draft attached — one message, numbered questions, each answerable in a sentence.
-- **Watch a recording** of an existing demo, walkthrough or incident review, and **ask in the channel where the work happens**, publicly, so anyone who knows can answer and the answer is findable later.
-- **Publish with the gap marked** rather than filled, if it has to ship. A visible "unverified" costs a reader far less than a confident error.
+Write it from the [template](references/messages.md#asking-for-a-technical-review):
 
-> **Example — a question list sent ahead.** Draft attached: "Rotating an API key". Three questions block publishing; the rest can wait.
->
-> **Blocking:** (1) When a key is rotated, does the old key stop working immediately, or after a grace period — how long, and where is it set? (2) What does a request with a revoked key return — 401 or 403 — and is the error code in the body stable? (3) Can a rotation be undone?
->
-> **Nice to have:** (4) Is there a limit on how many active keys an account can hold?
->
-> It publishes Thursday; if I haven't heard by Wednesday, the grace period goes in marked "unverified".
+- **Technical accuracy only**, said plainly — a reviewer who thinks it's about style gives style notes and skips the wrong default.
+- **Specific questions inline**, each pointing at one sentence: "is this still true in the current version?"
+- **A small ask** — three flagged paragraphs get answered today; four pages get postponed.
+- **A deadline and what happens without an answer** — "if I don't hear by Thursday, it ships with that point marked unverified".
+- **One job per reviewer**: accuracy from the expert, clarity from someone in the audience, style from whoever owns the guide.
+
+## When the expert has no time
+
+Suggest these instead, in this order: read the tests; send a written question list with the draft attached; watch an existing demo, walkthrough or incident review; ask in the channel where the work happens, publicly, so the answer is findable later. If the page has to ship, publish with the gap marked rather than filled — a visible "unverified" costs a reader far less than a confident error.
+
+## Before handing the notes to the writer
+
+- [ ] Every fact on the page is checked against the code or the tests, or marked unverified.
+- [ ] No opinion appears as a claim.
+- [ ] Anything internal is marked and kept off the page.
+- [ ] The review request asks about accuracy only, with specific inline questions and a date.
 
 ## Boundaries
 
 - **What the information becomes** → `write:writing-standards`, `tw:docs-standards` and the skill for the page type.
 - **Deciding which topics need an expert at all** → `tw:docs-planning`.
-- **Finding facts in a codebase yourself**, where no interview is needed → `tw:codebase-research`. Check there first: an expert's time is for what the code can't tell you.
+- **Finding facts in a codebase without an expert** → `tw:codebase-research`. Check there first: an expert's time is for what the code can't tell you.
 - **Editing the resulting draft** → `tw:editing-standards`; reviewing it → `/tw:doc-review`.
 - **Interviewing a source for an article, feature or profile** → `cw:sme-interviews`.
-- **The expert is the authority on behaviour, not on wording.** How it's phrased for the reader is the writer's call, and a reviewer's rewrite into internal vocabulary is a finding to push back on, not an instruction.
+- **The expert is the authority on behaviour, not on wording.** A reviewer's rewrite into internal vocabulary is a finding to push back on, not an instruction.
