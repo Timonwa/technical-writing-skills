@@ -2,6 +2,9 @@
 title: "" # the headline on the page and the title in search and share previews; aim for 50–60 characters
 description: "" # meta description, share description and listing excerpt; about 150–160 characters
 slug: ""
+author: "" # your name by default; a guest's name when someone else writes it
+author_bio: ""
+author_url: ""
 tags: []
 cover_image: "" # a file in images/ or a hosted URL
 cover_alt: ""

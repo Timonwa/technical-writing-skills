@@ -53,6 +53,7 @@ Each topic has its own folder in the publication's `topics/` (`topics/2026-11-ra
 - **`blog.md` follows the [template](../style-guide/references/publication-template/topics/_template/blog.md)**: YAML front matter, then the body. Every field stays present, left `""` until it's known:
   - `title` — one title: the headline on the page and the title in search and share previews, about 50–60 characters (a working target; `cw:seo-aeo-geo` gives its source). There's no separate SEO title or share title.
   - `description` — one description: the meta description, the share description and the listing excerpt, about 150–160 characters.
+  - `author`, `author_bio`, `author_url` — the writer's details from the profile by default; a guest's own when someone else writes the post (`cw:pitching`).
   - `cover_image` and `cover_alt` — a file in `images/` or a hosted URL (`cw:cover-images`).
   - `published_url` — blank until it's live; `updated` is the date of any change after that.
   - The body doesn't repeat the title as an H1; the platform renders it.
@@ -133,7 +134,7 @@ Eye-tracking research finds people scan web pages rather than read them, and on 
 
 - **Say who wrote it and why they're worth reading on this** — a byline and a line of relevant standing, especially where the topic touches health, money, safety or law.
 - **Date it, and say when it was updated.** A piece with no date is unevaluable, and readers treat it accordingly.
-- **Disclose what the profile's Constraints section requires** — affiliate links, sponsorship, gifted products, AI assistance — at the top, before the reader has invested time, not in a footer.
+- **Disclose what the profile's Constraints section requires** — affiliate links, sponsorship, gifted products, AI assistance — at the top, before the reader has invested time, not in a footer. A sponsored post's agreement and its label come from `cw:pitching`.
 - **Separate what you tested from what you read.** "I ran this for six weeks" and "the manufacturer claims" are different classes of evidence and should look different on the page.
 - **Correct in public.** When a piece turns out to be wrong, fix it and say what changed. Silent edits cost more trust than the original error.
 
@@ -166,5 +167,5 @@ Eye-tracking research finds people scan web pages rather than read them, and on 
 - **Code samples that must run** → `write:code-samples`. **Diagrams and screenshots** → `cw:images-and-diagrams`. **The cover image** → `cw:cover-images`.
 - **Finding and checking the sources behind it** → `cw:content-research`. **A tutorial's companion repository** → `cw:demo-project`.
 - **Updating, correcting, merging or retiring a piece after it's published** → `cw:content-refresh`.
-- **Writing for another publication** — the pitch, the brief and the rights → `cw:pitching`.
+- **Writing for another publication, a swap, a co-written or guest piece, or a sponsorship** — the pitch, the agreement and the rights → `cw:pitching`.
 - **A periodic issue covering several pieces** → `cw:newsletter-standards`. **Promoting one piece** → `cw:social-media-posts`. **Getting it found** → `cw:seo-aeo-geo`. **Whether it's being found** → `/cw:content-performance`.

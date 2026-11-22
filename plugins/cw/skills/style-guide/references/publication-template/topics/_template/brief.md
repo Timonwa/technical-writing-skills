@@ -1,11 +1,14 @@
 # Brief — <working title>
 
-| Field   | Answer                                                                           |
-| ------- | -------------------------------------------------------------------------------- |
-| Status  | idea · briefed · drafting · in review · scheduled · published · paused · retired |
-| Held by | who or which agent, and since when — blank when nobody is                        |
-| Kind    | article, tutorial, essay, feature, roundup…                                      |
-| Series  | series name and part number, or blank                                            |
+| Field         | Answer                                                                           |
+| ------------- | -------------------------------------------------------------------------------- |
+| Status        | idea · briefed · drafting · in review · scheduled · published · paused · retired |
+| Held by       | who or which agent, and since when — blank when nobody is                        |
+| Kind          | article, tutorial, essay, feature, roundup…                                      |
+| Series        | series name and part number, or blank                                            |
+| Collaboration | none · writing for them · swap · co-written · guest on ours · sponsored          |
+| Partner       | the outlet, partner, co-author, guest or brand — and a swap's other topic folder |
+| Disclosure    | the label it carries and where, or blank                                         |
 
 **Before working on this topic:** if Held by names someone else and the status isn't `paused`, leave it and say so. When you start, set Held by and the date. When you stop, set the status and clear Held by. Resuming starts with this file, then the format files and `sources.md`. Only a skill that edits the format files claims: a read-only check that writes only its own report runs while someone holds the topic, never sets Held by, and writes only its own file in `reports/`.
 

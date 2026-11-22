@@ -32,20 +32,21 @@ Pick a scope when it asks. **User** makes the skills available everywhere, which
 
 ## Your publication's guide
 
-`cw` writes for a publication — a blog, a newsletter, or both — and reads what you've recorded about it before it writes, edits or reviews anything. A publication has five parts:
+`cw` writes for a publication — a blog, a newsletter, or both — and reads what you've recorded about it before it writes, edits or reviews anything. A publication has six parts:
 
 - **The profile** (`profile.md`) — who it's for, what it's for, what a piece should make a reader do, its channels, and its defaults: what a new topic becomes, where it's first published, what the newsletter sends, which platforms get a full copy or an opening excerpt, and which social accounts share it.
 - **The writing guide** (`writing-guide.md`) — how it sounds: voice, person, titles, openings, recurring parts, formatting.
 - **The brand** (`brand.md`) — how it looks: colours, fonts, the logo, the cover template, the style of its images and charts.
 - **Sources** (`sources/`) — any style guide or brief you already have, which the writing guide is built from.
 - **Examples** (`examples/`) — sample covers, logo files, and the two or three pieces that best show the voice.
+- **The media kit** (`media-kit.md`) — what sponsors get: who reads it, dated numbers, what a sponsor can buy, the rate card and how to book.
 
 Beside those sit the calendar, the series and one folder per topic. A topic is one subject, and it can become a blog post, a newsletter issue, social posts, cross-posts or a demo project — one, some or all. Its folder holds one file per format, and the file names never change, so adding a format adds a file:
 
 ```text
 publications/
   <publication>/                a blog, a newsletter, or an outlet or client you write for
-    profile.md  writing-guide.md  brand.md  sources/  examples/
+    profile.md  writing-guide.md  brand.md  media-kit.md  sources/  examples/
     calendar.md                 the editorial calendar: one line per topic, with its date, formats, status and who's on it
     series/                     one plan per series, with its parts: <series-slug>.md
     reports/                    reports on the whole publication
@@ -59,7 +60,7 @@ publications/
         sources.md              the source log
         interviews/  images/    notes and transcripts; cover, share card, diagrams
         reports/                the review, AI-writing check and findability check
-  pitch-log.md                  pitches to every outlet
+  pitch-log.md                  every pitch and proposal, sent and received
 ```
 
 A topic folder is named for the month it's first published, or the month it's briefed when it has no date yet. A newsletter issue that isn't about one topic, or a stand-alone thread, is a topic whose brief lists only that format. Before working on a topic, a skill reads its brief and leaves it alone while someone else holds it, unless it's paused, so two topics, or two agents, never overwrite each other. A brief's questions offer the profile's defaults, and the answers are recorded in the brief, so the next skill doesn't ask them again.
@@ -129,7 +130,7 @@ For a folder kept outside the repo, put the same line in your personal agent ins
 | `social-media-posts`   | One piece turned into distinct posts by angle, sized for each platform                                                                |
 | `cross-posting`        | Republishing on dev.to, Hashnode, Medium or a partner site so the original stays the one that ranks                                   |
 | `content-refresh`      | Keeping a published piece true — honest dates, visible correction notes, merging and retiring                                         |
-| `pitching`             | Writing for another publication — the outlet, the pitch and outline, the fee, rights and kill fee                                     |
+| `pitching`             | Collaborations that end in writing — pitches, swaps, co-written and guest pieces, sponsorships, the media kit and the agreement       |
 | `style-guide`          | A publication's writing guide and profile, built from what exists and kept current                                                    |
 
 ## Commands

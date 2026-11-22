@@ -151,6 +151,7 @@ Benchmarks describe patterns, not targets. A publication's own trend line beats 
 - **Audience, cadence, the signup promise and sender details** → the publication's `profile.md`. **Voice, subject format, sign-off and the wording of the ask** → its `writing-guide.md`. Both live in the publication's folder.
 - **The long-form pieces an issue links to** → `cw:article-standards`. An issue summarises them; it never reproduces one.
 - **Promoting a single piece** → `cw:social-media-posts`. A set of posts about one article is a different job from a periodic issue covering several.
+- **A sponsored slot or a sponsored issue** — the agreement with the sponsor and its disclosure label → `cw:pitching`.
 - **The voice rules under every publication** → `write:writing-standards`. **Tightening the draft** → `cw:editing-standards`. **The machine-written sweep** → `/write:ai-check`.
 - **Whether the linked pieces are being found** → `/cw:content-performance`. **Reviewing an issue before it sends, as a report** → `/cw:review`.
 - **Platform setup** — domain authentication, list imports, automation — is the sender's infrastructure. Name what's missing; don't configure it.

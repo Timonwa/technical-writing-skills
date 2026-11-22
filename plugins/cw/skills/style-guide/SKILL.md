@@ -141,6 +141,7 @@ publications/
     profile.md         # who it's for, what it's for, its channels and defaults
     writing-guide.md   # how to write for it
     brand.md           # how it looks: colours, fonts, logo, cover template
+    media-kit.md       # what sponsors get: audience, numbers, slots, prices
     sources/           # style guides and reference material already in hand
     examples/          # sample covers, logo files, pieces that show the voice
     calendar.md        # the editorial calendar: one line per topic
@@ -157,21 +158,22 @@ publications/
         interviews/      # one notes file per interview
         images/          # cover, share card, diagrams
         reports/         # review.md, ai-check.md, seo.md
-  pitch-log.md         # pitches to every outlet
+  pitch-log.md         # every pitch and proposal, sent and received
   _archive/            # publications no longer written for
 ```
 
-- **A folder is a topic, not a format.** A topic is the folder; a piece is one thing published from it. Every topic gets its own folder, so two topics — or two agents — never write to the same file. One topic can become a blog post, a newsletter issue, social posts, cross-posts and a demo project — one, some or all. Its brief records which, and the folder holds only those formats' files. A roundup issue or a personal note is a topic whose brief lists only a newsletter; a stand-alone post or thread is one whose brief lists only social posts. A commissioned piece is a topic folder under the outlet's or client's publication folder.
+- **A folder is a topic, not a format.** A topic is the folder; a piece is one thing published from it. Every topic gets its own folder, so two topics — or two agents — never write to the same file. One topic can become a blog post, a newsletter issue, social posts, cross-posts and a demo project — one, some or all. Its brief records which, and the folder holds only those formats' files. A roundup issue or a personal note is a topic whose brief lists only a newsletter; a stand-alone post or thread is one whose brief lists only social posts. A commissioned piece is a topic folder under the outlet's or client's publication folder; a swap, a co-written piece, a guest's piece and a sponsored piece are topic folders in your own, with the brief's **Collaboration**, **Partner** and **Disclosure** filled.
 - **File names are fixed.** `blog.md`, `newsletter.md`, `social.md`, `copies.md`: adding a format adds its file, and nothing is renamed. The folder is `<yyyy-mm>-<slug>`, the month of the first publish date (or the month it's briefed, with no date yet), one level deep, never `yyyy/mm/slug`.
 - **`brief.md` says who holds the topic.** Before working on one, read it: if Held by names someone else and the status isn't `paused`, leave it and say so. On starting, set Held by and the date; on stopping, set the status and clear Held by. Resuming starts with `brief.md`, then the format files and `sources.md`. Only a skill that edits the format files claims: a read-only check that writes only its own report (a review, an AI check, a style check, an SEO check, a performance review) runs while someone holds the topic, never sets Held by, and writes only its own file in `reports/`.
 - **Ask-first answers go in the brief**, in the field they belong to — the "What this topic becomes" table or a row of "The brief"; an answer with no field goes under "Notes for whoever picks it up next".
 - **Status** is one of `idea` · `briefed` · `drafting` · `in review` · `scheduled` · `published` · `paused` · `retired`. Each format in the brief has its own; the topic's is the overall one, `published` once every listed format is.
 - **`calendar.md` is the editorial calendar and the one shared file** — one line per topic: first publish date · topic folder · formats · status · held by · series · link, under **Coming up** (dated, soonest first), **Ideas** (undated, newest first) and **Published** (newest first). Change only your topic's line; never rewrite the file. A topic's other dates live in its brief.
+- **`media-kit.md` is what sponsors get** — who reads the publication, its dated numbers, what a sponsor can buy, the rate card, past sponsors and how to book; `cw:pitching` fills and sends it. `brand.md` is logos and colours; `media-kit.md` is what sponsors get and never repeats the brand.
 - **`series/<series-slug>.md` plans a series** — its name, reader, what it covers and leaves out, cadence, and one row per part. Each part is its own topic whose brief names the series and the part.
 
-In a chat app, a project's files can't hold folders, so a topic's files are named `<topic folder>--<file>` (`2026-12-sourdough-starter--brief.md`). The publication's own files keep their names — `profile.md`, `writing-guide.md`, `brand.md`, `calendar.md`, a series' `<series-slug>.md`, and the sources, sample covers and logo files beside them — and for `calendar.md` Claude hands back only the line to add or change.
+In a chat app, a project's files can't hold folders, so a topic's files are named `<topic folder>--<file>` (`2026-12-sourdough-starter--brief.md`). The publication's own files keep their names — `profile.md`, `writing-guide.md`, `brand.md`, `media-kit.md`, `calendar.md`, a series' `<series-slug>.md`, and the sources, sample covers and logo files beside them — and for `calendar.md` Claude hands back only the line to add or change.
 
-Start from the blanks in [references/publication-template/](references/publication-template/) — [calendar.md](references/publication-template/calendar.md), a series from [series/\_template.md](references/publication-template/series/_template.md), a topic from [topics/\_template/](references/publication-template/topics/_template/) — and fill copies, never the templates themselves. A field not yet known stays in the file, blank; it's never removed.
+Start from the blanks in [references/publication-template/](references/publication-template/) — [calendar.md](references/publication-template/calendar.md), [media-kit.md](references/publication-template/media-kit.md), a series from [series/\_template.md](references/publication-template/series/_template.md), a topic from [topics/\_template/](references/publication-template/topics/_template/) — and fill copies, never the templates themselves. A field not yet known stays in the file, blank; it's never removed.
 
 ## Enforcing and maintaining it
 
