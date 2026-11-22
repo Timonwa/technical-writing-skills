@@ -4,9 +4,10 @@
     {
       "id": 1,
       "prompt": "/write:ai-check docs/guides/webhooks.md — a 1,200-word page with 11 em dashes, 'leverage' twice, 'In today's fast-paced world' as its opening and a closing paragraph that says the reader is now well equipped.",
-      "expected_output": "Should read the project's guide first and record which rule applied. Should count before judging: report em-dash density per 1,000 words (about 9, above the strong threshold of about 6) with locations, plus the vocabulary, opening and congratulating-closer tells, each with a location and a proposed rewrite. Should write the report to _reports/ai-check-guides-webhooks.md with the score-change row, summary, findings, deliberate section and scorecard, summarise in chat, then list findings by ID and ask which to fix. Should not edit the page before the user answers, and should not claim the page was AI-generated.",
+      "expected_output": "Should take the page and its kind from the request without asking, read the project's guide first and record what was checked and which guide applied in the report's header. Should count before judging: report em-dash density per 1,000 words (about 9, above the strong threshold of about 6) with locations, plus the vocabulary, opening and congratulating-closer tells, each with a location and a proposed rewrite. Should write the report to _reports/ai-check-guides-webhooks.md with the score-change row, summary, findings, deliberate section and scorecard, summarise in chat, then list findings by ID and ask which to fix. Should not edit the page before the user answers, and should not claim the page was AI-generated.",
       "files": [],
       "expectations": [
+        "Does not ask for anything the request already answers (the page, that it is documentation)",
         "Reports em-dash density per 1,000 words with locations",
         "Flags the vocabulary, opening and closing tells with rewrites",
         "Writes _reports/ai-check-guides-webhooks.md in the given format with scores",
@@ -37,6 +38,20 @@
         "Fixes only findings 2 and 5",
         "Marks them FIXED in the report and re-scores",
         "Does not re-run the audit or renumber findings"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "/write:ai-check publications/field-notes/topics/2026-12-remote-teams/ — the brief lists a blog post, a newsletter issue and LinkedIn posts; Held by is blank.",
+      "expected_output": "Should read brief.md's What this topic becomes and check blog.md, newsletter.md and social.md without asking which formats, since the brief answers it, and read the publication's writing-guide.md as the guide. Should not look for or check any other draft file. Should write one report to the topic's reports/ai-check.md from the template in references/output-format.md, its header naming the files checked, the date and the guide, with each finding's location naming its file. Should not set Held by, should summarise in chat, list findings by ID and ask which to fix before editing anything.",
+      "files": [],
+      "expectations": [
+        "Reads the formats to check from brief.md instead of asking",
+        "Checks blog.md, newsletter.md and social.md",
+        "Writes one report to the topic's reports/ai-check.md",
+        "Report header names the files checked, the date and the guide",
+        "Each finding's location names its file",
+        "Asks which findings to fix before editing anything"
       ]
     }
   ]

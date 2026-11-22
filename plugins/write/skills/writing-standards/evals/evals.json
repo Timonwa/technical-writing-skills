@@ -16,13 +16,15 @@
     },
     {
       "id": 2,
-      "prompt": "In my food blog's Claude Project, the writing guide is in the project's files. Draft the opening of a post about why my sourdough finally rose. Notes: three failed loaves, switched to 75% hydration, longer cold proof. Also, I've decided to allow em-dash asides from now on — update my guide.",
-      "expected_output": "Should read the writing guide from the Project's files and follow it: first person, chatty, an opening that starts with a short scene, with the craft rules (concrete detail, the point reached soon after the scene) still applied. Should not convert the voice to documentation style. Should record the em-dash decision in the writing guide and, because this is a chat app, give the user the updated writing-guide.md to replace in the Project rather than claiming it saved the file.",
+      "prompt": "In my food blog's Claude Project, the writing guide and 2026-12-sourdough-finally-rose--brief.md are in the project's files; the brief names the reader and lists a blog post. Draft the opening of the post. Notes: three failed loaves, switched to 75% hydration, longer cold proof. Also, I've decided to allow em-dash asides from now on — update my guide.",
+      "expected_output": "Should read the writing guide and the brief from the Project's files and not ask again for what they answer (the reader, the kind of piece); ask only what's missing, such as what the reader leaves with, with a specific kind of answer. Should follow the guide: first person, chatty, an opening that starts with a short scene, with the craft rules (concrete detail, the point reached soon after the scene) still applied. Should not convert the voice to documentation style. Should hand the opening back as 2026-12-sourdough-finally-rose--blog.md. Should record the em-dash decision in the writing guide and, because this is a chat app, give the user the updated writing-guide.md to replace in the Project rather than claiming it saved the file.",
       "files": [],
       "expectations": [
-        "Reads the writing guide from the Project's files before drafting",
+        "Reads the writing guide and the brief from the Project's files before drafting",
+        "Asks only what the brief and guide leave unanswered",
         "Follows the guide's first person, chatty tone and scene opening",
         "Does not convert the voice to documentation style",
+        "Hands the post back as 2026-12-sourdough-finally-rose--blog.md",
         "Gives the updated writing-guide.md for the user to replace in the Project",
         "Does not claim to have saved the guide itself"
       ]

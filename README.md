@@ -8,6 +8,8 @@ Thirty-two of them are model-invoked: Claude loads one when the work matches, so
 
 **The skills hold the craft; the voice is always yours.** Documentation follows the project's own style guide, and content follows the publication's writing guide and profile, whatever the subject: software, food, finance, careers. Where neither exists, documentation falls back to `tw:docs-standards` and a content skill asks who the reader is before writing. Each rule follows the current published standard — Google's and Microsoft's style guides, GOV.UK, WCAG, the SPJ Code of Ethics, Google Search Central — not one writer's habits.
 
+**Every skill asks its questions first, and fills a fixed template.** It reads what it can from the request, a topic's brief, the publication's profile or the project, then asks only what's missing — as choices to pick where the answers are known, a short typed answer otherwise. Every file with a fixed shape, from a brief to a report, has a template, so every agent writes it the same way, and a field nobody knows yet stays blank rather than disappearing.
+
 ## Install
 
 **In the Claude app (web or desktop):**
@@ -32,37 +34,42 @@ Pick a scope when it asks. **User** makes the skills available everywhere, which
 
 `cw` writes for a publication — a blog, a newsletter, or both — and reads what you've recorded about it before it writes, edits or reviews anything. A publication has five parts:
 
-- **The profile** (`profile.md`) — who it's for, what it's for, and what a piece should make a reader do.
+- **The profile** (`profile.md`) — who it's for, what it's for, what a piece should make a reader do, its channels, and its defaults: what a new topic becomes, where it's first published, what the newsletter sends, which platforms get a full copy or an opening excerpt, and which social accounts share it.
 - **The writing guide** (`writing-guide.md`) — how it sounds: voice, person, titles, openings, recurring parts, formatting.
 - **The brand** (`brand.md`) — how it looks: colours, fonts, the logo, the cover template, the style of its images and charts.
 - **Sources** (`sources/`) — any style guide or brief you already have, which the writing guide is built from.
 - **Examples** (`examples/`) — sample covers, logo files, and the two or three pieces that best show the voice.
 
-Each piece you work on gets its own folder, so pieces never overwrite each other and one can be paused while you start another:
+Beside those sit the calendar, the series and one folder per topic. A topic is one subject, and it can become a blog post, a newsletter issue, social posts, cross-posts or a demo project — one, some or all. Its folder holds one file per format, and the file names never change, so adding a format adds a file:
 
 ```text
 publications/
   <publication>/                a blog, a newsletter, or an outlet or client you write for
     profile.md  writing-guide.md  brand.md  sources/  examples/
-    plan.md                     the calendar: one line per piece, with its status and who's on it
+    calendar.md                 the editorial calendar: one line per topic, with its date, formats, status and who's on it
+    series/                     one plan per series, with its parts: <series-slug>.md
     reports/                    reports on the whole publication
-    pieces/
-      2026-11-rates-explainer/  one folder per piece: <year>-<month>-<slug>
-        brief.md                the brief, its status (idea, drafting, paused, published…) and who holds it
-        draft.md                the draft, or a link to it
+    topics/
+      <yyyy-mm>-<slug>/         one folder per topic, e.g. 2026-12-sourdough-starter
+        brief.md                the brief, what the topic becomes, its status and who holds it
+        blog.md                 the blog post: front matter (one title, one description, cover, links) and body
+        newsletter.md           the newsletter issue: subject, preview text, send date, audience and body
+        social.md               every social post, one section per platform
+        copies.md               cross-posts to other blogging platforms: a full copy or the opening excerpt
         sources.md              the source log
         interviews/  images/    notes and transcripts; cover, share card, diagrams
-        social.md  copies.md    social posts; where it's cross-posted
         reports/                the review, AI-writing check and findability check
   pitch-log.md                  pitches to every outlet
 ```
+
+A topic folder is named for the month it's first published, or the month it's briefed when it has no date yet. A newsletter issue that isn't about one topic, or a stand-alone thread, is a topic whose brief lists only that format. Before working on a topic, a skill reads its brief and leaves it alone while someone else holds it, unless it's paused, so two topics, or two agents, never overwrite each other. A brief's questions offer the profile's defaults, and the answers are recorded in the brief, so the next skill doesn't ask them again.
 
 **In the Claude app:**
 
 1. Create a **Project** for each blog or newsletter.
 2. In that Project, say "set up my publication". `cw:style-guide` asks you about it, or reads a style guide, past pieces or past covers you share, and gives you `profile.md`, `writing-guide.md` and `brand.md`. Anything you haven't decided stays `unset` rather than guessed.
 3. Add the three files to the Project's files, with your logo, sample covers and any style guide you already have. Images go in the Project's files too.
-4. Write from that Project: "plan my next posts", "edit this draft", "turn this into LinkedIn posts". A Project's files can't hold folders, so a piece's files are named after it: `2026-11-rates-explainer--brief.md`, `2026-11-rates-explainer--draft.md`. When Claude gives you an updated file, replace the old one in the Project; for `plan.md`, it gives you only the line to add or change.
+4. Write from that Project: "plan my next posts", "edit this post", "turn this into LinkedIn posts". A Project's files can't hold folders, so a topic's files are named `<topic folder>--<file>`: `2026-12-sourdough-starter--brief.md`, `2026-12-sourdough-starter--blog.md`. The publication's own files keep their names. When Claude gives you an updated file, replace the old one in the Project; for `calendar.md`, it gives you only the line to add or change.
 
 Outside a Project, attach the files to the chat, or Claude asks for them.
 
@@ -145,7 +152,7 @@ Nine commands, each marked `disable-model-invocation`, so Claude never starts on
 
 Each writes its report to a file, except `/tw:docs-pr-review`, which reports in chat and posts to the pull request only with `--comment`:
 
-- **One report per page or piece:** `/tw:doc-review` to `_reports/doc-review-<page-slug>.md`; `/write:ai-check` to `_reports/ai-check-<page-slug>.md` for documentation, or the piece's `reports/ai-check.md` for content; `/cw:review` to the piece's `reports/review.md`.
+- **One report per page or topic:** `/tw:doc-review` to `_reports/doc-review-<page-slug>.md`; `/write:ai-check` to `_reports/ai-check-<page-slug>.md` for documentation, or the topic's `reports/ai-check.md` for content, covering every format file its brief lists; `/cw:review` to the topic's `reports/review.md`.
 - **One report per docs set or publication:** `/tw:docs-audit`, `/tw:content-audit` and `/tw:style-check` to `_reports/docs-audit.md`, `content-audit.md` and `docs-style-check.md`; `/cw:style-check` to the publication's `reports/style-check.md`; `/cw:content-performance` to the publication's `reports/content-performance-<date>.md`.
 
 The reviews and audits verify a finding before reporting it, rank it by severity (a blocker stops publishing), and give a specific fix for each. `/tw:docs-audit` marks anything it can't prove from the source as "needs confirmation". The style checks separate findings, where the writing drifts from what the guide settles, from proposals where the guide is silent. Reports close with a scorecard and, on a re-run, how the score moved since the last one.

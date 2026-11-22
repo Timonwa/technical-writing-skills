@@ -23,6 +23,17 @@ Voice, person, tone, terminology, formatting choices and who the reader is come 
 - When a guide changes: in a codebase, save the file where it was found; in a chat app, give the user the updated file to replace in the project.
 - **For documentation, also apply `tw:docs-standards`** — its page rules (one need per page, procedures, accessible pages, code on the page) hold even where the project has a guide, which overrides it only where it decides. **For content, also apply the publication's writing guide and the content-writing skills (`cw`).**
 
+## Ask first
+
+Read the answers from the request, the guide, the publication's `profile.md` and, for content, the topic's `brief.md` first; ask only what's missing. Ask with the app's question tool where it has one, so the choices can be picked; otherwise as a numbered list answered by number. Offer choices where the answers are known and a short typed answer otherwise; where the profile or the brief already has an answer, show it and ask whether to use it. For content, record the answers in the topic's `brief.md` so the next skill doesn't ask again.
+
+1. **What is it?** Docs: tutorial · how-to · reference · explanation · README. Content: blog post · newsletter issue · social posts · essay.
+2. **Where does it go?** A docs page (path) · a topic folder, written into the format's own file: `blog.md`, `newsletter.md` or `social.md`.
+3. **Who is the reader, and what do they already know?** Short answer.
+4. **What does the reader leave with?** One sentence: what they can do, understand or decide afterwards.
+5. **What's left out, and where does it live?** Short answer: each excluded topic and the page or piece that covers it, or none.
+6. **Which guide does it answer to?** The publication's `writing-guide.md` or the project's style guide (path) · none yet, so build one with `cw:style-guide`. Not asked for documentation: with no guide in the project, the documentation defaults apply.
+
 ## Craft and voice
 
 **Judge the craft** — whether a sentence can be followed, whether a claim is true and credited, whether a reader who scans finds what they came for.

@@ -25,6 +25,17 @@ Voice, person, tone, terminology, formatting choices and who the reader is come 
 - When a guide changes: in a codebase, save the file where it was found; in a chat app, give the user the updated file to replace in the project.
 - The rules below apply to code in a docs page and in a published tutorial; [Code in a tutorial](#code-in-a-tutorial) adds what a build-along needs.
 
+## Ask first
+
+Read the answers from the request, the guide, the project (its package files, lockfile and existing samples) and, for content, the topic's `brief.md` first; ask only what's missing. Ask with the app's question tool where it has one, so the choices can be picked; otherwise as a numbered list answered by number. Offer choices where the answers are known and a short typed answer otherwise. For content, record the answers in the topic's `brief.md`, under Notes for whoever picks it up next, so the next skill doesn't ask again.
+
+1. **Where does the code go?** A docs page (path) · a tutorial or technical article in a topic's `blog.md` · a newsletter issue's `newsletter.md`.
+2. **Which languages, and which versions is it verified against?** Short answer: language, runtime and library versions, such as "TypeScript, Node 22, the SDK at 4.2".
+3. **Can the samples be run before they ship?** Yes, here · in the companion repository (link; the brief's Demo project row) · no, so they're marked unverified.
+4. **Which placeholder convention?** The guide's · uppercase with underscores (`PROJECT_ID`), the default where the guide sets none.
+5. **For a tutorial, where does the reader start?** An empty folder · a starter project or branch (link) · the end of the previous part in the series.
+6. **How are the samples kept working?** Extracted and run in checks · included from real files in a repository · run by hand on a schedule · nothing yet.
+
 ## One sample, one question
 
 - **Each sample answers exactly one thing.** A sample demonstrating authentication, pagination and error handling at once demonstrates none of them, because the reader can't tell which lines are the point.

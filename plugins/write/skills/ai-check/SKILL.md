@@ -1,7 +1,7 @@
 ---
 name: ai-check
 description: >-
-  Manually invoked. Checks whether a draft (a docs page, a blog post, a newsletter, any piece published under a person's name) reads as machine-written, and reports the specific tells rather than a verdict: citations that don't hold, em-dash frequency and pattern, blacklisted vocabulary and phrases, the structural tells (uniform section lengths, lists of exactly three, summaries that restate, closers that congratulate), hollow claims, and rhythm. Returns a rewrite for each flagged passage, then asks which to apply.
+  Manually invoked. Checks whether writing (a docs page, a topic's blog post, newsletter issue or social posts, any piece published under a person's name) reads as machine-written, and reports the specific tells rather than a verdict: citations that don't hold, em-dash frequency and pattern, blacklisted vocabulary and phrases, the structural tells (uniform section lengths, lists of exactly three, summaries that restate, closers that congratulate), hollow claims, and rhythm. Returns a rewrite for each flagged passage, then asks which to apply.
 argument-hint: '[path] [--fix]'
 model: opus
 effort: high
@@ -31,10 +31,21 @@ Voice, person, tone, terminology, formatting choices and who the reader is come 
 - Where there's no guide: for documentation, the documentation voice in `tw:docs-standards` is the default; for content, ask who the reader is and what the piece is for before checking it, and offer to build a guide with `cw:style-guide`.
 - When a guide changes: in a codebase, save the file where it was found; in a chat app, give the user the updated file to replace in the project.
 
+## Ask first
+
+Read the answers from the request, the arguments, the topic's `brief.md` and the guide first; ask only what's missing. Ask with the app's question tool where it has one, so the choices can be picked; otherwise as a numbered list answered by number. Offer choices where the answers are known and a short typed answer otherwise. Record the answers in the report's header.
+
+1. **What should be checked?** A docs page · a folder of pages · a diff · a topic folder · pasted text. The path, or the text itself.
+2. **In a topic folder, which formats?** Pick any of the formats `brief.md` lists with a file: blog post (`blog.md`) · newsletter issue (`newsletter.md`) · social posts (`social.md`) · cross-posts (`copies.md`). Default: every listed format whose file exists.
+3. **Which guide does it answer to?** The project's style guide or the publication's `writing-guide.md` (path) · none, use the defaults.
+4. **Any convention the guide doesn't record that should be left alone?** Em-dash asides · a fixed sign-off · a recurring opener · none. Short answer for anything else.
+
 ## Arguments
 
-- `[path]` — the draft to check: a file, a folder, a diff, or text pasted into the prompt. Omitted → ask.
-- `[--fix]` — don't audit. Read the existing report for the page or piece given, list what's in it, and ask which findings to fix. With no path, list the ai-check reports on disk and ask which. For coming back to a report you ran earlier.
+- `[path]` — what to check: a file, a folder, a diff, a topic folder, or text pasted into the prompt. Omitted → ask.
+- `[--fix]` — don't audit. Read the existing report for the page or topic given, list what's in it, and ask which findings to fix. With no path, list the ai-check reports on disk and ask which. For coming back to a report you ran earlier.
+
+**A topic folder** (`topics/<yyyy-mm>-<slug>/`) holds one file per format. Read `brief.md`'s **What this topic becomes** and check the format files it lists: `blog.md`, `newsletter.md`, `social.md`, and only the **Opening excerpt** in `copies.md`, since a full copy is `blog.md` itself. If **Held by** names someone else and the status isn't `paused`, leave it and say so. The check writes only its report and never sets **Held by**.
 
 ## Method
 
@@ -83,65 +94,12 @@ Voice, person, tone, terminology, formatting choices and who the reader is come 
 - **Explanations that restate the term** instead of defining it.
 - **Balanced both-sides padding** where the piece should take a position or state a fact. An opinion piece with no opinion is the content version of this tell.
 
-### Report format
+### Report
 
-Write one report per draft, creating the directory if it doesn't exist, and summarise in chat. Tell the user the path when you're done.
+Write the report from the template in [references/output-format.md](references/output-format.md), every field filled or left blank, never removed, and summarise the findings in chat:
 
-- **Documentation:** `_reports/ai-check-<page-slug>.md`, where the slug is the page's path under the docs folder with slashes as hyphens and no extension (`docs/guides/webhooks.md` → `_reports/ai-check-guides-webhooks.md`).
-- **Content:** the piece's `reports/ai-check.md`, inside its folder (`pieces/<yyyy-mm>-<slug>/reports/ai-check.md`). In a chat app, hand it back as `<piece folder name>--ai-check.md`.
-
-```markdown
-# AI check — <piece>
-
-**Date:** <YYYY-MM-DD> · **Words:** <N> · **House rule applied:** <guide, or "none — defaults"> · **Tell density:** <N per 1,000 words> · **Overall:** <X>/10
-
-## Score change (previous → current)
-| Metric | Previous | Current | Δ | Trend |
-| --- | --- | --- | --- | --- |
-| Overall | <prev/10 or N/A> | <cur/10> | <+N / -N / 0> | <▲ / ▼ / ■ / N/A> |
-
-## Summary
-| Category | Count | Severity |
-| --- | --- | --- |
-| Punctuation rhythm | <N> | <High / Medium / Low> |
-| Vocabulary | <N> | |
-| Phrases | <N> | |
-| Structure | <N> | |
-| Substance | <N> | |
-
-## Findings
-| ID | Category | Tell | Status | Location |
-| --- | --- | --- | --- | --- |
-
-### A1 — <tell>
-- **Now:** <the current text>
-- **Why it reads as generated:** <the specific pattern>
-- **Proposed:** <the rewrite>
-
-## Deliberate — left alone
-Patterns that match a tell but appear to be the author's or the house's choice.
-
-| Pattern | Where | Why it was left |
-| --- | --- | --- |
-
-## Scorecard
-Higher means it reads more like a person wrote it.
-
-| Category | Score | Notes |
-| --- | --- | --- |
-| Punctuation rhythm | <X>/10 | |
-| Vocabulary | <X>/10 | |
-| Phrases | <X>/10 | |
-| Structure | <X>/10 | |
-| Substance | <X>/10 | |
-
-```
-
-### Output
-
-- **Findings** in chat with a rewrite for each, grouped by category, worst-first.
-- **Tell density** per 1,000 words, so a long piece isn't flagged merely for being long.
-- **The rewrites you were asked for**, and a note of what was deliberately left.
+- **Documentation:** `_reports/ai-check-<page-slug>.md` (`docs/guides/webhooks.md` → `_reports/ai-check-guides-webhooks.md`).
+- **Content:** the topic's `reports/ai-check.md`, one report covering every format file checked. In a chat app, hand it back as `<topic folder>--ai-check.md`.
 
 ## Re-running it
 

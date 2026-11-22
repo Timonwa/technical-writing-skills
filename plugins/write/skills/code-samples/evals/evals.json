@@ -43,10 +43,12 @@
     },
     {
       "id": 4,
-      "prompt": "For my tutorial post, step 3 shows `const client = new Client({ apiKey: 'YOUR_API_KEY' })`, but the demo repo's code at that step uses process.env.API_KEY. My publication's guide sets no placeholder convention.",
-      "expected_output": "Should flag the mismatch: the code in the piece must match the companion repo at that step, so a reader who copies from the article gets the same result as the repo. Should read the key from the environment in the piece too, matching the repo and the rule against literal secrets. With no convention in the guide, should use Google's placeholder style (uppercase with underscores, no possessive like YOUR_), e.g. API_KEY, and explain it after the sample. Should recommend running the tutorial from a clean start, copying from the rendered post.",
+      "prompt": "In publications/field-notes/topics/2026-12-first-api-client/, blog.md is a tutorial post whose step 3 shows `const client = new Client({ apiKey: 'YOUR_API_KEY' })`, but the demo repo's code at that step uses process.env.API_KEY. The brief's Demo project row links the repo, and my publication's guide sets no placeholder convention.",
+      "expected_output": "Should read the companion repository from the brief's Demo project row and the missing placeholder convention from the guide instead of asking for either, and work in blog.md. Should flag the mismatch: the code in the piece must match the companion repo at that step, so a reader who copies from the article gets the same result as the repo. Should read the key from the environment in the piece too, matching the repo and the rule against literal secrets. With no convention in the guide, should use Google's placeholder style (uppercase with underscores, no possessive like YOUR_), e.g. API_KEY, and explain it after the sample. Should recommend running the tutorial from a clean start, copying from the rendered post.",
       "files": [],
       "expectations": [
+        "Takes the repository from the brief and the convention from the guide without asking for them",
+        "Edits the tutorial in the topic's blog.md",
         "Flags that the post's code and the repo's code differ",
         "Reads the key from the environment in the post",
         "Uses an uppercase placeholder without YOUR_ when the guide sets none",
