@@ -34,11 +34,17 @@ Edited:
 ```markdown
 ### Rotate an API key
 
-Rotate a key when it may have leaked, or on your regular schedule. The old key keeps working for 24 hours, so deployed clients don't break.
+Rotate your API keys regularly. Rotating generates a new key, and the old key stops working after 24 hours.
 
-1. On the **Settings** page, select **API keys**.
-2. Next to the key, select **Rotate**.
-3. Copy the new key and store it in your secret manager. It isn't shown again.
+1. Go to the **Settings** page.
+2. Select **Rotate**.
 ```
 
-What changed and why: a task heading with a bare infinitive; the goal and the 24-hour window first; "it's worth noting" and "simply" cut; the passive turned into imperatives; one action per step, location before the action; "below" replaced by the name of the page; bold for the interface labels only.
+Questions for the author:
+
+- Should a possible leak be named as a reason to rotate, alongside the regular schedule?
+- Is the 24-hour window there so deployed clients keep working, and should the page say so?
+- Is the new key shown only once, so the reader has to store it straight away?
+- Where on the **Settings** page is **Rotate** — in an API keys section, next to each key?
+
+What changed and why: a task heading with a bare infinitive; the goal and the 24-hour window first; "it's worth noting" and "simply" cut; the passive turned into imperatives; one action per step, location before the action; "below" replaced by the name of the page; bold for the interface labels only; nothing added that the draft didn't say — anything the reader may need beyond it goes to the author as a question.

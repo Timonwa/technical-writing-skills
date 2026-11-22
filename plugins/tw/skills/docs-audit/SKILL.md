@@ -36,7 +36,7 @@ Read the answers from the request, the arguments, the project and its guide firs
 
 - `[path]` — the content to audit: a directory, a single file, a diff, or an exported set. Omitted → ask what to audit rather than guessing.
 - `[--source <path-or-url>]` — where the truth lives, when it isn't the content itself: a code repository, a running product URL, an API spec, a staging login. Omitted → detect a repo if there is one; if nothing turns up, ask before concluding there's nothing to verify against, since the source is often a staging URL or a spec you'd have to be told about. Only once the answer is no, run in **unverified mode** and say so.
-- `[--fix]` — don't audit. Read the existing `_reports/docs-audit.md`, list what's in it, and ask which findings to fix. For coming back to a report you ran earlier.
+- `[--fix]` — don't audit. Read the existing `_reports/docs-audit.md`, list what's in it, and ask which findings to fix. For acting on a report from an earlier run.
 
 ## Method
 
@@ -145,7 +145,7 @@ Nothing is edited before step 2 is answered. The editing tools are unavailable w
 
 ### Fixing from an earlier report
 
-`--fix` skips the audit entirely and works from the report already on disk, whatever its age — ten minutes old, an hour, a month. Use it whenever you want to act on findings you've already read rather than generate a new set; re-auditing would re-check the whole set and raise new findings mid-fix.
+`--fix` skips the audit entirely and works from the report already on disk, whatever its age — ten minutes old, an hour, a month. It's for acting on findings already read rather than generating a new set; re-auditing would re-check the whole set and raise new findings mid-fix.
 
 - **Say how old the report is** — its date, and how long ago that was. Someone deciding what to fix needs to know whether they're looking at today's picture or last month's.
 - **Verify each finding still exists before fixing it.** Check the actual location; don't trust the report's description of it. Between the audit and now, the page may have changed, someone else may have fixed it, or the thing it described may have moved.

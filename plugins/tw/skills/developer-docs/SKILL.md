@@ -93,7 +93,11 @@ Every API key is limited to 100 requests per minute on the free plan and 1,000 o
 Read the remaining quota from the response headers on any request:
 
 ```ts
-const res = await fetch("https://api.example.com/v1/items", { headers: { Authorization: `Bearer ${apiKey}` } }); console.log(res.headers.get("x-ratelimit-remaining")); // "97"
+const apiKey = process.env.EXAMPLE_API_KEY;
+const res = await fetch("https://api.example.com/v1/items", {
+  headers: { Authorization: `Bearer ${apiKey}` },
+});
+console.log(res.headers.get("x-ratelimit-remaining")); // "97"
 ```
 ````
 

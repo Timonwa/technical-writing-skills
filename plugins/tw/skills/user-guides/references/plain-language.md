@@ -24,5 +24,5 @@ The test separating tiers 3 and 4 is **teach-or-cut**: would a first-time user n
 ## Tone checks
 
 - Read the first line alone. Does it answer the question? If not, rewrite it.
-- Read it aloud. If you run out of breath, the sentence is too long.
+- Would a sentence leave someone reading it aloud out of breath? If so, it's too long — split it.
 - Would someone who has never used a product like this understand every word? If not, simplify or define.

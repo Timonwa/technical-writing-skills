@@ -81,9 +81,9 @@ Write both for the developer consuming the API, not the one who built it:
 - **Include** — what it does or returns, action verb first; non-obvious behaviour the caller has to plan for (side effects, idempotency, eventual consistency, state transitions that can't be undone); the distinction from a sibling endpoint that does something similar.
 - **Exclude** — anything the entry already encodes elsewhere ("requires authentication", "rate-limited", "the body is optional"); internal implementation details (which database, which queue, which service owns it); internal permission strings; cross-references to schema names the reader can't see; roadmap notes.
 
-> ❌ "Cursor-paginated public items list used by the discover-page rails. Server-enforced filters — `discoverable` AND `status live`. See `PublicItemsQuerySchema`. Rate-limited."
+> ❌ "Cursor-paginated product list backing the storefront grid. Server-side filter on `visibility = public` AND `status = active`. See `ProductListQuerySchema`. Rate-limited."
 >
-> ✓ "Returns a paginated list of items that are live and publicly visible."
+> ✓ "Returns a paginated list of products that are active and publicly visible."
 
 ## The pages around the reference
 

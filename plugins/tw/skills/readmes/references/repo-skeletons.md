@@ -72,7 +72,7 @@ Signal: `package.json` with `main`/`exports` (or the language's equivalent), no 
 
 ## App
 
-Signal: a framework entry — `next.config.*`, `vite.config.*`, an `app/` or `src/pages/`.
+Signal: a framework entry — `next.config.*`, `vite.config.*`, `manage.py` (Django), `config/routes.rb` (Rails), an `app/` or `src/pages/`.
 
 - Leads with what the app does, and the live URL if deployed
 - Then local setup: prerequisites, env vars, run commands
@@ -80,7 +80,7 @@ Signal: a framework entry — `next.config.*`, `vite.config.*`, an `app/` or `sr
 
 ## CLI
 
-Signal: `bin` in `package.json`, or an installable binary.
+Signal: `bin` in `package.json`, `[project.scripts]` in `pyproject.toml`, or an installable binary.
 
 - Leads with install, then the 3–5 most-used commands, each with real output
 - The full flag reference is `--help` or a docs link, never a table of every flag
@@ -105,7 +105,7 @@ Signal: lives under `packages/` or `apps/`.
 Signal: exists to show something off.
 
 - Says what it demonstrates, links the thing it demos, and gives the shortest path to running it
-- If it accompanies a tutorial (blog post or video), stop — that's a different shape (star callouts, branch variants, About metadata), not this one
+- A tutorial's companion repo needs a different shape → `cw:demo-project`
 
 ## One of a set of near-identical templates
 
@@ -121,11 +121,15 @@ Signal: the repo (or folder) is one of several starter templates, example apps, 
 
 Sort the files in a directory by size from the command line.
 
+## Prerequisites
+
+- Node.js 24 or later, with npm
+
 ## Quickstart
 
 ```bash
 npm install -g filesort
-filesort . --top 10
+filesort . --top 3
 ```
 
 ```text
@@ -138,7 +142,7 @@ filesort . --top 10
 
 | Command                       | What it does                       |
 | ----------------------------- | ---------------------------------- |
-| `filesort <dir>`              | List files by size, smallest first |
+| `filesort <dir>`              | List files by size, largest first |
 | `filesort <dir> --top <n>`    | Largest n files only               |
 | `filesort <dir> --csv <file>` | Export the listing to CSV          |
 

@@ -43,7 +43,7 @@ This is the difference between a knowledge base and a graveyard. Every document 
 - **Review cadence** — how often that has to happen, chosen from how fast the underlying thing changes. Common practice: quarterly for runbooks and on-call docs, with a scheduled dry run; yearly for policy and reference pages; and immediately after any incident the document was used in.
 - **Status** — current, draft, or superseded, with a link to whatever replaced it.
 
-If your platform supports it, surface the stale ones automatically. If it doesn't, a periodic sweep of last-reviewed dates is the minimum.
+Where the platform can surface stale docs automatically, recommend setting that up; where it can't, a periodic sweep of last-reviewed dates is the minimum.
 
 ## Make it findable
 
@@ -52,7 +52,7 @@ An internal doc that can't be found is worse than none, because the effort was s
 - **Title it the way someone would search for it under pressure** — the problem or the task, in the words used out loud. "Database failover" beats "Postgres HA procedures v2".
 - **One home per topic.** Internal docs sprawl across every tool an organization has bought. Decide where each kind lives and link from everywhere else rather than copying.
 - **Link it from where the work happens** — the alert that fires, the ticket template, the repository, the channel topic, the calendar invite. The document has to meet people where they already are.
-- **Answer the frequent question once, publicly, then link the answer.** Every time you answer something in a message, that's a signal it belongs in a document.
+- **Answer the frequent question once, publicly, then link the answer.** A question that keeps being answered in messages belongs in a document.
 
 ## The types and their skeletons
 
@@ -126,7 +126,7 @@ Keep it to one or two pages. A record nobody can read in five minutes doesn't ge
 
 - **Capture from whoever just did the thing**, while they still remember the step that wasn't obvious. A week later, it's gone.
 - **After an incident or a first-time task, write the procedure** — that's the moment the knowledge exists and the moment it's cheapest to record.
-- **Have the next person follow it and fix what breaks.** A runbook nobody has executed from the document is a draft. Dry-running procedures on a schedule is the only reliable way to know they still work.
+- **Recommend that the next person to do the task follows it and fixes what breaks.** A runbook nobody has executed from the document is a draft. Dry-running procedures on a schedule is the only reliable way to know they still work.
 - **A rough document that exists beats a polished one that's planned.** Publish it with gaps marked and improve it in place.
 
 ## Confidentiality

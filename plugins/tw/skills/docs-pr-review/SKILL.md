@@ -11,7 +11,7 @@ disable-model-invocation: true
 
 # Docs PR review
 
-A review of the **documentation in a pull request**, for when developers ship a change and draft the docs, and a writer reviews the docs part. Where `/tw:doc-review` reviews a document on its own, this one reviews it against the change it belongs to: is every claim true of what this PR does, and did anything the PR changes go undocumented?
+A review of the **documentation in a pull request** — often docs a developer drafted alongside a code change. Where `/tw:doc-review` reviews a document on its own, this one reviews it against the change it belongs to: is every claim true of what this PR does, and did anything the PR changes go undocumented?
 
 The editorial standard is `/tw:doc-review`'s five levels of edit, `tw:editing-standards`, `tw:docs-standards` and `write:writing-standards`' voice rules, plus the skill for each document type the PR touches.
 

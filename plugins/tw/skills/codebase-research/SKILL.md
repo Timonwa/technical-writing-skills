@@ -6,11 +6,11 @@ description: >-
 
 # Codebase research
 
-Every documentation standard says the same thing: verify against source, never from memory. This is how you actually do that in a repository you didn't write and may not fully understand.
+Verify against source, never from memory — including in a repository you didn't write and may not fully understand.
 
-**You are hunting for names and values, not understanding the system.** A writer doesn't need to follow the algorithm — they need the exact parameter name, the real default, the literal error text, the actual limit. That is a far smaller job than reading code as an engineer would, and treating it as the larger job is why writers avoid it.
+**You are hunting for names and values, not understanding the system.** A writer doesn't need to follow the algorithm — they need the exact parameter name, the real default, the literal error text, the actual limit. That is a far smaller job than reading code as an engineer would; don't treat it as the larger one.
 
-The danger runs the other way too. A writer who has read the code has more confidence than one who hasn't, and confidence built on a value that production overrides is worse than an honest gap. The **Traps** section is the part of this skill that matters most.
+The danger runs the other way too. A writer who has read the code has more confidence than one who hasn't, and confidence built on a value that production overrides is worse than an honest gap. Check every value against the traps before writing it down.
 
 ## Voice and audience come from the writing's own guide
 

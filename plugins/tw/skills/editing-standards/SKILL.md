@@ -109,7 +109,7 @@ Run this on anything published under a person's name — in documentation, machi
 - **Blacklisted vocabulary** — delve, leverage, robust, comprehensive, pivotal, seamless, transformative, "furthermore", "moreover".
 - **Blacklisted phrases** — "In today's fast-paced world…", "It's worth noting that…", "At its core…", "In conclusion…", "Whether you're a X, Y, or Z…". Delete or rewrite as something a person would say aloud.
 - **Structural patterns** — every section the same length, every list exactly three items, a summary restating what was just said, a closing that congratulates the reader.
-- **Self-check** — read it aloud. If you wouldn't say it to the reader in person, revise it.
+- **Self-check** — would a person say it to the reader in conversation? If not, revise it.
 
 The common documentation problems, with a before-and-after edit, are in [references/problems.md](references/problems.md).
 

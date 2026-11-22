@@ -25,9 +25,9 @@ Write to `_reports/docs-style-check.md`, creating the directory if it doesn't ex
 
 ## Terminology drift
 
-| ID  | Concept   | Variants (count)                 | Recommended | Confidence | Occurrences | Status |
-| --- | --------- | -------------------------------- | ----------- | ---------- | ----------- | ------ |
-| 1   | <concept> | `<a>` (74), `<b>` (9), `<c>` (2) | `<a>`       | High       | 11          | OPEN   |
+| ID  | Concept   | Variants (count)                 | Recommended | Confidence | Occurrences to change | Status |
+| --- | --------- | -------------------------------- | ----------- | ---------- | --------------------- | ------ |
+| 1   | <concept> | `<a>` (74), `<b>` (9), `<c>` (2) | `<a>`       | High       | 11                    | OPEN   |
 
 ### T1 — <concept>
 

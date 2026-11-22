@@ -40,7 +40,7 @@ Read the answers from the request, the arguments, the document itself, the proje
 ## Arguments
 
 - `[path]` — a file, a folder, or a diff. Omitted → review the current changes if there are any, otherwise ask.
-- `[--fix]` — don't audit. Read the existing report for the page given, list what's in it, and ask which findings to fix. With no path, list the doc-review reports on disk and ask which. For coming back to a report you ran earlier.
+- `[--fix]` — don't audit. Read the existing report for the page given, list what's in it, and ask which findings to fix. With no path, list the doc-review reports on disk and ask which. For acting on a report from an earlier run.
 
 ## Method
 
@@ -113,7 +113,7 @@ Nothing is edited before step 2 is answered. The editing tools are unavailable w
 
 ### Fixing from an earlier report
 
-`--fix` skips the audit entirely and works from the report already on disk, whatever its age — ten minutes old, an hour, a month. Use it whenever you want to act on findings you've already read rather than generate a new set; re-auditing would renumber them underneath you.
+`--fix` skips the audit entirely and works from the report already on disk, whatever its age — ten minutes old, an hour, a month. It's for acting on findings already read rather than generating a new set; re-auditing would renumber them underneath you.
 
 - **Say how old the report is** — its date, and how long ago that was. Someone deciding what to fix needs to know whether they're looking at today's picture or last month's.
 - **Verify each finding still exists before fixing it.** Check the actual location; don't trust the report's description of it. Between the audit and now, the page may have changed, someone else may have fixed it, or the thing it described may have moved.

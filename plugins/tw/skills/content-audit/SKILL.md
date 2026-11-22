@@ -11,7 +11,7 @@ disallowed-tools: Edit, NotebookEdit
 
 # Content audit
 
-A **manually-invoked audit of the shape of a documentation set**: what exists, whether each piece earns its place, and what's missing. This is the first job on inheriting a docs set and the one that decides what everyone writes for the next quarter.
+A **manually-invoked audit of the shape of a documentation set**: what exists, whether each piece earns its place, and what's missing.
 
 It asks a different question from `/tw:docs-audit`. That one asks whether a page is **true and working**; this one asks whether the set is the **right set** — and a perfectly accurate page for a task nobody performs still fails this audit.
 
@@ -35,7 +35,7 @@ Read the answers from the request, the arguments, the project and its guide firs
 
 - `[path]` — the content set to inventory. Omitted → ask.
 - `[--tasks <path-or-list>]` — the reader tasks to measure coverage against, if you already have them. Omitted → ask whether a task list, journey map or support-ticket export exists before building one, then derive from the sources below and **present the list for confirmation before running the gap analysis**, because every coverage finding depends on it.
-- `[--fix]` — don't audit. Read the existing `_reports/content-audit.md`, list what's in it, and ask which findings to fix. For coming back to a report you ran earlier.
+- `[--fix]` — don't audit. Read the existing `_reports/content-audit.md`, list what's in it, and ask which findings to fix. For acting on a report from an earlier run.
 
 ## Method
 
@@ -136,7 +136,7 @@ Nothing is edited before step 2 is answered. The editing tools are unavailable w
 
 ### Fixing from an earlier report
 
-`--fix` skips the audit entirely and works from the report already on disk, whatever its age — ten minutes old, an hour, a month. Use it whenever you want to act on findings you've already read rather than generate a new set; re-auditing would renumber them underneath you.
+`--fix` skips the audit entirely and works from the report already on disk, whatever its age — ten minutes old, an hour, a month. It's for acting on findings already read rather than generating a new set; re-auditing would renumber them underneath you.
 
 - **Say how old the report is** — its date, and how long ago that was. Someone deciding what to fix needs to know whether they're looking at today's picture or last month's.
 - **Verify each finding still exists before fixing it.** Check the actual location; don't trust the report's description of it. Between the audit and now, the page may have changed, someone else may have fixed it, or the thing it described may have moved.

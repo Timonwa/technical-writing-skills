@@ -64,7 +64,7 @@ The defaults documentation uses where the project's style guide doesn't decide o
 - **A procedure is a numbered list**; a list that isn't a sequence is bulleted ([Google](https://developers.google.com/style/procedures)).
 - **Introduce it** with a sentence that adds context beyond the heading, ending in a colon when the steps follow immediately.
 - **One action per step**, a complete sentence starting with an imperative verb; short actions in the same place can share a step ([Microsoft](https://learn.microsoft.com/en-us/style-guide/procedures-instructions/writing-step-by-step-instructions)).
-- **Where before the action** — "On the **Design** tab, select **Header Row**", so the reader is in the right place before they act.
+- **Where before the action** — "On the **Account** page, select **Security**", so the reader is in the right place before they act.
 - **Include the step that completes the task** — selecting **Save** or **Apply** — and the result the reader should see.
 - **An optional step starts with "Optional:"**; a single-step procedure is written as a sentence, not a list of one.
 - **Warnings sit in the step they apply to**, before the action, never paragraphs away.

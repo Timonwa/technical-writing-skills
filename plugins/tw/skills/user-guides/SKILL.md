@@ -39,7 +39,7 @@ A guide that describes a button that isn't there, or a flow that changed last sp
 - **Without access** — no repo, no staging login, working from a spec, a recording, or a conversation — write only what you were told. Never invent a label, a step, a threshold, or an error message because it sounds like what the product would say; a confident invention is worse than a visible gap.
 - **Ask for the specifics in one batch**, and mark anything you couldn't verify so whoever can check it knows where to look.
 
-**The product facts come from you, and are never invented:** the product's name, the domain terms to teach, how each core concept is framed, the one trusted analogy, and the support channel. Ask for them once, up front, alongside the questions above — and if a style guide or glossary is handed over, work from that.
+**The product facts come from the writer, and are never invented:** the product's name, the domain terms to teach, how each core concept is framed, the one trusted analogy, and the support channel. Ask for them once, up front, alongside the questions above — and if a style guide or glossary is handed over, work from that.
 
 ## Who you write for
 
@@ -65,7 +65,7 @@ A reader learns a concept once and then meets it again three guides later — so
 7. **Warn at the moment of risk.** An irreversible or security-sensitive step gets a bold warning **at that step**, not in a paragraph far away: "Double-check the amount before you confirm. This can't be undone."
 8. **Keep it short.** Most guides land around 500 words — a rule of thumb, not a target; a concept explainer can run longer, but never pad. A section that doesn't help the reader act or understand gets cut.
 9. **Nothing sells; everything explains.** No marketing language ("revolutionary", "empowering", "seamless") anywhere in a help centre.
-10. **Check the reading level.** Aim for a reading age of about 9 — roughly US grade 6–8 — even for specialist readers, and check it with a readability tool such as Word's checker or Hemingway ([Home Office design manual](https://design.homeoffice.gov.uk/accessibility/written-content/readability)). Treat the score as a pointer to long sentences and rare words, not a goal in itself.
+10. **Check the reading level.** Aim for a reading age of about 9 even for specialist readers, and check it with a readability tool such as Word's checker or Hemingway ([Home Office design manual](https://design.homeoffice.gov.uk/accessibility/written-content/readability)). Treat the score as a pointer to long sentences and rare words, not a goal in itself.
 11. **One home per fact.** Each fact, rule or explanation lives in one guide; every other guide that needs it links there instead of restating it. Inside a guide, say each thing once: an intro, a step, a caption and a troubleshooting entry that all repeat the same condition are three chances to drift. A concept's one-line framing is reused word for word, but its full explanation still has one home.
 
 ## Structure of every guide
@@ -97,7 +97,7 @@ Apply `write:writing-standards`' voice rules and `tw:docs-standards` first — t
 - [ ] The first line answers the question or states the bottom line.
 - [ ] No plumbing jargon that fails the teach-or-cut test; every required term glossed on first use.
 - [ ] Core concepts use the agreed framing, word-for-word.
-- [ ] Every interface label the guide names is explained in plain words or linked to the guide that explains it. No lists of bare labels, and no circular descriptions ("Combos: manage combos").
+- [ ] Every interface label the guide names is explained in plain words or linked to the guide that explains it. No lists of bare labels, and no circular descriptions ("Templates: manage templates").
 - [ ] Read it once as a first-time user: any sentence that needs re-reading gets rewritten.
 - [ ] Every irreversible or security step has a bold warning **at that step**, not in a paragraph elsewhere.
 - [ ] Ends with `## Related articles` linking 2–5 existing, genuinely related guides.

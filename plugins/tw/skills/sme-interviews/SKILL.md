@@ -1,7 +1,7 @@
 ---
 name: sme-interviews
 description: >-
-  Helping a writer get accurate information from an engineer or subject-matter expert for documentation. Before: read the change, the tests and the existing docs, run the product, draft the page and the question list, and write the request for time. After: turn the transcript or notes into verified facts, check them against the code, mark the gaps, update the draft and write a review request that gets answered. Use on "interview an engineer", "talk to the engineer", "questions about this feature", "technical review of my draft", "get this reviewed by engineering".
+  Helping a writer get accurate information from an engineer or subject-matter expert for documentation. Before: read the change, the tests and the docs, run the product, draft the page, the questions and the request for time. After: turn the transcript or notes into facts checked against the code, mark the gaps, update the draft and write a review request that gets answered. Use on "interview an engineer", "talk to the engineer", "questions about this feature", "technical review of my draft", "get this reviewed by engineering".
 ---
 
 # Working with subject-matter experts

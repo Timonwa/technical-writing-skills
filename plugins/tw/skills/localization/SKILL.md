@@ -46,7 +46,7 @@ Read the answers from the request, the project, its guide and any terminology li
 - **No idiom, metaphor, slang, or humour.** "Out of the box", "under the hood", "a piece of cake", "hit the ground running" — each translates literally into nonsense. Say what it means.
 - **No puns or wordplay**, ever, including in headings.
 - **Cut culture-bound references** — sports, holidays, local institutions, films, regional food. An example anchored to one culture excludes every other one.
-- **Avoid negatives, and never double negatives.** "Don't forget to disable the option" is three errors waiting to happen; "leave the option off" is one clear instruction.
+- **Avoid negatives, and never double negatives.** "Don't forget to disable the option" holds three negatives — don't, forget, disable — and a translator can reverse any one of them; "leave the option off" is one clear instruction.
 - **Prefer simple verb forms** — present tense, active voice, imperative for instructions. Phrasal verbs ("set up", "turn on", "back up") are a known trouble spot; where a single-word equivalent reads naturally, use it.
 - **Write out abbreviations** on first use, and don't invent new ones.
 - **Keep headings full and grammatical**, not fragments.

@@ -53,7 +53,7 @@ Writing a hand-authored SVG: clean source, correct accessibility, and theme-able
 Flowchart node (colors via `--diagram-*` custom properties so the host theme decides — never a hardcoded palette):
 
 ```svg
-<g transform="translate(x, y)">
+<g transform="translate(40, 40)">
   <rect width="160" height="60" rx="8" fill="var(--diagram-node-fill, transparent)"
         stroke="var(--diagram-node-stroke, currentColor)" stroke-width="2"/>
   <text x="80" y="30" text-anchor="middle" dominant-baseline="central"
