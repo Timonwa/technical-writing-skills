@@ -173,17 +173,21 @@ publications/
 
 ## Contributing
 
-Issues and pull requests are welcome, especially for a rule that misfires on your writing or is out of date. In a pull request:
+Issues and pull requests are welcome, especially for a rule that misfires on your writing or has fallen behind the standard it cites. In a pull request:
 
 - Change one skill where you can.
 - Update its `evals/evals.json`.
+- Keep `SKILL.md` under 200 lines and its description under 550 characters. Longer material goes in the skill's `references/` folder, which Claude reads only when it needs it.
 - Run the checks:
 
-| Script              | Use it to                                     | Needs                       |
-| ------------------- | --------------------------------------------- | --------------------------- |
-| `pnpm format`       | Format everything with Prettier               | `pnpm install` first        |
-| `pnpm format:check` | Check formatting without writing              | `pnpm install` first        |
-| `pnpm validate`     | Validate the marketplace and plugin manifests | the Claude Code CLI on PATH |
+| Script              | Use it to                                                                | Needs                       |
+| ------------------- | ------------------------------------------------------------------------ | --------------------------- |
+| `pnpm format`       | Format everything with Prettier                                          | `pnpm install` first        |
+| `pnpm format:check` | Check formatting without writing                                         | `pnpm install` first        |
+| `pnpm validate`     | Validate the marketplace and plugin manifests                            | the Claude Code CLI on PATH |
+| `pnpm check:skills` | Fail on a `SKILL.md` over 200 lines or a description over 550 characters | Node                        |
+
+The skills are Markdown, so there's no build step, and Prettier is the only dependency. Without installing it, run `pnpm dlx prettier --write .` instead.
 
 ## Support
 

@@ -9,7 +9,8 @@
   "scripts": {
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "validate": "claude plugin validate . --strict"
+    "validate": "claude plugin validate . --strict",
+    "check:skills": "node scripts/check-skills.mjs"
   },
   "devDependencies": {
     "prettier": "3.9.6"
