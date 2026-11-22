@@ -38,12 +38,31 @@ Pick a scope when it asks. **User** makes the skills available everywhere, which
 - **Sources** (`sources/`) — any style guide or brief you already have, which the writing guide is built from.
 - **Examples** (`examples/`) — sample covers, logo files, and the two or three pieces that best show the voice.
 
+Each piece you work on gets its own folder, so pieces never overwrite each other and one can be paused while you start another:
+
+```text
+publications/
+  <publication>/                a blog, a newsletter, or an outlet or client you write for
+    profile.md  writing-guide.md  brand.md  sources/  examples/
+    plan.md                     the calendar: one line per piece, with its status and who's on it
+    reports/                    reports on the whole publication
+    pieces/
+      2026-11-rates-explainer/  one folder per piece: <year>-<month>-<slug>
+        brief.md                the brief, its status (idea, drafting, paused, published…) and who holds it
+        draft.md                the draft, or a link to it
+        sources.md              the source log
+        interviews/  images/    notes and transcripts; cover, share card, diagrams
+        social.md  copies.md    social posts; where it's cross-posted
+        reports/                the review, AI-writing check and findability check
+  pitch-log.md                  pitches to every outlet
+```
+
 **In the Claude app:**
 
 1. Create a **Project** for each blog or newsletter.
 2. In that Project, say "set up my publication". `cw:style-guide` asks you about it, or reads a style guide, past pieces or past covers you share, and gives you `profile.md`, `writing-guide.md` and `brand.md`. Anything you haven't decided stays `unset` rather than guessed.
 3. Add the three files to the Project's files, with your logo, sample covers and any style guide you already have. Images go in the Project's files too.
-4. Write from that Project: "plan my next posts", "edit this draft", "turn this into LinkedIn posts". When Claude gives you an updated file, replace the old one in the Project.
+4. Write from that Project: "plan my next posts", "edit this draft", "turn this into LinkedIn posts". A Project's files can't hold folders, so a piece's files are named after it: `2026-11-rates-explainer--brief.md`, `2026-11-rates-explainer--draft.md`. When Claude gives you an updated file, replace the old one in the Project; for `plan.md`, it gives you only the line to add or change.
 
 Outside a Project, attach the files to the chat, or Claude asks for them.
 
@@ -124,7 +143,10 @@ Nine commands, each marked `disable-model-invocation`, so Claude never starts on
 
 ## How the commands behave
 
-Each writes its report to `_reports/` — `ai-check.md`, `doc-review.md`, `docs-audit.md`, `content-audit.md`, `docs-style-check.md`, `content-review.md`, `content-style-check.md`, and a dated `content-performance-<date>.md` — except `/tw:docs-pr-review`, which reports in chat and posts to the pull request only with `--comment`.
+Each writes its report to a file, except `/tw:docs-pr-review`, which reports in chat and posts to the pull request only with `--comment`:
+
+- **One report per page or piece:** `/tw:doc-review` to `_reports/doc-review-<page-slug>.md`; `/write:ai-check` to `_reports/ai-check-<page-slug>.md` for documentation, or the piece's `reports/ai-check.md` for content; `/cw:review` to the piece's `reports/review.md`.
+- **One report per docs set or publication:** `/tw:docs-audit`, `/tw:content-audit` and `/tw:style-check` to `_reports/docs-audit.md`, `content-audit.md` and `docs-style-check.md`; `/cw:style-check` to the publication's `reports/style-check.md`; `/cw:content-performance` to the publication's `reports/content-performance-<date>.md`.
 
 The reviews and audits verify a finding before reporting it, rank it by severity (a blocker stops publishing), and give a specific fix for each. `/tw:docs-audit` marks anything it can't prove from the source as "needs confirmation". The style checks separate findings, where the writing drifts from what the guide settles, from proposals where the guide is silent. Reports close with a scorecard and, on a re-run, how the score moved since the last one.
 

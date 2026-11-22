@@ -34,7 +34,7 @@ Voice, person, tone, terminology, formatting choices and who the reader is come 
 ## Arguments
 
 - `[path]` — the draft to check: a file, a folder, a diff, or text pasted into the prompt. Omitted → ask.
-- `[--fix]` — don't audit. Read the existing `_reports/ai-check.md`, list what's in it, and ask which findings to fix. For coming back to a report you ran earlier.
+- `[--fix]` — don't audit. Read the existing report for the page or piece given, list what's in it, and ask which findings to fix. With no path, list the ai-check reports on disk and ask which. For coming back to a report you ran earlier.
 
 ## Method
 
@@ -85,7 +85,10 @@ Voice, person, tone, terminology, formatting choices and who the reader is come 
 
 ### Report format
 
-Write to `_reports/ai-check.md`, creating the directory if it doesn't exist — that's where every audit and report in this set goes — and summarise in chat. Tell the user the path when you're done.
+Write one report per draft, creating the directory if it doesn't exist, and summarise in chat. Tell the user the path when you're done.
+
+- **Documentation:** `_reports/ai-check-<page-slug>.md`, where the slug is the page's path under the docs folder with slashes as hyphens and no extension (`docs/guides/webhooks.md` → `_reports/ai-check-guides-webhooks.md`).
+- **Content:** the piece's `reports/ai-check.md`, inside its folder (`pieces/<yyyy-mm>-<slug>/reports/ai-check.md`). In a chat app, hand it back as `<piece folder name>--ai-check.md`.
 
 ```markdown
 # AI check — <piece>

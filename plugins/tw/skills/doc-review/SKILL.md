@@ -28,7 +28,7 @@ The editing craft is `tw:editing-standards`; the rules every piece obeys are `wr
 ## Arguments
 
 - `[path]` — a file, a folder, or a diff. Omitted → review the current changes if there are any, otherwise ask.
-- `[--fix]` — don't audit. Read the existing `_reports/doc-review.md`, list what's in it, and ask which findings to fix. For coming back to a report you ran earlier.
+- `[--fix]` — don't audit. Read the existing report for the page given, list what's in it, and ask which findings to fix. With no path, list the doc-review reports on disk and ask which. For coming back to a report you ran earlier.
 
 ## Method
 
@@ -66,7 +66,7 @@ The editing craft is `tw:editing-standards`; the rules every piece obeys are `wr
 
 ### Report format
 
-Write to `_reports/doc-review.md`, creating the directory if it doesn't exist — that's where every audit and report in this set goes — and summarise the findings in chat. Tell the user the path when you're done.
+Write to `_reports/doc-review-<page-slug>.md`, one report per page, creating the directory if it doesn't exist — the slug is the page's path under the docs folder with slashes as hyphens and no extension (`docs/guides/rotate-keys.md` → `_reports/doc-review-guides-rotate-keys.md`). Summarise the findings in chat, and tell the user the path when you're done.
 
 ```markdown
 # Review — <document>

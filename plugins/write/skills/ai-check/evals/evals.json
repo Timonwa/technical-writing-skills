@@ -4,12 +4,12 @@
     {
       "id": 1,
       "prompt": "/write:ai-check docs/guides/webhooks.md — a 1,200-word page with 11 em dashes, 'leverage' twice, 'In today's fast-paced world' as its opening and a closing paragraph that says the reader is now well equipped.",
-      "expected_output": "Should read the project's guide first and record which rule applied. Should count before judging: report em-dash density per 1,000 words (about 9, above the strong threshold of about 6) with locations, plus the vocabulary, opening and congratulating-closer tells, each with a location and a proposed rewrite. Should write the report to _reports/ai-check.md with the score-change row, summary, findings, deliberate section and scorecard, summarise in chat, then list findings by ID and ask which to fix. Should not edit the page before the user answers, and should not claim the page was AI-generated.",
+      "expected_output": "Should read the project's guide first and record which rule applied. Should count before judging: report em-dash density per 1,000 words (about 9, above the strong threshold of about 6) with locations, plus the vocabulary, opening and congratulating-closer tells, each with a location and a proposed rewrite. Should write the report to _reports/ai-check-guides-webhooks.md with the score-change row, summary, findings, deliberate section and scorecard, summarise in chat, then list findings by ID and ask which to fix. Should not edit the page before the user answers, and should not claim the page was AI-generated.",
       "files": [],
       "expectations": [
         "Reports em-dash density per 1,000 words with locations",
         "Flags the vocabulary, opening and closing tells with rewrites",
-        "Writes _reports/ai-check.md in the given format with scores",
+        "Writes _reports/ai-check-guides-webhooks.md in the given format with scores",
         "Asks which findings to fix before editing anything",
         "Makes no claim about authorship"
       ]
@@ -29,7 +29,7 @@
     {
       "id": 3,
       "prompt": "/write:ai-check --fix — fix 2 and 5 from the report you ran last week.",
-      "expected_output": "Should read the existing _reports/ai-check.md, say how old it is, and verify findings 2 and 5 still exist at their locations before changing anything; drop either that no longer exists and say so rather than counting it as fixed. Should fix only those two, mark them FIXED in the report with a note, leave the rest untouched, re-score and show the movement. Should not re-audit and renumber.",
+      "expected_output": "Should find last week's report (asking which one if several ai-check reports exist and no path was given), read it, say how old it is, and verify findings 2 and 5 still exist at their locations before changing anything; drop either that no longer exists and say so rather than counting it as fixed. Should fix only those two, mark them FIXED in the report with a note, leave the rest untouched, re-score and show the movement. Should not re-audit and renumber.",
       "files": [],
       "expectations": [
         "States the report's age",
