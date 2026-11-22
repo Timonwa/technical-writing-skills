@@ -1,0 +1,55 @@
+{
+  "skill_name": "content-refresh",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I fixed two typos and swapped a dead link in my 2024 post on sourdough hydration. Update the 'Updated on' date to today so it looks fresh.",
+      "expected_output": "Should classify the changes as cosmetic and keep the updated date as it was, citing Google's self-assessment question about changing dates to seem fresh. The original publish date stays.",
+      "files": [],
+      "expectations": [
+        "Classifies typos and a link swap as cosmetic",
+        "Refuses to move the updated date",
+        "Cites Google's guidance on fake freshness",
+        "Keeps the original publish date"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "I'm deleting 30 old posts about a discontinued product. Redirect them all to the home page.",
+      "expected_output": "Should refuse blanket redirects to the home page, quoting Google's site-move guidance, and redirect each only to a real equivalent; posts with no equivalent are removed with 404 or 410. Should remove internal links to them and archive any demo repos.",
+      "files": [],
+      "expectations": [
+        "Refuses redirecting everything to the home page",
+        "Redirects only to a real equivalent page",
+        "Uses 404 or 410 where there's no equivalent",
+        "Removes internal links and archives demo repos"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "My article said the payment provider's fee is 3%. It's actually 2.5%, and a few people have quoted my post. Just change the number quietly.",
+      "expected_output": "Should refuse a silent correction of a figure others have cited and add a visible, dated correction note in blog.md saying what was wrong and what it now says, per SPJ's 'acknowledge mistakes and correct them promptly and prominently'. Should give every full copy listed in the topic's copies.md the same change and note the same day, setting each platform's last synced date, and record the refresh in brief.md.",
+      "files": [],
+      "expectations": [
+        "Refuses to correct the cited figure silently",
+        "Writes a visible, dated correction note",
+        "Cites SPJ on correcting promptly and prominently",
+        "Updates every copy listed in copies.md with the same note and sets its last synced date"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Two of my topics — topics/2025-03-meal-prep-for-beginners and topics/2025-09-beginners-guide-to-meal-prepping — compete for the same search. Fix it, following my publication's rules.",
+      "expected_output": "Should first read the publication's writing-guide.md and profile.md (the folder AGENTS.md or the user's personal agent instructions name, else the project's publications/; in a chat app, the project's files; else ask) for how update notes are worded, and read both briefs, asking only what they leave open, such as which cross-posts it can update directly. Then merge: pick the survivor, bring over what's worth keeping into its blog.md, permanently redirect the other URL directly to it, update internal links, and add an update note if needed. Should mark the merged topic retired in its brief and in its calendar.md line, change only those lines, and point or take down its copies.",
+      "files": [],
+      "expectations": [
+        "Reads the publication's guide for update-note wording first",
+        "Reads both topics' brief.md and asks only what's missing",
+        "Picks one survivor and folds in the other's useful parts",
+        "Permanently redirects the other URL directly, without chains",
+        "Updates internal links to the survivor",
+        "Sets the merged topic to retired in its brief and its calendar.md line, changing only that line"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "skill_name": "content-audit",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "/tw:content-audit docs/",
+      "expected_output": "Should ask who reads the set and whether a task list, journey map or support-ticket export exists before building one, then derive the reader tasks and present them for confirmation before the gap analysis. Should inventory every page with type, audience, task, owner, last-verified date, usage and words, leaving unknown cells blank as findings, assign a verdict per page, cluster duplicates with a canonical page, run the gap analysis in both directions, write _reports/content-audit.md and never edit, move, merge or delete a page. Should ask the missing scope questions as one numbered list or with the question tool — product version, usage data, where owners and last-verified dates are kept — and record the answers in the report header.",
+      "files": [],
+      "expectations": [
+        "Asks about audiences and existing task lists first",
+        "Confirms the task list before the gap analysis",
+        "Inventories every page with the full columns",
+        "Treats blank owner or last-verified as findings",
+        "Assigns a verdict per page and clusters duplicates",
+        "Writes the report without editing any page",
+        "Asks the missing scope questions in one batch and records the answers in the report header"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Our docs have a beautifully written 3,000-word page on 'The history of our sync engine', and a scrappy 200-word page 'Reset your password' that gets 40% of our traffic. What verdicts?",
+      "expected_output": "Should judge the job, not the prose: the password page carries a main-path task and is a Keep or an Update, while the history page has no reader task and is a Retire candidate (or Rewrite if a real explanation need exists), naming what happens to its URL and inbound links. Should not reward length or polish.",
+      "files": [],
+      "expectations": [
+        "Judges each page on its reader job, not its prose",
+        "Gives the password page Keep or Update",
+        "Treats the history page as Retire unless a real task exists",
+        "Names what happens to a retired page's URL and links"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "In the content audit, two pages on webhook setup say different things about the retry count. Should the content audit decide which is right?",
+      "expected_output": "Should flag the contradiction as a defect in the duplicate cluster and route the accuracy call to /tw:docs-audit, since the content audit judges the shape of the set and the docs audit judges whether pages are true. Should still name the canonical page for the cluster and give the other a Merge verdict.",
+      "files": [],
+      "expectations": [
+        "Flags the contradiction within the duplicate cluster",
+        "Routes the accuracy decision to /tw:docs-audit",
+        "Names a canonical page for the cluster",
+        "Gives the duplicate a Merge verdict"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Run the content audit. Our style guide groups the docs by product area on purpose because each area has its own admin audience — don't flag that.",
+      "expected_output": "Should accept the recorded reason: grouping by product area is right when the areas map to separate audiences, so it isn't a structure finding here. Should audit each audience's tasks against its own section and still flag depth, orphans, ghosts and naming.",
+      "files": [],
+      "expectations": [
+        "Accepts the recorded grouping as the project's decision",
+        "Does not report product-area grouping as a finding",
+        "Audits each audience's tasks against its own section",
+        "Still checks depth, orphans, ghosts and naming"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,223 @@
+# AI Writing Detection
+
+Patterns commonly associated with machine-generated text. They matter less as evidence of how a draft was written than as padding: nearly every one costs the reader time and delivers nothing, and a reader who suspects a piece was generated stops trusting the person whose name is on it. Use them to find what to cut or rewrite, never to judge who wrote something — the editors who maintain the most thorough catalogue say these are "only potential signs of a problem, not the problem itself", and that "not all text featuring these indicators is AI-generated" ([Wikipedia: Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing)).
+
+Sources: [Wikipedia: Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) (maintained by WikiProject AI Cleanup), Grammarly (2025), Microsoft 365 Life Hacks (2025), Plagiarism Today (2025)
+
+---
+
+## Contents
+
+- Claims and Sources
+- Em Dashes
+- Overused Verbs
+- Overused Adjectives
+- Overused Transitions and Connectors
+- Phrases That Signal AI Writing (Opening Phrases, Transitional Phrases, Concluding Phrases, Structural Patterns)
+- Filler Words and Empty Intensifiers
+- Academic-Specific AI Tells
+- Checking a Draft
+
+## Claims and Sources
+
+The pattern that matters most, because it's the one that misleads a reader rather than just wasting their time:
+
+- **A citation that doesn't exist** — a reference, DOI, ISBN or link that resolves to nothing, or to something unrelated.
+- **A source that doesn't say what the piece claims** — generated text attaches claims to real sources "regardless of whether those sources say anything close", and attributes its own analysis to them ([Wikipedia: Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing)).
+- **Vague attribution** — "experts say", "studies show", "many believe", with no one named.
+- **Inflated significance** — a sentence telling the reader something is important, pivotal or a testament to something, instead of showing why.
+
+Check the sources before the style: open every citation and confirm it says what the sentence says it does.
+
+## Em Dashes
+
+**Em-dash overuse is one of the most commonly cited markers of AI-generated content** — a tell among several, never proof on its own. Wikipedia's catalogue now lists it as a historical indicator, more typical of models from 2022 to 2026 than of current ones, and names heavy Markdown formatting in prose (bold scattered through sentences, headings on short answers) among the more common current signs.
+
+Em dashes are longer than hyphens (-) and are used for emphasis, interruptions, or parenthetical information. While they have legitimate uses in writing, AI models drastically overuse them.
+
+### Why Em Dashes Signal AI Writing
+
+- AI models were trained on edited books, academic papers, and style guides where em dashes appear frequently
+- AI uses em dashes as a shortcut for sentence variety instead of commas, colons, or parentheses
+- Human writers use them too — macOS types one with Option-Shift-hyphen, and most word processors turn `--` into one — so the signal is density and the mechanical pattern, never the character
+- The overuse is consistent enough that many readers now associate dense em dashes with generated text
+
+### What To Do Instead
+
+| Instead of                                           | Use                                                    |
+| ---------------------------------------------------- | ------------------------------------------------------ |
+| The results—which were surprising—showed...          | The results, which were surprising, showed...          |
+| This approach—unlike traditional methods—allows...   | This approach, unlike traditional methods, allows...   |
+| The dough—after a night in the fridge—had doubled... | The dough, after a night in the fridge, had doubled... |
+| An emergency fund—three months of rent—comes first   | An emergency fund (three months of rent) comes first   |
+| The last climb—two kilometres at 8%—decides the race | The last climb (two kilometres at 8%) decides the race |
+
+### Guidelines
+
+- Use commas for most parenthetical information
+- Use colons to introduce explanations or lists
+- Use parentheses for supplementary information
+- Reserve em dashes for rare, deliberate emphasis only
+- Judge density per 1,000 words, the unit `/write:ai-check` reports: more than about 3 is a signal, more than about 6 or two in one paragraph is strong (a working threshold, not a published standard). Revise a run of mechanical asides
+- Exception — a publication's own voice rule wins: where a house style mandates em-dash asides, keep the deliberate ones; this flag targets frequency and pattern, not the character itself
+
+---
+
+## Overused Verbs
+
+| Avoid        | Use Instead                            |
+| ------------ | -------------------------------------- |
+| delve (into) | explore, examine, investigate, look at |
+| leverage     | use, apply, draw on                    |
+| optimise     | improve, refine                        |
+| utilise      | use                                    |
+| facilitate   | help, enable, support                  |
+| foster       | encourage, support, develop, nurture   |
+| bolster      | strengthen, support, reinforce         |
+| underscore   | emphasise, highlight, stress           |
+| unveil       | reveal, show, introduce, present       |
+| navigate     | manage, handle, work through           |
+| streamline   | simplify, make more efficient          |
+| enhance      | improve, strengthen                    |
+| endeavour    | try, attempt, effort                   |
+| ascertain    | find out, determine, establish         |
+| elucidate    | explain, clarify, make clear           |
+
+---
+
+## Overused Adjectives
+
+| Avoid          | Use Instead                        |
+| -------------- | ---------------------------------- |
+| robust         | strong, reliable, thorough, solid  |
+| comprehensive  | complete, thorough, full, detailed |
+| pivotal        | key, critical, central, important  |
+| crucial        | important, key, critical           |
+| vital          | important, necessary               |
+| transformative | significant, important, major      |
+| cutting-edge   | new, advanced, recent              |
+| groundbreaking | new, original, significant         |
+| innovative     | new, original, creative            |
+| seamless       | smooth, or say what happens        |
+| intricate      | complex, detailed, complicated     |
+| nuanced        | subtle, complex, detailed          |
+| multifaceted   | complex, varied, diverse           |
+| holistic       | complete, whole                    |
+
+---
+
+## Overused Transitions and Connectors
+
+| Avoid                   | Use Instead                  |
+| ----------------------- | ---------------------------- |
+| furthermore             | also, in addition, and       |
+| moreover                | also, and, besides           |
+| notwithstanding         | despite, even so, still      |
+| that being said         | however, but, still          |
+| at its core             | (cut it and state the point) |
+| to put it simply        | (cut it)                     |
+| it is worth noting that | (cut it and state the point) |
+| in the realm of         | in, within, regarding        |
+| in the landscape of     | in, within                   |
+| in today's [anything]   | now, today, or cut it        |
+
+---
+
+## Phrases That Signal AI Writing
+
+### Opening Phrases to Avoid
+
+- "In today's fast-paced world..."
+- "In today's digital age..."
+- "In an era of..."
+- "In the ever-evolving landscape of..."
+- "In the realm of..."
+- "It's important to note that..."
+- "Let's delve into..."
+- "Imagine a world where..."
+
+### Transitional Phrases to Avoid
+
+- "That being said..."
+- "With that in mind..."
+- "It's worth mentioning that..."
+- "At its core..."
+- "To put it simply..."
+- "In essence..."
+- "This begs the question..."
+
+### Concluding Phrases to Avoid
+
+- "In conclusion..."
+- "To sum up..."
+- "By [doing X], you can [achieve Y]..."
+- "In the final analysis..."
+- "All things considered..."
+- "At the end of the day..."
+
+### Structural Patterns to Avoid
+
+- "Whether you're a [X], [Y], or [Z]..." (listing three examples after "whether")
+- "It's not just [X], it's also [Y]..."
+- A stock metaphor that explains nothing: "Think of [X] as the Swiss Army knife of [Y]...". A fresh, specific metaphor is a writer's tool, not a tell
+- Starting sentences with "By" followed by a gerund: "By understanding X, you can Y..."
+
+---
+
+## Filler Words and Empty Intensifiers
+
+These words often add nothing to meaning. Remove them or find specific alternatives:
+
+- absolutely
+- actually
+- basically
+- certainly
+- clearly
+- definitely
+- essentially
+- extremely
+- fundamentally
+- incredibly
+- interestingly
+- naturally
+- obviously
+- quite
+- really
+- significantly
+- simply
+- surely
+- truly
+- ultimately
+- undoubtedly
+- very
+
+---
+
+## Academic-Specific AI Tells
+
+| Avoid            | Use Instead                    |
+| ---------------- | ------------------------------ |
+| shed light on    | clarify, explain, reveal       |
+| pave the way for | enable, allow, make possible   |
+| a myriad of      | many, numerous, various        |
+| a plethora of    | many, numerous, several        |
+| paramount        | essential, critical, first     |
+| pertaining to    | about, regarding, concerning   |
+| prior to         | before                         |
+| subsequent to    | after                          |
+| in light of      | because of, given, considering |
+| with respect to  | about, regarding, for          |
+| in terms of      | regarding, for, about          |
+| the fact that    | that (or rewrite sentence)     |
+
+---
+
+## Checking a Draft
+
+1. Read each sentence as speech, and revise any phrase that would sound unnatural said aloud
+2. Flag any sentence the writer wouldn't say to the reader in person
+3. Check for repetitive sentence structures
+4. Look for clusters of the words listed above
+5. Check that sentence lengths vary (not all similar length)
+6. Cut each intensifier that adds no meaning
+7. Open every citation and confirm it says what the sentence claims

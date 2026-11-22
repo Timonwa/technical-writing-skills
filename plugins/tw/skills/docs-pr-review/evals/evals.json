@@ -1,0 +1,55 @@
+{
+  "skill_name": "docs-pr-review",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Review the docs in PR #214. It changes the retry logic in src/client.ts (the diff sets DEFAULT_RETRIES = 5) and updates docs/configuration.md, which now says 'The client retries a failed request three times by default.'",
+      "expected_output": "Should classify the PR as docs alongside a code change and name the PR's own code diff as the source of truth. Should flag the retry default as a BLOCKER: the docs say three, the diff sets five, quoting both lines and giving the replacement. Should also check the rest of the code diff for changes a reader would notice that the docs don't mention. Should record the shape, the source of truth, the readers and the release in the review header, asking only for what the PR doesn't show.",
+      "files": [],
+      "expectations": [
+        "States the PR's shape and that the code diff is the source of truth",
+        "Flags the three-versus-five default as a blocker",
+        "Quotes the code line and the doc line",
+        "Gives the corrected sentence as a replacement",
+        "Checks the code diff for other undocumented changes",
+        "Records the shape, source of truth, readers and release in the review header"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Here's a PR that only edits docs/limits.md, changing 'Uploads are limited to 10 MB' to 'Uploads are limited to 25 MB'. I don't have access to the service's code.",
+      "expected_output": "Should classify it as a docs-only update whose source of truth is the current code or running product. Since there is no code access and nothing linked, should ask for a source (a code PR, a config file, the product's settings) and, failing that, mark the 25 MB claim as unverified rather than accepting or rejecting it. Should check that no other page still says 10 MB.",
+      "files": [],
+      "expectations": [
+        "Classifies the PR as a docs-only update",
+        "Asks for a source to verify the new limit",
+        "Marks the claim unverified if no source is given, rather than guessing",
+        "Checks other pages for the old 10 MB value"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Review PR #88. It adds a new env var, WEBHOOK_SECRET, to src/config/env.ts and a new route POST /api/webhooks/billing, plus some refactoring. The only doc change is a typo fix in the README.",
+      "expected_output": "Should classify it as docs alongside a code change and lead with missing docs: WEBHOOK_SECRET has no doc line (where to set it, what it is for) and the new webhook route is undocumented. Each missing item names the code file and line and where its doc belongs. The typo fix is reviewed but is not the headline.",
+      "files": [],
+      "expectations": [
+        "Lists WEBHOOK_SECRET as missing documentation",
+        "Lists the new webhook route as missing documentation",
+        "Names where each doc should go",
+        "Does not treat the README typo fix as the main finding"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "This PR adds a brand-new page, docs/guides/exporting-data.md. Can you review it?",
+      "expected_output": "Should classify it as new pages, checked against the current code or product, and add the new-page checks: whether it is the right document type, where it sits in the navigation and whether it is linked from it, what links in and out, and whether an existing page already covers exporting. Should then run the five levels on the page.",
+      "files": [],
+      "expectations": [
+        "Classifies the PR as new pages",
+        "Checks the page's type and its place in the navigation",
+        "Checks for an existing page that already covers the topic",
+        "Runs the five levels of edit on the new page"
+      ]
+    }
+  ]
+}

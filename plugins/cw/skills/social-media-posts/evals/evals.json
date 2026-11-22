@@ -1,0 +1,55 @@
+{
+  "skill_name": "social-media-posts",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Write social posts for my article on paying off student loans faster. Make them punchy — add some stats about how much people save, I'm sure readers will love that.",
+      "expected_output": "Should read the publication's folder first (profile.md and writing-guide.md, found from AGENTS.md or the user's agent instructions, else the project's publications/, or the project's files in a chat app, else ask), then the topic's brief.md. Should ask first only what the brief and profile's Defaults don't answer — the topic folder, platforms, kind per platform, angles, dates, the link, disclosures — showing the profile's default and asking whether to use it, and record the answers in brief.md. Should work only from the piece and never invent a number; a stat not in the article is cut or its source asked for. Should take the link from the brief or blog.md, never guess it. Should write posts by angle — announcement, key point, lesson — one angle per post, rewritten per platform.",
+      "files": [],
+      "expectations": [
+        "Reads the publication's profile and writing guide, and the topic's brief.md, first",
+        "Asks only what the brief and profile's Defaults leave open, offering the defaults, and records the answers in brief.md",
+        "Does not invent statistics not in the article",
+        "Takes the link from the brief or blog.md, or asks, instead of guessing",
+        "Writes one angle per post across announcement, key point and lesson, rewritten per platform"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Add hashtags to my LinkedIn post: #techwriting #documentation #devrel #writing #content #career #growth #motivation",
+      "expected_output": "Should cut to one or two specific hashtags that match the post, CamelCase multi-word tags (#TechWriting) so screen readers pronounce them, put them at the end, and drop mismatched ones like #Motivation on a technical post. Should note LinkedIn treats hashtags as weak categorisation.",
+      "files": [],
+      "expectations": [
+        "Reduces to one or two specific hashtags",
+        "CamelCases multi-word hashtags",
+        "Places hashtags at the end",
+        "Drops tags that don't match the post"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "This post is about a sponsored product review. Put #ad in with the other hashtags at the end so it doesn't distract.",
+      "expected_output": "Should say the disclosure goes in the post itself, plainly and before the link, not buried among hashtags or behind 'more'. Should keep it in the post's own words and use the platform's built-in disclosure where available in addition. Should follow the profile's disclosure requirements.",
+      "files": [],
+      "expectations": [
+        "Places the disclosure in the post body before the link",
+        "Refuses to bury the disclosure among hashtags",
+        "Uses the platform's disclosure feature as an addition",
+        "Follows the profile's disclosure rules"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Write the posts for topics/2026-12-sourdough-starter from the bakery's company accounts: a thread on X and a summary with link on LinkedIn. The post isn't live yet.",
+      "expected_output": "Should read brief.md's Social posts row and the writing guide's Social section first, asking only what's missing — here, if the guide has no Social section, the tone the company uses on X and on LinkedIn, recording the answers there. Should write as \"we\" in the company's voice, keeping the voice the same and letting the tone shift per platform. Should claim the topic, write only social.md from its template with one section per platform, leave the post URL and the link blank with [link] counted at each platform's link cost, count characters the platform's way, and keep every thread item within the per-post limit.",
+      "files": [],
+      "expectations": [
+        "Reads the guide's Social section for the account, person and per-platform tone, and asks for the tone only if it's missing",
+        "Writes as \"we\" for the company account, with the same voice and a tone fitted to each platform",
+        "Writes only social.md from the template, one section per platform, with the post URL and link blank until live",
+        "Counts characters the platform's way, with [link] counted at the platform's link cost",
+        "Keeps each thread item a separate post within the per-post limit"
+      ]
+    }
+  ]
+}

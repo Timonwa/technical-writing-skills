@@ -1,0 +1,58 @@
+{
+  "skill_name": "docs-planning",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "We're starting a docs set for our CLI from scratch. Lay out the files and folders. Pages: install, configure, authenticate, the command reference (40 commands), troubleshooting, and a concepts page on profiles.",
+      "expected_output": "Should apply the naming rule: kebab-case file names that say what the page is, a two-digit number prefix only where reading order matters (install, configure, authenticate in sequence), no numbers on reference or troubleshooting pages where order doesn't matter, and an index file per folder whose name sorts first (such as _README.md, or index.md where the platform requires it). Should keep the hierarchy shallow, group by what the reader is doing, and note that where the platform builds URLs from file names a renamed file is a moved page needing a redirect.",
+      "files": [],
+      "expectations": [
+        "Uses kebab-case file names that describe each page",
+        "Numbers only the pages whose reading order matters",
+        "Gives each folder an index file that sorts first",
+        "Keeps the hierarchy shallow and grouped by reader task",
+        "Notes that renaming a file moves its URL and needs a redirect"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Our docs are organised by product module: Payments, Ledger, Identity, Reports. Support says people can't find how to refund a customer. Plan a fix.",
+      "expected_output": "Should identify module-based grouping as a cause, since readers look for tasks, not modules, and recommend grouping by what the reader is trying to do. Should start from reader tasks in their words ('refund a payment'), gathered from support tickets and search queries, inventory the existing pages with type, owner and last-verified date, run a gap analysis (tasks with no page, tasks inside the wrong page, pages with no task), and prioritise by impact rather than ease. Should name and place a 'Refund a payment' page in the plan rather than only writing it. Should ask for the task evidence it doesn't have as choices (support tickets, search queries, community questions, analytics) and the product version, rather than assuming them.",
+      "files": [],
+      "expectations": [
+        "Identifies module-based grouping as the cause",
+        "Starts from reader tasks found in tickets and search",
+        "Inventories existing pages before planning",
+        "Runs the gap analysis in both directions",
+        "Prioritises by impact, not ease",
+        "Gives the refund task a named home in the plan",
+        "Asks for the missing task evidence as a choice list rather than assuming what readers need"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "We ship a new 'scheduled exports' feature next week. What docs does it need?",
+      "expected_output": "Should apply the minimum set a new feature ships with: a how-to for the main task, reference material for its surface (settings, limits, formats), an entry in whatever announces changes, and an explanation page only if the concept is new. Should ask for or name the trigger that starts the docs work so it isn't left to goodwill, and should include the troubleshooting entry for any new failure mode. Should state what 'documented' means: verified against the real feature, in the navigation, linked from an existing page.",
+      "files": [],
+      "expectations": [
+        "Lists a how-to, reference material and a change announcement",
+        "Adds an explanation page only if the concept is new",
+        "Includes troubleshooting for new failure modes",
+        "Names the trigger that starts the docs work",
+        "States the definition of done"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Our contributing guide says docs files use snake_case and no number prefixes, because our docs platform sorts by a 'weight' field in frontmatter. Plan the folder for a new 'Billing' section with five pages.",
+      "expected_output": "Should follow the project's recorded conventions — snake_case names and ordering by the frontmatter weight field — rather than imposing kebab-case or number prefixes, because the project's guide wins where it decides something. Should still apply the parts the guide doesn't decide: names that say what each page is, a shallow hierarchy, grouping by reader task, and a planned table of contents reviewed before writing.",
+      "files": [],
+      "expectations": [
+        "Uses snake_case as the project's guide requires",
+        "Orders pages by the frontmatter weight field, not number prefixes",
+        "Keeps descriptive names and a shallow, task-based grouping",
+        "Proposes a table of contents to review before writing"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "cw",
+  "displayName": "Content Writing Skills",
+  "description": "Content writing skills for Claude, for any blog or newsletter on any subject: plan topics, research sources, write posts, newsletter issues and social posts, pitch and collaborate, edit and review, cross-post, refresh old pieces and read the analytics. Includes write.",
+  "version": "1.0.0",
+  "dependencies": ["write"],
+  "author": {
+    "name": "Timonwa"
+  },
+  "homepage": "https://github.com/Timonwa/writing-skills",
+  "repository": "https://github.com/Timonwa/writing-skills",
+  "license": "MIT",
+  "keywords": [
+    "content-writing",
+    "blogging",
+    "newsletter",
+    "social-media",
+    "seo",
+    "editorial-calendar",
+    "guest-posts",
+    "content-strategy",
+    "editing"
+  ]
+}

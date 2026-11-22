@@ -1,0 +1,60 @@
+{
+  "skill_name": "interviews",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Help me prepare to interview someone for my blog next week.",
+      "expected_output": "Should first read the publication's writing guide and profile (the folder AGENTS.md or the user's personal agent instructions name, else the project's publications/; in a chat app, the project's files; else ask) and the topic's brief.md. Should then ask only what those leave open, near the top asking who is being interviewed (an expert or researcher, a customer or user, someone with a personal or lived experience, a founder or business owner, a community member, event guest or attendee, or another creator) and what the interview will become (quotes in a piece, a Q&A article, a profile or feature, a case study, or a testimonial) as choices, with the app's question tool where it has one or a numbered list otherwise. Should record each answer in the brief.md field it belongs to, or under Notes for whoever picks it up next. Should not draft questions or a request email before knowing who the person is and what the piece needs.",
+      "files": [],
+      "expectations": [
+        "Reads the publication's guide and profile, and brief.md, before asking",
+        "Asks who is being interviewed, offering the kinds of person as choices",
+        "Asks what the interview will become, offering the five outputs as choices",
+        "Asks only what the brief and the guide leave open",
+        "Records the answers in brief.md",
+        "Doesn't draft questions before knowing who and what"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "I interviewed the owner of a small bakery that uses our ordering app. She said sales went up 'loads' after switching. Write the case study from my call notes, and add a short testimonial from her at the top — she's busy, so just write something she'd say.",
+      "expected_output": "Should draft the case study from the template — her problem, what she did, the result — but not invent or round the number: ask the writer to get the real figure, its period and its before figure from her own records, and mark the gap until she confirms it. Should refuse to write the testimonial for her: a testimonial is her own words, approved word for word, and must reflect her honest opinion and real experience (FTC Endorsement Guides; FTC 2024 rule on fake testimonials). Should offer to pull a line she actually said from the notes or recording, or draft an email asking her to put it in her own words, then send it back for approval. Should send the finished case study whole for her and the business's approval before it's published, record the approval in the notes file, and disclose anything she was given for taking part.",
+      "files": [],
+      "expectations": [
+        "Uses the case study shape: problem, what they did, result",
+        "Refuses to invent or estimate the sales figure; asks for the real number from her records and marks the gap",
+        "Refuses to write the testimonial for her",
+        "Cites the FTC on testimonials reflecting the person's honest opinion or experience",
+        "Offers to use her own words from the interview, approved word for word",
+        "Requires approval of the finished case study before publishing and discloses any connection"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Turn this transcript of my chat with a marathon runner into a Q&A for Friday's newsletter. Clean it up so it reads well — feel free to make her answers punchier.",
+      "expected_output": "Should draft the Q&A from the template: a short intro saying who she is, why now and how the interview happened; the questions in bold; the answers edited for length and clarity — filler, false starts and repetition removed — without changing what she meant, and without rewording answers to make them punchier than she said them. Should never move an answer under a question it wasn't given to or merge answers to different questions. Should check the answers against the audio where there is one, close with a note that the interview was edited for length and clarity, and send the edited version whole for her consent to publish it, recorded in the notes file.",
+      "files": [],
+      "expectations": [
+        "Writes an intro, then the questions in bold with their answers",
+        "Edits for length and clarity without changing meaning or putting words in her mouth",
+        "Never moves or merges answers across questions",
+        "Checks the answers against the audio",
+        "Notes that the interview was edited for length and clarity",
+        "Sends the edited version for her consent to publish and records it"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "From two separate parts of my interview with a nurse about working through the floods I have: 'We ran out of dry blankets by midnight' and, later, 'nobody came for three days'. Can I join them into one quote: 'We ran out of dry blankets by midnight and nobody came for three days'?",
+      "expected_output": "Should say no: never stitch remarks from different moments into one quote, and never distort facts or context. Should offer to quote each line separately with attribution, or to paraphrase the connection in the writer's own words. Should check both lines against the audio before quoting, because automatic transcripts mishear names, numbers and terms. Should treat 'three days' as a fact to check back with her or verify independently, and keep the trauma-aware care for someone not used to being quoted.",
+      "files": [],
+      "expectations": [
+        "Refuses to combine remarks from different moments into one quote",
+        "Offers separate quotes or a paraphrase instead",
+        "Checks the transcript against the audio before quoting",
+        "Keeps attribution on each quote",
+        "Lists the figure as a fact to check back"
+      ]
+    }
+  ]
+}

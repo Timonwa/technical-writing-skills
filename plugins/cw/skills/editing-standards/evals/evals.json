@@ -1,0 +1,55 @@
+{
+  "skill_name": "editing-standards",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Edit my essay. Make it sound more professional — cut the jokes, the 'I' and the one-line paragraphs.",
+      "expected_output": "Should check the publication's writing guide first (the folder AGENTS.md or the user's personal agent instructions name, else the project's publications/; in a chat app, the project's files; else ask). Where the guide's voice uses first person, humour and fragments for rhythm, should keep them as voice, not defects, and edit to the guide rather than to 'professional'. If there's no guide, ask about reader and purpose before editing beyond facts and typos.",
+      "files": [],
+      "expectations": [
+        "Reads the publication's writing guide first",
+        "Keeps first person, jokes and fragments the guide allows",
+        "Edits to the guide, not personal taste",
+        "Asks about reader and purpose if there's no guide"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Polish the sentences in topics/2026-10-build-a-cli/ — it's a tutorial and the structure's fine.",
+      "expected_output": "Should read the topic's brief.md first — which formats it covers, the reader, Held by — and ask only what the brief leaves open, such as whether the edits go into blog.md or come back as proposals. Should still check substantive and accuracy levels before line edits: the title's promise, the point early, and that every command and sample runs from a clean start (write:code-samples). Should flag what can't be verified. Edits blog.md.",
+      "files": [],
+      "expectations": [
+        "Reads brief.md for the formats and reader, asks only what's missing, and records each answer in its brief field",
+        "Edits the format file the brief lists (blog.md)",
+        "Checks substantive issues before line edits",
+        "Runs the tutorial's commands and code from a clean start",
+        "Flags claims it couldn't verify",
+        "Then makes line-level edits with stated reasons"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Here's my sponsored review of a budgeting app. The disclosure is at the bottom, and I wrote 'studies prove budgeting apps cause people to save 30% more'.",
+      "expected_output": "Should move the disclosure next to what it concerns, near the top (FTC: clear and conspicuous), and rewrite the claim with certainty matching the evidence, tracing the 30% to its source.",
+      "files": [],
+      "expectations": [
+        "Moves the sponsorship disclosure near the top",
+        "Cites FTC's clear-and-conspicuous standard",
+        "Rewrites 'prove/cause' to match the evidence",
+        "Asks for or traces the 30% figure's source"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Does this blog post sound AI-written? It uses a lot of em dashes and the word 'delve'.",
+      "expected_output": "Should run the AI-tell pass: first check that citations and quotes exist and say what's claimed, then judge em-dash density per 1,000 words, stock words and phrases, and structural patterns, while leaving first-person asides and the publication's sign-off alone as voice. Points to /write:ai-check for a full report.",
+      "files": [],
+      "expectations": [
+        "Checks sources and citations before style",
+        "Judges em-dash density per 1,000 words",
+        "Flags stock vocabulary like 'delve'",
+        "Leaves voice features alone and points to /write:ai-check"
+      ]
+    }
+  ]
+}

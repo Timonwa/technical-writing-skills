@@ -1,10 +1,10 @@
 {
-  "name": "technical-writing-skills",
+  "name": "writing-skills",
   "version": "2.0.0",
   "private": true,
-  "description": "Claude Code skills for technical writers — developer docs, user guides, internal docs, READMEs, API references, release notes, and the planning, editing and asset craft around them.",
+  "description": "Claude skills that help writers plan, write, edit and review documentation, blogs, newsletters and social posts.",
   "license": "MIT",
-  "repository": "github:Timonwa/technical-writing-skills",
+  "repository": "github:Timonwa/writing-skills",
   "packageManager": "pnpm@11.1.1",
   "scripts": {
     "format": "prettier --write .",

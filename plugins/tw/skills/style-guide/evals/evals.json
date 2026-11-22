@@ -1,0 +1,60 @@
+{
+  "skill_name": "style-guide",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Write us a style guide for our API docs from scratch.",
+      "expected_output": "Should first ask broadly whether anything already exists — a guide, a terminology list, contributor guidelines, notes — and convert it rather than copy it, leaving what isn't settled as unset. Should adopt a published base guide (Google's developer documentation style guide or the Microsoft Writing Style Guide) in one line, pick a dictionary and spelling variant, and document only the departures and product-specific decisions. Should include a short docs-set profile (audience and roles, versions covered, owner, where the guide lives) and get the guide confirmed before anything is written against it.",
+      "files": [],
+      "expectations": [
+        "Asks whether a guide or notes already exist",
+        "Converts existing material rather than copying it",
+        "Names a published base guide in one line",
+        "Records only departures and product-specific decisions",
+        "Includes a docs-set profile with an owner",
+        "Uses unset rather than guessing",
+        "Asks what's missing in one batch — who reads the docs, which product and versions, the owner and where the guide lives",
+        "Starts from the style guide template, leaving every undecided row as unset"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Our docs call the same thing 'API token', 'access key' and 'secret key'. The UI says 'API key'. Add a terminology entry.",
+      "expected_output": "Should add one row with the approved term in its exact form ('API key', matching the UI), a one-sentence definition, use notes on capitalization and plurals, the variants under 'don't use' so the list is searchable by the wrong term, and notes on where it appears. Should mark it for the do-not-translate list if applicable and record the decision's reason since it was close.",
+      "files": [],
+      "expectations": [
+        "Uses 'API key' to match the UI",
+        "Lists the three variants under don't use",
+        "Includes a plain one-sentence definition",
+        "Records why the decision was made",
+        "Considers the do-not-translate list"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Our team keeps arguing about whether headings are title case. The base guide we adopted says sentence case, but our navigation menus are title case. Settle it in the guide.",
+      "expected_output": "Should record one decision covering page titles, headings, table headers and buttons, plus the navigation-label exception, stating explicitly that the local rule departs from the base guide and why, so it isn't re-argued. Should date the entry and plan to apply it to existing pages, since a decision not applied creates two conventions.",
+      "files": [],
+      "expectations": [
+        "Records one capitalisation decision across titles, headings and buttons",
+        "States the navigation exception as a departure from the base",
+        "Gives the reason for the departure",
+        "Dates the entry",
+        "Plans to apply it to existing pages"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Make our style guide enforceable — nobody reads it.",
+      "expected_output": "Should recommend at least one mechanism: a prose linter in CI on docs pull requests with the terminology list and banned words as rules, warnings first then errors once clean; page templates per type in the repository; a short checklist in the pull-request or review template; and a findable home one link from where people write. Should also name an owner and add rules only when a question is asked twice.",
+      "files": [],
+      "expectations": [
+        "Recommends a prose linter in CI starting with warnings",
+        "Recommends page templates per type",
+        "Recommends a checklist in the PR or review template",
+        "Recommends a findable home for the guide",
+        "Names an owner and adds rules only after repeated questions"
+      ]
+    }
+  ]
+}

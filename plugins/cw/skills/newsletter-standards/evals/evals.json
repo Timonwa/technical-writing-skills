@@ -1,0 +1,56 @@
+{
+  "skill_name": "newsletter-standards",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Draft this month's issue of our newsletter. Here are the five posts I published in October.",
+      "expected_output": "Should find the publication's guide in the folder AGENTS.md or the user's agent instructions name, otherwise the project's publications/, or in a chat app the project's files, otherwise ask, and read profile.md and writing-guide.md first — especially the signup promise, cadence, sign-off and subject-line format. Should find one narrative thread rather than listing five posts, give every section a takeaway, link out instead of reproducing articles, and ask once for one call to action.",
+      "files": [],
+      "expectations": [
+        "Reads the publication's profile and writing guide first",
+        "Checks what the signup form promised",
+        "Builds the issue around one narrative, not a changelog",
+        "Links out rather than reproducing the posts",
+        "Uses one call to action"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Subject line for this week's issue: 'October Newsletter #12'. Good?",
+      "expected_output": "Should say it names the category, not the content: a subject should be concrete, name the thing or the tension, run about 30 to 50 characters and front-load the word that matters. Should propose alternatives drawn from the issue's actual contents, set preview text that extends the subject rather than repeating it, and keep the publication's subject-line format from the guide.",
+      "files": [],
+      "expectations": [
+        "Rejects a category-only subject line",
+        "Proposes concrete alternatives from the issue's contents",
+        "Keeps the subject around 30 to 50 characters",
+        "Sets preview text that extends the subject",
+        "Follows the guide's subject-line format"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "We're launching our first newsletter issue next week. Our platform footer is off — can we skip the unsubscribe link for the first one since everyone just signed up?",
+      "expected_output": "Should say no: every issue needs a working, obvious unsubscribe and a valid postal address (CAN-SPAM), honest headers and a lawful basis for the addresses. Should confirm one-click unsubscribe headers are on in the platform. Should treat a first issue as setting the pattern: introduce who's sending, what subscribers signed up for, how often it comes and how to leave.",
+      "files": [],
+      "expectations": [
+        "Requires an unsubscribe link in every issue including the first",
+        "Requires a postal address",
+        "Mentions one-click unsubscribe headers as the platform's job to confirm",
+        "Treats the first issue as setting the pattern and introducing the newsletter"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Write December's roundup issue — the five posts I published this month. Also write the newsletter issue for the sourdough-starter topic; its brief lists a blog post and a newsletter issue going to the 'bakers' segment.",
+      "expected_output": "Should treat the roundup as its own topic folder under topics/ whose brief lists only a newsletter issue, briefing it first if it has no folder, and write the sourdough-starter issue as newsletter.md in that topic's folder beside blog.md. Should read the send date and audience from each brief and the profile's Defaults before asking, asking only what's missing (for the roundup, which items and the send date), and record the answers in brief.md. Each newsletter.md carries the full front matter — subject, preview_text, send_date, audience, cover_image, cover_alt, web_url blank until sent — and only the topic's own line in calendar.md changes.",
+      "files": [],
+      "expectations": [
+        "Puts the roundup in its own topic folder whose brief lists only a newsletter issue",
+        "Writes the topic's issue as newsletter.md in the sourdough-starter folder, not a separate draft file",
+        "Reads the send date and audience ('bakers') from the brief instead of asking",
+        "Fills every newsletter.md front-matter field, leaving web_url blank until it's sent",
+        "Changes only each topic's own line in calendar.md"
+      ]
+    }
+  ]
+}

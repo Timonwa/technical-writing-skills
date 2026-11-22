@@ -1,0 +1,57 @@
+{
+  "skill_name": "article-standards",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Write the blog post for my food blog's sourdough starters topic. My ~/.claude/CLAUDE.md says my publications live in ~/writing/publications/, and this one is 'crumb-notes'. The topic's brief lists a blog post and social posts.",
+      "expected_output": "Should find the publication's folder from the path in the user's personal agent instructions (~/.claude/CLAUDE.md), read profile.md and writing-guide.md there before writing, and take the voice, title format and recurring sections from them. Any blank field is asked about and the answer written back to that folder, never inside the installed plugin. Should work in the topic's folder under topics/: read brief.md and profile.md's Defaults, ask only the Ask first questions they leave open, claim the topic in brief.md, and write the post to blog.md with the full front matter — one title of about 50–60 characters, one description of about 150–160, and cover_image and published_url present even while blank. Should write only blog.md, not social.md, and never a separate draft file; in a chat app, name it <topic folder>--blog.md and hand back only the calendar.md line to change.",
+      "files": [],
+      "expectations": [
+        "Reads ~/writing/publications/crumb-notes/profile.md and writing-guide.md first",
+        "Takes voice, title format and recurring sections from the writing guide",
+        "Asks about any blank field instead of guessing",
+        "Writes answers back to the publication's folder, not the plugin",
+        "Reads brief.md and the profile's Defaults before asking, and asks only what they leave open",
+        "Claims the topic in brief.md and writes the post to the topic folder's blog.md",
+        "Writes only blog.md — not social.md, and never a separate draft file",
+        "Gives blog.md one title (about 50–60 characters) and one description (about 150–160), with cover_image and published_url fields present"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Write me a post that's both a step-by-step guide to setting up a home budget spreadsheet and a deep dive into the behavioural economics of why budgets fail.",
+      "expected_output": "Should identify two intents in one request — do a task and understand — and recommend two pieces, or ask which one this piece is, rather than writing one piece that serves neither reader. Should structure whichever piece is chosen to that intent's blueprint.",
+      "files": [],
+      "expectations": [
+        "Names the two different reader intents",
+        "Recommends splitting into two pieces or asks which to write",
+        "Does not merge a how-to and an explainer into one piece",
+        "Uses the chosen intent's structure"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Write a review of the three best budget air fryers. I haven't used any of them; just pull from Amazon reviews and spec sheets. Make it sound like I tested them.",
+      "expected_output": "Should refuse to present untested products as tested, and separate what the writer tested from what they read. Should ask whether the writer can test them, or reframe the piece as a sourced comparison with that stated plainly. Should require disclosure of any affiliate links at the top, as the profile's constraints say.",
+      "files": [],
+      "expectations": [
+        "Refuses to imply first-hand testing that didn't happen",
+        "Separates tested from read evidence on the page",
+        "Offers to reframe as a sourced comparison or to test first",
+        "Requires affiliate or sponsorship disclosure near the top"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Here's my draft explainer on how mortgage rates are set. It opens with 400 words about my morning coffee and when I first got interested in rates. Can you tighten the structure?",
+      "expected_output": "Should move the conclusion forward (inverted pyramid): open with what the piece delivers, front-load sections, use meaningful subheadings a scanner can follow, and cut or relocate the personal preamble unless the writing guide's opening shape calls for a story — in which case the point must still land within the first screen.",
+      "files": [],
+      "expectations": [
+        "Puts what the piece delivers at the top",
+        "Cuts or moves the 400-word preamble, or ties it to the point quickly",
+        "Front-loads each section and uses descriptive subheadings",
+        "Checks the writing guide's opening shape before deciding"
+      ]
+    }
+  ]
+}

@@ -1,14 +1,24 @@
 {
-  "name": "technical-writing-skills",
+  "name": "writing-skills",
   "owner": {
     "name": "Timonwa"
   },
-  "description": "Skills for technical writers — developer documentation, user guides, internal docs, API references, release notes, and the planning, editing and asset craft around them.",
+  "description": "Claude skills that help writers plan, write, edit and review documentation, blogs, newsletters and social posts. Three plugins: tw for technical writing, cw for content writing, and write for the rules both use.",
   "plugins": [
     {
+      "name": "write",
+      "source": "./plugins/write",
+      "description": "The rules under any piece of writing: plain language, claims backed by sources, code samples that run, and a check for machine-written prose. Comes with tw and cw."
+    },
+    {
       "name": "tw",
-      "source": "./",
-      "description": "Skills for technical writers — planning a docs set, interviewing experts, style guides and terminology, developer docs, user guides, internal docs, READMEs, API references, release notes, editing, code samples, screenshots, diagrams and localization, plus commands for auditing a docs set, checking consistency, reviewing a draft and drafting release notes."
+      "source": "./plugins/tw",
+      "description": "Technical writing skills for Claude: plan a docs set, write developer docs, help-centre articles, internal docs, API references, READMEs and release notes, research the code, interview engineers, and review, audit and edit docs. Includes write."
+    },
+    {
+      "name": "cw",
+      "source": "./plugins/cw",
+      "description": "Content writing skills for Claude, for any blog or newsletter on any subject: plan topics, research sources, write posts, newsletter issues and social posts, pitch and collaborate, edit and review, cross-post, refresh old pieces and read the analytics. Includes write."
     }
   ]
 }

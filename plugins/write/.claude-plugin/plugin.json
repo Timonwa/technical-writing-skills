@@ -1,0 +1,13 @@
+{
+  "name": "write",
+  "displayName": "Writing Skills",
+  "description": "The rules under any piece of writing: plain language, claims backed by sources, code samples that run, and a check for machine-written prose. Comes with tw and cw.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Timonwa"
+  },
+  "homepage": "https://github.com/Timonwa/writing-skills",
+  "repository": "https://github.com/Timonwa/writing-skills",
+  "license": "MIT",
+  "keywords": ["writing", "plain-language", "editing", "code-samples", "ai-writing", "style-guide"]
+}

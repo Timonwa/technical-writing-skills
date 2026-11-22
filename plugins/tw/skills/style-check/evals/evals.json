@@ -1,0 +1,59 @@
+{
+  "skill_name": "style-check",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "/tw:style-check docs/ — we don't have a style guide.",
+      "expected_output": "Should ask once whether a style guide or terminology list exists outside the repo before concluding there isn't one. Only then should it run in derive mode: apply tw:docs-standards as the default for what it settles (sentence-case headings, 'you', present tense) and treat drift from it as findings even if most pages break it, derive the remaining conventions from the majority with counts, flag even splits as open decisions, and propose the terminology list the project is missing. Should write _reports/docs-style-check.md and never edit a page.",
+      "files": [],
+      "expectations": [
+        "Asks whether a guide exists elsewhere before deriving",
+        "Applies docs-standards defaults as findings even against a majority",
+        "Derives other conventions from the majority with counts",
+        "Flags even splits as open decisions with a recommendation",
+        "Proposes missing terminology entries",
+        "Writes the report to _reports/docs-style-check.md without editing pages",
+        "Records the scope, version, exclusions and standard in the report header"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Sweep our docs: I think we call the same thing 'workspace', 'project' and 'space' in different places.",
+      "expected_output": "Should sweep the whole set, not a sample, cluster the variants, count each with locations, check which term the product's UI and API use, name the likely winner, and propose a terminology entry with the variants under 'don't use'. Should check the places drift hides — titles, navigation labels, headings, table cells, captions, link text, frontmatter and code comments — and also check whether one of the words is doing two jobs.",
+      "files": [],
+      "expectations": [
+        "Sweeps the whole set, not a sample",
+        "Counts every variant with locations",
+        "Checks the UI and API for the product's own term",
+        "Proposes a terminology entry with don't-use variants",
+        "Checks titles, navigation, tables, captions and link text",
+        "Checks whether a word names two concepts",
+        "Asks which docs to sweep, since no path is given, before sweeping"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Our style guide says navigation labels are title case. Run the style check on docs/.",
+      "expected_output": "Should treat title-case navigation labels as the project's recorded decision, not drift, and flag navigation labels that break it. Should apply docs-standards defaults only where the guide is silent, and report drift against the guide with counts.",
+      "files": [],
+      "expectations": [
+        "Uses the project's guide as the standard",
+        "Does not flag title-case navigation labels as drift",
+        "Flags labels that break the guide's rule",
+        "Applies docs-standards only where the guide is silent"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "We fixed a bunch of terminology last month. Run the style check again and just confirm those are still fixed.",
+      "expected_output": "Should run a complete fresh sweep rather than only re-checking earlier findings, since an earlier report isn't evidence of today's state. Should read the previous report for its scores only, number findings from 1, overwrite the report, and show the score trend against the previous run.",
+      "files": [],
+      "expectations": [
+        "Runs a complete fresh sweep",
+        "Does not treat the earlier report as evidence",
+        "Reads only the previous scores for the trend",
+        "Numbers findings from 1 and overwrites the report"
+      ]
+    }
+  ]
+}

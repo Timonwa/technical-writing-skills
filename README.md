@@ -1,117 +1,195 @@
-# technical-writing-skills
+# writing-skills
 
-Twenty-one Claude Code skills for technical writers — developer docs, user guides, internal docs, API references, release notes.
+Claude skills that help writers plan, write, edit and review documentation, blogs, newsletters and social posts.
 
-Documentation work is mostly not typing. It's deciding what the set should contain, getting the facts out of the people who have them, verifying a default before writing it down, and finding the page that stopped being true three releases ago. These skills cover that whole job, not just the drafting part.
+[![License: MIT](https://img.shields.io/github/license/Timonwa/writing-skills)](LICENSE)
+[![Claude Code plugins](https://img.shields.io/badge/Claude%20Code-plugins-D97757)](#install)
+[![GitHub stars](https://img.shields.io/github/stars/Timonwa/writing-skills?style=flat)](https://github.com/Timonwa/writing-skills/stargazers)
+[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-support-FFDD00?logo=buymeacoffee&logoColor=black)](https://buymeacoffee.com/timonwa)
 
-Fifteen of them are model-invoked: Claude loads one when the work matches, so asking for a runbook pulls in the runbook standard without you naming it. The other six are commands you run deliberately over content that already exists.
+## Contents
 
-Nothing here assumes a framework, a language, a docs platform, or a publishing tool. The rules are about documents, so they work the same in a Markdown repo, a help-desk tool, a knowledge base, or someone else's codebase where the conventions belong to the client.
+- [The plugins](#the-plugins)
+- [How the skills work](#how-the-skills-work)
+- [Install](#install)
+- [Set up a publication](#set-up-a-publication)
+- [Skills](#skills)
+- [Commands](#commands)
+- [Contributing](#contributing)
+- [Support](#support)
+
+## The plugins
+
+| Plugin  | For                                                                                  | Install it if you write                                                                     |
+| ------- | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------- |
+| `tw`    | Technical writing                                                                    | Developer docs, help-centre articles, internal docs, API references, READMEs, release notes |
+| `cw`    | Content writing                                                                      | Blog posts, newsletters, social posts and guest posts, on any subject                       |
+| `write` | Plain language, sourced claims, code samples that run, and the machine-writing check | Nothing: it comes with `tw` and `cw`                                                        |
+
+## How the skills work
+
+- Claude picks a skill when your request matches it, so you don't have to name it. Commands run only when you call them.
+- A skill reads your style guide or your publication's guide first, then asks only what's still missing.
+- Every file it writes — a brief, a post, a report — follows a fixed template, so each run looks the same.
+- It never invents a fact, figure or quote. A gap stays marked until you fill it.
 
 ## Install
 
-Run these in Claude Code:
+### Claude app (web or desktop)
+
+1. Open **Customize > Plugins**.
+2. Select **Add > Add marketplace > Add from a repository**, and enter `Timonwa/writing-skills`.
+3. Add **tw**, **cw** or both. Each brings in **write**.
+4. Turn on **Settings > Capabilities > Create and edit files**. Skills don't run without it. On Team and Enterprise plans, an admin turns it on.
+
+Plugins are saved to your account, so they work in chat on mobile too.
+
+### Claude Code
 
 ```shell
-/plugin marketplace add Timonwa/technical-writing-skills
-/plugin install tw@technical-writing-skills
+/plugin marketplace add Timonwa/writing-skills
+/plugin install tw@writing-skills
+/plugin install cw@writing-skills
 ```
 
-Pick a scope when it asks. **Local** installs for the current repo only, which is usually right when you're working in a codebase that isn't yours. **Project** shares the skills with everyone who clones the repo. **User** makes them available everywhere.
+When it asks for a scope, pick one:
 
-## Deciding what to write
+- **User** — every project on your machine.
+- **Project** — everyone who clones the repo.
+- **Local** — this repo, for you only.
 
-| Skill               | What it's for                                                                                                                |
-| ------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `docs-planning`     | Reader tasks before feature lists — audiences, the real questions from support and search, gap analysis, and what goes where |
-| `style-guide`       | The style guide, terminology list and glossary as decision records, and how to make them enforceable instead of ignored      |
-| `writing-standards` | Which of the four Diátaxis types a document is, who it serves, and the voice checklist every other skill in the set links to |
+## Set up a publication
 
-## Finding out what's true
-
-| Skill               | What it's for                                                                                                                       |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| `sme-interviews`    | Getting what an engineer knows onto the page — preparing from the artifacts, arriving with a wrong draft, protecting their time     |
-| `codebase-research` | Hunting the exact default, limit, UI label and error string in a repo you didn't write, and the traps that produce confident errors |
-
-## Writing the document
-
-| Skill            | What it's for                                                                                                          |
-| ---------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `developer-docs` | A docs-site page in any framework — one job per page, verified against source, links that survive a move               |
-| `user-guides`    | Help-centre guides for end users — answer first, plain words, six page types, explain rather than sell                 |
-| `internal-docs`  | Runbooks, SOPs, onboarding and decision records, with the owner and review date that stop them rotting in place        |
-| `api-reference`  | Endpoints, parameters, status codes and errors, plus the auth, quickstart, pagination and versioning pages around them |
-| `readmes`        | A fixed skeleton per repo type — library, app, CLI, monorepo, package — and a quickstart somebody actually ran         |
-| `release-notes`  | What changed for me, and do I have to do anything — separated by audience, with breaking changes and deprecations      |
-
-## The parts that aren't prose
-
-| Skill                 | What it's for                                                                                              |
-| --------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `code-samples`        | Samples that run on arrival, don't model insecure practice, and get tested so they don't quietly rot       |
-| `images-and-diagrams` | Whether a visual earns its cost at all, then capture, annotation, alt text, and diagrams as theme-able SVG |
-| `localization`        | Source text that survives translation, and running a set across locales without half of it going stale     |
-| `editing-standards`   | Five single-dimension passes over a draft that already exists — substantive, accuracy, line, copy, proof   |
-
-## Checking what already exists
-
-Six commands, each marked `disable-model-invocation`, so Claude never starts one on its own. They take a path or a pull request and answer one question each.
-
-| Command              | The question                                                                                                         |
-| -------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `/tw:docs-audit`     | Is it true and does it work? Claims the product outgrew, dead links, unreachable pages, contradictions, stale images |
-| `/tw:content-audit`  | Is this the right set? Every page inventoried with a keep, merge, split, rewrite or retire verdict, plus the gaps    |
-| `/tw:style-check`    | Does it read as one voice? One concept called three different things across two hundred pages, and the other drift   |
-| `/tw:doc-review`     | Is this document good? The five levels of edit over one file, a folder or a diff                                     |
-| `/tw:docs-pr-review` | Are the docs in this PR true of what it changes? Claims checked against the change, and changes left undocumented    |
-| `/tw:ai-check`       | Does it read as machine-written? The specific tells, each with a rewrite — never a verdict on provenance             |
-
-Each writes a report to `_reports/<name>.md` and tells you the path. A finding carries a severity, the reader it breaks, and a specific fix; the report closes with a scorecard and how the score moved since last time.
-
-None of them edit anything while auditing — editing tools are withheld for that turn. When the report is written, the command lists the findings by ID and asks which you want fixed, so nothing gets silently improved. Passing `--fix` skips the audit entirely and works from the report already on disk, which is how you come back to findings you read yesterday without renumbering them.
-
-They also don't require a codebase. Where source is available it's the strongest evidence and gets used; where it isn't, the audit works from the running product, a spec, or the content itself, and says which in the report.
-
-## What the skills won't do
-
-**Invent a fact to fill a gap.** No access to the code is not permission to guess. Working from a spec, a recording, or a conversation, the skills write only what they were told, ask for the exact names and values, and leave anything unverified visibly marked rather than plausible.
-
-**Assume your product.** The product name, its vocabulary, the concept framings, the support channel, the style guide if one exists — each is asked for, never inherited from the surrounding pages.
-
-**Copy the habits of the docs around them.** When an existing page breaks the standard, the skill corrects it rather than matching it. Matching whatever is already there is how drift spreads.
-
-## Repo layout
+`cw` writes for a blog or newsletter using what you've recorded about it: who reads it, how it sounds, how it looks. Say "set up my publication" and `cw:style-guide` builds those files with you. Leave anything you haven't decided blank, and a skill asks about it later.
 
 ```text
-skills/<skill-name>/
-  SKILL.md        # the skill itself
-  references/     # longer material, loaded only when needed
-  evals/          # prompts and expected behaviour, used when revising the skill
-.claude-plugin/   # plugin and marketplace manifests
+publications/
+├── <publication>/
+│   ├── profile.md              # who it's for and what it's for
+│   ├── writing-guide.md        # how it sounds
+│   ├── brand.md                # how it looks
+│   ├── media-kit.md            # the audience facts a sponsor email cites
+│   ├── sources/                # style guides you already have
+│   ├── examples/               # sample covers, logos and typical pieces
+│   ├── calendar.md             # one line per topic: date, formats, status, who's on it
+│   ├── series/                 # one plan per series
+│   ├── reports/                # performance reviews
+│   └── topics/
+│       └── <yyyy-mm>-<slug>/   # one folder per topic, e.g. 2026-12-sourdough-starter
+│           ├── brief.md        # what the topic becomes, its status and who holds it
+│           ├── blog.md         # the blog post
+│           ├── newsletter.md   # the newsletter issue
+│           ├── social.md       # the social posts
+│           ├── copies.md       # copies on other blogging platforms
+│           ├── sources.md      # the source log
+│           ├── interviews/     # interview notes
+│           ├── images/         # cover, share card and diagrams
+│           └── reports/        # review, AI-writing check and SEO check
+└── pitch-log.md                # every pitch and proposal, sent and received
 ```
 
-Rules shared across skills live in exactly one file and get linked, never restated: [house-voice.md](skills/writing-standards/references/house-voice.md) holds the voice checklist every document obeys, and [ai-writing-detection.md](skills/editing-standards/references/ai-writing-detection.md) holds the machine-written tells.
+**In the Claude app:**
+
+- Make one Project per publication. Add its files, your logo, sample covers and any style guide you already have.
+- Projects can't hold folders, so a topic's files are named `<topic folder>--<file>`, such as `2026-12-sourdough-starter--blog.md`.
+- When Claude gives you an updated file, replace the old one. For `calendar.md`, it gives you only the line to change.
+- Outside a Project, attach the files to the chat.
+
+**In a codebase:**
+
+- Name the folder in the project's `AGENTS.md`, which every coding agent reads: `Publications: publications/`.
+- For a folder outside the repo, add the same line to `~/.claude/CLAUDE.md`.
+- If nothing names a folder, the skills look for `publications/`, then ask.
+
+**For documentation,** `tw` finds the project's style guide the same way. Without one, it follows `tw:docs-standards`.
+
+## Skills
+
+### write
+
+| Skill               | Use it to                                                                         |
+| ------------------- | --------------------------------------------------------------------------------- |
+| `writing-standards` | Check that a piece is clear, plain and backed by sources, whatever you're writing |
+| `code-samples`      | Add code to a post or docs page that readers can copy and run                     |
+
+### tw
+
+| Skill                 | Use it to                                                                                     |
+| --------------------- | --------------------------------------------------------------------------------------------- |
+| `docs-standards`      | Write docs pages that each do one thing: teach, walk through a task, list facts or explain    |
+| `docs-planning`       | Decide which docs pages you need, and find what's missing from the ones you have              |
+| `developer-docs`      | Write pages for a developer docs site, checked against the code                               |
+| `api-reference`       | Document an API: its endpoints, errors, sign-in and getting-started pages                     |
+| `user-guides`         | Write help-centre articles for the people who use a product                                   |
+| `internal-docs`       | Write runbooks, team processes, onboarding guides and decision records                        |
+| `readmes`             | Write or update a project's README                                                            |
+| `release-notes`       | Write release notes and changelogs that tell users what changed for them                      |
+| `codebase-research`   | Find the exact settings, limits and error messages in a product's code, so the docs are right |
+| `sme-interviews`      | Prepare to interview an engineer, then turn their answers into checked facts for the docs     |
+| `editing-standards`   | Edit a docs page someone has already written                                                  |
+| `style-guide`         | Create a style guide and word list for a set of docs                                          |
+| `images-and-diagrams` | Add screenshots, diagrams and image descriptions to docs                                      |
+| `seo-aeo-geo`         | Help readers find your docs through Google and AI tools like ChatGPT                          |
+| `localization`        | Write docs that translate well, and keep translated versions up to date                       |
+
+### cw
+
+| Skill                  | Use it to                                                                                                                                         |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `content-planning`     | Decide what to write next, and plan a publishing calendar you can keep up with                                                                    |
+| `content-research`     | Find reliable sources for a piece and check every fact and figure                                                                                 |
+| `interviews`           | Interview anyone for a piece — an expert, a customer, a founder, someone with a story — and turn it into quotes, a Q&A, a profile or a case study |
+| `article-standards`    | Write a blog post or article                                                                                                                      |
+| `newsletter-standards` | Write a newsletter issue, including its subject line                                                                                              |
+| `demo-project`         | Build the code project that goes with a coding tutorial                                                                                           |
+| `images-and-diagrams`  | Choose photos, charts and diagrams, with the right credits and image descriptions                                                                 |
+| `cover-images`         | Make a post's cover image, which also shows when the link is shared                                                                               |
+| `editing-standards`    | Edit a post or newsletter issue, keeping the writer's own voice                                                                                   |
+| `seo-aeo-geo`          | Help readers find your post through Google and AI tools like ChatGPT                                                                              |
+| `social-media-posts`   | Write social posts to promote a piece or share news, for any platform                                                                             |
+| `cross-posting`        | Republish a post on Medium, Substack, dev.to or similar, without hurting the original's ranking                                                   |
+| `content-refresh`      | Update, correct, merge or remove old posts                                                                                                        |
+| `pitching`             | Write pitch emails, guest post and collaboration proposals, sponsor emails and replies                                                            |
+| `style-guide`          | Set up your blog or newsletter's profile, writing guide, look and media kit                                                                       |
+
+## Commands
+
+| Command                   | Use it to                                                                        |
+| ------------------------- | -------------------------------------------------------------------------------- |
+| `/write:ai-check`         | Find what makes a piece sound machine-written, with a suggested rewrite for each |
+| `/tw:doc-review`          | Review a docs page before it goes live                                           |
+| `/tw:docs-audit`          | Find outdated information, broken links and missing pages across your docs       |
+| `/tw:content-audit`       | Decide which docs pages to keep, combine, rewrite or delete                      |
+| `/tw:style-check`         | Find words and formatting that differ from page to page across your docs         |
+| `/tw:docs-pr-review`      | Check the docs in a pull request against the code it changes                     |
+| `/cw:review`              | Check a post or newsletter issue is ready to publish                             |
+| `/cw:content-performance` | See which posts to fix first, from your analytics export                         |
+
+- A command reports what it finds and doesn't edit anything while it checks.
+- Every command except `/cw:content-performance` takes `--fix`, which fixes only the findings you choose.
+- Docs reports go to `_reports/`. Content reports go to the topic's or publication's `reports/`.
+- `/tw:docs-pr-review` reports in chat, and comments on the pull request only with `--comment`.
+- Nothing is ever posted, published or scheduled for you.
 
 ## Contributing
 
-Issues and pull requests are welcome. A rule that misfires in your organization is worth reporting, and so is a skill that assumes something it has no business assuming.
+Issues and pull requests are welcome, especially for a rule that misfires on your writing or is out of date. In a pull request:
 
-Each skill is a Markdown file, so there's no build step and nothing to install to edit one. The scripts only format and check them:
+- Change one skill where you can.
+- Update its `evals/evals.json`.
+- Run the checks:
 
-| Script              | What it does                                  | Needs                       |
+| Script              | Use it to                                     | Needs                       |
 | ------------------- | --------------------------------------------- | --------------------------- |
 | `pnpm format`       | Format everything with Prettier               | `pnpm install` first        |
 | `pnpm format:check` | Check formatting without writing              | `pnpm install` first        |
-| `pnpm validate`     | Validate the plugin manifests and skill files | the Claude Code CLI on PATH |
+| `pnpm validate`     | Validate the marketplace and plugin manifests | the Claude Code CLI on PATH |
 
-The repo uses [pnpm](https://pnpm.io), and Prettier is its only dependency — install it if you want the format scripts, or skip the install and run `pnpm dlx prettier --write .` instead.
+## Support
 
-Keep a change to one skill where you can, and run `pnpm validate` before opening a pull request.
+If these skills save you time, [buy me a coffee](https://buymeacoffee.com/timonwa).
 
-## Related
-
-- [engineering-skills](https://github.com/Timonwa/engineering-skills) — the same idea for building web apps with Next.js App Router, React and Firebase. The two plugins compose; install both if you write code as well as documentation.
+For web apps built with Next.js, React and Firebase, see [engineering-skills](https://github.com/Timonwa/engineering-skills).
 
 ## License
 

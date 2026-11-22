@@ -1,0 +1,11 @@
+# AI answer engines and their crawlers
+
+Which crawler decides whether a piece can be cited, per engine. The writer doesn't set crawler rules; check them once with whoever runs the site.
+
+| Answer                          | Needs                                                                                                                                                                                                  | Separate from                                                 |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------- |
+| Google AI Overviews and AI Mode | the page indexed and eligible for a snippet; nothing extra ([Google](https://developers.google.com/search/docs/appearance/ai-features))                                                                | `Google-Extended`, which governs some other Google AI systems |
+| ChatGPT search                  | `OAI-SearchBot` allowed ([OpenAI](https://developers.openai.com/api/docs/bots))                                                                                                                        | `GPTBot` (training); blocking it doesn't affect search        |
+| Perplexity                      | `PerplexityBot` allowed ([Perplexity](https://docs.perplexity.ai/guides/bots))                                                                                                                         | —                                                             |
+| Claude                          | `Claude-SearchBot` and `Claude-User` allowed ([Anthropic](https://support.anthropic.com/en/articles/8896518))                                                                                          | `ClaudeBot` (training)                                        |
+| Microsoft Copilot               | the page in Bing's index ([Bing](https://www.bing.com/webmasters/help/webmaster-guidelines-30fba23a)); IndexNow tells Bing about new and changed pages quickly ([IndexNow](https://www.indexnow.org/)) | —                                                             |
