@@ -76,6 +76,7 @@ The writer holds it. Give them a short running sheet with the question list:
 - **Have the expert do the task on a screen-share** — what they do is more accurate than what they say they do, and the steps they perform without mentioning are the steps missing from every draft.
 - **Do the task while the expert watches** — the moment the writer gets stuck is the moment the expert sees the gap.
 - **Read the understanding back as a precise statement**, with the values in it: "So with no value, it defaults to the account setting, and with none of those it fails with a 400 — is that right?" A vague read-back gets a vague yes.
+- **Chase the vague answer** — when the expert says "it depends" or "usually", ask what it depends on and what "usually" leaves out.
 - **Don't cut off a thread for a small question**; note it and come back.
 
 **For a written question list**, write the message from the [template](references/messages.md#a-written-question-list): the draft attached, blocking questions numbered first, each answerable in a sentence, and the date it publishes with or without an answer.
@@ -105,6 +106,7 @@ Write it from the [template](references/messages.md#asking-for-a-technical-revie
 - **A small ask** — three flagged paragraphs get answered today; four pages get postponed.
 - **A deadline and what happens without an answer** — "if I don't hear by Thursday, it ships with that point marked unverified".
 - **One job per reviewer**: accuracy from the expert, clarity from someone in the audience, style from whoever owns the guide.
+- **Close the loop** — once the review is in, write the writer a short note to the expert saying what changed, so the next review is worth their time.
 
 ## When the expert has no time
 
