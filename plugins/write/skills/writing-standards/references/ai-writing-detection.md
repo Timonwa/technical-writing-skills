@@ -16,7 +16,7 @@ Sources: [Wikipedia: Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedi
 - Phrases That Signal AI Writing (Opening Phrases, Transitional Phrases, Concluding Phrases, Structural Patterns)
 - Filler Words and Empty Intensifiers
 - Academic-Specific AI Tells
-- How to Self-Check
+- Checking a Draft
 
 ## Claims and Sources
 
@@ -44,12 +44,13 @@ Em dashes are longer than hyphens (-) and are used for emphasis, interruptions, 
 
 ### What To Do Instead
 
-| Instead of                                                 | Use                                                          |
-| ---------------------------------------------------------- | ------------------------------------------------------------ |
-| The results—which were surprising—showed...                | The results, which were surprising, showed...                |
-| This approach—unlike traditional methods—allows...         | This approach, unlike traditional methods, allows...         |
-| The study found—as expected—that...                        | The study found, as expected, that...                        |
-| Communication skills—both written and verbal—are essential | Communication skills (both written and verbal) are essential |
+| Instead of                                           | Use                                                    |
+| ---------------------------------------------------- | ------------------------------------------------------ |
+| The results—which were surprising—showed...          | The results, which were surprising, showed...          |
+| This approach—unlike traditional methods—allows...   | This approach, unlike traditional methods, allows...   |
+| The dough—after a night in the fridge—had doubled... | The dough, after a night in the fridge, had doubled... |
+| An emergency fund—three months of rent—comes first   | An emergency fund (three months of rent) comes first   |
+| The last climb—two kilometres at 8%—decides the race | The last climb (two kilometres at 8%) decides the race |
 
 ### Guidelines
 
@@ -94,10 +95,10 @@ Em dashes are longer than hyphens (-) and are used for emphasis, interruptions, 
 | crucial        | important, key, critical           |
 | vital          | important, necessary               |
 | transformative | significant, important, major      |
-| cutting-edge   | new, advanced, recent, modern      |
+| cutting-edge   | new, advanced, recent              |
 | groundbreaking | new, original, significant         |
 | innovative     | new, original, creative            |
-| seamless       | smooth, easy, effortless           |
+| seamless       | smooth, or say what happens        |
 | intricate      | complex, detailed, complicated     |
 | nuanced        | subtle, complex, detailed          |
 | multifaceted   | complex, varied, diverse           |
@@ -118,7 +119,7 @@ Em dashes are longer than hyphens (-) and are used for emphasis, interruptions, 
 | it is worth noting that | (cut it and state the point) |
 | in the realm of         | in, within, regarding        |
 | in the landscape of     | in, within                   |
-| in today's [anything]   | currently, now, today        |
+| in today's [anything]   | now, today, or cut it        |
 
 ---
 
@@ -194,29 +195,29 @@ These words often add nothing to meaning. Remove them or find specific alternati
 
 ## Academic-Specific AI Tells
 
-| Avoid            | Use Instead                         |
-| ---------------- | ----------------------------------- |
-| shed light on    | clarify, explain, reveal            |
-| pave the way for | enable, allow, make possible        |
-| a myriad of      | many, numerous, various             |
-| a plethora of    | many, numerous, several             |
-| paramount        | very important, essential, critical |
-| pertaining to    | about, regarding, concerning        |
-| prior to         | before                              |
-| subsequent to    | after                               |
-| in light of      | because of, given, considering      |
-| with respect to  | about, regarding, for               |
-| in terms of      | regarding, for, about               |
-| the fact that    | that (or rewrite sentence)          |
+| Avoid            | Use Instead                    |
+| ---------------- | ------------------------------ |
+| shed light on    | clarify, explain, reveal       |
+| pave the way for | enable, allow, make possible   |
+| a myriad of      | many, numerous, various        |
+| a plethora of    | many, numerous, several        |
+| paramount        | essential, critical, first     |
+| pertaining to    | about, regarding, concerning   |
+| prior to         | before                         |
+| subsequent to    | after                          |
+| in light of      | because of, given, considering |
+| with respect to  | about, regarding, for          |
+| in terms of      | regarding, for, about          |
+| the fact that    | that (or rewrite sentence)     |
 
 ---
 
-## How to Self-Check
+## Checking a Draft
 
-1. Read your text aloud. If phrases sound unnatural in speech, revise them
-2. Ask: "Would I say this to the reader in person?"
+1. Read each sentence as speech, and revise any phrase that would sound unnatural said aloud
+2. Flag any sentence the writer wouldn't say to the reader in person
 3. Check for repetitive sentence structures
 4. Look for clusters of the words listed above
-5. Ensure varied sentence lengths (not all similar length)
-6. Verify each intensifier adds genuine meaning
+5. Check that sentence lengths vary (not all similar length)
+6. Cut each intensifier that adds no meaning
 7. Open every citation and confirm it says what the sentence claims

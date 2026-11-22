@@ -8,7 +8,7 @@ Word-level swaps (long phrase → short): [plain-english-alternatives.md](plain-
 
 ## Sentences
 
-- [ ] **Active voice.** "The server validates the token", not "the token is validated by the server". Passive is acceptable only when the actor is genuinely unknown or irrelevant.
+- [ ] **Active voice.** "The server validates the token", not "the token is validated by the server"; "The bank charges a fee on every transfer", not "a fee is charged on every transfer". Passive is acceptable only when the actor is genuinely unknown or irrelevant.
 - [ ] **Present tense for how things work.** "The function returns a promise", "the dough doubles in an hour", not "will return". A story told in the past tense stays in the past tense.
 - [ ] **Check any sentence over about 25 words, and vary the lengths.** Split a long one unless the length is deliberate — [GOV.UK](https://guidance.publishing.service.gov.uk/writing-to-gov-uk-standards/writing-guidelines/clear-language/) says to "try to split up sentences that are over 25 words long", not never to write one. A run of sentences all the same length reads mechanically; mix short and long.
 - [ ] **Sentences average 15–20 words** across the piece ([Plain English Campaign](https://mstrust.org.uk/sites/default/files/plain_english_campaign_how_to_write_plain.pdf)) — an average, so short and long sentences both belong.
@@ -48,9 +48,9 @@ Word-level swaps (long phrase → short): [plain-english-alternatives.md](plain-
 
 - [ ] **Formatting carries meaning, never decoration.** What bold and italics mean is the guide's call, applied the same way every time; for documentation, `tw:docs-standards` sets the default. `code` for commands, identifiers, paths and filenames, wherever they appear. Emphasis sprinkled for rhythm is noise to a scanner and a screen reader.
 - [ ] **Never hard-wrap prose** where the piece is kept as Markdown. One physical line per paragraph or list item; break only where Markdown requires it. A hard-wrapped paragraph produces an unreadable diff on every edit.
-- [ ] **No skipped heading levels**, one H1 where the piece is kept as Markdown (a CMS usually supplies the title as the H1), and links that resolve, with text that makes sense out of context — never "click here".
+- [ ] **No skipped heading levels**, one H1 per page, written in the body only where neither the front matter nor the platform supplies the title, and links that resolve, with text that makes sense out of context — never "click here".
 - [ ] **Alt text on every meaningful image**; a decorative one is marked decorative (`tw:images-and-diagrams`, `cw:images-and-diagrams`).
-- [ ] **Define a term on first use, then use exactly that term.** Synonyms for one concept read as two different concepts.
+- [ ] **Define a term on first use, then use exactly that term.** Synonyms for one concept read as two different concepts: a piece that defines "starter" and later says "levain" and "mother" leaves the reader wondering whether they need three jars; one that says "workspace" and later "project" leaves them looking for a second setting.
 
 ## Keeping it true
 

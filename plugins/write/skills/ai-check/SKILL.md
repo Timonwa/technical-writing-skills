@@ -43,7 +43,7 @@ Read the answers from the request, the arguments, the topic's `brief.md` and the
 ## Arguments
 
 - `[path]` — what to check: a file, a folder, a diff, a topic folder, or text pasted into the prompt. Omitted → ask.
-- `[--fix]` — don't audit. Read the existing report for the page or topic given, list what's in it, and ask which findings to fix. With no path, list the ai-check reports on disk and ask which. For coming back to a report you ran earlier.
+- `[--fix]` — don't audit. Read the existing report for the page or topic given, list what's in it, and ask which findings to fix. With no path, list the ai-check reports on disk and ask which. For acting on a report from an earlier run.
 
 **A topic folder** (`topics/<yyyy-mm>-<slug>/`) holds one file per format. Read `brief.md`'s **What this topic becomes** and check the format files it lists: `blog.md`, `newsletter.md`, `social.md`, and only the **Opening excerpt** in `copies.md`, since a full copy is `blog.md` itself. If **Held by** names someone else and the status isn't `paused`, leave it and say so. The check writes only its report and never sets **Held by**.
 
@@ -128,7 +128,7 @@ Nothing is edited before step 2 is answered. The editing tools are unavailable w
 
 ### Fixing from an earlier report
 
-`--fix` skips the audit entirely and works from the report already on disk, whatever its age — ten minutes old, an hour, a month. Use it whenever you want to act on findings you've already read rather than generate a new set; re-auditing would renumber them underneath you.
+`--fix` skips the audit entirely and works from the report already on disk, whatever its age — ten minutes old, an hour, a month. It's for acting on findings the user has already read rather than generating a new set; re-auditing would renumber them mid-conversation.
 
 - **Say how old the report is** — its date, and how long ago that was. Someone deciding what to fix needs to know whether they're looking at today's picture or last month's.
 - **Verify each finding still exists before fixing it.** Check the actual location; don't trust the report's description of it. Between the audit and now, the page may have changed, someone else may have fixed it, or the thing it described may have moved.

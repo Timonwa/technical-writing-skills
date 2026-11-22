@@ -2,7 +2,7 @@
 
 Replace complex or pompous words with plain English alternatives.
 
-**Swap a word only when it's used in the inflated sense.** These lists come largely from official correspondence, where "outstanding" means unpaid and "complete" means fill in. A word used precisely — "an outstanding meal", a term of art, an interface label a reader has to find on screen, or a word the writer chose for its sound — stays.
+**Swap a word only when it's used in the inflated sense.** These lists come largely from official correspondence, where "outstanding" means unpaid and "complete" means fill in. A word used precisely — "an outstanding meal", a term of art, an interface label a reader has to find on screen, or a word the writer chose for its sound — stays. In a technical piece the terms of art and interface labels are kept: a docs page says "the component renders", "send a request" and "each instance", never "the part makes", "send an ask" or "each case".
 
 Source: Plain English Campaign A-Z of Alternative Words (2001), Australian Government Style Manual (2024), plainlanguage.gov
 

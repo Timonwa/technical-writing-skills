@@ -43,7 +43,7 @@ Read the answers from the request, the guide, the publication's `profile.md` and
 ## Before drafting: the reader, the goal and the scope
 
 - **Name the reader** — specifically enough to decide what they already know. Writing that tries to serve everyone serves no one.
-- **State what the reader leaves with** — what they can do, understand or decide afterwards that they couldn't before. Lead with that goal, not with the feature, the topic or the background.
+- **State what the reader leaves with** — what they can do, understand or decide afterwards that they couldn't before: "rotate an API key without downtime", "feed a sourdough starter through a week away", "choose between a fixed and a variable mortgage". Lead with that goal, not with the feature, the topic or the background.
 - **Bound the scope** — decide what's excluded and link to where it lives, instead of letting the piece sprawl.
 - **Outline before drafting** anything longer than a page — headings first, prose second. A bad structure can't be edited into a good piece.
 - **Don't inherit the surrounding writing's habits.** Match the established terms for the subject, but not its shape or its voice — if what's already published has gone vague, padded or inconsistent, copying it copies the drift. Where what's there conflicts with the guide or these rules, say so and follow the guide and the rules.
@@ -77,7 +77,7 @@ Read the answers from the request, the guide, the publication's `profile.md` and
 ## Accessible formatting
 
 - **Formatting has meaning** — what bold and italics mark is the guide's decision, applied consistently; `code` for commands, identifiers and file names. Decoration that carries no meaning is noise to a screen reader and a scanner.
-- **Headings in order** — no skipped levels, and one H1 where the piece is kept as Markdown (a CMS usually supplies the title as the H1); link text that makes sense on its own, never "click here"; alt text on every meaningful image.
+- **Headings in order** — no skipped levels, and one H1 per page, written in the body only where neither the front matter nor the platform supplies the title; link text that makes sense on its own, never "click here"; alt text on every meaningful image.
 - **Never hard-wrap prose** where the piece is kept as Markdown — one physical line per paragraph or list item; break only where Markdown requires it.
 
 ## Keeping it true

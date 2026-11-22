@@ -34,7 +34,7 @@ Every field below is always present; a value that doesn't apply is left blank, n
 | ID  | Category | Tell | Status | Location |
 | --- | -------- | ---- | ------ | -------- |
 
-### A1 — <tell>
+### 1 — <tell>
 
 - **Now:** <the current text>
 - **Why it reads as generated:** <the specific pattern>
@@ -49,7 +49,7 @@ Patterns that match a tell but are the author's or the house's choice.
 
 ## Scorecard
 
-Higher means it reads more like a person wrote it.
+A higher score means fewer and milder tells.
 
 | Category           | Score  | Notes |
 | ------------------ | ------ | ----- |

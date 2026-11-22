@@ -2,19 +2,21 @@
 
 Examples for documentation, then for content. Every example gives the flagged passage, why it reads as generated, and the rewrite the report would propose. The writing's own guide still wins: a pattern the guide asks for is left alone and listed under "Deliberate".
 
+A rewrite uses only what the draft, the writer or a checked source gives. Where it needs a figure, a detail or an opinion the draft doesn't give, it shows a bracketed placeholder for the writer to fill, never an invented one.
+
 ## In documentation
 
 **Hollow claim** — Substance
 
 - **Now:** "The SDK significantly improves performance and offers a wide range of configuration options."
 - **Why:** two claims with nothing behind them — no number, no list.
-- **Proposed:** "The SDK batches requests, which cut median latency from 340 ms to 120 ms in our load test. It takes 14 options, listed in the configuration reference."
+- **Proposed:** "The SDK [what it does that makes it faster], which cut median latency from [before] to [after] in [the test that measured it]. It takes [number] options, listed in the configuration reference."
 
 **Stock opener and restating summary** — Phrases, Structure
 
 - **Now:** "In today's fast-paced development landscape, authentication is more important than ever. … In summary, by following these steps you'll be well on your way to secure authentication."
 - **Why:** an opener that carries no information, and a closer that restates the page and congratulates the reader.
-- **Proposed:** open with the task ("Add sign-in with an email link in about ten minutes.") and end on the next step: "Next, protect a route."
+- **Proposed:** open with the task ("Add [the sign-in method] to [the app].") and end on the next step: "Next, [the page that follows]."
 
 **Markdown where prose belongs** — Structure
 
@@ -34,19 +36,19 @@ Examples for documentation, then for content. Every example gives the flagged pa
 
 - **Now:** "This one change completely transformed my productivity."
 - **Why:** a big claim with no specific behind it — what changed, by how much.
-- **Proposed:** "Moving email to two fixed slots a day gave me back about an hour each morning. I tracked it for three weeks."
+- **Proposed:** "[The change] gave me back [how much time] a [day or week]. I tracked it for [how long]."
 
 **Rule-of-three cadence and uniform rhythm** — Punctuation rhythm
 
 - **Now:** "The bread was crusty, golden and delicious. The crumb was open, airy and soft. The flavour was deep, tangy and complex."
 - **Why:** three triplets in a row, every sentence the same length and shape.
-- **Proposed:** "The crust shattered when I cut it. Inside, the crumb was open and soft, and the overnight rise had given it a tang I'd never got from a same-day loaf."
+- **Proposed:** "The crust [what the writer saw or heard when cutting it]. Inside, the crumb was open and soft, with a tang [what the writer thinks caused it]."
 
 **Opinion piece with no opinion** — Substance
 
 - **Now:** "There are pros and cons to remote work, and ultimately the right choice depends on your situation."
 - **Why:** both-sides padding where the piece promised a position.
-- **Proposed:** state the writer's position and the reason: "I'd take a team back to an office for its first three months, and here's what changed my mind."
+- **Proposed:** state the writer's position and the reason, asked for if the draft doesn't give them: "[The writer's position], because [the reason they give]."
 
 **Vague attribution** — Substance
 
