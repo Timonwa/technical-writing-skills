@@ -2,7 +2,7 @@
   "name": "writing-skills",
   "version": "2.0.0",
   "private": true,
-  "description": "Claude Code skills for writers — the shared craft (write), technical writing (tw) and content writing (cw).",
+  "description": "Claude skills that help writers plan, write, edit and review documentation, blogs, newsletters and social posts.",
   "license": "MIT",
   "repository": "github:Timonwa/writing-skills",
   "packageManager": "pnpm@11.1.1",

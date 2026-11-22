@@ -3,22 +3,22 @@
   "owner": {
     "name": "Timonwa"
   },
-  "description": "Writing skills in three plugins: write, the craft every writer shares; tw, technical writing and documentation; and cw, content writing for any blog or newsletter, from idea to performance review.",
+  "description": "Claude skills that help writers plan, write, edit and review documentation, blogs, newsletters and social posts. Three plugins: tw for technical writing, cw for content writing, and write for the rules both use.",
   "plugins": [
     {
       "name": "write",
       "source": "./plugins/write",
-      "description": "The rules every writer shares, technical or content — the writing standards true of any piece, the machine-written check, and code samples that run. The voice and audience come from the project's style guide or the publication's writing guide."
+      "description": "The rules under any piece of writing: plain language, claims backed by sources, code samples that run, and a check for machine-written prose. Comes with tw and cw."
     },
     {
       "name": "tw",
       "source": "./plugins/tw",
-      "description": "Technical writing — planning a docs set, the documentation standards, developer docs, user guides, internal docs, READMEs, API references, release notes, localization, editing and reviewing docs, style guides and drift checks, screenshots and diagrams, and interviewing experts, plus commands for auditing a docs set and reviewing the docs in a pull request. Builds on write."
+      "description": "Technical writing skills for Claude: plan a docs set, write developer docs, help-centre articles, internal docs, API references, READMEs and release notes, research the code, interview engineers, and review, audit and edit docs. Includes write."
     },
     {
       "name": "cw",
       "source": "./plugins/cw",
-      "description": "Content writing for any blog or newsletter, on any subject — articles and tutorials, newsletter issues, social posts, a tutorial's demo project, editing and reviewing a piece, the publication's writing guide, photos, charts and diagrams, interviewing sources, and reviewing content performance. Builds on write."
+      "description": "Content writing skills for Claude, for any blog or newsletter on any subject: plan topics, research sources, write posts, newsletter issues and social posts, pitch and collaborate, edit and review, cross-post, refresh old pieces and read the analytics. Includes write."
     }
   ]
 }
