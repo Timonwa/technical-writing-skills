@@ -4,7 +4,7 @@
     {
       "id": 1,
       "prompt": "Set up my new food blog's publication files. I have an old 'brand voice' PDF from a course, about twenty published posts, and the covers from my last ten posts, but no brand guide.",
-      "expected_output": "Should start by finding what exists: the publication's folder (the folder AGENTS.md or the user's personal agent instructions name, else the project's publications/; in a chat app, the project's files; else ask), the brand-voice PDF placed in its sources/ folder, and the posts. Should convert the source rather than copy it, transcribing exact wording where it fixes wording and leaving the rest unset; derive from three or four typical posts and ask which posts aren't typical; then interview the owner for the profile. For the look, should ask for the logo files and any brand guide, read colours and fonts off the past covers into brand.md, mark each one unset until the owner confirms it, and put three or four sample covers and the logo in examples/ with a line on why each is there. Should write the files to the publication's folder from the template, never inside the installed plugin, and record what each was built from and the date.",
+      "expected_output": "Should start by finding what exists: the publication's folder (the folder AGENTS.md or the user's personal agent instructions name, else the project's publications/; in a chat app, the project's files; else ask), the brand-voice PDF placed in its sources/ folder, and the posts. Should convert the source rather than copy it, transcribing exact wording where it fixes wording and leaving the rest unset; derive from three or four typical posts and ask which posts aren't typical; then interview the owner for the profile. For the look, should ask for the logo files and any brand guide, read colours and fonts off the past covers into brand.md, mark each one unset until the owner confirms it, and put three or four sample covers and the logo in examples/ with a line on why each is there. Should ask only what the files don't answer — with choices where they're known — including the profile's Defaults: what a new topic becomes, where each format goes, full copy or opening excerpt per cross-post platform, and the cover. Should write the files to the publication's folder from the template — profile.md with its Defaults, writing-guide.md, brand.md, sources/, examples/, calendar.md with Coming up, Ideas and Published, series/, reports/ and topics/, where each topic gets a <yyyy-mm>-<slug> folder with brief.md and fixed format file names — never inside the installed plugin, and record what each was built from and the date.",
       "files": [],
       "expectations": [
         "Finds existing files via AGENTS.md or the user's agent instructions, then publications/, or the project's files in a chat app, then asks",
@@ -13,7 +13,8 @@
         "Interviews the owner for the profile",
         "Builds brand.md from the past covers, marking colours and fonts unset until confirmed, and asks for the logo files",
         "Puts sample covers and the logo in examples/ with a line on each",
-        "Writes files to the publication's folder, not inside the plugin, with provenance and date"
+        "Asks only what the files don't settle, with choices, including the profile's Defaults for a new topic",
+        "Writes files to the publication's folder from the template (calendar.md, series/, topics/), not inside the plugin, with provenance and date"
       ]
     },
     {

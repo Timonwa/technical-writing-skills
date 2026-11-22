@@ -65,6 +65,19 @@ Fill in what you know. Leave the rest as `unset` and a skill will ask rather tha
 | Issues sent so far      | _zero is a valid answer and changes how the first one is written_  |
 | Sender name and address | _the "from" line, and the postal address required in the footer_   |
 
+## Defaults
+
+What a new topic starts with, so a brief can offer these instead of asking from scratch. A brief may depart from any of them.
+
+| Field               | Your answer                                                                |
+| ------------------- | -------------------------------------------------------------------------- |
+| A new topic becomes | _blog post · newsletter issue · social posts · cross-posts · demo project_ |
+| First published on  | _the blog, or the platform where the original lives_                       |
+| Newsletter          | _sends every new post · a digest · only its own issues · none_             |
+| Cross-posts         | _one line per platform: full copy or opening excerpt_                      |
+| Social platforms    | _one line per platform, with the account_                                  |
+| Cover image         | _the template in brand.md, or none_                                        |
+
 ## Obligations
 
 | Field                  | Your answer                                                                           |

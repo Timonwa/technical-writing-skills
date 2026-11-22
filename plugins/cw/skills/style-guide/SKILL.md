@@ -30,6 +30,19 @@ The voice, terminology and reader the guide records come from the owner, the exi
 
 Saving the guide: in a codebase, write the files to the publication's folder; in a chat app, give the user the files to add to the project. Never write inside the installed plugin.
 
+## Ask first
+
+Read the answers from the publication's existing files, its `sources/`, its published pieces and the request first; ask only what's missing. Ask with the app's question tool where it has one, so the choices can be picked; otherwise as a numbered list answered by number. Offer choices where the answers are known and a short typed answer otherwise; where the profile already has an answer, show it and ask whether to keep it. Record each answer, dated, in `profile.md`, `writing-guide.md` or `brand.md`, so no skill asks it again.
+
+1. **Which publication is it?** Its name, and blog · newsletter · both.
+2. **Is there a guide already?** none · a style guide · a tone-of-voice document · a client's brief · notes — and where it is.
+3. **Which three or four published pieces are most typical, and which aren't?** Links or file names.
+4. **Who reads it, and who is it not for?** A short answer for each.
+5. **What should a piece lead the reader to do?** subscribe · try it · reply · read the next one · nothing.
+6. **What does a new topic usually become, and where does each go?** blog post · newsletter issue · social posts · cross-posts · demo project, pick any; then each cross-post platform with full copy or opening excerpt, and each social platform with its account. These are the profile's Defaults.
+7. **Which base guide and spelling variant?** AP · Chicago · another, named; and US · UK · another English.
+8. **Is there a brand guide or logo files?** none · a brand guide · logo files only — and where they are.
+
 ## Voice and tone are different decisions
 
 **Voice stays the same; tone changes with the reader's situation.** [Mailchimp](https://styleguide.mailchimp.com/voice-and-tone/) puts it in one line: "You have the same voice all the time, but your tone changes." A launch announcement and an apology from the same publication don't sound alike, but they sound like the same person. The voice is the owner's — whether it says "I", how casual it is, its humour, its asides, its emoji — and it's derived from the writing, never imposed. Two publications by the same person can rightly sound different.
@@ -102,7 +115,7 @@ Saving the guide: in a codebase, write the files to the publication's folder; in
 
 ## What the profile and the brand decide
 
-- **The profile** settles who the publication is for and what it's for: the reader and what they already know, who it's not for, the job it does for readers and for the owner, the one action a piece should lead to, the channels and cadence, and the disclosures it owes. It changes when the audience or the purpose does, and it decides whether a piece belongs at all. Fields: [references/profile.md](references/profile.md).
+- **The profile** settles who the publication is for and what it's for: the reader and what they already know, who it's not for, the job it does for readers and for the owner, the one action a piece should lead to, the channels and cadence, the disclosures it owes, and the defaults a new topic starts with — what it becomes, where each format goes, the cover. It changes when the audience or the purpose does, and it decides whether a piece belongs at all. Fields: [references/profile.md](references/profile.md).
 - **The brand** settles how the publication looks: its colours and the pairs that pass contrast, its fonts, the logo and its use, the cover template, and the image and chart style. `cw:cover-images` and `cw:images-and-diagrams` follow it over their own defaults. Fields: [references/publication-template/brand.md](references/publication-template/brand.md).
 
 ## The terminology list
@@ -125,28 +138,40 @@ In a codebase, one folder per publication — the folder the project's `AGENTS.m
 ```text
 publications/
   <publication>/       # a blog, a newsletter, or an outlet or client written for
-    profile.md         # who it is, who it's for, what it's for
+    profile.md         # who it's for, what it's for, its channels and defaults
     writing-guide.md   # how to write for it
     brand.md           # how it looks: colours, fonts, logo, cover template
     sources/           # style guides and reference material already in hand
     examples/          # sample covers, logo files, pieces that show the voice
-    plan.md            # the calendar: one line per piece
+    calendar.md        # the editorial calendar: one line per topic
+    series/            # one file per series: <series-slug>.md
     reports/           # style-check.md, content-performance-<yyyy-mm-dd>.md
-    pieces/
-      <yyyy-mm>-<slug>/  # one folder per piece: brief.md, draft.md, sources.md,
-                         # interviews/, images/, social.md, copies.md, reports/
+    topics/
+      <yyyy-mm>-<slug>/  # one folder per topic
+        brief.md         # status, who holds it, what the topic becomes, the brief
+        blog.md          # the blog post (front matter + body)
+        newsletter.md    # the newsletter issue
+        social.md        # every social post, one section per platform
+        copies.md        # cross-posts to other blogging platforms
+        sources.md       # the source log
+        interviews/      # one notes file per interview
+        images/          # cover, share card, diagrams
+        reports/         # review.md, ai-check.md, seo.md
   pitch-log.md         # pitches to every outlet
   _archive/            # publications no longer written for
 ```
 
-- **Every piece gets its own folder**, so two pieces — or two agents, or one paused piece and the next — never write to the same file. A commissioned piece is a piece folder under the outlet's or client's publication folder.
-- **`brief.md` says who holds the piece.** Before working on one, read it: if "Held by" names someone else and the status isn't `paused`, leave it and say so. When starting, set Held by and the date; when stopping, set the status and clear Held by. Resuming a paused piece starts by reading its `brief.md`, `draft.md` and `sources.md`.
-- **Status** is one of `idea` · `briefed` · `drafting` · `in review` · `scheduled` · `published` · `paused` · `retired`.
-- **`plan.md` is the only shared file.** Change only your piece's line; never rewrite the file. Lines sit under **Coming up** (dated, soonest first), **Ideas** (undated, newest first) and **Published** (newest first).
+- **A folder is a topic, not a format.** A topic is the folder; a piece is one thing published from it. Every topic gets its own folder, so two topics — or two agents — never write to the same file. One topic can become a blog post, a newsletter issue, social posts, cross-posts and a demo project — one, some or all. Its brief records which, and the folder holds only those formats' files. A roundup issue or a personal note is a topic whose brief lists only a newsletter; a stand-alone post or thread is one whose brief lists only social posts. A commissioned piece is a topic folder under the outlet's or client's publication folder.
+- **File names are fixed.** `blog.md`, `newsletter.md`, `social.md`, `copies.md`: adding a format adds its file, and nothing is renamed. The folder is `<yyyy-mm>-<slug>`, the month of the first publish date (or the month it's briefed, with no date yet), one level deep, never `yyyy/mm/slug`.
+- **`brief.md` says who holds the topic.** Before working on one, read it: if Held by names someone else and the status isn't `paused`, leave it and say so. On starting, set Held by and the date; on stopping, set the status and clear Held by. Resuming starts with `brief.md`, then the format files and `sources.md`. Only a skill that edits the format files claims: a read-only check that writes only its own report (a review, an AI check, a style check, an SEO check, a performance review) runs while someone holds the topic, never sets Held by, and writes only its own file in `reports/`.
+- **Ask-first answers go in the brief**, in the field they belong to — the "What this topic becomes" table or a row of "The brief"; an answer with no field goes under "Notes for whoever picks it up next".
+- **Status** is one of `idea` · `briefed` · `drafting` · `in review` · `scheduled` · `published` · `paused` · `retired`. Each format in the brief has its own; the topic's is the overall one, `published` once every listed format is.
+- **`calendar.md` is the editorial calendar and the one shared file** — one line per topic: first publish date · topic folder · formats · status · held by · series · link, under **Coming up** (dated, soonest first), **Ideas** (undated, newest first) and **Published** (newest first). Change only your topic's line; never rewrite the file. A topic's other dates live in its brief.
+- **`series/<series-slug>.md` plans a series** — its name, reader, what it covers and leaves out, cadence, and one row per part. Each part is its own topic whose brief names the series and the part.
 
-In a chat app, a project's files can't hold folders, so a piece's files are named `<piece folder name>--<file>` (`2026-11-rates-explainer--brief.md`), and Claude hands back only that piece's files and the one `plan.md` line to change. The publication's own files keep their names: `profile.md`, `writing-guide.md`, `brand.md`, `plan.md`, and the sources, sample covers and logo files uploaded beside them.
+In a chat app, a project's files can't hold folders, so a topic's files are named `<topic folder>--<file>` (`2026-12-sourdough-starter--brief.md`). The publication's own files keep their names — `profile.md`, `writing-guide.md`, `brand.md`, `calendar.md`, a series' `<series-slug>.md`, and the sources, sample covers and logo files beside them — and for `calendar.md` Claude hands back only the line to add or change.
 
-Start a new one from the blanks in [references/publication-template/](references/publication-template/), and a new piece from [pieces/\_template/](references/publication-template/pieces/_template/): fill copies of them, never the templates themselves.
+Start from the blanks in [references/publication-template/](references/publication-template/) — [calendar.md](references/publication-template/calendar.md), a series from [series/\_template.md](references/publication-template/series/_template.md), a topic from [topics/\_template/](references/publication-template/topics/_template/) — and fill copies, never the templates themselves. A field not yet known stays in the file, blank; it's never removed.
 
 ## Enforcing and maintaining it
 
