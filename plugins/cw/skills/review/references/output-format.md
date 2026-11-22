@@ -1,11 +1,15 @@
 # Review output format
 
-Write to the piece's `reports/review.md` (`pieces/<yyyy-mm>-<slug>/reports/review.md`), creating the folder if it doesn't exist, and summarise the findings in chat. In a chat app, hand it back as `<piece folder name>--review.md`. Tell the user the path when you're done.
+Write to the topic's `reports/review.md` (`topics/<yyyy-mm>-<slug>/reports/review.md`), creating the folder if it doesn't exist, and summarise the findings in chat. In a chat app, hand it back as `<topic folder>--review.md`. Tell the user the path when you're done.
+
+Every field in the header is always present; one that doesn't apply says so rather than being removed.
 
 ```markdown
-# Review — <piece>
+# Review — <working title>
 
-**Date:** <YYYY-MM-DD> · **Kind:** <article / tutorial / essay / feature / newsletter issue> · **Publication:** <name> · **Reader:** <who, from the profile> · **Guide:** <path, or "none found"> · **Verdict:** <Ready / Ready with fixes / Needs rework> · **Overall:** <X>/10
+**Checked:** <topic folder> — <the files reviewed: blog.md, newsletter.md, social.md, copies.md settings> · **Date:** <YYYY-MM-DD> · **Against:** <writing-guide.md path, profile.md path, or "none found">
+
+**Publication:** <name> · **Kind:** <article / tutorial / essay / feature / roundup> · **Reader:** <who, from the brief or profile> · **Publishes:** <date per format, from the brief> · **Disclosures:** <what the piece must disclose, or "none"> · **Verdict:** <Ready / Ready with fixes / Needs rework> · **Overall:** <X>/10
 
 ## Score change (previous → current)
 | Metric | Previous | Current | Δ | Trend |
@@ -15,7 +19,7 @@ Write to the piece's `reports/review.md` (`pieces/<yyyy-mm>-<slug>/reports/revie
 ## Findings
 | ID | Level | Severity | Status | Issue | Location |
 | --- | --- | --- | --- | --- | --- |
-| 1 | Accuracy | BLOCKER | OPEN | <one-line> | <section or paragraph> |
+| 1 | Accuracy | BLOCKER | OPEN | <one-line> | <file — section or paragraph> |
 
 ### R1 — <title>
 - **Level:** <which of the five>
@@ -24,7 +28,7 @@ Write to the piece's `reports/review.md` (`pieces/<yyyy-mm>-<slug>/reports/revie
 - **Proposed:** <the replacement>
 
 ## Questions for the author
-Facts only the author, an expert or a source can settle. Nothing below has been guessed at in the draft.
+Facts only the author, an expert or a source can settle. Nothing below has been guessed at in the piece.
 
 | # | Question | Why it matters | Where |
 | --- | --- | --- | --- |

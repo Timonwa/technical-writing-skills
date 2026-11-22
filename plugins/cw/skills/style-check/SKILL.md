@@ -33,9 +33,19 @@ When a guide changes: in a codebase, save the file where it was found; in a chat
 
 **Drift is measured against that guide.** A blog written in first person with title-case headlines is consistent if that's what its guide says; it drifts when some pieces don't.
 
+## Ask first
+
+Read the answers from the request, `profile.md`'s Channels and Defaults, and the publication's folder first; ask only what's missing. Ask with the app's question tool where it has one, so the choices can be picked; otherwise as a numbered list answered by number. Offer choices where the answers are known and a short typed answer otherwise; where the profile has a default, show it and ask whether to use it. Record the answers in the report's header, so a re-run sweeps the same set.
+
+1. **Which formats should the sweep cover?** blog posts · newsletter issues · social posts — pick any. Default: every format the profile's Defaults name.
+2. **Where does the archive live?** the publication's `topics/` folder · another folder (path) · an export of the live site (path). Default: `topics/`.
+3. **Which pieces count?** published only · everything, drafts included. Default: published only, read from each topic's `brief.md`.
+4. **Which dates?** the whole archive · since a date. Default: the whole archive.
+5. **Which guide is the standard?** the publication's `writing-guide.md` · another file (path) · none, derive it from the writing. Default: `writing-guide.md`, if it exists.
+
 ## Arguments
 
-- `[path]` — the archive to sweep. Omitted → ask.
+- `[path]` — the archive to sweep. Omitted → the publication's `topics/` folder, after Ask first.
 - `[--guide <path>]` — the writing guide or terminology list. Omitted → look for one; if none turns up, ask before assuming there isn't one, since a publication's guide often lives outside the repo. Only once the answer is no, run in **derive mode**: infer the dominant convention from the pieces, report drift against that, and propose the entries the guide is missing.
 - `[--fix]` — don't sweep. Read the publication's existing `reports/style-check.md`, list what's in it, and ask which findings to fix.
 
@@ -48,7 +58,7 @@ When a guide changes: in a codebase, save the file where it was found; in a chat
 3. **Count everything.** Every finding carries how many times each variant appears and where.
 4. **Separate a drift from a decision.** Where two variants both appear substantially, raise it as an open decision with the counts and a recommendation.
 5. **Read across time** (below), where the pieces have dates.
-6. **Check the places drift hides** — titles, subheads, captions, link text, tags and categories, social and email titles, the author bio, frontmatter. Body prose gets edited; these don't.
+6. **Check the places drift hides** — titles, subheads, captions, link text, tags and categories, social and email titles, the author bio, front matter. Body prose gets edited; these don't. In a topic folder that's `blog.md`'s `title`, `description`, `tags` and `series`; `newsletter.md`'s `subject` and `preview_text`; and each section of `social.md`. `copies.md` holds only each cross-post's settings, so its tags are swept and nothing else.
 7. **Write the report** and post the chat summary. Never edit a piece.
 
 ### What to sweep

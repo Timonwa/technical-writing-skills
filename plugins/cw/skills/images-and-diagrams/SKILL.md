@@ -24,6 +24,17 @@ Its image policy — credits, photo rights, AI-generated images — comes from t
 
 When a guide changes: in a codebase, save the file where it was found; in a chat app, give the user the updated file to replace in the project. Never write inside the installed plugin.
 
+## Ask first
+
+Read the answers from the topic's `brief.md`, then `profile.md`'s Defaults, then the request; ask only what's missing. Ask with the app's question tool where it has one, so the choices can be picked; otherwise as a numbered list answered by number. Offer choices where the answers are known and a short typed answer otherwise; where the profile has a default, show it and ask whether to use it. Record each answer in the `brief.md` field it belongs to — the "What this topic becomes" table or a row of "The brief" — and any answer with no field under "Notes for whoever picks it up next", so the next skill doesn't ask again.
+
+1. **Which formats are the visuals for?** blog post · newsletter issue · social posts — pick any; email changes the rules below. Default: the formats the brief lists.
+2. **What should each visual show?** Short answer per visual · suggest where a visual earns its place.
+3. **Where does each one come from?** your own photo · licensed stock (which licence) · Creative Commons · to be made (chart, diagram, screenshot) · AI-generated, labelled.
+4. **Is anyone identifiable in them, and has each person consented?** yes, consent recorded · not yet · no people.
+5. **For a chart, where is the data, and when is it from?** A file or link and a date; it goes in `sources.md`.
+6. **Should one of them be the cover?** yes (which) · no, the cover is designed separately. Default: the profile's Cover image.
+
 ## Which visuals earn their place
 
 Say in one sentence what the reader gets from the picture that they wouldn't from the paragraph. If you can't, write the paragraph.
@@ -104,7 +115,9 @@ A newsletter's images arrive in mail clients, not a browser you control:
 
 ## Where the files go
 
-Save every image, diagram source and chart's data in the piece's `images/` folder (`pieces/<yyyy-mm>-<slug>/images/`), named for what each shows (`fee-comparison-chart.png`, not `image3.png`). In a chat app, hand them back named `<piece folder name>--<file>`. Before working on a piece, read its `brief.md`: if "Held by" names someone else and the status isn't `paused`, leave it and say so.
+Save every image, diagram source and chart's data in the topic's `images/` folder (`topics/<yyyy-mm>-<slug>/images/`), named for what each shows (`fee-comparison-chart.png`, not `image3.png`), and add a chart's data source to `sources.md`. In a chat app, hand them back named `<topic folder>--<file>`. Saving into `images/` needs no claim. Placing an image in a format file or filling its cover fields edits that file, so read `brief.md` first: if "Held by" names someone else and the status isn't `paused`, leave it and say so; otherwise set Held by and the date, and clear it when you stop.
+
+**When an image is the cover** — the photo of the finished dish at the top of the post — set `cover_image` to its path in `images/` (or its hosted URL) and `cover_alt` to its alt text, in the front matter of `blog.md` and `newsletter.md`, whichever the brief lists ([templates](../style-guide/references/publication-template/topics/_template/)). Every other image goes in the body with its alt text beside it.
 
 ## Before it ships
 
@@ -116,13 +129,13 @@ Save every image, diagram source and chart's data in the piece's `images/` folde
 - [ ] Edited, composite and AI-generated images are labelled.
 - [ ] Screenshots are scrubbed and captured with demo data; a tutorial doesn't screenshot every step.
 - [ ] For a newsletter: it reads with images off, survives dark mode, and every GIF works on its first frame.
-- [ ] Every file, with its source and data, is saved in the piece's `images/`.
+- [ ] Every file, with its source and data, is saved in the topic's `images/`, and a cover is in `cover_image` and `cover_alt`.
 
 A worked example — deciding, fixing, crediting and describing every visual in one piece — is in [references/worked-example.md](references/worked-example.md).
 
 ## Boundaries
 
-- **A cover image and the cards a link shows when it's shared** → `cw:cover-images`.
+- **Designing a cover image and the cards a link shows when it's shared** → `cw:cover-images`.
 - **Code is never an image** — code in a piece follows `write:code-samples`.
 - **Whether the piece needs a visual at all, and where it sits** → `cw:article-standards` and `cw:newsletter-standards`.
 - **Visuals in documentation** → `tw:images-and-diagrams`.

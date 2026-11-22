@@ -3,15 +3,16 @@
   "evals": [
     {
       "id": 1,
-      "prompt": "Find me a nice stock photo of a bowl of jollof rice for the top of my recipe post.",
-      "expected_output": "Should recommend a photo of the actual dish the recipe produces over a generic stock image, because readers study real photos of the thing and ignore generic stock. If a stock image is used, it must be licensed for this use and credited as its licence asks. Alt text says what the photo is for in this piece, not a neutral inventory. The cover image itself is cw:cover-images' job. Should read the publication's guide for its image and credit conventions first.",
+      "prompt": "Find me a nice stock photo of a bowl of jollof rice for the top of my recipe post in topics/2026-12-party-jollof/.",
+      "expected_output": "Should read the topic's brief.md and the publication's guide first, for the formats, Held by and its image and credit conventions, and ask only what's missing — where the image will come from, whether it's the cover. Should recommend a photo of the actual dish the recipe produces over a generic stock image, because readers study real photos of the thing and ignore generic stock. If a stock image is used, it must be licensed for this use and credited as its licence asks. Alt text says what the photo is for in this piece, not a neutral inventory. The chosen photo is saved in the topic's images/ and, as the cover, set in blog.md's cover_image and cover_alt; designing a cover card or share card is cw:cover-images' job.",
       "files": [],
       "expectations": [
+        "Reads brief.md and the publication's guide, and asks only what's missing",
         "Recommends a photo of the real dish over generic stock",
         "Requires a licence that covers this use",
         "Writes alt text from the photo's purpose in the piece",
-        "Reads the publication's guide for image and credit conventions",
-        "Points the cover image to cw:cover-images"
+        "Saves the photo in the topic's images/ and fills cover_image and cover_alt in blog.md",
+        "Points designing a cover card to cw:cover-images"
       ]
     },
     {

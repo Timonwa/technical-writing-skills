@@ -23,14 +23,27 @@ Voice, person, tone, terminology, formatting choices and who the reader is come 
 
 When a guide changes: in a codebase, save the file where it was found; in a chat app, give the user the updated file to replace in the project. Never write inside the installed plugin.
 
-## The piece's folder
+## Ask first
 
-A refresh works in the piece's own folder, `pieces/<yyyy-mm>-<slug>/` in the publication's folder; in a chat app, its files are named `<piece folder name>--<file>`.
+Read the answers from the topic's `brief.md`, then `profile.md`'s Defaults, then the request; ask only what's missing. Ask with the app's question tool where it has one, so the choices can be picked; otherwise as a numbered list answered by number. Offer choices where the answers are known and a short typed answer otherwise; where the profile has a default, show it and ask whether to use it. Record each answer in the `brief.md` field it belongs to — the "What this topic becomes" table or a row of "The brief" — and any answer with no field under "Notes for whoever picks it up next", so the next skill doesn't ask again.
 
-- **Claim it first.** Read `brief.md`. If "Held by" names someone else and the status isn't `paused`, leave it and say so. Otherwise set Held by and the date, and move the status from `published` back to `drafting`.
-- **Edit `draft.md`**, recheck claims against `sources.md`, and put new screenshots in `images/`.
-- **Keep the change notes in the piece** — the reader-facing correction or update note in the draft, and a dated line on what changed in `brief.md`.
-- **When it's live again**, set the status to `published` (or `retired`), clear Held by, and change the piece's line in `plan.md` — only that line.
+1. **Which topic?** Its topic folder or published URL.
+2. **Which formats does the refresh cover?** blog post · newsletter issue's web version · cross-posts — pick any. Default: every published format in the brief's "What this topic becomes".
+3. **What prompted it?** a performance report (which) · a fact that moved · a reader's report · the review cadence · a newer piece on the same question.
+4. **What does it need?** refresh · rewrite · merge · redirect · retire · decide for me. Default: decide for me, using the table below.
+5. **Can each cross-post be updated directly, or does the owner paste the change in?** One answer per platform in `copies.md`. Default: the owner pastes it in.
+6. **Should the change be re-promoted?** social posts · a mention in the newsletter · no. Default: no, unless the update is substantial.
+
+## The topic folder
+
+A refresh works in the topic's own folder, `topics/<yyyy-mm>-<slug>/` in the publication's folder; in a chat app, its files are named `<topic folder>--<file>`. The file shapes are the templates in [`topics/_template/`](../style-guide/references/publication-template/topics/_template/).
+
+- **Claim it first.** Read `brief.md`. If "Held by" names someone else and the status isn't `paused`, leave it and say so. Otherwise set Held by and the date, and move the status of each format being refreshed, and the topic's own, from `published` to `drafting`.
+- **Edit the format files** — `blog.md`, and `newsletter.md` for the issue's web version — recheck claims against `sources.md`, update each source's Checked date and each claim's status, and put new screenshots in `images/`.
+- **Front matter.** In `blog.md`, set `updated` only for a substantive change; `published_url` stays as it is. Where the title or description changes, `cw:seo-aeo-geo` checks them.
+- **Every copy in `copies.md`.** A full copy gets the same change and the same correction or update note; an opening excerpt is rewritten only when the opening paragraphs changed. Set each platform's last synced date, and hand the owner the exact text for any copy they paste in themselves.
+- **Keep the change notes in the topic** — the reader-facing correction or update note in the format file, and a dated line in `brief.md`'s notes: `Refreshed <yyyy-mm-dd>: <decision> — <what changed> — <files and copies updated>`.
+- **When it's live again**, set each format's status and the topic's to `published` (or `retired`), clear Held by, and change the topic's line in `calendar.md` — only that line: its status, and its formats if one was retired. The line stays under **Published**.
 
 ## When to look again
 
@@ -106,12 +119,14 @@ Work through the piece as a reader arriving today:
 - **Permanently redirect every retired URL to the survivor**, directly, with no chain of redirects ([Google: redirects](https://developers.google.com/search/docs/crawling-indexing/301-redirects); [site moves](https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes)). The redirect is set in the site's hosting or CMS.
 - **Update internal links** to point at the survivor rather than through the redirect, and keep the redirects for as long as possible — Google says at least a year, and indefinitely is better for readers ([Google: site moves](https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes)).
 - **Add an update note** to the survivor if a reader of a merged piece would wonder where it went.
+- **In the publication's folder**, the survivor's `brief.md` records what came in from where; each merged topic's formats, its brief and its line in `calendar.md` become `retired`, and every copy in its `copies.md` is pointed at the survivor or taken down.
 
 ## Retiring a piece
 
 - **Redirect only to a real equivalent.** "Don't redirect many old URLs to one irrelevant single URL destination, such as the home page" ([Google: site moves](https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes)). With no equivalent, let the URL return 404 or 410, and Google removes it from the index ([Google: HTTP status codes](https://developers.google.com/search/docs/crawling-indexing/http-network-errors)).
-- **Remove internal links** to the retired piece, and take it out of series pages, reading lists and anything the platform lists it in.
+- **Remove internal links** to the retired piece, and take it out of series pages, reading lists and anything the platform lists it in — including its row in the series file under `series/`, whose status becomes `retired`.
 - **Archive its demo repo** and say in that repo's README that the piece is retired.
+- **Its copies follow it** — every cross-post in `copies.md` is taken down, or gets a note at the top pointing to what's current, and its row records which.
 - **Keep the slug retired.** Don't reuse a retired URL for a different piece; old links and citations would land on the wrong answer.
 
 ## Newsletter issues
@@ -124,13 +139,13 @@ Work through the piece as a reader arriving today:
 
 - **Recheck findability** — the title, description, slug and opening still match the question the piece answers (`cw:seo-aeo-geo`).
 - **Ask Google to recrawl it** — in a site you manage in Search Console, request indexing for the URL with URL Inspection ([Google: ask Google to recrawl](https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl)). The sitemap's `<lastmod>` should change with a substantive update and only then: Google uses it only when it's "consistently and verifiably" accurate ([Google: sitemaps](https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap)). Setting it is the site's developers' work or the CMS's.
-- **Re-promote what changed** — a new angle or a materially better answer is worth sharing again (`cw:social-media-posts`); a significant update can go in the newsletter (`cw:newsletter-standards`).
-- **Record the refresh** in the piece's `brief.md`, so the next review knows it was checked and when.
+- **Re-promote what changed** — a new angle or a materially better answer is worth sharing again (`cw:social-media-posts`, which adds the posts to `social.md`; posts already live aren't edited); a significant update can go in the newsletter (`cw:newsletter-standards`).
+- **Record the refresh** in the topic's `brief.md`, so the next review knows it was checked and when.
 
 ## Boundaries
 
 - **Finding which pieces need attention** → `/cw:content-performance`.
 - **Rewriting the piece's structure or framing** → `cw:article-standards`; **the line-level edit** → `cw:editing-standards`; **a full review before republishing** → `/cw:review`.
 - **Tutorial code and the demo repo** → `write:code-samples`, `cw:demo-project`.
-- **Republishing the piece elsewhere** → `cw:cross-posting`.
+- **Cross-posting to a platform the topic isn't on yet** → `cw:cross-posting`; keeping the existing copies in step is this skill's job.
 - **Setting up redirects, status codes and structured dates** — the site's hosting or CMS; this skill says which ones a piece needs.

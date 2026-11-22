@@ -4,13 +4,14 @@
     {
       "id": 1,
       "prompt": "/cw:content-performance ~/Downloads/search-console-queries.csv https://example-recipes.com",
-      "expected_output": "Should read the publication's profile.md first (the folder AGENTS.md or the user's personal agent instructions name, else the project's publications/; in a chat app, the project's files; else ask) to learn what success means, and ask if it's unset before ranking. Then map the export's columns to signals, say which findings the data can't support, and rank fixes by expected impact with the numbers each came from. Writes the report to the publication's reports/content-performance-<date>.md and edits no page.",
+      "expected_output": "Should read the publication's profile.md first (the folder AGENTS.md or the user's personal agent instructions name, else the project's publications/; in a chat app, the project's files; else ask) to learn what success means, and ask only what the profile, the request and the export's header leave open — success if it's unset, an earlier export to compare, the formats in scope. Then map the export's columns to signals, say which findings the data can't support, rank fixes by expected impact with the numbers each came from, and tie each page to its topic folder. Writes the report to the publication's reports/content-performance-<date>.md in the skill's template, opening with the exports and date ranges checked, the date and the profile it measured against, and edits no page.",
       "files": [],
       "expectations": [
-        "Reads profile.md for what success means before ranking",
+        "Reads profile.md for what success means and asks only what's missing",
         "Maps the export's columns and names analyses the data can't support",
         "Ranks findings by expected impact with the source numbers",
-        "Writes the dated report and does not edit any page"
+        "Ties each page to its topic folder",
+        "Writes the dated report in the template, headed with the exports, date ranges and profile, and does not edit any page"
       ]
     },
     {

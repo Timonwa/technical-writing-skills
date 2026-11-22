@@ -35,6 +35,17 @@ Traffic is rarely the goal; it's a proxy for one. A publication that exists to d
 
 Without that answer, the ranking optimises for whatever the export happens to measure, which is almost always reach.
 
+## Ask first
+
+Read the answers from `profile.md` (its purpose, Channels and Defaults), the request and the export's own header row first; ask only what's missing. Ask with the app's question tool where it has one, so the choices can be picked; otherwise as a numbered list answered by number. Offer choices where the answers are known and a short typed answer otherwise; where the profile has a default, show it and ask whether to use it. Record a new answer about success in `profile.md`, and every answer in the report's header.
+
+1. **What counts as success for this publication?** readers · subscribers · enquiries · product use · sales · none, it's written for its own sake. Default: what `profile.md` says.
+2. **Which exports, and from which platform?** Paths or pasted tables. Default: what the request names.
+3. **Is there an earlier export to compare against?** yes (path) · no, so no trend findings. Default: no.
+4. **What is the site's base URL?** Short answer. Default: the blog in the profile's Channels.
+5. **Which formats are in scope?** blog posts · newsletter issues · both. Default: every format in the exports.
+6. **What's the minimum number of impressions for a finding?** A number · let the report set one and state it. Default: the report sets one.
+
 ## Read the export before analysing it
 
 Any platform's export is fine, because the analysis keys off **columns, not tools**. Read the header row first, map it to the signals below, and work with what's there.
@@ -99,7 +110,9 @@ Where the export carries none of these, say the question can't be answered from 
 - **Name what you'd do first** if only three things get done.
 - **Separate observations from recommendations.** A number in the export is a fact; what to do about it is a judgement, and the report should be readable by someone who wants to disagree with the second part.
 
-Write the report to the publication's `reports/content-performance-[YYYY-MM-DD].md` (ask before overwriting), and summarise the top findings in the chat.
+- **Tie each page to its topic folder** — the topic whose `blog.md` has that `published_url`, or whose line in `calendar.md` links it — so a refresh or a rewrite starts in the right folder.
+
+Write the report to the publication's `reports/content-performance-<yyyy-mm-dd>.md` (ask before overwriting) in the template in [references/output-format.md](references/output-format.md), and summarise the top findings in the chat. In a chat app, hand it back as `content-performance-<yyyy-mm-dd>.md`.
 
 ## Never
 

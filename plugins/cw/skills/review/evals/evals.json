@@ -3,14 +3,16 @@
   "evals": [
     {
       "id": 1,
-      "prompt": "Review newsletter-issues/issue-42.md before it goes out tomorrow. It's our monthly gardening newsletter; the footer was trimmed this month to save space and now ends at the sign-off.",
-      "expected_output": "Should load the publication's writing guide and profile first, finding them in the folder AGENTS.md or the user's agent instructions name, otherwise the project's publications/ folder, or in a chat app the project's files, otherwise asking. Should review down the five levels and flag the missing unsubscribe link and postal address as a BLOCKER, since a newsletter issue without them must not send. Should also check the envelope: the subject line reflects the contents, the preview text adds to the subject, the sender name is the recognised one. Should write the report to the piece's reports/review.md, list the findings by ID and ask which to fix, without editing the issue.",
+      "prompt": "Review the newsletter issue in topics/2026-11-november-garden-jobs/ before it goes out tomorrow. It's our monthly gardening newsletter; the footer was trimmed this month to save space and now ends at the sign-off.",
+      "expected_output": "Should load the publication's writing guide and profile first, finding them in the folder AGENTS.md or the user's personal agent instructions name, otherwise the project's publications/ folder, or in a chat app the project's files, otherwise asking. Should read the topic's brief.md for which formats to review, the reader and the send date, ask only what the brief and the profile's Defaults leave open, and run even if someone holds the topic, without setting Held by or changing the brief. Should review newsletter.md down the five levels and flag the missing unsubscribe link and postal address as a BLOCKER, since a newsletter issue without them must not send. Should also check the envelope: the subject line reflects the contents, the preview text adds to the subject, the sender name is the recognised one. Should write the report to the topic's reports/review.md, opening with what was checked, when and against which guide, list the findings by ID and ask which to fix, without editing the issue.",
       "files": [],
       "expectations": [
         "Reads the publication's writing-guide.md and profile.md before reviewing",
+        "Reads the formats, reader and send date from brief.md and asks only what's missing",
+        "Runs as a read-only check: never sets Held by and writes only reports/review.md",
         "Flags the missing unsubscribe link and postal address as a BLOCKER",
         "Checks subject line, preview text and sender name",
-        "Writes the report to the piece's reports/review.md",
+        "Writes the report to the topic's reports/review.md, opening with what was checked, the date and the guide",
         "Lists findings by ID and asks which to fix",
         "Does not edit the issue while reviewing"
       ]

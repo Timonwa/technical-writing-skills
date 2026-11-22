@@ -3,15 +3,16 @@
   "evals": [
     {
       "id": 1,
-      "prompt": "Run a style check on my blog archive in posts/. I don't think I ever wrote a style guide.",
-      "expected_output": "Should ask for a guide before concluding there isn't one, and look for the publication's folder (the folder AGENTS.md or the user's personal agent instructions name, else the project's publications/; in a chat app, the project's files; else ask). With none, it derives the dominant conventions and says what it derived and how strongly. Where the guide is silent, universal reader-protecting rules — link text, heading order, alt text, sources and credits — are still findings, while voice-level defaults like minimisers stay proposals with counts. Sweeps the whole archive, counts every variant and writes the report to the publication's reports/style-check.md without editing any post.",
+      "prompt": "Run a style check on my publication's topics/ folder. I don't think I ever wrote a style guide.",
+      "expected_output": "Should ask for a guide before concluding there isn't one, and look for the publication's folder (the folder AGENTS.md or the user's personal agent instructions name, else the project's publications/; in a chat app, the project's files; else ask). Should take the formats to sweep from profile.md's Defaults and ask only what's left open — which formats, published only or drafts too, which dates. With no guide, it derives the dominant conventions and says what it derived and how strongly. Where the guide is silent, universal reader-protecting rules — link text, heading order, alt text, sources and credits — are still findings, while voice-level defaults like minimisers stay proposals with counts. Sweeps the format files in every topic folder, including blog.md's front matter, counts every variant and writes the report to the publication's reports/style-check.md, its header naming what was swept, the date and the guide, without editing any post.",
       "files": [],
       "expectations": [
         "Asks for a guide before deriving conventions",
+        "Takes the formats from profile.md's Defaults and asks only which formats, pieces and dates are still open",
         "Treats link text, heading order, alt text and credits as findings even without a guide",
         "Treats minimisers and voice defaults as proposals",
-        "Counts every variant across the whole archive",
-        "Writes the report without editing posts"
+        "Counts every variant across every topic folder, front matter included",
+        "Writes the report, headed with what was swept, the date and the guide, without editing posts"
       ]
     },
     {

@@ -30,16 +30,36 @@ When a guide changes: in a codebase, save the file where it was found; in a chat
 
 The editing craft is `cw:editing-standards`; the universal writing rules are `write:writing-standards`; the piece's shape comes from `cw:article-standards` or `cw:newsletter-standards`.
 
+## Ask first
+
+Read the answers from the topic's `brief.md`, then `profile.md`'s Defaults, then the request; ask only what's missing. Ask with the app's question tool where it has one, so the choices can be picked; otherwise as a numbered list answered by number. Offer choices where the answers are known and a short typed answer otherwise; where the profile has a default, show it and ask whether to use it. Record the answers in the report's header; a review writes nothing outside its own report.
+
+1. **Which formats should this review cover?** blog post (`blog.md`) · newsletter issue (`newsletter.md`) · social posts (`social.md`) — pick any. Default: every format the brief lists as `drafting` or `in review`.
+2. **What kind of piece is it?** article · tutorial · essay · feature · roundup · short answer. Default: the brief's Kind.
+3. **Who is the reader, and what should they do or know afterwards?** Short answer. Default: the brief's reader and its one action.
+4. **Where does each format go out?** The blog's platform, the newsletter's platform and list. Default: the brief's "Where it goes", then the profile's Defaults.
+5. **Does it carry code or commands a reader will run?** yes, with the repository or demo project · no.
+6. **What must it disclose?** sponsorship · affiliate links · gifted item · AI assistance · none — pick any.
+7. **When does it publish?** A date. Default: the publish date in the brief.
+
+## The topic folder
+
+A topic lives in `topics/<yyyy-mm>-<slug>/` in the publication's folder; the formats it becomes are listed in its `brief.md` ([template](../style-guide/references/publication-template/topics/_template/brief.md)), each in its own file. In a chat app, its files are named `<topic folder>--<file>`.
+
+- **A review only reads.** It runs even while someone holds the topic, never sets Held by or a status, and writes only its own `reports/review.md`.
+- **Check every claim against `sources.md`**: each one in the format files has a row under Claims, its source under Sources supports it, and none the piece keeps is `unverified`. Check quotes against the notes in `interviews/`.
+- **A cross-post's settings in `copies.md`** are checked at the proof level — the canonical URL or `noindex`, the AI disclosure — never its text, which is `blog.md` or the opening excerpt.
+
 ## Arguments
 
-- `[path]` — a piece's folder, its draft, or a diff. Omitted → review the current changes if there are any, otherwise ask.
-- `[--fix]` — don't review. Read the piece's existing `reports/review.md`, list what's in it, and ask which findings to fix. For coming back to a review you ran earlier.
+- `[path]` — a topic folder, one of its format files, or a diff. Omitted → review the current changes if there are any, otherwise ask.
+- `[--fix]` — don't review. Read the topic's existing `reports/review.md`, list what's in it, and ask which findings to fix. For coming back to a review you ran earlier.
 
 ## Method
 
 **Work down the levels in order, and don't skip ahead.** There's no point line-editing a section that's about to move, or checking a comma in a claim that turns out to be false.
 
-1. **Establish the piece's job** — its kind, its reader, and what the reader should do or know afterward, from the profile. Ask if it isn't clear.
+1. **Establish the piece's job** — its kind, its reader, and what the reader should do or know afterward, from the brief and the profile (Ask first).
 2. **Load the guide.** Ask before concluding there's none; a publication's or a client's guide often lives outside the repo. The author is entitled to be edited to their own standard, not to your instincts.
 3. **Read it once without editing.** Mark problems; fix nothing yet.
 4. **Run the five levels**, collecting findings.
@@ -91,7 +111,7 @@ The editing craft is `cw:editing-standards`; the universal writing rules are `wr
 - **Read the published preview** on a phone as well as a desktop, and send a test of a newsletter issue to a real inbox, with images off as well as on.
 - **Links and anchors resolve**; affiliate links are tagged as the platform requires.
 - **Images load, carry their credit, and have alt text that serves the piece.**
-- **The share preview** — title, description, image — shows what the piece is.
+- **The share preview** — the front matter's `title`, `description`, `cover_image` and `cover_alt` — shows what the piece is.
 - **A newsletter issue's envelope** — the subject line reflects what's inside; the preview text adds to the subject rather than repeating it; the sender name is the one subscribers recognise; the unsubscribe link and the publication's postal address are in the footer. US law requires a clear way to opt out and a valid physical postal address in commercial email, and a subject line that matches the content ([FTC, CAN-SPAM](https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business)).
 - **A newsletter issue's sending checks** — the subject and preview text within the lengths `cw:newsletter-standards` sets; the message under Gmail's 102 KB clipping point, past which the footer with the unsubscribe link is hidden ([Mailchimp](https://mailchimp.com/help/gmail-is-clipping-my-email/)); images in email-safe formats and GIFs under 1 MB (`cw:images-and-diagrams`).
 
@@ -135,7 +155,7 @@ The report is written first and nothing is edited to produce it. Then:
 
 1. **List the findings by ID** in chat, worst-first, one line each.
 2. **Ask which to fix.** Accept IDs (`1, 4, 9`), a range, `all`, or `none`.
-3. **Fix only what was named.** Never a default subset, never "the top three", never a severity threshold picked for the user. A finding they didn't choose stays in the report untouched.
+3. **Claim the topic, then fix only what was named.** Fixing edits the format files, so read `brief.md` first: if "Held by" names someone else and the status isn't `paused`, leave it and say so; otherwise set Held by and the date, and clear it when you stop. Never a default subset, never "the top three", never a severity threshold picked for the user. A finding they didn't choose stays in the report untouched.
 4. **Report back**: what changed, what was skipped, and anything that needs a decision only they can make.
 5. **Update the report** — mark each fixed finding `FIXED` with a one-line note. Leave everything else as it stands. The file on disk has to match reality: a report still listing something fixed an hour ago teaches people not to trust it.
 6. **Re-score and show the movement.** That's what scoring is for: it tells you whether the work improved the piece. If several findings were fixed and no score moved, say so plainly — the findings that mattered weren't the ones chosen.

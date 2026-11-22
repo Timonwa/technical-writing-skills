@@ -25,9 +25,20 @@ Voice, person, tone, terminology, formatting choices and who the reader is come 
 
 When a guide changes: in a codebase, save the file where it was found; in a chat app, give the user the updated file to replace in the project. Never write inside the installed plugin.
 
+## Ask first
+
+Read the answers from the topic's `brief.md`, then `profile.md`'s Defaults, then the request; ask only what's missing. Ask with the app's question tool where it has one, so the choices can be picked; otherwise as a numbered list answered by number. Offer choices where the answers are known and a short typed answer otherwise; where the profile has a default, show it and ask whether to use it. Record each answer in the `brief.md` field it belongs to — the "What this topic becomes" table or a row of "The brief" — and any answer with no field under "Notes for whoever picks it up next", so the next skill doesn't ask again.
+
+1. **Which formats should this edit cover?** blog post (`blog.md`) · newsletter issue (`newsletter.md`) · social posts (`social.md`) — pick any. Default: every format the brief lists as `drafting`.
+2. **How deep?** all five levels · a quick pass · one level (name it). Default: all five levels for a piece not edited before.
+3. **Who is the reader, and what should they do or know afterwards?** Short answer. Default: the brief's reader and its one action.
+4. **Should the edits go into the file, or come back as proposals?** into the file, each with its reason · proposals with replacements to choose from. Default: proposals.
+5. **Does it carry code or commands a reader will run?** yes, with the repository or demo project · no.
+6. **What length is it aiming for?** A word count. Default: the guide's target for this kind of piece.
+
 ## Before editing
 
-- **Work in the piece's folder.** A piece lives in `pieces/<yyyy-mm>-<slug>/` in the publication's folder: edit its `draft.md`, take the job from its `brief.md`, and check claims against its `sources.md`. In a chat app, its files are named `<piece folder name>--<file>`. If "Held by" in `brief.md` names someone else and the status isn't `paused`, leave it and say so; otherwise set Held by and the date, and clear it when you stop.
+- **Work in the topic folder.** A topic lives in `topics/<yyyy-mm>-<slug>/` in the publication's folder. Edit the format files the brief lists — `blog.md`, `newsletter.md`, `social.md` — take the job from its `brief.md` ([template](../style-guide/references/publication-template/topics/_template/brief.md)), and check claims against its `sources.md`. A full copy in `copies.md` is `blog.md` itself, so it isn't edited separately; its opening excerpt is, when the opening changes. In a chat app, the topic's files are named `<topic folder>--<file>`. If "Held by" in `brief.md` names someone else and the status isn't `paused`, leave it and say so; otherwise set Held by and the date, and when you stop, set each format's status and clear Held by.
 - **Establish the piece's job** — what it is, who it's for, and what the reader should do, understand or decide afterwards. You can't judge whether a paragraph belongs without knowing what the piece is trying to be.
 - **Edit to the guide, not your instincts.** For anything neither the guide nor the author settles, infer the convention from the piece itself and say what you inferred.
 - **Note what you can verify and what you can't** — which claims you checked against a real source, and which you're taking on trust.

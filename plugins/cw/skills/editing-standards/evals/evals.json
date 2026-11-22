@@ -15,10 +15,12 @@
     },
     {
       "id": 2,
-      "prompt": "Polish the sentences in this tutorial on building a CLI — the structure's fine.",
-      "expected_output": "Should still check substantive and accuracy levels before line edits: the title's promise, the point early, and that every command and sample runs from a clean start (write:code-samples). Should flag what can't be verified.",
+      "prompt": "Polish the sentences in topics/2026-10-build-a-cli/ — it's a tutorial and the structure's fine.",
+      "expected_output": "Should read the topic's brief.md first — which formats it covers, the reader, Held by — and ask only what the brief leaves open, such as whether the edits go into blog.md or come back as proposals. Should still check substantive and accuracy levels before line edits: the title's promise, the point early, and that every command and sample runs from a clean start (write:code-samples). Should flag what can't be verified. Edits blog.md.",
       "files": [],
       "expectations": [
+        "Reads brief.md for the formats and reader, asks only what's missing, and records each answer in its brief field",
+        "Edits the format file the brief lists (blog.md)",
         "Checks substantive issues before line edits",
         "Runs the tutorial's commands and code from a clean start",
         "Flags claims it couldn't verify",
