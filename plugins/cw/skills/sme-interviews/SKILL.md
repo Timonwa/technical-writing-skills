@@ -8,6 +8,18 @@ description: >-
 
 Most errors in an article start as a gap the writer filled in rather than a question the writer asked. The craft is getting what a source knows — including what they've stopped noticing they know — onto the page accurately, fairly and attributed, without spending more of their time than the piece is worth. A source is often quoted by name and their experience and opinions are part of the material, so the result has to be true, fair and theirs.
 
+## How this works
+
+The skill works with you before and after an interview; you run the interview yourself. It never contacts the source, and the source never sees it.
+
+| Stage  | You                                                                              | The skill                                                                                                                                                                  | You end up with                                                                                       |
+| ------ | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| Before | answer its questions (Ask first), and share what you know about the source       | reads the brief, the topic's sources and the source's published work; drafts the request email with the ground rules, and a question list marked must-ask or nice-to-have  | the request email to send, the question list, and the interview's notes file started in `interviews/` |
+| During | run the interview — call, video, in person or email — and record it with consent | isn't there; for an email interview, it writes the numbered questions you send                                                                                             | the recording, the transcript or the emailed answers                                                  |
+| After  | give it the transcript, the answers or your notes                                | fills the notes file, checks every quote against the recording, separates fact from opinion, marks the gaps, lists the facts to check back and drafts the check-back email | the finished notes, the check-back email, and the source listed in `sources.md`                       |
+
+The request and check-back emails follow the [email templates](references/emails.md).
+
 ## Voice and audience come from the writing's own guide
 
 Before interviewing, find the publication's `profile.md` and `writing-guide.md` and read them:
@@ -42,7 +54,11 @@ Each topic has its own folder in the publication's `topics/`, made when it's bri
 - **An interview doesn't claim the topic.** It edits no format file, so it runs even while someone holds the topic and never sets **Held by**; it writes only its own notes file.
 - **In a chat app**, the file is `<topic folder>--interview-<yyyy-mm-dd>-<name>.md`; hand back only that file.
 
-## Prepare from what already exists
+## Before the interview
+
+The skill prepares everything you take into the interview: what's already known, who the source is, the terms, the request and the questions.
+
+### Prepare from what already exists
 
 Arriving unprepared converts a source into a search engine, and it's the fastest way to lose access to one.
 
@@ -52,13 +68,13 @@ Arriving unprepared converts a source into a search engine, and it's the fastest
 - **Arrive with an outline or a draft**, and **write the questions down**, marked as must-ask or nice-to-have, so a short call still gets what the piece needs.
 - **Ask for the artifact** where one exists — the study, the dataset, the menu, the document.
 
-## Verify who they are
+### Verify who they are
 
 - **Confirm a source is who they say they are** before quoting them, especially someone found online: an organisation's own directory, a published profile, a call to a listed number, a second person who knows them. An impostor quoted as an expert is a correction waiting to happen.
 - **Confirm the credential the piece leans on** — the title, the qualification, the employer — rather than repeating how they described themselves.
 - **Ask about conflicts of interest** — who pays them, what they sell, what they stand to gain from the piece. A source with a stake is still a source; the reader is told the stake.
 
-## Agree the ground rules first
+### Agree the ground rules first
 
 Settle how the conversation can be used before it starts, in plain words, and write down what was agreed.
 
@@ -77,7 +93,11 @@ Settle how the conversation can be used before it starts, in plain words, and wr
 - **Trauma-aware questions.** Survivors consistently name "How do you feel?" as the most distressing question; ask "How are you now?" or "What do you think about…?" instead. Let them set limits, tell them they needn't answer, don't press for detail that serves the story rather than the reader, and tell them at the end how the interview will be used ([Dart Center guidance, via The Journalist's Resource](https://journalistsresource.org/home/trauma-informed-journalism-explainer/)).
 - **Someone who isn't used to being quoted** gets the ground rules explained twice, and a chance to ask what they mean.
 
-## Running the interview
+## During the interview
+
+You run it; the skill isn't in the room. What follows is how to run it well, and for an email interview the skill writes the questions.
+
+### Running it
 
 - **Timebox it and say the box aloud**, one topic per session. As working lengths (common practice): about 20–30 minutes for an expert's input on a piece, 30–60 minutes for a feature or a profile.
 - **Open questions, not leading ones.** "What happened when the first restaurant closed?" rather than "That must have been hard, right?" — a leading question gets agreement, not information.
@@ -96,14 +116,18 @@ The question sets that work for a feature, a profile and an opinion piece are in
 - **Say so in the piece** — "said in an email", "said in a statement" — so readers know a written reply isn't a conversation ([ONA Ethics](https://ethics.journalists.org/topics/interviewing/)). The guide may set the exact wording.
 - **Send five to seven numbered questions** (common practice), each answerable on its own, and a date you need them by.
 
-## Turning it into a draft
+## After the interview
+
+Give the skill the transcript, the emailed answers or your notes. It fills the notes file, checks the quotes, and drafts the check-back email; the piece itself is written with `cw:article-standards`.
+
+### Turning it into notes
 
 - **Separate fact from opinion** in your notes, and attribute each opinion to its owner.
 - **Mark every gap visibly** rather than writing the plausible version. An invented detail that reads naturally is the worst defect this work produces, because nothing about it looks wrong.
 - **Verify what you can yourself** — read the study, check the date — rather than spending the source's next minutes on it.
 - **Keep notes and transcripts in the topic's `interviews/` folder**, one file per interview, with the date and the consent given — name, quote, recording, on or off the record — at the top, by the [template](references/interview-notes.md). A correction or a challenge starts there. List each interview once under Sources in the topic's `sources.md`, type `interview`, linking to its notes file.
 
-## Quoting and attributing
+### Quoting and attributing
 
 - **Quote exactly**, from the recording or your notes — a quote is the source's words, not your paraphrase in quotation marks.
 - **Check a transcript against the audio** before quoting from it. Automatic transcription mishears names, numbers, technical terms and accents, and a confident-looking line can be wrong.
@@ -112,7 +136,7 @@ The question sets that work for a feature, a profile and an opinion piece are in
 - **Attribute every quote and every borrowed fact** — who said it, and in what capacity. An opinion appears as theirs, with their name on it, never as the piece's own claim.
 - **Reproduce others' published words only within fair use or fair dealing, or with permission** — a long passage, song lyrics, a poem or a whole social post needs more care than a line.
 
-## Fairness and checking back
+### Fairness and checking back
 
 - **Give anyone criticised a fair chance to respond** before publication, and say in the piece if they declined ([SPJ](https://www.spj.org/spj-code-of-ethics/)).
 - **Check an allegation about a named person or company** against a second source or a document before it's printed.
