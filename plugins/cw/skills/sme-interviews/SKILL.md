@@ -23,6 +23,25 @@ Its policies on sources come first — whether anonymous sources are used, wheth
 
 When a guide changes: in a codebase, save the file where it was found; in a chat app, give the user the updated file to replace in the project. Never write inside the installed plugin.
 
+## Ask first
+
+Read the answers from the topic's `brief.md` and the publication's `writing-guide.md` first; ask only what's missing. Ask with the app's question tool where it has one, so the choices can be picked; otherwise as a numbered list answered by number. Offer choices where the answers are known and a short typed answer otherwise; where the guide has a default, show it and ask whether to use it. Record each answer in the `brief.md` field it belongs to — the **What this topic becomes** table or a row of **The brief** — and an answer with no field under **Notes for whoever picks it up next**, so the next skill doesn't ask again.
+
+1. **Which topic folder is the interview for?** The folder name under `topics/`, or "new" — a new topic is briefed first with `cw:content-planning`.
+2. **Who is the source, and what standing does the piece lean on?** Short answer: name, role, organisation. Default: the brief's people to interview.
+3. **What does the piece need from them?** a feature or story · a profile · an opinion or argument · evidence for a claim.
+4. **Which claims or questions must the interview settle?** Short answer, the must-asks. Default: the brief's outline.
+5. **How will it happen?** call · video · in person · email.
+6. **May the source see a draft or approve quotes?** no · facts only · quotes only. Default: the writing guide's policy.
+7. **Is the source a minor, a crime victim, or someone not used to being quoted?** no · yes (who).
+
+## Work in the topic folder
+
+Each topic has its own folder in the publication's `topics/`, made when it's briefed (`cw:content-planning`); interviews go in its `interviews/` folder, one notes file per interview, named `<yyyy-mm-dd>-<name>.md` (`interviews/2026-12-03-ada-okafor.md`) and filled from the [interview notes template](references/interview-notes.md).
+
+- **An interview doesn't claim the topic.** It edits no format file, so it runs even while someone holds the topic and never sets **Held by**; it writes only its own notes file.
+- **In a chat app**, the file is `<topic folder>--interview-<yyyy-mm-dd>-<name>.md`; hand back only that file.
+
 ## Prepare from what already exists
 
 Arriving unprepared converts a source into a search engine, and it's the fastest way to lose access to one.
@@ -82,7 +101,7 @@ The question sets that work for a feature, a profile and an opinion piece are in
 - **Separate fact from opinion** in your notes, and attribute each opinion to its owner.
 - **Mark every gap visibly** rather than writing the plausible version. An invented detail that reads naturally is the worst defect this work produces, because nothing about it looks wrong.
 - **Verify what you can yourself** — read the study, check the date — rather than spending the source's next minutes on it.
-- **Keep notes and transcripts in the piece's `interviews/` folder**, one file per interview, with the date and the consent given — to record, to quote, on or off the record — at the top (in a chat app, `<piece folder name>--interview-<name>.md`). A correction or a challenge starts there.
+- **Keep notes and transcripts in the topic's `interviews/` folder**, one file per interview, with the date and the consent given — name, quote, recording, on or off the record — at the top, by the [template](references/interview-notes.md). A correction or a challenge starts there. List each interview once under Sources in the topic's `sources.md`, type `interview`, linking to its notes file.
 
 ## Quoting and attributing
 
@@ -99,7 +118,7 @@ The question sets that work for a feature, a profile and an opinion piece are in
 - **Check an allegation about a named person or company** against a second source or a document before it's printed.
 - **Check facts with the source, not their wording** — a figure, a date, a name's spelling, a technical claim. An example read-back is in [references/questions.md](references/questions.md#a-read-back-that-checks-facts-not-wording).
 - **Whether a source may see or approve a quote** is the publication's policy, not yours to promise in the moment.
-- **Keep a record** of what you asked, what you were told and any terms agreed, with dates.
+- **Keep a record** of what you asked, what you were told and any terms agreed, with dates, in the interview's notes file — and whether each quote was approved.
 - **Close the loop** — tell them when it's published and send the link.
 
 ## Boundaries

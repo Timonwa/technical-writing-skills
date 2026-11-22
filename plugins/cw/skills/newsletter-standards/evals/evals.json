@@ -38,6 +38,19 @@
         "Mentions one-click unsubscribe headers as the platform's job to confirm",
         "Treats the first issue as setting the pattern and introducing the newsletter"
       ]
+    },
+    {
+      "id": 4,
+      "prompt": "Write December's roundup issue — the five posts I published this month. Also write the newsletter issue for the sourdough-starter topic; its brief lists a blog post and a newsletter issue going to the 'bakers' segment.",
+      "expected_output": "Should treat the roundup as its own topic folder under topics/ whose brief lists only a newsletter issue, briefing it first if it has no folder, and write the sourdough-starter issue as newsletter.md in that topic's folder beside blog.md. Should read the send date and audience from each brief and the profile's Defaults before asking, asking only what's missing (for the roundup, which items and the send date), and record the answers in brief.md. Each newsletter.md carries the full front matter — subject, preview_text, send_date, audience, cover_image, cover_alt, web_url blank until sent — and only the topic's own line in calendar.md changes.",
+      "files": [],
+      "expectations": [
+        "Puts the roundup in its own topic folder whose brief lists only a newsletter issue",
+        "Writes the topic's issue as newsletter.md in the sourdough-starter folder, not a separate draft file",
+        "Reads the send date and audience ('bakers') from the brief instead of asking",
+        "Fills every newsletter.md front-matter field, leaving web_url blank until it's sent",
+        "Changes only each topic's own line in calendar.md"
+      ]
     }
   ]
 }

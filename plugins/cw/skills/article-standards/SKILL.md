@@ -32,14 +32,33 @@ When a guide changes: in a codebase, save the file where it was found; in a chat
 
 **The profile wins over precedent.** A published piece that breaks the profile is a miss, not a pattern to match.
 
-## Work in the piece's folder
+## Ask first
 
-Each piece has its own folder in the publication's `pieces/` (`pieces/2026-11-rates-explainer/`), made when it's briefed (`cw:content-planning`).
+Read the answers from the topic's `brief.md` and `profile.md`'s Defaults first; ask only what's missing. Ask with the app's question tool where it has one, so the choices can be picked; otherwise as a numbered list answered by number. Offer choices where the answers are known and a short typed answer otherwise; where the profile has a default, show it and ask whether to use it. Record each answer in the `brief.md` field it belongs to — the **What this topic becomes** table or a row of **The brief** — and an answer with no field under **Notes for whoever picks it up next**, so the next skill doesn't ask again.
 
-- **Claim it before drafting.** Read `brief.md`: if **Held by** names someone else and the status isn't `paused`, leave it and say so. Otherwise set **Held by** to yourself and the date, the status to `drafting`, and the piece's line in the publication's `plan.md` to match — that line only.
-- **Draft from the brief, into the folder** — the reader, question, angle and outline come from `brief.md`; the draft goes in `draft.md` (or a link to it in the platform); every claim's source goes in `sources.md`.
-- **When stopping**, set the status — `paused`, or `in review` — and clear **Held by**. Resuming starts by reading `brief.md`, `draft.md` and `sources.md`.
-- **In a chat app**, name the files `<piece folder name>--<file>` (`2026-11-rates-explainer--draft.md`) and hand back only that piece's files and its `plan.md` line.
+1. **Which topic folder is the post for?** The folder name under `topics/`, or "new" — a new topic is briefed first with `cw:content-planning`.
+2. **Who is the reader, and what's their question in their own words?** Short answer.
+3. **What should the reader walk away able to do?** do a task · understand · decide · keep current · share a lived experience.
+4. **What does this post add that existing ones on the topic don't?** Short answer: the angle.
+5. **What first-hand evidence can you show?** your own photos · your own measurements · the errors you hit · results over time · none yet.
+6. **What's the one action the post should produce?** Short answer. Default: the one action in `profile.md`.
+7. **Which disclosures apply?** affiliate links · sponsorship · gifted product · AI assistance · none. Default: the profile's Constraints.
+
+## Work in the topic folder
+
+Each topic has its own folder in the publication's `topics/` (`topics/2026-11-rates-explainer/`), made when it's briefed (`cw:content-planning`). A blog post is one of the things a topic can become; the **What this topic becomes** table in `brief.md` says which.
+
+- **Claim it before writing.** Read `brief.md`: if **Held by** names someone else and the status isn't `paused`, leave it and say so. Otherwise set **Held by** to yourself and the date, the topic's status and its Blog post row to `drafting`, and the topic's line in the publication's `calendar.md` to match — that line only.
+- **Write only the blog post.** Where the table has a Blog post row, write `blog.md` and no other format's file; each has its own skill. Where it has none, say so and ask whether to add the row before writing.
+- **`blog.md` follows the [template](../style-guide/references/publication-template/topics/_template/blog.md)**: YAML front matter, then the body. Every field stays present, left `""` until it's known:
+  - `title` — one title: the headline on the page and the title in search and share previews, about 50–60 characters (a working target; `cw:seo-aeo-geo` gives its source). There's no separate SEO title or share title.
+  - `description` — one description: the meta description, the share description and the listing excerpt, about 150–160 characters.
+  - `cover_image` and `cover_alt` — a file in `images/` or a hosted URL (`cw:cover-images`).
+  - `published_url` — blank until it's live; `updated` is the date of any change after that.
+  - The body doesn't repeat the title as an H1; the platform renders it.
+- **Every claim's source goes in `sources.md`**, by its [template](../style-guide/references/publication-template/topics/_template/sources.md).
+- **When stopping**, set the status — `paused`, or `in review` — and clear **Held by**. Resuming starts with `brief.md`, then `blog.md` and `sources.md`.
+- **In a chat app**, name the files `<topic folder>--<file>` (`2026-11-rates-explainer--blog.md`) and hand back only that topic's files and the line to add or change in `calendar.md`.
 
 ## Does this piece deserve to exist
 
@@ -73,7 +92,7 @@ The section-by-section blueprint for each intent is in [references/article-struc
 The title and the first screen decide whether anyone reads the rest.
 
 - **The meaning in the first words.** Readers scanning a list of titles often take in only the first couple of words, so lead with the words that carry the subject ([NN/g](https://www.nngroup.com/articles/first-2-words-a-signal-for-scanning/)).
-- **A shape the profile uses** — a how-to, a number, a question, an outcome — chosen for the piece's intent. The title tag and its length are `cw:seo-aeo-geo`'s; the headline on the page can carry more voice.
+- **A shape the profile uses** — a how-to, a number, a question, an outcome — chosen for the piece's intent. The one title is both the headline on the page and the title in search and share previews, so it carries the voice within about 50–60 characters (`cw:seo-aeo-geo`).
 - **Write two or three candidates** and pick the one that promises exactly what the piece delivers. Where the platform can test headlines, test them; newsrooms run headline tests routinely, and winners have lifted click-through by 20% or more ([Nieman Lab](https://www.niemanlab.org/2021/10/how-a-b-testing-can-and-cant-improve-your-headline-writing/)).
 - **A short opening before the payoff:** about two to four sentences, or under about 100 words, before the reader gets what the title promised (common practice). A story opening is fine where the guide uses one; the point still arrives by the second or third paragraph.
 
@@ -103,7 +122,7 @@ Eye-tracking research finds people scan web pages rather than read them, and on 
 
 ## Accessible formatting
 
-- **One H1, headings in order** — no skipped levels, so a screen reader's outline matches the piece.
+- **One H1, headings in order** — the platform renders the title as the H1, so the body starts at H2 and skips no level, and a screen reader's outline matches the piece.
 - **Descriptive link text.** "Read the caching write-up", never "click here"; assistive technology lists links out of context, and a scanning reader reads them the same way.
 - **Alt text on every informative image**, written from its purpose, and never information carried only in an image (`cw:images-and-diagrams`).
 - **Captions or a transcript** for video and audio ([WCAG 1.2](https://www.w3.org/WAI/WCAG22/quickref/#time-based-media)).
@@ -122,7 +141,7 @@ Eye-tracking research finds people scan web pages rather than read them, and on 
 
 - [ ] One intent, and the structure matches its blueprint.
 - [ ] The opening states what the piece delivers, in the profile's shape.
-- [ ] Title follows a format in the profile, in its case convention.
+- [ ] Title follows a format in the profile, in its case convention, in about 50–60 characters; the description is about 150–160.
 - [ ] The headings alone tell the story.
 - [ ] Every section front-loads its point; no paragraph carries two ideas.
 - [ ] Every number, quantity and quote is real.
@@ -130,18 +149,18 @@ Eye-tracking research finds people scan web pages rather than read them, and on 
 - [ ] First-hand evidence is present and identifiable as first-hand.
 - [ ] Title leads with the words that carry the subject; the opening reaches the payoff in about 100 words.
 - [ ] Paragraphs, sections and sentences within the readability targets, or deliberately not.
-- [ ] One H1, headings in order; images have alt text; captions for video and audio; nothing carried by colour alone.
+- [ ] No H1 in the body, headings in order from H2; images have alt text; captions for video and audio; nothing carried by colour alone.
 - [ ] Two to five internal links, and an older piece links here.
 - [ ] Link text is descriptive; every link resolves and is canonical.
 - [ ] Required disclosures appear before the content they affect.
 - [ ] Byline and date present.
 - [ ] Recurring sections, devices and closer match the profile exactly.
 - [ ] The piece answers the reader's question without sending them back to search.
-- [ ] The draft is in the piece's `draft.md`, its sources in `sources.md`, and `brief.md`'s status and holder are current.
+- [ ] The post is in the topic's `blog.md` with every front-matter field present, its sources in `sources.md`, and `brief.md`'s status, holder and Blog post row are current.
 
 ## Boundaries
 
-- **Audience, purpose and disclosures** → the publication's `profile.md`. **Voice, titles, section names and formatting** → its `writing-guide.md`. Both live in the publication's folder; the piece's brief, draft and sources live in its folder under `pieces/`.
+- **Audience, purpose and disclosures** → the publication's `profile.md`. **Voice, titles, section names and formatting** → its `writing-guide.md`. Both live in the publication's folder; the topic's `brief.md`, `blog.md` and `sources.md` live in its folder under `topics/`.
 - **Technical documentation** — docs sites, API references, product help — is a different job with a different reader → `tw:developer-docs`, `tw:api-reference`, `tw:user-guides`.
 - **The voice rules under any piece of writing** → `write:writing-standards`. **Tightening a finished draft** → `cw:editing-standards`. **The machine-written sweep** → `/write:ai-check`.
 - **Code samples that must run** → `write:code-samples`. **Diagrams and screenshots** → `cw:images-and-diagrams`. **The cover image** → `cw:cover-images`.

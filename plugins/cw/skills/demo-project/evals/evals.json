@@ -27,14 +27,15 @@
     },
     {
       "id": 3,
-      "prompt": "Set up the companion repo for my React tutorial. Readers kept saying it breaks.",
-      "expected_output": "Should pin the runtime in .nvmrc or similar, commit the lockfile, give only the piece's commands, add a smoke check, run it in CI on push and on a schedule with dependency updates, add a licence file, a 'Tested with' line, and link the piece to an exact tag or commit.",
+      "prompt": "Set up the companion repo for my React tutorial — the 2026-12-react-forms topic. Readers kept saying it breaks.",
+      "expected_output": "Should pin the runtime in .nvmrc or similar, commit the lockfile, give only the piece's commands, add a smoke check, run it in CI on push and on a schedule with dependency updates, add a licence file, a 'Tested with' line, and link the piece to an exact tag or commit. Should read the topic's brief.md, the profile and the repo (git remote, version files, lockfile) before asking, ask only what they leave open, and record the repo and its tag in the brief's Demo project row — the repo itself stays out of the publication's folder.",
       "files": [],
       "expectations": [
         "Pins the runtime in a version file and commits the lockfile",
         "Adds a smoke check run in CI on a schedule",
         "Adds a licence file and a 'Tested with' line",
-        "Links the piece to an exact tag or commit"
+        "Links the piece to an exact tag or commit",
+        "Reads brief.md and the repo before asking, and records the repo and tag in the brief's Demo project row"
       ]
     },
     {

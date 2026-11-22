@@ -4,13 +4,14 @@
     {
       "id": 1,
       "prompt": "I'm interviewing a former restaurant owner for a feature on why small kitchens close. She asked to keep part of it 'off the record'. How should I handle that and write it up?",
-      "expected_output": "Should first read the publication's writing guide and profile (the folder AGENTS.md or the user's personal agent instructions name, else the project's publications/; in a chat app, the project's files; else ask). Should agree the ground rules in plain words before the interview, because not everyone understands 'off the record' or 'on background' the same way: say what each means here — not published at all, or usable without her name. Should agree how she'll be identified, keep a dated record of the terms, and never publish anything agreed off the record. Anonymity is the exception and its reason is told to readers.",
+      "expected_output": "Should first read the publication's writing guide and profile (the folder AGENTS.md or the user's personal agent instructions name, else the project's publications/; in a chat app, the project's files; else ask). Should agree the ground rules in plain words before the interview, because not everyone understands 'off the record' or 'on background' the same way: say what each means here — not published at all, or usable without her name. Should agree how she'll be identified, keep a dated record of the terms, and never publish anything agreed off the record. Anonymity is the exception and its reason is told to readers. The terms go in the topic folder's interviews/<yyyy-mm-dd>-<name>.md, filled from the interview notes template, with consent for name, quote and recording recorded at the top. Should read the topic's brief.md before asking, asking only what it leaves open (such as whether she may see a draft, from the writing guide's policy).",
       "files": [],
       "expectations": [
         "Reads the publication's guide and profile first",
+        "Reads brief.md before asking and asks only what it and the guide leave open",
         "Agrees what 'off the record' means in plain words before the interview",
         "Agrees how the source will be identified",
-        "Records the agreed terms with dates in the piece's interviews/ notes",
+        "Records the agreed terms with dates in interviews/<yyyy-mm-dd>-<name>.md in the topic folder, from the notes template",
         "Never publishes material agreed as off the record"
       ]
     },

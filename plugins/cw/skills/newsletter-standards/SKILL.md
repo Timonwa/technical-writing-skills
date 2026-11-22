@@ -26,8 +26,6 @@ Who it's for, what the newsletter promised and how it reads come from that guide
 
 When a guide changes: in a codebase, save the file where it was found; in a chat app, give the user the updated file to replace in the project. Never write inside the installed plugin.
 
-**Each issue is a piece with its own folder**, `pieces/<yyyy-mm>-<slug>/` in the newsletter's publication folder: the issue in `draft.md`, its sources in `sources.md`, its images in `images/`, and one line in `plan.md`. In a chat app, its files are named `<piece folder name>--<file>`. Before working on an issue, read its `brief.md`: if "Held by" names someone else and the status isn't `paused`, leave it and say so. Set Held by and the date when you start; set the status and clear Held by when you stop.
-
 Four fields decide the issue before a word is written:
 
 - **The promise made at signup.** Whatever the subscribe form said is the contract. An issue that delivers something else is mis-sold however well it reads, and it's a common reason someone leaves a newsletter they once wanted.
@@ -40,6 +38,30 @@ Four fields decide the issue before a word is written:
 When the newsletter hasn't sent before, there's no pattern to follow and you're setting one. Say that out loud, and decide deliberately rather than by accident: subject-line format, sign-off, section shape, and what an issue does and doesn't contain. Write those decisions into the profile, because issue two has to match issue one.
 
 A first issue also carries an introduction the rest won't — who you are, what they signed up for, how often it comes, how to leave. Deliver the promise in it rather than describing it.
+
+## Ask first
+
+Read the answers from the topic's `brief.md` and `profile.md`'s Defaults first; ask only what's missing. Ask with the app's question tool where it has one, so the choices can be picked; otherwise as a numbered list answered by number. Offer choices where the answers are known and a short typed answer otherwise; where the profile has a default, show it and ask whether to use it. Record each answer in the `brief.md` field it belongs to — the **What this topic becomes** table or a row of **The brief** — and an answer with no field under **Notes for whoever picks it up next**, so the next skill doesn't ask again.
+
+1. **Which topic is the issue about?** a topic folder under `topics/` · none — a roundup or a personal note, which is its own topic.
+2. **What kind of issue is it?** sends one new post · a digest · a stand-alone issue · a roundup · a personal note. Default: the profile's Newsletter default.
+3. **When does it send?** A date. Default: the Newsletter issue row's publish date in the brief.
+4. **Who does it go to?** the whole list · a segment (name it). Default: the brief's Where it goes.
+5. **Which items does it cover?** Short answer: three to five links or pieces, for a digest or a roundup.
+6. **What's the one call to action?** read it · reply · share · another (short answer). Default: the one action in `profile.md`.
+7. **Does it carry a cover image?** the template in `brand.md` · none. Default: the profile's Cover image default.
+
+## Work in the topic folder
+
+An issue is one of the things a topic can become. Each topic has its own folder in the publication's `topics/` (`topics/2026-12-sourdough-starter/`), made when it's briefed (`cw:content-planning`).
+
+- **An issue about a topic** is `newsletter.md` in that topic's folder, and the brief's **What this topic becomes** table has a Newsletter issue row.
+- **An issue that isn't about one topic** — a roundup, a personal note — is its own topic whose brief lists only a newsletter issue (`topics/2026-12-december-roundup/`). Where it has no folder yet, brief it first with `cw:content-planning`.
+- **Claim it before writing.** Read `brief.md`: if **Held by** names someone else and the status isn't `paused`, leave it and say so. Otherwise set **Held by** and the date, the Newsletter issue row's status to `drafting`, and the topic's line in the publication's `calendar.md` to match — that line only. When stopping, set the status and clear **Held by**.
+- **Write only the issue.** Fill `newsletter.md` and no other format's file; each has its own skill. Where the table has no Newsletter issue row, say so and ask whether to add one.
+- **`newsletter.md` follows the [template](../style-guide/references/publication-template/topics/_template/newsletter.md)**: front matter, then the body. Every field stays present, left `""` until it's known: `subject`, `preview_text`, `send_date`, `audience` (the list or segment), `cover_image`, `cover_alt`, and `web_url`, blank until it's sent. Subject and preview-text lengths are in [The shape of an issue](#the-shape-of-an-issue).
+- **Sources go in `sources.md`**, by its [template](../style-guide/references/publication-template/topics/_template/sources.md); images in `images/`.
+- **In a chat app**, name the files `<topic folder>--<file>` (`2026-12-sourdough-starter--newsletter.md`) and hand back only that topic's files and the line to add or change in `calendar.md`.
 
 ## What earns a place
 
@@ -110,7 +132,7 @@ Requirements rather than preferences, for any publication. What follows is the s
 - [ ] Sign-off matches the profile.
 - [ ] It reads on a phone — no wall of text, no layout that needs images.
 - [ ] Nothing sells. Nothing baits.
-- [ ] The issue is in its folder's `draft.md`, and its `brief.md` and its line in `plan.md` show it `scheduled`.
+- [ ] The issue is in its topic folder's `newsletter.md` with every front-matter field present, and its row in `brief.md` and its line in `calendar.md` show it `scheduled`.
 
 ## After it sends
 

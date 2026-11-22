@@ -39,14 +39,15 @@
     },
     {
       "id": 4,
-      "prompt": "Research my next newsletter issue on student loan changes. Use my publication's citation style.",
-      "expected_output": "Should read the publication's writing-guide.md and profile.md (the folder AGENTS.md or the user's personal agent instructions name, else the project's publications/; in a chat app, the project's files; else ask) for citation format, sources the publication won't use and its AI-use policy. Should list the claims first, find originals (the law or official notice), and keep the source log in the piece's sources.md, in its folder under pieces/.",
+      "prompt": "Research my next newsletter issue on student loan changes — it's the 2026-12-student-loan-changes topic. Use my publication's citation style.",
+      "expected_output": "Should read the publication's writing-guide.md and profile.md (the folder AGENTS.md or the user's personal agent instructions name, else the project's publications/; in a chat app, the project's files; else ask) for citation format, sources the publication won't use and its AI-use policy. Should read the topic's brief.md first for the claims, sources to check and people to interview, asking only what it leaves open and recording the answers in brief.md. Should list the claims first, find originals (the law or official notice), and keep the source log in the topic folder's sources.md under topics/ — a table of claim, source, link and date checked, one row per claim.",
       "files": [],
       "expectations": [
         "Reads the publication's guide for citation format and AI policy",
+        "Reads brief.md before asking and asks only what it leaves open",
         "Writes down the claims the piece must establish first",
         "Uses the official law or notice as the original",
-        "Keeps the source log in the piece's sources.md"
+        "Keeps the source log in the topic folder's sources.md, each source listed once under Sources and each claim under Claims with where it sits, its source ID and its status"
       ]
     }
   ]

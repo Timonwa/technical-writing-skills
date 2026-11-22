@@ -3,15 +3,18 @@
   "evals": [
     {
       "id": 1,
-      "prompt": "Draft a blog post for my food blog on sourdough starters. My ~/.claude/CLAUDE.md says my publications live in ~/writing/publications/, and this one is 'crumb-notes'.",
-      "expected_output": "Should find the publication's folder from the path in the user's personal agent instructions (~/.claude/CLAUDE.md), read profile.md and writing-guide.md there before drafting, and take the voice, title format and recurring sections from them. Any field marked unset is asked about and the answer written back to that folder, never inside the installed plugin. Should work in the piece's folder under pieces/: claim it in brief.md before drafting and write the draft to draft.md.",
+      "prompt": "Write the blog post for my food blog's sourdough starters topic. My ~/.claude/CLAUDE.md says my publications live in ~/writing/publications/, and this one is 'crumb-notes'. The topic's brief lists a blog post and social posts.",
+      "expected_output": "Should find the publication's folder from the path in the user's personal agent instructions (~/.claude/CLAUDE.md), read profile.md and writing-guide.md there before writing, and take the voice, title format and recurring sections from them. Any field marked unset is asked about and the answer written back to that folder, never inside the installed plugin. Should work in the topic's folder under topics/: read brief.md and profile.md's Defaults, ask only the Ask first questions they leave open, claim the topic in brief.md, and write the post to blog.md with the full front matter — one title of about 50–60 characters, one description of about 150–160, and cover_image and published_url present even while blank. Should write only blog.md, not social.md, and never a separate draft file; in a chat app, name it <topic folder>--blog.md and hand back only the calendar.md line to change.",
       "files": [],
       "expectations": [
         "Reads ~/writing/publications/crumb-notes/profile.md and writing-guide.md first",
         "Takes voice, title format and recurring sections from the writing guide",
         "Asks about any unset field instead of guessing",
         "Writes answers back to the publication's folder, not the plugin",
-        "Claims the piece in brief.md and drafts into the piece's draft.md"
+        "Reads brief.md and the profile's Defaults before asking, and asks only what they leave open",
+        "Claims the topic in brief.md and writes the post to the topic folder's blog.md",
+        "Writes only blog.md — not social.md, and never a separate draft file",
+        "Gives blog.md one title (about 50–60 characters) and one description (about 150–160), with cover_image and published_url fields present"
       ]
     },
     {

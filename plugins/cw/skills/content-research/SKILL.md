@@ -23,6 +23,25 @@ Voice, person, tone, terminology, formatting choices and who the reader is come 
 
 When a guide changes: in a codebase, save the file where it was found; in a chat app, give the user the updated file to replace in the project. Never write inside the installed plugin.
 
+## Ask first
+
+Read the answers from the topic's `brief.md` and the publication's `writing-guide.md` first; ask only what's missing. Ask with the app's question tool where it has one, so the choices can be picked; otherwise as a numbered list answered by number. Offer choices where the answers are known and a short typed answer otherwise; where the guide has a default, show it and ask whether to use it. Record each answer in the `brief.md` field it belongs to — the **What this topic becomes** table or a row of **The brief** — and an answer with no field under **Notes for whoever picks it up next**, so the next skill doesn't ask again.
+
+1. **Which topic folder is the research for?** The folder name under `topics/`, or "new" — a new topic is briefed first with `cw:content-planning`.
+2. **Is this research before writing, or a fact-check of written work?** research before writing · fact-check of `blog.md`, `newsletter.md` or `social.md`.
+3. **Which claims must the piece establish?** Short answer, one sentence per claim. Default: the brief's outline.
+4. **Which sources are already in hand?** Short answer: links or titles. Default: the brief's sources to check.
+5. **What do you already believe the answer is?** Short answer, so the search looks as hard for evidence against it.
+6. **How are sources cited?** inline links · footnotes · a sources list at the end. Default: the writing guide's citation style.
+7. **Who could be interviewed if the written record runs out?** Short answer: names or roles, or none. Default: the brief's people to interview.
+
+## Work in the topic folder
+
+Each topic has its own folder in the publication's `topics/` (`topics/2026-11-remote-work-figures/`), made when it's briefed (`cw:content-planning`). Research writes one file there, `sources.md`, which serves every format the topic becomes — the blog post, the newsletter issue, the social posts.
+
+- **Research doesn't claim the topic.** It edits no format file, so it runs even while someone holds the topic and never sets **Held by**. It only adds or updates rows in `sources.md`, never removes another's; a fact-check's findings on `blog.md`, `newsletter.md` or `social.md` go to whoever holds the topic, or under **Notes for whoever picks it up next** in `brief.md`.
+- **In a chat app**, the file is `<topic folder>--sources.md`; hand back only that file.
+
 ## Start from the question
 
 - **Write down what the piece has to establish** — the claims it will make, each as one sentence. Research is finding the evidence for those, not collecting everything on the topic.
@@ -89,18 +108,20 @@ AI tools are a starting point for finding leads, never a source:
 
 ## Keep a source log
 
-Record sources as you go, not at the end — in the piece's `sources.md`, in its folder in the publication's `pieces/` (in a chat app, `<piece folder name>--sources.md`), one entry per claim:
+Record sources as you go, not at the end — in the topic's `sources.md`, by its [template](../style-guide/references/publication-template/topics/_template/sources.md). It has two tables, the way fact-checkers keep them: each source listed once, and each claim checked one by one in the order it appears. Every column stays, with a cell left empty until it's known.
 
-```text
-Claim: Remote roles fell 18% year on year in Q2
-Source: Agency X, Labour Market Report Q2 2026, table 4 (link)
-Checked: 2026-11-12 — figure, period and wording match
-Notes: covers full-time roles only; say so in the piece
-Archived: web.archive.org link saved on 2026-11-12
-```
+| ID  | Title                            | Who made it | Type    | Link              | Archived link | Published  | Checked    | Notes                |
+| --- | -------------------------------- | ----------- | ------- | ----------------- | ------------- | ---------- | ---------- | -------------------- |
+| S1  | Labour Market Report Q2, table 4 | Agency X    | primary | the report's link | its archive   | 2026-08-01 | 2026-11-12 | full-time roles only |
 
-- **Every claim in the draft maps to a line**; a claim with no line gets one or comes out.
-- **Archive every web source you cite** with the Wayback Machine's [Save Page Now](https://web.archive.org/save) and record the archived link; pages move and change, and the archive shows what the source said when you checked it (common practice).
+| Claim                                    | Where                   | Source | Status   |
+| ---------------------------------------- | ----------------------- | ------ | -------- |
+| Remote roles fell 18% year on year in Q2 | `blog.md › The numbers` | S1     | verified |
+
+- **Every claim in the topic's files** — `blog.md`, `newsletter.md`, `social.md` — **gets a row under Claims**, with where it sits; a claim that appears in two files gets a row for each. A claim with no row gets one or comes out, and nothing ships while a claim it keeps is `unverified`.
+- **A source is listed once**, however many claims it backs, and a caveat the piece must carry goes in its Notes.
+- **An interview is a source** of type `interview`, linking to its notes in `interviews/` (`cw:sme-interviews`). **A figure an AI supplied** is listed by the original you found and checked, never by the AI.
+- **Archive every web source you cite** with the Wayback Machine's [Save Page Now](https://web.archive.org/save) and put it in the Archived link column; pages move and change, and the archive shows what the source said when you checked it (common practice).
 - **Keep it after publishing** — it's what a correction, a reader's challenge or a refresh (`cw:content-refresh`) starts from.
 
 ## Cite in the piece
@@ -122,7 +143,7 @@ Charts, photos, screenshots and datasets carry rights and credits of their own �
 - [ ] Every figure is traced to its table and the arithmetic redone.
 - [ ] Every quote is checked against its original.
 - [ ] Nothing AI-supplied is used without the original confirmed.
-- [ ] The source log is complete and saved as the piece's `sources.md`.
+- [ ] The source log is complete and saved as the topic's `sources.md`, one row per claim.
 
 ## Boundaries
 

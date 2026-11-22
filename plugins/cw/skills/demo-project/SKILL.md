@@ -24,6 +24,26 @@ Voice, person, tone, terminology, formatting choices and who the reader is come 
 
 When a guide changes: in a codebase, save the file where it was found; in a chat app, give the user the updated file to replace in the project. Never write inside the installed plugin.
 
+## Ask first
+
+Read the answers from the topic's `brief.md`, `profile.md` and the repo itself (`git remote get-url origin`, the version files, the lockfile) first; ask only what's missing. Ask with the app's question tool where it has one, so the choices can be picked; otherwise as a numbered list answered by number. Offer choices where the answers are known and a short typed answer otherwise; where the profile has a default, show it and ask whether to use it. Record each answer in the `brief.md` field it belongs to — the **What this topic becomes** table or a row of **The brief** — and an answer with no field under **Notes for whoever picks it up next**, so the next skill doesn't ask again.
+
+1. **Which topic folder is the repo for?** The folder name under `topics/`.
+2. **Whose repo is it?** the owner's own · a third party's (whose).
+3. **Which branch model?** single branch · starter and final · a tag or branch per step.
+4. **What runtime and package manager does it use?** Short answer: the runtime with its version, and the package manager.
+5. **Does it need any account or key to run?** none · free tier or test-mode key (which service) · paid account (which service).
+6. **Which licence?** MIT · another (which) · the publication's or client's policy.
+7. **Where is it hosted?** Short answer: the account or organisation. Default: the git remote.
+
+## Work in the topic folder
+
+The repo is one of the things a topic can become: the brief's **What this topic becomes** table has a Demo project row, with no file in the topic folder. The repo stays its own repository, never inside the publication's folder.
+
+- **Claim it first.** Read [`brief.md`](../style-guide/references/publication-template/topics/_template/brief.md): if **Held by** names someone else and the status isn't `paused`, leave it and say so. Otherwise set **Held by** and the date, and clear it when you stop. Where the table has no Demo project row, say so and ask whether to add one.
+- **Fill only the Demo project row**: the repository in Where it goes, its status, and in Link the repo and the tag the piece is written against, so whoever picks the topic up next finds it. The topic's line in `calendar.md` changes only if the row's status changes the topic's.
+- **In a chat app**, the brief is `<topic folder>--brief.md`; hand back only its changed Demo project row.
+
 ## Resolve the owner first
 
 A demo repo is either the **owner's own** or written **for a third party** (a client, another author, a company). That decides every name and link it promotes.
@@ -78,7 +98,6 @@ Code rots as dependencies and platforms move on. Catch it before readers do:
 
 ## In step with the piece
 
-- **The repo stays its own repository**, never inside the publication's folder. The piece's `brief.md` (`pieces/<yyyy-mm>-<slug>/brief.md`) links it and the tag the piece is written against, so whoever picks the piece up next finds it.
 - **The piece links the exact state it was written against**: a tag or a commit, not only the branch, so a reader can always get the version the steps describe.
 - **Change both together.** An update to the repo that changes a step, an output or a screenshot is an update to the piece, and the reverse; publish them at the same time.
 - **A "Tested with" line** in the README — the runtime and key dependency versions and the date it was last run end to end — tells a reader how fresh it is.
@@ -97,7 +116,7 @@ Each branch gets a README that links the piece in its first screenful, says whic
 - [ ] No secrets in the repo or its history; `.env.example` complete; placeholders match the piece.
 - [ ] A licence file; borrowed code and assets credited.
 - [ ] README per branch with Tested with and License; `github-about.md` written for the user to paste.
-- [ ] The piece's `brief.md` links the repo and its tag.
+- [ ] The topic's `brief.md` Demo project row links the repo and its tag.
 
 ## Boundaries
 

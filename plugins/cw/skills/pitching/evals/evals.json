@@ -4,14 +4,15 @@
     {
       "id": 1,
       "prompt": "I've written up an idea for a guide to migrating a blog from WordPress to a static site. Send the same pitch to four tech publications at once so I hear back faster.",
-      "expected_output": "Should advise one outlet at a time unless an outlet's guidelines welcome simultaneous pitches; where sent to several, say so and withdraw from the others as soon as one accepts. Should first read each outlet's recent pieces and contributor guidelines, and check the fit with the writer's own profile (the folder AGENTS.md or the user's personal agent instructions name, else the project's publications/; in a chat app, the project's files; else ask). Should tailor the pitch to each outlet's readers.",
+      "expected_output": "Should advise one outlet at a time unless an outlet's guidelines welcome simultaneous pitches; where sent to several, say so and withdraw from the others as soon as one accepts. Should first read each outlet's recent pieces and contributor guidelines, and check the fit with the writer's own profile (the folder AGENTS.md or the user's personal agent instructions name, else the project's publications/; in a chat app, the project's files; else ask). Should tailor the pitch to each outlet's readers. Should read the profile, each outlet's guidelines and pitch-log.md before asking, ask only what they leave open (such as whether simultaneous pitches are allowed and the clips to send), and log each pitch as a row — date, outlet, editor, pitch, status, follow-up date, outcome — in pitch-log.md.",
       "files": [],
       "expectations": [
         "Recommends one outlet at a time unless guidelines allow simultaneous pitches",
         "Says to disclose and withdraw if pitching several",
         "Reads each outlet's recent pieces and contributor guidelines",
         "Checks fit with the writer's own profile",
-        "Tailors the pitch to each outlet"
+        "Tailors the pitch to each outlet",
+        "Reads the profile, guidelines and pitch log before asking, and logs each pitch in pitch-log.md"
       ]
     },
     {
@@ -42,13 +43,13 @@
     {
       "id": 4,
       "prompt": "I'd paused my own blog piece on rent-to-own schemes halfway through the draft. Now a personal-finance magazine has commissioned a 1,500-word piece on pension auto-enrolment, due Friday. Start the commissioned piece.",
-      "expected_output": "Should give the magazine its own publication folder (profile and writing guide built from its guidelines and the brief) and start the commissioned piece in its own piece folder under it, with a brief.md holding the agreed scope and deadline and its Held by set. Should leave the paused piece's folder untouched, change only the new piece's line in the magazine's plan.md, and record the commission in pitch-log.md at the publications root. In a chat app, should hand back only the new piece's files, named after its folder, and the one plan.md line.",
+      "expected_output": "Should give the magazine its own publication folder (profile and writing guide built from its guidelines and the brief) and start the commissioned piece in its own topic folder under the magazine's topics/, with a brief.md holding the agreed scope and deadline, a Blog post row whose destination is the magazine, and its Held by set; the piece itself goes in blog.md. Should leave the paused topic's folder untouched, change only the new topic's line in the magazine's calendar.md, and record the commission in pitch-log.md at the publications root, by the pitch log template. In a chat app, should hand back only the new topic's files, named after its folder, and the one calendar.md line.",
       "files": [],
       "expectations": [
-        "Creates a publication folder for the magazine and a piece folder under it",
-        "Writes a brief.md with the agreed scope, deadline and Held by",
-        "Leaves the paused piece's folder and plan.md line untouched",
-        "Records the commission in pitch-log.md at the publications root"
+        "Creates a publication folder for the magazine and a topic folder under its topics/",
+        "Writes a brief.md with the agreed scope, deadline and Held by, and the piece in blog.md",
+        "Leaves the paused topic's folder and calendar.md line untouched",
+        "Records the commission in pitch-log.md at the publications root, in the template's columns"
       ]
     }
   ]
