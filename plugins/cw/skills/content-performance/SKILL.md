@@ -27,7 +27,7 @@ What the publication is for and what success looks like come from that profile, 
 
 - Where the profile settles what success means, rank against it.
 - Where there's no profile, ask who the reader is and what the publication is for, and offer to build one with `cw:style-guide`.
-- Where success is `unset`, ask before producing a ranked list, and record the answer in the guide.
+- Where success is `unset`, ask before producing a ranked list, record the answer in the report, and offer to add it to `profile.md`.
 
 When a guide changes: in a codebase, save the file where it was found; in a chat app, give the user the updated file to replace in the project. Never write inside the installed plugin.
 
@@ -83,7 +83,7 @@ Work through whichever the data supports, with thresholds stated so a re-run rea
 
 | Finding                     | The signal                                                    | The fix                                                           |
 | --------------------------- | ------------------------------------------------------------- | ----------------------------------------------------------------- |
-| **Title/snippet mismatch**  | High impressions, low CTR, decent position                    | Rewrite the title and meta description to match the query intent  |
+| **Title/snippet mismatch**  | High impressions, low CTR, decent position                    | Rewrite the title and description to match the query intent       |
 | **Ranking decay**           | Position worse than the earlier window, impressions flat/down | Refresh the page — update facts, add what's now missing           |
 | **Striking distance**       | Ranking 5–20 for a query with real impressions                | Strengthen that page on that query; don't write a second one      |
 | **Query with no page**      | Impressions on a query the site answers only in passing       | A new page — check it isn't already covered before recommending   |
@@ -128,7 +128,7 @@ Write the report to the publication's `reports/content-performance-<yyyy-mm-dd>.
 
 - **What success means for this publication** → its `profile.md`.
 - **Rewriting a piece once you know what's wrong** → `cw:article-standards` for structure and framing, `cw:editing-standards` for the line level.
-- **The title and opening a rewrite produces** → `cw:article-standards`; this skill says which titles are underperforming, not what they should say. **The title tag, meta description, slug and quotable answer** → `cw:seo-aeo-geo`.
+- **The title and opening a rewrite produces** → `cw:article-standards`; this skill says which titles are underperforming, not what they should say. **The title, description, slug and quotable answer** → `cw:seo-aeo-geo`.
 - **Refreshing, merging, redirecting or retiring a piece the findings point at** → `cw:content-refresh`.
 - **Promoting a piece that's fine but unseen** → `cw:social-media-posts`. A discovery problem and a quality problem need different fixes.
 - **Technical implementation in code** — metadata wiring, robots, sitemaps, JSON-LD validity, crawlability — is the site's developers' work and outside this skill. Name what's wrong; don't change the site.

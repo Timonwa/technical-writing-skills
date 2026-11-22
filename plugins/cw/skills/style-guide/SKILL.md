@@ -87,7 +87,7 @@ Read the answers from the publication's existing files, its `sources/`, its publ
 
 - **Piece types** — the kinds it publishes, and which carries the house voice.
 - **Length targets per type** — a how-to, an essay, a newsletter issue — as ranges, so a piece that runs long is a decision, not an accident.
-- **Titles** — the formats it uses, with a real example of each; whether questions and numbers appear; and the title tag for search, about 50–60 characters as a working target, because results cut titles by pixel width ([Google](https://developers.google.com/search/docs/appearance/title-link) sets no limit; full targets in `cw:seo-aeo-geo`).
+- **Titles** — the formats it uses, with a real example of each; whether questions and numbers appear; and the length — one title is the headline, the search title and the share title, about 50–60 characters as a working target, because results cut titles by pixel width ([Google](https://developers.google.com/search/docs/appearance/title-link) sets no limit; full targets in `cw:seo-aeo-geo`).
 - **Openings and closings** — how a piece opens, how it never opens; how it ends, its one ask, its sign-off per channel.
 - **Recurring sections and devices**, in their exact form — a "what you'll need" box, a series name, a closing question.
 - **In-piece formatting** — how often subheads appear, what bold is for, when a list beats a paragraph, pull quotes.
@@ -96,7 +96,7 @@ Read the answers from the publication's existing files, its `sources/`, its publ
 **On the page and in search**
 
 - **Slugs** — short, readable words separated by hyphens, in the reader's language; avoid long ID numbers ([Google](https://developers.google.com/search/docs/crawling-indexing/url-structure)).
-- **Meta descriptions** — one written for each piece, never the same text across pages; for a post it may carry the author and the date. Google sets no length limit but truncates to fit the screen ([Google](https://developers.google.com/search/docs/appearance/snippet)); about 150–160 characters, with the point in the first 120 for mobile, is the working target ([Ahrefs](https://ahrefs.com/blog/meta-description/)).
+- **Descriptions** — one per piece, used as the meta description, the share description and the listing excerpt, written for each piece and never the same text across pages; for a post it may carry the author and the date. Google sets no length limit but truncates to fit the screen ([Google](https://developers.google.com/search/docs/appearance/snippet)); about 150–160 characters, with the point in the first 120 for mobile, is the working target ([Ahrefs](https://ahrefs.com/blog/meta-description/)).
 - **A reading-level target, if it has one.** Some publishers write for a low reading age even for specialists — GOV.UK's guidance is widely cited as a reading age of 9 — and WCAG 2.2's success criterion 3.1.5 (level AAA) asks for supplementary content where text needs more than lower-secondary reading ability ([W3C](https://www.w3.org/TR/WCAG22/#reading-level)). For general web writing, about grade 8 on a Flesch-Kincaid or Hemingway reading is common practice. Record the target and the tool that checks it, or `unset`; the score points at long sentences and words, it isn't the goal.
 
 **Quotes, titles of works and code**

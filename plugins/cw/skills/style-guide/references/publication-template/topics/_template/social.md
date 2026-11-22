@@ -9,6 +9,10 @@ One section per platform. Character counts follow each platform's own counting r
 
 ## <Platform>
 
+One `###` section per post or thread on this platform, named for its angle.
+
+### <Angle>
+
 | Kind                                     | Scheduled date | Post URL | Characters used / limit |
 | ---------------------------------------- | -------------- | -------- | ----------------------- |
 | single post · thread · summary with link |                |          |                         |
