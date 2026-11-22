@@ -89,7 +89,7 @@ Read the answers from the request, the guide, the publication's `profile.md` and
 - **Documentation** — the four documentation types, the documentation voice, procedures, accessible docs pages → `tw:docs-standards`.
 - **Content** — articles, newsletters and social posts for a publication → the content-writing skills (`cw`).
 - **The guide this skill defers to** — a docs style guide → `tw:style-guide`; a publication's writing guide → `cw:style-guide`.
-- **Getting facts out of an expert or a source** → `tw:sme-interviews` or `cw:sme-interviews`.
+- **Getting facts out of an expert or a source** → `tw:sme-interviews` or `cw:interviews`.
 - **Code in a piece** → `write:code-samples`. **Screenshots, photos, diagrams and alt text** → `tw:images-and-diagrams` or `cw:images-and-diagrams`.
 - **Tightening a finished draft** → `tw:editing-standards` or `cw:editing-standards`; **the machine-written sweep** → `/write:ai-check`.
 - **Worked examples** — a documentation page: `tw:docs-standards`; an article: the content-writing skills (`cw`); before-and-after edits: `tw:editing-standards` and `cw:editing-standards`.

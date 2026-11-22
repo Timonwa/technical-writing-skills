@@ -63,7 +63,7 @@ Use original sources whenever possible ([SPJ Code of Ethics](https://www.spj.org
 - **Follow every link to the end.** A source that cites a source isn't the source; read the one it cites, and check it says what the first one claims.
 - **Read laterally.** Before relying on an unfamiliar site or author, leave the page and see what others say about it — the "investigate the source" and "find better coverage" moves of [SIFT](https://hapgood.us/2019/06/19/sift-the-four-moves/).
 - **When the original can't be found, say so** in your notes, and either drop the claim or attribute it to where you did find it ("according to…"), never state it as established.
-- **A person is a source too.** When the written record runs out, or a claim needs an expert's judgement, interview → `cw:sme-interviews`.
+- **A person is a source too.** When the written record runs out, or a claim needs someone's judgement or first-hand experience, interview → `cw:interviews`.
 - **Tools that reach originals** (common practice): [Google Scholar](https://scholar.google.com) for papers and its "Cited by" list for what came after; the statistics portal of the agency that collects the figure; searches restricted with `site:` to an official domain and `filetype:pdf` for reports.
 
 ## Judge the source
@@ -96,7 +96,7 @@ The CRAAP checklist — currency, relevance, authority, accuracy, purpose — fr
 
 - **Take the exact words from the original** — the recording, the transcript, the person's own post — with enough context to know they mean what the piece will use them for.
 - **A quote found in another article** is checked against its original, or attributed to where you found it.
-- **Never** stitch remarks together, change a word inside quotation marks, or quote a paraphrase. Editing conventions for quotes come from the guide (`cw:sme-interviews`).
+- **Never** stitch remarks together, change a word inside quotation marks, or quote a paraphrase. Editing conventions for quotes come from the guide (`cw:interviews`).
 
 ## AI-assisted research
 
@@ -120,7 +120,7 @@ Record sources as you go, not at the end — in the topic's `sources.md`, by its
 
 - **Every claim in the topic's files** — `blog.md`, `newsletter.md`, `social.md` — **gets a row under Claims**, with where it sits; a claim that appears in two files gets a row for each. A claim with no row gets one or comes out, and nothing ships while a claim it keeps is `unverified`.
 - **A source is listed once**, however many claims it backs, and a caveat the piece must carry goes in its Notes.
-- **An interview is a source** of type `interview`, linking to its notes in `interviews/` (`cw:sme-interviews`). **A figure an AI supplied** is listed by the original you found and checked, never by the AI.
+- **An interview is a source** of type `interview`, linking to its notes in `interviews/` (`cw:interviews`). **A figure an AI supplied** is listed by the original you found and checked, never by the AI.
 - **Archive every web source you cite** with the Wayback Machine's [Save Page Now](https://web.archive.org/save) and put it in the Archived link column; pages move and change, and the archive shows what the source said when you checked it (common practice).
 - **Keep it after publishing** — it's what a correction, a reader's challenge or a refresh (`cw:content-refresh`) starts from.
 
@@ -147,7 +147,7 @@ Charts, photos, screenshots and datasets carry rights and credits of their own �
 
 ## Boundaries
 
-- **Interviewing a person** → `cw:sme-interviews`.
+- **Interviewing a person** → `cw:interviews`.
 - **Shaping the piece from the research** → `cw:article-standards`; **certainty and claims in the prose** → `write:writing-standards`.
 - **Checking a finished draft's facts** as part of a review → `/cw:review`.
 - **Finding facts inside a codebase** for documentation → `tw:codebase-research`.

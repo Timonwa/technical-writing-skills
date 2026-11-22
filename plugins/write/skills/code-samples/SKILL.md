@@ -141,4 +141,4 @@ Each is a yes or no:
 - **Where the sample sits in the page, and which page it belongs on** → `tw:developer-docs`, or `tw:api-reference` for request and response examples on an endpoint; in a published piece, the piece's structure → `cw:article-standards`.
 - **The companion repository itself** — its starter and final branches, pinned versions and README → `cw:demo-project`. Quickstart samples in a product repository's front door → `tw:readmes`.
 - **Writing the library or API being demonstrated** is not this skill's job. Where a sample can only be made safe or short by changing the API, that's a finding to raise, not something to paper over.
-- **Verifying behaviour you can't run** → `tw:sme-interviews` for documentation, `cw:sme-interviews` for a published piece.
+- **Verifying behaviour you can't run** → `tw:sme-interviews` for documentation, `cw:interviews` for a published piece.

@@ -134,23 +134,23 @@ publications/
 
 ### cw
 
-| Skill                  | Use it to                                                                                       |
-| ---------------------- | ----------------------------------------------------------------------------------------------- |
-| `content-planning`     | Decide what to write next, and plan a publishing calendar you can keep up with                  |
-| `content-research`     | Find reliable sources for a piece and check every fact and figure                               |
-| `sme-interviews`       | Prepare to interview an expert, then check the quotes and facts from your notes                 |
-| `article-standards`    | Write a blog post or article                                                                    |
-| `newsletter-standards` | Write a newsletter issue, including its subject line                                            |
-| `demo-project`         | Build the code project that goes with a coding tutorial                                         |
-| `images-and-diagrams`  | Choose photos, charts and diagrams, with the right credits and image descriptions               |
-| `cover-images`         | Make a post's cover image, which also shows when the link is shared                             |
-| `editing-standards`    | Edit a post or newsletter issue, keeping the writer's own voice                                 |
-| `seo-aeo-geo`          | Help readers find your post through Google and AI tools like ChatGPT                            |
-| `social-media-posts`   | Write social posts to promote a piece or share news, for any platform                           |
-| `cross-posting`        | Republish a post on Medium, Substack, dev.to or similar, without hurting the original's ranking |
-| `content-refresh`      | Update, correct, merge or remove old posts                                                      |
-| `pitching`             | Write pitch emails, guest post and collaboration proposals, sponsor emails and replies          |
-| `style-guide`          | Set up your blog or newsletter's profile, writing guide, look and media kit                     |
+| Skill                  | Use it to                                                                                                                                         |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `content-planning`     | Decide what to write next, and plan a publishing calendar you can keep up with                                                                    |
+| `content-research`     | Find reliable sources for a piece and check every fact and figure                                                                                 |
+| `interviews`           | Interview anyone for a piece — an expert, a customer, a founder, someone with a story — and turn it into quotes, a Q&A, a profile or a case study |
+| `article-standards`    | Write a blog post or article                                                                                                                      |
+| `newsletter-standards` | Write a newsletter issue, including its subject line                                                                                              |
+| `demo-project`         | Build the code project that goes with a coding tutorial                                                                                           |
+| `images-and-diagrams`  | Choose photos, charts and diagrams, with the right credits and image descriptions                                                                 |
+| `cover-images`         | Make a post's cover image, which also shows when the link is shared                                                                               |
+| `editing-standards`    | Edit a post or newsletter issue, keeping the writer's own voice                                                                                   |
+| `seo-aeo-geo`          | Help readers find your post through Google and AI tools like ChatGPT                                                                              |
+| `social-media-posts`   | Write social posts to promote a piece or share news, for any platform                                                                             |
+| `cross-posting`        | Republish a post on Medium, Substack, dev.to or similar, without hurting the original's ranking                                                   |
+| `content-refresh`      | Update, correct, merge or remove old posts                                                                                                        |
+| `pitching`             | Write pitch emails, guest post and collaboration proposals, sponsor emails and replies                                                            |
+| `style-guide`          | Set up your blog or newsletter's profile, writing guide, look and media kit                                                                       |
 
 ## Commands
 

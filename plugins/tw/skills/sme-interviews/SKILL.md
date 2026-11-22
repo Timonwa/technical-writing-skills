@@ -125,5 +125,5 @@ Suggest these instead, in this order: read the tests; send a written question li
 - **Deciding which topics need an expert at all** → `tw:docs-planning`.
 - **Finding facts in a codebase without an expert** → `tw:codebase-research`. Check there first: an expert's time is for what the code can't tell you.
 - **Editing the resulting draft** → `tw:editing-standards`; reviewing it → `/tw:doc-review`.
-- **Interviewing a source for an article, feature or profile** → `cw:sme-interviews`.
+- **Interviewing anyone for an article, a Q&A, a profile or a case study** → `cw:interviews`.
 - **The expert is the authority on behaviour, not on wording.** A reviewer's rewrite into internal vocabulary is a finding to push back on, not an instruction.

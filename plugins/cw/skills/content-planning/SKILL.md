@@ -76,7 +76,7 @@ Score each idea before it earns a slot. A simple 1–3 on each line is enough; t
 | Effort       | What does it cost — research, a demo project, images, an interview?                  |
 | Return       | Does it produce the profile's one action, or support pieces that do?                 |
 
-Experience matters because Google asks whether content "clearly demonstrate[s] first-hand expertise and a depth of knowledge"; E-E-A-T "itself isn't a specific ranking factor", and "trust is most important" ([Google: helpful content](https://developers.google.com/search/docs/fundamentals/creating-helpful-content)). An idea with high demand and no experience behind it is a candidate for an interview (`cw:sme-interviews`) or research (`cw:content-research`), not for a confident guess.
+Experience matters because Google asks whether content "clearly demonstrate[s] first-hand expertise and a depth of knowledge"; E-E-A-T "itself isn't a specific ranking factor", and "trust is most important" ([Google: helpful content](https://developers.google.com/search/docs/fundamentals/creating-helpful-content)). An idea with high demand and no experience behind it is a candidate for an interview (`cw:interviews`) or research (`cw:content-research`), not for a confident guess.
 
 ## What not to plan
 
@@ -132,7 +132,7 @@ The folder starts with `brief.md`:
 
 - **At the top** — Status, Held by (who, or which agent, and since when), Kind, and Series (name and part, or blank).
 - **What this topic becomes** — one row per format: its file, where it goes (for cross-posts, each platform with full copy or opening excerpt), its publish date, its own status, and its link once live. The topic's status is the overall one, `published` once every row is.
-- **The brief** (standard editorial practice) — the reader and the question in their words; the search query and the kind of page that ranks for it; the angle; an outline, the sources to check (`cw:content-research`) and the people to interview (`cw:sme-interviews`); the one action; the internal links in and out, including the cluster it belongs to.
+- **The brief** (standard editorial practice) — the reader and the question in their words; the search query and the kind of page that ranks for it; the angle; an outline, the sources to check (`cw:content-research`) and the people to interview (`cw:interviews`); the one action; the internal links in and out, including the cluster it belongs to.
 
 ## Claiming and pausing a topic
 
@@ -169,7 +169,7 @@ In a chat app, a project's files can't hold folders: name a topic's files `<topi
 
 - **Writing the piece** → `cw:article-standards`; the newsletter issue → `cw:newsletter-standards`.
 - **Researching a piece's facts** → `cw:content-research`.
-- **Interviewing a source** → `cw:sme-interviews`.
+- **Interviewing anyone for a piece** → `cw:interviews`.
 - **Pitching a planned piece to another publication** → `cw:pitching`.
 - **Getting a piece found** → `cw:seo-aeo-geo`.
 - **Reviewing how pieces did** → `/cw:content-performance`.
