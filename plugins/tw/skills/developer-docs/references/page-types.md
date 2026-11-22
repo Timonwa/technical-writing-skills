@@ -1,6 +1,6 @@
 # The four docs page types — section blueprints
 
-Which quadrant a topic needs — and why mixing them fails — is `tw:docs-standards`' call (Diátaxis). This file is the docs-site rendering of each: the section order to follow once the type is chosen.
+Which quadrant a topic needs — and why mixing them fails — is `tw:docs-standards`' call (Diátaxis). This file is the docs-site rendering of each: the section order to follow once the type is chosen, with a fill-in skeleton for each. The skeleton goes in the frame's middle.
 
 ## The frame every page shares
 
@@ -34,6 +34,33 @@ The reader is new and wants a guaranteed win. You own every decision; they own n
 - No choices, no detours, no "alternatively" — one path
 - Closing: what they built + next-steps links to the how-tos and concepts they're now ready for
 
+Fill-in skeleton:
+
+````mdx
+<What they'll have built, and roughly how long it takes.>
+
+## Before you start
+
+- <Tool> <exact version> — check with `<command>`
+- <Account or setup>
+
+## 1. <First step, as an action>
+
+<What to do.>
+
+```<language>
+<code>
+```
+
+<What they should see now.>
+
+## 2. <Next step>
+
+## What you built
+
+<One or two sentences.>
+````
+
 ## 2. How-to guide — a task for someone competent
 
 The reader knows the basics and has a goal. Assume competence; skip teaching.
@@ -44,6 +71,28 @@ The reader knows the basics and has a goal. Assume competence; skip teaching.
 - Branches ("if you use X…") as short subsections, not interleaved into the main path
 - The likely failure: the error they'll actually hit, what it means, the fix
 - Closing: how to verify it worked
+
+Fill-in skeleton:
+
+```mdx
+<The goal, and any precondition.>
+
+1. <Action, with the concrete value.>
+2. <Action.>
+3. <Action.>
+
+### If you use <variant>
+
+<The steps that differ.>
+
+## If it fails
+
+**`<the error they'll see>`** — <what it means>. <The fix.>
+
+## Check it worked
+
+<How to confirm.>
+```
 
 ## 3. Reference — information, complete and neutral
 
@@ -56,6 +105,34 @@ The reader is mid-task and needs a fact. Structure mirrors the code, not a narra
 - No advice, no "you should usually…" — link the relevant how-to or explanation instead
 - Generated API references (OpenAPI/Swagger) → `tw:api-reference`, not hand-written pages
 
+Fill-in skeleton:
+
+````mdx
+<What it is, in one line.>
+
+## Parameters
+
+| Name | Type | Required | Default | Description |
+| ---- | ---- | -------- | ------- | ----------- |
+|      |      |          |         |             |
+
+## Returns
+
+<Type and shape.>
+
+## Errors
+
+| Code | When |
+| ---- | ---- |
+|      |      |
+
+## Example
+
+```<language>
+<minimal runnable example>
+```
+````
+
 ## 4. Explanation — understanding, no task
 
 The reader wants to know why or how it works. No steps, no outcome.
@@ -66,6 +143,28 @@ The reader wants to know why or how it works. No steps, no outcome.
 - Diagrams where the shape of the thing matters
 - Honest trade-offs — an explanation that only sells the design is marketing
 - Closing: next-steps links to the how-tos that apply the concept
+
+Fill-in skeleton:
+
+```mdx
+<The question this page answers.>
+
+## <The mental model>
+
+<How to think about it.>
+
+## How it works
+
+<The mechanics.>
+
+## Edge cases
+
+<Where the model bends.>
+
+## Trade-offs
+
+<What the design gives up, and why.>
+```
 
 ## The mixing test
 

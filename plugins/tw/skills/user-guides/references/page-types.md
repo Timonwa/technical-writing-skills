@@ -72,6 +72,114 @@ A recurring FAQ is often a symptom: the question keeps being asked because the c
 - One or two short sentences or a small section expanding it
 - Stop once it's answered
 
+## Fill-in skeletons
+
+Copy the type's skeleton, fill every `<…>`, and delete nothing but the placeholder text. The page's title and description fields follow the help centre's own front matter.
+
+**1. Concept explainer**
+
+```markdown
+# <What is …? / How does … work?>
+
+<One-sentence plain definition.>
+
+## How it works
+
+<The idea, in the product's agreed framing.>
+
+## Example
+
+<One worked example.>
+
+## Why it matters
+
+<One or two sentences.>
+```
+
+**2. How-to / step-by-step**
+
+```markdown
+# <Plain action: Return an item>
+
+<The goal, in one line.>
+
+To <goal>:
+
+1. <Action, with the **button or label** in bold.>
+2. <Action.>
+3. <Action.> **<Warning, if this step can't be undone.>**
+
+<What happens next.>
+
+## <Other method, if there is one>
+
+1. <Action.>
+```
+
+**3. Reference**
+
+```markdown
+# <The thing being listed>
+
+<What the list covers and who it applies to.>
+
+| <Item> | <Dimension> | <Dimension> |
+| ------ | ----------- | ----------- |
+|        |             |             |
+
+<Units, currencies and dates stated. For how to use it, see [<how-to>](<link>).>
+```
+
+**4. Troubleshooting**
+
+```markdown
+# <The problem as the reader sees it>
+
+Try these steps.
+
+## <Most common cause>
+
+1. <Fix step.> <Device or browser, if it matters.>
+2. <Fix step.>
+
+## <Next cause>
+
+1. <Fix step.>
+
+<If none of these work: how to contact support, and what to send.>
+```
+
+**5. Policy / rules**
+
+```markdown
+# <The rule>
+
+<The rule in plain terms, in one line.>
+
+## How it works
+
+<The process, start to finish.>
+
+## Timeframes and conditions
+
+- <Timeframe.>
+- <Condition.>
+
+## Exceptions
+
+<Edge cases, stated explicitly.>
+```
+
+**6. FAQ answer**
+
+```markdown
+# <The literal question?>
+
+<Yes or no, and the reason, in one sentence.>
+
+<One or two sentences expanding it, or a link to the page that covers it in full.>
+```
+
 ## Before and after: one example per type
 
 Weak draft, then a rewrite that follows the standard. **Each example is a different kind of product** — the pattern is what transfers, not the subject matter. Swap in your own product's real specifics and agreed framings.
