@@ -1,6 +1,6 @@
 # Series — <series name>
 
-**The plan for one series.** Saved as `series/<series-slug>.md`. Each part is its own topic with its own folder under `topics/`; its `brief.md` names the series and the part. Plan every part before the first is published, and add a part's topic folder when that part is briefed.
+**The plan for one series.** Saved as `series/<series-slug>/brief.md`. Anything every part draws on — shared research, notes, a build log — sits beside it in the same folder. Each part is its own topic with its own folder under `topics/`; its `brief.md` names the series and the part. Plan every part before the first is published, and add a part's topic folder when that part is briefed.
 
 | Field              | Answer                                              |
 | ------------------ | --------------------------------------------------- |

@@ -72,7 +72,7 @@ publications/
 │   ├── sources/                # style guides you already have
 │   ├── examples/               # sample covers, logos and typical pieces
 │   ├── calendar.md             # one line per topic: date, formats, status, who's on it
-│   ├── series/                 # one plan per series
+│   ├── series/                 # one folder per series: its brief and what its parts share
 │   ├── reports/                # performance reviews
 │   └── topics/
 │       └── <yyyy-mm>-<slug>/   # one folder per topic, e.g. 2026-12-sourdough-starter

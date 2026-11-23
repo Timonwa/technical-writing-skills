@@ -42,10 +42,10 @@
     {
       "id": 4,
       "prompt": "I want to start a 6-part series on building a budgeting app. Just schedule part 1 for Monday; I'll figure out the rest later.",
-      "expected_output": "Should plan the whole series before publishing part 1 — the parts, what each delivers on its own, links between parts — in a series/<series-slug>.md file with a parts table, and make sure each part stands alone for a reader arriving from search. Each part is its own topic folder, created when that part is briefed, with Series and Part in its brief. Should work back from publish dates through research, demo project, images, edit and review.",
+      "expected_output": "Should plan the whole series before publishing part 1 — the parts, what each delivers on its own, links between parts — in a series/<series-slug>/brief.md with a parts table, and make sure each part stands alone for a reader arriving from search. Each part is its own topic folder, created when that part is briefed, with Series and Part in its brief. Should work back from publish dates through research, demo project, images, edit and review.",
       "files": [],
       "expectations": [
-        "Plans all six parts before scheduling part 1, in a series/ file with a parts table",
+        "Plans all six parts before scheduling part 1, in a series/ folder's brief.md with a parts table",
         "Makes each part its own topic, with Series and Part in its brief",
         "Makes each part stand alone with links between parts",
         "Works back from publish dates through the production steps, including the demo project"
