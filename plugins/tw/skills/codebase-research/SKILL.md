@@ -103,5 +103,5 @@ The rule doesn't relax, it changes shape. Write only what you were told, ask for
 - **What to do with the facts** — which document type, how it's structured, how it reads → `tw:docs-standards` and the skill for that document type.
 - **Verifying a docs page against source as a review pass** → `/tw:docs-audit`. This skill is for research before writing; that one is for drift after.
 - **Endpoint-level detail** — handlers, schemas, status codes, response shapes → `tw:api-reference`, which has its own verification rules for an API surface.
-- **The code that ends up in the docs** — choosing, testing and maintaining examples → `write:code-samples`.
+- **The code that ends up in the docs** — choosing, testing and maintaining examples → `tw:docs-code-samples`.
 - **This skill never changes code.** A bug or an inconsistency you find is a finding to report, not something to fix in passing.

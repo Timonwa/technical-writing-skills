@@ -92,7 +92,7 @@ A help centre goes wrong quietly: the product changes and the guides don't. Comm
 
 ## Pre-publish checklist
 
-Apply `write:writing-standards`' voice rules and `tw:docs-standards` first — together they cover verifying against the product, addressing the reader, formatting, heading levels and marketing language for every kind of document. These are the items specific to a guide:
+Apply `tw:docs-writing-standards`' voice rules and `tw:docs-standards` first — together they cover verifying against the product, addressing the reader, formatting, heading levels and marketing language for every kind of document. These are the items specific to a guide:
 
 - [ ] The first line answers the question or states the bottom line.
 - [ ] No plumbing jargon that fails the teach-or-cut test; every required term glossed on first use.
@@ -106,8 +106,8 @@ Apply `write:writing-standards`' voice rules and `tw:docs-standards` first — t
 
 - **Developer-facing docs sites** (technical guides, reference pages, SDK docs) → `tw:developer-docs` — same consistency aim, different audience and page types.
 - **Documentation for staff rather than customers** — runbooks, SOPs, onboarding, internal knowledge bases → `tw:internal-docs`. The plain-language discipline is the same; the reader is on the inside and the confidentiality rules differ.
-- **The voice rules every document obeys** — sentences, claims, concrete over vague, formatting, never hard-wrap → `write:writing-standards`; the documentation voice, prose before code and the four document types → `tw:docs-standards`.
-- **The shared writing discipline** — audience-first, scope → `write:writing-standards`; document type → `tw:docs-standards`.
+- **The voice rules every document obeys** — sentences, claims, concrete over vague, formatting, never hard-wrap → `tw:docs-writing-standards`; the documentation voice, prose before code and the four document types → `tw:docs-standards`.
+- **The shared writing discipline** — audience-first, scope → `tw:docs-writing-standards`; document type → `tw:docs-standards`.
 - **The agreed vocabulary itself** — which term wins, how each concept is framed, the trusted analogy — is captured and maintained by `tw:docs-style-guide`. This skill consumes those decisions; it doesn't invent them.
 - **Findability** — titles readers search for, meta descriptions, slugs, the help centre's own search → `tw:docs-seo-aeo-geo`.
 - **Tightening an existing draft** → `tw:docs-editing-standards`. **Screenshots** → `tw:docs-images-and-diagrams`. **Announcing what changed** → `tw:release-notes`.

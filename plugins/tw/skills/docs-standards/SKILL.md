@@ -6,7 +6,7 @@ description: >-
 
 # Documentation standards
 
-The discipline that makes documentation documentation. Every page serves one reader, pursuing one goal, in one mode — decide which mode before writing a word. Apply it together with `write:writing-standards`.
+The discipline that makes documentation documentation. Every page serves one reader, pursuing one goal, in one mode — decide which mode before writing a word. Apply it together with `tw:docs-writing-standards`.
 
 ## Voice and audience come from the writing's own guide
 
@@ -96,7 +96,7 @@ From [Google's accessibility guidance](https://developers.google.com/style/acces
 ## Code on the page
 
 - **Prose before every code block** — one sentence saying what it does and when to use it. A reader should understand the page with the code blocks collapsed.
-- **Complete, runnable examples with their expected output**, and the common failure case where one exists. No pseudocode, and no placeholder standing in for the thing being demonstrated; values the reader must replace follow the set's one placeholder convention (`write:code-samples`).
+- **Complete, runnable examples with their expected output**, and the common failure case where one exists. No pseudocode, and no placeholder standing in for the thing being demonstrated; values the reader must replace follow the set's one placeholder convention (`tw:docs-code-samples`).
 - **Accuracy against the source** — symbol names, signatures, defaults and versions read from the code or the running product, never memory. Wrong docs are worse than no docs.
 - **Document what is, not what's planned** — a roadmap item on a docs page reads as a shipped feature.
 
@@ -126,7 +126,7 @@ Note what it doesn't do: no history of why API keys exist (explanation), no full
 
 ## Boundaries
 
-**With this skill** — the craft every piece of writing shares (reader and scope first, plain language, concrete claims, credit, scanning, formatting) and its checklist → `write:writing-standards` and its house-voice reference.
+**With this skill** — the craft every piece of writing shares (reader and scope first, plain language, concrete claims, credit, scanning, formatting) and its checklist → `tw:docs-writing-standards` and its house-voice reference.
 
 **Before writing**
 
@@ -141,8 +141,8 @@ Note what it doesn't do: no history of why API keys exist (explanation), no full
 - Project READMEs → `tw:readmes`. API references → `tw:api-reference`. Release notes and changelogs → `tw:release-notes`.
 - Findability in search, the docs site's own search and AI answers → `tw:docs-seo-aeo-geo`.
 
-**The parts that aren't prose** — code examples → `write:code-samples`; screenshots, diagrams and alt text → `tw:docs-images-and-diagrams`.
+**The parts that aren't prose** — code examples → `tw:docs-code-samples`; screenshots, diagrams and alt text → `tw:docs-images-and-diagrams`.
 
-**After writing** — tightening → `tw:docs-editing-standards`; a full review of one page → `/tw:doc-review`; drift across the set → `/tw:style-check`; translation-ready writing → `tw:localization`; auditing a docs site → `/tw:docs-audit`.
+**After writing** — tightening → `tw:docs-editing-standards`; a full review of one page → `/tw:docs-review`; drift across the set → `/tw:style-check`; translation-ready writing → `tw:localization`; auditing a docs site → `/tw:docs-audit`.
 
-**Out of scope** — articles, blog posts and newsletters are content, not documentation → the content-writing skills (`cw`).
+**Out of scope** — articles, blog posts and newsletters are content, not documentation → the `cw` skills in [content-writing-skills](https://github.com/Timonwa/content-writing-skills).

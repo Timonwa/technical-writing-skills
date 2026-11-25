@@ -116,7 +116,7 @@ AI search features draw on the same indexed pages: Google lists "no additional r
 - **Self-contained sections.** Quoted alone, a section still names its subject — "API keys expire after 90 days", not "They expire after 90 days".
 - **Exact names and values in text**, not only in an image or diagram — "important content is available in textual form" ([Google](https://developers.google.com/search/docs/appearance/ai-features)).
 - **One task per page.** A focused page matches a question better than a long page of many tasks ([Elastic](https://www.elastic.co/docs/contribute-docs/how-to/seo)).
-- **Copyable code** — real text in fenced blocks, complete enough to run (`write:code-samples`).
+- **Copyable code** — real text in fenced blocks, complete enough to run (`tw:docs-code-samples`).
 - **`llms.txt` is optional.** It's a proposal for a markdown index of a site's pages for agents ([llmstxt.org](https://llmstxt.org/)); Google's AI features need no such file. Publish one if the platform generates it cheaply and readers' tools read it; it never replaces a page findable in its own right.
 
 ## Before publishing
@@ -144,4 +144,4 @@ AI search features draw on the same indexed pages: Google lists "no additional r
 
 - **The site's code** — metadata tags and their generation, sitemaps, `robots.txt`, rendering and crawlability → the site's developers; this skill covers what the writer controls.
 - **Heading form, case and the four page types** → `tw:docs-standards`. **Redirects and moving pages** → `tw:developer-docs`. **Which pages the set needs, and readers' questions from search logs and tickets** → `tw:docs-planning`; **a whole set inventoried against them** → `/tw:content-audit`. **The terminology list** → `tw:docs-style-guide`.
-- **Articles, blog posts and newsletters** → `cw:seo-aeo-geo`.
+- **Articles, blog posts and newsletters** → `cw:seo-aeo-geo` in [content-writing-skills](https://github.com/Timonwa/content-writing-skills).

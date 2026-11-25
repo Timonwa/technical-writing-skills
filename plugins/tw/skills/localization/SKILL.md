@@ -120,7 +120,7 @@ The do-not-translate list, the approved translations and the per-locale coverage
 ## Boundaries
 
 - **Terminology decisions and the glossary** the do-not-translate list and approved translations extend → `tw:docs-style-guide`.
-- **The voice rules every document obeys** — sentences, claims, concrete over vague, formatting, never hard-wrap → `write:writing-standards`; the documentation voice, prose before code and the four document types → `tw:docs-standards`.
+- **The voice rules every document obeys** — sentences, claims, concrete over vague, formatting, never hard-wrap → `tw:docs-writing-standards`; the documentation voice, prose before code and the four document types → `tw:docs-standards`.
 - **Images with text in them** → `tw:docs-images-and-diagrams` for the capture and authoring side.
 - **Software string localization** — resource files, message formatting, pluralization rules in code — is an engineering concern. This skill covers documentation and the source-text discipline that serves both.
 - **Choosing target languages and markets** is a business decision, asked for rather than assumed.

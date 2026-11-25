@@ -150,7 +150,7 @@ Decide the rules once, write them down, and apply them per document:
 - **Documentation for customers and end users** → `tw:user-guides`. Much of the plain-language discipline is shared; the reader, the confidentiality rules, and the ownership problem are not.
 - **Developer documentation for a public or shared technical surface** → `tw:developer-docs` and `tw:api-reference`, even when the audience is internal — an internal API still gets an API reference.
 - **A repository's own README and contributor docs** → `tw:readmes`.
-- **The voice rules every document obeys** — sentences, claims, concrete over vague, formatting, never hard-wrap → `write:writing-standards`; the documentation voice, prose before code and the four document types → `tw:docs-standards`.
+- **The voice rules every document obeys** — sentences, claims, concrete over vague, formatting, never hard-wrap → `tw:docs-writing-standards`; the documentation voice, prose before code and the four document types → `tw:docs-standards`.
 - **Capturing the knowledge from the person who has it** → `tw:sme-interviews`.
 - **Deciding which internal docs are needed and auditing what exists** → `tw:docs-planning`.
 - **The tool it lives in** — wiki, drive, repo, knowledge base — is the organization's decision, not this skill's. Every rule here works in any of them.

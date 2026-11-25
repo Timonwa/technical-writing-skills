@@ -103,8 +103,8 @@ console.log(res.headers.get("x-ratelimit-remaining")); // "97"
 
 ## Boundaries
 
-- **The voice rules every document obeys** — sentences, claims, concrete over vague, formatting, never hard-wrap → `write:writing-standards`; the documentation voice, prose before code and the four document types → `tw:docs-standards`.
-- Which document type a page should be → `tw:docs-standards`; audience, scope and prose discipline → `write:writing-standards`.
+- **The voice rules every document obeys** — sentences, claims, concrete over vague, formatting, never hard-wrap → `tw:docs-writing-standards`; the documentation voice, prose before code and the four document types → `tw:docs-standards`.
+- Which document type a page should be → `tw:docs-standards`; audience, scope and prose discipline → `tw:docs-writing-standards`.
 - Deciding which pages the set needs at all, and in what order → `tw:docs-planning`. This skill writes a page once the set has a shape.
 - Getting the facts the page depends on out of an engineer or a spec → `tw:sme-interviews`; locating them in the source yourself → `tw:codebase-research`.
 - The project's own terminology, capitalization and word choices → `tw:docs-style-guide`.
@@ -114,4 +114,4 @@ console.log(res.headers.get("x-ratelimit-remaining")); // "97"
 - **Internal documentation** — runbooks, onboarding, process docs → `tw:internal-docs`.
 - Project READMEs → `tw:readmes`.
 - Findability — titles, meta descriptions, slugs, versioned canonicals, being quoted in AI answers → `tw:docs-seo-aeo-geo`.
-- The code blocks themselves — choosing, testing and maintaining them → `write:code-samples`. Screenshots, architecture and flow diagrams → `tw:docs-images-and-diagrams`.
+- The code blocks themselves — choosing, testing and maintaining them → `tw:docs-code-samples`. Screenshots, architecture and flow diagrams → `tw:docs-images-and-diagrams`.

@@ -140,9 +140,9 @@ Everything else is unchanged: list the findings, ask which, fix only those, upda
 
 ## Boundaries
 
-- **Deep editorial work on one page** → `/tw:doc-review`.
-- **Does it sound machine-written** → `/write:ai-check`.
+- **Deep editorial work on one page** → `/tw:docs-review`.
+- **Does it sound machine-written** → `/tw:docs-ai-check`.
 - **Setting the conventions** rather than enforcing them → `tw:docs-style-guide`. A derived convention is a proposal for the guide, not a decision made on the project's behalf.
 - **Is it true and does it work** → `/tw:docs-audit`; **is it the right set** → `/tw:content-audit`.
-- **A blog, publication or newsletter archive** → `/cw:style-check`.
+- **A blog, publication or newsletter archive** → `cw:content-refresh` in [content-writing-skills](https://github.com/Timonwa/content-writing-skills), which brings old pieces up to the current guide.
 - **Where the docs and the product disagree on a name**, the product is evidence but not automatically right — flag the conflict rather than silently siding with either.

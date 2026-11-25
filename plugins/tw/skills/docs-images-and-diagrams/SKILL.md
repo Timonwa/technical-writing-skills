@@ -160,7 +160,7 @@ This is where image-heavy documentation fails, and it fails quietly.
 
 - **Whether the page needs a visual at all**, and where it sits in the structure → `tw:developer-docs`, `tw:user-guides` or `tw:internal-docs`.
 - **Text inside images breaks translation**, and a localized product needs recapturing per locale → `tw:localization`.
-- **Code blocks are not images** — never screenshot code. The rules for code are in `write:code-samples`.
-- **Photos, charts and images in an article or newsletter** → `cw:images-and-diagrams`.
+- **Code blocks are not images** — never screenshot code. The rules for code are in `tw:docs-code-samples`.
+- **Photos, charts and images in an article or newsletter** → `cw:images-and-diagrams` in [content-writing-skills](https://github.com/Timonwa/content-writing-skills).
 - **The product's real screens, labels and demo data** are captured from the running product or asked for, never mocked up to look like it.
 - A logo, brand icon or favicon set is a different job: the type has to be outlined and the assets have to survive export at many sizes. Out of scope.

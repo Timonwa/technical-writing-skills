@@ -72,7 +72,7 @@ A short profile, so the decisions are measured against something:
 - **Capitalization** — sentence case or title case for headings, with the same answer for page titles, navigation labels, table headers and buttons. Which product and feature names are capitalized, and which aren't — feature names creeping into capitals is the most common drift in any docs set.
 - **Product and feature naming** — the exact string, including spacing and any stylization; whether a shortened form is allowed after first use; what is never a synonym for it.
 - **UI element formatting** — bold for things the reader clicks or selects, matching the interface exactly; how a menu path is written (**File > Save**, or "select **File**, then **Save**"); how a keyboard shortcut is written.
-- **Code formatting** — what gets `code` styling (identifiers, paths, commands, filenames, values) and what doesn't; how a code fence is labelled; how placeholders are written (Google uses `UPPERCASE_WITH_UNDERSCORES`, explained after the sample — `write:code-samples`).
+- **Code formatting** — what gets `code` styling (identifiers, paths, commands, filenames, values) and what doesn't; how a code fence is labelled; how placeholders are written (Google uses `UPPERCASE_WITH_UNDERSCORES`, explained after the sample — `tw:docs-code-samples`).
 - **Numbers, dates, times, units** — when a number is spelled out, the date format, time zones, ranges and units.
 - **Lists and punctuation** — serial comma or not; whether items end in periods; numbered for steps whose order matters, bulleted otherwise.
 - **Links** — descriptive link text, never a bare URL or "click here"; whether links open in a new tab; how an external link is marked.
@@ -130,9 +130,9 @@ An unenforced guide is a document that makes people feel guilty. Pick at least o
 
 ## Boundaries
 
-- **The rules every piece obeys by default** → `write:writing-standards`; the documentation voice and page rules → `tw:docs-standards`. A guide records only where it departs from them or what they don't cover, and a decision written down overrides them.
+- **The rules every piece obeys by default** → `tw:docs-writing-standards`; the documentation voice and page rules → `tw:docs-standards`. A guide records only where it departs from them or what they don't cover, and a decision written down overrides them.
 - **Applying the guide to a draft** → `tw:docs-editing-standards`; **checking the whole set for drift from it** → `/tw:style-check`.
 - **The pages that consume it** — `tw:user-guides`, `tw:developer-docs`, `tw:api-reference`, `tw:internal-docs`.
-- **A publication's writing guide and profile** → `cw:style-guide`.
+- **A publication's writing guide and profile** → `cw:style-guide` in [content-writing-skills](https://github.com/Timonwa/content-writing-skills).
 - **Writing for translation** → `tw:localization`.
 - **The product's own facts** — the real names, the feature names, the audience — are asked for and recorded, never invented here.

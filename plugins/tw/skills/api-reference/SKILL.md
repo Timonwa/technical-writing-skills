@@ -125,7 +125,7 @@ The things that cost a developer a night are rarely in the parameter table. Say 
 - **Match the languages to the audience**, and keep every language at parity — a sample missing in one language reads as an unsupported language.
 - **Samples are complete and runnable**, with placeholders limited to credentials and ids that are obviously the reader's own.
 - **Generated multi-language samples** from a spec are fine as a baseline, but check that the generated call actually works; generators produce plausible code, not correct code.
-- The craft of selecting, testing and maintaining these lives in `write:code-samples`.
+- The craft of selecting, testing and maintaining these lives in `tw:docs-code-samples`.
 
 ## Keeping the reference honest
 
@@ -137,7 +137,7 @@ The things that cost a developer a night are rarely in the parameter table. Say 
 ## Boundaries
 
 - **Generating the spec from code** — route registries, schema annotations, spec-build tooling, and keeping generated output in sync with handlers — is an engineering job, not this skill's. This skill covers what the documentation says, including the prose inside a spec someone else generates.
-- **The voice rules every document obeys** — sentences, claims, concrete over vague, formatting, never hard-wrap → `write:writing-standards`; the documentation voice, prose before code and the four document types → `tw:docs-standards`.
+- **The voice rules every document obeys** — sentences, claims, concrete over vague, formatting, never hard-wrap → `tw:docs-writing-standards`; the documentation voice, prose before code and the four document types → `tw:docs-standards`.
 - Which quadrant a surrounding page belongs to, and the documentation types → `tw:docs-standards`. Reference is one quadrant; the quickstart and integration guides around it are others.
 - Docs-site page mechanics — navigation, placement, link integrity, next-steps footers → `tw:developer-docs`.
 - Locating a schema, handler or default in the source → `tw:codebase-research`. Getting unverifiable behaviour out of the engineer who wrote it → `tw:sme-interviews`.

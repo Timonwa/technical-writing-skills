@@ -153,7 +153,7 @@ Announce a deprecation as early as you can, repeat it in every release until rem
 
 - **The documentation pages the notes link to** — the feature's how-to, its reference entry, its migration guide → `tw:developer-docs`, `tw:user-guides`, `tw:api-reference`.
 - **A substantial migration guide** is its own page, shaped as above; the note links it, and the how-to pages it points to are → `tw:developer-docs`.
-- **The voice rules every document obeys** — sentences, claims, concrete over vague, formatting, never hard-wrap → `write:writing-standards`; the documentation voice, prose before code and the four document types → `tw:docs-standards`.
+- **The voice rules every document obeys** — sentences, claims, concrete over vague, formatting, never hard-wrap → `tw:docs-writing-standards`; the documentation voice, prose before code and the four document types → `tw:docs-standards`.
 - **Generating and categorizing the raw change list** from version control or a release tool is an engineering task; this skill covers what the published notes say.
 - **Launch announcements, blog posts and marketing copy** about a release are a different document with a different goal. Release notes stay factual; link the announcement rather than becoming one.
 - **Internal "what shipped" summaries** for other teams → `tw:internal-docs`.
