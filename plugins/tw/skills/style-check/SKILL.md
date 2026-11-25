@@ -3,8 +3,6 @@ name: style-check
 description: >-
   Manually invoked. Sweeps a docs set for the drift that makes it read like several people wrote it — one concept named several ways, capitalization and heading-case inconsistency, product and feature name variants, person and tense drift, marketing words and minimisers, weak link text, code-formatting and fence-label drift, UI formatting, glossary gaps, and date, number and unit formats. Measured against the project's style guide. Outputs a drift report plus proposed terminology entries. Never edits a page.
 argument-hint: '[path] [--guide <path>] [--fix]'
-model: opus
-effort: high
 disable-model-invocation: true
 disallowed-tools: Edit, NotebookEdit
 ---

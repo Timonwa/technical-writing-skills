@@ -3,8 +3,6 @@ name: docs-pr-review
 description: >-
   Manually invoked. Reviews the documentation in a pull request — docs shipped with a code change, a docs-only update, new pages, or docs for code that lives elsewhere — checking every claim against the right source of truth, finding changes that need docs but have none, and running the five levels of edit on the changed lines. Reports findings with replacements and questions for the author; comments on the PR or fixes only when asked.
 argument-hint: '[pr-number | pr-url | branch] [--comment] [--fix]'
-model: opus
-effort: high
 disallowed-tools: Edit, NotebookEdit
 disable-model-invocation: true
 ---

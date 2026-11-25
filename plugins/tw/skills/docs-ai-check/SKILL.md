@@ -3,8 +3,6 @@ name: docs-ai-check
 description: >-
   Manually invoked. Checks whether writing (a docs page, a folder of pages or a diff) reads as machine-written, and reports the specific tells rather than a verdict: citations that don't hold, em-dash frequency and pattern, blacklisted vocabulary and phrases, the structural tells (uniform section lengths, lists of exactly three, summaries that restate, closers that congratulate), hollow claims, and rhythm. Returns a rewrite for each flagged passage, then asks which to apply.
 argument-hint: '[path] [--fix]'
-model: opus
-effort: high
 disallowed-tools: Edit, NotebookEdit
 disable-model-invocation: true
 ---

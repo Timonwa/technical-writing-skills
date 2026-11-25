@@ -3,8 +3,6 @@ name: content-audit
 description: >-
   Manually invoked. Inventories an existing documentation set and judges its shape rather than its defects — every page with its type, audience, owner, last-verified date and usage, a keep/merge/split/rewrite/retire verdict for each, duplicate clusters, orphans and ghosts, navigation depth, and a gap analysis against what readers are actually trying to do. Outputs the inventory and a prioritized writing queue. Never edits a page.
 argument-hint: '[path] [--tasks <path-or-list>] [--fix]'
-model: opus
-effort: high
 disable-model-invocation: true
 disallowed-tools: Edit, NotebookEdit
 ---
