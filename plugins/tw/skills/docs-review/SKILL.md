@@ -23,9 +23,9 @@ Before reviewing, find the project's style guide and conventions and read them:
 - **In a chat app:** the style guide in the project's files, or attached to the conversation.
 - **Otherwise:** ask whether one exists before concluding there isn't one.
 
-Voice, person, tone, terminology and formatting come from that guide. Where it settles something this skill also covers, the guide wins; where it's silent or there isn't one, `tw:docs-standards` applies without asking, and a page that departs from it is a finding.
+Voice, person, tone, terminology and formatting come from that guide. Where it settles something this skill also covers, the guide wins; where it's silent or there isn't one, `docs-standards` applies without asking, and a page that departs from it is a finding.
 
-The editing craft is `tw:docs-editing-standards`; the rules every piece obeys are `tw:docs-writing-standards`; the structure for the page's type comes from the skill for that type.
+The editing craft is `docs-editing-standards`; the rules every piece obeys are `docs-writing-standards`; the structure for the page's type comes from the skill for that type.
 
 ## Ask first
 
@@ -127,8 +127,8 @@ Everything else is unchanged: list the findings, ask which, fix only those, upda
 
 ## Boundaries
 
-- **The whole set rather than one document** → `/tw:docs-audit` for defects, `/tw:content-audit` for shape, `/tw:style-check` for consistency.
-- **Does it sound machine-written** → `/tw:docs-ai-check`. That pass is not run here by default; ask for it.
-- **Articles, essays and newsletter issues** → `/cw:review` in [content-writing-skills](https://github.com/Timonwa/content-writing-skills).
+- **The whole set rather than one document** → `/docs-audit` for defects, `/content-audit` for shape, `/style-check` for consistency.
+- **Does it sound machine-written** → `/docs-ai-check`. That pass is not run here by default; ask for it.
+- **Articles, essays and newsletter issues** → `/review` in [content-writing-skills](https://github.com/Timonwa/content-writing-skills).
 - **Writing from scratch** — this reviews what exists. A finding that the document should be several documents is raised, not acted on.
 - **The author owns the document.** On technical content they usually know something you don't; findings are proposals, and a rejected finding is not re-argued.

@@ -197,7 +197,7 @@ Each page is written once, and every endpoint entry links to it rather than rest
 ### Fixed
 ```
 
-Leave out a heading in a changelog entry that has nothing under it; the format of each line is `tw:release-notes`'.
+Leave out a heading in a changelog entry that has nothing under it; the format of each line is `release-notes`'.
 
 ## SDK page
 

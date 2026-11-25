@@ -19,9 +19,9 @@ Before applying this skill, find the guide the writing answers to and read it �
 Voice, person, tone, terminology, formatting choices and who the reader is come from that guide, never from this skill.
 
 - Where the guide settles something this skill also covers, the guide wins.
-- Where there's no guide, the documentation voice in `tw:docs-standards` is the default, applied without asking.
+- Where there's no guide, the documentation voice in `docs-standards` is the default, applied without asking.
 - When a guide changes: in a codebase, save the file where it was found; in a chat app, give the user the updated file to replace in the project.
-- **Also apply `tw:docs-standards`** — its page rules (one need per page, procedures, accessible pages, code on the page) hold even where the project has a guide, which overrides it only where it decides.
+- **Also apply `docs-standards`** — its page rules (one need per page, procedures, accessible pages, code on the page) hold even where the project has a guide, which overrides it only where it decides.
 
 ## Ask first
 
@@ -85,11 +85,11 @@ Read the answers from the request and the guide first; ask only what's missing. 
 
 ## Boundaries
 
-- **Documentation** — the four documentation types, the documentation voice, procedures, accessible docs pages → `tw:docs-standards`.
-- **Content** — articles, newsletters and social posts for a publication → `cw:writing-standards` in [content-writing-skills](https://github.com/Timonwa/content-writing-skills).
-- **The guide this skill defers to** — a docs style guide → `tw:docs-style-guide`.
-- **Getting facts out of an expert or a source** → `tw:sme-interviews`.
-- **Code in a piece** → `tw:docs-code-samples`. **Screenshots, photos, diagrams and alt text** → `tw:docs-images-and-diagrams`.
-- **Tightening a finished draft** → `tw:docs-editing-standards`; **the machine-written sweep** → `/tw:docs-ai-check`.
-- **Worked examples** — a documentation page: `tw:docs-standards`; before-and-after edits: `tw:docs-editing-standards`.
+- **Documentation** — the four documentation types, the documentation voice, procedures, accessible docs pages → `docs-standards`.
+- **Content** — articles, newsletters and social posts for a publication → `writing-standards` in [content-writing-skills](https://github.com/Timonwa/content-writing-skills).
+- **The guide this skill defers to** — a docs style guide → `docs-style-guide`.
+- **Getting facts out of an expert or a source** → `sme-interviews`.
+- **Code in a piece** → `docs-code-samples`. **Screenshots, photos, diagrams and alt text** → `docs-images-and-diagrams`.
+- **Tightening a finished draft** → `docs-editing-standards`; **the machine-written sweep** → `/docs-ai-check`.
+- **Worked examples** — a documentation page: `docs-standards`; before-and-after edits: `docs-editing-standards`.
 - **Marketing and conversion copy** — landing pages, ads, sales sequences — is a different craft with a different goal, and out of scope.

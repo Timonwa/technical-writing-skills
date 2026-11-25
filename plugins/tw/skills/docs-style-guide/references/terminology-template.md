@@ -2,7 +2,7 @@
 
 ## Terminology list
 
-For the writers: one row per concept, alphabetical by term. A cell with no answer yet stays, left blank. **Translate** feeds `tw:localization`'s do-not-translate list.
+For the writers: one row per concept, alphabetical by term. A cell with no answer yet stays, left blank. **Translate** feeds `localization`'s do-not-translate list.
 
 ```markdown
 # <Docs set> terminology

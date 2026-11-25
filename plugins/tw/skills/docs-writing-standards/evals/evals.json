@@ -4,11 +4,11 @@
     {
       "id": 1,
       "prompt": "Write the intro for our docs page on rotating API keys. There's no style guide in the repo and nothing in AGENTS.md about voice. Keep it friendly and personal — maybe open with how I lost a weekend to a leaked key last year.",
-      "expected_output": "Should look for the project's style guide and AGENTS.md conventions first and, finding none, apply the documentation voice in tw:docs-standards as the default without asking: second person, present tense, the writer kept out. Should therefore not open the docs page with a first-person anecdote, and should explain briefly that the personal story suits a blog post rather than a reference or how-to page. Should lead with what the reader can do and when they need to (rotate when a key may have leaked or on a schedule), not with background.",
+      "expected_output": "Should look for the project's style guide and AGENTS.md conventions first and, finding none, apply the documentation voice in docs-standards as the default without asking: second person, present tense, the writer kept out. Should therefore not open the docs page with a first-person anecdote, and should explain briefly that the personal story suits a blog post rather than a reference or how-to page. Should lead with what the reader can do and when they need to (rotate when a key may have leaked or on a schedule), not with background.",
       "files": [],
       "expectations": [
         "Checks for a style guide and AGENTS.md conventions before writing",
-        "Applies tw:docs-standards' documentation voice as the default for docs with no guide",
+        "Applies docs-standards' documentation voice as the default for docs with no guide",
         "Does not open the docs page with the writer's first-person anecdote",
         "Leads with what the reader can do, not background",
         "Suggests the anecdote belongs in a blog post instead"
@@ -45,12 +45,12 @@
     {
       "id": 4,
       "prompt": "Our existing docs all say 'simply click Save' and use 'we' everywhere. I'm adding a new page — should I match them so the set stays consistent?",
-      "expected_output": "Should advise matching the established terms for the subject but not the drifted habits: 'simply' is a minimiser to cut, and 'we' should follow the project's guide or, with no guide, the documentation default in tw:docs-standards. Should say the existing pages conflict with the rules and recommend flagging them (e.g. with /tw:style-check) rather than copying the drift into a new page.",
+      "expected_output": "Should advise matching the established terms for the subject but not the drifted habits: 'simply' is a minimiser to cut, and 'we' should follow the project's guide or, with no guide, the documentation default in docs-standards. Should say the existing pages conflict with the rules and recommend flagging them (e.g. with /style-check) rather than copying the drift into a new page.",
       "files": [],
       "expectations": [
         "Distinguishes matching terms from copying habits",
         "Flags 'simply' as a minimiser to drop",
-        "Takes person from the guide or tw:docs-standards, not from the existing pages",
+        "Takes person from the guide or docs-standards, not from the existing pages",
         "Recommends flagging the existing drift rather than copying it"
       ]
     }

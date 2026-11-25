@@ -21,7 +21,7 @@ Before writing an internal doc, find the project's style guide and conventions a
 - **In a chat app:** the style guide in the project's files, or attached to the conversation.
 - **Otherwise:** ask whether one exists before concluding there isn't one.
 
-Voice, person, tone, terminology and formatting come from that guide. Where it settles something this skill also covers, the guide wins; where it's silent or there isn't one, `tw:docs-standards` applies without asking.
+Voice, person, tone, terminology and formatting come from that guide. Where it settles something this skill also covers, the guide wins; where it's silent or there isn't one, `docs-standards` applies without asking.
 
 ## Ask first
 
@@ -147,10 +147,10 @@ Decide the rules once, write them down, and apply them per document:
 
 ## Boundaries
 
-- **Documentation for customers and end users** → `tw:user-guides`. Much of the plain-language discipline is shared; the reader, the confidentiality rules, and the ownership problem are not.
-- **Developer documentation for a public or shared technical surface** → `tw:developer-docs` and `tw:api-reference`, even when the audience is internal — an internal API still gets an API reference.
-- **A repository's own README and contributor docs** → `tw:readmes`.
-- **The voice rules every document obeys** — sentences, claims, concrete over vague, formatting, never hard-wrap → `tw:docs-writing-standards`; the documentation voice, prose before code and the four document types → `tw:docs-standards`.
-- **Capturing the knowledge from the person who has it** → `tw:sme-interviews`.
-- **Deciding which internal docs are needed and auditing what exists** → `tw:docs-planning`.
+- **Documentation for customers and end users** → `user-guides`. Much of the plain-language discipline is shared; the reader, the confidentiality rules, and the ownership problem are not.
+- **Developer documentation for a public or shared technical surface** → `developer-docs` and `api-reference`, even when the audience is internal — an internal API still gets an API reference.
+- **A repository's own README and contributor docs** → `readmes`.
+- **The voice rules every document obeys** — sentences, claims, concrete over vague, formatting, never hard-wrap → `docs-writing-standards`; the documentation voice, prose before code and the four document types → `docs-standards`.
+- **Capturing the knowledge from the person who has it** → `sme-interviews`.
+- **Deciding which internal docs are needed and auditing what exists** → `docs-planning`.
 - **The tool it lives in** — wiki, drive, repo, knowledge base — is the organization's decision, not this skill's. Every rule here works in any of them.

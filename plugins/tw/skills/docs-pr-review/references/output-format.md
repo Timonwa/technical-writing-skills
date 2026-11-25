@@ -5,7 +5,7 @@ The review is posted in chat, worst first; with `--comment`, the same summary be
 ```markdown
 ## Docs review of #<n> — <title>
 
-**Date:** <YYYY-MM-DD> · **Shape:** <one of the four> · **Checked against:** <the source> · **Readers:** <who reads the docs> · **Product version:** <the release the PR ships in> · **Standard:** <guide, or "none found — tw:docs-standards"> · **Mode:** <chat only / posted on the PR / fixed on the branch> · **Verdict:** <Ready / Ready with fixes / Needs rework>
+**Date:** <YYYY-MM-DD> · **Shape:** <one of the four> · **Checked against:** <the source> · **Readers:** <who reads the docs> · **Product version:** <the release the PR ships in> · **Standard:** <guide, or "none found — docs-standards"> · **Mode:** <chat only / posted on the PR / fixed on the branch> · **Verdict:** <Ready / Ready with fixes / Needs rework>
 
 ### Missing docs
 | # | Change in the code | Where | Where the doc belongs |

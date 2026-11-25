@@ -30,7 +30,7 @@ Before applying this skill, find the guide the writing answers to and read it �
 Voice, person, tone, terminology, formatting choices and who the reader is come from that guide, never from this skill.
 
 - Where the guide settles something this skill also covers, the guide wins.
-- Where there's no guide, the documentation voice in `tw:docs-standards` is the default.
+- Where there's no guide, the documentation voice in `docs-standards` is the default.
 - When a guide changes: in a codebase, save the file where it was found; in a chat app, give the user the updated file to replace in the project.
 
 ## Ask first
@@ -139,8 +139,8 @@ Everything else is unchanged: list the findings, ask which, fix only those, upda
 ## Boundaries
 
 - **This does not determine authorship**, and no report from it should be presented as evidence that something was generated. It finds patterns; that is all it can do.
-- **The full editorial pass** — structure, accuracy, clarity, consistency → `/tw:docs-review`. This is one narrow sweep, and it's the last one to run, after the piece is otherwise right.
+- **The full editorial pass** — structure, accuracy, clarity, consistency → `/docs-review`. This is one narrow sweep, and it's the last one to run, after the piece is otherwise right.
 - **The rules every piece obeys** — sentences, claims, examples, concrete over vague, formatting, never hard-wrap → [`docs-writing-standards`'s house-voice.md](../docs-writing-standards/references/house-voice.md). A rewrite lands on those rules; this command only finds the passages that need one.
-- **Voice consistency across a docs set** → `/tw:style-check`.
+- **Voice consistency across a docs set** → `/style-check`.
 - **A house rule beats every default here.** Where a project or publication has decided on a convention this command would flag, its guide wins.
 - **Don't strip a writer's voice in the name of this.** A distinctive human sentence that happens to contain an em dash is not a finding, and neither is a first-person aside, a joke or a sign-off the publication always uses; the target is mechanical padding, not personality.

@@ -1,6 +1,6 @@
 # Localization templates
 
-Three files a translated docs set keeps, each extending the terminology list (`tw:docs-style-guide`) rather than replacing it. A cell with no answer yet stays, left blank, never removed. Name locales with BCP 47 tags throughout.
+Three files a translated docs set keeps, each extending the terminology list (`docs-style-guide`) rather than replacing it. A cell with no answer yet stays, left blank, never removed. Name locales with BCP 47 tags throughout.
 
 ## Do-not-translate list
 

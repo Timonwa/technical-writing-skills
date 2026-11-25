@@ -26,7 +26,7 @@ Read the project's style guide and conventions before drafting anything:
 - **In a chat app:** the style guide in the project's files, or attached to the conversation.
 - **Otherwise:** ask the writer whether one exists before concluding there isn't one.
 
-Voice, person, terminology and who the reader is come from that guide; where it's silent, `tw:docs-standards` applies.
+Voice, person, terminology and who the reader is come from that guide; where it's silent, `docs-standards` applies.
 
 ## Ask first
 
@@ -121,9 +121,9 @@ Suggest these instead, in this order: read the tests; send a written question li
 
 ## Boundaries
 
-- **What the information becomes** → `tw:docs-writing-standards`, `tw:docs-standards` and the skill for the page type.
-- **Deciding which topics need an expert at all** → `tw:docs-planning`.
-- **Finding facts in a codebase without an expert** → `tw:codebase-research`. Check there first: an expert's time is for what the code can't tell you.
-- **Editing the resulting draft** → `tw:docs-editing-standards`; reviewing it → `/tw:docs-review`.
-- **Interviewing anyone for an article, a Q&A, a profile or a case study** → `cw:interviews` in [content-writing-skills](https://github.com/Timonwa/content-writing-skills).
+- **What the information becomes** → `docs-writing-standards`, `docs-standards` and the skill for the page type.
+- **Deciding which topics need an expert at all** → `docs-planning`.
+- **Finding facts in a codebase without an expert** → `codebase-research`. Check there first: an expert's time is for what the code can't tell you.
+- **Editing the resulting draft** → `docs-editing-standards`; reviewing it → `/docs-review`.
+- **Interviewing anyone for an article, a Q&A, a profile or a case study** → `interviews` in [content-writing-skills](https://github.com/Timonwa/content-writing-skills).
 - **The expert is the authority on behaviour, not on wording.** A reviewer's rewrite into internal vocabulary is a finding to push back on, not an instruction.

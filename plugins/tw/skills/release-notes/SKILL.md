@@ -18,7 +18,7 @@ Before writing the notes, find the project's style guide and conventions and rea
 - **In a chat app:** the style guide in the project's files, or attached to the conversation.
 - **Otherwise:** ask whether one exists before concluding there isn't one.
 
-Voice, person, tone, terminology and formatting come from that guide. Where it settles something this skill also covers, the guide wins; where it's silent or there isn't one, `tw:docs-standards` applies without asking.
+Voice, person, tone, terminology and formatting come from that guide. Where it settles something this skill also covers, the guide wins; where it's silent or there isn't one, `docs-standards` applies without asking.
 
 ## Ask first
 
@@ -151,9 +151,9 @@ Announce a deprecation as early as you can, repeat it in every release until rem
 
 ## Boundaries
 
-- **The documentation pages the notes link to** — the feature's how-to, its reference entry, its migration guide → `tw:developer-docs`, `tw:user-guides`, `tw:api-reference`.
-- **A substantial migration guide** is its own page, shaped as above; the note links it, and the how-to pages it points to are → `tw:developer-docs`.
-- **The voice rules every document obeys** — sentences, claims, concrete over vague, formatting, never hard-wrap → `tw:docs-writing-standards`; the documentation voice, prose before code and the four document types → `tw:docs-standards`.
+- **The documentation pages the notes link to** — the feature's how-to, its reference entry, its migration guide → `developer-docs`, `user-guides`, `api-reference`.
+- **A substantial migration guide** is its own page, shaped as above; the note links it, and the how-to pages it points to are → `developer-docs`.
+- **The voice rules every document obeys** — sentences, claims, concrete over vague, formatting, never hard-wrap → `docs-writing-standards`; the documentation voice, prose before code and the four document types → `docs-standards`.
 - **Generating and categorizing the raw change list** from version control or a release tool is an engineering task; this skill covers what the published notes say.
 - **Launch announcements, blog posts and marketing copy** about a release are a different document with a different goal. Release notes stay factual; link the announcement rather than becoming one.
-- **Internal "what shipped" summaries** for other teams → `tw:internal-docs`.
+- **Internal "what shipped" summaries** for other teams → `internal-docs`.

@@ -12,7 +12,7 @@ The findings from an edit, handed back to the author in chat or saved beside the
 | Reader and job  | <who reads it, and what they can do afterwards>                     |
 | Product version | <the version the page describes>                                    |
 | Checked against | <the code · the running product · the vendor's docs · nothing>      |
-| Standard        | <style guide path, or "tw:docs-standards">                          |
+| Standard        | <style guide path, or "docs-standards">                          |
 | Inferred        | <conventions inferred from the document itself, or "None">          |
 | Passes run      | <substantive · technical accuracy · line · copy · proof · quick pass> |
 | Mode            | <proposed edits · edited in place>                                  |

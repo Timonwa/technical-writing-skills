@@ -21,7 +21,7 @@ Before applying this skill, find the guide the writing answers to and read it �
 Voice, person, tone, terminology, formatting choices and who the reader is come from that guide, never from this skill.
 
 - Where the guide settles something this skill also covers, the guide wins.
-- Where there's no guide, the documentation voice in `tw:docs-standards` is the default.
+- Where there's no guide, the documentation voice in `docs-standards` is the default.
 - When a guide changes: in a codebase, save the file where it was found; in a chat app, give the user the updated file to replace in the project.
 - The rules below apply to code in a docs page and in a published tutorial; [Code in a tutorial](#code-in-a-tutorial) adds what a build-along needs.
 
@@ -137,8 +137,8 @@ Each is a yes or no:
 
 ## Boundaries
 
-- **The rules every piece obeys** — sentences, claims, concrete over vague, formatting, never hard-wrap → `tw:docs-writing-standards` and its house-voice checklist. Code on a documentation page → `tw:docs-standards`.
-- **Where the sample sits in the page, and which page it belongs on** → `tw:developer-docs`, or `tw:api-reference` for request and response examples on an endpoint.
-- **The companion repository itself** — its starter and final branches, pinned versions and README → `cw:demo-project` in [content-writing-skills](https://github.com/Timonwa/content-writing-skills). Quickstart samples in a product repository's front door → `tw:readmes`.
+- **The rules every piece obeys** — sentences, claims, concrete over vague, formatting, never hard-wrap → `docs-writing-standards` and its house-voice checklist. Code on a documentation page → `docs-standards`.
+- **Where the sample sits in the page, and which page it belongs on** → `developer-docs`, or `api-reference` for request and response examples on an endpoint.
+- **The companion repository itself** — its starter and final branches, pinned versions and README → `demo-project` in [content-writing-skills](https://github.com/Timonwa/content-writing-skills). Quickstart samples in a product repository's front door → `readmes`.
 - **Writing the library or API being demonstrated** is not this skill's job. Where a sample can only be made safe or short by changing the API, that's a finding to raise, not something to paper over.
-- **Verifying behaviour you can't run** → `tw:sme-interviews`.
+- **Verifying behaviour you can't run** → `sme-interviews`.

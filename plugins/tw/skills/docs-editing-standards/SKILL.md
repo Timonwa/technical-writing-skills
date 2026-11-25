@@ -18,7 +18,7 @@ Before editing, find the project's style guide, glossary or terminology list and
 
 Voice, person, tone, terminology and formatting come from that guide; where it settles something this skill also covers, the guide wins.
 
-- Where the guide is silent or there isn't one, `tw:docs-standards` is the default — "you", present tense, imperatives for instructions, the writer kept out, one need per page — and a page that departs from it is a finding, not a matter of taste. Apply it without asking; ask only who the reader is and what the page is for, if the page doesn't make that clear.
+- Where the guide is silent or there isn't one, `docs-standards` is the default — "you", present tense, imperatives for instructions, the writer kept out, one need per page — and a page that departs from it is a finding, not a matter of taste. Apply it without asking; ask only who the reader is and what the page is for, if the page doesn't make that clear.
 - For anything neither the guide nor the defaults settle — the serial comma, the date format, number style — infer the convention from the document itself and say what you inferred.
 
 ## Ask first
@@ -78,7 +78,7 @@ Work down the levels, in order. A level is only worth running once the level abo
 - **Headings** — sequential levels, one H1; task headings start with a bare infinitive ("Create an instance", not "Creating an instance"), use the words readers search for, and are parallel across the page ([Google](https://developers.google.com/style/headings)).
 - **Lists** — parallel in structure; numbered for a sequence, bulleted for a set; an optional step starts "Optional:"; a one-step procedure is a sentence, not a list of one.
 - **Formatting** — bold only for interface labels and run-in headings; italics for a term being introduced ([Google](https://developers.google.com/style/text-formatting)).
-- **Code** — `code` formatting on every identifier, path, command, filename and value, and on nothing that isn't code; every code fence labelled, the same way each time (`ts`, never `ts` here and `typescript` there); placeholders follow the set's one convention (`tw:docs-code-samples`).
+- **Code** — `code` formatting on every identifier, path, command, filename and value, and on nothing that isn't code; every code fence labelled, the same way each time (`ts`, never `ts` here and `typescript` there); placeholders follow the set's one convention (`docs-code-samples`).
 - **Accessibility** — no "above", "below" or "right-hand side" to orient the reader; no colour, size or position as the only cue; a sentence introduces every table; no images of text, code or terminal output; link text makes sense out of context ([Google](https://developers.google.com/style/accessibility)).
 - Capitalization, hyphenation, grammar, punctuation, and number and date formats to the style guide — including in headings, tables, image captions and UI references, where drift hides.
 
@@ -94,7 +94,7 @@ Work down the levels, in order. A level is only worth running once the level abo
 
 For a fast review, or a short document that doesn't need all five levels. The international standard is [ISO 24495-1:2023](https://www.iso.org/standard/78907.html): plain language means readers can **easily find what they need, understand it, and use it** — the three tests to apply when a sentence is arguably fine and you can't say why it isn't (the [International Plain Language Federation](https://www.iplfederation.org/iso-standard/) publishes a free summary).
 
-- **Word level** — cut weak intensifiers (very, really, extremely) and filler (just, actually, basically); replace inflated words where they're used in the inflated sense (utilize→use, facilitate→help, in order to→to); kill nominalizations and needless passives. The full table is `tw:docs-writing-standards`' plain-English alternatives.
+- **Word level** — cut weak intensifiers (very, really, extremely) and filler (just, actually, basically); replace inflated words where they're used in the inflated sense (utilize→use, facilitate→help, in order to→to); kill nominalizations and needless passives. The full table is `docs-writing-standards`' plain-English alternatives.
 - **Sentence level** — one idea per sentence, at most three conjunctions, over 25 words split or listed, important information front-loaded, varied lengths.
 - **Paragraph level** — one topic each, a strong opening sentence, no more than 5 sentences ([GOV.UK](https://guidance.publishing.service.gov.uk/writing-to-gov-uk-standards/writing-guidelines/clear-language/)), and white space between them.
 - **Run the tools first** — a prose linter such as [Vale](https://vale.sh) with the project's style package (or the Google or Microsoft package where it has none), and a readability checker (Hemingway, Word's readability statistics). They catch the mechanical misses so the manual passes go to judgement; a score points at a sentence, it doesn't decide it.
@@ -102,10 +102,10 @@ For a fast review, or a short document that doesn't need all five levels. The in
 
 ## The AI-tell pass
 
-Run this on anything published under a person's name — in documentation, machine-written patterns read as padding. The full catalog is the AI writing detection reference in `tw:docs-writing-standards` (the same one `/tw:docs-ai-check` sweeps with); the short version:
+Run this on anything published under a person's name — in documentation, machine-written patterns read as padding. The full catalog is the AI writing detection reference in `docs-writing-standards` (the same one `/docs-ai-check` sweeps with); the short version:
 
 - **Claims that don't hold** — a citation, command or default that doesn't exist or doesn't say what the page claims. Checking sources beats any style signal.
-- **Em-dash density** — the flag is frequency and pattern, not the character: judged by density per 1,000 words, the same thresholds `/tw:docs-ai-check` scores against — more than about 3 per 1,000 is a signal, more than about 6 or two in one paragraph is strong; swap for commas, colons or parentheses. A guide that mandates em-dash asides wins.
+- **Em-dash density** — the flag is frequency and pattern, not the character: judged by density per 1,000 words, the same thresholds `/docs-ai-check` scores against — more than about 3 per 1,000 is a signal, more than about 6 or two in one paragraph is strong; swap for commas, colons or parentheses. A guide that mandates em-dash asides wins.
 - **Blacklisted vocabulary** — delve, leverage, robust, comprehensive, pivotal, seamless, transformative, "furthermore", "moreover".
 - **Blacklisted phrases** — "In today's fast-paced world…", "It's worth noting that…", "At its core…", "In conclusion…", "Whether you're a X, Y, or Z…". Delete or rewrite as something a person would say aloud.
 - **Structural patterns** — every section the same length, every list exactly three items, a summary restating what was just said, a closing that congratulates the reader.
@@ -125,9 +125,9 @@ The findings go back in the edit notes template, [references/edit-notes.md](refe
 
 ## Boundaries
 
-- **The rules every piece obeys** — sentences, claims, credit, formatting, never hard-wrap → `tw:docs-writing-standards`; the documentation voice and page rules → `tw:docs-standards`.
+- **The rules every piece obeys** — sentences, claims, credit, formatting, never hard-wrap → `docs-writing-standards`; the documentation voice and page rules → `docs-standards`.
 - **Writing from scratch is out of scope** — draft with the skill for that page type, then edit here.
-- **The conventions being edited to** — which term wins, how the product is capitalized, the date format → `tw:docs-style-guide`. This skill enforces a standard; it doesn't set one.
-- **Restructuring that turns out to need a different page, or several** → the skill for that type (`tw:developer-docs`, `tw:user-guides`, `tw:internal-docs`, `tw:readmes`, `tw:api-reference`), and `tw:docs-planning` if the set itself is wrong.
-- **A full review with numbered findings** → `/tw:docs-review`; **the machine-written sweep as a report** → `/tw:docs-ai-check`; **articles, essays and newsletters** → `cw:editing-standards` in [content-writing-skills](https://github.com/Timonwa/content-writing-skills).
+- **The conventions being edited to** — which term wins, how the product is capitalized, the date format → `docs-style-guide`. This skill enforces a standard; it doesn't set one.
+- **Restructuring that turns out to need a different page, or several** → the skill for that type (`developer-docs`, `user-guides`, `internal-docs`, `readmes`, `api-reference`), and `docs-planning` if the set itself is wrong.
+- **A full review with numbered findings** → `/docs-review`; **the machine-written sweep as a report** → `/docs-ai-check`; **articles, essays and newsletters** → `editing-standards` in [content-writing-skills](https://github.com/Timonwa/content-writing-skills).
 - **Marketing and conversion copy** — landing pages, ads, sales sequences, CTAs — is a different craft, and out of scope.

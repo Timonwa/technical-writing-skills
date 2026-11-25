@@ -20,7 +20,7 @@ Before writing up what you find, find the project's style guide and conventions 
 - **In a chat app:** the style guide in the project's files, or attached to the conversation.
 - **Otherwise:** ask whether one exists before concluding there isn't one.
 
-Voice, person, tone, terminology and formatting come from that guide. Where it settles something this skill also covers, the guide wins; where it's silent or there isn't one, `tw:docs-standards` applies without asking.
+Voice, person, tone, terminology and formatting come from that guide. Where it settles something this skill also covers, the guide wins; where it's silent or there isn't one, `docs-standards` applies without asking.
 
 ## Ask first
 
@@ -99,9 +99,9 @@ The rule doesn't relax, it changes shape. Write only what you were told, ask for
 
 ## Boundaries
 
-- **Getting the facts that code cannot give you** — intent, what's deployed, what's deprecated in practice, what readers get wrong → `tw:sme-interviews`. This skill answers _what_; that one answers _why_ and _really?_
-- **What to do with the facts** — which document type, how it's structured, how it reads → `tw:docs-standards` and the skill for that document type.
-- **Verifying a docs page against source as a review pass** → `/tw:docs-audit`. This skill is for research before writing; that one is for drift after.
-- **Endpoint-level detail** — handlers, schemas, status codes, response shapes → `tw:api-reference`, which has its own verification rules for an API surface.
-- **The code that ends up in the docs** — choosing, testing and maintaining examples → `tw:docs-code-samples`.
+- **Getting the facts that code cannot give you** — intent, what's deployed, what's deprecated in practice, what readers get wrong → `sme-interviews`. This skill answers _what_; that one answers _why_ and _really?_
+- **What to do with the facts** — which document type, how it's structured, how it reads → `docs-standards` and the skill for that document type.
+- **Verifying a docs page against source as a review pass** → `/docs-audit`. This skill is for research before writing; that one is for drift after.
+- **Endpoint-level detail** — handlers, schemas, status codes, response shapes → `api-reference`, which has its own verification rules for an API surface.
+- **The code that ends up in the docs** — choosing, testing and maintaining examples → `docs-code-samples`.
 - **This skill never changes code.** A bug or an inconsistency you find is a finding to report, not something to fix in passing.

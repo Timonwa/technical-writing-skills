@@ -6,7 +6,7 @@ description: >-
 
 # Documentation standards
 
-The discipline that makes documentation documentation. Every page serves one reader, pursuing one goal, in one mode — decide which mode before writing a word. Apply it together with `tw:docs-writing-standards`.
+The discipline that makes documentation documentation. Every page serves one reader, pursuing one goal, in one mode — decide which mode before writing a word. Apply it together with `docs-writing-standards`.
 
 ## Voice and audience come from the writing's own guide
 
@@ -18,7 +18,7 @@ Before applying this skill, find the project's style guide and conventions and r
 
 Its voice and page rules apply wherever the project's guide is silent. Where the project's guide decides otherwise — person, tone, terminology, formatting — the guide wins.
 
-- Where there's no guide, these rules apply in full, without asking, and offer to build a guide with `tw:docs-style-guide`.
+- Where there's no guide, these rules apply in full, without asking, and offer to build a guide with `docs-style-guide`.
 
 ## Ask first
 
@@ -38,7 +38,7 @@ Documentation readers come with one of four needs ([diataxis.fr](https://diataxi
 - **Reference — lookup.** Describes the machinery: parameters, types, returns, defaults, errors — complete, accurate, structured for lookup (tables over prose). Never narrative, never persuasive.
 - **Explanation — understanding.** Why things are the way they are: design decisions, trade-offs, background. No steps, no API listings.
 
-Diátaxis is "a guide, not a plan" ([diataxis.fr](https://diataxis.fr/how-to-use-diataxis/)): it tells you whether a page is mixing needs, not that a docs set must have four sections. Never create empty sections to fill the shape; a landing page, a README or a release note isn't forced into one of the four. Once the need is chosen, the section order for each type on a docs site is in [`tw:developer-docs`' page-types.md](../developer-docs/references/page-types.md), and for a help centre in [`tw:user-guides`' page-types.md](../user-guides/references/page-types.md). **Fix mixing by moving, not deleting** — a tutorial that pauses to discuss architecture moves that discussion to an explanation page and links it; a reference entry with a walkthrough spins it out as a how-to; a how-to that teaches basics links the tutorial instead.
+Diátaxis is "a guide, not a plan" ([diataxis.fr](https://diataxis.fr/how-to-use-diataxis/)): it tells you whether a page is mixing needs, not that a docs set must have four sections. Never create empty sections to fill the shape; a landing page, a README or a release note isn't forced into one of the four. Once the need is chosen, the section order for each type on a docs site is in [`developer-docs`' page-types.md](../developer-docs/references/page-types.md), and for a help centre in [`user-guides`' page-types.md](../user-guides/references/page-types.md). **Fix mixing by moving, not deleting** — a tutorial that pauses to discuss architecture moves that discussion to an explanation page and links it; a reference entry with a walkthrough spins it out as a how-to; a how-to that teaches basics links the tutorial instead.
 
 ## The documentation voice
 
@@ -57,7 +57,7 @@ The defaults documentation uses where the project's style guide doesn't decide o
 - **Task headings start with a bare infinitive** — "Create an instance", not "Creating an instance" ([Google](https://developers.google.com/style/headings)); conceptual and reference headings are noun phrases.
 - **Use the words readers search for** — the more prominent version of a term, so the heading matches the query ([Google](https://developers.google.com/style/headings)).
 - **Parallel across the page** — "Create a profile", "Add an account", not one of each form ([Microsoft](https://learn.microsoft.com/en-us/style-guide/procedures-instructions/writing-step-by-step-instructions)).
-- **Sentence case** unless the project's guide records otherwise. A docs set where most pages use title case hasn't decided anything until the guide says so; `/tw:style-check` reports the majority as a decision to record.
+- **Sentence case** unless the project's guide records otherwise. A docs set where most pages use title case hasn't decided anything until the guide says so; `/style-check` reports the majority as a decision to record.
 
 ## Procedures
 
@@ -96,7 +96,7 @@ From [Google's accessibility guidance](https://developers.google.com/style/acces
 ## Code on the page
 
 - **Prose before every code block** — one sentence saying what it does and when to use it. A reader should understand the page with the code blocks collapsed.
-- **Complete, runnable examples with their expected output**, and the common failure case where one exists. No pseudocode, and no placeholder standing in for the thing being demonstrated; values the reader must replace follow the set's one placeholder convention (`tw:docs-code-samples`).
+- **Complete, runnable examples with their expected output**, and the common failure case where one exists. No pseudocode, and no placeholder standing in for the thing being demonstrated; values the reader must replace follow the set's one placeholder convention (`docs-code-samples`).
 - **Accuracy against the source** — symbol names, signatures, defaults and versions read from the code or the running product, never memory. Wrong docs are worse than no docs.
 - **Document what is, not what's planned** — a roadmap item on a docs page reads as a shipped feature.
 
@@ -126,23 +126,23 @@ Note what it doesn't do: no history of why API keys exist (explanation), no full
 
 ## Boundaries
 
-**With this skill** — the craft every piece of writing shares (reader and scope first, plain language, concrete claims, credit, scanning, formatting) and its checklist → `tw:docs-writing-standards` and its house-voice reference.
+**With this skill** — the craft every piece of writing shares (reader and scope first, plain language, concrete claims, credit, scanning, formatting) and its checklist → `docs-writing-standards` and its house-voice reference.
 
 **Before writing**
 
-- Deciding which documents a set needs, how they're grouped, and in what order → `tw:docs-planning`.
-- Getting the facts out of an engineer or expert → `tw:sme-interviews`; finding them in the codebase yourself → `tw:codebase-research`.
-- The project's own terminology, capitalization and naming decisions → `tw:docs-style-guide`.
+- Deciding which documents a set needs, how they're grouped, and in what order → `docs-planning`.
+- Getting the facts out of an engineer or expert → `sme-interviews`; finding them in the codebase yourself → `codebase-research`.
+- The project's own terminology, capitalization and naming decisions → `docs-style-guide`.
 
 **Writing a document**
 
-- Docs-site page mechanics — components and imports, navigation, link integrity when moving pages, page splitting, next-steps footers → `tw:developer-docs`.
-- Help-centre guides and user guides for end users → `tw:user-guides`. Runbooks, process docs and onboarding → `tw:internal-docs`.
-- Project READMEs → `tw:readmes`. API references → `tw:api-reference`. Release notes and changelogs → `tw:release-notes`.
-- Findability in search, the docs site's own search and AI answers → `tw:docs-seo-aeo-geo`.
+- Docs-site page mechanics — components and imports, navigation, link integrity when moving pages, page splitting, next-steps footers → `developer-docs`.
+- Help-centre guides and user guides for end users → `user-guides`. Runbooks, process docs and onboarding → `internal-docs`.
+- Project READMEs → `readmes`. API references → `api-reference`. Release notes and changelogs → `release-notes`.
+- Findability in search, the docs site's own search and AI answers → `docs-seo-aeo-geo`.
 
-**The parts that aren't prose** — code examples → `tw:docs-code-samples`; screenshots, diagrams and alt text → `tw:docs-images-and-diagrams`.
+**The parts that aren't prose** — code examples → `docs-code-samples`; screenshots, diagrams and alt text → `docs-images-and-diagrams`.
 
-**After writing** — tightening → `tw:docs-editing-standards`; a full review of one page → `/tw:docs-review`; drift across the set → `/tw:style-check`; translation-ready writing → `tw:localization`; auditing a docs site → `/tw:docs-audit`.
+**After writing** — tightening → `docs-editing-standards`; a full review of one page → `/docs-review`; drift across the set → `/style-check`; translation-ready writing → `localization`; auditing a docs site → `/docs-audit`.
 
-**Out of scope** — articles, blog posts and newsletters are content, not documentation → the `cw` skills in [content-writing-skills](https://github.com/Timonwa/content-writing-skills).
+**Out of scope** — articles, blog posts and newsletters are content, not documentation → the skills in [content-writing-skills](https://github.com/Timonwa/content-writing-skills).

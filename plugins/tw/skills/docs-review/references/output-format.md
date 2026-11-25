@@ -5,7 +5,7 @@ Write to `_reports/docs-review-<page-slug>.md`, one report per page, creating th
 ```markdown
 # Review — <document>
 
-**Date:** <YYYY-MM-DD> · **Document:** <path> · **Type:** <document type> · **Audience:** <who, and what they should be able to do afterward> · **Product version:** <version> · **Checked against:** <source, or "unverified — no source available"> · **Standard:** <guide, or "none found — tw:docs-standards"> · **Verdict:** <Ready / Ready with fixes / Needs rework> · **Overall:** <X>/10
+**Date:** <YYYY-MM-DD> · **Document:** <path> · **Type:** <document type> · **Audience:** <who, and what they should be able to do afterward> · **Product version:** <version> · **Checked against:** <source, or "unverified — no source available"> · **Standard:** <guide, or "none found — docs-standards"> · **Verdict:** <Ready / Ready with fixes / Needs rework> · **Overall:** <X>/10
 
 ## Score change (previous → current)
 | Metric | Previous | Current | Δ | Trend |

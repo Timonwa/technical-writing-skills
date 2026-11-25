@@ -5,7 +5,7 @@ Write to `_reports/docs-audit.md`, with one Overall row in the score change, cre
 ```markdown
 # Docs audit — <scope>
 
-**Date:** <YYYY-MM-DD> · **Scope:** <what was audited> · **Product version:** <version or branch the docs describe> · **Readers:** <who reads the set> · **Verified against:** <source, or "unverified — no source available"> · **Guide:** <path, or "none found — tw:docs-standards"> · **Mode:** Report-only · **Overall:** <X>/10
+**Date:** <YYYY-MM-DD> · **Scope:** <what was audited> · **Product version:** <version or branch the docs describe> · **Readers:** <who reads the set> · **Verified against:** <source, or "unverified — no source available"> · **Guide:** <path, or "none found — docs-standards"> · **Mode:** Report-only · **Overall:** <X>/10
 
 ## Score change (previous → current)
 | Metric | Previous | Current | Δ | Trend |
