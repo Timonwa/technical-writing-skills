@@ -1,5 +1,5 @@
 {
-  "skill_name": "writing-standards",
+  "skill_name": "docs-writing-standards",
   "evals": [
     {
       "id": 1,
@@ -16,22 +16,22 @@
     },
     {
       "id": 2,
-      "prompt": "In my food blog's chat-app project, the writing guide and 2026-12-sourdough-finally-rose--brief.md are in the project's files; the brief names the reader and lists a blog post. Draft the opening of the post. Notes: three failed loaves, switched to 75% hydration, longer cold proof. Also, I've decided to allow em-dash asides from now on — update my guide.",
-      "expected_output": "Should read the writing guide and the brief from the Project's files and not ask again for what they answer (the reader, the kind of piece); ask only what's missing, such as what the reader leaves with, with a specific kind of answer. Should follow the guide: first person, chatty, an opening that starts with a short scene, with the craft rules (concrete detail, the point reached soon after the scene) still applied. Should not convert the voice to documentation style. Should hand the opening back as 2026-12-sourdough-finally-rose--blog.md. Should record the em-dash decision in the writing guide and, because this is a chat app, give the user the updated writing-guide.md to replace in the Project rather than claiming it saved the file.",
+      "prompt": "In our product's chat-app project, the style guide and the help-centre plan are in the project's files; the plan names the reader and lists an article on exporting invoices. Draft the opening of the article. Notes: export lives under Billing > Invoices, as CSV or PDF, up to 12 months at a time. Also, we've decided to allow em-dash asides from now on — update our style guide.",
+      "expected_output": "Should read the style guide and the plan from the Project's files and not ask again for what they answer (the reader, the kind of page); ask only what's missing, such as what the reader leaves with, with a specific kind of answer. Should follow the guide's voice and tone, with the craft rules (the reader's goal first, concrete detail) still applied, and use the menu path and limits from the notes without inventing any. Should hand the opening back as a file named for the article. Should record the em-dash decision in the style guide and, because this is a chat app, give the user the updated style guide to replace in the Project rather than claiming it saved the file.",
       "files": [],
       "expectations": [
-        "Reads the writing guide and the brief from the Project's files before drafting",
-        "Asks only what the brief and guide leave unanswered",
-        "Follows the guide's first person, chatty tone and scene opening",
-        "Does not convert the voice to documentation style",
-        "Hands the post back as 2026-12-sourdough-finally-rose--blog.md",
-        "Gives the updated writing-guide.md for the user to replace in the Project",
+        "Reads the style guide and the plan from the Project's files before drafting",
+        "Asks only what the plan and guide leave unanswered",
+        "Follows the guide's voice and tone",
+        "Leads with the reader's task and uses only the facts in the notes",
+        "Hands the opening back as a file named for the article",
+        "Gives the updated style guide for the user to replace in the Project",
         "Does not claim to have saved the guide itself"
       ]
     },
     {
       "id": 3,
-      "prompt": "Tighten this paragraph for our newsletter: 'This new feature significantly improves performance for a wide range of users. A recent study proves that faster pages increase sales.' We don't have the study link handy.",
+      "prompt": "Tighten this paragraph for our release notes: 'This new feature significantly improves performance for a wide range of users. A recent study proves that faster pages increase sales.' We don't have the study link handy.",
       "expected_output": "Should flag both claims as vague or unsupported: 'significantly improves performance for a wide range of users' needs a number, a measure and who was tested. Should flag 'proves' as overclaiming for a single study: certainty must match the evidence, so a single study 'suggests' or 'is linked to'. Should require the study to be found and linked to its original source, and should not keep the claim as fact without it. Should not invent a figure or a source to fill the gap.",
       "files": [],
       "expectations": [

@@ -1,7 +1,7 @@
 ---
-name: ai-check
+name: docs-ai-check
 description: >-
-  Manually invoked. Checks whether writing (a docs page, a topic's blog post, newsletter issue or social posts, any piece published under a person's name) reads as machine-written, and reports the specific tells rather than a verdict: citations that don't hold, em-dash frequency and pattern, blacklisted vocabulary and phrases, the structural tells (uniform section lengths, lists of exactly three, summaries that restate, closers that congratulate), hollow claims, and rhythm. Returns a rewrite for each flagged passage, then asks which to apply.
+  Manually invoked. Checks whether writing (a docs page, a folder of pages or a diff) reads as machine-written, and reports the specific tells rather than a verdict: citations that don't hold, em-dash frequency and pattern, blacklisted vocabulary and phrases, the structural tells (uniform section lengths, lists of exactly three, summaries that restate, closers that congratulate), hollow claims, and rhythm. Returns a rewrite for each flagged passage, then asks which to apply.
 argument-hint: '[path] [--fix]'
 model: opus
 effort: high
@@ -17,41 +17,38 @@ A **manually-invoked sweep for the fingerprints of machine-written prose**, on a
 
 **It reports tells, not a verdict.** No one can determine whether text was generated, and claiming to is both wrong and harmful — human writers use em dashes, and careful AI-assisted drafts carry none of these markers. What this command does is find the specific patterns that make prose read as generated, each with its location and a rewrite. Whether the draft then gets changed is the author's call.
 
-These patterns matter for a reason beyond provenance: nearly all of them are padding. A sentence that exists to transition, a paragraph that restates the heading, a closer that tells the reader they're now well equipped — each costs the reader time and delivers nothing. In content there's a second cost: a reader who suspects a piece was generated stops trusting the person whose name is on it. The full catalog is in [the AI writing detection reference](../writing-standards/references/ai-writing-detection.md), and worked examples for documentation and for content are in [references/examples.md](references/examples.md).
+These patterns matter for a reason beyond provenance: nearly all of them are padding. A sentence that exists to transition, a paragraph that restates the heading, a closer that tells the reader they're now well equipped — each costs the reader time and delivers nothing. The full catalog is in [the AI writing detection reference](../docs-writing-standards/references/ai-writing-detection.md), and worked examples are in [references/examples.md](references/examples.md).
 
 ## Voice and audience come from the writing's own guide
 
-Before applying this skill, find the guide the writing answers to and read it — for documentation, the project's style guide and conventions; for content, the publication's `profile.md` and `writing-guide.md`:
+Before applying this skill, find the guide the writing answers to and read it — the project's style guide and conventions:
 
-- **In a codebase:** what the project's `AGENTS.md` names (its style guide, or a publication's folder), or, for a guide kept outside the repo, what the user's personal agent instructions name; otherwise the contributing docs or the project's `publications/` folder.
+- **In a codebase:** what the project's `AGENTS.md` names (its style guide), or, for a guide kept outside the repo, what the user's personal agent instructions name; otherwise the contributing docs.
 - **In a chat app:** the project's files, or files attached to the conversation.
 - **Otherwise:** ask.
 
 Voice, person, tone, terminology, formatting choices and who the reader is come from that guide, never from this skill.
 
 - Where the guide settles something this skill also covers, the guide wins.
-- Where there's no guide: for documentation, the documentation voice in `tw:docs-standards` is the default; for content, ask who the reader is and what the piece is for before checking it, and offer to build a guide with `cw:style-guide`.
+- Where there's no guide, the documentation voice in `tw:docs-standards` is the default.
 - When a guide changes: in a codebase, save the file where it was found; in a chat app, give the user the updated file to replace in the project.
 
 ## Ask first
 
-Read the answers from the request, the arguments, the topic's `brief.md` and the guide first; ask only what's missing. Ask with the app's question tool where it has one, so the choices can be picked; otherwise as a numbered list answered by number. Offer choices where the answers are known and a short typed answer otherwise. Record the answers in the report's header.
+Read the answers from the request, the arguments and the guide first; ask only what's missing. Ask with the app's question tool where it has one, so the choices can be picked; otherwise as a numbered list answered by number. Offer choices where the answers are known and a short typed answer otherwise. Record the answers in the report's header.
 
-1. **What should be checked?** A docs page · a folder of pages · a diff · a topic folder · pasted text. The path, or the text itself.
-2. **In a topic folder, which formats?** Pick any of the formats `brief.md` lists with a file: blog post (`blog.md`) · newsletter issue (`newsletter.md`) · social posts (`social.md`) · cross-posts (`copies.md`). Default: every listed format whose file exists.
-3. **Which guide does it answer to?** The project's style guide or the publication's `writing-guide.md` (path) · none, use the defaults.
-4. **Any convention the guide doesn't record that should be left alone?** Em-dash asides · a fixed sign-off · a recurring opener · none. Short answer for anything else.
+1. **What should be checked?** A docs page · a folder of pages · a diff · pasted text. The path, or the text itself.
+2. **Which guide does it answer to?** The project's style guide (path) · none, use the defaults.
+3. **Any convention the guide doesn't record that should be left alone?** Em-dash asides · a fixed sign-off · a recurring opener · none. Short answer for anything else.
 
 ## Arguments
 
-- `[path]` — what to check: a file, a folder, a diff, a topic folder, or text pasted into the prompt. Omitted → ask.
-- `[--fix]` — don't audit. Read the existing report for the page or topic given, list what's in it, and ask which findings to fix. With no path, list the ai-check reports on disk and ask which. For acting on a report from an earlier run.
-
-**A topic folder** (`topics/<yyyy-mm>-<slug>/`) holds one file per format. Read `brief.md`'s **What this topic becomes** and check the format files it lists: `blog.md`, `newsletter.md`, `social.md`, and only the **Opening excerpt** in `copies.md`, since a full copy is `blog.md` itself. If **Held by** names someone else and the status isn't `paused`, leave it and say so. The check writes only its report and never sets **Held by**.
+- `[path]` — what to check: a file, a folder, a diff, or text pasted into the prompt. Omitted → ask.
+- `[--fix]` — don't audit. Read the existing report for the page given, list what's in it, and ask which findings to fix. With no path, list the docs-ai-check reports on disk and ask which. For acting on a report from an earlier run.
 
 ## Method
 
-1. **Establish the house rule first.** Read the guide the draft answers to — the project's style guide, or the publication's writing guide — and ask before concluding there isn't one; a guide that lives outside the repo still governs the draft. Where it mandates something this command would otherwise flag — em-dash asides, a particular closing convention — the guide wins, and only mechanical overuse is reported. Say which rule you're applying.
+1. **Establish the house rule first.** Read the guide the draft answers to — the project's style guide — and ask before concluding there isn't one; a guide that lives outside the repo still governs the draft. Where it mandates something this command would otherwise flag — em-dash asides, a particular closing convention — the guide wins, and only mechanical overuse is reported. Say which rule you're applying.
 2. **Count before judging.** Every tell is reported with a frequency and a location. "Three em dashes in a 400-word section" is actionable; "too many em dashes" is not.
 3. **Sweep each category** below.
 4. **Rewrite each flagged passage**, don't just flag it. A tell without a replacement is a complaint.
@@ -94,14 +91,13 @@ Read the answers from the request, the arguments, the topic's `brief.md` and the
 - **A citation, quote or study that doesn't exist or doesn't say what the piece claims** — open every source and check it. This is the tell that misleads rather than merely pads, and checking sources is more reliable than any style signal ([Wikipedia: Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing)). Vague attribution — "experts say", "studies show" — belongs here too.
 - **Claims with nothing behind them** — "significantly improves performance", "a wide range of options", "this changed everything for me" — where no number, source, example or specific follows. This is the tell that matters most: it reads fine and says nothing.
 - **Explanations that restate the term** instead of defining it.
-- **Balanced both-sides padding** where the piece should take a position or state a fact. An opinion piece with no opinion is the content version of this tell.
+- **Balanced both-sides padding** where the piece should take a position or state a fact.
 
 ### Report
 
 Write the report from the template in [references/output-format.md](references/output-format.md), every field filled or left blank, never removed, and summarise the findings in chat:
 
-- **Documentation:** `_reports/ai-check-<page-slug>.md` (`docs/guides/webhooks.md` → `_reports/ai-check-guides-webhooks.md`).
-- **Content:** the topic's `reports/ai-check.md`, one report covering every format file checked. In a chat app, hand it back as `<topic folder>--ai-check.md`.
+- **Documentation:** `_reports/docs-ai-check-<page-slug>.md` (`docs/guides/webhooks.md` → `_reports/docs-ai-check-guides-webhooks.md`).
 
 ## Re-running it
 
@@ -143,8 +139,8 @@ Everything else is unchanged: list the findings, ask which, fix only those, upda
 ## Boundaries
 
 - **This does not determine authorship**, and no report from it should be presented as evidence that something was generated. It finds patterns; that is all it can do.
-- **The full editorial pass** — structure, accuracy, clarity, consistency → `/tw:doc-review` for documentation, `/cw:review` for a published piece. This is one narrow sweep, and it's the last one to run, after the piece is otherwise right.
-- **The rules every piece obeys** — sentences, claims, examples, concrete over vague, formatting, never hard-wrap → [`writing-standards`'s house-voice.md](../writing-standards/references/house-voice.md). A rewrite lands on those rules; this command only finds the passages that need one.
+- **The full editorial pass** — structure, accuracy, clarity, consistency → `/tw:docs-review`. This is one narrow sweep, and it's the last one to run, after the piece is otherwise right.
+- **The rules every piece obeys** — sentences, claims, examples, concrete over vague, formatting, never hard-wrap → [`docs-writing-standards`'s house-voice.md](../docs-writing-standards/references/house-voice.md). A rewrite lands on those rules; this command only finds the passages that need one.
 - **Voice consistency across a docs set** → `/tw:style-check`.
 - **A house rule beats every default here.** Where a project or publication has decided on a convention this command would flag, its guide wins.
 - **Don't strip a writer's voice in the name of this.** A distinctive human sentence that happens to contain an em dash is not a finding, and neither is a first-person aside, a joke or a sign-off the publication always uses; the target is mechanical padding, not personality.

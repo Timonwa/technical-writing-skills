@@ -1,10 +1,10 @@
 # House voice — the checkable rules
 
-The rules every piece of writing obeys — a docs page, a README, a changelog entry, a blog post, an essay, a newsletter issue. Check a draft against each and get a yes or no. Person, tone and personality come from the writing's own guide.
+The rules every piece of writing obeys — a docs page, a README, a changelog entry, a help-centre article, an API reference. Check a draft against each and get a yes or no. Person, tone and personality come from the writing's own guide.
 
-**The writing's own guide wins.** That's the project's style guide for documentation, or the publication's writing guide for content. Where it has already decided something — heading case, the serial comma, how a name is written, whether the piece says "you", "we" or "I" — follow it on that point and apply these rules to everything it doesn't cover. These are defaults for the gaps, not a replacement for a standard someone already agreed.
+**The writing's own guide wins.** That's the project's style guide. Where it has already decided something — heading case, the serial comma, how a name is written, whether the piece says "you", "we" or "I" — follow it on that point and apply these rules to everything it doesn't cover. These are defaults for the gaps, not a replacement for a standard someone already agreed.
 
-Word-level swaps (long phrase → short): [plain-english-alternatives.md](plain-english-alternatives.md). The AI-tell vocabulary: [ai-writing-detection.md](ai-writing-detection.md), swept by `/write:ai-check`. Code in a piece: `write:code-samples`' checklist.
+Word-level swaps (long phrase → short): [plain-english-alternatives.md](plain-english-alternatives.md). The AI-tell vocabulary: [ai-writing-detection.md](ai-writing-detection.md), swept by `/tw:docs-ai-check`. Code in a piece: `tw:docs-code-samples`' checklist.
 
 ## Sentences
 
@@ -14,7 +14,7 @@ Word-level swaps (long phrase → short): [plain-english-alternatives.md](plain-
 - [ ] **Sentences average 15–20 words** across the piece ([Plain English Campaign](https://mstrust.org.uk/sites/default/files/plain_english_campaign_how_to_write_plain.pdf)) — an average, so short and long sentences both belong.
 - [ ] **One idea per paragraph, and no more than 5 sentences** ([GOV.UK](https://guidance.publishing.service.gov.uk/writing-to-gov-uk-standards/writing-guidelines/clear-language/)). A paragraph doing two jobs is two paragraphs.
 - [ ] **A reading level the reader can manage.** For a general audience, about a reading age of 9, checked with a readability tool ([Home Office](https://design.homeoffice.gov.uk/accessibility/written-content/readability)); the score points at sentences to look at, and a guide that pitches higher wins.
-- [ ] **One person, held throughout.** Use the person the guide sets — "you", "we" or "I" — and don't drift between them without a reason. With no guide, documentation takes the voice in `tw:docs-standards`; content asks.
+- [ ] **One person, held throughout.** Use the person the guide sets — "you", "we" or "I" — and don't drift between them without a reason. With no guide, documentation takes the voice in `tw:docs-standards`.
 - [ ] **No filler or minimisers.** Cut "basically", "essentially", "actually", "of course", and the minimisers "simply", "just", "obviously", "easy" — each either adds nothing or tells a reader who's struggling that they should already have understood.
 
 ## Claims
@@ -36,7 +36,7 @@ Word-level swaps (long phrase → short): [plain-english-alternatives.md](plain-
 
 ## Structure
 
-- [ ] **Most important first.** The answer, the result or the point in the opening lines; the background after it. A piece that opens on a story — a feature, an essay, a personal post — reaches its point, the paragraph that says why this matters, by the second or third paragraph ([the nut graf](https://en.wikipedia.org/wiki/Nut_graph)); an essay that deliberately builds to its point does so because its guide says it does.
+- [ ] **Most important first.** The answer, the result or the point in the opening lines; the background after it.
 - [ ] **Lead with the reader's goal, not the feature or the topic.** "Share a draft with a reviewer", not "The share dialog"; "Bread that rises overnight", not "About yeast".
 - [ ] **Progressive disclosure.** Simple before complex, the main path before the deep dive. Link an advanced topic rather than inlining it, so a beginner isn't buried.
 - [ ] **Headings say what's under them, in the words a reader would use or search for.** "Rotate an API key", not "Key management considerations"; "Why my sourdough stopped rising", not "Lessons learned". Where the guide allows a playful heading, it still tells the reader what follows.
@@ -49,7 +49,7 @@ Word-level swaps (long phrase → short): [plain-english-alternatives.md](plain-
 - [ ] **Formatting carries meaning, never decoration.** What bold and italics mean is the guide's call, applied the same way every time; for documentation, `tw:docs-standards` sets the default. `code` for commands, identifiers, paths and filenames, wherever they appear. Emphasis sprinkled for rhythm is noise to a scanner and a screen reader.
 - [ ] **Never hard-wrap prose** where the piece is kept as Markdown. One physical line per paragraph or list item; break only where Markdown requires it. A hard-wrapped paragraph produces an unreadable diff on every edit.
 - [ ] **No skipped heading levels**, one H1 per page, written in the body only where neither the front matter nor the platform supplies the title, and links that resolve, with text that makes sense out of context — never "click here".
-- [ ] **Alt text on every meaningful image**; a decorative one is marked decorative (`tw:docs-images-and-diagrams`, `cw:images-and-diagrams`).
+- [ ] **Alt text on every meaningful image**; a decorative one is marked decorative (`tw:docs-images-and-diagrams`).
 - [ ] **Define a term on first use, then use exactly that term.** Synonyms for one concept read as two different concepts: a piece that defines "starter" and later says "levain" and "mother" leaves the reader wondering whether they need three jars; one that says "workspace" and later "project" leaves them looking for a second setting.
 
 ## Keeping it true

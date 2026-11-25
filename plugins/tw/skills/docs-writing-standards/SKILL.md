@@ -1,38 +1,37 @@
 ---
-name: writing-standards
+name: docs-writing-standards
 description: >-
-  The rules under every piece of writing, documentation or content — naming the reader, the goal and the scope before drafting, plain language, concrete claims whose certainty matches the evidence, crediting what's borrowed, structure for readers who scan, accessible formatting, and keeping a piece true, with the shared checklist every writing skill links. Voice, person and tone come from the project's style guide or the publication's writing guide. Use on "write this", "draft", "is this clear", "make this plainer".
+  The rules under every piece of documentation — naming the reader, the goal and the scope before drafting, plain language, concrete claims whose certainty matches the evidence, crediting what's borrowed, structure for readers who scan, accessible formatting, and keeping a piece true, with the shared checklist every technical writing skill links. Voice, person and tone come from the project's style guide. Use on "write this", "draft", "is this clear", "make this plainer".
 ---
 
 # Writing standards
 
-The discipline every piece of writing shares, whatever it is: a docs page, a README, a blog post, an essay, a newsletter issue. A reader arrives with a reason and leaves the moment the writing stops serving it. Decide who that reader is and what they came for before writing a word.
+The discipline every piece of writing shares, whatever it is: a docs page, a README, a help-centre article, an API reference, a release note. A reader arrives with a reason and leaves the moment the writing stops serving it. Decide who that reader is and what they came for before writing a word.
 
 ## Voice and audience come from the writing's own guide
 
-Before applying this skill, find the guide the writing answers to and read it — for documentation, the project's style guide and conventions; for content, the publication's `profile.md` and `writing-guide.md`:
+Before applying this skill, find the guide the writing answers to and read it — the project's style guide and conventions:
 
-- **In a codebase:** what the project's `AGENTS.md` names (its style guide, or a publication's folder), or, for a guide kept outside the repo, what the user's personal agent instructions name; otherwise the contributing docs or the project's `publications/` folder.
+- **In a codebase:** what the project's `AGENTS.md` names (its style guide), or, for a guide kept outside the repo, what the user's personal agent instructions name; otherwise the contributing docs.
 - **In a chat app:** the project's files, or files attached to the conversation.
 - **Otherwise:** ask.
 
 Voice, person, tone, terminology, formatting choices and who the reader is come from that guide, never from this skill.
 
 - Where the guide settles something this skill also covers, the guide wins.
-- Where there's no guide: for documentation, the documentation voice in `tw:docs-standards` is the default, applied without asking; for content, ask who the reader is and what the piece is for, and offer to build a guide with `cw:style-guide`.
+- Where there's no guide, the documentation voice in `tw:docs-standards` is the default, applied without asking.
 - When a guide changes: in a codebase, save the file where it was found; in a chat app, give the user the updated file to replace in the project.
-- **For documentation, also apply `tw:docs-standards`** — its page rules (one need per page, procedures, accessible pages, code on the page) hold even where the project has a guide, which overrides it only where it decides. **For content, also apply the publication's writing guide and the content-writing skills (`cw`).**
+- **Also apply `tw:docs-standards`** — its page rules (one need per page, procedures, accessible pages, code on the page) hold even where the project has a guide, which overrides it only where it decides.
 
 ## Ask first
 
-Read the answers from the request, the guide, the publication's `profile.md` and, for content, the topic's `brief.md` first; ask only what's missing. Ask with the app's question tool where it has one, so the choices can be picked; otherwise as a numbered list answered by number. Offer choices where the answers are known and a short typed answer otherwise; where the profile or the brief already has an answer, show it and ask whether to use it. For content, record the answers in the topic's `brief.md` so the next skill doesn't ask again.
+Read the answers from the request and the guide first; ask only what's missing. Ask with the app's question tool where it has one, so the choices can be picked; otherwise as a numbered list answered by number. Offer choices where the answers are known and a short typed answer otherwise; where the guide already has an answer, show it and ask whether to use it.
 
-1. **What is it?** Docs: tutorial · how-to · reference · explanation · README. Content: blog post · newsletter issue · social posts · essay.
-2. **Where does it go?** A docs page (path) · a topic folder, written into the format's own file: `blog.md`, `newsletter.md` or `social.md`.
+1. **What is it?** Tutorial · how-to · reference · explanation · README.
+2. **Where does it go?** A docs page (path).
 3. **Who is the reader, and what do they already know?** Short answer.
 4. **What does the reader leave with?** One sentence: what they can do, understand or decide afterwards.
 5. **What's left out, and where does it live?** Short answer: each excluded topic and the page or piece that covers it, or none.
-6. **Which guide does it answer to?** The publication's `writing-guide.md` or the project's style guide (path) · none yet, so build one with `cw:style-guide`. Not asked for documentation: with no guide in the project, the documentation defaults apply.
 
 ## Craft and voice
 
@@ -59,7 +58,7 @@ Read the answers from the request, the guide, the publication's `profile.md` and
 
 ## Claims and evidence
 
-- **Put the most important thing first** — the answer, the result or the point in the opening lines, the qualification after ([GOV.UK](https://guidance.publishing.service.gov.uk/writing-to-gov-uk-standards/writing-guidelines/clear-structure/), [Microsoft](https://learn.microsoft.com/en-us/style-guide/brand-voice-above-all-simple-human)). A piece that opens on a story states why it matters by the second or third paragraph.
+- **Put the most important thing first** — the answer, the result or the point in the opening lines, the qualification after ([GOV.UK](https://guidance.publishing.service.gov.uk/writing-to-gov-uk-standards/writing-guidelines/clear-structure/), [Microsoft](https://learn.microsoft.com/en-us/style-guide/brand-voice-above-all-simple-human)).
 - **Concrete over vague** — real numbers, names and timeframes. If a claim can't be made specific, it's probably filler.
 - **Certainty matches the evidence** — say plainly what's established, and "suggests" for what one study found. Overclaiming is a factual error, not a style choice.
 - **Show, don't assert** — evidence beside every claim that matters: a runnable example, a figure, a quote, a source, an anecdote with a point.
@@ -87,10 +86,10 @@ Read the answers from the request, the guide, the publication's `profile.md` and
 ## Boundaries
 
 - **Documentation** — the four documentation types, the documentation voice, procedures, accessible docs pages → `tw:docs-standards`.
-- **Content** — articles, newsletters and social posts for a publication → the content-writing skills (`cw`).
-- **The guide this skill defers to** — a docs style guide → `tw:docs-style-guide`; a publication's writing guide → `cw:style-guide`.
-- **Getting facts out of an expert or a source** → `tw:sme-interviews` or `cw:interviews`.
-- **Code in a piece** → `write:code-samples`. **Screenshots, photos, diagrams and alt text** → `tw:docs-images-and-diagrams` or `cw:images-and-diagrams`.
-- **Tightening a finished draft** → `tw:docs-editing-standards` or `cw:editing-standards`; **the machine-written sweep** → `/write:ai-check`.
-- **Worked examples** — a documentation page: `tw:docs-standards`; an article: the content-writing skills (`cw`); before-and-after edits: `tw:docs-editing-standards` and `cw:editing-standards`.
+- **Content** — articles, newsletters and social posts for a publication → `cw:writing-standards` in [content-writing-skills](https://github.com/Timonwa/content-writing-skills).
+- **The guide this skill defers to** — a docs style guide → `tw:docs-style-guide`.
+- **Getting facts out of an expert or a source** → `tw:sme-interviews`.
+- **Code in a piece** → `tw:docs-code-samples`. **Screenshots, photos, diagrams and alt text** → `tw:docs-images-and-diagrams`.
+- **Tightening a finished draft** → `tw:docs-editing-standards`; **the machine-written sweep** → `/tw:docs-ai-check`.
+- **Worked examples** — a documentation page: `tw:docs-standards`; before-and-after edits: `tw:docs-editing-standards`.
 - **Marketing and conversion copy** — landing pages, ads, sales sequences — is a different craft with a different goal, and out of scope.

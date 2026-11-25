@@ -1,7 +1,7 @@
 ---
-name: code-samples
+name: docs-code-samples
 description: >-
-  Writing and maintaining the code inside any piece — docs, tutorials, technical articles: a sample complete and runnable, eliding correctly, expected output and the likely error, code built up step by step in a tutorial, testing so samples don't rot, placeholder conventions, languages at parity, no insecure practice a reader will copy, copy-paste ergonomics, and recording the version verified against. Use on "code example", "code sample", "snippet", "the example doesn't work", "add an example", "tutorial code", "test the docs examples".
+  Writing and maintaining the code in documentation — docs pages, tutorials, API references: a sample complete and runnable, eliding correctly, expected output and the likely error, code built up step by step in a tutorial, testing so samples don't rot, placeholder conventions, languages at parity, no insecure practice a reader will copy, copy-paste ergonomics, and recording the version verified against. Use on "code example", "code sample", "snippet", "the example doesn't work", "add an example", "tutorial code", "test the docs examples".
 ---
 
 # Code samples
@@ -12,26 +12,26 @@ A sample is also the most perishable content in any piece — a docs page or a p
 
 ## Voice and audience come from the writing's own guide
 
-Before applying this skill, find the guide the writing answers to and read it — for documentation, the project's style guide and conventions; for content, the publication's `profile.md` and `writing-guide.md`:
+Before applying this skill, find the guide the writing answers to and read it — the project's style guide and conventions:
 
-- **In a codebase:** what the project's `AGENTS.md` names (its style guide, or a publication's folder), or, for a guide kept outside the repo, what the user's personal agent instructions name; otherwise the contributing docs or the project's `publications/` folder.
+- **In a codebase:** what the project's `AGENTS.md` names (its style guide), or, for a guide kept outside the repo, what the user's personal agent instructions name; otherwise the contributing docs.
 - **In a chat app:** the project's files, or files attached to the conversation.
 - **Otherwise:** ask.
 
 Voice, person, tone, terminology, formatting choices and who the reader is come from that guide, never from this skill.
 
 - Where the guide settles something this skill also covers, the guide wins.
-- Where there's no guide: for documentation, the documentation voice in `tw:docs-standards` is the default; for content, ask who the reader is and what the piece is for, and offer to build a guide with `cw:style-guide`.
+- Where there's no guide, the documentation voice in `tw:docs-standards` is the default.
 - When a guide changes: in a codebase, save the file where it was found; in a chat app, give the user the updated file to replace in the project.
 - The rules below apply to code in a docs page and in a published tutorial; [Code in a tutorial](#code-in-a-tutorial) adds what a build-along needs.
 
 ## Ask first
 
-Read the answers from the request, the guide, the project (its package files, lockfile and existing samples) and, for content, the topic's `brief.md` first; ask only what's missing. Ask with the app's question tool where it has one, so the choices can be picked; otherwise as a numbered list answered by number. Offer choices where the answers are known and a short typed answer otherwise. For content, record the answers in the topic's `brief.md`, under Notes for whoever picks it up next, so the next skill doesn't ask again.
+Read the answers from the request, the guide, the project (its package files, lockfile and existing samples) first; ask only what's missing. Ask with the app's question tool where it has one, so the choices can be picked; otherwise as a numbered list answered by number. Offer choices where the answers are known and a short typed answer otherwise.
 
-1. **Where does the code go?** A docs page (path) · a tutorial or technical article in a topic's `blog.md` · a newsletter issue's `newsletter.md`.
+1. **Where does the code go?** A docs page (path).
 2. **Which languages, and which versions is it verified against?** Short answer: language, runtime and library versions, such as "TypeScript, Node 22, the SDK at 4.2".
-3. **Can the samples be run before they ship?** Yes, here · in the companion repository (link; the brief's Demo project row) · no, so they're marked unverified.
+3. **Can the samples be run before they ship?** Yes, here · in the companion repository (link) · no, so they're marked unverified.
 4. **Which placeholder convention?** The guide's · uppercase with underscores (`PROJECT_ID`), the default where the guide sets none.
 5. **For a tutorial, where does the reader start?** An empty folder · a starter project or branch (link) · the end of the previous part in the series.
 6. **How are the samples kept working?** Extracted and run in checks · included from real files in a repository · run by hand on a schedule · nothing yet.
@@ -137,8 +137,8 @@ Each is a yes or no:
 
 ## Boundaries
 
-- **The rules every piece obeys** — sentences, claims, concrete over vague, formatting, never hard-wrap → `write:writing-standards` and its house-voice checklist. Code on a documentation page → `tw:docs-standards`.
-- **Where the sample sits in the page, and which page it belongs on** → `tw:developer-docs`, or `tw:api-reference` for request and response examples on an endpoint; in a published piece, the piece's structure → `cw:article-standards`.
-- **The companion repository itself** — its starter and final branches, pinned versions and README → `cw:demo-project`. Quickstart samples in a product repository's front door → `tw:readmes`.
+- **The rules every piece obeys** — sentences, claims, concrete over vague, formatting, never hard-wrap → `tw:docs-writing-standards` and its house-voice checklist. Code on a documentation page → `tw:docs-standards`.
+- **Where the sample sits in the page, and which page it belongs on** → `tw:developer-docs`, or `tw:api-reference` for request and response examples on an endpoint.
+- **The companion repository itself** — its starter and final branches, pinned versions and README → `cw:demo-project` in [content-writing-skills](https://github.com/Timonwa/content-writing-skills). Quickstart samples in a product repository's front door → `tw:readmes`.
 - **Writing the library or API being demonstrated** is not this skill's job. Where a sample can only be made safe or short by changing the API, that's a finding to raise, not something to paper over.
-- **Verifying behaviour you can't run** → `tw:sme-interviews` for documentation, `cw:interviews` for a published piece.
+- **Verifying behaviour you can't run** → `tw:sme-interviews`.

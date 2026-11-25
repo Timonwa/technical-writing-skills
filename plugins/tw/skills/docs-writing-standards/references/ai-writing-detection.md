@@ -58,7 +58,7 @@ Em dashes are longer than hyphens (-) and are used for emphasis, interruptions, 
 - Use colons to introduce explanations or lists
 - Use parentheses for supplementary information
 - Reserve em dashes for rare, deliberate emphasis only
-- Judge density per 1,000 words, the unit `/write:ai-check` reports: more than about 3 is a signal, more than about 6 or two in one paragraph is strong (a working threshold, not a published standard). Revise a run of mechanical asides
+- Judge density per 1,000 words, the unit `/tw:docs-ai-check` reports: more than about 3 is a signal, more than about 6 or two in one paragraph is strong (a working threshold, not a published standard). Revise a run of mechanical asides
 - Exception — a publication's own voice rule wins: where a house style mandates em-dash asides, keep the deliberate ones; this flag targets frequency and pattern, not the character itself
 
 ---

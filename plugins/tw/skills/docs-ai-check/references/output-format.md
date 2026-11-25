@@ -1,17 +1,16 @@
 # AI check output format
 
-Write one report per page or topic, creating the folder if it doesn't exist, and summarise the findings in chat. Tell the user the path when you're done.
+Write one report per page, creating the folder if it doesn't exist, and summarise the findings in chat. Tell the user the path when you're done.
 
-- **Documentation:** `_reports/ai-check-<page-slug>.md`, where the slug is the page's path under the docs folder with slashes as hyphens and no extension (`docs/guides/webhooks.md` → `_reports/ai-check-guides-webhooks.md`).
-- **Content:** the topic's `reports/ai-check.md` (`topics/<yyyy-mm>-<slug>/reports/ai-check.md`), one report covering every format file checked. In a chat app, hand it back as `<topic folder>--ai-check.md`.
+- **Documentation:** `_reports/docs-ai-check-<page-slug>.md`, where the slug is the page's path under the docs folder with slashes as hyphens and no extension (`docs/guides/webhooks.md` → `_reports/docs-ai-check-guides-webhooks.md`).
 - **Pasted text** with no file or topic behind it: report in chat only, in the same shape.
 
-Every field below is always present; a value that doesn't apply is left blank, never removed. Locations name the file and the section or paragraph (`newsletter.md`, para 3; `social.md`, LinkedIn post), so a report covering several format files is unambiguous.
+Every field below is always present; a value that doesn't apply is left blank, never removed. Locations name the file and the section or paragraph (`guides/webhooks.md`, para 3; `reference/errors.md`, the error table), so a report covering several pages is unambiguous.
 
 ```markdown
-# AI check — <page or topic>
+# AI check — <page>
 
-**Checked:** <files, or the format files from brief.md> · **Date:** <YYYY-MM-DD> · **Guide:** <path, or "none — defaults"> · **Words:** <N> · **Tell density:** <N per 1,000 words> · **Overall:** <X>/10
+**Checked:** <files> · **Date:** <YYYY-MM-DD> · **Guide:** <path, or "none — defaults"> · **Words:** <N> · **Tell density:** <N per 1,000 words> · **Overall:** <X>/10
 
 ## Score change (previous → current)
 
