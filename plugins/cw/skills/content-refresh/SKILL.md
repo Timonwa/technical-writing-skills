@@ -125,7 +125,7 @@ Work through the piece as a reader arriving today:
 ## Retiring a piece
 
 - **Redirect only to a real equivalent.** "Don't redirect many old URLs to one irrelevant single URL destination, such as the home page" ([Google: site moves](https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes)). With no equivalent, let the URL return 404 or 410, and Google removes it from the index ([Google: HTTP status codes](https://developers.google.com/search/docs/crawling-indexing/http-network-errors)).
-- **Remove internal links** to the retired piece, and take it out of series pages, reading lists and anything the platform lists it in — including its row in the series file under `series/`, whose status becomes `retired`.
+- **Remove internal links** to the retired piece, and take it out of series pages, reading lists and anything the platform lists it in — including its row in the series' `brief.md` under `series/<series-slug>/`, whose status becomes `retired`.
 - **Archive its demo repo**, where it has one, and say in that repo's README that the piece is retired.
 - **Its copies follow it** — every cross-post in `copies.md` is taken down, or gets a note at the top pointing to what's current, and its row records which.
 - **Keep the slug retired.** Don't reuse a retired URL for a different piece; old links and citations would land on the wrong answer.

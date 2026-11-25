@@ -146,7 +146,7 @@ publications/
     sources/           # style guides and reference material already in hand
     examples/          # sample covers, logo files, pieces that show the voice
     calendar.md        # the editorial calendar: one line per topic
-    series/            # one file per series: <series-slug>.md
+    series/            # one folder per series: its brief.md and what its parts share
     reports/           # content-performance-<yyyy-mm-dd>.md
     topics/
       <yyyy-mm>-<slug>/  # one folder per topic
@@ -170,11 +170,11 @@ publications/
 - **Status** is one of `idea` · `briefed` · `drafting` · `in review` · `scheduled` · `published` · `paused` · `retired`. Each format in the brief has its own; the topic's is the overall one, `published` once every listed format is.
 - **`calendar.md` is the editorial calendar and the one shared file** — one line per topic: first publish date · topic folder · formats · status · held by · series · link, under **Coming up** (dated, soonest first), **Ideas** (undated, newest first) and **Published** (newest first). Change only your topic's line; never rewrite the file. A topic's other dates live in its brief.
 - **`media-kit.md` is what a sponsor email cites** — who reads the publication, its numbers with the date each was measured and where it came from, and where a sponsor can appear; `cw:pitching` reads it and links it. `brand.md` is logos and colours; `media-kit.md` never repeats the brand.
-- **`series/<series-slug>.md` plans a series** — its name, reader, what it covers and leaves out, cadence, and one row per part. Each part is its own topic whose brief names the series and the part.
+- **`series/<series-slug>/brief.md` plans a series** — its name, reader, what it covers and leaves out, cadence, and one row per part. Material every part shares sits beside it in the series folder. Each part is its own topic whose brief names the series and the part.
 
-In a chat app, a project's files can't hold folders, so a topic's files are named `<topic folder>--<file>` (`2026-12-sourdough-starter--brief.md`). The publication's own files keep their names — `profile.md`, `writing-guide.md`, `brand.md`, `media-kit.md`, `calendar.md`, a series' `<series-slug>.md`, and the sources, sample covers and logo files beside them — and for `calendar.md` Claude hands back only the line to add or change.
+In a chat app, a project's files can't hold folders, so a topic's files are named `<topic folder>--<file>` (`2026-12-sourdough-starter--brief.md`). The publication's own files keep their names — `profile.md`, `writing-guide.md`, `brand.md`, `media-kit.md`, `calendar.md`, a series' files as `series-<series-slug>--<file>`, and the sources, sample covers and logo files beside them — and for `calendar.md` Claude hands back only the line to add or change.
 
-Start from the blanks in [references/publication-template/](references/publication-template/) — [calendar.md](references/publication-template/calendar.md), [media-kit.md](references/publication-template/media-kit.md), a series from [series/\_template.md](references/publication-template/series/_template.md), a topic from [topics/\_template/](references/publication-template/topics/_template/) — and fill copies, never the templates themselves. A field not yet known stays in the file, blank; it's never removed.
+Start from the blanks in [references/publication-template/](references/publication-template/) — [calendar.md](references/publication-template/calendar.md), [media-kit.md](references/publication-template/media-kit.md), a series from [series/\_template/](references/publication-template/series/_template/), a topic from [topics/\_template/](references/publication-template/topics/_template/) — and fill copies, never the templates themselves. A field not yet known stays in the file, blank; it's never removed.
 
 ## Enforcing and maintaining it
 

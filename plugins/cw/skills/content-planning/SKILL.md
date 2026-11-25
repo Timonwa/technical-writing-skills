@@ -88,7 +88,7 @@ Experience matters because Google asks whether content "clearly demonstrate[s] f
 ## Series and clusters
 
 - **A series** is a run of pieces a reader follows in order — a tutorial in parts, a twelve-week training log, a monthly spending report. Plan it whole before publishing the first part: the parts, what each delivers on its own, and the date of the last one. A series that stops halfway is worse than a single piece.
-- **A series gets its own file**, `series/<series-slug>.md`, filled from [the template](../style-guide/references/publication-template/series/_template.md): its name, who it's for, what it covers and leaves out, cadence, and a parts table — part · working title · topic folder · publish date · status. Each part is its own topic: create its folder when that part is briefed, with **Series** and **Part** in its brief.
+- **A series gets its own folder**, `series/<series-slug>/`, with a `brief.md` filled from [the template](../style-guide/references/publication-template/series/_template/brief.md): its name, who it's for, what it covers and leaves out, cadence, and a parts table — part · working title · topic folder · publish date · status. Each part is its own topic: create its folder when that part is briefed, with **Series** and **Part** in its brief. Material every part draws on — shared research, notes, a build log — sits in the series folder beside its `brief.md`.
 - **A cluster** is a main piece on a topic and the narrower pieces around it — a main piece on a beginner's running plan, with narrower pieces on shoes, pacing and the first 5k. The main piece links to each narrower one, and each links back and to its neighbours. Links "connect your users and search engines to other parts of your site" ([Google SEO starter guide](https://developers.google.com/search/docs/fundamentals/seo-starter-guide)); the cluster shape itself is practice, not a Google requirement.
 - **Each piece still stands alone.** A reader arriving from search at part three gets what part three promises, with a link back for what came before.
 
@@ -143,7 +143,7 @@ The folder starts with `brief.md`:
 - **Read-only checks don't claim.** A review, an AI check, a style check, an SEO check or a performance review that writes only its own file in `reports/` runs while someone holds the topic and never sets Held by; only a skill that edits the format files claims.
 - **Starting another topic** never touches the paused one's folder — the new topic gets its own folder and its own line.
 
-In a chat app, a project's files can't hold folders: name a topic's files `<topic folder>--<file>` (`2026-12-sourdough-starter--brief.md`), keep the publication's own files — `profile.md`, `writing-guide.md`, `calendar.md`, the series files — under their names, and hand back only that topic's files and, for `calendar.md`, only the line to add or change.
+In a chat app, a project's files can't hold folders: name a topic's files `<topic folder>--<file>` (`2026-12-sourdough-starter--brief.md`), keep the publication's own files — `profile.md`, `writing-guide.md`, `calendar.md` — under their names, name a series' files `series-<series-slug>--<file>` (`series-bread-basics--brief.md`), and hand back only that topic's files and, for `calendar.md`, only the line to add or change.
 
 ## Review the plan
 
@@ -157,7 +157,7 @@ In a chat app, a project's files can't hold folders: name a topic's files `<topi
 - [ ] Each one comes from a reader question, real search data or the writer's own work.
 - [ ] The writer has first-hand experience of it, or a source or research step is planned.
 - [ ] No two topics target the same question.
-- [ ] Series are planned to the last part, each in its own `series/` file.
+- [ ] Series are planned to the last part, each in its own `series/` folder.
 - [ ] Updates are scheduled beside new pieces.
 - [ ] The cadence survives a bad month, with a buffer.
 - [ ] `calendar.md` has one line per topic, in its section and order, and no other topic's line was rewritten.
