@@ -1,5 +1,5 @@
 ---
-name: editing-standards
+name: docs-editing-standards
 description: >-
   Editing documentation that already exists — a docs page, a user guide, an internal doc, a README, a reference entry or an engineer's draft — in focused passes: the five levels of edit, word and sentence checks, plain-English swaps and an AI-tell sweep, to the project's style guide. Use on "edit this doc", "review this draft page", "proofread this page", "polish this README", "clean up this doc", "does this doc sound AI-written". Edits, never writes from scratch.
 ---
@@ -13,7 +13,7 @@ Improve a document that already exists through focused passes, preserving what t
 Before editing, find the project's style guide, glossary or terminology list and its conventions, and read them:
 
 - **In a codebase:** the style guide and conventions the project's `AGENTS.md` names, or its contributing docs.
-- **In a chat app:** the style guide in the project's files (a Claude Project's knowledge, or the equivalent elsewhere), or attached to the conversation.
+- **In a chat app:** the style guide in the project's files, or attached to the conversation.
 - **Otherwise:** ask whether one exists before concluding there isn't one.
 
 Voice, person, tone, terminology and formatting come from that guide; where it settles something this skill also covers, the guide wins.
@@ -127,7 +127,7 @@ The findings go back in the edit notes template, [references/edit-notes.md](refe
 
 - **The rules every piece obeys** — sentences, claims, credit, formatting, never hard-wrap → `write:writing-standards`; the documentation voice and page rules → `tw:docs-standards`.
 - **Writing from scratch is out of scope** — draft with the skill for that page type, then edit here.
-- **The conventions being edited to** — which term wins, how the product is capitalized, the date format → `tw:style-guide`. This skill enforces a standard; it doesn't set one.
+- **The conventions being edited to** — which term wins, how the product is capitalized, the date format → `tw:docs-style-guide`. This skill enforces a standard; it doesn't set one.
 - **Restructuring that turns out to need a different page, or several** → the skill for that type (`tw:developer-docs`, `tw:user-guides`, `tw:internal-docs`, `tw:readmes`, `tw:api-reference`), and `tw:docs-planning` if the set itself is wrong.
 - **A full review with numbered findings** → `/tw:doc-review`; **the machine-written sweep as a report** → `/write:ai-check`; **articles, essays and newsletters** → `cw:editing-standards`.
 - **Marketing and conversion copy** — landing pages, ads, sales sequences, CTAs — is a different craft, and out of scope.

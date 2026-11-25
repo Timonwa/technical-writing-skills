@@ -23,7 +23,7 @@ Every message follows its template in [references/messages.md](references/messag
 Read the project's style guide and conventions before drafting anything:
 
 - **In a codebase:** the style guide and conventions the project's `AGENTS.md` names, or its contributing docs.
-- **In a chat app:** the style guide in the project's files (a Claude Project's knowledge, or the equivalent elsewhere), or attached to the conversation.
+- **In a chat app:** the style guide in the project's files, or attached to the conversation.
 - **Otherwise:** ask the writer whether one exists before concluding there isn't one.
 
 Voice, person, terminology and who the reader is come from that guide; where it's silent, `tw:docs-standards` applies.
@@ -124,6 +124,6 @@ Suggest these instead, in this order: read the tests; send a written question li
 - **What the information becomes** → `write:writing-standards`, `tw:docs-standards` and the skill for the page type.
 - **Deciding which topics need an expert at all** → `tw:docs-planning`.
 - **Finding facts in a codebase without an expert** → `tw:codebase-research`. Check there first: an expert's time is for what the code can't tell you.
-- **Editing the resulting draft** → `tw:editing-standards`; reviewing it → `/tw:doc-review`.
+- **Editing the resulting draft** → `tw:docs-editing-standards`; reviewing it → `/tw:doc-review`.
 - **Interviewing anyone for an article, a Q&A, a profile or a case study** → `cw:interviews`.
 - **The expert is the authority on behaviour, not on wording.** A reviewer's rewrite into internal vocabulary is a finding to push back on, not an instruction.

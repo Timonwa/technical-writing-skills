@@ -11,6 +11,8 @@ disallowed-tools: Edit, NotebookEdit
 
 # Style check
 
+**Run this only when the user asks for it by name. It reports first, and edits nothing until the user picks findings to fix (`--fix`).**
+
 A **manually-invoked consistency sweep** across a set of documents. It answers one question: **does this read as one voice?** A docs set has one voice by design — readers move between pages mid-task and shouldn't notice the author changing.
 
 Sweep the whole set, because drift is invisible page by page: a concept called three things across two hundred pages goes unnoticed by anyone reading a few pages at a time — but every reader who meets the second name reads it as a second concept.
@@ -20,7 +22,7 @@ Sweep the whole set, because drift is invisible page by page: a concept called t
 Before checking it, find the project's style guide and conventions and read them:
 
 - **In a codebase:** the style guide and conventions the project's `AGENTS.md` names, or its contributing docs.
-- **In a chat app:** the style guide in the project's files (a Claude Project's knowledge, or the equivalent elsewhere), or attached to the conversation.
+- **In a chat app:** the style guide in the project's files, or attached to the conversation.
 - **Otherwise:** ask whether one exists before concluding there isn't one.
 
 Voice, person, tone, terminology and formatting come from that guide.
@@ -140,7 +142,7 @@ Everything else is unchanged: list the findings, ask which, fix only those, upda
 
 - **Deep editorial work on one page** → `/tw:doc-review`.
 - **Does it sound machine-written** → `/write:ai-check`.
-- **Setting the conventions** rather than enforcing them → `tw:style-guide`. A derived convention is a proposal for the guide, not a decision made on the project's behalf.
+- **Setting the conventions** rather than enforcing them → `tw:docs-style-guide`. A derived convention is a proposal for the guide, not a decision made on the project's behalf.
 - **Is it true and does it work** → `/tw:docs-audit`; **is it the right set** → `/tw:content-audit`.
 - **A blog, publication or newsletter archive** → `/cw:style-check`.
 - **Where the docs and the product disagree on a name**, the product is evidence but not automatically right — flag the conflict rather than silently siding with either.

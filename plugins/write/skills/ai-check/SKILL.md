@@ -11,6 +11,8 @@ disable-model-invocation: true
 
 # AI check
 
+**Run this only when the user asks for it by name. It reports first, and edits nothing until the user picks findings to fix (`--fix`).**
+
 A **manually-invoked sweep for the fingerprints of machine-written prose**, on anything published under a person's name.
 
 **It reports tells, not a verdict.** No one can determine whether text was generated, and claiming to is both wrong and harmful — human writers use em dashes, and careful AI-assisted drafts carry none of these markers. What this command does is find the specific patterns that make prose read as generated, each with its location and a rewrite. Whether the draft then gets changed is the author's call.
@@ -21,8 +23,8 @@ These patterns matter for a reason beyond provenance: nearly all of them are pad
 
 Before applying this skill, find the guide the writing answers to and read it — for documentation, the project's style guide and conventions; for content, the publication's `profile.md` and `writing-guide.md`:
 
-- **In a codebase:** what the project's `AGENTS.md` names (its style guide, or a publication's folder), or, for a guide kept outside the repo, what the user's personal agent instructions name (such as `~/.claude/CLAUDE.md`); otherwise the contributing docs or the project's `publications/` folder.
-- **In a chat app:** the project's files (a Claude Project's knowledge, or the equivalent elsewhere), or files attached to the conversation.
+- **In a codebase:** what the project's `AGENTS.md` names (its style guide, or a publication's folder), or, for a guide kept outside the repo, what the user's personal agent instructions name; otherwise the contributing docs or the project's `publications/` folder.
+- **In a chat app:** the project's files, or files attached to the conversation.
 - **Otherwise:** ask.
 
 Voice, person, tone, terminology, formatting choices and who the reader is come from that guide, never from this skill.

@@ -1,8 +1,7 @@
 {
   "name": "tw",
   "displayName": "Technical Writing Skills",
-  "description": "Technical writing skills for Claude: plan a docs set, write developer docs, help-centre articles, internal docs, API references, READMEs and release notes, research the code, interview engineers, and review, audit and edit docs. Includes write.",
-  "version": "3.0.0",
+  "description": "Technical writing skills: plan a docs set, write developer docs, help-centre articles, internal docs, API references, READMEs and release notes, research the code, interview engineers, and review, audit and edit docs. Includes write.",
   "dependencies": ["write"],
   "author": {
     "name": "Timonwa"

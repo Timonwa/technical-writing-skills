@@ -16,7 +16,7 @@
     },
     {
       "id": 2,
-      "prompt": "In my food blog's Claude Project, the writing guide and 2026-12-sourdough-finally-rose--brief.md are in the project's files; the brief names the reader and lists a blog post. Draft the opening of the post. Notes: three failed loaves, switched to 75% hydration, longer cold proof. Also, I've decided to allow em-dash asides from now on — update my guide.",
+      "prompt": "In my food blog's chat-app project, the writing guide and 2026-12-sourdough-finally-rose--brief.md are in the project's files; the brief names the reader and lists a blog post. Draft the opening of the post. Notes: three failed loaves, switched to 75% hydration, longer cold proof. Also, I've decided to allow em-dash asides from now on — update my guide.",
       "expected_output": "Should read the writing guide and the brief from the Project's files and not ask again for what they answer (the reader, the kind of piece); ask only what's missing, such as what the reader leaves with, with a specific kind of answer. Should follow the guide: first person, chatty, an opening that starts with a short scene, with the craft rules (concrete detail, the point reached soon after the scene) still applied. Should not convert the voice to documentation style. Should hand the opening back as 2026-12-sourdough-finally-rose--blog.md. Should record the em-dash decision in the writing guide and, because this is a chat app, give the user the updated writing-guide.md to replace in the Project rather than claiming it saved the file.",
       "files": [],
       "expectations": [

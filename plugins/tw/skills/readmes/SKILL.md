@@ -15,7 +15,7 @@ Apply these rules to every README, wherever it lives — a personal project, a w
 Before writing a README, find the project's style guide and conventions and read them:
 
 - **In a codebase:** the style guide and conventions the project's `AGENTS.md` names, or its contributing docs.
-- **In a chat app:** the style guide in the project's files (a Claude Project's knowledge, or the equivalent elsewhere), or attached to the conversation.
+- **In a chat app:** the style guide in the project's files, or attached to the conversation.
 - **Otherwise:** ask whether one exists before concluding there isn't one.
 
 Voice, person, tone, terminology and formatting come from that guide. Where it settles something this skill also covers, the guide wins; where it's silent or there isn't one, `tw:docs-standards` applies without asking.
@@ -69,4 +69,4 @@ Every shape draws from the same skeleton, in this order. Drop a section that doe
 - The general writing discipline (audience, plain language) → `write:writing-standards`; prose before code → `tw:docs-standards`.
 - Docs-site pages the README links out to → `tw:developer-docs`; the endpoint reference it links to → `tw:api-reference`.
 - The quickstart's code blocks — choosing them, testing them, keeping them compiling → `write:code-samples`.
-- Tightening the prose after drafting → `tw:editing-standards`. Announcing a version → `tw:release-notes`.
+- Tightening the prose after drafting → `tw:docs-editing-standards`. Announcing a version → `tw:release-notes`.

@@ -15,7 +15,7 @@ Plan the set before writing the page. The output of this skill is a list of docu
 Before planning the set, find the project's style guide and conventions and read them:
 
 - **In a codebase:** the style guide and conventions the project's `AGENTS.md` names, or its contributing docs.
-- **In a chat app:** the style guide in the project's files (a Claude Project's knowledge, or the equivalent elsewhere), or attached to the conversation.
+- **In a chat app:** the style guide in the project's files, or attached to the conversation.
 - **Otherwise:** ask whether one exists before concluding there isn't one.
 
 Voice, person, tone, terminology and formatting come from that guide. Where it settles something this skill also covers, the guide wins; where it's silent or there isn't one, `tw:docs-standards` applies without asking.
@@ -108,4 +108,4 @@ Agree a minimum set so documentation isn't renegotiated per release:
 - **The mechanics of moving, renaming and redirecting** a page the plan retires or relocates → [`tw:developer-docs`'s site-mechanics.md](../developer-docs/references/site-mechanics.md).
 - **Finding out what's actually true** about the product before you can list its tasks → `tw:sme-interviews`.
 - **Auditing an existing set for defects** — stale claims, broken links, orphans — rather than planning its shape → `/tw:docs-audit`.
-- **Naming and terminology decisions** the structure depends on → `tw:style-guide`.
+- **Naming and terminology decisions** the structure depends on → `tw:docs-style-guide`.

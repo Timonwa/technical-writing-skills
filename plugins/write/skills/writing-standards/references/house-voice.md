@@ -49,7 +49,7 @@ Word-level swaps (long phrase → short): [plain-english-alternatives.md](plain-
 - [ ] **Formatting carries meaning, never decoration.** What bold and italics mean is the guide's call, applied the same way every time; for documentation, `tw:docs-standards` sets the default. `code` for commands, identifiers, paths and filenames, wherever they appear. Emphasis sprinkled for rhythm is noise to a scanner and a screen reader.
 - [ ] **Never hard-wrap prose** where the piece is kept as Markdown. One physical line per paragraph or list item; break only where Markdown requires it. A hard-wrapped paragraph produces an unreadable diff on every edit.
 - [ ] **No skipped heading levels**, one H1 per page, written in the body only where neither the front matter nor the platform supplies the title, and links that resolve, with text that makes sense out of context — never "click here".
-- [ ] **Alt text on every meaningful image**; a decorative one is marked decorative (`tw:images-and-diagrams`, `cw:images-and-diagrams`).
+- [ ] **Alt text on every meaningful image**; a decorative one is marked decorative (`tw:docs-images-and-diagrams`, `cw:images-and-diagrams`).
 - [ ] **Define a term on first use, then use exactly that term.** Synonyms for one concept read as two different concepts: a piece that defines "starter" and later says "levain" and "mother" leaves the reader wondering whether they need three jars; one that says "workspace" and later "project" leaves them looking for a second setting.
 
 ## Keeping it true

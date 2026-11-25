@@ -1,5 +1,5 @@
 ---
-name: style-guide
+name: docs-style-guide
 description: >-
   Creating, maintaining and applying a docs set's style guide, terminology list and glossary — adopting a base guide and documenting only the deviations, the docs set's profile, the decisions a docs guide has to make (person, tense, capitalization, product naming, UI and code formatting, links, acronyms, inclusive language), `unset` as a valid answer, and making it enforceable in the docs repository. Use on "docs style guide", "docs terminology", "docs glossary", "which term do our docs use", "our docs are inconsistent".
 ---
@@ -15,7 +15,7 @@ Alongside it sit the **terminology list** — the approved term for each concept
 This skill builds the guide, so it starts by finding what already exists — the project's style guide and conventions, any terminology list, contributor guidelines or notes — and reads it:
 
 - **In a codebase:** what the project's `AGENTS.md` names, its contributing docs, and any style guide file in the repository.
-- **In a chat app:** anything in the project's files (a Claude Project's knowledge, or the equivalent elsewhere), or attached to the conversation.
+- **In a chat app:** anything in the project's files, or attached to the conversation.
 - **Otherwise:** ask — a wiki page, a PDF, a page of notes all count.
 
 The voice, terminology and reader the guide records come from the project, the existing guide and the published docs, never from this skill.
@@ -131,7 +131,7 @@ An unenforced guide is a document that makes people feel guilty. Pick at least o
 ## Boundaries
 
 - **The rules every piece obeys by default** → `write:writing-standards`; the documentation voice and page rules → `tw:docs-standards`. A guide records only where it departs from them or what they don't cover, and a decision written down overrides them.
-- **Applying the guide to a draft** → `tw:editing-standards`; **checking the whole set for drift from it** → `/tw:style-check`.
+- **Applying the guide to a draft** → `tw:docs-editing-standards`; **checking the whole set for drift from it** → `/tw:style-check`.
 - **The pages that consume it** — `tw:user-guides`, `tw:developer-docs`, `tw:api-reference`, `tw:internal-docs`.
 - **A publication's writing guide and profile** → `cw:style-guide`.
 - **Writing for translation** → `tw:localization`.

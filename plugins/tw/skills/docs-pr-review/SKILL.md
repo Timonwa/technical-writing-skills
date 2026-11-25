@@ -11,16 +11,18 @@ disable-model-invocation: true
 
 # Docs PR review
 
+**Run this only when the user asks for it by name. It reports first, and edits nothing until the user picks findings to fix (`--fix`).**
+
 A review of the **documentation in a pull request** — often docs a developer drafted alongside a code change. Where `/tw:doc-review` reviews a document on its own, this one reviews it against the change it belongs to: is every claim true of what this PR does, and did anything the PR changes go undocumented?
 
-The editorial standard is `/tw:doc-review`'s five levels of edit, `tw:editing-standards`, `tw:docs-standards` and `write:writing-standards`' voice rules, plus the skill for each document type the PR touches.
+The editorial standard is `/tw:doc-review`'s five levels of edit, `tw:docs-editing-standards`, `tw:docs-standards` and `write:writing-standards`' voice rules, plus the skill for each document type the PR touches.
 
 ## Voice and audience come from the writing's own guide
 
 Before reviewing, find the project's style guide and conventions and read them:
 
 - **In a codebase:** the style guide and conventions the project's `AGENTS.md` names, or its contributing docs.
-- **In a chat app:** the style guide in the project's files (a Claude Project's knowledge, or the equivalent elsewhere), or attached to the conversation.
+- **In a chat app:** the style guide in the project's files, or attached to the conversation.
 - **Otherwise:** ask whether one exists before concluding there isn't one.
 
 Voice, person, tone, terminology and formatting come from that guide. Where it settles something this skill also covers, the guide wins; where it's silent or there isn't one, `tw:docs-standards` applies without asking, and a page that departs from it is a finding.
@@ -69,7 +71,7 @@ The shape decides what every claim is checked against. Say which shape it is, an
 
 1. **Missing docs** (code-with-docs and docs-elsewhere shapes) — list every change in the code a reader would notice with no doc line: a new or renamed setting, env var, endpoint, flag or command; a changed default, limit or behaviour; a removed feature still documented; a new error a user can hit. Each with the file and line in the code, and where its doc belongs.
 2. **The five levels** on the changed lines, from `/tw:doc-review` — substantive, technical accuracy (against this PR's source of truth), line, copy and proof — in that order, and don't skip ahead.
-3. **The document type** — each page judged by its type's skill: `tw:developer-docs`, `tw:user-guides`, `tw:api-reference`, `tw:readmes`, `tw:release-notes`, `tw:internal-docs`; samples by `write:code-samples`, images by `tw:images-and-diagrams`.
+3. **The document type** — each page judged by its type's skill: `tw:developer-docs`, `tw:user-guides`, `tw:api-reference`, `tw:readmes`, `tw:release-notes`, `tw:internal-docs`; samples by `write:code-samples`, images by `tw:docs-images-and-diagrams`.
 
 Use `/tw:doc-review`'s severity scale: **BLOCKER** (untrue, a missing warning on an irreversible action, an example that doesn't work, an undocumented change a reader will hit), **MAJOR**, **MINOR**, **NIT**.
 

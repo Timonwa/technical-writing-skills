@@ -43,7 +43,7 @@
     },
     {
       "id": 4,
-      "prompt": "I write in a Claude Project for my newsletter 'Pocket Garden'. Its profile.md and writing-guide.md are in the project knowledge. Our sign-off changed from 'Happy digging' to 'Grow slowly' last month — update the guide.",
+      "prompt": "I write in a chat-app project for my newsletter 'Pocket Garden'. Its profile.md and writing-guide.md are in the project knowledge. Our sign-off changed from 'Happy digging' to 'Grow slowly' last month — update the guide.",
       "expected_output": "Should read profile.md and writing-guide.md from the project's files rather than looking for a folder on disk. Should update the sign-off entry, date the change and say where it came from, and keep every other decision as it was. Because a chat app can't save to the project, should give the user the complete updated writing-guide.md to replace in the project knowledge, and never write anything inside the installed plugin.",
       "files": [],
       "expectations": [

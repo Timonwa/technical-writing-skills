@@ -1,5 +1,5 @@
 ---
-name: seo-aeo-geo
+name: docs-seo-aeo-geo
 description: >-
   Making documentation findable three ways — SEO (ranking in search results), AEO (being the direct answer in a featured snippet, an AI Overview or the docs site's own search) and GEO (being the source AI answers and coding assistants cite). Covers what readers search with, titles of about 50–60 characters, descriptions of about 150–160, headings, slugs, redirects, versioned docs, canonicals, structured data and llms.txt. Use on "docs SEO", "make this docs page findable", "docs search", "versioned docs canonical".
 ---
@@ -19,7 +19,7 @@ Most of it is good documentation done precisely — the right title, the readers
 Before applying this skill, find the project's style guide and conventions and read them:
 
 - **In a codebase:** the style guide and conventions the project's `AGENTS.md` names, or its contributing docs.
-- **In a chat app:** the style guide in the project's files (a Claude Project's knowledge, or the equivalent elsewhere), or attached to the conversation.
+- **In a chat app:** the style guide in the project's files, or attached to the conversation.
 - **Otherwise:** ask whether one exists before concluding there isn't one.
 
 Voice, person, tone, terminology and formatting come from that guide. Where it settles something this skill also covers, the guide wins; where it's silent or there isn't one, `tw:docs-standards` applies without asking.
@@ -44,7 +44,7 @@ Documentation readers search for the thing in front of them, not for a topic —
 - **A name** — a command, function, flag, endpoint, setting or config key, exactly as the product writes it.
 - **A concept** — "what is a webhook signature", in the words readers use.
 
-Use the readers' words, not the product team's: if readers type "cost" and the docs say "billing", name both, with the readers' word in the title or first line ([GitHub Docs](https://docs.github.com/en/contributing/writing-for-github-docs/making-content-findable-in-search)). Record the choice in the terminology list (`tw:style-guide`). Find the words in the docs site's search log, support tickets and the search engine's own suggestions — never by guessing.
+Use the readers' words, not the product team's: if readers type "cost" and the docs say "billing", name both, with the readers' word in the title or first line ([GitHub Docs](https://docs.github.com/en/contributing/writing-for-github-docs/making-content-findable-in-search)). Record the choice in the terminology list (`tw:docs-style-guide`). Find the words in the docs site's search log, support tickets and the search engine's own suggestions — never by guessing.
 
 ## SEO: ranking in search results
 
@@ -143,5 +143,5 @@ AI search features draw on the same indexed pages: Google lists "no additional r
 ## Boundaries
 
 - **The site's code** — metadata tags and their generation, sitemaps, `robots.txt`, rendering and crawlability → the site's developers; this skill covers what the writer controls.
-- **Heading form, case and the four page types** → `tw:docs-standards`. **Redirects and moving pages** → `tw:developer-docs`. **Which pages the set needs, and readers' questions from search logs and tickets** → `tw:docs-planning`; **a whole set inventoried against them** → `/tw:content-audit`. **The terminology list** → `tw:style-guide`.
+- **Heading form, case and the four page types** → `tw:docs-standards`. **Redirects and moving pages** → `tw:developer-docs`. **Which pages the set needs, and readers' questions from search logs and tickets** → `tw:docs-planning`; **a whole set inventoried against them** → `/tw:content-audit`. **The terminology list** → `tw:docs-style-guide`.
 - **Articles, blog posts and newsletters** → `cw:seo-aeo-geo`.

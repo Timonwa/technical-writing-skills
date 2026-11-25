@@ -1,15 +1,15 @@
 # writing-skills
 
-Claude skills that help writers plan, write, edit and review documentation, blogs, newsletters and social posts.
+Agent skills that help writers plan, write, edit and review documentation, blogs, newsletters and social posts, in any IDE or AI agent that supports [Agent Skills](https://agentskills.io).
 
 [![License: MIT](https://img.shields.io/github/license/Timonwa/writing-skills)](LICENSE)
-[![Claude Code plugins](https://img.shields.io/badge/Claude%20Code-plugins-D97757)](#install)
+[![Agent Skills](https://img.shields.io/badge/Agent%20Skills-compatible-6E56CF)](https://agentskills.io)
 [![GitHub stars](https://img.shields.io/github/stars/Timonwa/writing-skills?style=flat)](https://github.com/Timonwa/writing-skills/stargazers)
 [![Buy Me a Coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-support-FFDD00?logo=buymeacoffee&logoColor=black)](https://buymeacoffee.com/timonwa)
 
 ## Contents
 
-- [The plugins](#the-plugins)
+- [The skill sets](#the-skill-sets)
 - [How the skills work](#how-the-skills-work)
 - [Install](#install)
 - [Set up a publication](#set-up-a-publication)
@@ -18,9 +18,9 @@ Claude skills that help writers plan, write, edit and review documentation, blog
 - [Contributing](#contributing)
 - [Support](#support)
 
-## The plugins
+## The skill sets
 
-| Plugin  | For                                                                                  | Install it if you write                                                                     |
+| Set     | For                                                                                  | Install it if you write                                                                     |
 | ------- | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------- |
 | `tw`    | Technical writing                                                                    | Developer docs, help-centre articles, internal docs, API references, READMEs, release notes |
 | `cw`    | Content writing                                                                      | Blog posts, newsletters, social posts and guest posts, on any subject                       |
@@ -28,23 +28,26 @@ Claude skills that help writers plan, write, edit and review documentation, blog
 
 ## How the skills work
 
-- Claude picks a skill when your request matches it, so you don't have to name it. Commands run only when you call them.
+- Your agent picks a skill when your request matches it, so you don't have to name it. Commands run only when you call them.
 - A skill reads your style guide or your publication's guide first, then asks only what's still missing.
 - Every file it writes — a brief, a post, a report — follows a fixed template, so each run looks the same.
 - It never invents a fact, figure or quote. A gap stays marked until you fill it.
 
 ## Install
 
-### Claude app (web or desktop)
+### Any IDE or AI agent
 
-1. Open **Customize > Plugins**.
-2. Select **Add > Add marketplace > Add from a repository**, and enter `Timonwa/writing-skills`.
-3. Add **tw**, **cw** or both. Each brings in **write**.
-4. Turn on **Settings > Capabilities > Create and edit files**. Skills don't run without it. On Team and Enterprise plans, an admin turns it on.
+```shell
+npx skills add Timonwa/writing-skills
+```
 
-Plugins are saved to your account, so they work in chat on mobile too.
+[`npx skills`](https://github.com/vercel-labs/skills) asks which skills to install and which agents to install them for — Cursor, GitHub Copilot, Codex, Gemini CLI, Claude Code and many more — and installs them in the current project. Add `-g` to install them for every project. To get the latest changes, run `npx skills update`.
 
-### Claude Code
+Without Node, copy the folders inside `plugins/write/skills/`, `plugins/tw/skills/` and `plugins/cw/skills/` into `.agents/skills/` in your project, or `~/.agents/skills/` for every project. Many agents read that folder. For the rest, use the skills folder your agent's docs name. To update, copy them again from the latest version of this repo.
+
+### Claude Code as plugins
+
+Claude Code can also install the sets as plugins, which keeps the `tw:` and `cw:` prefixes and runs commands as slash commands:
 
 ```shell
 /plugin marketplace add Timonwa/writing-skills
@@ -57,6 +60,23 @@ When it asks for a scope, pick one:
 - **User** — every project on your machine.
 - **Project** — everyone who clones the repo.
 - **Local** — this repo, for you only.
+
+To get the latest changes, run `/plugin marketplace update writing-skills`, or turn on auto-update for `writing-skills` under **Marketplaces** in `/plugin`.
+
+### Claude app (web or desktop)
+
+Install the plugins once, then work in a Project for each publication (see [Set up a publication](#set-up-a-publication)).
+
+1. Open **Customize > Plugins**.
+2. Select **Add > Add marketplace > Add from a repository**, and enter `Timonwa/writing-skills`.
+3. Add **tw**, **cw** or both. Each brings in **write**.
+4. Turn on **Settings > Capabilities > Create and edit files**. Skills don't run without it. On Team and Enterprise plans, an admin turns it on.
+
+Plugins are saved to your account, so they work in chat on mobile too. To get the latest changes, select **Check for updates** in **Customize > Plugins**, or turn on **Sync automatically** for the marketplace.
+
+### ChatGPT
+
+A custom GPT is coming soon.
 
 ## Set up a publication
 
@@ -88,18 +108,18 @@ publications/
 └── pitch-log.md                # every pitch and proposal, sent and received
 ```
 
+**In a codebase:**
+
+- Name the folder in the project's `AGENTS.md`, which every coding agent reads: `Publications: publications/`.
+- For a folder outside the repo, add the same line to your agent's personal instructions file, such as `~/.claude/CLAUDE.md` for Claude Code or `~/.codex/AGENTS.md` for Codex.
+- If nothing names a folder, the skills look for `publications/`, then ask.
+
 **In the Claude app:**
 
 - Make one Project per publication. Add its files, your logo, sample covers and any style guide you already have.
 - Projects can't hold folders, so a topic's files are named `<topic folder>--<file>`, such as `2026-12-sourdough-starter--blog.md`.
-- When Claude gives you an updated file, replace the old one. For `calendar.md`, it gives you only the line to change.
+- When the agent gives you an updated file, replace the old one. For `calendar.md`, it gives you only the line to change.
 - Outside a Project, attach the files to the chat.
-
-**In a codebase:**
-
-- Name the folder in the project's `AGENTS.md`, which every coding agent reads: `Publications: publications/`.
-- For a folder outside the repo, add the same line to `~/.claude/CLAUDE.md`.
-- If nothing names a folder, the skills look for `publications/`, then ask.
 
 **For documentation,** `tw` finds the project's style guide the same way. Without one, it follows `tw:docs-standards`.
 
@@ -114,23 +134,23 @@ publications/
 
 ### tw
 
-| Skill                 | Use it to                                                                                     |
-| --------------------- | --------------------------------------------------------------------------------------------- |
-| `docs-standards`      | Write docs pages that each do one thing: teach, walk through a task, list facts or explain    |
-| `docs-planning`       | Decide which docs pages you need, and find what's missing from the ones you have              |
-| `developer-docs`      | Write pages for a developer docs site, checked against the code                               |
-| `api-reference`       | Document an API: its endpoints, errors, sign-in and getting-started pages                     |
-| `user-guides`         | Write help-centre articles for the people who use a product                                   |
-| `internal-docs`       | Write runbooks, team processes, onboarding guides and decision records                        |
-| `readmes`             | Write or update a project's README                                                            |
-| `release-notes`       | Write release notes and changelogs that tell users what changed for them                      |
-| `codebase-research`   | Find the exact settings, limits and error messages in a product's code, so the docs are right |
-| `sme-interviews`      | Prepare to interview an engineer, then turn their answers into checked facts for the docs     |
-| `editing-standards`   | Edit a docs page someone has already written                                                  |
-| `style-guide`         | Create a style guide and word list for a set of docs                                          |
-| `images-and-diagrams` | Add screenshots, diagrams and image descriptions to docs                                      |
-| `seo-aeo-geo`         | Help readers find your docs through Google and AI tools like ChatGPT                          |
-| `localization`        | Write docs that translate well, and keep translated versions up to date                       |
+| Skill                      | Use it to                                                                                     |
+| -------------------------- | --------------------------------------------------------------------------------------------- |
+| `docs-standards`           | Write docs pages that each do one thing: teach, walk through a task, list facts or explain    |
+| `docs-planning`            | Decide which docs pages you need, and find what's missing from the ones you have              |
+| `developer-docs`           | Write pages for a developer docs site, checked against the code                               |
+| `api-reference`            | Document an API: its endpoints, errors, sign-in and getting-started pages                     |
+| `user-guides`              | Write help-centre articles for the people who use a product                                   |
+| `internal-docs`            | Write runbooks, team processes, onboarding guides and decision records                        |
+| `readmes`                  | Write or update a project's README                                                            |
+| `release-notes`            | Write release notes and changelogs that tell users what changed for them                      |
+| `codebase-research`        | Find the exact settings, limits and error messages in a product's code, so the docs are right |
+| `sme-interviews`           | Prepare to interview an engineer, then turn their answers into checked facts for the docs     |
+| `docs-editing-standards`   | Edit a docs page someone has already written                                                  |
+| `docs-style-guide`         | Create a style guide and word list for a set of docs                                          |
+| `docs-images-and-diagrams` | Add screenshots, diagrams and image descriptions to docs                                      |
+| `docs-seo-aeo-geo`         | Help readers find your docs through Google and AI tools like ChatGPT                          |
+| `localization`             | Write docs that translate well, and keep translated versions up to date                       |
 
 ### cw
 
@@ -165,6 +185,7 @@ publications/
 | `/cw:review`              | Check a post or newsletter issue is ready to publish                             |
 | `/cw:content-performance` | See which posts to fix first, from your analytics export                         |
 
+- Outside Claude Code, call a command by its name, such as "run review on blog.md", and add `--fix` the same way.
 - A command reports what it finds and doesn't edit anything while it checks.
 - Every command except `/cw:content-performance` takes `--fix`, which fixes only the findings you choose.
 - Docs reports go to `_reports/`. Content reports go to the topic's or publication's `reports/`.
@@ -177,15 +198,15 @@ Issues and pull requests are welcome, especially for a rule that misfires on you
 
 - Change one skill where you can.
 - Update its `evals/evals.json`.
-- Keep `SKILL.md` under 200 lines and its description under 550 characters. Longer material goes in the skill's `references/` folder, which Claude reads only when it needs it.
+- Keep `SKILL.md` under 200 lines and its description under 550 characters, and give a new skill a name no other set uses. Longer material goes in the skill's `references/` folder, which the agent reads only when it needs it.
 - Run the checks:
 
-| Script              | Use it to                                                                | Needs                       |
-| ------------------- | ------------------------------------------------------------------------ | --------------------------- |
-| `pnpm format`       | Format everything with Prettier                                          | `pnpm install` first        |
-| `pnpm format:check` | Check formatting without writing                                         | `pnpm install` first        |
-| `pnpm validate`     | Validate the marketplace and plugin manifests                            | the Claude Code CLI on PATH |
-| `pnpm check:skills` | Fail on a `SKILL.md` over 200 lines or a description over 550 characters | Node                        |
+| Script              | Use it to                                                                                                                                     | Needs                       |
+| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------- |
+| `pnpm format`       | Format everything with Prettier                                                                                                               | `pnpm install` first        |
+| `pnpm format:check` | Check formatting without writing                                                                                                              | `pnpm install` first        |
+| `pnpm validate`     | Validate the Claude Code marketplace and plugin manifests                                                                                     | the Claude Code CLI on PATH |
+| `pnpm check:skills` | Check every skill against the Agent Skills rules and the house limits: 200 lines, a 550-character description, and a name no other skill uses | Node                        |
 
 The skills are Markdown, so there's no build step, and Prettier is the only dependency. Without installing it, run `pnpm dlx prettier --write .` instead.
 
