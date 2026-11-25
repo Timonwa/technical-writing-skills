@@ -3,8 +3,6 @@ name: docs-audit
 description: >-
   Manually invoked. Audits a body of documentation for defects a reader would hit — claims that no longer match the product, broken links and anchors, navigation integrity, duplicated and contradictory content, missing coverage, stale images, and content nobody has verified in months. Works on a docs repo, an exported help centre, or any folder of documents. Verifies each finding and writes a prioritized report. Never edits a page.
 argument-hint: '[path] [--source <path-or-url>] [--fix]'
-model: opus
-effort: high
 disable-model-invocation: true
 disallowed-tools: Edit, NotebookEdit
 ---

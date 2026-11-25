@@ -3,8 +3,6 @@ name: docs-review
 description: >-
   Manually invoked. Editorial review of one document, a folder or a diff — a docs page, a guide, a reference entry, a runbook — working down the five levels of edit: substantive, technical accuracy, line, copy and proof. Returns numbered findings with a proposed replacement for each, a batched list of questions only the author or an expert can settle, and a record of what was verified against a real source. Reports first, then asks which findings to fix. Use on "review this doc", "check this docs draft", "is this page ready to publish".
 argument-hint: '[path] [--fix]'
-model: opus
-effort: high
 disallowed-tools: Edit, NotebookEdit
 disable-model-invocation: true
 ---
