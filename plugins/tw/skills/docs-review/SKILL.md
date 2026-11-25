@@ -1,5 +1,5 @@
 ---
-name: doc-review
+name: docs-review
 description: >-
   Manually invoked. Editorial review of one document, a folder or a diff — a docs page, a guide, a reference entry, a runbook — working down the five levels of edit: substantive, technical accuracy, line, copy and proof. Returns numbered findings with a proposed replacement for each, a batched list of questions only the author or an expert can settle, and a record of what was verified against a real source. Reports first, then asks which findings to fix. Use on "review this doc", "check this docs draft", "is this page ready to publish".
 argument-hint: '[path] [--fix]'
@@ -25,7 +25,7 @@ Before reviewing, find the project's style guide and conventions and read them:
 
 Voice, person, tone, terminology and formatting come from that guide. Where it settles something this skill also covers, the guide wins; where it's silent or there isn't one, `tw:docs-standards` applies without asking, and a page that departs from it is a finding.
 
-The editing craft is `tw:docs-editing-standards`; the rules every piece obeys are `write:writing-standards`; the structure for the page's type comes from the skill for that type.
+The editing craft is `tw:docs-editing-standards`; the rules every piece obeys are `tw:docs-writing-standards`; the structure for the page's type comes from the skill for that type.
 
 ## Ask first
 
@@ -42,7 +42,7 @@ Read the answers from the request, the arguments, the document itself, the proje
 ## Arguments
 
 - `[path]` — a file, a folder, or a diff. Omitted → review the current changes if there are any, otherwise ask.
-- `[--fix]` — don't audit. Read the existing report for the page given, list what's in it, and ask which findings to fix. With no path, list the doc-review reports on disk and ask which. For acting on a report from an earlier run.
+- `[--fix]` — don't audit. Read the existing report for the page given, list what's in it, and ask which findings to fix. With no path, list the docs-review reports on disk and ask which. For acting on a report from an earlier run.
 
 ## Method
 
@@ -80,7 +80,7 @@ Read the answers from the request, the arguments, the document itself, the proje
 
 ### Report format
 
-The report follows the template in [references/output-format.md](references/output-format.md): a header recording the scope answers, the score change, the findings with a proposed replacement each, the questions for the author, what was verified, and the scorecard by level. It goes to `_reports/doc-review-<page-slug>.md`, one report per page — the slug is the page's path under the docs folder with slashes as hyphens (`docs/guides/rotate-keys.md` → `_reports/doc-review-guides-rotate-keys.md`).
+The report follows the template in [references/output-format.md](references/output-format.md): a header recording the scope answers, the score change, the findings with a proposed replacement each, the questions for the author, what was verified, and the scorecard by level. It goes to `_reports/docs-review-<page-slug>.md`, one report per page — the slug is the page's path under the docs folder with slashes as hyphens (`docs/guides/rotate-keys.md` → `_reports/docs-review-guides-rotate-keys.md`).
 
 ### Output
 
@@ -128,7 +128,7 @@ Everything else is unchanged: list the findings, ask which, fix only those, upda
 ## Boundaries
 
 - **The whole set rather than one document** → `/tw:docs-audit` for defects, `/tw:content-audit` for shape, `/tw:style-check` for consistency.
-- **Does it sound machine-written** → `/write:ai-check`. That pass is not run here by default; ask for it.
-- **Articles, essays and newsletter issues** → `/cw:review`.
+- **Does it sound machine-written** → `/tw:docs-ai-check`. That pass is not run here by default; ask for it.
+- **Articles, essays and newsletter issues** → `/cw:review` in [content-writing-skills](https://github.com/Timonwa/content-writing-skills).
 - **Writing from scratch** — this reviews what exists. A finding that the document should be several documents is raised, not acted on.
 - **The author owns the document.** On technical content they usually know something you don't; findings are proposals, and a rejected finding is not re-argued.

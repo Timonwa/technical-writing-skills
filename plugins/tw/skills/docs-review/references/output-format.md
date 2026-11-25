@@ -1,6 +1,6 @@
 # Doc review output format
 
-Write to `_reports/doc-review-<page-slug>.md`, one report per page, creating the directory if it doesn't exist — the slug is the page's path under the docs folder with slashes as hyphens and no extension (`docs/guides/rotate-keys.md` → `_reports/doc-review-guides-rotate-keys.md`). Summarise the findings in chat, and tell the user the path when you're done. The header records the answers to the skill's Ask first questions, so a later run or a `--fix` knows what this one covered.
+Write to `_reports/docs-review-<page-slug>.md`, one report per page, creating the directory if it doesn't exist — the slug is the page's path under the docs folder with slashes as hyphens and no extension (`docs/guides/rotate-keys.md` → `_reports/docs-review-guides-rotate-keys.md`). Summarise the findings in chat, and tell the user the path when you're done. The header records the answers to the skill's Ask first questions, so a later run or a `--fix` knows what this one covered.
 
 ```markdown
 # Review — <document>

@@ -1,15 +1,15 @@
 {
-  "skill_name": "doc-review",
+  "skill_name": "docs-review",
   "evals": [
     {
       "id": 1,
-      "prompt": "/tw:doc-review docs/guides/rotate-keys.md",
-      "expected_output": "Should review the one document, working down the five levels in order — substantive, technical accuracy, line, copy, proof — without editing anything. Should load the project's style guide first, asking before concluding there isn't one, and apply tw:docs-standards where the guide is silent. Should write the report to _reports/doc-review-guides-rotate-keys.md, summarise the findings in chat worst-first with a proposed replacement for each, batch the questions only the author can answer, list what was verified, then ask which findings to fix and edit nothing until answered. Should read the document's type, audience and source of truth from the page and the project, ask only what's missing, and record them in the report header.",
+      "prompt": "/tw:docs-review docs/guides/rotate-keys.md",
+      "expected_output": "Should review the one document, working down the five levels in order — substantive, technical accuracy, line, copy, proof — without editing anything. Should load the project's style guide first, asking before concluding there isn't one, and apply tw:docs-standards where the guide is silent. Should write the report to _reports/docs-review-guides-rotate-keys.md, summarise the findings in chat worst-first with a proposed replacement for each, batch the questions only the author can answer, list what was verified, then ask which findings to fix and edit nothing until answered. Should read the document's type, audience and source of truth from the page and the project, ask only what's missing, and record them in the report header.",
       "files": [],
       "expectations": [
         "Works down the five levels in order",
         "Edits nothing before the user picks findings",
-        "Writes the report to _reports/doc-review-guides-rotate-keys.md",
+        "Writes the report to _reports/docs-review-guides-rotate-keys.md",
         "Gives each finding a proposed replacement and severity",
         "Batches author questions into one list",
         "Asks which findings to fix",
@@ -32,7 +32,7 @@
     },
     {
       "id": 3,
-      "prompt": "/tw:doc-review --fix — fix findings 2 and 5 from last week's review.",
+      "prompt": "/tw:docs-review --fix — fix findings 2 and 5 from last week's review.",
       "expected_output": "Should not re-audit. Should find last week's report (asking which page's report if several exist and no path was given), read it, say how old it is, verify findings 2 and 5 still exist at their actual locations before fixing, drop any that are gone as stale, check cheaply whether the docs have moved on since the report's date, and fix only 2 and 5. Should then mark them FIXED in the report with a one-line note, leave every other finding untouched, and re-score showing the movement.",
       "files": [],
       "expectations": [
