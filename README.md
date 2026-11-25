@@ -29,6 +29,7 @@ Agent skills that help writers plan, write, edit and review documentation, blogs
 ## How the skills work
 
 - Your agent picks a skill when your request matches it, so you don't have to name it. Commands run only when you call them.
+- To call a skill or command by name, type `$` and its name in Codex (`$readmes`, `$review blog.md`), or `/` in Claude Code (`/readmes`, or `/tw:readmes` with the plugins). In other agents, ask for it by name: "use the readmes skill". To see them all, ask your agent "which writing skills do you have?"
 - A skill reads your style guide or your publication's guide first, then asks only what's still missing.
 - Every file it writes — a brief, a post, a report — follows a fixed template, so each run looks the same.
 - It never invents a fact, figure or quote. A gap stays marked until you fill it.
@@ -42,6 +43,12 @@ npx skills add Timonwa/writing-skills
 ```
 
 [`npx skills`](https://github.com/vercel-labs/skills) asks which skills to install and which agents to install them for — Cursor, GitHub Copilot, Codex, Gemini CLI, Claude Code and many more — and installs them in the current project. Add `-g` to install them for every project. To get the latest changes, run `npx skills update`.
+
+To skip the questions, name your agents and take every skill. For example, for Codex and Claude Code in every project:
+
+```shell
+npx skills add Timonwa/writing-skills -g -a codex -a claude-code --skill '*'
+```
 
 Without Node, copy the folders inside `plugins/write/skills/`, `plugins/tw/skills/` and `plugins/cw/skills/` into `.agents/skills/` in your project, or `~/.agents/skills/` for every project. Many agents read that folder. For the rest, use the skills folder your agent's docs name. To update, copy them again from the latest version of this repo.
 
@@ -185,7 +192,7 @@ publications/
 | `/cw:review`              | Check a post or newsletter issue is ready to publish                             |
 | `/cw:content-performance` | See which posts to fix first, from your analytics export                         |
 
-- Outside Claude Code, call a command by its name, such as "run review on blog.md", and add `--fix` the same way.
+- The table uses Claude Code plugin names. With a plain install, Claude Code drops the prefix (`/review blog.md`), and a command runs only when you type its `/` name. In Codex, type `$review blog.md`; in other agents, ask by name, such as "run review on blog.md". Add `--fix` the same way.
 - A command reports what it finds and doesn't edit anything while it checks.
 - Every command except `/cw:content-performance` takes `--fix`, which fixes only the findings you choose.
 - Docs reports go to `_reports/`. Content reports go to the topic's or publication's `reports/`.
