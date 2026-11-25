@@ -1,5 +1,6 @@
 // Fails on any skill past the house limits: SKILL.md lines, description and name length, and its evals.
-// Tighter than Anthropic's (500 lines, 1,024 characters) so a skill stays quick to load and to read.
+// Tighter than the Agent Skills spec's (1,024 characters) so a skill stays quick to load and to read.
+// Names are also unique across all sets: agents outside Claude Code install skills into one flat folder.
 import { existsSync, readFileSync, readdirSync } from 'node:fs'
 import { join } from 'node:path'
 
@@ -8,6 +9,8 @@ const MAX_DESCRIPTION = 550
 const MAX_NAME = 64
 const MIN_EVALS = 3
 const MAX_EVALS = 4
+const NAME_PATTERN = /^[a-z0-9]+(-[a-z0-9]+)*$/
+const seenNames = new Map()
 
 function readFrontmatter(content) {
   const frontmatter = content.split('---')[1] ?? ''
@@ -43,6 +46,8 @@ const problems = readdirSync('plugins').flatMap((plugin) =>
     const content = readFileSync(file, 'utf8')
     const lineCount = content.split('\n').length - (content.endsWith('\n') ? 1 : 0)
     const { name, description } = readFrontmatter(content)
+    const firstWithName = seenNames.get(name)
+    seenNames.set(name, file)
     return [
       lineCount > MAX_LINES && `${file}: ${lineCount} lines (max ${MAX_LINES})`,
       description.length > MAX_DESCRIPTION &&
@@ -50,6 +55,9 @@ const problems = readdirSync('plugins').flatMap((plugin) =>
       !description && `${file}: no description`,
       name !== skill && `${file}: name "${name}" doesn't match the folder "${skill}"`,
       name.length > MAX_NAME && `${file}: name ${name.length} characters (max ${MAX_NAME})`,
+      !NAME_PATTERN.test(name) &&
+        `${file}: name "${name}" must be lowercase letters, numbers and single hyphens`,
+      firstWithName && `${file}: name "${name}" is already used by ${firstWithName}`,
       ...checkEvals(dir, skill),
     ].filter(Boolean)
   })
