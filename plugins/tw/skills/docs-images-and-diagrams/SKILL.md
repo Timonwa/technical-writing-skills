@@ -22,7 +22,7 @@ Before adding or changing a visual, find the project's style guide and conventio
 - **In a chat app:** the style guide in the project's files, or attached to the conversation.
 - **Otherwise:** ask whether one exists before concluding there isn't one.
 
-Where the guide settles something this skill also covers, the guide wins; where it's silent, `tw:docs-standards` applies.
+Where the guide settles something this skill also covers, the guide wins; where it's silent, `docs-standards` applies.
 
 ## Ask first
 
@@ -158,9 +158,9 @@ This is where image-heavy documentation fails, and it fails quietly.
 
 ## Boundaries
 
-- **Whether the page needs a visual at all**, and where it sits in the structure → `tw:developer-docs`, `tw:user-guides` or `tw:internal-docs`.
-- **Text inside images breaks translation**, and a localized product needs recapturing per locale → `tw:localization`.
-- **Code blocks are not images** — never screenshot code. The rules for code are in `write:code-samples`.
-- **Photos, charts and images in an article or newsletter** → `cw:images-and-diagrams`.
+- **Whether the page needs a visual at all**, and where it sits in the structure → `developer-docs`, `user-guides` or `internal-docs`.
+- **Text inside images breaks translation**, and a localized product needs recapturing per locale → `localization`.
+- **Code blocks are not images** — never screenshot code. The rules for code are in `docs-code-samples`.
+- **Photos, charts and images in an article or newsletter** → `images-and-diagrams` in [content-writing-skills](https://github.com/Timonwa/content-writing-skills).
 - **The product's real screens, labels and demo data** are captured from the running product or asked for, never mocked up to look like it.
 - A logo, brand icon or favicon set is a different job: the type has to be outlined and the assets have to survive export at many sizes. Out of scope.

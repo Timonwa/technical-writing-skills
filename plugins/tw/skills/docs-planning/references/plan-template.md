@@ -5,7 +5,7 @@ The plan this skill produces: the documents to write, in order, with a home for 
 ```markdown
 # Docs plan — <the set, release or feature>
 
-**Date:** <YYYY-MM-DD> · **Scope:** <new set / restructure / a release or feature / placing one page> · **Product version:** <version> · **Lives in:** <platform or framework, repo and path> · **Guide:** <path, or "none found — tw:docs-standards"> · **Task evidence:** <tickets / search logs / community questions / analytics — or "assumed"> · **Existing set:** <path or URL, or "none — from scratch">
+**Date:** <YYYY-MM-DD> · **Scope:** <new set / restructure / a release or feature / placing one page> · **Product version:** <version> · **Lives in:** <platform or framework, repo and path> · **Guide:** <path, or "none found — docs-standards"> · **Task evidence:** <tickets / search logs / community questions / analytics — or "assumed"> · **Existing set:** <path or URL, or "none — from scratch">
 
 ## Audiences
 | Audience | What they already know | What they're trying to do |

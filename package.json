@@ -1,10 +1,10 @@
 {
-  "name": "writing-skills",
-  "version": "2.0.0",
+  "name": "technical-writing-skills",
+  "version": "3.0.0",
   "private": true,
-  "description": "Agent skills that help writers plan, write, edit and review documentation, blogs, newsletters and social posts.",
+  "description": "Agent skills that help technical writers plan, write, edit and review documentation.",
   "license": "MIT",
-  "repository": "github:Timonwa/writing-skills",
+  "repository": "github:Timonwa/technical-writing-skills",
   "packageManager": "pnpm@11.1.1",
   "scripts": {
     "format": "prettier --write .",

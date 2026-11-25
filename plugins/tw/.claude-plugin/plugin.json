@@ -1,13 +1,12 @@
 {
   "name": "tw",
   "displayName": "Technical Writing Skills",
-  "description": "Technical writing skills: plan a docs set, write developer docs, help-centre articles, internal docs, API references, READMEs and release notes, research the code, interview engineers, and review, audit and edit docs. Includes write.",
-  "dependencies": ["write"],
+  "description": "Technical writing skills: plan a docs set, write developer docs, help-centre articles, internal docs, API references, READMEs and release notes, research the code, interview engineers, and review, audit and edit docs. Includes plain language, sourced claims, code samples that run and a check for machine-written prose.",
   "author": {
     "name": "Timonwa"
   },
-  "homepage": "https://github.com/Timonwa/writing-skills",
-  "repository": "https://github.com/Timonwa/writing-skills",
+  "homepage": "https://github.com/Timonwa/technical-writing-skills",
+  "repository": "https://github.com/Timonwa/technical-writing-skills",
   "license": "MIT",
   "keywords": [
     "technical-writing",
@@ -18,6 +17,9 @@
     "readme",
     "release-notes",
     "help-center",
-    "style-guide"
+    "style-guide",
+    "plain-language",
+    "code-samples",
+    "ai-writing"
   ]
 }

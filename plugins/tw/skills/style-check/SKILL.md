@@ -28,7 +28,7 @@ Before checking it, find the project's style guide and conventions and read them
 Voice, person, tone, terminology and formatting come from that guide.
 
 - Where the guide settles something this skill also covers, the guide wins — including where it departs from the documentation voice and says so.
-- Where the guide is silent or there isn't one, `tw:docs-standards` is the default, applied without asking, and drift from it is a **finding**, not a proposal.
+- Where the guide is silent or there isn't one, `docs-standards` is the default, applied without asking, and drift from it is a **finding**, not a proposal.
 - When a fix adds to the guide — a terminology entry, a recorded decision — in a codebase, save it in the guide's file; in a chat app, give the user the updated guide to replace in the project's files.
 
 ## Ask first
@@ -50,9 +50,9 @@ Read the answers from the arguments, the request and the project first; ask only
 
 ## Method
 
-**Frequency decides the rule, not taste — for what no standard settles.** In derive mode you are finding the convention the docs already mostly follow and flagging the minority that breaks it. Where `tw:docs-standards` sets a default — sentence-case headings, "you", present tense — that default holds even if most pages break it, unless the project records otherwise; say so in the report, and offer the majority as a decision the project can record. Where a set is genuinely split down the middle on something no standard settles, raise it for a decision rather than settling it yourself.
+**Frequency decides the rule, not taste — for what no standard settles.** In derive mode you are finding the convention the docs already mostly follow and flagging the minority that breaks it. Where `docs-standards` sets a default — sentence-case headings, "you", present tense — that default holds even if most pages break it, unless the project records otherwise; say so in the report, and offer the majority as a decision the project can record. Where a set is genuinely split down the middle on something no standard settles, raise it for a decision rather than settling it yourself.
 
-1. **Load the standard** — the project's guide if there is one, asking for it before concluding there isn't, then `tw:docs-standards` for what it leaves open. Only then derive the remaining conventions, and state what you derived and how strongly.
+1. **Load the standard** — the project's guide if there is one, asking for it before concluding there isn't, then `docs-standards` for what it leaves open. Only then derive the remaining conventions, and state what you derived and how strongly.
 2. **Sweep the whole set**, not a sample. A consistency finding is only meaningful against the full corpus, and the outlier is the point.
 3. **Count everything.** Every finding carries how many times each variant appears and where. A drift report without counts can't be acted on.
 4. **Separate a drift from a decision.** Where two variants both appear substantially and no standard decides, flag it as an open decision with the counts and a recommendation.
@@ -140,9 +140,9 @@ Everything else is unchanged: list the findings, ask which, fix only those, upda
 
 ## Boundaries
 
-- **Deep editorial work on one page** → `/tw:doc-review`.
-- **Does it sound machine-written** → `/write:ai-check`.
-- **Setting the conventions** rather than enforcing them → `tw:docs-style-guide`. A derived convention is a proposal for the guide, not a decision made on the project's behalf.
-- **Is it true and does it work** → `/tw:docs-audit`; **is it the right set** → `/tw:content-audit`.
-- **A blog, publication or newsletter archive** → `/cw:style-check`.
+- **Deep editorial work on one page** → `/docs-review`.
+- **Does it sound machine-written** → `/docs-ai-check`.
+- **Setting the conventions** rather than enforcing them → `docs-style-guide`. A derived convention is a proposal for the guide, not a decision made on the project's behalf.
+- **Is it true and does it work** → `/docs-audit`; **is it the right set** → `/content-audit`.
+- **A blog, publication or newsletter archive** → `content-refresh` in [content-writing-skills](https://github.com/Timonwa/content-writing-skills), which brings old pieces up to the current guide.
 - **Where the docs and the product disagree on a name**, the product is evidence but not automatically right — flag the conflict rather than silently siding with either.

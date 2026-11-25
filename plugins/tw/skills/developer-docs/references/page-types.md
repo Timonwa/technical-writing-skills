@@ -1,6 +1,6 @@
 # The four docs page types — section blueprints
 
-Which quadrant a topic needs — and why mixing them fails — is `tw:docs-standards`' call (Diátaxis). This file is the docs-site rendering of each: the section order to follow once the type is chosen, with a fill-in skeleton for each. The skeleton goes in the frame's middle.
+Which quadrant a topic needs — and why mixing them fails — is `docs-standards`' call (Diátaxis). This file is the docs-site rendering of each: the section order to follow once the type is chosen, with a fill-in skeleton for each. The skeleton goes in the frame's middle.
 
 ## The frame every page shares
 
@@ -103,7 +103,7 @@ The reader is mid-task and needs a fact. Structure mirrors the code, not a narra
 - Tables for the matrix material: parameters, options, defaults, types, error codes — every entry, not the interesting ones
 - A minimal runnable example per entry point
 - No advice, no "you should usually…" — link the relevant how-to or explanation instead
-- Generated API references (OpenAPI/Swagger) → `tw:api-reference`, not hand-written pages
+- Generated API references (OpenAPI/Swagger) → `api-reference`, not hand-written pages
 
 Fill-in skeleton:
 

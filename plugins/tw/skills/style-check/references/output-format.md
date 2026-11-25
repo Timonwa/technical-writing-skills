@@ -12,7 +12,7 @@ Write to `_reports/docs-style-check.md`, creating the directory if it doesn't ex
 | Version        | <current only · all versions · a named version>            |
 | Excluded       | <generated reference, changelogs, translated locales…>     |
 | Pages          | <N>                                                        |
-| Standard       | <guide path, or "tw:docs-standards + derived">             |
+| Standard       | <guide path, or "docs-standards + derived">             |
 | Product source | <where the product's own names were checked, or "none">    |
 | Mode           | Report-only                                                |
 | Consistency    | <X>/10                                                     |

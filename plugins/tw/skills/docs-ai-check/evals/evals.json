@@ -1,0 +1,58 @@
+{
+  "skill_name": "docs-ai-check",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "/docs-ai-check docs/guides/webhooks.md — a 1,200-word page with 11 em dashes, 'leverage' twice, 'In today's fast-paced world' as its opening and a closing paragraph that says the reader is now well equipped.",
+      "expected_output": "Should take the page and its kind from the request without asking, read the project's guide first and record what was checked and which guide applied in the report's header. Should count before judging: report em-dash density per 1,000 words (about 9, above the strong threshold of about 6) with locations, plus the vocabulary, opening and congratulating-closer tells, each with a location and a proposed rewrite. Should write the report to _reports/docs-ai-check-guides-webhooks.md with the score-change row, summary, findings, deliberate section and scorecard, summarise in chat, then list findings by ID and ask which to fix. Should not edit the page before the user answers, and should not claim the page was AI-generated.",
+      "files": [],
+      "expectations": [
+        "Does not ask for anything the request already answers (the page, that it is documentation)",
+        "Reports em-dash density per 1,000 words with locations",
+        "Flags the vocabulary, opening and closing tells with rewrites",
+        "Writes _reports/docs-ai-check-guides-webhooks.md in the given format with scores",
+        "Asks which findings to fix before editing anything",
+        "Makes no claim about authorship"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "/docs-ai-check docs/concepts/rate-limits.md. It cites 'a 2024 Stanford study' showing that clients with backoff fail 40% less often, but gives no link. Our style guide uses em-dash asides on purpose.",
+      "expected_output": "Should treat the unlinked citation as the most important tell: open and verify the source, and report it as a substance finding if the study can't be found or doesn't say 40%. Should read the style guide and list the guide's em-dash asides under 'Deliberate — left alone' rather than flag them. Should report, score and ask before editing.",
+      "files": [],
+      "expectations": [
+        "Checks the cited study before anything else",
+        "Reports an unverifiable or misquoted citation as a substance finding",
+        "Leaves the guide-sanctioned em-dash asides under Deliberate",
+        "Does not edit before asking which findings to fix"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "/docs-ai-check --fix — fix 2 and 5 from the report you ran last week.",
+      "expected_output": "Should find last week's report (asking which one if several docs-ai-check reports exist and no path was given), read it, say how old it is, and verify findings 2 and 5 still exist at their locations before changing anything; drop either that no longer exists and say so rather than counting it as fixed. Should fix only those two, mark them FIXED in the report with a note, leave the rest untouched, re-score and show the movement. Should not re-audit and renumber.",
+      "files": [],
+      "expectations": [
+        "States the report's age",
+        "Verifies each named finding still exists before fixing",
+        "Fixes only findings 2 and 5",
+        "Marks them FIXED in the report and re-scores",
+        "Does not re-run the audit or renumber findings"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "/docs-ai-check docs/guides/ — 12 pages, most of them ending with a paragraph that says the reader is now ready to build.",
+      "expected_output": "Should check every page in the folder without asking which, and read the project's style guide first. Should flag the repeated congratulating closers as one pattern across pages, with each location, a count and a rewrite that ends on the next step instead. Should write one report per page to _reports/docs-ai-check-<page-slug>.md from the template in references/output-format.md, each header naming the page checked, the date and the guide. Should summarise in chat, list findings by ID and ask which to fix before editing anything.",
+      "files": [],
+      "expectations": [
+        "Checks every page in the folder without asking which",
+        "Flags the repeated closers with locations and a count",
+        "Proposes a rewrite that ends on the next step",
+        "Writes one report per page to _reports/docs-ai-check-<page-slug>.md",
+        "Report header names the page checked, the date and the guide",
+        "Asks which findings to fix before editing anything"
+      ]
+    }
+  ]
+}

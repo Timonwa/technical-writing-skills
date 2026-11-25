@@ -1,6 +1,6 @@
 // Fails on any skill past the house limits: SKILL.md lines, description and name length, and its evals.
 // Tighter than the Agent Skills spec's (1,024 characters) so a skill stays quick to load and to read.
-// Names are also unique across all sets: agents outside Claude Code install skills into one flat folder.
+// Names are also unique: many agents install every skill into one flat folder.
 import { existsSync, readFileSync, readdirSync } from 'node:fs'
 import { join } from 'node:path'
 

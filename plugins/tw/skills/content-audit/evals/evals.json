@@ -3,7 +3,7 @@
   "evals": [
     {
       "id": 1,
-      "prompt": "/tw:content-audit docs/",
+      "prompt": "/content-audit docs/",
       "expected_output": "Should ask who reads the set and whether a task list, journey map or support-ticket export exists before building one, then derive the reader tasks and present them for confirmation before the gap analysis. Should inventory every page with type, audience, task, owner, last-verified date, usage and words, leaving unknown cells blank as findings, assign a verdict per page, cluster duplicates with a canonical page, run the gap analysis in both directions, write _reports/content-audit.md and never edit, move, merge or delete a page. Should ask the missing scope questions as one numbered list or with the question tool — product version, usage data, where owners and last-verified dates are kept — and record the answers in the report header.",
       "files": [],
       "expectations": [
@@ -31,11 +31,11 @@
     {
       "id": 3,
       "prompt": "In the content audit, two pages on webhook setup say different things about the retry count. Should the content audit decide which is right?",
-      "expected_output": "Should flag the contradiction as a defect in the duplicate cluster and route the accuracy call to /tw:docs-audit, since the content audit judges the shape of the set and the docs audit judges whether pages are true. Should still name the canonical page for the cluster and give the other a Merge verdict.",
+      "expected_output": "Should flag the contradiction as a defect in the duplicate cluster and route the accuracy call to /docs-audit, since the content audit judges the shape of the set and the docs audit judges whether pages are true. Should still name the canonical page for the cluster and give the other a Merge verdict.",
       "files": [],
       "expectations": [
         "Flags the contradiction within the duplicate cluster",
-        "Routes the accuracy decision to /tw:docs-audit",
+        "Routes the accuracy decision to /docs-audit",
         "Names a canonical page for the cluster",
         "Gives the duplicate a Merge verdict"
       ]

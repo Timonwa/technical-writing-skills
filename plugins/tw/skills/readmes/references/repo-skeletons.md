@@ -105,7 +105,7 @@ Signal: lives under `packages/` or `apps/`.
 Signal: exists to show something off.
 
 - Says what it demonstrates, links the thing it demos, and gives the shortest path to running it
-- A tutorial's companion repo needs a different shape → `cw:demo-project`
+- A tutorial's companion repo needs a different shape → `demo-project` in [content-writing-skills](https://github.com/Timonwa/content-writing-skills)
 
 ## One of a set of near-identical templates
 

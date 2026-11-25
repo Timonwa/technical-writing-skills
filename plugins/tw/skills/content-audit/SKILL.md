@@ -15,11 +15,11 @@ disallowed-tools: Edit, NotebookEdit
 
 A **manually-invoked audit of the shape of a documentation set**: what exists, whether each piece earns its place, and what's missing.
 
-It asks a different question from `/tw:docs-audit`. That one asks whether a page is **true and working**; this one asks whether the set is the **right set** — and a perfectly accurate page for a task nobody performs still fails this audit.
+It asks a different question from `/docs-audit`. That one asks whether a page is **true and working**; this one asks whether the set is the **right set** — and a perfectly accurate page for a task nobody performs still fails this audit.
 
 ## Voice and audience come from the writing's own guide
 
-Before inventorying it, find the project's style guide and conventions and read them — in a codebase, the ones the project's `AGENTS.md` names or its contributing docs; in a chat app, the style guide in the project's files or attached to the conversation; otherwise, ask whether one exists before concluding there isn't one. Where the guide settles something, the guide wins; where it's silent or there isn't one, `tw:docs-standards` applies without asking. The standard behind the verdicts is `tw:docs-planning`; `tw:docs-standards` supplies the document types. Works on any body of content — a docs repo, an exported help centre, a knowledge base, a folder of documents.
+Before inventorying it, find the project's style guide and conventions and read them — in a codebase, the ones the project's `AGENTS.md` names or its contributing docs; in a chat app, the style guide in the project's files or attached to the conversation; otherwise, ask whether one exists before concluding there isn't one. Where the guide settles something, the guide wins; where it's silent or there isn't one, `docs-standards` applies without asking. The standard behind the verdicts is `docs-planning`; `docs-standards` supplies the document types. Works on any body of content — a docs repo, an exported help centre, a knowledge base, a folder of documents.
 
 ## Ask first
 
@@ -92,7 +92,7 @@ Run it in both directions — the second one is the one people skip:
 ### Structure findings
 
 - **Duplicate clusters** — every group of pages covering the same ground, with the canonical page named.
-- **Contradictions between duplicates** — where two copies have drifted apart, flag it as a defect and route it to `/tw:docs-audit` for the accuracy call.
+- **Contradictions between duplicates** — where two copies have drifted apart, flag it as a defect and route it to `/docs-audit` for the accuracy call.
 - **Orphans** — pages nothing links to. **Ghosts** — navigation entries pointing at nothing.
 - **Depth** — where the hierarchy runs deeper than two levels, and whether the grouping is the reason.
 - **Grouping** — whether sections follow reader tasks, or the product's feature list, or the org chart. The last two are findings.
@@ -150,8 +150,8 @@ Everything else is unchanged: list the findings, ask which, fix only those, upda
 
 ## Boundaries
 
-- **Defects inside a page** — stale claims, broken links, untested examples → `/tw:docs-audit`.
-- **Terminology and voice consistency across the set** → `/tw:style-check`.
+- **Defects inside a page** — stale claims, broken links, untested examples → `/docs-audit`.
+- **Terminology and voice consistency across the set** → `/style-check`.
 - **Writing the pages this queue calls for** → the skill for each document type.
-- **The mechanics of a move or a retirement** the plan recommends — inbound links, redirects, navigation → [`tw:developer-docs`'s site-mechanics.md](../developer-docs/references/site-mechanics.md).
+- **The mechanics of a move or a retirement** the plan recommends — inbound links, redirects, navigation → [`developer-docs`'s site-mechanics.md](../developer-docs/references/site-mechanics.md).
 - **The audience and task list are asked for, not invented.** Where no evidence is available, the coverage findings are explicitly marked as resting on an assumed task list.

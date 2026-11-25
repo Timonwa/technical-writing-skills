@@ -3,8 +3,8 @@
   "evals": [
     {
       "id": 1,
-      "prompt": "/tw:style-check docs/ — we don't have a style guide.",
-      "expected_output": "Should ask once whether a style guide or terminology list exists outside the repo before concluding there isn't one. Only then should it run in derive mode: apply tw:docs-standards as the default for what it settles (sentence-case headings, 'you', present tense) and treat drift from it as findings even if most pages break it, derive the remaining conventions from the majority with counts, flag even splits as open decisions, and propose the terminology list the project is missing. Should write _reports/docs-style-check.md and never edit a page.",
+      "prompt": "/style-check docs/ — we don't have a style guide.",
+      "expected_output": "Should ask once whether a style guide or terminology list exists outside the repo before concluding there isn't one. Only then should it run in derive mode: apply docs-standards as the default for what it settles (sentence-case headings, 'you', present tense) and treat drift from it as findings even if most pages break it, derive the remaining conventions from the majority with counts, flag even splits as open decisions, and propose the terminology list the project is missing. Should write _reports/docs-style-check.md and never edit a page.",
       "files": [],
       "expectations": [
         "Asks whether a guide exists elsewhere before deriving",

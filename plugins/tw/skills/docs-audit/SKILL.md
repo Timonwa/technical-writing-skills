@@ -15,13 +15,13 @@ disallowed-tools: Edit, NotebookEdit
 
 A **manually-invoked audit of documentation that already exists**, looking for the defects that cost a reader their time: something that isn't true any more, something they can't reach, something that contradicts the page next to it, and something nobody has checked since it was written.
 
-Every check is spelled out below. For the standard behind a finding: `write:writing-standards` and `tw:docs-standards` for the voice rules, `tw:developer-docs`, `tw:user-guides`, `tw:internal-docs`, `tw:readmes` and `tw:api-reference` for each document type's shape, `tw:docs-style-guide` for the project's own terminology, and `write:code-samples` and `tw:docs-images-and-diagrams` for the parts of a page that aren't prose.
+Every check is spelled out below. For the standard behind a finding: `docs-writing-standards` and `docs-standards` for the voice rules, `developer-docs`, `user-guides`, `internal-docs`, `readmes` and `api-reference` for each document type's shape, `docs-style-guide` for the project's own terminology, and `docs-code-samples` and `docs-images-and-diagrams` for the parts of a page that aren't prose.
 
 **This audit does not assume a codebase.** Where source is available it is the strongest evidence and gets used; where it isn't, the audit works from the running product, a spec, or what it can establish internally — and says which.
 
 ## Voice and audience come from the writing's own guide
 
-Before auditing it, find the project's style guide and conventions and read them — in a codebase, the ones the project's `AGENTS.md` names or its contributing docs; in a chat app, the style guide in the project's files or attached to the conversation; otherwise, ask whether one exists before concluding there isn't one. Voice, person, tone, terminology and formatting come from that guide; where it's silent or there isn't one, `tw:docs-standards` applies without asking, and a page that departs from it is a finding.
+Before auditing it, find the project's style guide and conventions and read them — in a codebase, the ones the project's `AGENTS.md` names or its contributing docs; in a chat app, the style guide in the project's files or attached to the conversation; otherwise, ask whether one exists before concluding there isn't one. Voice, person, tone, terminology and formatting come from that guide; where it's silent or there isn't one, `docs-standards` applies without asking, and a page that departs from it is a finding.
 
 ## Ask first
 
@@ -159,7 +159,7 @@ Everything else is unchanged: list the findings, ask which, fix only those, upda
 
 ## Boundaries
 
-- **Auditing the shape of the set** rather than defects in its pages — what's missing, what should merge, what should be retired → `/tw:content-audit`.
-- **Terminology and style drift** as its own sweep → `/tw:style-check`.
-- **Deep editorial review of one document** → `/tw:doc-review`.
+- **Auditing the shape of the set** rather than defects in its pages — what's missing, what should merge, what should be retired → `/content-audit`.
+- **Terminology and style drift** as its own sweep → `/style-check`.
+- **Deep editorial review of one document** → `/docs-review`.
 - **Auditing code** — its structure, security, performance, dependencies — is not this command's job, even when the docs describe it. Report what the docs get wrong, not what the code should do differently.

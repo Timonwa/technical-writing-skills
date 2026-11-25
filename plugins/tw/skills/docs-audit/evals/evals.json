@@ -3,7 +3,7 @@
   "evals": [
     {
       "id": 1,
-      "prompt": "/tw:docs-audit help/ — it's an exported help centre, there's no code.",
+      "prompt": "/docs-audit help/ — it's an exported help centre, there's no code.",
       "expected_output": "Should ask for a source of truth before settling for none — a running product URL, a staging login or a spec — because unverified mode is the user's decision. Only if the answer is no should it run in unverified mode and say so up front. Should inventory every page before checking, run the checklist, verify each candidate by naming the reader it breaks, mark unverifiable suspicions as needs confirmation, write _reports/docs-audit.md and never edit a page. Should record the scope answers — product version, readers, what it was verified against, the guide — in the report header.",
       "files": [],
       "expectations": [
@@ -45,7 +45,7 @@
     {
       "id": 4,
       "prompt": "Audit docs/. Our contributing guide says the docs use British spelling and 'we' for the team; don't flag those.",
-      "expected_output": "Should treat the project's recorded conventions as the standard — British spelling and 'we' for the team are not findings — and judge drift and voice against the project's guide first, with tw:docs-standards only where it's silent.",
+      "expected_output": "Should treat the project's recorded conventions as the standard — British spelling and 'we' for the team are not findings — and judge drift and voice against the project's guide first, with docs-standards only where it's silent.",
       "files": [],
       "expectations": [
         "Does not flag British spelling",

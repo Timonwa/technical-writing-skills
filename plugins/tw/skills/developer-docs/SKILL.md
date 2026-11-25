@@ -18,14 +18,14 @@ Before writing a page, find the project's style guide and conventions and read t
 - **In a chat app:** the style guide in the project's files, or attached to the conversation.
 - **Otherwise:** ask whether one exists before concluding there isn't one.
 
-Voice, person, tone, terminology and formatting come from that guide. Where it settles something this skill also covers, the guide wins; where it's silent or there isn't one, `tw:docs-standards` applies without asking.
+Voice, person, tone, terminology and formatting come from that guide. Where it settles something this skill also covers, the guide wins; where it's silent or there isn't one, `docs-standards` applies without asking.
 
 ## Ask first
 
 Read the answers from the request, the docs set, the project and its guide first; ask only what's missing. Ask with the app's question tool where it has one, so the choices can be picked; otherwise as a numbered list answered by number. Offer choices where the answers are known and a short typed answer otherwise; where the project records a default, show it and ask whether to use it.
 
 1. **What's the job?** a new page · rewriting a page · moving, renaming, splitting or removing pages.
-2. **What does the reader need from the page?** learning (tutorial) · a task (how-to) · lookup (reference) · understanding (explanation). Settled with `tw:docs-standards` where it isn't clear.
+2. **What does the reader need from the page?** learning (tutorial) · a task (how-to) · lookup (reference) · understanding (explanation). Settled with `docs-standards` where it isn't clear.
 3. **What's the page about?** Short answer: the task or topic in the reader's words.
 4. **Who's the reader, and what do they already know?** Short answer.
 5. **Which product version does it document?** Short answer, and whether the docs are versioned.
@@ -48,7 +48,7 @@ Read the answers from the request, the docs set, the project and its guide first
 
 ## Page types and site mechanics
 
-- **Pick the page type first** — which Diátaxis quadrant a topic needs is `tw:docs-standards`' call; the frame every page shares and the section blueprint for each type once chosen are in [references/page-types.md](references/page-types.md), with the mixing-test table for pages drifting between types.
+- **Pick the page type first** — which Diátaxis quadrant a topic needs is `docs-standards`' call; the frame every page shares and the section blueprint for each type once chosen are in [references/page-types.md](references/page-types.md), with the mixing-test table for pages drifting between types.
 - **Placement, navigation, and moving/renaming/removing pages** live in [references/site-mechanics.md](references/site-mechanics.md) — one focus per page, canonical-page linking instead of duplication, the best-practices/troubleshooting placement ladder, sidebar registration, inbound-link greps and redirects before any move. Follow it for every structural change, not just new pages.
 
 ## Writing the page
@@ -56,7 +56,7 @@ Read the answers from the request, the docs set, the project and its guide first
 - **The opening paragraph states what the page covers and why the reader needs it** — no "This page explains…" / "In this section we will…" filler; the reader should know within two sentences whether they're on the right page.
 - **Prose before every code block** — a sentence saying what the code does and when to use it. "Read once and understand": no code without context.
 - **Code examples use concrete, runnable values** — no undefined variables, no placeholder comments standing in for real arguments inside calls, no pseudocode. An example that can't run as written will be copied and will fail.
-- **Frontmatter serves search** — a concise, keyword-rich `title` (it's the sidebar label — "MCP Tools", not "Overview of MCP Tool Integration") and a unique 1–2 sentence `description` (it's the search snippet). Working targets, as rules of thumb from how results truncate by pixel width (Google sets no limit): a title of about 50–60 characters with the identifying words first, a description of about 150–160 characters with the point in the first 120. The reasons and sources are in `tw:docs-seo-aeo-geo`.
+- **Frontmatter serves search** — a concise, keyword-rich `title` (it's the sidebar label — "MCP Tools", not "Overview of MCP Tool Integration") and a unique 1–2 sentence `description` (it's the search snippet). Working targets, as rules of thumb from how results truncate by pixel width (Google sets no limit): a title of about 50–60 characters with the identifying words first, a description of about 150–160 characters with the point in the first 120. The reasons and sources are in `docs-seo-aeo-geo`.
 - **Descriptive anchor text** — "[create custom servers](/docs/custom-servers)", never "click here". Headings should match what readers search for ("Environment variables", not "Configuration details").
 - **One term per concept, site-wide** — define it once, then use exactly that word everywhere. A synonym for a technical concept reads as a second concept; if a page nearby uses a different term for the same thing, say so rather than adding a third.
 - **End every page with next-steps links** to 2–4 related pages — a Cards grid, a "Next steps" list, whatever the framework offers — so no page is a dead end.
@@ -68,7 +68,7 @@ Where the product ships versions people stay on, the docs do too:
 - **A version switcher on every page**, defaulting to the current version, the way docs frameworks provide one (Docusaurus, Read the Docs).
 - **"Available since vX"** on a feature or option added after the first supported version, and "Deprecated in vY — use Z" where it's going away.
 - **A banner on every page of an old version** saying it isn't the latest, linking to the same page in the current version.
-- **When a version is retired**, its pages stay readable at their URLs or redirect to the current equivalent — never a 404 for a reader on an old release. Canonical links between versions are in `tw:docs-seo-aeo-geo`.
+- **When a version is retired**, its pages stay readable at their URLs or redirect to the current equivalent — never a 404 for a reader on an old release. Canonical links between versions are in `docs-seo-aeo-geo`.
 
 ## Components, includes and imports
 
@@ -103,15 +103,15 @@ console.log(res.headers.get("x-ratelimit-remaining")); // "97"
 
 ## Boundaries
 
-- **The voice rules every document obeys** — sentences, claims, concrete over vague, formatting, never hard-wrap → `write:writing-standards`; the documentation voice, prose before code and the four document types → `tw:docs-standards`.
-- Which document type a page should be → `tw:docs-standards`; audience, scope and prose discipline → `write:writing-standards`.
-- Deciding which pages the set needs at all, and in what order → `tw:docs-planning`. This skill writes a page once the set has a shape.
-- Getting the facts the page depends on out of an engineer or a spec → `tw:sme-interviews`; locating them in the source yourself → `tw:codebase-research`.
-- The project's own terminology, capitalization and word choices → `tw:docs-style-guide`.
-- Auditing an existing docs site for drift, broken links, and stale pages → `/tw:docs-audit`.
-- **Endpoint-level API reference** — parameter tables, status codes, auth sections, request and response examples → `tw:api-reference`.
-- **Help centres and user guides for non-technical end users** → `tw:user-guides`, for a different audience and page types.
-- **Internal documentation** — runbooks, onboarding, process docs → `tw:internal-docs`.
-- Project READMEs → `tw:readmes`.
-- Findability — titles, meta descriptions, slugs, versioned canonicals, being quoted in AI answers → `tw:docs-seo-aeo-geo`.
-- The code blocks themselves — choosing, testing and maintaining them → `write:code-samples`. Screenshots, architecture and flow diagrams → `tw:docs-images-and-diagrams`.
+- **The voice rules every document obeys** — sentences, claims, concrete over vague, formatting, never hard-wrap → `docs-writing-standards`; the documentation voice, prose before code and the four document types → `docs-standards`.
+- Which document type a page should be → `docs-standards`; audience, scope and prose discipline → `docs-writing-standards`.
+- Deciding which pages the set needs at all, and in what order → `docs-planning`. This skill writes a page once the set has a shape.
+- Getting the facts the page depends on out of an engineer or a spec → `sme-interviews`; locating them in the source yourself → `codebase-research`.
+- The project's own terminology, capitalization and word choices → `docs-style-guide`.
+- Auditing an existing docs site for drift, broken links, and stale pages → `/docs-audit`.
+- **Endpoint-level API reference** — parameter tables, status codes, auth sections, request and response examples → `api-reference`.
+- **Help centres and user guides for non-technical end users** → `user-guides`, for a different audience and page types.
+- **Internal documentation** — runbooks, onboarding, process docs → `internal-docs`.
+- Project READMEs → `readmes`.
+- Findability — titles, meta descriptions, slugs, versioned canonicals, being quoted in AI answers → `docs-seo-aeo-geo`.
+- The code blocks themselves — choosing, testing and maintaining them → `docs-code-samples`. Screenshots, architecture and flow diagrams → `docs-images-and-diagrams`.

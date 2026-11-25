@@ -18,7 +18,7 @@ Before writing a guide, find the project's style guide and conventions and read 
 - **In a chat app:** the style guide in the project's files, or attached to the conversation.
 - **Otherwise:** ask whether one exists before concluding there isn't one.
 
-Voice, person, tone, terminology and formatting choices come from that guide. Where it settles something this skill also covers, the guide wins; where it's silent or there isn't one, the voice line above and `tw:docs-standards` apply without asking.
+Voice, person, tone, terminology and formatting choices come from that guide. Where it settles something this skill also covers, the guide wins; where it's silent or there isn't one, the voice line above and `docs-standards` apply without asking.
 
 ## Ask first
 
@@ -92,7 +92,7 @@ A help centre goes wrong quietly: the product changes and the guides don't. Comm
 
 ## Pre-publish checklist
 
-Apply `write:writing-standards`' voice rules and `tw:docs-standards` first — together they cover verifying against the product, addressing the reader, formatting, heading levels and marketing language for every kind of document. These are the items specific to a guide:
+Apply `docs-writing-standards`' voice rules and `docs-standards` first — together they cover verifying against the product, addressing the reader, formatting, heading levels and marketing language for every kind of document. These are the items specific to a guide:
 
 - [ ] The first line answers the question or states the bottom line.
 - [ ] No plumbing jargon that fails the teach-or-cut test; every required term glossed on first use.
@@ -104,11 +104,11 @@ Apply `write:writing-standards`' voice rules and `tw:docs-standards` first — t
 
 ## Boundaries
 
-- **Developer-facing docs sites** (technical guides, reference pages, SDK docs) → `tw:developer-docs` — same consistency aim, different audience and page types.
-- **Documentation for staff rather than customers** — runbooks, SOPs, onboarding, internal knowledge bases → `tw:internal-docs`. The plain-language discipline is the same; the reader is on the inside and the confidentiality rules differ.
-- **The voice rules every document obeys** — sentences, claims, concrete over vague, formatting, never hard-wrap → `write:writing-standards`; the documentation voice, prose before code and the four document types → `tw:docs-standards`.
-- **The shared writing discipline** — audience-first, scope → `write:writing-standards`; document type → `tw:docs-standards`.
-- **The agreed vocabulary itself** — which term wins, how each concept is framed, the trusted analogy — is captured and maintained by `tw:docs-style-guide`. This skill consumes those decisions; it doesn't invent them.
-- **Findability** — titles readers search for, meta descriptions, slugs, the help centre's own search → `tw:docs-seo-aeo-geo`.
-- **Tightening an existing draft** → `tw:docs-editing-standards`. **Screenshots** → `tw:docs-images-and-diagrams`. **Announcing what changed** → `tw:release-notes`.
+- **Developer-facing docs sites** (technical guides, reference pages, SDK docs) → `developer-docs` — same consistency aim, different audience and page types.
+- **Documentation for staff rather than customers** — runbooks, SOPs, onboarding, internal knowledge bases → `internal-docs`. The plain-language discipline is the same; the reader is on the inside and the confidentiality rules differ.
+- **The voice rules every document obeys** — sentences, claims, concrete over vague, formatting, never hard-wrap → `docs-writing-standards`; the documentation voice, prose before code and the four document types → `docs-standards`.
+- **The shared writing discipline** — audience-first, scope → `docs-writing-standards`; document type → `docs-standards`.
+- **The agreed vocabulary itself** — which term wins, how each concept is framed, the trusted analogy — is captured and maintained by `docs-style-guide`. This skill consumes those decisions; it doesn't invent them.
+- **Findability** — titles readers search for, meta descriptions, slugs, the help centre's own search → `docs-seo-aeo-geo`.
+- **Tightening an existing draft** → `docs-editing-standards`. **Screenshots** → `docs-images-and-diagrams`. **Announcing what changed** → `release-notes`.
 - **Product facts** — product name, domain vocabulary, the concept framings, the trusted analogy, support channel — are asked for, never assumed and never invented. They don't live in this skill.

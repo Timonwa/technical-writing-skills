@@ -5,7 +5,7 @@ Write to `_reports/content-audit.md`, creating the directory if it doesn't exist
 ```markdown
 # Content audit — <scope>
 
-**Date:** <YYYY-MM-DD> · **Scope:** <what was inventoried> · **Product version:** <version the set documents> · **Guide:** <path, or "none found — tw:docs-standards"> · **Pages:** <N> · **Audiences:** <list> · **Task list:** <source — confirmed / assumed> · **Usage data:** <source and period, or "none"> · **Mode:** Report-only · **Overall:** <X>/10
+**Date:** <YYYY-MM-DD> · **Scope:** <what was inventoried> · **Product version:** <version the set documents> · **Guide:** <path, or "none found — docs-standards"> · **Pages:** <N> · **Audiences:** <list> · **Task list:** <source — confirmed / assumed> · **Usage data:** <source and period, or "none"> · **Mode:** Report-only · **Overall:** <X>/10
 
 ## Score change (previous → current)
 | Metric | Previous | Current | Δ | Trend |

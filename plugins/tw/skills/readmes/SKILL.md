@@ -18,7 +18,7 @@ Before writing a README, find the project's style guide and conventions and read
 - **In a chat app:** the style guide in the project's files, or attached to the conversation.
 - **Otherwise:** ask whether one exists before concluding there isn't one.
 
-Voice, person, tone, terminology and formatting come from that guide. Where it settles something this skill also covers, the guide wins; where it's silent or there isn't one, `tw:docs-standards` applies without asking.
+Voice, person, tone, terminology and formatting come from that guide. Where it settles something this skill also covers, the guide wins; where it's silent or there isn't one, `docs-standards` applies without asking.
 
 ## Ask first
 
@@ -33,7 +33,7 @@ Read the answers from the request, the repository and its guide first; ask only 
 
 ## Detect the repo type first
 
-The right README shape depends on what the repo is — a library leads with install + usage, an app with what it does + local setup, a CLI with its top commands, a monorepo root is a map, a package inside one covers only itself. The detection signals and the full per-type skeletons (including the monorepo no-duplication rule and a worked CLI example) are in [references/repo-skeletons.md](references/repo-skeletons.md) — detect the type there before writing, and confirm with the user only when the signals conflict. A repo accompanying a tutorial (blog post or video) needs a different shape → `cw:demo-project`.
+The right README shape depends on what the repo is — a library leads with install + usage, an app with what it does + local setup, a CLI with its top commands, a monorepo root is a map, a package inside one covers only itself. The detection signals and the full per-type skeletons (including the monorepo no-duplication rule and a worked CLI example) are in [references/repo-skeletons.md](references/repo-skeletons.md) — detect the type there before writing, and confirm with the user only when the signals conflict. A repo accompanying a tutorial (blog post or video) needs a different shape → `demo-project` in [content-writing-skills](https://github.com/Timonwa/content-writing-skills).
 
 ## The universal skeleton
 
@@ -65,8 +65,8 @@ Every shape draws from the same skeleton, in this order. Drop a section that doe
 
 ## Boundaries
 
-- **The voice rules every document obeys** — sentences, claims, concrete over vague, formatting, never hard-wrap → `write:writing-standards`; the documentation voice, prose before code and the four document types → `tw:docs-standards`.
-- The general writing discipline (audience, plain language) → `write:writing-standards`; prose before code → `tw:docs-standards`.
-- Docs-site pages the README links out to → `tw:developer-docs`; the endpoint reference it links to → `tw:api-reference`.
-- The quickstart's code blocks — choosing them, testing them, keeping them compiling → `write:code-samples`.
-- Tightening the prose after drafting → `tw:docs-editing-standards`. Announcing a version → `tw:release-notes`.
+- **The voice rules every document obeys** — sentences, claims, concrete over vague, formatting, never hard-wrap → `docs-writing-standards`; the documentation voice, prose before code and the four document types → `docs-standards`.
+- The general writing discipline (audience, plain language) → `docs-writing-standards`; prose before code → `docs-standards`.
+- Docs-site pages the README links out to → `developer-docs`; the endpoint reference it links to → `api-reference`.
+- The quickstart's code blocks — choosing them, testing them, keeping them compiling → `docs-code-samples`.
+- Tightening the prose after drafting → `docs-editing-standards`. Announcing a version → `release-notes`.
