@@ -12,8 +12,8 @@ In a lot of content the image isn't support for the text — it's part of what t
 
 Before applying this skill, find the publication's `profile.md`, `writing-guide.md` and `brand.md`, and the samples in its `examples/`, and read them:
 
-- **In a codebase:** the folder the project's `AGENTS.md` names, or, for a guide kept outside the repo, the folder the user's personal agent instructions name (such as `~/.claude/CLAUDE.md`); otherwise the project's `publications/` folder.
-- **In a chat app:** the project's files (a Claude Project's knowledge, or the equivalent elsewhere), or files attached to the conversation.
+- **In a codebase:** the folder the project's `AGENTS.md` names, or, for a guide kept outside the repo, the folder the user's personal agent instructions name; otherwise the project's `publications/` folder.
+- **In a chat app:** the project's files, or files attached to the conversation.
 - **Otherwise:** ask for them.
 
 Its image policy — credits, photo rights, AI-generated images — comes from the writing guide, and its colours, fonts, image style and chart style from `brand.md`, never from this skill.
@@ -138,5 +138,5 @@ A worked example — deciding, fixing, crediting and describing every visual in 
 - **Designing a cover image and the cards a link shows when it's shared** → `cw:cover-images`.
 - **Code is never an image** — code in a piece follows `write:code-samples`.
 - **Whether the piece needs a visual at all, and where it sits** → `cw:article-standards` and `cw:newsletter-standards`.
-- **Visuals in documentation** → `tw:images-and-diagrams`.
+- **Visuals in documentation** → `tw:docs-images-and-diagrams`.
 - **A logo, brand icon or favicon set** is a different job, out of scope.

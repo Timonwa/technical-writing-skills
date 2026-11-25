@@ -22,8 +22,8 @@ Five kinds, recorded by these names in the brief and the pitch log:
 
 Write every email in the voice of the writer's publication, from its `writing-guide.md`; `profile.md` says who its readers are, and `media-kit.md` holds the audience facts a sponsor email cites. Find them:
 
-- **In a codebase:** the folder the project's `AGENTS.md` names, or, for a guide kept outside the repo, the folder the user's personal agent instructions name (such as `~/.claude/CLAUDE.md`); otherwise the project's `publications/` folder.
-- **In a chat app:** the project's files (a Claude Project's knowledge, or the equivalent elsewhere), or files attached to the conversation.
+- **In a codebase:** the folder the project's `AGENTS.md` names, or, for a guide kept outside the repo, the folder the user's personal agent instructions name; otherwise the project's `publications/` folder.
+- **In a chat app:** the project's files, or files attached to the conversation.
 - **Otherwise:** ask the writer for them.
 
 The partner's contributor guidelines decide what a pitch to them must contain — the address, the length cap, an outline or a draft, the samples. Follow them exactly where they differ from this skill.

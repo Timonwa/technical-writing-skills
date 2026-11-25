@@ -11,6 +11,8 @@ disallowed-tools: Edit, NotebookEdit
 
 # Content audit
 
+**Run this only when the user asks for it by name. It reports first, and edits nothing until the user picks findings to fix (`--fix`).**
+
 A **manually-invoked audit of the shape of a documentation set**: what exists, whether each piece earns its place, and what's missing.
 
 It asks a different question from `/tw:docs-audit`. That one asks whether a page is **true and working**; this one asks whether the set is the **right set** — and a perfectly accurate page for a task nobody performs still fails this audit.

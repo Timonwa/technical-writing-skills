@@ -22,8 +22,8 @@ Every email follows its template in [references/emails.md](references/emails.md)
 
 Read the publication's `profile.md` and `writing-guide.md` before preparing anything:
 
-- **In a codebase:** the folder the project's `AGENTS.md` names, or, for a guide kept outside the repo, the folder the user's personal agent instructions name (such as `~/.claude/CLAUDE.md`); otherwise the project's `publications/` folder.
-- **In a chat app:** the project's files (a Claude Project's knowledge, or the equivalent elsewhere), or files attached to the conversation.
+- **In a codebase:** the folder the project's `AGENTS.md` names, or, for a guide kept outside the repo, the folder the user's personal agent instructions name; otherwise the project's `publications/` folder.
+- **In a chat app:** the project's files, or files attached to the conversation.
 - **Otherwise:** ask the writer for them.
 
 The guide's policies on sources come first — whether anonymous sources are used, whether a source may see a draft, how people are named and how quotes are edited — and win wherever they differ from this skill. Where there's no guide, ask who the reader is and what the piece is for, and offer to build one with `cw:style-guide`.

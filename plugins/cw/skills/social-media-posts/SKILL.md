@@ -12,8 +12,8 @@ Write social posts in the voice of the account that posts them — a person, a p
 
 Before writing, find the publication's `profile.md` and `writing-guide.md` and read them:
 
-- **In a codebase:** the folder the project's `AGENTS.md` names, or, for a guide kept outside the repo, the folder the user's personal agent instructions name (such as `~/.claude/CLAUDE.md`); otherwise the project's `publications/` folder.
-- **In a chat app:** the project's files (a Claude Project's knowledge, or the equivalent elsewhere), or files attached to the conversation.
+- **In a codebase:** the folder the project's `AGENTS.md` names, or, for a guide kept outside the repo, the folder the user's personal agent instructions name; otherwise the project's `publications/` folder.
+- **In a chat app:** the project's files, or files attached to the conversation.
 - **Otherwise:** ask for them.
 
 The audience, the one action, what must be disclosed, the voice, and the guide's **Social** section — the accounts and whose each is, "I" or "we", the tone on each platform, emoji, hashtags and mentions — come from that guide, never from this skill.

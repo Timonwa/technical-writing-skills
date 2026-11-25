@@ -15,7 +15,7 @@ The cost of translation is driven by the source. Inconsistent terminology, long 
 Before writing or reviewing source content, find the project's style guide and conventions and read them:
 
 - **In a codebase:** the style guide and conventions the project's `AGENTS.md` names, or its contributing docs.
-- **In a chat app:** the style guide in the project's files (a Claude Project's knowledge, or the equivalent elsewhere), or attached to the conversation.
+- **In a chat app:** the style guide in the project's files, or attached to the conversation.
 - **Otherwise:** ask whether one exists before concluding there isn't one.
 
 Voice, person, tone, terminology and formatting come from that guide. Where it settles something this skill also covers, the guide wins; where it's silent or there isn't one, `tw:docs-standards` applies without asking.
@@ -119,8 +119,8 @@ The do-not-translate list, the approved translations and the per-locale coverage
 
 ## Boundaries
 
-- **Terminology decisions and the glossary** the do-not-translate list and approved translations extend → `tw:style-guide`.
+- **Terminology decisions and the glossary** the do-not-translate list and approved translations extend → `tw:docs-style-guide`.
 - **The voice rules every document obeys** — sentences, claims, concrete over vague, formatting, never hard-wrap → `write:writing-standards`; the documentation voice, prose before code and the four document types → `tw:docs-standards`.
-- **Images with text in them** → `tw:images-and-diagrams` for the capture and authoring side.
+- **Images with text in them** → `tw:docs-images-and-diagrams` for the capture and authoring side.
 - **Software string localization** — resource files, message formatting, pluralization rules in code — is an engineering concern. This skill covers documentation and the source-text discipline that serves both.
 - **Choosing target languages and markets** is a business decision, asked for rather than assumed.

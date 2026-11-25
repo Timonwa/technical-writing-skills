@@ -19,8 +19,8 @@ A publication — a blog, a newsletter, or both under one name — answers to th
 
 Building the guide starts by finding what already exists: the publication's `writing-guide.md`, `profile.md`, `brand.md` and anything in its `sources/` and `examples/`:
 
-- **In a codebase:** the folder the project's `AGENTS.md` names, or, for a guide kept outside the repo, the folder the user's personal agent instructions name (such as `~/.claude/CLAUDE.md`); otherwise the project's `publications/` folder.
-- **In a chat app:** the project's files (a Claude Project's knowledge, or the equivalent elsewhere), or files attached to the conversation.
+- **In a codebase:** the folder the project's `AGENTS.md` names, or, for a guide kept outside the repo, the folder the user's personal agent instructions name; otherwise the project's `publications/` folder.
+- **In a chat app:** the project's files, or files attached to the conversation.
 - **Otherwise:** ask for them.
 
 The voice, terminology and reader the guide records come from the owner, the existing guide and the published work, never from this skill.
@@ -172,7 +172,7 @@ publications/
 - **`media-kit.md` is what a sponsor email cites** — who reads the publication, its numbers with the date each was measured and where it came from, and where a sponsor can appear; `cw:pitching` reads it and links it. `brand.md` is logos and colours; `media-kit.md` never repeats the brand.
 - **`series/<series-slug>/brief.md` plans a series** — its name, reader, what it covers and leaves out, cadence, and one row per part. Material every part shares sits beside it in the series folder. Each part is its own topic whose brief names the series and the part.
 
-In a chat app, a project's files can't hold folders, so a topic's files are named `<topic folder>--<file>` (`2026-12-sourdough-starter--brief.md`). The publication's own files keep their names — `profile.md`, `writing-guide.md`, `brand.md`, `media-kit.md`, `calendar.md`, a series' files as `series-<series-slug>--<file>`, and the sources, sample covers and logo files beside them — and for `calendar.md` Claude hands back only the line to add or change.
+In a chat app, a project's files can't hold folders, so a topic's files are named `<topic folder>--<file>` (`2026-12-sourdough-starter--brief.md`). The publication's own files keep their names — `profile.md`, `writing-guide.md`, `brand.md`, `media-kit.md`, `calendar.md`, a series' files as `series-<series-slug>--<file>`, and the sources, sample covers and logo files beside them — and for `calendar.md` the agent hands back only the line to add or change.
 
 Start from the blanks in [references/publication-template/](references/publication-template/) — [calendar.md](references/publication-template/calendar.md), [media-kit.md](references/publication-template/media-kit.md), a series from [series/\_template/](references/publication-template/series/_template/), a topic from [topics/\_template/](references/publication-template/topics/_template/) — and fill copies, never the templates themselves. A field not yet known stays in the file, blank; it's never removed.
 
@@ -192,5 +192,5 @@ Start from the blanks in [references/publication-template/](references/publicati
 - **The rules every piece obeys by default** → `write:writing-standards`. A guide records only where it departs from them, or what they don't cover.
 - **Applying the guide to a draft** → `cw:editing-standards`; **bringing an old piece up to the current guide** → `cw:content-refresh`.
 - **The pieces that consume it** → `cw:article-standards`, `cw:newsletter-standards`.
-- **A docs set's style guide** → `tw:style-guide`.
+- **A docs set's style guide** → `tw:docs-style-guide`.
 - **The publication's own facts** — its name, readers, sign-off — are asked for and recorded, never invented here.

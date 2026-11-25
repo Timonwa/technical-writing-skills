@@ -11,14 +11,16 @@ disable-model-invocation: true
 
 # Review
 
+**Run this only when the user asks for it by name. It reports first, and edits nothing until the user picks findings to fix (`--fix`).**
+
 A **manually-invoked editorial review** of one piece of content — an article, a blog post, a tutorial, an essay, a feature, a newsletter issue. It goes deep on one thing: is this piece doing its job for the publication's reader, is it true and fair, and can a reader follow it?
 
 ## Voice and audience come from the writing's own guide
 
 Before reviewing, find the publication's `profile.md` and `writing-guide.md` and read them:
 
-- **In a codebase:** the folder the project's `AGENTS.md` names, or, for a guide kept outside the repo, the folder the user's personal agent instructions name (such as `~/.claude/CLAUDE.md`); otherwise the project's `publications/` folder.
-- **In a chat app:** the project's files (a Claude Project's knowledge, or the equivalent elsewhere), or files attached to the conversation.
+- **In a codebase:** the folder the project's `AGENTS.md` names, or, for a guide kept outside the repo, the folder the user's personal agent instructions name; otherwise the project's `publications/` folder.
+- **In a chat app:** the project's files, or files attached to the conversation.
 - **Otherwise:** ask for them.
 
 Voice, person, tone, terminology, formatting choices and who the reader is come from that guide, never from this skill.

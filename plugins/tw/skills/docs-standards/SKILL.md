@@ -13,12 +13,12 @@ The discipline that makes documentation documentation. Every page serves one rea
 Before applying this skill, find the project's style guide and conventions and read them:
 
 - **In a codebase:** the style guide and conventions the project's `AGENTS.md` names, or its contributing docs.
-- **In a chat app:** the style guide in the project's files (a Claude Project's knowledge, or the equivalent elsewhere), or attached to the conversation.
+- **In a chat app:** the style guide in the project's files, or attached to the conversation.
 - **Otherwise:** ask whether one exists before concluding there isn't one.
 
 Its voice and page rules apply wherever the project's guide is silent. Where the project's guide decides otherwise — person, tone, terminology, formatting — the guide wins.
 
-- Where there's no guide, these rules apply in full, without asking, and offer to build a guide with `tw:style-guide`.
+- Where there's no guide, these rules apply in full, without asking, and offer to build a guide with `tw:docs-style-guide`.
 
 ## Ask first
 
@@ -132,17 +132,17 @@ Note what it doesn't do: no history of why API keys exist (explanation), no full
 
 - Deciding which documents a set needs, how they're grouped, and in what order → `tw:docs-planning`.
 - Getting the facts out of an engineer or expert → `tw:sme-interviews`; finding them in the codebase yourself → `tw:codebase-research`.
-- The project's own terminology, capitalization and naming decisions → `tw:style-guide`.
+- The project's own terminology, capitalization and naming decisions → `tw:docs-style-guide`.
 
 **Writing a document**
 
 - Docs-site page mechanics — components and imports, navigation, link integrity when moving pages, page splitting, next-steps footers → `tw:developer-docs`.
 - Help-centre guides and user guides for end users → `tw:user-guides`. Runbooks, process docs and onboarding → `tw:internal-docs`.
 - Project READMEs → `tw:readmes`. API references → `tw:api-reference`. Release notes and changelogs → `tw:release-notes`.
-- Findability in search, the docs site's own search and AI answers → `tw:seo-aeo-geo`.
+- Findability in search, the docs site's own search and AI answers → `tw:docs-seo-aeo-geo`.
 
-**The parts that aren't prose** — code examples → `write:code-samples`; screenshots, diagrams and alt text → `tw:images-and-diagrams`.
+**The parts that aren't prose** — code examples → `write:code-samples`; screenshots, diagrams and alt text → `tw:docs-images-and-diagrams`.
 
-**After writing** — tightening → `tw:editing-standards`; a full review of one page → `/tw:doc-review`; drift across the set → `/tw:style-check`; translation-ready writing → `tw:localization`; auditing a docs site → `/tw:docs-audit`.
+**After writing** — tightening → `tw:docs-editing-standards`; a full review of one page → `/tw:doc-review`; drift across the set → `/tw:style-check`; translation-ready writing → `tw:localization`; auditing a docs site → `/tw:docs-audit`.
 
 **Out of scope** — articles, blog posts and newsletters are content, not documentation → the content-writing skills (`cw`).

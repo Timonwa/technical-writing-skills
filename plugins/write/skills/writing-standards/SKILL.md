@@ -12,8 +12,8 @@ The discipline every piece of writing shares, whatever it is: a docs page, a REA
 
 Before applying this skill, find the guide the writing answers to and read it — for documentation, the project's style guide and conventions; for content, the publication's `profile.md` and `writing-guide.md`:
 
-- **In a codebase:** what the project's `AGENTS.md` names (its style guide, or a publication's folder), or, for a guide kept outside the repo, what the user's personal agent instructions name (such as `~/.claude/CLAUDE.md`); otherwise the contributing docs or the project's `publications/` folder.
-- **In a chat app:** the project's files (a Claude Project's knowledge, or the equivalent elsewhere), or files attached to the conversation.
+- **In a codebase:** what the project's `AGENTS.md` names (its style guide, or a publication's folder), or, for a guide kept outside the repo, what the user's personal agent instructions name; otherwise the contributing docs or the project's `publications/` folder.
+- **In a chat app:** the project's files, or files attached to the conversation.
 - **Otherwise:** ask.
 
 Voice, person, tone, terminology, formatting choices and who the reader is come from that guide, never from this skill.
@@ -88,9 +88,9 @@ Read the answers from the request, the guide, the publication's `profile.md` and
 
 - **Documentation** — the four documentation types, the documentation voice, procedures, accessible docs pages → `tw:docs-standards`.
 - **Content** — articles, newsletters and social posts for a publication → the content-writing skills (`cw`).
-- **The guide this skill defers to** — a docs style guide → `tw:style-guide`; a publication's writing guide → `cw:style-guide`.
+- **The guide this skill defers to** — a docs style guide → `tw:docs-style-guide`; a publication's writing guide → `cw:style-guide`.
 - **Getting facts out of an expert or a source** → `tw:sme-interviews` or `cw:interviews`.
-- **Code in a piece** → `write:code-samples`. **Screenshots, photos, diagrams and alt text** → `tw:images-and-diagrams` or `cw:images-and-diagrams`.
-- **Tightening a finished draft** → `tw:editing-standards` or `cw:editing-standards`; **the machine-written sweep** → `/write:ai-check`.
-- **Worked examples** — a documentation page: `tw:docs-standards`; an article: the content-writing skills (`cw`); before-and-after edits: `tw:editing-standards` and `cw:editing-standards`.
+- **Code in a piece** → `write:code-samples`. **Screenshots, photos, diagrams and alt text** → `tw:docs-images-and-diagrams` or `cw:images-and-diagrams`.
+- **Tightening a finished draft** → `tw:docs-editing-standards` or `cw:editing-standards`; **the machine-written sweep** → `/write:ai-check`.
+- **Worked examples** — a documentation page: `tw:docs-standards`; an article: the content-writing skills (`cw`); before-and-after edits: `tw:docs-editing-standards` and `cw:editing-standards`.
 - **Marketing and conversion copy** — landing pages, ads, sales sequences — is a different craft with a different goal, and out of scope.
