@@ -85,6 +85,7 @@ Read the answers from the request and the guide first; ask only what's missing. 
 
 ## Boundaries
 
+- **Reports belong to their commands:** a check for machine-written patterns is `/docs-ai-check` and a review of one document is `/docs-review`. This skill never writes a report or runs a check itself. Run the command, which writes its report from its own template.
 - **Documentation** — the four documentation types, the documentation voice, procedures, accessible docs pages → `docs-standards`.
 - **Content** — articles, newsletters and social posts for a publication → `writing-standards` in [content-writing-skills](https://github.com/Timonwa/content-writing-skills).
 - **The guide this skill defers to** — a docs style guide → `docs-style-guide`.

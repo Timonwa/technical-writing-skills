@@ -65,6 +65,7 @@ Every shape draws from the same skeleton, in this order. Drop a section that doe
 
 ## Boundaries
 
+- **Reports belong to their commands:** a review of one document is `/docs-review`. This skill never writes a report or runs a check itself. Run the command, which writes its report from its own template.
 - **The voice rules every document obeys** — sentences, claims, concrete over vague, formatting, never hard-wrap → `docs-writing-standards`; the documentation voice, prose before code and the four document types → `docs-standards`.
 - The general writing discipline (audience, plain language) → `docs-writing-standards`; prose before code → `docs-standards`.
 - Docs-site pages the README links out to → `developer-docs`; the endpoint reference it links to → `api-reference`.

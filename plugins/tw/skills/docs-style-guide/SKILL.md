@@ -130,6 +130,7 @@ An unenforced guide is a document that makes people feel guilty. Pick at least o
 
 ## Boundaries
 
+- **Reports belong to their commands:** a consistency check across documents is `/style-check`. This skill never writes a report or runs a check itself. Run the command, which writes its report from its own template.
 - **The rules every piece obeys by default** → `docs-writing-standards`; the documentation voice and page rules → `docs-standards`. A guide records only where it departs from them or what they don't cover, and a decision written down overrides them.
 - **Applying the guide to a draft** → `docs-editing-standards`; **checking the whole set for drift from it** → `/style-check`.
 - **The pages that consume it** — `user-guides`, `developer-docs`, `api-reference`, `internal-docs`.

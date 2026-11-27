@@ -126,6 +126,8 @@ Note what it doesn't do: no history of why API keys exist (explanation), no full
 
 ## Boundaries
 
+**Reports belong to their commands:** a review of one document is `/docs-review`, an audit of a docs set is `/docs-audit`, and a check for machine-written patterns is `/docs-ai-check`. This skill never writes a report or runs a check itself. Run the command, which writes its report from its own template.
+
 **With this skill** — the craft every piece of writing shares (reader and scope first, plain language, concrete claims, credit, scanning, formatting) and its checklist → `docs-writing-standards` and its house-voice reference.
 
 **Before writing**

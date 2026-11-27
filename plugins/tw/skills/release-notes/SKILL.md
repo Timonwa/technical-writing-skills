@@ -151,6 +151,7 @@ Announce a deprecation as early as you can, repeat it in every release until rem
 
 ## Boundaries
 
+- **Reports belong to their commands:** a review of one document is `/docs-review` and a review of a docs pull request is `/docs-pr-review`. This skill never writes a report or runs a check itself. Run the command, which writes its report from its own template.
 - **The documentation pages the notes link to** — the feature's how-to, its reference entry, its migration guide → `developer-docs`, `user-guides`, `api-reference`.
 - **A substantial migration guide** is its own page, shaped as above; the note links it, and the how-to pages it points to are → `developer-docs`.
 - **The voice rules every document obeys** — sentences, claims, concrete over vague, formatting, never hard-wrap → `docs-writing-standards`; the documentation voice, prose before code and the four document types → `docs-standards`.

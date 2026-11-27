@@ -158,6 +158,7 @@ This is where image-heavy documentation fails, and it fails quietly.
 
 ## Boundaries
 
+- **Reports belong to their commands:** an audit of a docs set is `/docs-audit`. This skill never writes a report or runs a check itself. Run the command, which writes its report from its own template.
 - **Whether the page needs a visual at all**, and where it sits in the structure → `developer-docs`, `user-guides` or `internal-docs`.
 - **Text inside images breaks translation**, and a localized product needs recapturing per locale → `localization`.
 - **Code blocks are not images** — never screenshot code. The rules for code are in `docs-code-samples`.

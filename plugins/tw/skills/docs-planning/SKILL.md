@@ -103,6 +103,7 @@ Agree a minimum set so documentation isn't renegotiated per release:
 
 ## Boundaries
 
+- **Reports belong to their commands:** an audit of what a docs set contains is `/content-audit`. This skill never writes a report or runs a check itself. Run the command, which writes its report from its own template.
 - **Writing the pages the plan calls for** → `developer-docs`, `user-guides`, `internal-docs`, `api-reference`, `readmes`, `release-notes`.
 - **Which type a planned page should be**, and why mixing types fails → `docs-standards`.
 - **The mechanics of moving, renaming and redirecting** a page the plan retires or relocates → [`developer-docs`'s site-mechanics.md](../developer-docs/references/site-mechanics.md).

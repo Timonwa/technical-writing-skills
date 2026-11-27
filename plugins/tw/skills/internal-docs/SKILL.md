@@ -147,6 +147,7 @@ Decide the rules once, write them down, and apply them per document:
 
 ## Boundaries
 
+- **Reports belong to their commands:** a review of one document is `/docs-review` and an audit of a docs set is `/docs-audit`. This skill never writes a report or runs a check itself. Run the command, which writes its report from its own template.
 - **Documentation for customers and end users** → `user-guides`. Much of the plain-language discipline is shared; the reader, the confidentiality rules, and the ownership problem are not.
 - **Developer documentation for a public or shared technical surface** → `developer-docs` and `api-reference`, even when the audience is internal — an internal API still gets an API reference.
 - **A repository's own README and contributor docs** → `readmes`.

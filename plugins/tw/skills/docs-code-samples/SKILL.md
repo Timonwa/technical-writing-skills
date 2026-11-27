@@ -137,6 +137,7 @@ Each is a yes or no:
 
 ## Boundaries
 
+- **Reports belong to their commands:** a review of one document is `/docs-review` and an audit of a docs set is `/docs-audit`. This skill never writes a report or runs a check itself. Run the command, which writes its report from its own template.
 - **The rules every piece obeys** — sentences, claims, concrete over vague, formatting, never hard-wrap → `docs-writing-standards` and its house-voice checklist. Code on a documentation page → `docs-standards`.
 - **Where the sample sits in the page, and which page it belongs on** → `developer-docs`, or `api-reference` for request and response examples on an endpoint.
 - **The companion repository itself** — its starter and final branches, pinned versions and README → `demo-project` in [content-writing-skills](https://github.com/Timonwa/content-writing-skills). Quickstart samples in a product repository's front door → `readmes`.

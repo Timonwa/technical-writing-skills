@@ -103,6 +103,7 @@ console.log(res.headers.get("x-ratelimit-remaining")); // "97"
 
 ## Boundaries
 
+- **Reports belong to their commands:** a review of one document is `/docs-review`, an audit of a docs set is `/docs-audit`, and a review of a docs pull request is `/docs-pr-review`. This skill never writes a report or runs a check itself. Run the command, which writes its report from its own template.
 - **The voice rules every document obeys** — sentences, claims, concrete over vague, formatting, never hard-wrap → `docs-writing-standards`; the documentation voice, prose before code and the four document types → `docs-standards`.
 - Which document type a page should be → `docs-standards`; audience, scope and prose discipline → `docs-writing-standards`.
 - Deciding which pages the set needs at all, and in what order → `docs-planning`. This skill writes a page once the set has a shape.

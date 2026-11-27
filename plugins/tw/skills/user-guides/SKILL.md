@@ -104,6 +104,7 @@ Apply `docs-writing-standards`' voice rules and `docs-standards` first — toget
 
 ## Boundaries
 
+- **Reports belong to their commands:** a review of one document is `/docs-review` and an audit of a docs set is `/docs-audit`. This skill never writes a report or runs a check itself. Run the command, which writes its report from its own template.
 - **Developer-facing docs sites** (technical guides, reference pages, SDK docs) → `developer-docs` — same consistency aim, different audience and page types.
 - **Documentation for staff rather than customers** — runbooks, SOPs, onboarding, internal knowledge bases → `internal-docs`. The plain-language discipline is the same; the reader is on the inside and the confidentiality rules differ.
 - **The voice rules every document obeys** — sentences, claims, concrete over vague, formatting, never hard-wrap → `docs-writing-standards`; the documentation voice, prose before code and the four document types → `docs-standards`.

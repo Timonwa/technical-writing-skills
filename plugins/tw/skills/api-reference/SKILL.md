@@ -136,6 +136,7 @@ The things that cost a developer a night are rarely in the parameter table. Say 
 
 ## Boundaries
 
+- **Reports belong to their commands:** a review of one document is `/docs-review` and an audit of a docs set is `/docs-audit`. This skill never writes a report or runs a check itself. Run the command, which writes its report from its own template.
 - **Generating the spec from code** — route registries, schema annotations, spec-build tooling, and keeping generated output in sync with handlers — is an engineering job, not this skill's. This skill covers what the documentation says, including the prose inside a spec someone else generates.
 - **The voice rules every document obeys** — sentences, claims, concrete over vague, formatting, never hard-wrap → `docs-writing-standards`; the documentation voice, prose before code and the four document types → `docs-standards`.
 - Which quadrant a surrounding page belongs to, and the documentation types → `docs-standards`. Reference is one quadrant; the quickstart and integration guides around it are others.
