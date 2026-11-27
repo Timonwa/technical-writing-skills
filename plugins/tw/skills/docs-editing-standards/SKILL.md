@@ -8,6 +8,8 @@ description: >-
 
 Improve a document that already exists through focused passes, preserving what the author knows and correcting what the reader can't work around. Editing isn't rewriting — each pass fixes one dimension, because single-dimension passes catch what an everything-at-once review misses.
 
+**This skill edits; it never writes a report.** A review is `/docs-review` and an AI check is `/docs-ai-check`, each written from its own template. When a report is wanted, run that command rather than writing the file from here.
+
 ## Voice and audience come from the writing's own guide
 
 Before editing, find the project's style guide, glossary or terminology list and its conventions, and read them:
