@@ -106,6 +106,7 @@ A tutorial or a build-along article doesn't show one sample; it builds a working
 
 - **Start from a stated beginning** — the versions, the starter project or empty folder, and what's installed — so the first block works for someone who has nothing else.
 - **Each step shows the code it adds and says where it goes**: which file, and where in it. A block with no file named leaves the reader guessing whether to replace or add.
+- **Label each block with its file**: the path as a comment on the block's first line, in that language's comment syntax (`// src/app/page.tsx`, `# config/settings.yaml`). The prose still says whether the block replaces the file, replaces a part of it, or adds to it. Terminal commands belong to no file, so they get no label.
 - **Explain every block** — what it does and why it's there, before or right after it. A reader shouldn't run code nobody explained.
 - **Build up complexity gradually**: the simple version first, then each addition, so every step changes one thing the reader can see work. [Microsoft](https://learn.microsoft.com/en-us/style-guide/developer-content/code-examples) reserves complicated examples for tutorials for exactly this reason — there's room to explain them step by step.
 - **Show the whole file where a reader could lose their place**, and at the end, so anyone who went wrong can compare.

@@ -32,6 +32,7 @@ Where this guide and the base guide disagree, this guide wins.
 | Product and feature names   | unset    |                   |        |         |
 | UI element formatting       | unset    |                   |        |         |
 | Code formatting and placeholders | unset |                 |        |         |
+| Code block file labels | unset |  |  |  |
 | Numbers, dates, times, units | unset   |                   |        |         |
 | Lists and punctuation       | unset    |                   |        |         |
 | Links                       | unset    |                   |        |         |
