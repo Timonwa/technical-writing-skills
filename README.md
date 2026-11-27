@@ -21,7 +21,7 @@ For blog posts, newsletters and social posts, see [content-writing-skills](https
 
 ## How the skills work
 
-- Your agent picks a skill when your request matches it, so you don't have to name it. Commands run only when you call them.
+- Your agent picks a skill when your request matches it, so you don't have to name it. Commands are the checks and reports you run by name. Your agent can also run one when a task needs it.
 - A skill reads your project's style guide first, then asks only what's still missing.
 - Every file it writes — a plan, a page, a report — follows a fixed template, so each run looks the same.
 - It never invents a fact, a setting or an error message. A gap stays marked until you fill it.

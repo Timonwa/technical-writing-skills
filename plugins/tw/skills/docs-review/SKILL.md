@@ -1,17 +1,16 @@
 ---
 name: docs-review
 description: >-
-  Manually invoked. Editorial review of one document, a folder or a diff — a docs page, a guide, a reference entry, a runbook — working down the five levels of edit: substantive, technical accuracy, line, copy and proof. Returns numbered findings with a proposed replacement for each, a batched list of questions only the author or an expert can settle, and a record of what was verified against a real source. Reports first, then asks which findings to fix. Use on "review this doc", "check this docs draft", "is this page ready to publish".
+  A command. Editorial review of one document, a folder or a diff — a docs page, a guide, a reference entry, a runbook — working down the five levels of edit: substantive, technical accuracy, line, copy and proof. Returns numbered findings with a proposed replacement for each, a batched list of questions only the author or an expert can settle, and a record of what was verified against a real source. Reports first, then asks which findings to fix. Use on "review this doc", "check this docs draft", "is this page ready to publish".
 argument-hint: '[path] [--fix]'
 disallowed-tools: Edit, NotebookEdit
-disable-model-invocation: true
 ---
 
 # Doc review
 
-**Run this only when the user asks for it by name. It reports first, and edits nothing until the user picks findings to fix (`--fix`).**
+**The user usually runs this by name, and an agent can run it too when the work needs this check. It reports first, and edits nothing until the user picks findings to fix (`--fix`).**
 
-A **manually-invoked editorial review** of one specific document. Where the audits ask about a whole set, this goes deep on one thing: is this document doing its job, is it true, and can a reader follow it?
+An **editorial review** of one specific document. Where the audits ask about a whole set, this goes deep on one thing: is this document doing its job, is it true, and can a reader follow it?
 
 ## Voice and audience come from the writing's own guide
 

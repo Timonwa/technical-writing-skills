@@ -1,17 +1,16 @@
 ---
 name: docs-audit
 description: >-
-  Manually invoked. Audits a body of documentation for defects a reader would hit — claims that no longer match the product, broken links and anchors, navigation integrity, duplicated and contradictory content, missing coverage, stale images, and content nobody has verified in months. Works on a docs repo, an exported help centre, or any folder of documents. Verifies each finding and writes a prioritized report. Never edits a page.
+  A command. Audits a body of documentation for defects a reader would hit — claims that no longer match the product, broken links and anchors, navigation integrity, duplicated and contradictory content, missing coverage, stale images, and content nobody has verified in months. Works on a docs repo, an exported help centre, or any folder of documents. Verifies each finding and writes a prioritized report. Never edits a page.
 argument-hint: '[path] [--source <path-or-url>] [--fix]'
-disable-model-invocation: true
 disallowed-tools: Edit, NotebookEdit
 ---
 
 # Docs audit
 
-**Run this only when the user asks for it by name. It reports first, and edits nothing until the user picks findings to fix (`--fix`).**
+**The user usually runs this by name, and an agent can run it too when the work needs this check. It reports first, and edits nothing until the user picks findings to fix (`--fix`).**
 
-A **manually-invoked audit of documentation that already exists**, looking for the defects that cost a reader their time: something that isn't true any more, something they can't reach, something that contradicts the page next to it, and something nobody has checked since it was written.
+An **audit of documentation that already exists**, looking for the defects that cost a reader their time: something that isn't true any more, something they can't reach, something that contradicts the page next to it, and something nobody has checked since it was written.
 
 Every check is spelled out below. For the standard behind a finding: `docs-writing-standards` and `docs-standards` for the voice rules, `developer-docs`, `user-guides`, `internal-docs`, `readmes` and `api-reference` for each document type's shape, `docs-style-guide` for the project's own terminology, and `docs-code-samples` and `docs-images-and-diagrams` for the parts of a page that aren't prose.
 

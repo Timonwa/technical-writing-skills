@@ -1,17 +1,16 @@
 ---
 name: content-audit
 description: >-
-  Manually invoked. Inventories an existing documentation set and judges its shape rather than its defects — every page with its type, audience, owner, last-verified date and usage, a keep/merge/split/rewrite/retire verdict for each, duplicate clusters, orphans and ghosts, navigation depth, and a gap analysis against what readers are actually trying to do. Outputs the inventory and a prioritized writing queue. Never edits a page.
+  A command. Inventories an existing documentation set and judges its shape rather than its defects — every page with its type, audience, owner, last-verified date and usage, a keep/merge/split/rewrite/retire verdict for each, duplicate clusters, orphans and ghosts, navigation depth, and a gap analysis against what readers are actually trying to do. Outputs the inventory and a prioritized writing queue. Never edits a page.
 argument-hint: '[path] [--tasks <path-or-list>] [--fix]'
-disable-model-invocation: true
 disallowed-tools: Edit, NotebookEdit
 ---
 
 # Content audit
 
-**Run this only when the user asks for it by name. It reports first, and edits nothing until the user picks findings to fix (`--fix`).**
+**The user usually runs this by name, and an agent can run it too when the work needs this check. It reports first, and edits nothing until the user picks findings to fix (`--fix`).**
 
-A **manually-invoked audit of the shape of a documentation set**: what exists, whether each piece earns its place, and what's missing.
+An **audit of the shape of a documentation set**: what exists, whether each piece earns its place, and what's missing.
 
 It asks a different question from `/docs-audit`. That one asks whether a page is **true and working**; this one asks whether the set is the **right set** — and a perfectly accurate page for a task nobody performs still fails this audit.
 

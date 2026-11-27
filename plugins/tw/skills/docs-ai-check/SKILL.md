@@ -1,17 +1,16 @@
 ---
 name: docs-ai-check
 description: >-
-  Manually invoked. Checks whether writing (a docs page, a folder of pages or a diff) reads as machine-written, and reports the specific tells rather than a verdict: citations that don't hold, em-dash frequency and pattern, blacklisted vocabulary and phrases, the structural tells (uniform section lengths, lists of exactly three, summaries that restate, closers that congratulate), hollow claims, and rhythm. Returns a rewrite for each flagged passage, then asks which to apply.
+  A command. Checks whether writing (a docs page, a folder of pages or a diff) reads as machine-written, and reports the specific tells rather than a verdict: citations that don't hold, em-dash frequency and pattern, blacklisted vocabulary and phrases, the structural tells (uniform section lengths, lists of exactly three, summaries that restate, closers that congratulate), hollow claims, and rhythm. Returns a rewrite for each flagged passage, then asks which to apply.
 argument-hint: '[path] [--fix]'
 disallowed-tools: Edit, NotebookEdit
-disable-model-invocation: true
 ---
 
 # AI check
 
-**Run this only when the user asks for it by name. It reports first, and edits nothing until the user picks findings to fix (`--fix`).**
+**The user usually runs this by name, and an agent can run it too when the work needs this check. It reports first, and edits nothing until the user picks findings to fix (`--fix`).**
 
-A **manually-invoked sweep for the fingerprints of machine-written prose**, on anything published under a person's name.
+A **sweep for the fingerprints of machine-written prose**, on anything published under a person's name.
 
 **It reports tells, not a verdict.** No one can determine whether text was generated, and claiming to is both wrong and harmful — human writers use em dashes, and careful AI-assisted drafts carry none of these markers. What this command does is find the specific patterns that make prose read as generated, each with its location and a rewrite. Whether the draft then gets changed is the author's call.
 

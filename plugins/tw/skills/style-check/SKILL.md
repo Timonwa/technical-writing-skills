@@ -1,17 +1,16 @@
 ---
 name: style-check
 description: >-
-  Manually invoked. Sweeps a docs set for the drift that makes it read like several people wrote it — one concept named several ways, capitalization and heading-case inconsistency, product and feature name variants, person and tense drift, marketing words and minimisers, weak link text, code-formatting and fence-label drift, UI formatting, glossary gaps, and date, number and unit formats. Measured against the project's style guide. Outputs a drift report plus proposed terminology entries. Never edits a page.
+  A command. Sweeps a docs set for the drift that makes it read like several people wrote it — one concept named several ways, capitalization and heading-case inconsistency, product and feature name variants, person and tense drift, marketing words and minimisers, weak link text, code-formatting and fence-label drift, UI formatting, glossary gaps, and date, number and unit formats. Measured against the project's style guide. Outputs a drift report plus proposed terminology entries. Never edits a page.
 argument-hint: '[path] [--guide <path>] [--fix]'
-disable-model-invocation: true
 disallowed-tools: Edit, NotebookEdit
 ---
 
 # Style check
 
-**Run this only when the user asks for it by name. It reports first, and edits nothing until the user picks findings to fix (`--fix`).**
+**The user usually runs this by name, and an agent can run it too when the work needs this check. It reports first, and edits nothing until the user picks findings to fix (`--fix`).**
 
-A **manually-invoked consistency sweep** across a set of documents. It answers one question: **does this read as one voice?** A docs set has one voice by design — readers move between pages mid-task and shouldn't notice the author changing.
+A **consistency sweep** across a set of documents. It answers one question: **does this read as one voice?** A docs set has one voice by design — readers move between pages mid-task and shouldn't notice the author changing.
 
 Sweep the whole set, because drift is invisible page by page: a concept called three things across two hundred pages goes unnoticed by anyone reading a few pages at a time — but every reader who meets the second name reads it as a second concept.
 

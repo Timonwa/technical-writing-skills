@@ -1,15 +1,14 @@
 ---
 name: docs-pr-review
 description: >-
-  Manually invoked. Reviews the documentation in a pull request — docs shipped with a code change, a docs-only update, new pages, or docs for code that lives elsewhere — checking every claim against the right source of truth, finding changes that need docs but have none, and running the five levels of edit on the changed lines. Reports findings with replacements and questions for the author; comments on the PR or fixes only when asked.
+  A command. Reviews the documentation in a pull request — docs shipped with a code change, a docs-only update, new pages, or docs for code that lives elsewhere — checking every claim against the right source of truth, finding changes that need docs but have none, and running the five levels of edit on the changed lines. Reports findings with replacements and questions for the author; comments on the PR or fixes only when asked.
 argument-hint: '[pr-number | pr-url | branch] [--comment] [--fix]'
 disallowed-tools: Edit, NotebookEdit
-disable-model-invocation: true
 ---
 
 # Docs PR review
 
-**Run this only when the user asks for it by name. It reports first, and edits nothing until the user picks findings to fix (`--fix`).**
+**The user usually runs this by name, and an agent can run it too when the work needs this check. It reports first, and edits nothing until the user picks findings to fix (`--fix`).**
 
 A review of the **documentation in a pull request** — often docs a developer drafted alongside a code change. Where `/docs-review` reviews a document on its own, this one reviews it against the change it belongs to: is every claim true of what this PR does, and did anything the PR changes go undocumented?
 
