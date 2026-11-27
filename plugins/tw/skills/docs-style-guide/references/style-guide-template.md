@@ -33,6 +33,7 @@ Where this guide and the base guide disagree, this guide wins.
 | UI element formatting       | unset    |                   |        |         |
 | Code formatting and placeholders | unset |                 |        |         |
 | Code block file labels | unset |  |  |  |
+| Code block length | unset |  |  |  |
 | Numbers, dates, times, units | unset   |                   |        |         |
 | Lists and punctuation       | unset    |                   |        |         |
 | Links                       | unset    |                   |        |         |
